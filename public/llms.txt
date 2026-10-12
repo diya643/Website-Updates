@@ -1,0 +1,72 @@
+# Pascal AI
+
+> Pascal AI Labs builds context-driven AI for institutional finance: hedge funds, asset and wealth managers, banks and financial institutions, asset servicers, private equity and private credit firms, and corporate treasury teams. Pascal grounds every answer in a firm's own context (its documents, data, decisions and permissions), cites every claim to the page, and runs agentic workflows that deliver finished work in Excel, PowerPoint and Word.
+
+## Home
+
+- [Pascal AI: Context-Driven AI for Institutional Finance](https://pascalailabs.com): Pascal AI homepage: context-driven AI agents for institutional finance across the front, middle and back office. Institutional memory, interoperability, governance and token efficiency; Smart Alpha, Digital Twin, the Excel agent, the Pascal Data Agent, the context graph and MCP; industries…
+
+## Platform
+
+- [Pascal Platform: AI Infrastructure for Investment Firms](https://pascalailabs.com/platform): Overview of the Pascal Investment OS: products (Ask Pascal, Pascal Agents with the Pascal Data Agent, MCP & APIs) on the Cognitive Engine (context graph and document intelligence), Sovereign Data Fabric (connectors) and permission-based access.
+- [Context Graph & Institutional Memory](https://pascalailabs.com/platform/context-graph): Pascal's context graph and institutional memory, one product: connectors to a firm's systems and data partners feed a knowledge graph of companies, theses and decisions; decisions enter from meeting notes and reviewer edits; every claim is cited and every source permissioned.
+- [Pascal MCP Server and APIs for Investment Firms](https://pascalailabs.com/platform/mcp-apis): Pascal MCP and APIs: (1) bring a firm's context graph, documents and permissions into any LLM such as Claude, ChatGPT, Copilot or internal agents; (2) orchestrate one question across the firm's context and other MCP servers such as public filings, Capital IQ and licensed data vendors, returning one…
+
+## Ask Pascal
+
+- [Ask Pascal: AI Research Analyst for Investment Teams](https://pascalailabs.com/ask-pascal): Overview of Ask Pascal, Pascal AI's research assistant for investment teams: cited research, screeners, Pascal Intel and decision traces, answering from the context graph and from research files structured by the Pascal Data Agent, used by investment, risk, IC, operations, compliance and IR teams.
+- [Cited AI Research, Traced to the Page](https://pascalailabs.com/ask-pascal/cited-research): How Ask Pascal cites every sentence, table cell and figure to the exact page of its source, combines public filings, broker research and a firm's own documents in one answer, and scopes questions by company and filing type.
+- [Decision Traces: AI That Remembers Your Calls](https://pascalailabs.com/ask-pascal/decision-traces): Pascal decision traces: entity decisions, Excel model preferences, ranked thesis tracking with monitors and codified team knowledge, kept and reused so the AI builds on every call a firm makes.
+- [Pascal Intel: Market Signals from X, Summarised](https://pascalailabs.com/ask-pascal/pascal-intel): Pascal Intel, part of Ask Pascal: follows X, Reddit and podcasts on YouTube for the companies and themes an investor tracks, and summarises them into one dated story per event with every source post, thread and episode linked.
+- [AI Stock Screeners for Institutional Investors](https://pascalailabs.com/ask-pascal/screeners): Pascal's AI stock screeners for institutional investors: a keyword screener across earnings call transcripts, an earnings screener that updates as companies report, a fundamental screener on financial indicators, and a guidance vs actuals scorecard.
+
+## Pascal Agents
+
+- [Pascal Agents: AI Agents for Investment Workflows](https://pascalailabs.com/pascal-agents): Overview of Pascal Agents, AI agents for investment firms: the agentic workflow library, autonomous execution, decision traces, the Pascal Excel agent and the Pascal Data Agent.
+- [Autonomous AI Agents for Investment Work](https://pascalailabs.com/pascal-agents/autonomous-agents): Pascal's autonomous agents run an investment research task end to end: they plan the work, search IC memos, email, Teams, expert calls, broker research and public filings, cross-check claims and deliver a cited document, on demand or on a schedule.
+- [Pascal Data Agent: Your Files as Structured Data](https://pascalailabs.com/pascal-agents/data-agent): Pascal Data Agent, part of Pascal Agents, turns a firm's internal files (broker PDFs, expert-call transcripts, internal research notes, email, contracts, DDQs, data rooms) into structured, entity-tagged data. A document classifier types each file against the firm's own taxonomy with a confidence…
+- [Agentic Workflow Library for Finance](https://pascalailabs.com/pascal-agents/workflow-library): Pascal's agentic workflow library: 25+ pre-built investment workflows (event briefs, company primers, initiating coverage, red flag analysis, catalyst calendars) that return cited documents in a consistent structure.
+
+## Industries
+
+- [AI Transformation Partner for Financial Firms](https://pascalailabs.com/solutions/ai-transformation): How Pascal works with financial institutions as their AI transformation partner: discovering workflows and data, building on the firm's own context graph, deploying inside its perimeter with permissions and evaluation, then expanding from research to sales intelligence, marketing intelligence…
+- [AI for Custodians and Fund Administrators](https://pascalailabs.com/solutions/asset-servicing): How custodians, fund administrators, transfer agents and depositaries use Pascal inside their own operations: front office (client RFPs and due diligence questionnaires, client queries answered from records with sources), middle office (corporate action notices read and compared across sources…
+- [AI for Asset and Wealth Managers](https://pascalailabs.com/solutions/asset-wealth-management): How asset managers and wealth managers use Pascal across front office (equity and fixed income research, earnings-season recaps in the house template, client portfolio reviews and model portfolio commentary for advisors), middle office (mandate and investment guideline checks against the offer…
+- [AI for Banks and Financial Institutions](https://pascalailabs.com/solutions/banking): How corporate and commercial banks, retail and consumer lenders, NBFCs and specialist lenders use Pascal across front office (credit underwriting memos from borrower financials, bank statements, rating reports and site-visit notes, tested against the bank's credit policy; relationship manager…
+- [AI for Hedge Funds: Front to Back Office](https://pascalailabs.com/solutions/hedge-funds): How long/short, event-driven, credit and multi-strategy hedge funds use Pascal across front office (equity and credit research, thesis monitoring), middle office (trade support, reconciliations, P&L explain, risk reporting) and back office (DDQ and RFP answers, investor reporting, compliance).
+- [AI for Private Equity and Private Credit](https://pascalailabs.com/solutions/private-equity-credit): How buyout, growth equity and private credit (direct lending) funds use Pascal across front office (CIM screening, data-room due diligence, IC memos, credit memos and covenant extraction), middle office (portfolio monitoring from reporting packs, covenant headroom, quarterly valuations support) and…
+- [AI for Corporate Treasury & Hedge Accounting](https://pascalailabs.com/solutions/treasury-hedge-accounting): How group treasury teams at large corporates and conglomerates use Pascal across dealing (FX, rates and commodity exposures from contracts, purchase orders and forecasts; hedge proposals; bank quote comparison), treasury risk (exposure and limit monitoring, hedge effectiveness testing by dollar…
+
+## Founder's notes
+
+- [Founder's Notes: AI in Institutional Finance](https://pascalailabs.com/news/founders-notes): Index of Alpha & Agents essays by the founder of Pascal AI Labs on AI adoption, infrastructure, economics and operations in institutional finance, each linked to the full essay on Substack.
+
+## Pascal Academy
+
+- [AI Desk Guides for Investment Teams](https://pascalailabs.com/guides): Index of Pascal Academy desk guides: AI for hedge funds, asset management, investment banking and private equity.
+- [Pascal Academy: Learn AI for Institutional Finance](https://pascalailabs.com/pascal-academy): Pascal Academy home: desk guides for hedge funds, asset managers, investment banks and private equity, a ten-part AI fundamentals series, an AI glossary for finance, workflows, prompts and agents.
+- [AI for Asset Management: Guide](https://pascalailabs.com/guides/ai-for-asset-management): A practical guide to AI for asset managers: RFP automation, research, portfolio monitoring, compliant client reporting, and the architecture to run it safely.
+- [AI for Hedge Funds: Complete Guide](https://pascalailabs.com/guides/ai-for-hedge-funds): A practical guide to AI for hedge funds: use cases, benefits, challenges and implementation, from research automation and portfolio monitoring to production.
+- [AI for Investment Banking](https://pascalailabs.com/guides/ai-for-investment-banking): How AI supports investment banking: pitch books, comparable companies, industry research, CIM analysis, due diligence, valuation support and client decks.
+- [AI for Private Equity](https://pascalailabs.com/guides/ai-for-private-equity): How AI supports the private equity lifecycle: deal sourcing, commercial due diligence, market mapping, investment memos and portfolio monitoring.
+- [AI Agents for Finance](https://pascalailabs.com/pascal-academy/agent-library): Pascal's agent library: Generative Matrix (screen and analyse companies), KPI Extractor (filings to Excel), Research Memo Generator (template reports), with research templates and a framework for building your own agent.
+- [AI Fundamentals for Finance](https://pascalailabs.com/pascal-academy/ai-fundamentals): Index of the ten-part AI Fundamentals series: LLMs, prompt engineering, RAG, AI agents, context windows, knowledge graphs, hallucinations, reasoning models, embeddings and MCP.
+- [AI Glossary for Finance](https://pascalailabs.com/pascal-academy/ai-glossary): A finance-focused glossary of 40 AI terms for investment teams, grouped into themes: models and foundations, core AI and agents, retrieval and knowledge, prompting, integration and platform, finance and governance.
+- [AI Prompts for Finance](https://pascalailabs.com/pascal-academy/prompt-library): 18 copy-ready AI prompts for investment teams, plus how to structure a finance prompt and when AI should not make the call.
+- [AI Workflows for Finance](https://pascalailabs.com/pascal-academy/workflows): 20 AI workflows for investment teams, each with its stages, inputs and output: earnings, company research, competition, news and events.
+- [AI Agents Explained for Finance](https://pascalailabs.com/pascal-academy/guides/ai-agents): A guide to AI agents for finance: agent anatomy, the ReAct loop, planning, multi-agent systems, failure modes and how production agents work in research.
+- [AI Hallucinations Explained](https://pascalailabs.com/pascal-academy/guides/ai-hallucinations): A guide to AI hallucinations for finance teams: why models hallucinate, how to detect it, and the techniques that reduce it in investment research.
+- [Context Windows Explained](https://pascalailabs.com/pascal-academy/guides/context-windows): A guide to context windows for finance teams: what fills them, why there is a limit, lost-in-the-middle, cost and latency, and managing long documents.
+- [Embeddings Explained](https://pascalailabs.com/pascal-academy/guides/embeddings): A guide to embeddings for finance teams: what embeddings are, how they power semantic search and retrieval, and how they are used in investment research.
+- [Knowledge Graphs Explained](https://pascalailabs.com/pascal-academy/guides/knowledge-graphs): A guide to knowledge graphs for finance teams: nodes, edges and properties, how graphs work, GraphRAG, and how they compare to vector databases for research.
+- [Large Language Models Explained](https://pascalailabs.com/pascal-academy/guides/large-language-models): A beginner-friendly guide to large language models for finance teams: how LLMs work, what tokens are, how transformers process text, and where they fit.
+- [Model Context Protocol (MCP) Explained](https://pascalailabs.com/pascal-academy/guides/model-context-protocol): A guide to the Model Context Protocol for finance teams: what MCP is, how it connects AI models to data sources like Bloomberg and Capital IQ.
+- [Prompt Engineering Guide for Finance](https://pascalailabs.com/pascal-academy/guides/prompt-engineering): A practical guide to prompt engineering for finance professionals: prompt anatomy, techniques, parameters and failure modes for better outputs from AI tools.
+- [RAG (Retrieval-Augmented Generation)](https://pascalailabs.com/pascal-academy/guides/rag-retrieval-augmented-generation): A complete guide to retrieval-augmented generation for finance teams: the RAG pipeline, embeddings, chunking, retrieval, grounding and agentic RAG.
+- [Reasoning Models Explained](https://pascalailabs.com/pascal-academy/guides/reasoning-models): A guide to AI reasoning models for finance teams: how they differ from standard LLMs, how test-time compute works, and where they add value.
+
+## Company
+
+- [Pascal AI Security: Data Protection for Investment Firms](https://pascalailabs.com/security): How Pascal AI protects client data: SOC 2 Type II and ISO 27001 certification (GDPR coming soon), AES-256 encryption in transit and at rest, RBAC at the data level, audit logs, source citations, no training on client data, and deployment on a dedicated instance, in the client's VPC (AWS, Azure or…
+- [About](https://pascalailabs.com/about)
+- [News](https://pascalailabs.com/news)

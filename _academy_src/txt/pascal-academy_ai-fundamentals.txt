@@ -1,0 +1,73 @@
+[a] Back
+[span] /
+[span] AI Fundamentals
+[h1] AI Fundamentals
+[p] Build a practical understanding of modern AI concepts and learn how they apply to institutional finance.
+[h2] The Complete Guide to AI for Institutional Finance
+[p] A comprehensive introduction to modern AI, covering the concepts, terminology and technologies investment professionals should understand.
+[p] Beginner · 28 min read · Updated Aug 2026
+[span] Core concepts
+[h2] Build the vocabulary
+[p] Short explainers for the ideas that keep showing up in institutional AI work.
+[h3] Large Language Models (LLMs)
+[p] A beginner-friendly guide to the machinery behind ChatGPT, Claude, Gemini, and Llama.
+[span] Read guide →
+[h3] Prompt Engineering
+[p] A practical guide to steering large language models.
+[span] Read guide →
+[h3] Retrieval-Augmented Generation (RAG)
+[p] How grounding language models in external knowledge reduces hallucination and keeps responses current.
+[span] Read guide →
+[h3] AI Agents
+[p] How language models move from answering questions to pursuing goals, using tools, and completing multi-step tasks.
+[span] Read guide →
+[h3] Context Windows
+[p] How much text a language model can hold in mind at once, why bigger is not always better, and what happens when you run out of room.
+[span] Read guide →
+[h3] Knowledge Graphs
+[p] How structured relationships between entities give AI systems grounded, queryable knowledge that goes beyond text retrieval.
+[span] Read guide →
+[h3] Hallucinations
+[p] Why language models make things up, what causes confident but wrong output, and the techniques that reduce it.
+[span] Read guide →
+[h3] Reasoning Models
+[p] How test-time compute lets language models think through hard problems, and what the trade-offs look like.
+[span] Read guide →
+[h3] Embeddings
+[p] How text becomes numbers, why similarity in vector space mirrors similarity in meaning, and the infrastructure that makes retrieval possible.
+[span] Read guide →
+[h3] Model Context Protocol (MCP)
+[p] The open standard for connecting AI models to external tools, data sources, and services through a universal interface.
+[span] Read guide →
+[span] Watch
+[span] Coming soon
+[h2] Related videos
+[span] Coming soon
+[span] 7:12
+[h3] Understanding LLMs
+[p] What language models are and how they actually work.
+[span] 9:40
+[h3] Prompt Engineering Explained
+[p] The patterns behind reliable, repeatable AI output.
+[span] 11:05
+[h3] RAG in Practice
+[p] Grounding answers in your own documents, step by step.
+[span] Continue exploring
+[span] Coming soon
+[h2] More from Pascal Academy
+[h3] Workflows
+[p] How AI is applied across research, due diligence, modelling and investment workflows.
+[span] Coming soon
+[h3] Prompt Library
+[p] Browse tested prompts for institutional finance.
+[span] Coming soon
+[h3] AI Glossary
+[p] Explore AI terminology through an A–Z reference.
+[span] Coming soon
+[h3] AI Benchmarks
+[p] Compare models, performance and evaluation methodologies.
+[span] Coming soon
+[span] Workshops
+[h2] Join Pascal Academy
+[p] Learn directly from the Pascal team through live workshops.
+[a] Sign Up

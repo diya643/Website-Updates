@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "pascal-preview", "runtimeExecutable": "python3", "runtimeArgs": ["/Users/diyathakur/Documents/Claude/website-v2/_build/serve.py"], "port": 4610 }
+  ]
+}

@@ -1,0 +1,249 @@
+<!--meta
+{
+ "path": "/solutions/hedge-funds",
+ "title": "AI for Hedge Funds: Front to Back Office | Pascal AI",
+ "description": "AI for hedge funds: cited event briefs, thesis monitors, trade break reconciliations and DDQ answers on one context graph, deployed inside your perimeter.",
+ "crumbs": [["Hedge funds", "/solutions/hedge-funds"]],
+ "schema": "solution",
+ "name": "Pascal AI for hedge funds",
+ "audience": "Hedge funds",
+ "og_kicker": "Industries · Hedge funds",
+ "og_title": "AI for hedge funds, from the morning meeting to the investor letter",
+ "llms": "How long/short, event-driven, credit and multi-strategy hedge funds use Pascal across front office (equity and credit research, thesis monitoring), middle office (trade support, reconciliations, P&L explain, risk reporting) and back office (DDQ and RFP answers, investor reporting, compliance).",
+ "priority": 0.9
+}
+-->
+<div class="frame">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">AI for hedge funds</span></span>From the morning meeting <span class="mute">to the investor letter.</span></h1>
+      <p class="lead">Pascal connects research, positions and fund operations in one context graph. Analysts, trade support and investor relations all work from the same sources.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel panel-dark fit"><!--#include ui-agent-table--></div></div>
+  </section>
+</div>
+
+<nav class="subnav" aria-label="On this page">
+  <div class="subnav-inner">
+    <a href="#overview">Overview</a>
+    <a href="#office">Front to back office</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#technology">Technology</a>
+    <a href="#faq">Frequently asked questions</a>
+  </div>
+</nav>
+
+<div class="frame">
+  <section id="overview" aria-labelledby="overview-title">
+    <div class="row-pad">
+      <div class="head">
+        <h2 class="h2" id="overview-title">Built for funds that can't trade <span class="mute">on an unsourced answer.</span></h2>
+        <p>Pascal remembers the thesis behind every position and flags when new data moves against it. Trade support and investor relations read from the same record.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="office" aria-labelledby="om-title">
+    <div class="row-pad-sm"><h2 class="h2" id="om-title">Front, middle and back office. <span class="mute">One context graph.</span></h2></div>
+    <div class="om row">
+      <div class="om-list" role="tablist" aria-label="Office" aria-orientation="vertical">
+        <button class="om-tab" role="tab" id="om-t1" aria-controls="om-p1" aria-selected="true"><span class="eyebrow">Front office</span><b>Research &amp; portfolio management</b><span>Event briefs, earnings recaps and thesis monitors built from filings, broker research, expert calls and your own notes.</span><small class="om-who"><b>For</b>Analysts · Portfolio managers · CIO</small></button>
+        <button class="om-tab" role="tab" id="om-t2" aria-controls="om-p2" aria-selected="false" tabindex="-1"><span class="eyebrow">Middle office</span><b>Trading &amp; risk operations</b><span>Trade breaks, prime broker and custodian reconciliations, P&amp;L explains and exposure reports, worked with the history of every past fix.</span><small class="om-who"><b>For</b>Head of trading · COO · CRO</small></button>
+        <button class="om-tab" role="tab" id="om-t3" aria-controls="om-p3" aria-selected="false" tabindex="-1"><span class="eyebrow">Back office</span><b>Fund ops, IR &amp; compliance</b><span>DDQ and RFP answers from your approved library, investor letters and source tracing for compliance review.</span><small class="om-who"><b>For</b>COO · Head of investor relations · CCO</small></button>
+      </div>
+      <div class="om-media">
+        <div id="om-p1" role="tabpanel" aria-labelledby="om-t1" style="height:100%"><div class="panel panel-dark fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="Event brief" label="30-second walkthrough: Pascal turns an overnight earnings release into a cited event brief and flags a thesis break."-->
+            <div class="ucp-scene" data-label="Trigger">
+              <p class="pui-k ucp-in">New filing · 06:42</p>
+              <div class="ucp-trigger ucp-in pui-mt" style="--d:.3s"><span class="pui-lg w">{{logo:pdf}}</span><div><b>Sea Limited · Q3 FY26 shareholder letter</b><span class="pui-sub">14 pages · posted to investor relations site</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:1s"><span class="pui-tag">Thesis on file</span>Shopee margin expansion<span class="pui-row-r"><span class="pui-tag navy">Long · High</span></span></div>
+              <div class="pui-row ucp-in" style="--d:1.5s"><span class="pui-tag grey">Coverage</span>TMT desk · 3 analysts<span class="pui-row-r pui-sub">Morning meeting 08:00</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2.4s">{{icon:play}} Event brief agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Read">
+              <p class="pui-k">Reading 5 sources</p>
+              <div class="pui-row ucp-in pui-mt" style="--d:.1s"><span class="pui-lg w">{{logo:pdf}}</span>Q3 shareholder letter<span class="pui-row-r pui-sub">14 pp</span><!--#include ucp-tick d="1s"--></div>
+              <div class="pui-row ucp-in" style="--d:.4s"><span class="pui-lg w">{{logo:pdf}}</span>Earnings call transcript<span class="pui-row-r pui-sub">62 min</span><!--#include ucp-tick d="1.8s"--></div>
+              <div class="pui-row ucp-in" style="--d:.7s"><span class="pui-lg ic">{{icon:file-text}}</span>6 broker notes from the vault<span class="pui-row-r pui-sub">last 30 days</span><!--#include ucp-tick d="2.6s"--></div>
+              <div class="pui-row ucp-in" style="--d:1s"><span class="pui-lg w">{{logo:sharepoint}}</span>Your thesis note · Aug 2026<span class="pui-row-r pui-sub">internal</span><!--#include ucp-tick d="3.2s"--></div>
+              <div class="pui-row ucp-in" style="--d:1.3s"><span class="pui-lg ic">{{icon:users}}</span>Expert call · SEA logistics<span class="pui-row-r pui-sub">transcript</span><!--#include ucp-tick d="3.8s"--></div>
+            </div>
+            <div class="ucp-scene" data-label="Compare">
+              <p class="pui-k">Street vs reported vs your thesis</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Metric</th><th>Street</th><th>Reported</th><th>Thesis</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Shopee adj. EBITDA margin</b></td><td>2.5%</td><td>2.9%<span class="pui-cite">1</span></td><td><span class="pui-tag">On track</span></td></tr>
+                  <tr class="ucp-in" style="--d:.9s"><td><b>GMV growth</b></td><td>24%</td><td>26%<span class="pui-cite">2</span></td><td><span class="pui-tag">On track</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.5s"><td><b>Monee NPL ratio</b></td><td>1.8%</td><td>2.3%<span class="pui-cite">3</span></td><td><span class="pui-tag amber">Breaks 2.0% limit</span></td></tr>
+                  <tr class="ucp-in" style="--d:2.1s"><td><b>Garena bookings</b></td><td>$610M</td><td>$642M<span class="pui-cite">4</span></td><td><span class="pui-tag grey">Not in thesis</span></td></tr>
+                </tbody>
+              </table>
+              <p class="pui-sub ucp-in pui-mt" style="--d:2.8s">Illustrative figures. Every cell links to the page it came from.</p>
+            </div>
+            <div class="ucp-scene" data-label="Brief">
+              <div class="pui-doc ucp-in"><span class="pui-lg w">{{logo:word}}</span>SE Q3 event brief.docx</div>
+              <div class="pui-doc-page" style="padding:14px 4px 0">
+                <p class="pui-doc-k ucp-in" style="--d:.3s">TMT desk · Event brief</p>
+                <p class="pui-doc-h ucp-in" style="--d:.5s">Sea Limited Q3: margin ahead, credit quality slips</p>
+                <p class="pui-doc-p ucp-in" style="--d:1.1s">Shopee adjusted EBITDA margin of 2.9% beat the street by 40 bp, on lower incentive spend.<span class="pui-cite">1</span></p>
+                <p class="pui-doc-p ucp-in" style="--d:1.8s">Monee NPLs rose to 2.3%, above the 2.0% level in our August thesis note.<span class="pui-cite">3</span></p>
+                <p class="pui-doc-p ucp-in" style="--d:2.5s">Two of six brokers flagged the same credit trend in September.<span class="pui-cite">5</span></p>
+              </div>
+            </div>
+            <div class="ucp-scene" data-label="Deliver">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:teams}}</span><div><b>Posted to #tmt-desk · 07:27</b><span class="pui-sub">Event brief, comparison table and 5 sources attached</span></div></div>
+              <div class="pui-hl ucp-in" style="--d:.8s">Thesis flag: Monee NPL ratio 2.3% breaks the 2.0% limit in your August note. Shareholder letter, p. 9.</div>
+              <div class="ucp-cols pui-mt">
+                <div class="ucp-in" style="--d:1.5s"><span class="ucp-big">45<small>min</small></span><p class="pui-sub">print to brief</p></div>
+                <div class="ucp-in" style="--d:1.9s"><span class="ucp-big">5<small>sources</small></span><p class="pui-sub">each claim cited to the page</p></div>
+              </div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+        <div id="om-p2" role="tabpanel" aria-labelledby="om-t2" hidden style="height:100%"><div class="panel fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="Daily reconciliation" label="30-second walkthrough: Pascal reconciles the prime broker position file, explains each break from past fixes and routes the rest to trade support."-->
+            <div class="ucp-scene" data-label="Files in">
+              <p class="pui-k ucp-in">Overnight files · 06:05</p>
+              <div class="pui-row ucp-in pui-mt" style="--d:.3s"><span class="pui-lg ic">{{icon:landmark}}</span>Prime broker A · position file<span class="pui-row-r pui-sub">1,284 lines</span></div>
+              <div class="pui-row ucp-in" style="--d:.6s"><span class="pui-lg ic">{{icon:building}}</span>Custodian · cash and holdings<span class="pui-row-r pui-sub">412 lines</span></div>
+              <div class="pui-row ucp-in" style="--d:.9s"><span class="pui-lg ic">{{icon:server}}</span>OMS · end-of-day trade blotter<span class="pui-row-r pui-sub">366 trades</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:1.8s">{{icon:play}} Reconciliation agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Match">
+              <p class="pui-k">Matching books to street</p>
+              <div class="pui-mt"><div class="pui-row" style="border:0"><span>Positions</span><span class="pui-row-r pui-sub">1,271 of 1,284</span></div><div class="ucp-bar" style="--w:99%;--d:.2s"></div></div>
+              <div class="pui-mt"><div class="pui-row" style="border:0"><span>Cash balances</span><span class="pui-row-r pui-sub">412 of 412</span></div><div class="ucp-bar" style="--w:100%;--d:.8s"></div></div>
+              <div class="pui-mt"><div class="pui-row" style="border:0"><span>Trades vs confirmations</span><span class="pui-row-r pui-sub">366 of 366</span></div><div class="ucp-bar" style="--w:100%;--d:1.4s"></div></div>
+              <div class="pui-hl ucp-in pui-mt" style="--d:3.4s">13 breaks found. Checking each against past fixes.</div>
+            </div>
+            <div class="ucp-scene" data-label="Explain">
+              <p class="pui-k">Breaks, with the likely cause</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Break</th><th>Difference</th><th>Likely cause</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>TSM ADR</b></td><td>2,000 sh</td><td>Late allocation from EMS <span class="pui-tag">Seen before</span></td></tr>
+                  <tr class="ucp-in" style="--d:.8s"><td><b>EUR/USD 3M fwd</b></td><td>Settle date</td><td>T+2 vs T+3 booking <span class="pui-tag">Seen before</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.3s"><td><b>MSFT dividend</b></td><td>$4,212</td><td>Accrual on ex-date <span class="pui-tag">Seen before</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.8s"><td><b>Swap reset · ASML</b></td><td>€18,940</td><td>No match in history <span class="pui-tag amber">New</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="ucp-scene" data-label="Memory">
+              <p class="pui-k ucp-in">Why Pascal suggested this fix</p>
+              <div class="pui-tl pui-mt">
+                <div class="pui-tl-i ucp-in" style="--d:.3s"><span class="pui-tl-ic">{{icon:clock}}</span><div class="pui-tl-t"><b>14 Aug</b> · Same TSM ADR break, same broker</div></div>
+                <div class="pui-tl-i ucp-in" style="--d:.9s"><span class="pui-tl-ic">{{icon:message}}</span><div class="pui-tl-t">Trade support: allocation arrived after cut-off. Re-booked to fund B.</div></div>
+                <div class="pui-tl-i ucp-in" style="--d:1.5s"><span class="pui-tl-ic">{{icon:check}}</span><div class="pui-tl-t">Approved by the COO. Saved as the standard fix.</div></div>
+                <div class="pui-tl-i ucp-in" style="--d:2.1s"><span class="pui-tl-ic run">{{icon:refresh}}</span><div class="pui-tl-t"><b>Today</b> · Same fix proposed, waiting for one click</div></div>
+              </div>
+            </div>
+            <div class="ucp-scene" data-label="Resolve">
+              <div class="ucp-cols">
+                <div class="ucp-in"><span class="ucp-big">11<small>of 13</small></span><p class="pui-sub">breaks explained from past fixes</p></div>
+                <div class="ucp-in" style="--d:.4s"><span class="ucp-big">2<small>routed</small></span><p class="pui-sub">to trade support with context</p></div>
+              </div>
+              <div class="ucp-trigger ucp-in pui-mt" style="--d:1.2s"><span class="pui-lg w">{{logo:excel}}</span><div><b>Reconciliation pack · 07:41</b><span class="pui-sub">Break log, P&amp;L explain and audit trail</span></div></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2s">{{icon:check-circle}} Ready before the 08:00 risk call</div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+        <div id="om-p3" role="tabpanel" aria-labelledby="om-t3" hidden style="height:100%"><div class="panel panel-cream fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="DDQ response" label="30-second walkthrough: Pascal drafts a 214-question investor DDQ from the approved answer library, learns from reviewer edits and exports it in Word."-->
+            <div class="ucp-scene" data-label="Request">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:outlook}}</span><div><b>Investor consultant · DDQ 2026</b><span class="pui-sub">214 questions · due 18 Oct · Excel template attached</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:.8s"><span class="pui-tag grey">Fund</span>Global equity long/short<span class="pui-row-r pui-sub">IR owner: 1 person</span></div>
+              <div class="pui-row ucp-in" style="--d:1.2s"><span class="pui-tag grey">Last DDQ</span>March 2026 · 198 questions<span class="pui-row-r pui-sub">approved</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2s">{{icon:play}} DDQ agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Match">
+              <p class="pui-k">Matching to the approved library</p>
+              <div class="pui-mt"><div class="pui-row" style="border:0"><span>Approved answer reused</span><span class="pui-row-r pui-sub">186</span></div><div class="ucp-bar" style="--w:87%;--d:.2s"></div></div>
+              <div class="pui-mt"><div class="pui-row" style="border:0"><span>Answer needs a data refresh</span><span class="pui-row-r pui-sub">21</span></div><div class="ucp-bar" style="--w:10%;--d:.9s"></div></div>
+              <div class="pui-mt"><div class="pui-row" style="border:0"><span>New question, drafted from policies</span><span class="pui-row-r pui-sub">7</span></div><div class="ucp-bar" style="--w:3%;--d:1.6s"></div></div>
+            </div>
+            <div class="ucp-scene" data-label="Draft">
+              <p class="pui-k ucp-in">Question 4.2 · Valuation</p>
+              <p class="pui-q ucp-in" style="--d:.3s;margin:10px 0 0">Describe your valuation policy for Level 3 assets.</p>
+              <p class="pui-ans ucp-in pui-mt" style="--d:1s">The fund holds no Level 3 assets today. Policy requires independent pricing from two sources and monthly review by the valuation committee.<span class="pui-cite">1</span><span class="pui-cite">2</span></p>
+              <div class="pui-row ucp-in" style="--d:1.8s"><span class="pui-lg w">{{logo:pdf}}</span>Valuation policy v7 · approved Mar 2026<span class="pui-row-r pui-sub">p. 4</span></div>
+              <div class="pui-row ucp-in" style="--d:2.1s"><span class="pui-lg w">{{logo:excel}}</span>Holdings by fair value level · 30 Sep<span class="pui-row-r pui-sub">tab 2</span></div>
+            </div>
+            <div class="ucp-scene" data-label="Review">
+              <p class="pui-k ucp-in">Reviewer edit · Compliance</p>
+              <p class="pui-ans ucp-in pui-mt" style="--d:.4s">…monthly review by the valuation committee <span class="pui-mark-hl">and quarterly review by the fund's auditor</span>.</p>
+              <div class="pui-note ucp-in" style="--d:1.2s">Edit saved to the approved library. The next DDQ starts from this answer.</div>
+              <div class="pui-row ucp-in pui-mt" style="--d:2s"><span class="pui-av">CC</span>Approved by the CCO<span class="pui-row-r pui-sub">09:12</span></div>
+            </div>
+            <div class="ucp-scene" data-label="Export">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:word}}</span><div><b>DDQ 2026 · Global equity long-short.docx</b><span class="pui-sub">214 of 214 answered · sources in the margin</span></div></div>
+              <div class="ucp-cols pui-mt">
+                <div class="ucp-in" style="--d:.7s"><span class="ucp-big">214<small>/214</small></span><p class="pui-sub">questions answered</p></div>
+                <div class="ucp-in" style="--d:1.1s"><span class="ucp-big">6<small>hrs</small></span><p class="pui-sub">from template to review</p></div>
+              </div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:1.8s">{{icon:check-circle}} Sent to IR for sign-off</div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="dark" id="capabilities" aria-labelledby="cap-title">
+  <div class="frame" style="border-color:var(--d-line)">
+    <div class="row-pad"><p class="eyebrow">Capabilities</p><h2 class="h2" id="cap-title" style="color:#fff;margin-top:18px">Where hedge funds <span style="color:var(--d-mute)">start with Pascal.</span></h2></div>
+    <div class="caps" style="border-top:1px solid var(--d-line)">
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:bar-chart}}</span><h3>Equity research</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Front office</p><p>Earnings recaps, event briefs and company research across filings, transcripts and your own notes, every claim cited.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:landmark}}</span><h3>Credit research</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Front office</p><p>Offering documents, covenants and rating actions read and extracted into tables, with every figure sourced.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:eye}}</span><h3>Thesis and portfolio monitoring</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Front office</p><p>Monitors that flag when a filing, broker note or expert call moves against a position on the book.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:repeat}}</span><h3>Trade support and reconciliations</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Middle office</p><p>Position, cash and trade breaks against prime broker and custodian files, explained from the fixes your team already made.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:shield}}</span><h3>Risk and exposure reporting</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Middle office</p><p>Daily exposure, liquidity and P&amp;L explain packs, with the movement behind each number written out.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:file-check}}</span><h3>DDQ, RFP and investor reporting</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Back office</p><p>DDQ and RFP answers drafted from your approved library, plus investor letters, with sources attached for compliance.</p></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!--#include tech-section-->
+
+<div class="frame">
+
+  <section class="row row-pad" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>How do hedge funds use AI across front, middle and back office?<span class="pm" aria-hidden="true"></span></summary><div class="ans">In the front office, hedge funds use AI for event briefs, earnings recaps and thesis monitoring. In the middle office, it explains trade and reconciliation breaks and writes P&amp;L and exposure commentary. In the back office, it drafts DDQ and RFP answers and investor letters. Pascal runs all three on one context graph, so each team reads from the same sources.</div></details>
+        <details class="faq-item"><summary>What does middle office mean at a hedge fund?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The middle office sits between the trading desk and fund administration. It covers trade capture and confirmation, reconciliations against prime brokers and custodians, P&amp;L and exposure reporting, collateral and margin, and risk monitoring. The head of trading, the COO and, at larger funds, the CRO usually own it.</div></details>
+        <details class="faq-item"><summary>Does Pascal respect our broker research entitlements?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Pascal checks permissions before a document reaches an analyst or an agent. A report from a broker your fund doesn't license, or an internal note restricted to one team, stays hidden from everyone else, and the count of hidden documents is shown so nothing looks missing.</div></details>
+        <details class="faq-item"><summary>Which systems does Pascal connect to at a hedge fund?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal reads broker research feeds, expert network transcripts, SharePoint and email, and the files your OMS, prime brokers and administrator already send. It also works with market data you license, such as Bloomberg, FactSet and Capital IQ.</div></details>
+        <details class="faq-item"><summary>How does Pascal keep fund data secure?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal deploys in your private cloud or on premise, with role-based access controls and source-level permissions. Your positions, research and investor data stay inside your perimeter.</div></details>
+        <details class="faq-item"><summary>Where should a hedge fund start with Pascal?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Most funds start with one workflow on their own documents, usually event briefs or a broker research vault, then add the middle and back office on the same graph. See the <a href="/pascal-agents/workflow-library">workflow library</a> for the full list.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See Pascal on your own book." sub="With your names and your templates."-->

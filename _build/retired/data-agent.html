@@ -1,0 +1,313 @@
+<!--meta
+{
+ "path": "/data-agent",
+ "title": "Pascal Data Agent: Your Files as Structured Data | Pascal AI",
+ "description": "Pascal Data Agent turns broker reports, expert calls, notes and email into entity-tagged data, served to analysts in a vault viewer and to agents over MCP.",
+ "crumbs": [["Pascal Data Agent", "/data-agent"]],
+ "schema": "software",
+ "name": "Pascal Data Agent",
+ "og_kicker": "Pascal Data Agent",
+ "og_title": "Your firm's files, as data your analysts and agents can use",
+ "llms": "Pascal Data Agent turns a firm's internal files (broker PDFs, expert-call transcripts, internal research notes, email, contracts, DDQs, data rooms) into structured, entity-tagged data. It classifies document types, extracts fields such as company, ticker, sector, broker, rating, price target, expert relationship, stance and conviction, links them to the context graph with provenance to the page, respects permissions, and serves the result in a vault viewer for analysts and over MCP (list_documents, get_document) for agents.",
+ "priority": 0.9,
+ "word_limit": 750,
+ "css": ["data-agent.css"]
+}
+-->
+<div class="frame pg-da">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Pascal Data Agent</span></span>Turn your firm's files into data <span class="mute">your analysts and agents can use.</span></h1>
+      <p class="lead">Pascal Data Agent reads broker reports, expert-call transcripts, internal notes and email, then tags each file by type, company, sector and broker. Analysts browse it in the vault viewer. Agents query it over MCP.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel fit"><!--#include ui-vault--></div></div>
+  </section>
+
+  <section class="cells row" aria-label="Pascal Data Agent in numbers">
+    <div class="cell"><span class="stat-num">90<small>sec</small></span><span class="stat-lbl">From a broker PDF landing in BluMatrix to a tagged row in the vault</span></div>
+    <div class="cell"><span class="stat-num">14<small>of 6,711</small></span><span class="stat-lbl">Files left for a person to classify after the first sync</span></div>
+    <div class="cell"><span class="stat-num">1,947</span><span class="stat-lbl">Expert calls tagged with speaker, employer and relationship to each company</span></div>
+  </section>
+
+  <section class="row" id="steps" aria-labelledby="steps-title">
+    <div class="row-pad-sm"><h2 class="h2" id="steps-title">From file to fact <span class="mute">in four steps.</span></h2></div>
+    <div class="cells c4 row da-steps">
+      <div class="cell"><span class="n">01 Classify</span><b>Give every file a type</b><span>Each file gets a type from your taxonomy, with a confidence score. Unsure files wait for a person.</span>
+        <div class="da-step-ui"><!--mock--><div class="da-mini" role="img" aria-label="Classifier scores for one file: broker report 0.97, expert call 0.02, research note 0.01."><span class="pui-k">Mgmt_mtg_0930.pdf</span>
+          <div class="da-mini-r"><span>Broker report</span><span class="da-bar"><i style="width:97%"></i></span><b class="da-num">0.97</b></div>
+          <div class="da-mini-r"><span>Expert call</span><span class="da-bar grey"><i style="width:4%"></i></span><span class="da-num da-mu">0.02</span></div>
+          <div class="da-mini-r"><span>Research note</span><span class="da-bar grey"><i style="width:3%"></i></span><span class="da-num da-mu">0.01</span></div>
+        </div><!--/mock--></div></div>
+      <div class="cell"><span class="n">02 Extract</span><b>Pull out the fields</b><span>Rating, price target, speaker, relationship, stance. Each value keeps the page it came from.</span>
+        <div class="da-step-ui"><!--mock--><div class="da-mini" role="img" aria-label="Extracted fields from a broker report: rating Buy on page 9, price target $245 on page 9, price target change plus 15 on page 9."><span class="pui-k">Broker report fields</span>
+          <div class="da-mini-r"><span>Rating</span><b>Buy</b><span class="pui-cite">p.9</span></div>
+          <div class="da-mini-r"><span>Price target</span><b>$245</b><span class="pui-cite">p.9</span></div>
+          <div class="da-mini-r"><span>PT change</span><b class="da-up">+15</b><span class="pui-cite">p.9</span></div>
+        </div><!--/mock--></div></div>
+      <div class="cell"><span class="n">03 Link</span><b>Resolve to the context graph</b><span>Tickers, name variants and product lines map to one company in your <a href="/platform/context-graph" class="da-inl">context graph</a>.</span>
+        <div class="da-step-ui"><!--mock--><div class="da-mini" role="img" aria-label="Entity resolution: Blackwell Ultra, Nvidia and GB300 resolve to NVDA; 2330.TW resolves to TSM."><span class="pui-k">Entity resolution</span>
+          <div class="da-mini-r"><code>Blackwell Ultra</code><span class="da-mu">→</span><b class="da-mono">NVDA</b></div>
+          <div class="da-mini-r"><code>Nvidia</code><span class="da-mu">→</span><b class="da-mono">NVDA</b></div>
+          <div class="da-mini-r"><code>2330.TW</code><span class="da-mu">→</span><b class="da-mono">TSM</b></div>
+        </div><!--/mock--></div></div>
+      <div class="cell"><span class="n">04 Serve</span><b>Serve people and agents</b><span>Analysts open the vault viewer. Agents call the same records over MCP, under the same permissions.</span>
+        <div class="da-step-ui"><!--mock--><div class="da-mini" role="img" aria-label="The same records are served in three ways: the vault viewer for analysts, and the list_documents and get_document MCP tools for agents."><span class="pui-k">Served to</span>
+          <div class="da-mini-r"><span>Vault viewer</span><span class="pui-tag">Analyst UI</span></div>
+          <div class="da-mini-r"><code>list_documents</code><span class="pui-tag navy">MCP</span></div>
+          <div class="da-mini-r"><code>get_document</code><span class="pui-tag navy">MCP</span></div>
+        </div><!--/mock--></div></div>
+    </div>
+  </section>
+
+  <section class="row split" id="two-ways" aria-labelledby="f1">
+    <div class="split-copy">
+      <p class="eyebrow">Analyst UI and Agent (MCP)</p>
+      <h2 class="h2" id="f1">One dataset. <span class="mute">Two ways in.</span></h2>
+      <p>The vault viewer and Pascal's MCP server read the same records. Flip the toggle to see an analyst's table as the JSON an agent receives.</p>
+      <a class="link" href="/platform/mcp-apis">See MCP &amp; APIs {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui da-two">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Vault viewer / <b>Broker reports · NVDA · 30d</b></span><span class="pui-bar-r"><span class="da-seg" role="tablist" aria-label="View as"><button type="button" role="tab" id="two-t1" aria-controls="two-p1" aria-selected="true">Analyst UI</button><button type="button" role="tab" id="two-t2" aria-controls="two-p2" aria-selected="false" tabindex="-1">Agent (MCP)</button></span></span></div>
+    <div id="two-p1" role="tabpanel" aria-labelledby="two-t1">
+      <div class="pui-main" role="img" aria-label="Analyst UI: four broker reports on NVIDIA from the last 30 days. Goldman Sachs, 30 September, Buy, price target $245, up 15. J.P. Morgan, 29 September, Overweight, $250, up 20. Bernstein, 1 October, mentions NVIDIA, not rated. Morgan Stanley, 26 September, mentions NVIDIA, not rated. Illustrative data.">
+        <table class="pui-tbl">
+          <thead><tr><th>Date</th><th>Broker</th><th>Rating</th><th class="r">PT</th><th class="r">PT Δ</th></tr></thead>
+          <tbody>
+            <tr><td class="da-mono">Oct 1</td><td><b>Bernstein</b><span class="da-s">Mentions NVDA</span></td><td class="da-mu">Not rated</td><td class="r da-mu">–</td><td class="r da-mu">–</td></tr>
+            <tr class="on"><td class="da-mono">Sep 30</td><td><b>Goldman Sachs</b><span class="da-s">US Semis: AI capex tracker</span></td><td>Buy</td><td class="r">$245</td><td class="r da-up">+15</td></tr>
+            <tr><td class="da-mono">Sep 29</td><td><b>J.P. Morgan</b><span class="da-s">Blackwell Ultra ramp ahead of plan</span></td><td>Overweight</td><td class="r">$250</td><td class="r da-up">+20</td></tr>
+            <tr><td class="da-mono">Sep 26</td><td><b>Morgan Stanley</b><span class="da-s">Mentions NVDA</span></td><td class="da-mu">Not rated</td><td class="r da-mu">–</td><td class="r da-mu">–</td></tr>
+          </tbody>
+        </table>
+        <p class="pui-lock pui-mt">{{icon:lock}} 2 more hidden by your permissions</p>
+      </div>
+    </div>
+    <div id="two-p2" role="tabpanel" aria-labelledby="two-t2" hidden>
+      <div class="da-term" role="img" aria-label="Agent view: the list_documents response for the same filter, returning 4 documents with ratings and price targets, and 2 hidden by permissions. Illustrative data.">
+        <div class="da-term-h"><span class="da-dot"></span>MCP · <b>list_documents</b><span class="r">200 · 38 ms</span></div>
+<pre class="da-json">{
+  <span class="k">"total"</span>: <span class="n">4</span>, <span class="k">"hidden_by_acl"</span>: <span class="n">2</span>,
+  <span class="k">"documents"</span>: [
+    { <span class="k">"date"</span>: <span class="s">"2026-10-01"</span>, <span class="k">"broker"</span>: <span class="s">"Bernstein"</span>, <span class="k">"NVDA"</span>: <span class="s">"mention"</span> },
+    { <span class="k">"date"</span>: <span class="s">"2026-09-30"</span>, <span class="k">"broker"</span>: <span class="s">"Goldman Sachs"</span>,
+      <span class="k">"rating"</span>: <span class="s">"Buy"</span>, <span class="k">"pt"</span>: <span class="n">245</span>, <span class="k">"pt_change"</span>: <span class="n">15</span>, <span class="k">"page"</span>: <span class="n">9</span> },
+    { <span class="k">"date"</span>: <span class="s">"2026-09-29"</span>, <span class="k">"broker"</span>: <span class="s">"J.P. Morgan"</span>,
+      <span class="k">"rating"</span>: <span class="s">"Overweight"</span>, <span class="k">"pt"</span>: <span class="n">250</span>, <span class="k">"pt_change"</span>: <span class="n">20</span>, <span class="k">"page"</span>: <span class="n">1</span> },
+    { <span class="k">"date"</span>: <span class="s">"2026-09-26"</span>, <span class="k">"broker"</span>: <span class="s">"Morgan Stanley"</span>, <span class="k">"NVDA"</span>: <span class="s">"mention"</span> }
+  ]
+}</pre>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row" id="use-cases" aria-labelledby="uc-title">
+    <div class="row-pad-sm"><h2 class="h2" id="uc-title">Built for the files <span class="mute">your firm already has.</span></h2></div>
+    <div class="om row da-uc">
+      <div class="om-list" role="tablist" aria-label="Use cases" aria-orientation="vertical">
+        <button class="om-tab" role="tab" id="uc-t1" aria-controls="uc-p1" aria-selected="true"><span class="eyebrow">Research</span><b>Broker research vault</b><span>Every broker PDF, tagged by company, broker, rating and price target.</span><small class="om-who"><b>For</b>Analysts · Portfolio managers</small></button>
+        <button class="om-tab" role="tab" id="uc-t2" aria-controls="uc-p2" aria-selected="false" tabindex="-1"><span class="eyebrow">Research</span><b>Expert call library</b><span>Transcripts tagged by speaker, employer and relationship to each company.</span><small class="om-who"><b>For</b>Analysts · Research operations</small></button>
+        <button class="om-tab" role="tab" id="uc-t3" aria-controls="uc-p3" aria-selected="false" tabindex="-1"><span class="eyebrow">Legal</span><b>"Show me every NDA"</b><span>Agreements found across drives and email, with counterparty, term and expiry pulled out.</span><small class="om-who"><b>For</b>General counsel · Deal team · COO</small></button>
+        <button class="om-tab" role="tab" id="uc-t4" aria-controls="uc-p4" aria-selected="false" tabindex="-1"><span class="eyebrow">Investor relations</span><b>DDQ and RFP answer library</b><span>Approved answers from past questionnaires, tagged by topic and approval date.</span><small class="om-who"><b>For</b>Head of IR · CCO</small></button>
+        <button class="om-tab" role="tab" id="uc-t5" aria-controls="uc-p5" aria-selected="false" tabindex="-1"><span class="eyebrow">Deals</span><b>Data rooms</b><span>Every file in a data room sorted by type, with the fields a deal team checks first.</span><small class="om-who"><b>For</b>Deal team · Credit analysts</small></button>
+      </div>
+      <div class="om-media">
+        <div id="uc-p1" role="tabpanel" aria-labelledby="uc-t1"><div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Vault viewer query: price target changes in semiconductors in the last 30 days. Goldman Sachs on NVDA, Buy, $245, up 15. J.P. Morgan on NVDA, Overweight, $250, up 20. Morgan Stanley on TSM, Overweight, $265, up 10. UBS on AMD, Neutral, $180, down 10. Deutsche Bank on MU, Buy, $165, up 5. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Vault viewer / <b>Broker reports</b></span><span class="pui-bar-r"><span class="pui-tag">4,212 in vault</span></span></div>
+    <div class="pui-main">
+      <div class="da-q">{{icon:search}}PT changes in semiconductors, last 30 days<span class="pui-tag grey">5 reports</span></div>
+      <table class="pui-tbl">
+        <thead><tr><th>Company</th><th>Broker</th><th>Rating</th><th class="r">PT</th><th class="r">PT Δ</th></tr></thead>
+        <tbody>
+          <tr><td class="da-mono"><b>NVDA</b></td><td>Goldman Sachs</td><td>Buy</td><td class="r">$245</td><td class="r da-up">+15</td></tr>
+          <tr><td class="da-mono"><b>NVDA</b></td><td>J.P. Morgan</td><td>Overweight</td><td class="r">$250</td><td class="r da-up">+20</td></tr>
+          <tr><td class="da-mono"><b>TSM</b></td><td>Morgan Stanley</td><td>Overweight</td><td class="r">$265</td><td class="r da-up">+10</td></tr>
+          <tr><td class="da-mono"><b>AMD</b></td><td>UBS</td><td>Neutral</td><td class="r">$180</td><td class="r da-dn">−10</td></tr>
+          <tr><td class="da-mono"><b>MU</b></td><td>Deutsche Bank</td><td>Buy</td><td class="r">$165</td><td class="r da-up">+5</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+        <div id="uc-p2" role="tabpanel" aria-labelledby="uc-t2" hidden><div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Vault viewer query: expert calls on the AI supply chain in the last 30 days. Former Director, Advanced Packaging, ex-employee of TSMC, Third Bridge, 52 minutes. Former Director, Datacenter Planning, ex-employee of Microsoft, GLG, 47 minutes. Former Procurement Lead, customer of NVIDIA, Tegus, 45 minutes. Engineering Manager at an OSAT supplier, supplier view, Third Bridge, 38 minutes. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Vault viewer / <b>Expert calls</b></span><span class="pui-bar-r"><span class="pui-tag">1,947 in vault</span></span></div>
+    <div class="pui-main">
+      <div class="da-q">{{icon:search}}Expert calls on the AI supply chain, last 30 days<span class="pui-tag grey">4 calls</span></div>
+      <table class="pui-tbl">
+        <thead><tr><th>Expert</th><th>Relationship</th><th>Network</th><th class="r">Length</th></tr></thead>
+        <tbody>
+          <tr><td><b>Former Director, Advanced Packaging</b><span class="da-s">TSMC</span></td><td><span class="pui-tag navy">Ex-employee</span></td><td>Third Bridge</td><td class="r">52 min</td></tr>
+          <tr><td><b>Former Director, Datacenter Planning</b><span class="da-s">Microsoft</span></td><td><span class="pui-tag navy">Ex-employee</span></td><td>GLG</td><td class="r">47 min</td></tr>
+          <tr><td><b>Former Procurement Lead</b><span class="da-s">US hyperscaler</span></td><td><span class="pui-tag navy">Customer · NVDA</span></td><td>Tegus</td><td class="r">45 min</td></tr>
+          <tr><td><b>Engineering Manager</b><span class="da-s">OSAT supplier, Taiwan</span></td><td><span class="pui-tag navy">Supplier view</span></td><td>Third Bridge</td><td class="r">38 min</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+        <div id="uc-p3" role="tabpanel" aria-labelledby="uc-t3" hidden><div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Vault viewer query: show me every NDA. 312 agreements found across SharePoint, Outlook and OneDrive. Project Atlas mutual NDA with a sell-side adviser, 24 months, expires August 2028. Project Birch one-way NDA with a target company, 18 months, expires December 2027. Project Cedar mutual NDA with a co-investor, 12 months, expires in 41 days. Project Delta NDA, unsigned draft. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Vault viewer / <b>Legal agreements</b></span><span class="pui-bar-r"><span class="pui-tag">3 sources</span></span></div>
+    <div class="pui-main">
+      <div class="da-q">{{icon:search}}Show me every NDA<span class="pui-tag grey">312 found</span></div>
+      <table class="pui-tbl">
+        <thead><tr><th>Agreement</th><th>Counterparty</th><th>Term</th><th>Expires</th></tr></thead>
+        <tbody>
+          <tr><td><span class="da-fold"><span class="pui-lg w">{{logo:sharepoint}}</span><b>Project Atlas · Mutual NDA</b></span></td><td>Sell-side adviser</td><td>24 months</td><td>Aug 2028</td></tr>
+          <tr><td><span class="da-fold"><span class="pui-lg w">{{logo:outlook}}</span><b>Project Birch · One-way NDA</b></span></td><td>Target company</td><td>18 months</td><td>Dec 2027</td></tr>
+          <tr><td><span class="da-fold"><span class="pui-lg w">{{logo:onedrive}}</span><b>Project Cedar · Mutual NDA</b></span></td><td>Co-investor</td><td>12 months</td><td><span class="pui-tag amber">In 41 days</span></td></tr>
+          <tr><td><span class="da-fold"><span class="pui-lg w">{{logo:outlook}}</span><b>Project Delta · NDA draft</b></span></td><td>Lender group</td><td>–</td><td><span class="pui-tag grey">Unsigned</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+        <div id="uc-p4" role="tabpanel" aria-labelledby="uc-t4" hidden><div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Vault viewer query: latest approved answers on cybersecurity. Incident response plan, approved August 2026 by the CCO in the institutional DDQ. Third-party penetration testing, approved June 2026 by the CTO in a pension RFP. MNPI controls in research systems, approved May 2026 by the CCO. Business continuity testing, last approved November 2025, due for review. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Vault viewer / <b>DDQ answers</b></span><span class="pui-bar-r"><span class="pui-tag">1,086 answers</span></span></div>
+    <div class="pui-main">
+      <div class="da-q">{{icon:search}}Latest approved answers on cybersecurity<span class="pui-tag grey">4 answers</span></div>
+      <table class="pui-tbl">
+        <thead><tr><th>Question</th><th>From</th><th>Approved</th></tr></thead>
+        <tbody>
+          <tr><td><b>Describe your incident response plan</b></td><td>Institutional DDQ</td><td>Aug 2026 · CCO</td></tr>
+          <tr><td><b>Do you run third-party penetration tests?</b></td><td>Pension RFP</td><td>Jun 2026 · CTO</td></tr>
+          <tr><td><b>How is MNPI controlled in research systems?</b></td><td>Consultant DDQ</td><td>May 2026 · CCO</td></tr>
+          <tr><td><b>How often is business continuity tested?</b></td><td>Institutional DDQ</td><td><span class="pui-tag amber">Nov 2025 · review</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+        <div id="uc-p5" role="tabpanel" aria-labelledby="uc-t5" hidden><div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Vault viewer for the Project Atlas data room, 169 files sorted by type: 42 financial statements covering FY23 to FY26; 118 customer contracts with change of control and term extracted; 1 credit agreement with covenants and maturity; 1 quality of earnings report with adjusted EBITDA; 7 files unclassified, waiting for review. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Data room / <b>Project Atlas</b></span><span class="pui-bar-r"><span class="pui-tag">169 files</span></span></div>
+    <div class="pui-main">
+      <div class="da-q">{{icon:folder-search}}Project Atlas data room, by document type<span class="pui-tag grey">5 types</span></div>
+      <table class="pui-tbl">
+        <thead><tr><th>Type</th><th class="r">Files</th><th>Fields pulled out</th></tr></thead>
+        <tbody>
+          <tr><td><b>Financial statements</b></td><td class="r">42</td><td>FY23–FY26, auditor, restatements</td></tr>
+          <tr><td><b>Customer contracts</b></td><td class="r">118</td><td>Change of control, term, renewal</td></tr>
+          <tr><td><b>Credit agreement</b></td><td class="r">1</td><td>Covenants, maturity, margin grid</td></tr>
+          <tr><td><b>Quality of earnings</b></td><td class="r">1</td><td>Adjusted EBITDA, add-backs</td></tr>
+          <tr><td><b style="color:#8A4B0E">Unclassified</b></td><td class="r">7</td><td><span class="pui-tag amber">Waiting for review</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row split flip" id="data-platform" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">Is Pascal a data company?</p>
+      <h2 class="h2" id="f2">A data platform <span class="mute">for your own research.</span></h2>
+      <p>Pascal is a data platform for your own research, the way Snowflake is a data platform for your tables. Your files stay yours. Pascal gives them a schema, keeps them in sync and serves them to the tools you approve.</p>
+      <a class="link" href="/data-agent/extraction">See how fields are defined {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui da-schema" role="img" aria-label="The research vault as tables: broker_reports with 4,212 rows, expert_calls 1,947, research_notes 538, companies 1,284 and mentions 96,410. The broker_reports schema lists doc_id, published date, broker, companies, rating, price_target, pt_change and source_page, with example values from the Goldman Sachs semis report. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Data Agent / Schema / <b>research_vault</b></span><span class="pui-bar-r"><span class="pui-tag grey">Synced 12 min ago</span></span></div>
+    <div class="pui-main">
+      <div class="da-sch">
+        <div class="da-sch-l"><span class="pui-k">Tables</span>
+          <div class="da-tbln on">{{icon:table}}broker_reports<small>4,212</small></div>
+          <div class="da-tbln">{{icon:table}}expert_calls<small>1,947</small></div>
+          <div class="da-tbln">{{icon:table}}research_notes<small>538</small></div>
+          <div class="da-tbln">{{icon:table}}companies<small>1,284</small></div>
+          <div class="da-tbln">{{icon:table}}mentions<small>96,410</small></div>
+        </div>
+        <div class="da-sch-r">
+          <table class="pui-tbl">
+            <thead><tr><th>Column</th><th>Type</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr><td>doc_id</td><td>string</td><td>b1</td></tr>
+              <tr><td>published</td><td>date</td><td>2026-09-30</td></tr>
+              <tr><td>broker</td><td>entity</td><td>Goldman Sachs</td></tr>
+              <tr><td>companies</td><td>ticker[]</td><td>NVDA, AMD +3</td></tr>
+              <tr><td>rating</td><td>enum</td><td>Buy</td></tr>
+              <tr><td>price_target</td><td>currency</td><td>$245</td></tr>
+              <tr><td>pt_change</td><td>number</td><td><span class="da-up">+15</span></td></tr>
+              <tr><td>source_page</td><td>locator</td><td>p. 9 of 44</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" id="vertical" aria-labelledby="f3">
+    <div class="split-copy">
+      <p class="eyebrow">Vertical entities</p>
+      <h2 class="h2" id="f3">The entities a general model <span class="mute">walks past.</span></h2>
+      <p>Speaker names on expert calls. Brokers. Ticker variants and product lines that belong to a company. Ratings and price targets. Pascal tags them the way an analyst reads them.</p>
+      <a class="link" href="/data-agent/classifier">See the classifier {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Entities Pascal tags in two documents. In a Goldman Sachs broker report: NVDA as a ticker for NVIDIA, a price target of $245 up 15, a Buy rating, Blackwell Ultra as an NVIDIA product line and Nvidia as a name variant. In a Third Bridge expert call: the speaker, a former director of advanced packaging, as an ex-employee of TSMC, NVIDIA as a supplier view, and CoWoS-L as a TSMC product line. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Data Agent / <b>Entity tagging</b></span><span class="pui-bar-r"><span class="pui-tag">9 entities</span></span></div>
+    <div class="pui-main">
+      <div class="da-ner">
+        <div class="da-ner-src"><span class="pui-lg w">{{logo:pdf}}</span><span><b>Goldman Sachs</b> · US Semis: AI capex tracker · p. 9</span><span class="pui-sp"></span><span class="da-pill">Broker report</span></div>
+        <p>We raise our <span class="da-ent">NVDA<i>Ticker</i></span> PT to <span class="da-ent r">$245<i>PT +15</i></span> and reiterate <span class="da-ent r">Buy<i>Rating</i></span>. <span class="da-ent p">Blackwell Ultra<i>→ NVDA</i></span> shipments ran ahead of plan, and <span class="da-ent">Nvidia<i>Name variant</i></span> stays our top pick.</p>
+      </div>
+      <div class="da-ner">
+        <div class="da-ner-src"><span class="pui-lg t" style="background:#6A2D86">EX</span><span><b>Third Bridge</b> · CoWoS capacity and allocation · 14:10</span><span class="pui-sp"></span><span class="da-pill ex">Expert call</span></div>
+        <p><span class="da-ent b">Former Director, Advanced Packaging<i>Speaker</i></span> <span class="da-ent b">TSMC<i>Ex-employee</i></span>: “<span class="da-ent">NVIDIA<i>Supplier view</i></span> books <span class="da-ent p">CoWoS-L<i>→ TSM</i></span> capacity eighteen months out.”</p>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="more-title">
+    <div class="row-pad-sm"><h2 class="h2" id="more-title">Inside <span class="mute">Pascal Data Agent.</span></h2></div>
+    <div class="cells row">
+      <a class="cell" href="/data-agent/vault-viewer"><span class="n">Browse</span><b>Vault viewer</b><span>A file explorer for your research, filtered by type, company, sector and date.</span><span class="link">Try the vault viewer {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/data-agent/classifier"><span class="n">Classify</span><b>Document classifier</b><span>Your firm's document types, with confidence, a runner-up and a review queue.</span><span class="link">See the classifier {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/data-agent/extraction"><span class="n">Extract</span><b>Extraction &amp; table editor</b><span>Fields and tables pulled from every page, corrected in place and kept with provenance.</span><span class="link">See extraction {{icon:arrow-right}}</span></a>
+    </div>
+    <div class="row da-cs">
+      <p class="eyebrow">Case study</p>
+      <p class="da-cs-t">How a global long/short equity fund put its broker research and expert calls to work.</p>
+      <a class="link" href="/case-studies/hedge-funds">Read the hedge fund case study {{icon:arrow-right}}</a>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div>
+        <h2 class="h2" id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item"><summary>What is Pascal Data Agent?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The part of Pascal that turns your firm's files into structured data. It classifies each file, extracts the fields that matter for its type, links them to your context graph and serves them to analysts and agents.</div></details>
+        <details class="faq-item"><summary>Which files and sources does it work with?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Broker research portals such as BluMatrix, expert network transcripts, SharePoint, OneDrive and other drives, and email with attachments. PDFs, Word files, slides and scanned documents are all supported.</div></details>
+        <details class="faq-item"><summary>Is Pascal a data company?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal is a data platform for your own research, the way Snowflake is a data platform for your tables. The data is your firm's; Pascal structures it, keeps it current and serves it.</div></details>
+        <details class="faq-item"><summary>How do agents use the data?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Through Pascal's MCP server. Agents call list_documents to filter the vault and get_document to read the section about a company, from any MCP client your firm approves.</div></details>
+        <details class="faq-item"><summary>Does it respect our permissions?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Every list, count, answer and MCP call follows the user's source permissions and licences, including per-broker research entitlements.</div></details>
+        <details class="faq-item"><summary>Where does the data live?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Inside your deployment. Pascal runs in your own cloud or on premise, so the structured data and the original files stay within your perimeter.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See your own files" sub="as structured data."-->

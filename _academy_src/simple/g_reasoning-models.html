@@ -1,0 +1,657 @@
+<body class="__variable_246ccd __variable_c29908 __variable_98e614 __variable_475bff __variable_4559c1 antialiased">
+ <div>
+ </div>
+ <div>
+  <header>
+   <div>
+    <a href="/pascal-academy/ai-fundamentals">
+    </a>
+    <div>
+     <h1>
+      Reasoning Models
+     </h1>
+     <p>
+      How test-time compute lets language models think through hard problems, why chain-of-thought alone was not enough, and what the trade-offs look like.
+     </p>
+    </div>
+   </div>
+  </header>
+  <article>
+   <div>
+    <div>
+     <div>
+     </div>
+     <div>
+     </div>
+    </div>
+   </div>
+   <header>
+    <h1>
+     Reasoning Models
+    </h1>
+    <p>
+     How test-time compute lets language models think through hard problems, why chain-of-thought alone was not enough, and what the trade-offs look like.
+    </p>
+    <p>
+     Pascal Academy · ~13 min read · Beginner-friendly with advanced sections · Updated August 2026
+    </p>
+   </header>
+   <nav>
+    <h2>
+     Table of Contents
+    </h2>
+    <ol>
+     <li>
+      <a href="#what-is-a-reasoning-model">
+       <span>
+        1
+        .
+       </span>
+       What Is a Reasoning Model?
+      </a>
+     </li>
+     <li>
+      <a href="#why-reasoning-models-exist">
+       <span>
+        2
+        .
+       </span>
+       Why Reasoning Models Exist
+      </a>
+     </li>
+     <li>
+      <a href="#how-reasoning-models-work">
+       <span>
+        3
+        .
+       </span>
+       How Reasoning Models Work
+      </a>
+     </li>
+     <li>
+      <a href="#reasoning-models-vs-standard-models">
+       <span>
+        4
+        .
+       </span>
+       Reasoning Models vs Standard Models
+      </a>
+     </li>
+     <li>
+      <a href="#what-reasoning-models-are-good-at">
+       <span>
+        5
+        .
+       </span>
+       What Reasoning Models Are Good At
+      </a>
+     </li>
+     <li>
+      <a href="#what-reasoning-models-struggle-with">
+       <span>
+        6
+        .
+       </span>
+       What Reasoning Models Struggle With
+      </a>
+     </li>
+     <li>
+      <a href="#cost-and-latency-trade-offs">
+       <span>
+        7
+        .
+       </span>
+       Cost and Latency Trade-offs
+      </a>
+     </li>
+     <li>
+      <a href="#when-to-use-a-reasoning-model">
+       <span>
+        8
+        .
+       </span>
+       When to Use a Reasoning Model
+      </a>
+     </li>
+     <li>
+      <a href="#reasoning-models-and-hallucination">
+       <span>
+        9
+        .
+       </span>
+       Reasoning Models and Hallucination
+      </a>
+     </li>
+     <li>
+      <a href="#the-future-of-reasoning-models">
+       <span>
+        10
+        .
+       </span>
+       The Future of Reasoning Models
+      </a>
+     </li>
+     <li>
+      <a href="#faq">
+       <span>
+        11
+        .
+       </span>
+       Frequently Asked Questions
+      </a>
+     </li>
+    </ol>
+   </nav>
+   <div>
+    <section id="what-is-a-reasoning-model">
+     <h2>
+      1. What Is a Reasoning Model?
+     </h2>
+     <p>
+      A standard language model generates tokens one at a time, left to right, without the ability to go back and revise. Each token is produced once and becomes part of the context for the next token. This works well for text generation, summarisation, and extraction. It works poorly for problems that require planning, backtracking, or working through multiple steps before committing to an answer.
+     </p>
+     <p>
+      A reasoning model is a language model trained to produce an extended chain of thought before generating its final answer. Instead of jumping directly from the question to the answer, the model writes out its reasoning process. It breaks the problem into steps, checks each step, considers alternatives, and sometimes corrects itself before arriving at a conclusion. The chain of thought is generated as intermediate tokens that are produced before the final answer.
+     </p>
+     <p>
+      The core idea behind reasoning models is that giving the model more tokens to think with, meaning more intermediate computation, improves its performance on hard problems. This is called test-time compute or inference-time compute. A standard model spends a fixed amount of compute per token regardless of question difficulty. A reasoning model scales its compute with the difficulty of the problem, spending more tokens on harder questions and fewer on easier ones.
+     </p>
+     <aside>
+      <p>
+       KEY PRINCIPLE
+      </p>
+      <p>
+       Reasoning models trade inference cost for capability. A standard model generates an answer immediately. A reasoning model spends additional tokens thinking through the problem first. The extra tokens are where the reasoning happens, and the model's training teaches it to use those tokens productively rather than just padding.
+      </p>
+     </aside>
+    </section>
+    <section id="why-reasoning-models-exist">
+     <h2>
+      2. Why Reasoning Models Exist
+     </h2>
+     <p>
+      Standard language models have a well-documented weakness. They struggle with tasks that require multi-step reasoning, where each step depends on the result of the previous one. Math problems, logic puzzles, coding challenges, and scientific questions all require this kind of sequential thinking. A standard model that generates the answer directly often gets it wrong because it cannot look ahead and check its work.
+     </p>
+     <p>
+      Chain-of-thought prompting, covered in the prompt engineering guide, was an early attempt to address this. By asking the model to show its work, you could improve its performance on reasoning tasks. The model writes out intermediate steps, and those steps become part of the context that guides the final answer. This works because each token the model generates becomes part of the context for subsequent tokens, so writing out reasoning steps gives the model a richer context to draw from when it produces the answer.
+     </p>
+     <p>
+      Chain-of-thought prompting had limits. The model was still a standard model trained on next-token prediction. It had not been specifically trained to reason effectively, so its chains of thought were sometimes shallow, circular, or wrong. The model would write out reasoning that looked correct but contained logical errors, and then arrive at a wrong answer with apparent confidence.
+     </p>
+     <p>
+      Reasoning models close this gap through training. Rather than relying on the prompt to elicit reasoning, the model is trained on examples that include detailed reasoning traces. During training, the model learns to produce effective reasoning chains, not just plausible-looking ones. It learns to break problems down, check intermediate results, and backtrack when a path looks wrong. This is achieved through reinforcement learning, where the model is rewarded for arriving at correct answers through valid reasoning steps.
+     </p>
+    </section>
+    <section id="how-reasoning-models-work">
+     <h2>
+      3. How Reasoning Models Work
+     </h2>
+     <p>
+      The mechanics of a reasoning model build on the same Transformer architecture as standard LLMs. The difference is in training and inference.
+     </p>
+     <aside>
+      <p>
+       PASCAL ACADEMY
+      </p>
+      <p>
+       Pascal Academy's advanced LLM course covers reasoning model architectures, training methods, and deployment patterns. Reach out to learn about cohort programmes for your engineering team.
+      </p>
+     </aside>
+     <div id="training-with-reasoning-traces">
+      <h3>
+       Training with Reasoning Traces
+      </h3>
+      <p>
+       Standard models are trained on text where each token follows the previous one. Reasoning models are additionally trained on data that includes step-by-step reasoning traces. These traces show the model how to decompose a problem, how to check intermediate results, and how to arrive at an answer through logical steps. The training data can come from human experts who write out their reasoning process, or from automated systems that generate and verify reasoning chains.
+      </p>
+      <p>
+       Reinforcement learning plays a central role. The model generates reasoning traces for problems with known correct answers. Traces that lead to correct answers are rewarded. Traces that lead to wrong answers are penalised. Over many iterations, the model learns which reasoning strategies work and which do not. This is similar to how RLHF teaches a model to be helpful, but the reward signal comes from correctness rather than human preference.
+      </p>
+     </div>
+     <div id="inference-with-extended-thinking">
+      <h3>
+       Inference with Extended Thinking
+      </h3>
+      <p>
+       At inference time, the model is given a question and generates a chain of thought before producing its answer. This chain of thought can be hundreds or thousands of tokens long for complex problems. The model explores different approaches, checks its work, and sometimes backtracks. Only the final answer is presented to the user in some interfaces, while the reasoning trace is hidden or shown in a collapsible section.
+      </p>
+      <p>
+       The amount of reasoning the model does is related to the difficulty of the problem. For a simple factual question, the model may produce a short reasoning trace or skip extended reasoning entirely. For a complex math problem, it may produce thousands of tokens of reasoning before committing to an answer. This adaptive compute is a defining feature of reasoning models.
+      </p>
+     </div>
+     <aside>
+      <p>
+       GO DEEPER: REINFORCEMENT LEARNING AND THE REASONING REWARD (OPTIONAL)
+      </p>
+      <p>
+       The training process for reasoning models uses a reward signal based on answer correctness. For math problems, the reward is binary, the answer is either right or wrong. For coding problems, the reward comes from test cases that pass or fail. For other tasks, the reward can be more nuanced, based on partial credit or human evaluation of the reasoning quality. The model learns through many rounds of generation and feedback, gradually improving its reasoning strategies. This process is expensive because each training example requires the model to generate a full reasoning trace, which takes more compute than a single answer. The cost is justified by the improvement in reasoning quality, but it means reasoning models are more expensive to train than standard models.
+      </p>
+     </aside>
+    </section>
+    <section id="reasoning-models-vs-standard-models">
+     <h2>
+      4. Reasoning Models vs Standard Models
+     </h2>
+     <p>
+      Reasoning models and standard models serve different purposes. Understanding when to use each is a practical decision that depends on the task, the latency budget, and the cost tolerance.
+     </p>
+     <div>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Standard Model
+         </th>
+         <th>
+          Reasoning Model
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          Generates the answer directly from the prompt.
+         </td>
+         <td>
+          Generates a chain of thought, then the answer.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Fixed compute per token regardless of difficulty.
+         </td>
+         <td>
+          Scales compute with problem difficulty.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Fast response, low latency per query.
+         </td>
+         <td>
+          Slower response, higher latency due to extended thinking.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Lower cost per query.
+         </td>
+         <td>
+          Higher cost per query due to additional tokens generated.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Good for text generation, summarisation, extraction, chat.
+         </td>
+         <td>
+          Good for math, logic, coding, and multi-step analysis.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Can hallucinate on reasoning tasks because it cannot check its work.
+         </td>
+         <td>
+          Catches some of its own errors through the reasoning process.
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      The choice between a reasoning model and a standard model is rarely either-or. Many systems use both. A standard model handles the initial query, determines what kind of question it is, and routes complex reasoning tasks to a reasoning model. This routing approach gives you the speed of a standard model for easy questions and the accuracy of a reasoning model for hard ones.
+     </p>
+    </section>
+    <section id="what-reasoning-models-are-good-at">
+     <h2>
+      5. What Reasoning Models Are Good At
+     </h2>
+     <div id="mathematics-and-logic">
+      <h3>
+       Mathematics and Logic
+      </h3>
+      <p>
+       Mathematical problems require precise, multi-step reasoning. Each step depends on the previous one, and a single error propagates through the entire solution. Reasoning models excel here because they can check intermediate results and backtrack when a step produces an unexpected value. On competition mathematics benchmarks like AIME and the International Mathematical Olympiad, reasoning models score significantly higher than standard models.
+      </p>
+     </div>
+     <div id="coding-and-software-engineering">
+      <h3>
+       Coding and Software Engineering
+      </h3>
+      <p>
+       Writing code requires understanding requirements, planning an approach, implementing it, and debugging when things go wrong. Reasoning models can plan the structure of a solution before writing code, consider edge cases, and reason about why a particular implementation might fail. On coding benchmarks like competitive programming problems, reasoning models outperform standard models by a significant margin.
+      </p>
+     </div>
+     <div id="scientific-analysis">
+      <h3>
+       Scientific Analysis
+      </h3>
+      <p>
+       Scientific questions often require synthesising information from multiple sources, applying domain knowledge, and drawing conclusions through logical inference. Reasoning models can work through these steps methodically, making their reasoning process visible and auditable.
+      </p>
+     </div>
+     <div id="complex-planning">
+      <h3>
+       Complex Planning
+      </h3>
+      <p>
+       Tasks that require breaking a goal into sub-tasks, ordering them, and accounting for dependencies benefit from extended reasoning. A reasoning model can plan a multi-step process, identify potential failure points, and adjust its plan before execution. This is useful for agent systems, covered in the AI agents guide, where the model needs to decide what actions to take and in what order.
+      </p>
+     </div>
+    </section>
+    <section id="what-reasoning-models-struggle-with">
+     <h2>
+      6. What Reasoning Models Struggle With
+     </h2>
+     <p>
+      Reasoning models are not universally better. There are tasks where the extended reasoning provides no benefit and only adds cost and latency.
+     </p>
+     <div id="factual-recall">
+      <h3>
+       Factual Recall
+      </h3>
+      <p>
+       If the question is about a fact that the model either knows or does not know, reasoning does not help. The capital of France is Paris regardless of how many reasoning steps the model takes. Extended thinking on factual questions wastes tokens without improving accuracy. In some cases, it can even hurt, because the model second-guesses a correct answer it would have given immediately.
+      </p>
+     </div>
+     <div id="creative-writing">
+      <h3>
+       Creative Writing
+      </h3>
+      <p>
+       Creative tasks like writing a poem, drafting a marketing email, or composing a story do not benefit from logical reasoning. These tasks require creativity, tone, and style, which are different capabilities from logical problem-solving. A reasoning model may produce overly analytical or dry creative output because its training biases it toward structured thinking.
+      </p>
+     </div>
+     <div id="simple-tasks">
+      <h3>
+       Simple Tasks
+      </h3>
+      <p>
+       For straightforward tasks like summarising a document, classifying text, or extracting entities, the extra reasoning tokens are pure overhead. The model could answer just as well without them, and the user waits longer for no benefit. Using a reasoning model for every query is like hiring a research scientist to answer the phone. Sometimes you just need a quick answer.
+      </p>
+     </div>
+     <aside>
+      <p>
+       GO DEEPER: OVERTHINKING AND THE DIMINISHING RETURNS OF REASONING (OPTIONAL)
+      </p>
+      <p>
+       Research has shown that reasoning models can overthink problems. On tasks where the model already knows the answer, extended reasoning can introduce errors. The model starts questioning its initial intuition, explores alternative paths, and sometimes arrives at a worse answer than it would have produced immediately. This is the reasoning equivalent of a student who knows the answer but talks themselves out of it on a multiple-choice test. The optimal amount of reasoning depends on the difficulty of the problem, and finding that optimum is an active area of research. Some systems use a classifier to predict question difficulty and route accordingly, using a reasoning model only when the question is hard enough to warrant the extra compute.
+      </p>
+     </aside>
+    </section>
+    <section id="cost-and-latency-trade-offs">
+     <h2>
+      7. Cost and Latency Trade-offs
+     </h2>
+     <p>
+      The primary cost of reasoning models is the additional tokens they generate. A reasoning trace can be 10 to 100 times longer than the final answer. If the answer is 50 tokens and the reasoning trace is 5,000 tokens, the model is generating and you are paying for 100 times more output than you see.
+     </p>
+     <p>
+      On latency, the model generates tokens sequentially. A 5,000-token reasoning trace takes 50 to 100 seconds to generate at typical speeds, depending on the model and infrastructure. For interactive applications, this delay is significant. A user who asks a question and waits two minutes for an answer may lose patience, even if the answer is better than what a standard model would produce in two seconds.
+     </p>
+     <p>
+      API providers typically price reasoning tokens separately from output tokens, and some allow you to set a reasoning budget, a cap on how many tokens the model can spend thinking. This lets you control cost, but setting the budget too low can prevent the model from finishing its reasoning, leading to incomplete or wrong answers.
+     </p>
+     <aside>
+      <p>
+       PASCAL ACADEMY
+      </p>
+      <p>
+       Pascal Academy's production AI course covers model selection, cost optimisation, and routing strategies for mixed reasoning and standard model deployments. Reach out to learn about team training options.
+      </p>
+     </aside>
+     <div>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Factor
+         </th>
+         <th>
+          Standard Model
+         </th>
+         <th>
+          Reasoning Model
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          Tokens generated
+         </td>
+         <td>
+          Answer only, typically 100 to 500 tokens.
+         </td>
+         <td>
+          Answer plus reasoning trace, often 1,000 to 10,000 tokens.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Latency
+         </td>
+         <td>
+          1 to 5 seconds for typical queries.
+         </td>
+         <td>
+          10 seconds to several minutes depending on reasoning length.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Cost per query
+         </td>
+         <td>
+          Low, proportional to input plus output tokens.
+         </td>
+         <td>
+          High, proportional to input plus reasoning plus output tokens.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Best use case
+         </td>
+         <td>
+          Chat, summarisation, extraction, simple Q and A.
+         </td>
+         <td>
+          Math, coding, multi-step analysis, complex planning.
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </section>
+    <section id="when-to-use-a-reasoning-model">
+     <h2>
+      8. When to Use a Reasoning Model
+     </h2>
+     <p>
+      The decision to use a reasoning model depends on the task, the accuracy requirements, and the tolerance for cost and latency.
+     </p>
+     <div>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Situation
+         </th>
+         <th>
+          Recommendation
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          Math, logic, or scientific problem requiring multi-step reasoning
+         </td>
+         <td>
+          Use a reasoning model. The extended thinking significantly improves accuracy on these tasks.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Coding challenge with complex logic or algorithm design
+         </td>
+         <td>
+          Use a reasoning model. The model can plan the approach and reason about edge cases before writing code.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Document summarisation or text extraction
+         </td>
+         <td>
+          Use a standard model. No multi-step reasoning needed, and the reasoning model adds unnecessary cost and latency.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Chatbot for customer service with quick response requirements
+         </td>
+         <td>
+          Use a standard model for speed. Route to a reasoning model only for complex queries that the standard model cannot handle.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Research question requiring synthesis across multiple sources
+         </td>
+         <td>
+          Consider a reasoning model combined with RAG. The model can reason over retrieved documents and draw conclusions through logical steps.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Creative writing, marketing copy, or content generation
+         </td>
+         <td>
+          Use a standard model. Reasoning models tend toward analytical output that can stifle creativity.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Mixed workload with varying question difficulty
+         </td>
+         <td>
+          Use a routing approach. A classifier or the standard model itself determines whether to escalate to a reasoning model based on question complexity.
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </section>
+    <section id="reasoning-models-and-hallucination">
+     <h2>
+      9. Reasoning Models and Hallucination
+     </h2>
+     <p>
+      The previous guide covered hallucination, where models produce confident but factually wrong output. Reasoning models offer a partial improvement here, but the relationship is nuanced.
+     </p>
+     <p>
+      On reasoning errors, where the model makes a logical mistake or calculation error, the extended chain of thought helps. The model can catch errors in its own reasoning, check intermediate results, and correct course. This reduces errors on math, logic, and coding tasks.
+     </p>
+     <p>
+      On factual hallucination, where the model states something untrue, reasoning provides less help. If the model does not know a fact, thinking longer does not make the fact appear. The model may reason about the fact, drawing inferences based on adjacent knowledge, but those inferences can be wrong. Extended reasoning can even amplify factual hallucination, because the model generates more text and has more opportunities to introduce unsupported claims.
+     </p>
+     <p>
+      The practical takeaway is that reasoning models are not a substitute for grounding. For factual accuracy, RAG and knowledge graphs remain the primary tools. Reasoning models complement these by improving the model's ability to reason over the retrieved information, but they cannot conjure facts that are not in their training data or in the provided context.
+     </p>
+    </section>
+    <section id="the-future-of-reasoning-models">
+     <h2>
+      10. The Future of Reasoning Models
+     </h2>
+     <p>
+      Reasoning models represent a direction in AI development where performance improves by spending more compute at inference time rather than only at training time. This is a meaningful change because it decouples capability from model size. A smaller model that reasons longer can outperform a larger model that answers immediately.
+     </p>
+     <p>
+      Current reasoning models still have limitations. Their reasoning traces can be verbose and hard to parse. They sometimes reason in circles or fail to converge on an answer within their token budget. The quality of reasoning depends heavily on training data, and models can learn reasoning patterns that look correct but contain subtle logical errors.
+     </p>
+     <p>
+      Research is active on several fronts. Techniques for more efficient reasoning, where the model produces shorter and more focused chains of thought, could reduce cost and latency without sacrificing accuracy. Approaches that combine reasoning with tool use, where the model can call external tools like calculators, code interpreters, or databases during its reasoning process, extend what the model can accomplish. And the integration of reasoning models with agentic systems, where the model plans and executes multi-step workflows, is an area of rapid development.
+     </p>
+     <aside>
+      <p>
+       SUMMARY
+      </p>
+      <p>
+       A reasoning model is a language model trained to produce an extended chain of thought before generating its answer. The model spends additional tokens, called test-time compute, thinking through the problem. This improves performance on tasks requiring multi-step reasoning like math, coding, and logical analysis. The trade-off is cost and latency, because the model generates many more tokens than a standard model would for the same question. Reasoning models are trained using reinforcement learning with rewards based on answer correctness, teaching the model to produce effective reasoning strategies. They are not universally better than standard models. For factual recall, creative writing, and simple tasks, the extra reasoning provides no benefit and only adds overhead. Many production systems route between standard and reasoning models based on question difficulty. Reasoning models help with reasoning errors but do not solve factual hallucination, because thinking longer cannot produce facts that are not in the model's training data or context. For factual accuracy, grounding through RAG and knowledge graphs remains essential.
+      </p>
+     </aside>
+    </section>
+    <section id="faq">
+     <h2>
+      Frequently Asked Questions
+     </h2>
+     <div>
+      <div>
+       <button aria-expanded="true">
+        <span>
+         What is a reasoning model in AI?
+        </span>
+        <span>
+         ×
+        </span>
+       </button>
+       <p>
+        A reasoning model is a type of AI that breaks down complex problems into steps before producing an answer. Instead of generating a response immediately, it plans an approach, works through intermediate steps, and arrives at a conclusion. This makes it better at tasks that require multi-step logic.
+       </p>
+      </div>
+      <div>
+       <button aria-expanded="false">
+        <span>
+         How are reasoning models different from standard LLMs?
+        </span>
+        <span>
+         +
+        </span>
+       </button>
+      </div>
+      <div>
+       <button aria-expanded="false">
+        <span>
+         How does Pascal use reasoning models for investment research?
+        </span>
+        <span>
+         +
+        </span>
+       </button>
+      </div>
+      <div>
+       <button aria-expanded="false">
+        <span>
+         What are the limitations of reasoning models?
+        </span>
+        <span>
+         +
+        </span>
+       </button>
+      </div>
+     </div>
+    </section>
+    <section>
+     <p>
+      Pascal Academy
+     </p>
+     <p>
+      This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, agents, context windows, knowledge graphs, hallucinations, reasoning models, embeddings, and MCP. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.
+     </p>
+     <a href="/pascal-academy/ai-fundamentals">
+      Explore AI Fundamentals
+      →
+     </a>
+    </section>
+   </div>
+  </article>
+ </div>
+ <div>
+  <ol>
+  </ol>
+ </div>
+</body>
+

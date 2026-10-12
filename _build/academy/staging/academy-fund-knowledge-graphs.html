@@ -1,0 +1,219 @@
+<!--meta
+{
+ "path": "/pascal-academy/guides/knowledge-graphs",
+ "title": "Knowledge Graphs Explained | Pascal Academy",
+ "description": "A guide to knowledge graphs for finance teams: nodes, edges and properties, how graphs work, GraphRAG, and how they compare to vector databases for research.",
+ "crumbs": [
+  [
+   "Pascal Academy",
+   "/pascal-academy"
+  ],
+  [
+   "AI fundamentals",
+   "/pascal-academy/ai-fundamentals"
+  ],
+  [
+   "Knowledge Graphs",
+   "/pascal-academy/guides/knowledge-graphs"
+  ]
+ ],
+ "schema": "article",
+ "name": "Knowledge Graphs",
+ "og_kicker": "Pascal Academy",
+ "og_title": "Knowledge Graphs",
+ "llms": "A guide to knowledge graphs for finance teams: nodes, edges and properties, how graphs work, GraphRAG, and how they compare to vector databases for research.",
+ "css": [
+  "academy3.css"
+ ],
+ "word_limit": 5061,
+ "faq_min": 4,
+ "lead_min": 8,
+ "lead_max": 60,
+ "priority": 0.7,
+ "updated": "2026-08-01"
+}
+-->
+<div class="ac ac-doc">
+<div class="rp" aria-hidden="true"><i></i></div>
+<div class="frame">
+  <header class="ah">
+    <div class="ah-l">
+      {{crumbs}}
+      <p class="ah-k">Last updated August 2026</p>
+      <h1 class="ah-t">Knowledge Graphs</h1>
+      <p class="lead">How structured relationships between entities give AI systems grounded, queryable knowledge that goes beyond text retrieval.</p>
+      <p class="ah-m">14 min read · Beginner-friendly with advanced sections</p>
+      <div class="ah-by"><span class="ah-av"><img src="/assets/favicon.svg" alt="" width="40" height="40"></span><span><b>Pascal Academy</b><span>AI fundamentals · Part 6 of 10</span></span></div>
+      <div class="ah-a"><button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button></div>
+    </div>
+    <div class="ah-r"><div class="th th-hero" aria-hidden="true"><div class="th-bz"><div class="th-scr g-mint"><div class="tcs"><span class="tc tc-0">{{icon:network}}<b>Nodes</b></span><span class="tc tc-1">{{icon:link}}<b>Edges</b></span><span class="tc tc-2">{{icon:layers}}<b>Organising principles</b></span></div></div></div></div></div>
+  </header>
+  <div class="ag">
+    <aside class="toc" aria-label="Table of contents">
+      <div class="toc-in">
+        <p class="toc-h">Table of contents</p>
+        <div class="toc-track"><span class="toc-fill"></span><ol data-spy><li><a href="#what-is-a-knowledge-graph">What Is a Knowledge Graph?</a></li><li><a href="#why-knowledge-graphs-exist">Why Knowledge Graphs Exist</a></li><li><a href="#how-knowledge-graphs-work">How Knowledge Graphs Work</a></li><li><a href="#building-a-knowledge-graph">Building a Knowledge Graph</a></li><li><a href="#knowledge-graphs-and-ai">Knowledge Graphs and AI</a></li><li><a href="#knowledge-graphs-vs-vector-databases">Knowledge Graphs vs Vector Databases</a></li><li><a href="#use-cases">Use Cases</a></li><li><a href="#challenges-and-limitations">Challenges and Limitations</a></li><li><a href="#when-to-use-a-knowledge-graph">When to Use a Knowledge Graph</a></li><li><a href="#the-future-of-knowledge-graphs-in-ai">The Future of Knowledge Graphs in AI</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></div>
+        <div class="toc-cta">
+          <p class="toc-cta-t">Take this guide with you.</p>
+          <p>Get the PDF in your inbox.</p>
+          <button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button>
+        </div>
+      </div>
+    </aside>
+    <article class="ac-prose" id="article">
+      <details class="toc-m"><summary>Table of contents</summary><ol><li><a href="#what-is-a-knowledge-graph">What Is a Knowledge Graph?</a></li><li><a href="#why-knowledge-graphs-exist">Why Knowledge Graphs Exist</a></li><li><a href="#how-knowledge-graphs-work">How Knowledge Graphs Work</a></li><li><a href="#building-a-knowledge-graph">Building a Knowledge Graph</a></li><li><a href="#knowledge-graphs-and-ai">Knowledge Graphs and AI</a></li><li><a href="#knowledge-graphs-vs-vector-databases">Knowledge Graphs vs Vector Databases</a></li><li><a href="#use-cases">Use Cases</a></li><li><a href="#challenges-and-limitations">Challenges and Limitations</a></li><li><a href="#when-to-use-a-knowledge-graph">When to Use a Knowledge Graph</a></li><li><a href="#the-future-of-knowledge-graphs-in-ai">The Future of Knowledge Graphs in AI</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<section class="ac-sec" id="what-is-a-knowledge-graph" aria-labelledby="what-is-a-knowledge-graph-h"><h2 id="what-is-a-knowledge-graph-h">What Is a Knowledge Graph?</h2>
+<p>In the previous guides, we covered how language models generate text, how prompts steer them, and how RAG retrieves documents to ground their answers. All of these approaches treat knowledge as text. A document is a bag of words, a chunk is a fragment of text, and retrieval is a search for text that looks similar to the query. This works well for many tasks, but it has a blind spot. Text captures what something says, but not how things relate.</p>
+<p>Consider a simple question. Who is the CEO of the company that acquired the startup founded by the person who wrote this paper? A human can answer this by following a chain of relationships. They look up the paper, find the author, find the startup they founded, find the acquiring company, and find its CEO. Each step involves a specific relationship between two entities, and the answer comes from traversing that chain.</p>
+<p>A knowledge graph stores exactly this kind of structured relationship. It is a data structure where entities are nodes and the connections between them are edges. Each edge carries a label that describes the relationship type. A node for a person connects to a node for a company through an edge labelled "founded." That company connects to another company through an edge labelled "acquired by." The CEO connects to the company through an edge labelled "leads." The graph captures not just what things are, but how they connect to each other.</p>
+<p>The term knowledge graph was popularised by Google in 2012 as part of their search product, which used a graph of entities and their relationships to provide direct answers rather than just links to web pages. Since then, the concept has spread far beyond search. Enterprises use knowledge graphs to organise internal data, researchers use them to map relationships in biology and drug discovery, and AI systems use them to ground language model outputs in verified facts.</p>
+<aside class="ac-co ac-co-principle"><p class="ac-co-lab"><span class="ac-co-ic">{{icon:target}}</span>Key principle</p><div class="ac-co-body"><p>A knowledge graph separates knowledge from text. Text says things about the world. A knowledge graph encodes how the world is structured. This separation matters because structured relationships can be queried precisely, traced to their source, and updated without reprocessing unstructured documents.</p></div></aside>
+</section>
+<section class="ac-sec" id="why-knowledge-graphs-exist" aria-labelledby="why-knowledge-graphs-exist-h"><h2 id="why-knowledge-graphs-exist-h">Why Knowledge Graphs Exist</h2>
+<p>Relational databases store data in tables. A table of customers has columns for name, email, and address. A table of orders has columns for order ID, customer ID, and product ID. To answer a question like which products did this customer buy, you join the two tables on the customer ID column. This works, and it has powered business software for decades.</p>
+<p>The problem appears when relationships become the focus of the question rather than a side effect of a join. Consider a fraud detection system. You want to know whether two accounts share a phone number, whether they transferred money to the same third account, whether that third account is linked to a known fraud ring, and whether any of these accounts share a device fingerprint. In a relational database, each of these connections is a join across a different table, and the query grows exponentially as you follow the chain. The database engine computes the joins at query time, which means deep relationship questions are slow and expensive.</p>
+<p>A knowledge graph stores relationships directly. Rather than reconstructing connections through joins, the graph stores an explicit edge between each pair of related entities. Traversing the graph means following edges, which is a local operation. Finding all accounts connected to a given account within two hops is a graph traversal, and it is fast because the edges already exist in the data structure.</p>
+<div class="ac-table"><table><thead><tr><th>Relational Database</th><th>Knowledge Graph</th></tr></thead><tbody><tr><td>Stores data in tables with rows and columns.</td><td>Stores data as nodes and edges in a network.</td></tr><tr><td>Relationships are reconstructed at query time using JOINs.</td><td>Relationships are stored explicitly as edges in the data.</td></tr><tr><td>Schema is rigid. Adding a new relationship type requires schema changes.</td><td>Schema is flexible. New relationship types can be added without restructuring existing data.</td></tr><tr><td>Deep multi-hop queries become slow as the number of joins grows.</td><td>Graph traversal handles multi-hop queries efficiently because edges are pre-stored.</td></tr><tr><td>Well suited for transactional workloads with fixed schemas.</td><td>Well suited for exploratory analysis, recommendation, and entity resolution.</td></tr></tbody></table></div>
+<p>None of this means knowledge graphs replace relational databases. For well-structured transactional data with a fixed schema, a relational database is usually the right choice. Knowledge graphs earn their place when relationships are the core of the question, when the schema evolves frequently, or when you need to integrate data from multiple sources with different structures.</p>
+</section>
+<section class="ac-sec" id="how-knowledge-graphs-work" aria-labelledby="how-knowledge-graphs-work-h"><h2 id="how-knowledge-graphs-work-h">How Knowledge Graphs Work</h2>
+<p>A knowledge graph has three structural components. Nodes represent entities. Edges represent relationships between entities. Properties store additional information about either a node or an edge.</p>
+<h3 id="nodes">Nodes</h3>
+<p>A node is a point in the graph that represents a discrete entity. A person, a company, a product, a document, a disease, or a gene can all be nodes. Each node has one or more labels that describe what kind of entity it is. A node might have the label Person, another might have the label Company, and a third might have the label Product.</p>
+<p>Nodes can also carry properties. A Person node might have properties for name, date of birth, and nationality. A Company node might have properties for name, industry, and founding date. Properties are key-value pairs that store data attributes directly on the node.</p>
+<h3 id="edges">Edges</h3>
+<p>An edge connects two nodes and describes the relationship between them. Every edge has a direction, meaning it goes from one node to another, and a type that describes the relationship. Common edge types include works at, founded, acquired, owns, located in, and reports to.</p>
+<p>Edges can also carry properties. An edge of type acquired, connecting a company node to another company node, might have properties for the acquisition date and the deal value. This lets the graph store not just that a relationship exists, but the details of that relationship.</p>
+<h3 id="organising-principles">Organising Principles</h3>
+<p>A knowledge graph is more than a collection of nodes and edges. It needs an organising principle, meaning a conceptual framework that gives the graph structure and meaning. This could be a taxonomy that groups products into categories and subcategories, an ontology that defines what types of entities exist and what relationships are valid between them, or a set of business rules that govern how entities connect.</p>
+<p>For example, an e-commerce knowledge graph might use a product taxonomy as its organising principle. Products are grouped into categories like Electronics, which contains subcategories like Phones and Laptops. Each product connects to its category through a belongs to edge. This structure lets the graph answer questions like what products are related to this one without scanning every product in the database.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic">{{icon:layers}}</span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>Property graphs vs RDF triple stores</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev">{{icon:chevron-down}}</span></summary><div class="ac-co-body"><p>Two main data models exist for knowledge graphs. The property graph model, used by databases like Neo4j, stores nodes and edges that can both carry arbitrary properties. This makes it intuitive to model complex relationships because you can attach metadata directly to an edge. The RDF triple store model, rooted in the Semantic Web, stores everything as subject-predicate-object triples. Adding a property to a relationship requires creating additional triples, a process called reification, which can make the model verbose for highly connected data. Property graphs are more common in enterprise applications because they are easier to query and visualise, while triple stores remain relevant for interoperability with Semantic Web standards and linked open data.</p></div></details>
+</section>
+<section class="ac-sec" id="building-a-knowledge-graph" aria-labelledby="building-a-knowledge-graph-h"><h2 id="building-a-knowledge-graph-h">Building a Knowledge Graph</h2>
+<p>Building a knowledge graph is a process that goes from defining the use case to ingesting data, querying it, and evolving the graph over time. The steps below describe the general pipeline.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic">{{icon:book-open}}</span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's knowledge graph workshop covers graph data modelling, entity resolution, and production deployment on graph databases. Reach out to learn about cohort programmes for your engineering team.</p><p><a class="ac-co-link" href="/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Step</th><th>What Happens</th></tr></thead><tbody><tr><td>1. Define use case</td><td>Choose a focused problem the graph will solve. Determine what entities and relationships are needed to answer the target questions.</td></tr><tr><td>2. Model the graph</td><td>Design the node types, edge types, and properties. Start with a rough model and plan to iterate after testing.</td></tr><tr><td>3. Gather and clean data</td><td>Collect data from multiple sources. Normalise formats. Resolve entities to eliminate duplicates and link the same entity across sources.</td></tr><tr><td>4. Ingest data</td><td>Load nodes and edges into the graph database. Apply the organising principle. Use schema mapping files to connect source data to the graph model.</td></tr><tr><td>5. Query and refine</td><td>Test with real queries. Identify missing relationships or data quality issues. Adjust the model and re-ingest as needed.</td></tr><tr><td>6. Evolve</td><td>Add new data sources, new entity types, and new relationship types over time. The graph grows as the use case expands.</td></tr></tbody></table></div>
+<h3 id="step-1-define-the-use-case">Step 1. Define the Use Case</h3>
+<p>Start with a focused question. What problem will the knowledge graph solve? Common use cases include recommendation engines, fraud detection, supply chain tracking, entity resolution, and enterprise search. The use case determines what entities and relationships you need to model. A fraud detection graph needs accounts, transactions, devices, and phone numbers as nodes, with edges for transferred money to, shares device with, and shares phone number with. A recommendation graph needs users, products, and categories as nodes, with edges for purchased, viewed, and belongs to.</p>
+<p>Choose a narrow starting point rather than modelling the entire domain. A focused scope lets you validate the approach with manageable effort. You can expand the graph later as the use case grows.</p>
+<h3 id="step-2-model-the-graph">Step 2. Model the Graph</h3>
+<p>Graph modelling means deciding what nodes, edges, and properties your graph will contain. The goal is to represent the domain in a way that makes the important questions easy to answer. If the use case is recommendation, the model needs to support queries like which products did users similar to this one buy. That means the graph needs User nodes connected to Product nodes through purchased edges, and Product nodes connected to each other through shared category or co-purchase edges.</p>
+<p>Unlike relational database design, graph modelling is iterative. You start with a rough model, load some data, query it, and refine the model based on what you find. The flexibility of the graph structure makes this iteration cheap. Adding a new relationship type does not require restructuring existing data.</p>
+<h3 id="step-3-gather-and-clean-data">Step 3. Gather and Clean Data</h3>
+<p>Knowledge graphs are only as good as the data they contain. Data comes from multiple sources, including relational databases, CSV files, APIs, unstructured documents, and third-party data providers. Each source needs to be cleaned and normalised before it can be loaded into the graph.</p>
+<p>Entity resolution is the critical step at this stage. The same entity often appears in different sources with different names, formats, or identifiers. A company might be listed as IBM in one database, International Business Machines in another, and IBM Corp in a third. Entity resolution identifies these as the same entity and links them in the graph. Without this step, the graph contains duplicate nodes that fragment the relationship network.</p>
+<h3 id="step-4-ingest-data">Step 4. Ingest Data</h3>
+<p>Once data is cleaned and entities are resolved, the next step is to load it into the graph database. This involves creating nodes with their properties, then creating edges with their types and properties, and applying the organising principle. Graph databases typically provide bulk loading tools for large datasets and API-based loading for incremental updates.</p>
+<p>Ingestion also involves mapping source data to the graph model. A schema mapping file defines how columns in a source table correspond to node properties and edge types in the graph. For example, a column called company_name in a source table maps to the name property on a Company node, and a column called parent_company_id maps to an edge of type subsidiary_of connecting two Company nodes.</p>
+<h3 id="step-5-query-and-refine">Step 5. Query and Refine</h3>
+<p>After loading data, test the graph with real queries. Start with the questions defined in the use case. Do the queries return correct results? Are there missing relationships or duplicate nodes? Are the property values accurate? This testing phase often reveals data quality issues that were not visible during cleaning, and the graph model may need adjustment based on what the queries reveal.</p>
+</section>
+<section class="ac-sec" id="knowledge-graphs-and-ai" aria-labelledby="knowledge-graphs-and-ai-h"><h2 id="knowledge-graphs-and-ai-h">Knowledge Graphs and AI</h2>
+<p>The connection between knowledge graphs and AI is where things get interesting for this series. Language models are good at generating text, but they have no inherent understanding of how entities relate to each other. They learn patterns from training data, and those patterns are statistical, not structural. A language model might know that Apple is a company and that Tim Cook is a person, but it has no reliable mechanism for knowing that Tim Cook is the CEO of Apple, that Apple acquired Beats Electronics, or that Beats was founded by Dr. Dre.</p>
+<p>RAG addresses this by retrieving text documents that contain relevant information. But text retrieval has limitations. It finds documents that mention the query terms, not documents that are structurally related to the entities in the question. A retriever might find a document mentioning Apple and a document mentioning Beats Electronics, but it does not know that the relationship between them is an acquisition unless that exact fact appears in the retrieved text.</p>
+<h3 id="graphrag">GraphRAG</h3>
+<p>GraphRAG combines knowledge graphs with retrieval-augmented generation. Instead of retrieving text chunks from a vector database, the system retrieves subgraphs from a knowledge graph. A subgraph is a set of nodes and edges that are relevant to the query. The retrieved subgraph is then converted to text and included in the prompt, giving the language model structured relationship data to reason over.</p>
+<p>The advantage is precision. When a user asks about the supply chain for a specific product, a GraphRAG system traverses the graph from the product node, following edges to supplier nodes, then to sub-supplier nodes, and returns the full chain as a structured subgraph. The language model receives not just text about suppliers, but the actual relationships between products and suppliers, with edge properties like contract dates and order volumes.</p>
+<p>Research from Neo4j and independent studies have shown that GraphRAG can reduce hallucination rates significantly compared to standard text-based RAG. One study reported that GraphRAG made AI agents up to 80 percent more truthful on factual questions, because the structured relationships in the graph provide verifiable grounding that text alone cannot match.</p>
+<h3 id="entity-linking">Entity Linking</h3>
+<p>Entity linking is the bridge between unstructured text and a knowledge graph. Given a piece of text, entity linking identifies mentions of entities and connects them to the corresponding nodes in the graph. When a user asks about Tim Cook, the entity linking system finds the Person node for Tim Cook in the graph and returns its identifier. This identifier lets the system traverse the graph to find related entities, like the company Tim Cook leads and the products that company sells.</p>
+<p>Entity linking is what makes GraphRAG practical. Without it, the system has no way to connect a user's natural language question to the structured data in the graph. Entity linking can be done using named entity recognition models, which identify entity mentions in text, followed by a disambiguation step that matches each mention to the correct node in the graph.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic">{{icon:layers}}</span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>How GraphRAG retrieval works</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev">{{icon:chevron-down}}</span></summary><div class="ac-co-body"><p>In a standard RAG system, retrieval is a similarity search. The query is embedded into a vector, and the system finds text chunks whose vectors are closest to the query vector. In GraphRAG, retrieval is a graph traversal. The query is parsed to identify entities, those entities are matched to nodes in the graph, and the system traverses outward from those nodes following edges to find related entities. The resulting subgraph is then serialised into text, meaning the nodes and edges are converted into sentences like Company A acquired Company B in 2014 for 3 billion dollars. This text goes into the prompt alongside the user's question, and the language model generates its answer grounded in the structured relationships.</p></div></details>
+</section>
+<section class="ac-sec" id="knowledge-graphs-vs-vector-databases" aria-labelledby="knowledge-graphs-vs-vector-databases-h"><h2 id="knowledge-graphs-vs-vector-databases-h">Knowledge Graphs vs Vector Databases</h2>
+<p>Vector databases and knowledge graphs are often discussed as alternatives, but they solve different problems. A vector database stores text chunks as vectors and finds similar chunks using distance metrics. It excels at semantic similarity, finding text that talks about the same topic even when the wording differs. A knowledge graph stores entities and their relationships and finds connected entities by traversing edges. It excels at structural queries, finding entities that are related through specific relationship types.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic">{{icon:book-open}}</span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's GraphRAG engineering course covers knowledge graph integration with RAG pipelines, entity linking, and hybrid retrieval architectures. Reach out to learn about team training options.</p><p><a class="ac-co-link" href="/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Vector Database (Standard RAG)</th><th>Knowledge Graph (GraphRAG)</th></tr></thead><tbody><tr><td>Stores text chunks as high-dimensional vectors.</td><td>Stores entities as nodes and relationships as edges.</td></tr><tr><td>Retrieval is similarity search. Finds text that is semantically close to the query.</td><td>Retrieval is graph traversal. Finds entities that are structurally connected.</td></tr><tr><td>Good for finding documents about a topic.</td><td>Good for finding entities related through specific relationships.</td></tr><tr><td>Cannot answer multi-hop questions without multiple retrieval passes.</td><td>Natively handles multi-hop questions by following edges.</td></tr><tr><td>No built-in notion of entity identity or relationship types.</td><td>Entity identity and relationship types are first-class citizens.</td></tr><tr><td>Easy to build. Chunk text, embed, store.</td><td>Requires more upfront modelling and entity resolution.</td></tr></tbody></table></div>
+<p>The two approaches are complementary. Many production systems use both. A vector database handles semantic retrieval, finding relevant text chunks for a given query. A knowledge graph handles structural retrieval, finding related entities and their connections. The results from both are combined in the prompt, giving the language model both textual context and structured relationship data to reason over.</p>
+</section>
+<section class="ac-sec" id="use-cases" aria-labelledby="use-cases-h"><h2 id="use-cases-h">Use Cases</h2>
+<p>Knowledge graphs have been deployed across industries. The examples below illustrate the range of problems they solve.</p>
+<h3 id="fraud-detection">Fraud Detection</h3>
+<p>Financial institutions use knowledge graphs to detect fraud rings. Accounts, transactions, devices, phone numbers, and addresses are nodes. Edges connect accounts that share a device, transferred money to each other, or used the same phone number. A fraud ring appears as a cluster of tightly connected nodes in the graph. Graph algorithms can detect these clusters automatically, flagging accounts that are part of a suspicious network even when no individual transaction looks fraudulent.</p>
+<h3 id="supply-chain">Supply Chain</h3>
+<p>Manufacturing companies use knowledge graphs to map their supply chains. Products, components, suppliers, and facilities are nodes. Edges represent supplies, manufactures, and ships to relationships. When a supplier experiences a disruption, the graph shows which products are affected and which alternative suppliers can fill the gap. This kind of analysis is difficult in a relational database because it requires traversing multiple levels of the supply chain, each involving joins across different tables.</p>
+<h3 id="recommendation-engines">Recommendation Engines</h3>
+<p>E-commerce platforms use knowledge graphs to power product recommendations. Users, products, and categories are nodes. Edges represent purchased, viewed, rated, and belongs to relationships. To recommend products to a user, the graph finds products that similar users purchased, products in the same category as previously purchased items, and products frequently co-purchased with items in the user's history. The graph structure makes these multi-hop queries efficient.</p>
+<h3 id="enterprise-search-and-graphrag">Enterprise Search and GraphRAG</h3>
+<p>Organisations use knowledge graphs to make internal documents searchable and to ground AI assistants in company data. Documents, people, projects, and departments are nodes. Edges connect documents to their authors, projects to their team members, and departments to their projects. When an employee asks an AI assistant about a project, the system traverses the graph to find related documents, team members, and dependencies, giving the language model structured context that text retrieval alone cannot provide.</p>
+</section>
+<section class="ac-sec" id="challenges-and-limitations" aria-labelledby="challenges-and-limitations-h"><h2 id="challenges-and-limitations-h">Challenges and Limitations</h2>
+<p>Knowledge graphs are powerful, but they come with costs and limitations that are worth understanding before investing in one.</p>
+<h3 id="data-quality-and-maintenance">Data Quality and Maintenance</h3>
+<p>A knowledge graph is only as accurate as the data it contains. Entities change over time. People change jobs, companies merge, products are discontinued. If the graph is not updated, it becomes stale and its answers degrade. Maintaining a knowledge graph requires ongoing data quality processes, including entity resolution for new data, deduplication, and validation of relationships. This is a continuous operational cost, not a one-time setup task.</p>
+<h3 id="building-effort">Building Effort</h3>
+<p>Building a knowledge graph requires more upfront effort than setting up a vector database. You need to design a graph data model, choose an organising principle, build entity resolution pipelines, and implement ingestion logic. For a team that just needs to answer questions from a set of documents, standard RAG with a vector database is faster to build and simpler to maintain. A knowledge graph earns its investment when the use case involves complex relationships, multi-hop queries, or the need to integrate structured data from multiple sources.</p>
+<h3 id="query-complexity">Query Complexity</h3>
+<p>Querying a knowledge graph requires a different skill set than querying a vector database. Graph query languages like Cypher and SPARQL have their own syntax and semantics. Writing efficient graph queries requires understanding traversal patterns, index usage, and query optimisation. Teams without graph database experience will need training or external expertise to get productive.</p>
+<h3 id="scalability">Scalability</h3>
+<p>Graph databases scale differently from relational databases. As the graph grows, query performance depends on how well the traversal patterns align with the graph structure and indexes. Some queries that perform well on a small graph become slow on a large one because the traversal touches too many nodes. Sharding a graph across multiple servers is harder than sharding a relational table because relationships can cross server boundaries. Distributed graph databases exist, but they add complexity and have trade-offs in query performance.</p>
+</section>
+<section class="ac-sec" id="when-to-use-a-knowledge-graph" aria-labelledby="when-to-use-a-knowledge-graph-h"><h2 id="when-to-use-a-knowledge-graph-h">When to Use a Knowledge Graph</h2>
+<p>The decision to build a knowledge graph depends on the nature of the questions you need to answer and the structure of your data. The table below maps common situations to recommendations.</p>
+<div class="ac-table"><table><thead><tr><th>Situation</th><th>Recommendation</th></tr></thead><tbody><tr><td>Answering questions from a set of documents</td><td>Use standard RAG with a vector database. Faster to build and sufficient for text-based questions.</td></tr><tr><td>Answering questions that require multi-hop reasoning across entities</td><td>Use a knowledge graph or GraphRAG. The graph stores relationships explicitly, making multi-hop queries efficient and accurate.</td></tr><tr><td>Detecting fraud rings or suspicious networks</td><td>Use a knowledge graph. Graph algorithms excel at finding clusters of connected entities that indicate coordinated activity.</td></tr><tr><td>Product recommendations based on user behaviour</td><td>Use a knowledge graph. User-product interactions, category hierarchies, and co-purchase patterns are naturally graph structures.</td></tr><tr><td>Integrating structured data from multiple sources with different schemas</td><td>Use a knowledge graph. Entity resolution links the same entity across sources, and the flexible schema accommodates new data types without restructuring.</td></tr><tr><td>Simple keyword search over a document corpus</td><td>Use a vector database or traditional search index. A knowledge graph is overkill when the question is just finding documents about a topic.</td></tr></tbody></table></div>
+</section>
+<section class="ac-sec" id="the-future-of-knowledge-graphs-in-ai" aria-labelledby="the-future-of-knowledge-graphs-in-ai-h"><h2 id="the-future-of-knowledge-graphs-in-ai-h">The Future of Knowledge Graphs in AI</h2>
+<p>Knowledge graphs are becoming increasingly relevant as AI systems move beyond simple text generation toward reasoning and decision-making. Language models can generate plausible text, but they lack the structured knowledge needed to verify facts, trace relationships, and avoid hallucination. Knowledge graphs provide that structure.</p>
+<p>The integration of knowledge graphs with LLMs is still early. Many production systems use graphs as a retrieval source, converting subgraphs to text and including them in prompts. Research is active on tighter integration, where language models can directly query a graph during generation, traversing edges and reading properties as part of their reasoning process. This would give models real-time access to structured knowledge without the overhead of converting everything to text.</p>
+<p>Another direction is automated graph construction. Building a knowledge graph currently requires significant manual effort for entity resolution, relationship extraction, and data cleaning. Language models can assist with these tasks by extracting entities and relationships from unstructured text, disambiguating entity mentions, and suggesting relationship types. This could lower the cost of building and maintaining knowledge graphs, making them accessible to a wider range of applications.</p>
+<aside class="ac-co ac-co-summary"><p class="ac-co-lab"><span class="ac-co-ic">{{icon:list-checks}}</span>Summary</p><div class="ac-co-body"><p>A knowledge graph is a data structure that stores entities as nodes and their relationships as edges. Unlike relational databases, which reconstruct relationships through joins at query time, knowledge graphs store relationships explicitly, making multi-hop queries efficient. Building a knowledge graph involves defining a use case, modelling the graph, gathering and cleaning data, resolving entities across sources, and ingesting data into a graph database. In AI applications, knowledge graphs complement text-based RAG by providing structured relationship data through GraphRAG, where subgraphs are retrieved and included in the prompt alongside text. Knowledge graphs excel at fraud detection, recommendation, supply chain analysis, and enterprise search, where the core question involves relationships between entities rather than just text similarity. They require more upfront effort than vector databases but provide precision and verifiability that text retrieval cannot match.</p></div></aside>
+</section>
+<aside class="ac-about"><p class="ac-about-h">About this guide</p><p>This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, agents, context windows, and knowledge graphs. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.</p><p>See how this works in Pascal: <a href="/platform/context-graph">the Pascal context graph</a>.</p></aside>
+    </article>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What is a knowledge graph in AI?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A knowledge graph is a structured representation of information where entities are nodes and relationships are edges. It stores facts as connections between things, e.g. Company A competes with Company B, or Executive C works at Company D. This structure makes it possible to query relationships that would be hard to extract from text alone.</div></details>
+<details class="faq-item"><summary>How are knowledge graphs used in finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Knowledge graphs help finance teams map relationships between companies, executives, suppliers, customers, and sectors. They support competitive analysis, supply chain mapping, risk detection, and finding hidden connections that might affect an investment thesis.</div></details>
+<details class="faq-item"><summary>What is GraphRAG and how does Pascal use knowledge graphs?<span class="pm" aria-hidden="true"></span></summary><div class="ans">GraphRAG combines knowledge graphs with retrieval-augmented generation. Instead of retrieving text chunks, the system retrieves connected entities and relationships from a graph, then uses a language model to synthesize the results. Pascal builds a persistent knowledge graph across every document and filing your team touches, so research compounds over time and every query gets smarter.</div></details>
+<details class="faq-item"><summary>What is the difference between a knowledge graph and a vector database?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A vector database stores text chunks as embeddings and retrieves semantically similar passages. A knowledge graph stores structured relationships between entities. Vector databases are good for finding relevant text. Knowledge graphs are good for answering questions about how things connect. They serve different purposes and can complement each other.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kl" aria-labelledby="kl-h">
+    <h2 class="sx-t" id="kl-h">Keep learning</h2>
+    <div class="kl-g"><a class="gc" href="/pascal-academy/guides/ai-hallucinations"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-sea"><div class="tcs"><span class="tc tc-0">{{icon:alert}}<b>Knowledge gaps</b></span><span class="tc tc-1">{{icon:repeat}}<b>Pattern completion</b></span><span class="tc tc-2">{{icon:database}}<b>Training data errors</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 07</span><h3 class="gc-t">Hallucinations</h3><p class="gc-m">12 min read</p></div></a><a class="gc" href="/pascal-academy/guides/reasoning-models"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-cream"><div class="tcs"><span class="tc tc-0">{{icon:route}}<b>Reasoning traces</b></span><span class="tc tc-1">{{icon:clock}}<b>Extended thinking</b></span><span class="tc tc-2">{{icon:calculator}}<b>Mathematics and logic</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 08</span><h3 class="gc-t">Reasoning models</h3><p class="gc-m">13 min read</p></div></a><a class="gc" href="/guides/ai-for-hedge-funds"><div class="th" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-teal"><img src="/assets/shots/shot-agent-table.webp" alt="Pascal agent output: a street vs management framing table for Sea Limited with citations" width="1600" height="844" loading="lazy" decoding="async"></div></div></div><div class="gc-b"><span class="pill">Desk guide</span><h3 class="gc-t">AI for Hedge Funds</h3><p class="gc-m">24 min read</p></div></a></div>
+  </section>
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<!--#include demo-band title="Ask your first question with your firm's context." sub="A walkthrough with your own documents connected."-->
+<dialog class="ac-gate" id="pdf-gate" aria-labelledby="gate-h">
+  <div class="ac-gate-in">
+    <div class="ac-gate-side">
+      <p class="eyebrow">Pascal Academy · PDF</p>
+      <p class="ac-gate-t">Knowledge Graphs</p>
+      <p class="ac-gate-m">14 min read</p>
+      <div class="ac-gate-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b><i></i><i></i></div>
+    </div>
+    <div class="ac-gate-main">
+      <button class="ac-gate-x" type="button" data-gate-close aria-label="Close">{{icon:close}}</button>
+      <form class="ac-gate-form" data-gate-form data-guide="Knowledge Graphs" data-slug="knowledge-graphs" data-pdf="/assets/academy/pdf/knowledge-graphs.pdf" novalidate>
+        <h2 id="gate-h">Get this guide as a PDF</h2>
+        <p class="ac-gate-sub">Tell us where to send it and we will email you the PDF.</p>
+        <label>Full name<input name="name" autocomplete="name" required></label>
+        <label>Work email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Organization<input name="organization" autocomplete="organization" required></label>
+        <p class="ac-gate-err" role="alert" hidden></p>
+        <button class="btn btn-dark" type="submit">Email me the PDF</button>
+        <p class="ac-gate-fine">By submitting, you agree to be contacted about Pascal Academy.</p>
+      </form>
+      <div class="ac-gate-done" hidden>
+        <span class="ac-gate-ok">{{icon:check}}</span>
+        <h2>Check your inbox.</h2>
+        <p>We have sent <b>Knowledge Graphs</b> to <span data-gate-email></span>.</p>
+        <button class="btn btn-line" type="button" data-gate-close>Back to the guide</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="/assets/pages/academy3.js" defer></script>

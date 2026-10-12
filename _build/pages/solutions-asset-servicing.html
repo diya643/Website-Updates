@@ -1,0 +1,281 @@
+<!--meta
+{
+ "path": "/solutions/asset-servicing",
+ "title": "AI for Custodians and Fund Administrators | Pascal AI",
+ "description": "AI for custodians, fund administrators and transfer agents: corporate action notices, NAV exceptions, KYC packs and client RFPs, cited inside your perimeter.",
+ "crumbs": [["Asset servicing", "/solutions/asset-servicing"]],
+ "schema": "solution",
+ "name": "Pascal AI for asset servicing",
+ "audience": "Custodians, fund administrators, transfer agents and depositaries",
+ "og_kicker": "Industries · Asset servicing",
+ "og_title": "AI for asset servicers, from the corporate action notice to the client RFP",
+ "llms": "How custodians, fund administrators, transfer agents and depositaries use Pascal inside their own operations: front office (client RFPs and due diligence questionnaires, client queries answered from records with sources), middle office (corporate action notices read and compared across sources, settlement fails and trade exceptions, reconciliations) and back office (NAV production checks and pricing exceptions, transfer agency and investor servicing queries, KYC and AML onboarding packs, SOC control evidence and regulatory reporting).",
+ "priority": 0.9,
+ "css": ["solutions-am.css"]
+}
+-->
+<div class="frame">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">AI for asset servicing</span></span>Every notice, break and NAV, <span class="mute">checked against the source.</span></h1>
+      <p class="lead">Custodians, fund administrators, transfer agents and depositaries use Pascal to read issuer notices, explain exceptions and answer client questionnaires, with every answer cited to the record.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel panel-cream fit"><!--mock--><div class="pui has-float float-lg hero-runcard" role="img" aria-label="Pascal Agents showing today's corporate action events. A table lists each event, its type, whether the issuer notice and depository feed agree, and its status. One dividend with a reinvestment plan is flagged because the record date differs between sources. A run card shows the agent read 64 notices, compared terms across two sources, flagged one mismatch and drafted client notifications. Events are illustrative.">
+      <div class="pui-win">
+        <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Corporate actions · 7 Oct</b></span><span class="pui-bar-r"><span class="pui-tag">64 notices</span></span></div>
+        <div class="pui-body">
+          <!--#include pui-rail on_chat="" on_wf="on"-->
+          <div class="pui-main">
+            <p class="pui-k">Issuer notice vs depository feed</p>
+            <table class="pui-tbl pui-mt">
+              <thead><tr><th>Event</th><th>Type</th><th>Sources</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td><b>Siemens AG</b></td><td>Cash dividend</td><td>2 of 2 agree<span class="pui-cite">1</span></td><td><span class="pui-tag">Matched</span></td></tr>
+                <tr><td><b>BHP Group</b></td><td>Dividend + DRIP</td><td>Record date differs<span class="pui-cite">2</span></td><td><span class="pui-tag amber">Mismatch</span></td></tr>
+                <tr><td><b>Nestlé SA</b></td><td>Share buyback</td><td>2 of 2 agree<span class="pui-cite">3</span></td><td><span class="pui-tag navy">Information only</span></td></tr>
+                <tr><td><b>TSMC</b></td><td>Cash dividend</td><td>2 of 2 agree<span class="pui-cite">4</span></td><td><span class="pui-tag">Matched</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="pui-float left">
+        <p class="pui-k">Agent run</p>
+        <div class="pui-step">{{icon:check-circle}} Read 64 issuer and depository notices</div>
+        <div class="pui-step">{{icon:check-circle}} Extracted terms and compared sources</div>
+        <div class="pui-step">{{icon:alert}} 1 record date mismatch flagged</div>
+        <div class="pui-step">{{icon:file-check}} <b>Client notifications drafted</b></div>
+      </div>
+    </div><!--/mock--></div></div>
+  </section>
+</div>
+
+<nav class="subnav" aria-label="On this page">
+  <div class="subnav-inner">
+    <a href="#overview">Overview</a>
+    <a href="#office">Front to back office</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#technology">Technology</a>
+    <a href="#faq">Frequently asked questions</a>
+  </div>
+</nav>
+
+<div class="frame">
+  <section id="overview" aria-labelledby="overview-title">
+    <div class="row-pad">
+      <div class="head">
+        <h2 class="h2" id="overview-title">Built for the firms that hold, price and report <span class="mute">everyone else's assets.</span></h2>
+        <p>Pascal works inside the servicer. It reads the notices, files and client records your operations teams already handle, and keeps every past exception and approved answer in one context graph.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="office" aria-labelledby="om-title">
+    <div class="row-pad-sm"><h2 class="h2" id="om-title">Front, middle and back office, <span class="mute">for every client you service.</span></h2></div>
+    <div class="om row">
+      <div class="om-list" role="tablist" aria-label="Office" aria-orientation="vertical">
+        <button class="om-tab" role="tab" id="om-t1" aria-controls="om-p1" aria-selected="true"><span class="eyebrow">Front office</span><b>Client service &amp; new business</b><span>RFPs and client due diligence questionnaires from the approved library, and client queries answered from your records with sources.</span><small class="om-who"><b>For</b>Relationship managers · Head of client service · Business development and RFP team</small></button>
+        <button class="om-tab" role="tab" id="om-t2" aria-controls="om-p2" aria-selected="false" tabindex="-1"><span class="eyebrow">Middle office</span><b>Asset servicing operations</b><span>Corporate action notices read and compared across sources, plus settlement fails, trade exceptions and reconciliations explained from past fixes.</span><small class="om-who"><b>For</b>Head of operations · Settlements team · Corporate actions team</small></button>
+        <button class="om-tab" role="tab" id="om-t3" aria-controls="om-p3" aria-selected="false" tabindex="-1"><span class="eyebrow">Back office</span><b>Fund accounting, TA &amp; control</b><span>NAV checks and pricing exceptions, transfer agency queries, KYC and AML onboarding packs, SOC control evidence and regulatory reporting.</span><small class="om-who"><b>For</b>Head of fund accounting · Transfer agency · COO · CCO</small></button>
+      </div>
+      <div class="om-media">
+        <div id="om-p1" role="tabpanel" aria-labelledby="om-t1" style="height:100%"><div class="panel panel-dark fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="Client RFP response" label="30-second walkthrough: Pascal splits a pension fund's custody RFP by section, drafts each answer from the approved library with sources, refreshes stale figures and exports the response in the client's template."-->
+            <div class="ucp-scene" data-label="RFP in">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:outlook}}</span><div><b>Public pension fund · Global custody RFP</b><span class="pui-sub">186 questions · 9 sections · due 24 Oct · portal export in Excel</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:.8s"><span class="pui-tag grey">Library</span>Approved answers<span class="pui-row-r pui-sub">reviewed Sep 2026</span></div>
+              <div class="pui-row ucp-in" style="--d:1.2s"><span class="pui-tag grey">Last bid</span>Sovereign fund · custody and FX<span class="pui-row-r pui-sub">won</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2s">{{icon:play}} RFP agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Route">
+              <p class="pui-k">Sections matched to the library</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Section</th><th>Questions</th><th>Reused</th><th>Reviewer</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Custody and settlement</b></td><td>42</td><td>38</td><td>Operations</td></tr>
+                  <tr class="ucp-in" style="--d:.9s"><td><b>Corporate actions</b></td><td>24</td><td>21</td><td>Asset servicing</td></tr>
+                  <tr class="ucp-in" style="--d:1.5s"><td><b>Cyber and resilience</b></td><td>31</td><td>24</td><td>CISO office</td></tr>
+                  <tr class="ucp-in" style="--d:2.1s"><td><b>Sub-custodian network</b></td><td>18</td><td>9</td><td><span class="pui-tag amber">9 need new data</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="ucp-scene" data-label="Draft">
+              <p class="pui-k ucp-in">Question 6.4 · Corporate actions</p>
+              <p class="pui-q ucp-in" style="--d:.3s;margin:10px 0 0">How do you notify clients of voluntary elections and deadlines?</p>
+              <p class="pui-ans ucp-in pui-mt" style="--d:1s">Clients receive a notice within four hours of announcement, with the election deadline set one business day ahead of the market deadline. Reminders go out at five and two days.<span class="pui-cite">1</span><span class="pui-cite">2</span></p>
+              <div class="pui-row ucp-in" style="--d:1.8s"><span class="pui-lg w">{{logo:pdf}}</span>Corporate actions service level v5<span class="pui-row-r pui-sub">p. 3</span></div>
+              <div class="pui-row ucp-in" style="--d:2.1s"><span class="pui-lg w">{{logo:word}}</span>Client notification procedure<span class="pui-row-r pui-sub">§2.1</span></div>
+            </div>
+            <div class="ucp-scene" data-label="Refresh">
+              <p class="pui-k ucp-in">Question 3.1 · Sub-custodian network</p>
+              <p class="pui-ans ucp-in pui-mt" style="--d:.4s">Our network covers <span class="pui-mark-hl">96 markets</span>, with direct custody in 31 and sub-custodians reviewed every year.<span class="pui-cite">3</span></p>
+              <div class="pui-note ucp-in" style="--d:1.2s">The library answer said 94 markets. Updated from the network list dated 30 Sep.</div>
+              <div class="pui-row ucp-in pui-mt" style="--d:2s"><span class="pui-av">CS</span>Approved by the head of client service<span class="pui-row-r pui-sub">11:40</span></div>
+            </div>
+            <div class="ucp-scene" data-label="Export">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:excel}}</span><div><b>Global custody RFP · responses.xlsx</b><span class="pui-sub">186 of 186 answered · source and reviewer per answer</span></div></div>
+              <div class="ucp-cols pui-mt">
+                <div class="ucp-in" style="--d:.7s"><span class="ucp-big">186<small>/186</small></span><p class="pui-sub">questions answered</p></div>
+                <div class="ucp-in" style="--d:1.1s"><span class="ucp-big">143<small>reused</small></span><p class="pui-sub">approved answers with no edits</p></div>
+              </div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:1.8s">{{icon:check-circle}} Sent to the bid manager for sign-off</div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+        <div id="om-p2" role="tabpanel" aria-labelledby="om-t2" hidden style="height:100%"><div class="panel fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="Corporate action notice" label="30-second walkthrough: Pascal reads an issuer dividend notice, extracts the event terms, compares them with the depository feed, flags a record date mismatch and drafts the client notification."-->
+            <div class="ucp-scene" data-label="Notice">
+              <p class="pui-k ucp-in">New notice · 08:14</p>
+              <div class="ucp-trigger ucp-in pui-mt" style="--d:.3s"><span class="pui-lg w">{{logo:pdf}}</span><div><b>BHP Group · final dividend and DRIP</b><span class="pui-sub">Issuer announcement · 3 pages · exchange filing</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:1s"><span class="pui-tag grey">Holders</span>37 client accounts<span class="pui-row-r pui-sub">4 sub-custodians</span></div>
+              <div class="pui-row ucp-in" style="--d:1.5s"><span class="pui-tag grey">Second source</span>Depository event feed<span class="pui-row-r pui-sub">received 07:50</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2.4s">{{icon:play}} Corporate actions agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Extract">
+              <p class="pui-k">Terms extracted from the notice</p>
+              <div class="pui-kv pui-mt">
+                <span class="ucp-in" style="--d:.2s">Event type</span><b class="ucp-in" style="--d:.2s">Cash dividend + DRIP<span class="pui-cite">1</span></b>
+                <span class="ucp-in" style="--d:.6s">Rate</span><b class="ucp-in" style="--d:.6s">US$0.60 per share<span class="pui-cite">1</span></b>
+                <span class="ucp-in" style="--d:1s">Ex-date</span><b class="ucp-in" style="--d:1s">13 Nov 2026<span class="pui-cite">1</span></b>
+                <span class="ucp-in" style="--d:1.4s">Record date</span><b class="ucp-in" style="--d:1.4s">14 Nov 2026<span class="pui-cite">1</span></b>
+                <span class="ucp-in" style="--d:1.8s">DRIP election deadline</span><b class="ucp-in" style="--d:1.8s">17 Nov 2026<span class="pui-cite">2</span></b>
+                <span class="ucp-in" style="--d:2.2s">Payment date</span><b class="ucp-in" style="--d:2.2s">4 Dec 2026<span class="pui-cite">2</span></b>
+              </div>
+              <p class="pui-sub ucp-in pui-mt" style="--d:2.8s">Illustrative terms. Each field links to its line in the notice.</p>
+            </div>
+            <div class="ucp-scene" data-label="Compare">
+              <p class="pui-k">Issuer notice vs depository feed</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Field</th><th>Issuer notice</th><th>Depository</th><th>Result</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Rate</b></td><td>US$0.60</td><td>US$0.60</td><td><span class="pui-tag">Match</span></td></tr>
+                  <tr class="ucp-in" style="--d:.9s"><td><b>Ex-date</b></td><td>13 Nov</td><td>13 Nov</td><td><span class="pui-tag">Match</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.5s"><td><b>Record date</b></td><td>14 Nov<span class="pui-cite">1</span></td><td>15 Nov</td><td><span class="pui-tag amber">Mismatch</span></td></tr>
+                  <tr class="ucp-in" style="--d:2.1s"><td><b>Election deadline</b></td><td>17 Nov</td><td>17 Nov</td><td><span class="pui-tag">Match</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="ucp-scene" data-label="Flag">
+              <div class="pui-hl ucp-in">Record date differs. Issuer notice p. 1 says 14 Nov. Depository feed says 15 Nov.</div>
+              <div class="pui-tl pui-mt">
+                <div class="pui-tl-i ucp-in" style="--d:.6s"><span class="pui-tl-ic">{{icon:clock}}</span><div class="pui-tl-t"><b>3 Mar</b> · Same feed keyed a record date one day late</div></div>
+                <div class="pui-tl-i ucp-in" style="--d:1.2s"><span class="pui-tl-ic">{{icon:check}}</span><div class="pui-tl-t">Team rule: the issuer notice is the source of truth</div></div>
+                <div class="pui-tl-i ucp-in" style="--d:1.8s"><span class="pui-tl-ic run">{{icon:send}}</span><div class="pui-tl-t"><b>Today</b> · Query raised with the depository, event held for review</div></div>
+              </div>
+            </div>
+            <div class="ucp-scene" data-label="Notify">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:word}}</span><div><b>Client notification · BHP final dividend</b><span class="pui-sub">Record date 14 Nov per issuer notice · DRIP elections due 17 Nov</span></div></div>
+              <div class="ucp-cols pui-mt">
+                <div class="ucp-in" style="--d:.7s"><span class="ucp-big">9<small>min</small></span><p class="pui-sub">notice to drafted notification</p></div>
+                <div class="ucp-in" style="--d:1.1s"><span class="ucp-big">37<small>accounts</small></span><p class="pui-sub">ready to notify on approval</p></div>
+              </div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:1.8s">{{icon:check-circle}} Sent to the corporate actions team for release</div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+        <div id="om-p3" role="tabpanel" aria-labelledby="om-t3" hidden style="height:100%"><div class="panel panel-cream fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="KYC onboarding pack" label="30-second walkthrough: Pascal classifies a new fund client's onboarding documents, checks them against the KYC policy, screens the names and assembles the pack for compliance approval."-->
+            <div class="ucp-scene" data-label="Upload">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:outlook}}</span><div><b>New fund client · onboarding documents</b><span class="pui-sub">Luxembourg SICAV · 4 entities · 23 files uploaded</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:.8s"><span class="pui-tag grey">Policy</span>KYC and AML policy v11<span class="pui-row-r pui-sub">31 checklist items</span></div>
+              <div class="pui-row ucp-in" style="--d:1.2s"><span class="pui-tag grey">Target</span>Account opening<span class="pui-row-r pui-sub">21 Oct</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2s">{{icon:play}} Onboarding agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Classify">
+              <p class="pui-k">Classifying 23 files</p>
+              <div class="pui-row ucp-in pui-mt" style="--d:.1s"><span class="pui-lg w">{{logo:pdf}}</span>Certificates of incorporation<span class="pui-row-r pui-sub">4 entities</span><!--#include ucp-tick d="1s"--></div>
+              <div class="pui-row ucp-in" style="--d:.4s"><span class="pui-lg w">{{logo:pdf}}</span>Register of beneficial owners<span class="pui-row-r pui-sub">2 pp</span><!--#include ucp-tick d="1.8s"--></div>
+              <div class="pui-row ucp-in" style="--d:.7s"><span class="pui-lg w">{{logo:pdf}}</span>Prospectus and articles<span class="pui-row-r pui-sub">146 pp</span><!--#include ucp-tick d="2.6s"--></div>
+              <div class="pui-row ucp-in" style="--d:1s"><span class="pui-lg w">{{logo:word}}</span>Board resolution · authorised signatories<span class="pui-row-r pui-sub">3 pp</span><!--#include ucp-tick d="3.2s"--></div>
+              <div class="pui-row ucp-in" style="--d:1.3s"><span class="pui-lg t" style="background:#33464A">{{icon:lock}}</span>Identity documents · restricted<span class="pui-row-r pui-sub">9 files</span><!--#include ucp-tick d="3.8s"--></div>
+            </div>
+            <div class="ucp-scene" data-label="Check">
+              <p class="pui-k">Checklist against policy v11</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Item</th><th>Found in</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Registered address</b></td><td>Certificate p. 1<span class="pui-cite">1</span></td><td><span class="pui-tag">Complete</span></td></tr>
+                  <tr class="ucp-in" style="--d:.9s"><td><b>Owners above 25%</b></td><td>Register p. 2<span class="pui-cite">2</span></td><td><span class="pui-tag">Complete</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.5s"><td><b>Authorised signatories</b></td><td>Resolution p. 2<span class="pui-cite">4</span></td><td><span class="pui-tag">Complete</span></td></tr>
+                  <tr class="ucp-in" style="--d:2.1s"><td><b>Source of funds statement</b></td><td>Not in upload</td><td><span class="pui-tag amber">Missing</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="ucp-scene" data-label="Screen">
+              <p class="pui-k">Sanctions and PEP screening</p>
+              <div class="pui-row ucp-in pui-mt" style="--d:.3s"><span class="pui-ok">{{icon:check-circle}}</span>Entities screened<span class="pui-row-r"><span class="pui-tag">4 · no hits</span></span></div>
+              <div class="pui-row ucp-in" style="--d:.8s"><span class="pui-ok">{{icon:check-circle}}</span>Beneficial owners screened<span class="pui-row-r"><span class="pui-tag">2 · no hits</span></span></div>
+              <div class="pui-row ucp-in" style="--d:1.3s"><span class="pui-ok">{{icon:alert}}</span>Directors screened<span class="pui-row-r"><span class="pui-tag amber">1 possible PEP</span></span></div>
+              <div class="pui-note ucp-in" style="--d:2s">Possible match routed to the AML analyst with the screening record and source attached.</div>
+            </div>
+            <div class="ucp-scene" data-label="Pack">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:word}}</span><div><b>KYC pack · new fund client.docx</b><span class="pui-sub">30 of 31 items evidenced · each linked to its page</span></div></div>
+              <div class="ucp-cols pui-mt">
+                <div class="ucp-in" style="--d:.7s"><span class="ucp-big">3<small>hrs</small></span><p class="pui-sub">from upload to analyst review</p></div>
+                <div class="ucp-in" style="--d:1.1s"><span class="ucp-big">1<small>request</small></span><p class="pui-sub">sent to the client for source of funds</p></div>
+              </div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:1.8s">{{icon:check-circle}} Sent to compliance for approval</div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="dark" id="capabilities" aria-labelledby="cap-title">
+  <div class="frame" style="border-color:var(--d-line)">
+    <div class="row-pad"><p class="eyebrow">Capabilities</p><h2 class="h2" id="cap-title" style="color:#fff;margin-top:18px">Where asset servicers <span style="color:var(--d-mute)">start with Pascal.</span></h2></div>
+    <div class="caps" style="border-top:1px solid var(--d-line)">
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:file-check}}</span><h3>RFPs and client due diligence</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Front office</p><p>RFP and due diligence answers drafted from your approved library, with each reviewer edit kept for the next bid.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:message}}</span><h3>Client queries from your records</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Front office</p><p>Answers to client questions on holdings, cash and events, drawn from your records and cited to each one.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:scan-text}}</span><h3>Corporate actions</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Middle office</p><p>Issuer and depository notices read, terms extracted and compared across sources, with every mismatch flagged.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:repeat}}</span><h3>Settlement fails and reconciliations</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Middle office</p><p>Settlement fails, trade exceptions and cash and position breaks explained from the fixes your team already made.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:calculator}}</span><h3>NAV checks and transfer agency</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Back office</p><p>NAV production checks, pricing exceptions and investor servicing queries, each with the evidence attached.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:shield-check}}</span><h3>KYC, control evidence and regulatory reporting</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Back office</p><p>Onboarding documents classified and checked against policy, plus SOC control evidence and regulatory returns.</p></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!--#include tech-section-->
+
+<div class="frame">
+
+  <section class="row row-pad" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>How do asset servicers use AI across front, middle and back office?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Client-facing teams use AI to answer RFPs, due diligence questionnaires and client queries from approved material. Operations teams use it to read corporate action notices and explain settlement fails and reconciliation breaks. Fund accounting, transfer agency and compliance use it for NAV checks, investor queries, KYC packs and control evidence. Pascal runs all of it on one context graph, so each team sees the same record.</div></details>
+        <details class="faq-item"><summary>Who uses Pascal at a custodian or fund administrator?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The servicer's own teams: relationship managers and the RFP team, corporate actions and settlements, fund accounting, transfer agency and compliance. Pascal runs inside the servicer's environment and works on the notices, files and client records those teams already handle.</div></details>
+        <details class="faq-item"><summary>How does Pascal process corporate action notices?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal reads each issuer, exchange or depository notice and extracts the event terms: event type, ex-date, record date, pay date, ratio or rate, and election options and deadlines. It compares those terms across every source you receive, flags any field that differs and drafts the client notification once the terms are confirmed. See <a href="/pascal-agents/data-agent#extraction">extraction</a> for how fields are pulled with a link to the source line.</div></details>
+        <details class="faq-item"><summary>Can Pascal help with NAV production and pricing exceptions?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Pascal checks vendor prices and NAV moves against your tolerance rules, then explains each exception: a stale price, a corporate action on ex-date, a missing valuation. Where your team has fixed the same exception before, it proposes that fix with the history attached, and the fund accountant approves it.</div></details>
+        <details class="faq-item"><summary>Does Pascal keep each client's data separate?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Pascal applies your entitlements per client, fund and team before any document reaches a person or an agent. A relationship manager sees only the clients they cover, and data from one client never appears in another client's answer. Pascal deploys in your private cloud or on premise.</div></details>
+        <details class="faq-item"><summary>Can Pascal assemble SOC and control evidence for auditors?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Pascal maps each control in your SOC 1 or ISAE 3402 scope to the evidence your teams already produce: reconciliation sign-offs, access reviews, exception logs. It assembles the evidence pack for the period with a link to every file, so the auditor's sample requests are answered from the record.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See Pascal on your own operations." sub="With your notices, files and client records."-->

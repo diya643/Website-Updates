@@ -1,0 +1,321 @@
+<!--meta
+{
+ "path": "/solutions/private-equity-credit",
+ "title": "AI for Private Equity and Private Credit | Pascal AI",
+ "description": "AI for private equity and private credit: CIM screening, data-room diligence, IC and credit memos, covenant checks and LP reporting, cited to the page.",
+ "crumbs": [["Private Equity & Private Credit", "/solutions/private-equity-credit"]],
+ "schema": "solution",
+ "name": "Pascal AI for private equity and private credit",
+ "audience": "Buyout, growth equity and private credit funds",
+ "og_kicker": "Industries · Private Equity & Private Credit",
+ "og_title": "AI for private equity and credit, from the first CIM to the LP letter",
+ "llms": "How buyout, growth equity and private credit (direct lending) funds use Pascal across front office (CIM screening, data-room due diligence, IC memos, credit memos and covenant extraction), middle office (portfolio monitoring from reporting packs, covenant headroom, quarterly valuations support) and back office (LP quarterly reports, LP DDQs and operational due diligence, capital call and distribution notices).",
+ "css": ["solutions-pe-bank.css"],
+ "priority": 0.9
+}
+-->
+<div class="frame">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">AI for private equity &amp; private credit</span></span>Read the whole data room. <span class="mute">Write the memo your IC expects.</span></h1>
+      <p class="lead">Pascal reads CIMs, data rooms, credit agreements and portfolio reporting packs to the page, then drafts IC memos, covenant checks and LP letters in your templates.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel fit"><!--mock--><div class="pui has-float float-lg pe-hero" role="img" aria-label="Ask Pascal answering a due diligence question inside the Project Halcyon data room. Pascal searched 1,412 data-room files and reviewed 38 customer contracts, then answered that three of the top five customer contracts carry change-of-control clauses, with a cited table. Citation 2 is open on page 22 of a supply agreement.">
+      <div class="pui-win">
+        <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Ask Pascal / <b>Data room · Project Halcyon</b></span><span class="pui-bar-r"><span class="pui-tag grey">1,412 files</span></span></div>
+        <div class="pui-body">
+          <!--#include pui-rail on_chat="on" on_wf=""-->
+          <div class="pui-main">
+            <div class="pui-q">Which top-five customer contracts have change-of-control clauses?</div>
+            <div class="pui-steps">
+              <div class="pui-step">{{icon:check-circle}} <b>Searching</b> <span class="pui-tag">Data room</span></div>
+              <div class="pui-step">{{icon:check-circle}} <b>Reviewing</b> 38 customer contracts</div>
+            </div>
+            <p class="pui-ans"><b>Three of five.</b> Customer A can terminate on 60 days' notice after a change of control<span class="pui-cite on">2</span>. Two others need consent or notice<span class="pui-cite">3</span><span class="pui-cite">4</span>.</p>
+            <table class="pui-tbl">
+              <thead><tr><th>Customer</th><th>Revenue</th><th>Clause</th></tr></thead>
+              <tbody>
+                <tr><td><b>Customer A</b></td><td>34%</td><td>Terminate, 60 days<span class="pui-cite">2</span></td></tr>
+                <tr><td><b>Customer B</b></td><td>11%</td><td>Consent required<span class="pui-cite">3</span></td></tr>
+                <tr><td><b>Customer D</b></td><td>6%</td><td>Notice only<span class="pui-cite">4</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="pui-float">
+        <div class="pui-float-h"><span class="pui-k">Citation 2</span><span class="pui-k">Page 22 of 41</span></div>
+        <p class="pui-doc">{{icon:file-text}} Supply agreement · Customer A</p>
+        <div class="pui-ln m"></div>
+        <div class="pui-hl">§14.2 Either party may terminate on a change of control of the Supplier, on 60 days' notice.</div>
+        <div class="pui-ln s"></div>
+      </div>
+    </div><!--/mock--></div></div>
+  </section>
+</div>
+
+<nav class="subnav" aria-label="On this page">
+  <div class="subnav-inner">
+    <a href="#overview">Overview</a>
+    <a href="#office">Front to back office</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#technology">Technology</a>
+    <a href="#example">Example workflow</a>
+    <a href="#faq">Frequently asked questions</a>
+  </div>
+</nav>
+
+<div class="frame">
+  <section id="overview" aria-labelledby="overview-title">
+    <div class="row-pad">
+      <div class="head">
+        <h2 class="h2" id="overview-title">Built for deal teams who answer <span class="mute">to an IC and their LPs.</span></h2>
+        <p>Pascal remembers what your committee asked on every prior deal, so each new memo answers it up front. Portfolio and fund teams work from the same record.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="office" aria-labelledby="om-title">
+    <div class="row-pad-sm"><h2 class="h2" id="om-title">Deals, portfolio and fund operations. <span class="mute">One record of every deal.</span></h2></div>
+    <div class="om row">
+      <div class="om-list" role="tablist" aria-label="Office" aria-orientation="vertical">
+        <button class="om-tab" role="tab" id="om-t1" aria-controls="om-p1" aria-selected="true"><span class="eyebrow">Front office</span><b>Deal teams &amp; credit</b><span>CIM screening, data-room diligence and IC memos for buyout and growth deals. Credit memos and covenant extraction from credit agreements for direct lending.</span><small class="om-who"><b>For</b>Deal team · Partners · Credit analysts</small></button>
+        <button class="om-tab" role="tab" id="om-t2" aria-controls="om-p2" aria-selected="false" tabindex="-1"><span class="eyebrow">Middle office</span><b>Portfolio &amp; valuations</b><span>Portfolio-company reporting packs read as they arrive: KPIs against budget, covenant headroom and the inputs for quarterly valuations.</span><small class="om-who"><b>For</b>Portfolio operations · Valuation committee · Risk</small></button>
+        <button class="om-tab" role="tab" id="om-t3" aria-controls="om-p3" aria-selected="false" tabindex="-1"><span class="eyebrow">Back office</span><b>Investor relations &amp; fund finance</b><span>LP quarterly letters, LP DDQs and operational due diligence, plus capital call and distribution notices checked against the LPA.</span><small class="om-who"><b>For</b>CFO · COO · Head of investor relations · Fund finance</small></button>
+      </div>
+      <div class="om-media">
+        <div id="om-p1" role="tabpanel" aria-labelledby="om-t1" style="height:100%"><div class="panel fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="CIM screen to IC memo" label="30-second walkthrough: Pascal screens a 214-page CIM against the fund mandate, reads the data room and drafts a cited IC memo."-->
+            <div class="ucp-scene" data-label="CIM in">
+              <p class="pui-k ucp-in">New deal · 09:14</p>
+              <div class="ucp-trigger ucp-in pui-mt" style="--d:.3s"><span class="pui-lg w">{{logo:outlook}}</span><div><b>Project Halcyon · CIM from the sell-side adviser</b><span class="pui-sub">Specialty packaging carve-out · 214 pages · NDA signed</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:1s"><span class="pui-tag">Mandate</span>Fund IV · buyout<span class="pui-row-r pui-sub">EV €150–400M</span></div>
+              <div class="pui-row ucp-in" style="--d:1.5s"><span class="pui-tag grey">Data room</span>1,412 files<span class="pui-row-r pui-sub">opened Monday</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2.4s">{{icon:play}} CIM screen agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Screen">
+              <p class="pui-k">Fit against the Fund IV mandate</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Criterion</th><th>CIM</th><th>Mandate</th><th>Read</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Indicative EV</b></td><td>€310M<span class="pui-cite">1</span></td><td>€150–400M</td><td><span class="pui-tag">Fits</span></td></tr>
+                  <tr class="ucp-in" style="--d:.9s"><td><b>EBITDA margin</b></td><td>17.8%<span class="pui-cite">2</span></td><td>15% or more</td><td><span class="pui-tag">Fits</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.5s"><td><b>Top customer</b></td><td>34%<span class="pui-cite">3</span></td><td>25% or less</td><td><span class="pui-tag amber">Outside</span></td></tr>
+                  <tr class="ucp-in" style="--d:2.1s"><td><b>Geography</b></td><td>DACH, Benelux<span class="pui-cite">4</span></td><td>Europe</td><td><span class="pui-tag">Fits</span></td></tr>
+                </tbody>
+              </table>
+              <p class="pui-sub ucp-in pui-mt" style="--d:2.8s">Illustrative figures. Every cell links to its CIM page.</p>
+            </div>
+            <div class="ucp-scene" data-label="Diligence">
+              <p class="pui-k">Data room · 1,412 files read</p>
+              <div class="pui-row ucp-in pui-mt" style="--d:.2s"><span class="pui-lg w">{{logo:pdf}}</span>Customer contracts<span class="pui-row-r"><span class="pui-tag amber">3 change-of-control clauses</span></span></div>
+              <div class="pui-row ucp-in" style="--d:.7s"><span class="pui-lg w">{{logo:excel}}</span>Quality of earnings report<span class="pui-row-r"><span class="pui-tag grey">€4.1M one-off add-backs</span></span></div>
+              <div class="pui-row ucp-in" style="--d:1.2s"><span class="pui-lg w">{{logo:pdf}}</span>Pension valuation 2025<span class="pui-row-r"><span class="pui-tag amber">€11M deficit</span></span></div>
+              <div class="pui-row ucp-in" style="--d:1.7s"><span class="pui-lg w">{{logo:pdf}}</span>Environmental permits<span class="pui-row-r"><span class="pui-tag">In order</span></span></div>
+              <div class="pui-hl ucp-in pui-mt" style="--d:2.5s">17 questions drafted for the seller, each cited to a data-room file.</div>
+            </div>
+            <div class="ucp-scene" data-label="IC memo">
+              <div class="pui-doc ucp-in"><span class="pui-lg w">{{logo:word}}</span>Halcyon IC memo · draft 1.docx</div>
+              <div class="pui-doc-page" style="padding:14px 4px 0">
+                <p class="pui-doc-k ucp-in" style="--d:.3s">Fund IV · Investment committee</p>
+                <p class="pui-doc-h ucp-in" style="--d:.5s">Project Halcyon: second-round bid at €290–310M</p>
+                <p class="pui-doc-p ucp-in" style="--d:1.1s">Revenue grew 9% a year from FY23 to FY25, led by food-grade films.<span class="pui-cite">1</span></p>
+                <p class="pui-doc-p ucp-in" style="--d:1.8s">The top customer is 34% of revenue and can exit on a change of control.<span class="pui-cite">3</span><span class="pui-cite">5</span></p>
+                <p class="pui-doc-p ucp-in" style="--d:2.5s">The IC raised customer concentration on two of the last three packaging deals.<span class="pui-cite">6</span></p>
+              </div>
+            </div>
+            <div class="ucp-scene" data-label="To the partner">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:teams}}</span><div><b>Posted to #deal-halcyon · Day 3</b><span class="pui-sub">IC memo, screen table and 17 seller questions attached</span></div></div>
+              <div class="pui-hl ucp-in" style="--d:.8s">Mandate exception: top customer at 34% of revenue against a 25% limit. CIM, p. 48.</div>
+              <div class="ucp-cols pui-mt">
+                <div class="ucp-in" style="--d:1.5s"><span class="ucp-big">214<small>pp</small></span><p class="pui-sub">CIM read and cited</p></div>
+                <div class="ucp-in" style="--d:1.9s"><span class="ucp-big">41<small>min</small></span><p class="pui-sub">to a first-draft IC memo</p></div>
+              </div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+        <div id="om-p2" role="tabpanel" aria-labelledby="om-t2" hidden style="height:100%"><div class="panel panel-dark fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="Covenant headroom check" label="30-second walkthrough: Pascal reads quarterly reporting packs from portfolio companies, compares KPIs with budget, tests covenant headroom and flags one company for the valuation committee."-->
+            <div class="ucp-scene" data-label="Packs in">
+              <p class="pui-k ucp-in">Q3 reporting packs · 21 Oct</p>
+              <div class="pui-row ucp-in pui-mt" style="--d:.3s"><span class="pui-lg w">{{logo:excel}}</span>Packaging Co. · monthly pack<span class="pui-row-r pui-sub">38 tabs</span></div>
+              <div class="pui-row ucp-in" style="--d:.6s"><span class="pui-lg w">{{logo:pdf}}</span>Dental group · board pack<span class="pui-row-r pui-sub">62 pp</span></div>
+              <div class="pui-row ucp-in" style="--d:.9s"><span class="pui-lg w">{{logo:pdf}}</span>Logistics Co. · compliance certificate<span class="pui-row-r pui-sub">Q3</span></div>
+              <div class="pui-row ucp-in" style="--d:1.2s"><span class="pui-lg w">{{logo:excel}}</span>Software Co. · management accounts<span class="pui-row-r pui-sub">12 tabs</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2s">{{icon:play}} Portfolio monitor started · 14 companies</div>
+            </div>
+            <div class="ucp-scene" data-label="KPIs">
+              <p class="pui-k">KPIs against budget · Q3</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Company</th><th>Metric</th><th>LTM</th><th>vs budget</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Packaging Co.</b></td><td>EBITDA</td><td>€38.2M<span class="pui-cite">1</span></td><td><span class="pui-tag">+6%</span></td></tr>
+                  <tr class="ucp-in" style="--d:.9s"><td><b>Dental group</b></td><td>EBITDA</td><td>€21.7M<span class="pui-cite">2</span></td><td><span class="pui-tag grey">−3%</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.5s"><td><b>Logistics Co.</b></td><td>EBITDA</td><td>€14.9M<span class="pui-cite">3</span></td><td><span class="pui-tag amber">−14%</span></td></tr>
+                  <tr class="ucp-in" style="--d:2.1s"><td><b>Software Co.</b></td><td>ARR</td><td>€52.4M<span class="pui-cite">4</span></td><td><span class="pui-tag">+4%</span></td></tr>
+                </tbody>
+              </table>
+              <p class="pui-sub ucp-in pui-mt" style="--d:2.8s">Illustrative figures. Each one cited to its pack.</p>
+            </div>
+            <div class="ucp-scene" data-label="Headroom">
+              <p class="pui-k">Covenant headroom · tested to each agreement</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Company</th><th>Test</th><th>Actual</th><th>Limit</th><th>Headroom</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Packaging Co.</b></td><td>Net debt / EBITDA</td><td>3.9x</td><td>5.50x<span class="pui-cite">5</span></td><td><span class="pui-tag">29%</span></td></tr>
+                  <tr class="ucp-in" style="--d:.9s"><td><b>Dental group</b></td><td>Net debt / EBITDA</td><td>4.6x</td><td>5.75x<span class="pui-cite">6</span></td><td><span class="pui-tag">20%</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.5s"><td><b>Logistics Co.</b></td><td>Net debt / EBITDA</td><td>5.1x</td><td>5.50x<span class="pui-cite">7</span></td><td><span class="pui-tag amber">7%</span></td></tr>
+                  <tr class="ucp-in" style="--d:2.1s"><td><b>Logistics Co.</b></td><td>Interest cover</td><td>2.4x</td><td>2.00x<span class="pui-cite">7</span></td><td><span class="pui-tag">17%</span></td></tr>
+                </tbody>
+              </table>
+              <p class="pui-sub ucp-in pui-mt" style="--d:2.8s">Covenant definitions read from each credit agreement, clause cited.</p>
+            </div>
+            <div class="ucp-scene" data-label="Explain">
+              <p class="pui-k ucp-in">Why Logistics Co. is flagged</p>
+              <div class="pui-tl pui-mt">
+                <div class="pui-tl-i ucp-in" style="--d:.3s"><span class="pui-tl-ic">{{icon:clock}}</span><div class="pui-tl-t"><b>Q1</b> · Net debt / EBITDA headroom 24%</div></div>
+                <div class="pui-tl-i ucp-in" style="--d:.9s"><span class="pui-tl-ic">{{icon:file-text}}</span><div class="pui-tl-t"><b>Q2</b> · Lost a top-three customer, per board minutes<span class="pui-cite">8</span></div></div>
+                <div class="pui-tl-i ucp-in" style="--d:1.5s"><span class="pui-tl-ic">{{icon:alert}}</span><div class="pui-tl-t"><b>Q3</b> · EBITDA 14% below budget, headroom 7%</div></div>
+                <div class="pui-tl-i ucp-in" style="--d:2.1s"><span class="pui-tl-ic run">{{icon:refresh}}</span><div class="pui-tl-t"><b>Today</b> · Note drafted for the valuation committee</div></div>
+              </div>
+            </div>
+            <div class="ucp-scene" data-label="Review pack">
+              <div class="ucp-cols">
+                <div class="ucp-in"><span class="ucp-big">14<small>of 14</small></span><p class="pui-sub">packs read and tied to budget</p></div>
+                <div class="ucp-in" style="--d:.4s"><span class="ucp-big">1<small>at risk</small></span><p class="pui-sub">covenant flagged with the cause</p></div>
+              </div>
+              <div class="ucp-trigger ucp-in pui-mt" style="--d:1.2s"><span class="pui-lg w">{{logo:excel}}</span><div><b>Q3 portfolio review.xlsx · 07:50</b><span class="pui-sub">KPIs vs budget, covenant headroom and valuation inputs</span></div></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2s">{{icon:check-circle}} Ready for Thursday's valuation committee</div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+        <div id="om-p3" role="tabpanel" aria-labelledby="om-t3" hidden style="height:100%"><div class="panel panel-cream fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="LP quarterly report" label="30-second walkthrough: Pascal drafts a fund's quarterly LP letter from the administrator's NAV file, ties every figure to its source, applies past IR edits and prepares a report for each LP."-->
+            <div class="ucp-scene" data-label="Quarter close">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:excel}}</span><div><b>Fund III · final NAV from the administrator</b><span class="pui-sub">Q3 2026 · 46 LPs · report due in 45 days</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:.8s"><span class="pui-tag grey">Template</span>Q2 2026 letter<span class="pui-row-r pui-sub">approved</span></div>
+              <div class="pui-row ucp-in" style="--d:1.2s"><span class="pui-tag grey">Delivery</span>LP portal<span class="pui-row-r pui-sub">one report per LP</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2s">{{icon:play}} LP reporting agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Gather">
+              <p class="pui-k">Reading 5 sources</p>
+              <div class="pui-row ucp-in pui-mt" style="--d:.1s"><span class="pui-lg w">{{logo:excel}}</span>Administrator NAV statement<span class="pui-row-r pui-sub">30 Sep</span><!--#include ucp-tick d="1s"--></div>
+              <div class="pui-row ucp-in" style="--d:.4s"><span class="pui-lg w">{{logo:excel}}</span>Portfolio valuations · Q3<span class="pui-row-r pui-sub">9 companies</span><!--#include ucp-tick d="1.8s"--></div>
+              <div class="pui-row ucp-in" style="--d:.7s"><span class="pui-lg w">{{logo:pdf}}</span>Capital account statements<span class="pui-row-r pui-sub">46 LPs</span><!--#include ucp-tick d="2.6s"--></div>
+              <div class="pui-row ucp-in" style="--d:1s"><span class="pui-lg w">{{logo:pdf}}</span>Board packs<span class="pui-row-r pui-sub">9 companies</span><!--#include ucp-tick d="3.2s"--></div>
+              <div class="pui-row ucp-in" style="--d:1.3s"><span class="pui-lg w">{{logo:word}}</span>Q2 letter with IR edits<span class="pui-row-r pui-sub">internal</span><!--#include ucp-tick d="3.8s"--></div>
+            </div>
+            <div class="ucp-scene" data-label="Figures">
+              <p class="pui-k">Fund III · traced to the NAV file</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Fund metric</th><th>Q2 2026</th><th>Q3 2026</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Net IRR</b></td><td>14.2%</td><td>14.8%<span class="pui-cite">1</span></td></tr>
+                  <tr class="ucp-in" style="--d:.9s"><td><b>TVPI</b></td><td>1.52x</td><td>1.58x<span class="pui-cite">1</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.5s"><td><b>DPI</b></td><td>0.41x</td><td>0.47x<span class="pui-cite">2</span></td></tr>
+                  <tr class="ucp-in" style="--d:2.1s"><td><b>Capital called</b></td><td>78%</td><td>81%<span class="pui-cite">3</span></td></tr>
+                </tbody>
+              </table>
+              <p class="pui-sub ucp-in pui-mt" style="--d:2.8s">Illustrative figures. Each one links to the administrator file.</p>
+            </div>
+            <div class="ucp-scene" data-label="Letter">
+              <div class="pui-doc ucp-in"><span class="pui-lg w">{{logo:word}}</span>Fund III Q3 2026 letter.docx</div>
+              <div class="pui-doc-page" style="padding:14px 4px 0">
+                <p class="pui-doc-k ucp-in" style="--d:.3s">Fund III · Quarterly letter</p>
+                <p class="pui-doc-h ucp-in" style="--d:.5s">Q3 2026: one exit closed, DPI up to 0.47x</p>
+                <p class="pui-doc-p ucp-in" style="--d:1.1s">The sale of the veterinary clinics group closed in August at 2.6x gross MOIC.<span class="pui-cite">4</span></p>
+                <p class="pui-doc-p ucp-in" style="--d:1.7s">Distributions of €84M were paid to LPs on 12 September.<span class="pui-cite">2</span></p>
+              </div>
+              <div class="pui-note ucp-in" style="--d:2.4s">IR edit from Q2 applied: buyers named only after public announcement.</div>
+            </div>
+            <div class="ucp-scene" data-label="Deliver">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:pdf}}</span><div><b>46 LP reports ready for the portal</b><span class="pui-sub">Letter, capital account statement and a source log for each LP</span></div></div>
+              <div class="ucp-cols pui-mt">
+                <div class="ucp-in" style="--d:.7s"><span class="ucp-big">46<small>/46</small></span><p class="pui-sub">capital accounts tied to the NAV file</p></div>
+                <div class="ucp-in" style="--d:1.1s"><span class="ucp-big">2<small>hrs</small></span><p class="pui-sub">final NAV to first draft</p></div>
+              </div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:1.8s">{{icon:check-circle}} Sent to the CFO for sign-off</div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="dark" id="capabilities" aria-labelledby="cap-title">
+  <div class="frame" style="border-color:var(--d-line)">
+    <div class="row-pad"><p class="eyebrow">Capabilities</p><h2 class="h2" id="cap-title" style="color:#fff;margin-top:18px">Where buyout and credit funds <span style="color:var(--d-mute)">start with Pascal.</span></h2></div>
+    <div class="caps" style="border-top:1px solid var(--d-line)">
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:search}}</span><h3>Deal sourcing and CIM screening</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Front office</p><p>CIMs and teasers scored against your mandate, each fit and miss cited to the page and saved to your deal log.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:folder-search}}</span><h3>Data-room due diligence</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Front office</p><p>Every data-room file classified and read, red flags cited, and seller questions drafted for the deal team.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:landmark}}</span><h3>Credit memos and covenant extraction</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Front office</p><p>Financial covenants, pricing, baskets and reporting duties pulled from credit agreements into a table, clause cited.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:chart-line}}</span><h3>Portfolio monitoring</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Middle office</p><p>Reporting packs read on arrival, KPIs set against budget and covenant headroom tested, with a flag when either slips.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:scale}}</span><h3>Quarterly valuations support</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Middle office</p><p>Valuation inputs gathered from packs, comps and prior marks, with the reason for each change kept for the committee.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:file-check}}</span><h3>LP reporting, DDQs and capital notices</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Back office</p><p>Quarterly letters, LP DDQ answers and capital call and distribution notices drafted from approved fund documents.</p></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!--#include tech-section-->
+
+<div class="frame">
+  <section class="row" id="example" aria-labelledby="ex-title">
+    <div class="row-pad-sm"><h2 class="h2" id="ex-title">Example workflow. <span class="mute">A direct-lending credit memo.</span></h2></div>
+    <div class="cs-teaser row">
+      <div class="cs-teaser-copy">
+        <p class="eyebrow">Product walk-through · Sample documents</p>
+        <h3>A new borrower, from sponsor pack to credit committee.</h3>
+        <ol class="wf-steps">
+          <li><span><b>Pack in.</b> Sponsor model, three years of audited accounts and the draft credit agreement.</span></li>
+          <li><span><b>Terms extracted.</b> Net debt and interest cover tests, EBITDA add-backs, baskets and reporting duties, each cited to its clause.</span></li>
+          <li><span><b>Compared with your book.</b> Each term set against recent deals with the same sponsor or sector.</span></li>
+          <li><span><b>Memo drafted.</b> In your credit template, every figure linked to its page.</span></li>
+        </ol>
+      </div>
+      <div class="cs-teaser-nums">
+        <div><b>186<small>pp</small></b><span>credit agreement read clause by clause</span></div>
+        <div><b>31</b><span>covenant, pricing and reporting terms extracted</span></div>
+        <div><b>55<small>min</small></b><span>to a first-draft credit memo</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row row-pad" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>How do private equity and private credit funds use AI across front, middle and back office?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Deal teams use AI to screen CIMs, run data-room diligence and draft IC memos, and credit teams use it for credit memos and covenant extraction. Portfolio teams use it to read reporting packs, compare KPIs with budget and test covenant headroom. Investor relations and fund finance use it for LP letters, DDQs and capital notices. Pascal runs all three on one context graph, so the memo, the monitor and the LP letter share the same sources.</div></details>
+        <details class="faq-item"><summary>Can Pascal read an entire virtual data room?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Pascal classifies every file synced or exported from your virtual data room, reads contracts, QoE reports, financial statements and policies, and answers diligence questions with the file and page cited. It also drafts seller questions and keeps the Q&amp;A tracker in step with what the data room says.</div></details>
+        <details class="faq-item"><summary>How does Pascal extract covenants from a credit agreement?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal reads the agreement clause by clause and pulls financial covenants, the EBITDA definition and its add-backs, baskets, pricing and reporting duties into a table, each linked to its clause. Each quarter it tests the borrower's compliance certificate against those definitions and shows the headroom.</div></details>
+        <details class="faq-item"><summary>Can Pascal answer LP DDQs and operational due diligence requests?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Pascal drafts answers to ILPA-style DDQs and ODD questionnaires from your approved answer library, LPA, policies and prior responses. Reviewer edits are saved, so the next DDQ starts from the approved wording, with the source of each answer shown for compliance.</div></details>
+        <details class="faq-item"><summary>How does Pascal keep deal information confidential?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal deploys in your private cloud or on premise. Each data room, deal folder and LP file keeps its own permissions, so a deal team only sees the deals it is on and LP data stays with investor relations and fund finance.</div></details>
+        <details class="faq-item"><summary>Where should a private equity or credit fund start with Pascal?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Most funds start with one live workflow on their own documents, usually CIM screening or covenant monitoring, then add LP reporting on the same graph. See the <a href="/pascal-agents/workflow-library">workflow library</a> for the full list.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See Pascal on a live data room." sub="With your IC template and your mandate."-->

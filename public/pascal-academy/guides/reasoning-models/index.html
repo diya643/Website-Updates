@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>Reasoning Models Explained | Pascal Academy</title>
+<meta name="description" content="A guide to AI reasoning models for finance teams: how they differ from standard LLMs, how test-time compute works, and where they add value.">
+<link rel="canonical" href="https://pascalailabs.com/pascal-academy/guides/reasoning-models">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#052A2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pascal AI">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Reasoning Models Explained | Pascal Academy">
+<meta property="og:description" content="A guide to AI reasoning models for finance teams: how they differ from standard LLMs, how test-time compute works, and where they add value.">
+<meta property="og:url" content="https://pascalailabs.com/pascal-academy/guides/reasoning-models">
+<meta property="og:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-reasoning-models.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Reasoning Models">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pascalailabs">
+<meta name="twitter:title" content="Reasoning Models Explained | Pascal Academy">
+<meta name="twitter:description" content="A guide to AI reasoning models for finance teams: how they differ from standard LLMs, how test-time compute works, and where they add value.">
+<meta name="twitter:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-reasoning-models.png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=33a81822df">
+<link rel="stylesheet" href="/assets/pages/academy3.css?v=6b20df6ba8">
+<script src="/assets/site.js?v=cd66888c46" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV9WGBYMQR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SV9WGBYMQR');</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pascalailabs.com/#org",
+   "name": "Pascal AI Labs",
+   "alternateName": "Pascal AI",
+   "url": "https://pascalailabs.com/",
+   "logo": "https://pascalailabs.com/assets/pascal-logo.png",
+   "sameAs": [
+    "https://www.linkedin.com/company/pascal-ai-labs/",
+    "https://twitter.com/pascalailabs"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/reasoning-models#webpage",
+   "url": "https://pascalailabs.com/pascal-academy/guides/reasoning-models",
+   "name": "Reasoning Models Explained | Pascal Academy",
+   "description": "A guide to AI reasoning models for finance teams: how they differ from standard LLMs, how test-time compute works, and where they add value.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://pascalailabs.com/#website"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "dateModified": "2026-08-01",
+   "breadcrumb": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/reasoning-models#breadcrumb"
+   },
+   "primaryImageOfPage": "https://pascalailabs.com/assets/og/pascal-academy-guides-reasoning-models.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pascalailabs.com/#website",
+   "url": "https://pascalailabs.com/",
+   "name": "Pascal AI",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/reasoning-models#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pascalailabs.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pascal Academy",
+     "item": "https://pascalailabs.com/pascal-academy"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AI fundamentals",
+     "item": "https://pascalailabs.com/pascal-academy/ai-fundamentals"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Reasoning Models",
+     "item": "https://pascalailabs.com/pascal-academy/guides/reasoning-models"
+    }
+   ]
+  },
+  {
+   "@type": "TechArticle",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/reasoning-models#article",
+   "headline": "Reasoning Models",
+   "description": "A guide to AI reasoning models for finance teams: how they differ from standard LLMs, how test-time compute works, and where they add value.",
+   "url": "https://pascalailabs.com/pascal-academy/guides/reasoning-models",
+   "inLanguage": "en",
+   "dateModified": "2026-08-01",
+   "datePublished": "2026-08-01",
+   "author": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "isPartOf": {
+    "@type": "Collection",
+    "name": "Pascal Academy",
+    "url": "https://pascalailabs.com/pascal-academy"
+   },
+   "mainEntityOfPage": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/reasoning-models#webpage"
+   },
+   "image": "https://pascalailabs.com/assets/og/pascal-academy-guides-reasoning-models.png",
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Institutional investment teams"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/reasoning-models#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is a reasoning model in AI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A reasoning model is a type of AI that breaks down complex problems into steps before producing an answer. Instead of generating a response immediately, it plans an approach, works through intermediate steps, and arrives at a conclusion. This makes it better at tasks that require multi-step logic."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How are reasoning models different from standard LLMs?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Standard LLMs generate a response token by token in a single pass. Reasoning models spend additional compute thinking through the problem before answering. They produce intermediate reasoning that is visible to the user, which makes the output easier to verify and debug. The trade-off is that reasoning models are slower and more expensive per query."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does Pascal use reasoning models for investment research?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pascal's research agents use structured reasoning to break down complex investment questions. When you ask which companies in a universe are expanding margins while maintaining growth, the agent plans the analysis, retrieves relevant financials, evaluates each company, and synthesizes the results with citations. The reasoning is traceable, so you can see how the agent arrived at its conclusion."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What are the limitations of reasoning models?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Reasoning models are slower and more expensive than standard models. They can still make errors in their reasoning chain, and the visible reasoning steps do not guarantee correctness. They are best suited for complex analytical tasks where the extra time produces a meaningfully better result, not for simple lookups or drafting tasks."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/" aria-label="Pascal AI home">
+      <img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/platform" aria-expanded="false" aria-haspopup="true">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-product">
+          <div class="mega-panel">
+            <div class="mp-col">
+              <a class="mp-feature" href="/platform">
+                <span class="mp-art" aria-hidden="true"><i></i><i></i><i></i></span>
+                <b>Platform overview</b>
+                <span>See how the Investment OS works.</span>
+              </a>
+              <p class="mp-label">Platform</p>
+              <a class="mp-link" href="/platform/context-graph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg> Context graph &amp; memory</a>
+              <a class="mp-link" href="/platform/mcp-apis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> MCP &amp; APIs</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/ask-pascal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Ask Pascal</b><span>Your AI research analyst</span></span></a>
+              <a class="mp-link" href="/ask-pascal/decision-traces"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg> Decision traces</a>
+              <a class="mp-link" href="/ask-pascal/cited-research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg> Cited research</a>
+              <a class="mp-link" href="/ask-pascal/screeners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg> Screeners</a>
+              <a class="mp-link" href="/ask-pascal/pascal-intel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg> Pascal Intel</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/pascal-agents"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><span><b>Pascal Agents</b><span>Run investment work end to end</span></span></a>
+              <a class="mp-link" href="/pascal-agents/autonomous-agents"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Autonomous agents</a>
+              <a class="mp-link" href="/pascal-agents/workflow-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg> Agentic workflow library</a>
+              <a class="mp-link" href="/pascal-agents/data-agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg> Pascal Data Agent</a>
+            </div>
+            <a class="mp-foot" href="/solutions/hedge-funds"><span class="chip">Industries</span><span><b>Pascal for your firm</b><span>Hedge funds, asset and wealth managers, banks, asset servicers, private equity and private credit, and corporate treasury</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/solutions/hedge-funds" aria-expanded="false" aria-haspopup="true">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-il">
+          <div class="mega-panel">
+              <a class="il-i" href="/solutions/hedge-funds"><span><b>Hedge Funds</b><small>Event briefs, reconciliations and DDQs</small></span></a>
+              <a class="il-i" href="/solutions/asset-wealth-management"><span><b>Asset &amp; Wealth Management</b><small>Research, mandate checks and client reporting</small></span></a>
+              <a class="il-i" href="/solutions/banking"><span><b>Banks &amp; Financial Institutions</b><small>Underwriting, covenant monitoring and KYC</small></span></a>
+              <a class="il-i" href="/solutions/asset-servicing"><span><b>Asset Servicing</b><small>Corporate actions, NAV checks and client queries</small></span></a>
+              <a class="il-i" href="/solutions/private-equity-credit"><span><b>Private Equity &amp; Private Credit</b><small>CIM screens, diligence and LP reporting</small></span></a>
+              <a class="il-i" href="/solutions/treasury-hedge-accounting"><span><b>Corporate Treasury &amp; Hedge Accounting</b><small>Exposures, effectiveness tests and hedge files</small></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/news" aria-expanded="false" aria-haspopup="true">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-list mega-news mega-news-ac">
+          <div class="mega-panel">
+            <div class="mn-col">
+              <p class="mp-label">News</p>
+              <a class="mp-link" href="/news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg> Newsroom</a>
+              <a class="mp-link" href="/news/founders-notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Founder's notes</a>
+            </div>
+            <div class="mn-col mn-ac">
+              <a class="mn-ac-head" href="/pascal-academy"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><b>Pascal Academy</b><span>Learn AI for institutional finance</span></span></a>
+              <a class="mp-link" href="/guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Desk guides</a>
+              <a class="mp-link" href="/pascal-academy/ai-fundamentals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg> AI fundamentals</a>
+              <a class="mp-link" href="/pascal-academy/ai-glossary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> AI glossary</a>
+              <a class="mp-link" href="/pascal-academy/workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> Workflows</a>
+              <a class="mp-link" href="/pascal-academy/prompt-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Prompt library</a>
+              <a class="mp-link" href="/pascal-academy/agent-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> Agent library</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-dark btn-sm" href="https://pascalailabs.com/demo">Book a demo</a>
+    </div>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <details open>
+    <summary>Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <p class="mm-label">Platform</p>
+    <a href="/platform">Platform overview</a>
+    <a href="/platform/context-graph">Context graph &amp; memory</a>
+    <a href="/platform/mcp-apis">MCP &amp; APIs</a>
+    <p class="mm-label">Ask Pascal</p>
+    <a href="/ask-pascal">Ask Pascal overview</a>
+    <a href="/ask-pascal/decision-traces">Decision traces</a>
+    <a href="/ask-pascal/cited-research">Cited research</a>
+    <a href="/ask-pascal/screeners">Screeners</a>
+    <a href="/ask-pascal/pascal-intel">Pascal Intel</a>
+    <p class="mm-label">Pascal Agents</p>
+    <a href="/pascal-agents">Pascal Agents overview</a>
+    <a href="/pascal-agents/autonomous-agents">Autonomous agents</a>
+    <a href="/pascal-agents/workflow-library">Agentic workflow library</a>
+    <a href="/pascal-agents/data-agent">Pascal Data Agent</a>
+  </details>
+  <details>
+    <summary>Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/solutions/hedge-funds">Hedge Funds</a>
+    <a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+    <a href="/solutions/banking">Banks &amp; Financial Institutions</a>
+    <a href="/solutions/asset-servicing">Asset Servicing</a>
+    <a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+    <a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+  </details>
+  <details>
+    <summary>News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/news">Newsroom</a>
+    <a href="/news/founders-notes">Founder's notes</a>
+    <p class="mm-label">Pascal Academy</p>
+    <a href="/pascal-academy">Academy home</a>
+    <a href="/guides">Desk guides</a>
+    <a href="/pascal-academy/ai-fundamentals">AI fundamentals</a>
+    <a href="/pascal-academy/ai-glossary">AI glossary</a>
+    <a href="/pascal-academy/workflows">Workflows</a>
+    <a href="/pascal-academy/prompt-library">Prompt library</a>
+    <a href="/pascal-academy/agent-library">Agent library</a>
+  </details>
+  <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+</div>
+
+<main id="main">
+<div class="ac ac-doc">
+<div class="rp" aria-hidden="true"><i></i></div>
+<div class="frame">
+  <header class="ah">
+    <div class="ah-l">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/pascal-academy">Pascal Academy</a><span aria-hidden="true">/</span><a href="/pascal-academy/ai-fundamentals">AI fundamentals</a><span aria-hidden="true">/</span><span aria-current="page">Reasoning Models</span></nav>
+      <p class="ah-k">Last updated August 2026</p>
+      <h1 class="ah-t">Reasoning Models</h1>
+      <p class="lead">How test-time compute lets language models think through hard problems, why chain-of-thought alone was not enough, and what the trade-offs look like.</p>
+      <p class="ah-m">13 min read · Beginner-friendly with advanced sections</p>
+      <div class="ah-by"><span class="ah-av"><img src="/assets/favicon.svg" alt="" width="40" height="40"></span><span><b>Pascal Academy</b><span>AI fundamentals · Part 8 of 10</span></span></div>
+      <div class="ah-a"><button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button></div>
+    </div>
+    <div class="ah-r"><div class="th th-hero" aria-hidden="true"><div class="th-bz"><div class="th-scr g-cream"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg><b>Reasoning traces</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><b>Extended thinking</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg><b>Mathematics and logic</b></span></div></div></div></div></div>
+  </header>
+  <div class="ag">
+    <aside class="toc" aria-label="Table of contents">
+      <div class="toc-in">
+        <p class="toc-h">Table of contents</p>
+        <div class="toc-track"><span class="toc-fill"></span><ol data-spy><li><a href="#what-is-a-reasoning-model">What Is a Reasoning Model?</a></li><li><a href="#why-reasoning-models-exist">Why Reasoning Models Exist</a></li><li><a href="#how-reasoning-models-work">How Reasoning Models Work</a></li><li><a href="#reasoning-models-vs-standard-models">Reasoning Models vs Standard Models</a></li><li><a href="#what-reasoning-models-are-good-at">What Reasoning Models Are Good At</a></li><li><a href="#what-reasoning-models-struggle-with">What Reasoning Models Struggle With</a></li><li><a href="#cost-and-latency-trade-offs">Cost and Latency Trade-offs</a></li><li><a href="#when-to-use-a-reasoning-model">When to Use a Reasoning Model</a></li><li><a href="#reasoning-models-and-hallucination">Reasoning Models and Hallucination</a></li><li><a href="#the-future-of-reasoning-models">The Future of Reasoning Models</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></div>
+        <div class="toc-cta">
+          <p class="toc-cta-t">Take this guide with you.</p>
+          <p>Get the PDF in your inbox.</p>
+          <button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button>
+        </div>
+      </div>
+    </aside>
+    <article class="ac-prose" id="article">
+      <details class="toc-m"><summary>Table of contents</summary><ol><li><a href="#what-is-a-reasoning-model">What Is a Reasoning Model?</a></li><li><a href="#why-reasoning-models-exist">Why Reasoning Models Exist</a></li><li><a href="#how-reasoning-models-work">How Reasoning Models Work</a></li><li><a href="#reasoning-models-vs-standard-models">Reasoning Models vs Standard Models</a></li><li><a href="#what-reasoning-models-are-good-at">What Reasoning Models Are Good At</a></li><li><a href="#what-reasoning-models-struggle-with">What Reasoning Models Struggle With</a></li><li><a href="#cost-and-latency-trade-offs">Cost and Latency Trade-offs</a></li><li><a href="#when-to-use-a-reasoning-model">When to Use a Reasoning Model</a></li><li><a href="#reasoning-models-and-hallucination">Reasoning Models and Hallucination</a></li><li><a href="#the-future-of-reasoning-models">The Future of Reasoning Models</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<section class="ac-sec" id="what-is-a-reasoning-model" aria-labelledby="what-is-a-reasoning-model-h"><h2 id="what-is-a-reasoning-model-h">What Is a Reasoning Model?</h2>
+<p>A standard language model generates tokens one at a time, left to right, without the ability to go back and revise. Each token is produced once and becomes part of the context for the next token. This works well for text generation, summarisation, and extraction. It works poorly for problems that require planning, backtracking, or working through multiple steps before committing to an answer.</p>
+<p>A reasoning model is a language model trained to produce an extended chain of thought before generating its final answer. Instead of jumping directly from the question to the answer, the model writes out its reasoning process. It breaks the problem into steps, checks each step, considers alternatives, and sometimes corrects itself before arriving at a conclusion. The chain of thought is generated as intermediate tokens that are produced before the final answer.</p>
+<p>The core idea behind reasoning models is that giving the model more tokens to think with, meaning more intermediate computation, improves its performance on hard problems. This is called test-time compute or inference-time compute. A standard model spends a fixed amount of compute per token regardless of question difficulty. A reasoning model scales its compute with the difficulty of the problem, spending more tokens on harder questions and fewer on easier ones.</p>
+<aside class="ac-co ac-co-principle"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>Key principle</p><div class="ac-co-body"><p>Reasoning models trade inference cost for capability. A standard model generates an answer immediately. A reasoning model spends additional tokens thinking through the problem first. The extra tokens are where the reasoning happens, and the model's training teaches it to use those tokens productively rather than just padding.</p></div></aside>
+</section>
+<section class="ac-sec" id="why-reasoning-models-exist" aria-labelledby="why-reasoning-models-exist-h"><h2 id="why-reasoning-models-exist-h">Why Reasoning Models Exist</h2>
+<p>Standard language models have a well-documented weakness. They struggle with tasks that require multi-step reasoning, where each step depends on the result of the previous one. Math problems, logic puzzles, coding challenges, and scientific questions all require this kind of sequential thinking. A standard model that generates the answer directly often gets it wrong because it cannot look ahead and check its work.</p>
+<p>Chain-of-thought prompting, covered in the prompt engineering guide, was an early attempt to address this. By asking the model to show its work, you could improve its performance on reasoning tasks. The model writes out intermediate steps, and those steps become part of the context that guides the final answer. This works because each token the model generates becomes part of the context for subsequent tokens, so writing out reasoning steps gives the model a richer context to draw from when it produces the answer.</p>
+<p>Chain-of-thought prompting had limits. The model was still a standard model trained on next-token prediction. It had not been specifically trained to reason effectively, so its chains of thought were sometimes shallow, circular, or wrong. The model would write out reasoning that looked correct but contained logical errors, and then arrive at a wrong answer with apparent confidence.</p>
+<p>Reasoning models close this gap through training. Rather than relying on the prompt to elicit reasoning, the model is trained on examples that include detailed reasoning traces. During training, the model learns to produce effective reasoning chains, not just plausible-looking ones. It learns to break problems down, check intermediate results, and backtrack when a path looks wrong. This is achieved through reinforcement learning, where the model is rewarded for arriving at correct answers through valid reasoning steps.</p>
+</section>
+<section class="ac-sec" id="how-reasoning-models-work" aria-labelledby="how-reasoning-models-work-h"><h2 id="how-reasoning-models-work-h">How Reasoning Models Work</h2>
+<p>The mechanics of a reasoning model build on the same Transformer architecture as standard LLMs. The difference is in training and inference.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's advanced LLM course covers reasoning model architectures, training methods, and deployment patterns. Reach out to learn about cohort programmes for your engineering team.</p><p><a class="ac-co-link" href="/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<h3 id="training-with-reasoning-traces">Training with Reasoning Traces</h3>
+<p>Standard models are trained on text where each token follows the previous one. Reasoning models are additionally trained on data that includes step-by-step reasoning traces. These traces show the model how to decompose a problem, how to check intermediate results, and how to arrive at an answer through logical steps. The training data can come from human experts who write out their reasoning process, or from automated systems that generate and verify reasoning chains.</p>
+<p>Reinforcement learning plays a central role. The model generates reasoning traces for problems with known correct answers. Traces that lead to correct answers are rewarded. Traces that lead to wrong answers are penalised. Over many iterations, the model learns which reasoning strategies work and which do not. This is similar to how RLHF teaches a model to be helpful, but the reward signal comes from correctness rather than human preference.</p>
+<h3 id="inference-with-extended-thinking">Inference with Extended Thinking</h3>
+<p>At inference time, the model is given a question and generates a chain of thought before producing its answer. This chain of thought can be hundreds or thousands of tokens long for complex problems. The model explores different approaches, checks its work, and sometimes backtracks. Only the final answer is presented to the user in some interfaces, while the reasoning trace is hidden or shown in a collapsible section.</p>
+<p>The amount of reasoning the model does is related to the difficulty of the problem. For a simple factual question, the model may produce a short reasoning trace or skip extended reasoning entirely. For a complex math problem, it may produce thousands of tokens of reasoning before committing to an answer. This adaptive compute is a defining feature of reasoning models.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>Reinforcement learning and the reasoning reward</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>The training process for reasoning models uses a reward signal based on answer correctness. For math problems, the reward is binary, the answer is either right or wrong. For coding problems, the reward comes from test cases that pass or fail. For other tasks, the reward can be more nuanced, based on partial credit or human evaluation of the reasoning quality. The model learns through many rounds of generation and feedback, gradually improving its reasoning strategies. This process is expensive because each training example requires the model to generate a full reasoning trace, which takes more compute than a single answer. The cost is justified by the improvement in reasoning quality, but it means reasoning models are more expensive to train than standard models.</p></div></details>
+</section>
+<section class="ac-sec" id="reasoning-models-vs-standard-models" aria-labelledby="reasoning-models-vs-standard-models-h"><h2 id="reasoning-models-vs-standard-models-h">Reasoning Models vs Standard Models</h2>
+<p>Reasoning models and standard models serve different purposes. Understanding when to use each is a practical decision that depends on the task, the latency budget, and the cost tolerance.</p>
+<div class="ac-table"><table><thead><tr><th>Standard Model</th><th>Reasoning Model</th></tr></thead><tbody><tr><td>Generates the answer directly from the prompt.</td><td>Generates a chain of thought, then the answer.</td></tr><tr><td>Fixed compute per token regardless of difficulty.</td><td>Scales compute with problem difficulty.</td></tr><tr><td>Fast response, low latency per query.</td><td>Slower response, higher latency due to extended thinking.</td></tr><tr><td>Lower cost per query.</td><td>Higher cost per query due to additional tokens generated.</td></tr><tr><td>Good for text generation, summarisation, extraction, chat.</td><td>Good for math, logic, coding, and multi-step analysis.</td></tr><tr><td>Can hallucinate on reasoning tasks because it cannot check its work.</td><td>Catches some of its own errors through the reasoning process.</td></tr></tbody></table></div>
+<p>The choice between a reasoning model and a standard model is rarely either-or. Many systems use both. A standard model handles the initial query, determines what kind of question it is, and routes complex reasoning tasks to a reasoning model. This routing approach gives you the speed of a standard model for easy questions and the accuracy of a reasoning model for hard ones.</p>
+</section>
+<section class="ac-sec" id="what-reasoning-models-are-good-at" aria-labelledby="what-reasoning-models-are-good-at-h"><h2 id="what-reasoning-models-are-good-at-h">What Reasoning Models Are Good At</h2>
+<h3 id="mathematics-and-logic">Mathematics and Logic</h3>
+<p>Mathematical problems require precise, multi-step reasoning. Each step depends on the previous one, and a single error propagates through the entire solution. Reasoning models excel here because they can check intermediate results and backtrack when a step produces an unexpected value. On competition mathematics benchmarks like AIME and the International Mathematical Olympiad, reasoning models score significantly higher than standard models.</p>
+<h3 id="coding-and-software-engineering">Coding and Software Engineering</h3>
+<p>Writing code requires understanding requirements, planning an approach, implementing it, and debugging when things go wrong. Reasoning models can plan the structure of a solution before writing code, consider edge cases, and reason about why a particular implementation might fail. On coding benchmarks like competitive programming problems, reasoning models outperform standard models by a significant margin.</p>
+<h3 id="scientific-analysis">Scientific Analysis</h3>
+<p>Scientific questions often require synthesising information from multiple sources, applying domain knowledge, and drawing conclusions through logical inference. Reasoning models can work through these steps methodically, making their reasoning process visible and auditable.</p>
+<h3 id="complex-planning">Complex Planning</h3>
+<p>Tasks that require breaking a goal into sub-tasks, ordering them, and accounting for dependencies benefit from extended reasoning. A reasoning model can plan a multi-step process, identify potential failure points, and adjust its plan before execution. This is useful for agent systems, covered in the AI agents guide, where the model needs to decide what actions to take and in what order.</p>
+</section>
+<section class="ac-sec" id="what-reasoning-models-struggle-with" aria-labelledby="what-reasoning-models-struggle-with-h"><h2 id="what-reasoning-models-struggle-with-h">What Reasoning Models Struggle With</h2>
+<p>Reasoning models are not universally better. There are tasks where the extended reasoning provides no benefit and only adds cost and latency.</p>
+<h3 id="factual-recall">Factual Recall</h3>
+<p>If the question is about a fact that the model either knows or does not know, reasoning does not help. The capital of France is Paris regardless of how many reasoning steps the model takes. Extended thinking on factual questions wastes tokens without improving accuracy. In some cases, it can even hurt, because the model second-guesses a correct answer it would have given immediately.</p>
+<h3 id="creative-writing">Creative Writing</h3>
+<p>Creative tasks like writing a poem, drafting a marketing email, or composing a story do not benefit from logical reasoning. These tasks require creativity, tone, and style, which are different capabilities from logical problem-solving. A reasoning model may produce overly analytical or dry creative output because its training biases it toward structured thinking.</p>
+<h3 id="simple-tasks">Simple Tasks</h3>
+<p>For straightforward tasks like summarising a document, classifying text, or extracting entities, the extra reasoning tokens are pure overhead. The model could answer just as well without them, and the user waits longer for no benefit. Using a reasoning model for every query is like hiring a research scientist to answer the phone. Sometimes you just need a quick answer.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>Overthinking and the diminishing returns of reasoning</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>Research has shown that reasoning models can overthink problems. On tasks where the model already knows the answer, extended reasoning can introduce errors. The model starts questioning its initial intuition, explores alternative paths, and sometimes arrives at a worse answer than it would have produced immediately. This is the reasoning equivalent of a student who knows the answer but talks themselves out of it on a multiple-choice test. The optimal amount of reasoning depends on the difficulty of the problem, and finding that optimum is an active area of research. Some systems use a classifier to predict question difficulty and route accordingly, using a reasoning model only when the question is hard enough to warrant the extra compute.</p></div></details>
+</section>
+<section class="ac-sec" id="cost-and-latency-trade-offs" aria-labelledby="cost-and-latency-trade-offs-h"><h2 id="cost-and-latency-trade-offs-h">Cost and Latency Trade-offs</h2>
+<p>The primary cost of reasoning models is the additional tokens they generate. A reasoning trace can be 10 to 100 times longer than the final answer. If the answer is 50 tokens and the reasoning trace is 5,000 tokens, the model is generating and you are paying for 100 times more output than you see.</p>
+<p>On latency, the model generates tokens sequentially. A 5,000-token reasoning trace takes 50 to 100 seconds to generate at typical speeds, depending on the model and infrastructure. For interactive applications, this delay is significant. A user who asks a question and waits two minutes for an answer may lose patience, even if the answer is better than what a standard model would produce in two seconds.</p>
+<p>API providers typically price reasoning tokens separately from output tokens, and some allow you to set a reasoning budget, a cap on how many tokens the model can spend thinking. This lets you control cost, but setting the budget too low can prevent the model from finishing its reasoning, leading to incomplete or wrong answers.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's production AI course covers model selection, cost optimisation, and routing strategies for mixed reasoning and standard model deployments. Reach out to learn about team training options.</p><p><a class="ac-co-link" href="/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Factor</th><th>Standard Model</th><th>Reasoning Model</th></tr></thead><tbody><tr><td>Tokens generated</td><td>Answer only, typically 100 to 500 tokens.</td><td>Answer plus reasoning trace, often 1,000 to 10,000 tokens.</td></tr><tr><td>Latency</td><td>1 to 5 seconds for typical queries.</td><td>10 seconds to several minutes depending on reasoning length.</td></tr><tr><td>Cost per query</td><td>Low, proportional to input plus output tokens.</td><td>High, proportional to input plus reasoning plus output tokens.</td></tr><tr><td>Best use case</td><td>Chat, summarisation, extraction, simple Q and A.</td><td>Math, coding, multi-step analysis, complex planning.</td></tr></tbody></table></div>
+</section>
+<section class="ac-sec" id="when-to-use-a-reasoning-model" aria-labelledby="when-to-use-a-reasoning-model-h"><h2 id="when-to-use-a-reasoning-model-h">When to Use a Reasoning Model</h2>
+<p>The decision to use a reasoning model depends on the task, the accuracy requirements, and the tolerance for cost and latency.</p>
+<div class="ac-table"><table><thead><tr><th>Situation</th><th>Recommendation</th></tr></thead><tbody><tr><td>Math, logic, or scientific problem requiring multi-step reasoning</td><td>Use a reasoning model. The extended thinking significantly improves accuracy on these tasks.</td></tr><tr><td>Coding challenge with complex logic or algorithm design</td><td>Use a reasoning model. The model can plan the approach and reason about edge cases before writing code.</td></tr><tr><td>Document summarisation or text extraction</td><td>Use a standard model. No multi-step reasoning needed, and the reasoning model adds unnecessary cost and latency.</td></tr><tr><td>Chatbot for customer service with quick response requirements</td><td>Use a standard model for speed. Route to a reasoning model only for complex queries that the standard model cannot handle.</td></tr><tr><td>Research question requiring synthesis across multiple sources</td><td>Consider a reasoning model combined with RAG. The model can reason over retrieved documents and draw conclusions through logical steps.</td></tr><tr><td>Creative writing, marketing copy, or content generation</td><td>Use a standard model. Reasoning models tend toward analytical output that can stifle creativity.</td></tr><tr><td>Mixed workload with varying question difficulty</td><td>Use a routing approach. A classifier or the standard model itself determines whether to escalate to a reasoning model based on question complexity.</td></tr></tbody></table></div>
+</section>
+<section class="ac-sec" id="reasoning-models-and-hallucination" aria-labelledby="reasoning-models-and-hallucination-h"><h2 id="reasoning-models-and-hallucination-h">Reasoning Models and Hallucination</h2>
+<p>The previous guide covered hallucination, where models produce confident but factually wrong output. Reasoning models offer a partial improvement here, but the relationship is nuanced.</p>
+<p>On reasoning errors, where the model makes a logical mistake or calculation error, the extended chain of thought helps. The model can catch errors in its own reasoning, check intermediate results, and correct course. This reduces errors on math, logic, and coding tasks.</p>
+<p>On factual hallucination, where the model states something untrue, reasoning provides less help. If the model does not know a fact, thinking longer does not make the fact appear. The model may reason about the fact, drawing inferences based on adjacent knowledge, but those inferences can be wrong. Extended reasoning can even amplify factual hallucination, because the model generates more text and has more opportunities to introduce unsupported claims.</p>
+<p>The practical takeaway is that reasoning models are not a substitute for grounding. For factual accuracy, RAG and knowledge graphs remain the primary tools. Reasoning models complement these by improving the model's ability to reason over the retrieved information, but they cannot conjure facts that are not in their training data or in the provided context.</p>
+</section>
+<section class="ac-sec" id="the-future-of-reasoning-models" aria-labelledby="the-future-of-reasoning-models-h"><h2 id="the-future-of-reasoning-models-h">The Future of Reasoning Models</h2>
+<p>Reasoning models represent a direction in AI development where performance improves by spending more compute at inference time rather than only at training time. This is a meaningful change because it decouples capability from model size. A smaller model that reasons longer can outperform a larger model that answers immediately.</p>
+<p>Current reasoning models still have limitations. Their reasoning traces can be verbose and hard to parse. They sometimes reason in circles or fail to converge on an answer within their token budget. The quality of reasoning depends heavily on training data, and models can learn reasoning patterns that look correct but contain subtle logical errors.</p>
+<p>Research is active on several fronts. Techniques for more efficient reasoning, where the model produces shorter and more focused chains of thought, could reduce cost and latency without sacrificing accuracy. Approaches that combine reasoning with tool use, where the model can call external tools like calculators, code interpreters, or databases during its reasoning process, extend what the model can accomplish. And the integration of reasoning models with agentic systems, where the model plans and executes multi-step workflows, is an area of rapid development.</p>
+<aside class="ac-co ac-co-summary"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>Summary</p><div class="ac-co-body"><p>A reasoning model is a language model trained to produce an extended chain of thought before generating its answer. The model spends additional tokens, called test-time compute, thinking through the problem. This improves performance on tasks requiring multi-step reasoning like math, coding, and logical analysis. The trade-off is cost and latency, because the model generates many more tokens than a standard model would for the same question. Reasoning models are trained using reinforcement learning with rewards based on answer correctness, teaching the model to produce effective reasoning strategies. They are not universally better than standard models. For factual recall, creative writing, and simple tasks, the extra reasoning provides no benefit and only adds overhead. Many production systems route between standard and reasoning models based on question difficulty. Reasoning models help with reasoning errors but do not solve factual hallucination, because thinking longer cannot produce facts that are not in the model's training data or context. For factual accuracy, grounding through RAG and knowledge graphs remains essential.</p></div></aside>
+</section>
+<aside class="ac-about"><p class="ac-about-h">About this guide</p><p>This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, agents, context windows, knowledge graphs, hallucinations, reasoning models, embeddings, and MCP. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.</p></aside>
+    </article>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What is a reasoning model in AI?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A reasoning model is a type of AI that breaks down complex problems into steps before producing an answer. Instead of generating a response immediately, it plans an approach, works through intermediate steps, and arrives at a conclusion. This makes it better at tasks that require multi-step logic.</div></details>
+<details class="faq-item"><summary>How are reasoning models different from standard LLMs?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Standard LLMs generate a response token by token in a single pass. Reasoning models spend additional compute thinking through the problem before answering. They produce intermediate reasoning that is visible to the user, which makes the output easier to verify and debug. The trade-off is that reasoning models are slower and more expensive per query.</div></details>
+<details class="faq-item"><summary>How does Pascal use reasoning models for investment research?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal's research agents use structured reasoning to break down complex investment questions. When you ask which companies in a universe are expanding margins while maintaining growth, the agent plans the analysis, retrieves relevant financials, evaluates each company, and synthesizes the results with citations. The reasoning is traceable, so you can see how the agent arrived at its conclusion.</div></details>
+<details class="faq-item"><summary>What are the limitations of reasoning models?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Reasoning models are slower and more expensive than standard models. They can still make errors in their reasoning chain, and the visible reasoning steps do not guarantee correctness. They are best suited for complex analytical tasks where the extra time produces a meaningfully better result, not for simple lookups or drafting tasks.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kl" aria-labelledby="kl-h">
+    <h2 class="sx-t" id="kl-h">Keep learning</h2>
+    <div class="kl-g"><a class="gc" href="/pascal-academy/guides/embeddings"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-deep"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><b>The geometry of meaning</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg><b>Similarity metrics</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><b>Semantic search</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 09</span><h3 class="gc-t">Embeddings</h3><p class="gc-m">13 min read</p></div></a><a class="gc" href="/pascal-academy/guides/model-context-protocol"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-teal"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg><b>The MCP client</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg><b>The MCP server</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg><b>Communication</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 10</span><h3 class="gc-t">Model Context Protocol (MCP)</h3><p class="gc-m">13 min read</p></div></a><a class="gc" href="/guides/ai-for-hedge-funds"><div class="th" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-teal"><img src="/assets/shots/shot-agent-table.webp" alt="Pascal agent output: a street vs management framing table for Sea Limited with citations" width="1600" height="844" loading="lazy" decoding="async"></div></div></div><div class="gc-b"><span class="pill">Desk guide</span><h3 class="gc-t">AI for Hedge Funds</h3><p class="gc-m">24 min read</p></div></a></div>
+  </section>
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">Ask your first question with your firm's context.<br><span style="color:var(--mint-2)">A walkthrough with your own documents connected.</span></h2>
+  <div class="actions">
+    <a class="btn btn-white" href="https://pascalailabs.com/demo">Book a demo</a>
+  </div>
+</section>
+
+<dialog class="ac-gate" id="pdf-gate" aria-labelledby="gate-h">
+  <div class="ac-gate-in">
+    <div class="ac-gate-side">
+      <p class="eyebrow">Pascal Academy · PDF</p>
+      <p class="ac-gate-t">Reasoning Models</p>
+      <p class="ac-gate-m">13 min read</p>
+      <div class="ac-gate-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b><i></i><i></i></div>
+    </div>
+    <div class="ac-gate-main">
+      <button class="ac-gate-x" type="button" data-gate-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      <form class="ac-gate-form" data-gate-form data-guide="Reasoning Models" data-slug="reasoning-models" data-pdf="/assets/academy/pdf/reasoning-models.pdf" novalidate>
+        <h2 id="gate-h">Get this guide as a PDF</h2>
+        <p class="ac-gate-sub">Tell us where to send it and we will email you the PDF.</p>
+        <label>Full name<input name="name" autocomplete="name" required></label>
+        <label>Work email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Organization<input name="organization" autocomplete="organization" required></label>
+        <p class="ac-gate-err" role="alert" hidden></p>
+        <button class="btn btn-dark" type="submit">Email me the PDF</button>
+        <p class="ac-gate-fine">By submitting, you agree to be contacted about Pascal Academy.</p>
+      </form>
+      <div class="ac-gate-done" hidden>
+        <span class="ac-gate-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <h2>Check your inbox.</h2>
+        <p>We have sent <b>Reasoning Models</b> to <span data-gate-email></span>.</p>
+        <button class="btn btn-line" type="button" data-gate-close>Back to the guide</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="/assets/pages/academy3.js?v=4f48f13d9f" defer></script>
+</main>
+<footer class="footer">
+  <div class="frame">
+    <div class="footer-grid">
+      <div>
+        <a href="/" aria-label="Pascal AI home"><img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24" loading="lazy"></a>
+        <p class="footer-blurb">The Investment OS for asset and wealth managers, asset servicers, corporate treasury, banks and financial institutions, private equity and private credit firms, and hedge funds.</p>
+      </div>
+      <nav aria-label="Platform">
+        <p class="fh">Platform</p>
+        <ul>
+          <li><a href="/platform">Platform overview</a></li>
+          <li><a href="/platform/context-graph">Context graph &amp; memory</a></li>
+          <li><a href="/platform/mcp-apis">MCP &amp; APIs</a></li>
+          <li><a href="/solutions/ai-transformation">AI transformation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Products">
+        <p class="fh">Products</p>
+        <ul>
+          <li><a href="/ask-pascal">Ask Pascal</a></li>
+          <li><a href="/ask-pascal/cited-research">Cited research</a></li>
+          <li><a href="/ask-pascal/screeners">Screeners</a></li>
+          <li><a href="/pascal-agents">Pascal Agents</a></li>
+          <li><a href="/pascal-agents/workflow-library">Workflow library</a></li>
+          <li><a href="/pascal-agents/data-agent">Pascal Data Agent</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Industries">
+        <p class="fh">Industries</p>
+        <ul>
+          <li><a href="/solutions/hedge-funds">Hedge Funds</a></li>
+          <li><a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a></li>
+          <li><a href="/solutions/banking">Banks &amp; Financial Institutions</a></li>
+          <li><a href="/solutions/asset-servicing">Asset Servicing</a></li>
+          <li><a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a></li>
+          <li><a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="News">
+        <p class="fh">News</p>
+        <ul>
+          <li><a href="/news">Newsroom</a></li>
+          <li><a href="/news/founders-notes">Founder's notes</a></li>
+          <li><a href="https://vibhavviswanathan.substack.com" rel="noopener">Alpha &amp; Agents</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="fh">Company</p>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/security">Security</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/pascal-academy">Pascal Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pascal AI Labs</span>
+      <span><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms-of-use">Terms</a> &middot; <a href="https://www.linkedin.com/company/pascal-ai-labs/" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/pascalailabs" rel="noopener">X</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

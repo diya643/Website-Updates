@@ -1,0 +1,147 @@
+{
+ "kind": "desk",
+ "slug": "ai-for-investment-banking",
+ "path": "/guides/ai-for-investment-banking",
+ "title": "AI for Investment Banking",
+ "subtitle": "",
+ "dek": "How AI supports the deal toolkit, pitch books, comparables, diligence and valuation, while keeping every client-facing output accurate and defensible.",
+ "meta": "21 min read · Intermediate",
+ "intro": [],
+ "chapters": [
+  {
+   "id": "introduction",
+   "h": "Introduction",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "Investment banking is a documents business. Pitch books, comps, CIMs, diligence trackers and valuation models are all built from large volumes of information under punishing deadlines. AI compresses the assembly; it does not change the standard every client-facing page is held to. This guide covers where it helps across the deal toolkit."
+    }
+   ]
+  },
+  {
+   "id": "pitch-books",
+   "h": "Pitch Books",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "AI accelerates the raw material behind a pitch, company overviews, market context, precedent situations, first-draft narratives, so the team spends its time on the argument and the story rather than the assembly."
+    },
+    {
+     "t": "p",
+     "h": "The bar for a client page is exactness. Every figure and claim the AI drafts must be traced to a source and confirmed before it reaches the deck."
+    }
+   ]
+  },
+  {
+   "id": "comparable-companies",
+   "h": "Comparable Companies",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "Building a comp set means identifying the right peers and pulling consistent metrics for each. AI can propose a peer universe with a rationale for every name and assemble the first-pass table, flagging where definitions differ between companies."
+    },
+    {
+     "t": "p",
+     "h": "The judgement, which peers truly belong, which to trim, stays with the banker, and every multiple is verified against the source before it drives a valuation."
+    }
+   ]
+  },
+  {
+   "id": "industry-research",
+   "h": "Industry Research",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "For sector coverage, AI reads across filings, transcripts and news to assemble a structured view of a market, size, drivers, competitive dynamics, recent activity, far faster than doing it by hand, and in the shape you specify."
+    }
+   ]
+  },
+  {
+   "id": "cim-analysis",
+   "h": "CIM Analysis",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "On the buy-side of a process, a CIM is a dense, persuasive document that has to be read critically. With retrieval, a team can interrogate it directly, customer concentration, margin bridge, the assumptions behind the projections, and get cited answers to work from."
+    },
+    {
+     "t": "p",
+     "h": "A CIM is a sell document; AI helps you read it sceptically, but the scepticism is yours. Verify the claims that matter against independent sources."
+    }
+   ]
+  },
+  {
+   "id": "due-diligence",
+   "h": "Due Diligence",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "Diligence over a data room is a natural fit: ask questions of hundreds of documents at once, surface every instance of a clause or risk, and build a findings tracker with a citation behind each entry."
+    },
+    {
+     "t": "p",
+     "h": "The citation is what makes it usable, it points a human to the exact document to confirm before a finding is relied upon."
+    }
+   ]
+  },
+  {
+   "id": "valuation-support",
+   "h": "Valuation Support",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "Use AI for the narrative and assumptions around a valuation, laying out drivers, sensitivities and the comparable context, not for the arithmetic inside the model. The math stays in an auditable spreadsheet where every input can be checked."
+    }
+   ]
+  },
+  {
+   "id": "client-presentations",
+   "h": "Client Presentations",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "AI is a capable drafting and editing partner for client materials: structuring an argument, tightening language, adapting a narrative to an audience. What it produces is a draft to a professional standard, not a final page, the review discipline is unchanged."
+    }
+   ]
+  },
+  {
+   "id": "best-practices",
+   "h": "Best Practices",
+   "blocks": [
+    {
+     "t": "ul",
+     "items": [
+      "Verify every client-facing number against its source before it ships.",
+      "Keep comp-set and peer selection a human judgement, informed by AI, not made by it.",
+      "Read sell-side documents like a CIM sceptically; use AI to interrogate, not to trust.",
+      "Keep valuation arithmetic in an auditable model, never inside the language model.",
+      "Treat AI output as a first draft held to the same standard as any junior's work."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "further-reading",
+   "h": "Further Reading",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "Continue with AI for Hedge Funds for the deep single-name research workflow, or AI for Private Equity for the sourcing-to-monitoring lifecycle in private markets."
+    }
+   ]
+  }
+ ],
+ "faqs": [
+  [
+   "What are the key practices to follow?",
+   "Verify every client-facing number against its source before it ships. Keep comp-set and peer selection a human judgement, informed by AI, not made by it. Read sell-side documents like a CIM sceptically; use AI to interrogate, not to trust. Keep valuation arithmetic in an auditable model, never inside the language model. Treat AI output as a first draft held to the same standard as any junior's work."
+  ]
+ ],
+ "outro": [],
+ "about": [
+  {
+   "t": "updated",
+   "h": "July 15, 2026"
+  }
+ ]
+}

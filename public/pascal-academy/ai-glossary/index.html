@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>AI Glossary for Finance | Pascal Academy</title>
+<meta name="description" content="A finance-focused reference of AI terms for investment teams, covering LLMs, RAG, agents, embeddings, MCP and governance, grouped by theme with search.">
+<link rel="canonical" href="https://pascalailabs.com/pascal-academy/ai-glossary">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#052A2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pascal AI">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="AI Glossary for Finance | Pascal Academy">
+<meta property="og:description" content="A finance-focused reference of AI terms for investment teams, covering LLMs, RAG, agents, embeddings, MCP and governance, grouped by theme with search.">
+<meta property="og:url" content="https://pascalailabs.com/pascal-academy/ai-glossary">
+<meta property="og:image" content="https://pascalailabs.com/assets/og/pascal-academy-ai-glossary.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI glossary for finance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pascalailabs">
+<meta name="twitter:title" content="AI Glossary for Finance | Pascal Academy">
+<meta name="twitter:description" content="A finance-focused reference of AI terms for investment teams, covering LLMs, RAG, agents, embeddings, MCP and governance, grouped by theme with search.">
+<meta name="twitter:image" content="https://pascalailabs.com/assets/og/pascal-academy-ai-glossary.png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=33a81822df">
+<link rel="stylesheet" href="/assets/pages/academy3.css?v=6b20df6ba8">
+<script src="/assets/site.js?v=cd66888c46" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV9WGBYMQR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SV9WGBYMQR');</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pascalailabs.com/#org",
+   "name": "Pascal AI Labs",
+   "alternateName": "Pascal AI",
+   "url": "https://pascalailabs.com/",
+   "logo": "https://pascalailabs.com/assets/pascal-logo.png",
+   "sameAs": [
+    "https://www.linkedin.com/company/pascal-ai-labs/",
+    "https://twitter.com/pascalailabs"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pascalailabs.com/pascal-academy/ai-glossary#webpage",
+   "url": "https://pascalailabs.com/pascal-academy/ai-glossary",
+   "name": "AI Glossary for Finance | Pascal Academy",
+   "description": "A finance-focused reference of AI terms for investment teams, covering LLMs, RAG, agents, embeddings, MCP and governance, grouped by theme with search.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://pascalailabs.com/#website"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "dateModified": "2026-10-12",
+   "breadcrumb": {
+    "@id": "https://pascalailabs.com/pascal-academy/ai-glossary#breadcrumb"
+   },
+   "primaryImageOfPage": "https://pascalailabs.com/assets/og/pascal-academy-ai-glossary.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pascalailabs.com/#website",
+   "url": "https://pascalailabs.com/",
+   "name": "Pascal AI",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pascalailabs.com/pascal-academy/ai-glossary#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pascalailabs.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pascal Academy",
+     "item": "https://pascalailabs.com/pascal-academy"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AI glossary",
+     "item": "https://pascalailabs.com/pascal-academy/ai-glossary"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pascalailabs.com/pascal-academy/ai-glossary#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is the Pascal AI glossary?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The Pascal AI glossary is a finance-focused reference of AI terms designed for investment teams. It covers terms relevant to institutional finance, from agentic AI and retrieval-augmented generation to knowledge graphs, the Model Context Protocol, and the specific agents Pascal offers for company screening, KPI extraction, and research memo generation."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is Pascal AI and what does it do?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pascal AI is an institutional finance platform that provides AI agents for investment research. It runs inside your governance perimeter with role-based access controls and citation trails on every output. Pascal offers the Generative Matrix for company screening, the KPI Extractor for pulling data from filings, and the Research Memo Generator for producing structured reports from templates."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does Pascal AI use RAG for financial research?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pascal AI uses retrieval-augmented generation to ground every output in source documents. When you ask a question about a company, Pascal retrieves relevant passages from filings, transcripts, and your internal research, then synthesizes an answer with citations tracing back to the source line. This reduces hallucinations and makes outputs auditable."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the Model Context Protocol and how does Pascal use it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The Model Context Protocol is an open standard for connecting AI models to external data sources. Pascal is MCP-native, meaning its agents connect to Bloomberg, Capital IQ, Snowflake, SharePoint, and your CRM through one MCP Hub. This eliminates custom data pipelines and lets agents pull from all your data sources through a consistent interface."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/" aria-label="Pascal AI home">
+      <img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/platform" aria-expanded="false" aria-haspopup="true">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-product">
+          <div class="mega-panel">
+            <div class="mp-col">
+              <a class="mp-feature" href="/platform">
+                <span class="mp-art" aria-hidden="true"><i></i><i></i><i></i></span>
+                <b>Platform overview</b>
+                <span>See how the Investment OS works.</span>
+              </a>
+              <p class="mp-label">Platform</p>
+              <a class="mp-link" href="/platform/context-graph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg> Context graph &amp; memory</a>
+              <a class="mp-link" href="/platform/mcp-apis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> MCP &amp; APIs</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/ask-pascal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Ask Pascal</b><span>Your AI research analyst</span></span></a>
+              <a class="mp-link" href="/ask-pascal/decision-traces"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg> Decision traces</a>
+              <a class="mp-link" href="/ask-pascal/cited-research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg> Cited research</a>
+              <a class="mp-link" href="/ask-pascal/screeners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg> Screeners</a>
+              <a class="mp-link" href="/ask-pascal/pascal-intel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg> Pascal Intel</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/pascal-agents"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><span><b>Pascal Agents</b><span>Run investment work end to end</span></span></a>
+              <a class="mp-link" href="/pascal-agents/autonomous-agents"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Autonomous agents</a>
+              <a class="mp-link" href="/pascal-agents/workflow-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg> Agentic workflow library</a>
+              <a class="mp-link" href="/pascal-agents/data-agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg> Pascal Data Agent</a>
+            </div>
+            <a class="mp-foot" href="/solutions/hedge-funds"><span class="chip">Industries</span><span><b>Pascal for your firm</b><span>Hedge funds, asset and wealth managers, banks, asset servicers, private equity and private credit, and corporate treasury</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/solutions/hedge-funds" aria-expanded="false" aria-haspopup="true">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-il">
+          <div class="mega-panel">
+              <a class="il-i" href="/solutions/hedge-funds"><span><b>Hedge Funds</b><small>Event briefs, reconciliations and DDQs</small></span></a>
+              <a class="il-i" href="/solutions/asset-wealth-management"><span><b>Asset &amp; Wealth Management</b><small>Research, mandate checks and client reporting</small></span></a>
+              <a class="il-i" href="/solutions/banking"><span><b>Banks &amp; Financial Institutions</b><small>Underwriting, covenant monitoring and KYC</small></span></a>
+              <a class="il-i" href="/solutions/asset-servicing"><span><b>Asset Servicing</b><small>Corporate actions, NAV checks and client queries</small></span></a>
+              <a class="il-i" href="/solutions/private-equity-credit"><span><b>Private Equity &amp; Private Credit</b><small>CIM screens, diligence and LP reporting</small></span></a>
+              <a class="il-i" href="/solutions/treasury-hedge-accounting"><span><b>Corporate Treasury &amp; Hedge Accounting</b><small>Exposures, effectiveness tests and hedge files</small></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/news" aria-expanded="false" aria-haspopup="true">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-list mega-news mega-news-ac">
+          <div class="mega-panel">
+            <div class="mn-col">
+              <p class="mp-label">News</p>
+              <a class="mp-link" href="/news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg> Newsroom</a>
+              <a class="mp-link" href="/news/founders-notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Founder's notes</a>
+            </div>
+            <div class="mn-col mn-ac">
+              <a class="mn-ac-head" href="/pascal-academy"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><b>Pascal Academy</b><span>Learn AI for institutional finance</span></span></a>
+              <a class="mp-link" href="/guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Desk guides</a>
+              <a class="mp-link" href="/pascal-academy/ai-fundamentals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg> AI fundamentals</a>
+              <a class="mp-link" href="/pascal-academy/ai-glossary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> AI glossary</a>
+              <a class="mp-link" href="/pascal-academy/workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> Workflows</a>
+              <a class="mp-link" href="/pascal-academy/prompt-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Prompt library</a>
+              <a class="mp-link" href="/pascal-academy/agent-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> Agent library</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-dark btn-sm" href="https://pascalailabs.com/demo">Book a demo</a>
+    </div>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <details open>
+    <summary>Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <p class="mm-label">Platform</p>
+    <a href="/platform">Platform overview</a>
+    <a href="/platform/context-graph">Context graph &amp; memory</a>
+    <a href="/platform/mcp-apis">MCP &amp; APIs</a>
+    <p class="mm-label">Ask Pascal</p>
+    <a href="/ask-pascal">Ask Pascal overview</a>
+    <a href="/ask-pascal/decision-traces">Decision traces</a>
+    <a href="/ask-pascal/cited-research">Cited research</a>
+    <a href="/ask-pascal/screeners">Screeners</a>
+    <a href="/ask-pascal/pascal-intel">Pascal Intel</a>
+    <p class="mm-label">Pascal Agents</p>
+    <a href="/pascal-agents">Pascal Agents overview</a>
+    <a href="/pascal-agents/autonomous-agents">Autonomous agents</a>
+    <a href="/pascal-agents/workflow-library">Agentic workflow library</a>
+    <a href="/pascal-agents/data-agent">Pascal Data Agent</a>
+  </details>
+  <details>
+    <summary>Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/solutions/hedge-funds">Hedge Funds</a>
+    <a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+    <a href="/solutions/banking">Banks &amp; Financial Institutions</a>
+    <a href="/solutions/asset-servicing">Asset Servicing</a>
+    <a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+    <a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+  </details>
+  <details>
+    <summary>News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/news">Newsroom</a>
+    <a href="/news/founders-notes">Founder's notes</a>
+    <p class="mm-label">Pascal Academy</p>
+    <a href="/pascal-academy">Academy home</a>
+    <a href="/guides">Desk guides</a>
+    <a href="/pascal-academy/ai-fundamentals">AI fundamentals</a>
+    <a href="/pascal-academy/ai-glossary">AI glossary</a>
+    <a href="/pascal-academy/workflows">Workflows</a>
+    <a href="/pascal-academy/prompt-library">Prompt library</a>
+    <a href="/pascal-academy/agent-library">Agent library</a>
+  </details>
+  <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+</div>
+
+<main id="main">
+<div class="ac">
+<div class="frame">
+  <header class="hh">
+    <div class="hh-l">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/pascal-academy">Pascal Academy</a><span aria-hidden="true">/</span><span aria-current="page">AI glossary</span></nav>
+      <h1 class="hh-t">AI <em>Glossary</em></h1>
+    </div>
+    <div class="hh-r"><p class="lead">An A-to-Z reference of AI terms written for investment teams.</p><p class="hh-m">Finance-focused definitions grouped by theme. For the longer explanations, read the <a href="/pascal-academy/ai-fundamentals">AI fundamentals</a> series.</p></div>
+  </header>
+<section class="fb" aria-label="Featured"><div class="fb-in"><div class="tls" role="list" aria-label="Glossary themes"><a class="tl g-sea on" href="#models-foundations" data-tile>
+        <span class="pill pill-l">Models &amp; Foundations</span>
+        <span class="tl-art"><div class="th-scr g-sea"><div class="tterm"><span class="tterm-tag">NLP</span><b>Attention Mechanism</b><span class="tterm-l"></span><span class="tterm-l s"></span></div></div></span>
+        <span class="tl-copy"><b class="tl-t">Models &amp; Foundations</b><span class="tl-d">How AI models are built, trained and run. 15 terms.</span></span>
+      </a><a class="tl g-cream" href="#core-ai-agents" data-tile>
+        <span class="pill pill-l">Core AI &amp; Agents</span>
+        <span class="tl-art"><div class="th-scr g-cream"><div class="tterm"><span class="tterm-tag">AI</span><b>Agentic AI</b><span class="tterm-l"></span><span class="tterm-l s"></span></div></div></span>
+        <span class="tl-copy"><b class="tl-t">Core AI &amp; Agents</b><span class="tl-d">Systems that reason, plan, act and adapt. 10 terms.</span></span>
+      </a><a class="tl g-deep" href="#retrieval-knowledge" data-tile>
+        <span class="pill pill-l">Retrieval &amp; Knowledge</span>
+        <span class="tl-art"><div class="th-scr g-deep"><div class="tterm"><span class="tterm-tag">RAG</span><b>Chunking</b><span class="tterm-l"></span><span class="tterm-l s"></span></div></div></span>
+        <span class="tl-copy"><b class="tl-t">Retrieval &amp; Knowledge</b><span class="tl-d">Grounding answers in real source documents. 6 terms.</span></span>
+      </a><a class="tl g-teal" href="#prompting" data-tile>
+        <span class="pill pill-l">Prompting</span>
+        <span class="tl-art"><div class="th-scr g-teal"><div class="tterm"><span class="tterm-tag">PROMPTING</span><b>Chain-of-Thought Prompting</b><span class="tterm-l"></span><span class="tterm-l s"></span></div></div></span>
+        <span class="tl-copy"><b class="tl-t">Prompting</b><span class="tl-d">Getting useful, reliable output from a model. 2 terms.</span></span>
+      </a><a class="tl g-mint" href="#integration-platform" data-tile>
+        <span class="pill pill-l">Integration &amp; Platform</span>
+        <span class="tl-art"><div class="th-scr g-mint"><div class="tterm"><span class="tterm-tag">INTEGRATION</span><b>Model Context Protocol (MCP)</b><span class="tterm-l"></span><span class="tterm-l s"></span></div></div></span>
+        <span class="tl-copy"><b class="tl-t">Integration &amp; Platform</b><span class="tl-d">Connecting models to your data and tools. 2 terms.</span></span>
+      </a><a class="tl g-sea" href="#finance-governance" data-tile>
+        <span class="pill pill-l">Finance &amp; Governance</span>
+        <span class="tl-art"><div class="th-scr g-sea"><div class="tterm"><span class="tterm-tag">FINANCE</span><b>Citation Trail</b><span class="tterm-l"></span><span class="tterm-l s"></span></div></div></span>
+        <span class="tl-copy"><b class="tl-t">Finance &amp; Governance</b><span class="tl-d">Trust, control and auditability in finance. 5 terms.</span></span>
+      </a></div></div></section>
+  <div class="bw" id="gl-results">
+    <div class="bb">
+      <h2 class="bb-t">Browse all 40 terms.</h2>
+      <label class="sp"><span class="sr-only">Search the glossary</span><input type="search" placeholder="Search the glossary" data-filter="#gl-results" autocomplete="off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></label>
+    </div>
+    <div class="bw-g">
+      <nav class="sd" aria-label="Glossary themes"><ol data-spy><li><a href="#models-foundations">Models &amp; Foundations</a></li><li><a href="#core-ai-agents">Core AI &amp; Agents</a></li><li><a href="#retrieval-knowledge">Retrieval &amp; Knowledge</a></li><li><a href="#prompting">Prompting</a></li><li><a href="#integration-platform">Integration &amp; Platform</a></li><li><a href="#finance-governance">Finance &amp; Governance</a></li></ol></nav>
+      <div class="bw-m">
+        <p class="sx-s sx-lead">Search or filter to find the terms that come up in research, modelling, and AI discussions.</p>
+        <section class="sx" id="models-foundations" aria-labelledby="models-foundations-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="models-foundations-h">Models &amp; Foundations</h3><p class="sx-s">How AI models are built, trained and run. 15 terms.</p></div></div>
+        <div class="tms"><article class="tm" id="attention-mechanism" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Attention Mechanism</h4><span class="pill g-sea-p">NLP</span></div>
+            <p>A method in neural networks that helps a model focus on the relevant parts of the input when producing an output. In a transformer model, attention determines which words in a document influence the generation of each subsequent word. This is what allows a model to connect a revenue figure on page 12 of a filing to a question about margin trends.</p></article><article class="tm" id="backpropagation" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Backpropagation</h4><span class="pill g-sea-p">ML</span></div>
+            <p>The process by which a neural network learns from its errors. The model works backward through the network to identify which parts contributed to a mistake and adjusts the weights accordingly. This is repeated across millions of examples during training until the model produces accurate predictions consistently.</p></article><article class="tm" id="context-window" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Context Window</h4><span class="pill g-sea-p">LLM</span></div>
+            <p>The amount of text an AI model can process in a single interaction, including the prompt, retrieved documents, and the response. Everything the model sees must fit within this limit. A larger context window allows longer filings, but the attention mechanism scales quadratically, so doubling the window roughly quadruples compute cost.</p></article><article class="tm" id="embeddings" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Embeddings</h4><span class="pill g-sea-p">ML</span></div>
+            <p>Numerical representations of text where similar concepts are mapped to nearby points in a high-dimensional space. Embeddings allow a model to recognize that “revenue growth” and “top-line expansion” are related even though the words differ. Pascal uses embeddings to index filings and transcripts so agents can retrieve relevant passages based on semantic meaning rather than keyword matching.</p></article><article class="tm" id="fine-tuning" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Fine-Tuning</h4><span class="pill g-sea-p">ML</span></div>
+            <p>The process of further training a pre-trained model on a specific dataset to adapt its behavior for a particular domain or task. In finance, fine-tuning could mean training a model on investment research reports so it produces outputs in a particular house style. Fine-tuning changes the model's internal weights, which differs from RAG, which retrieves external documents at query time without changing the model.</p></article><article class="tm" id="foundation-model" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Foundation Model</h4><span class="pill g-sea-p">ML</span></div>
+            <p>A large-scale AI model trained on vast amounts of broad data that can be adapted to perform a wide variety of downstream tasks. Foundation models serve as the base layer for applications like text generation, summarization, and analysis. GPT-4, Claude, and Gemini are examples of foundation models that Pascal's agents use as their reasoning engine.</p></article><article class="tm" id="inference" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Inference</h4><span class="pill g-sea-p">ML</span></div>
+            <p>The process of a trained model producing an output when given new input. When you ask a model to summarize an earnings call, that is inference. Training builds the model. Inference is using it. The speed and cost of inference matter for finance workflows where teams run many queries across large document sets.</p></article><article class="tm" id="loss-function" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Loss Function</h4><span class="pill g-sea-p">ML</span></div>
+            <p>A mathematical measure of how far a model's prediction is from the correct answer. During training, the model adjusts its parameters to minimize the loss function. A lower loss means the model is producing more accurate predictions. Loss functions are how the model knows it is improving.</p></article><article class="tm" id="machine-learning" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Machine Learning</h4><span class="pill g-sea-p">ML</span></div>
+            <p>A branch of AI that enables computers to learn patterns from data without being explicitly programmed with rules. The model identifies relationships in the training data and applies them to new data. Machine learning powers recommendation engines, fraud detection, and the foundation models that underpin modern AI agents.</p></article><article class="tm" id="natural-language-processing" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Natural Language Processing</h4><span class="pill g-sea-p">NLP</span></div>
+            <p>A field of AI focused on enabling computers to understand, interpret, and generate human language. NLP powers text summarization, sentiment analysis, and entity recognition. In finance, NLP allows a model to read an earnings call transcript, identify the key topics discussed, and extract the relevant financial metrics mentioned by management.</p></article><article class="tm" id="parameters" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Parameters</h4><span class="pill g-sea-p">ML</span></div>
+            <p>The internal weights a model adjusts during training to make accurate predictions. A model with 70 billion parameters has 70 billion adjustable values that determine how it maps inputs to outputs. More parameters generally allow a model to capture more complex patterns, but also require more compute and memory to run.</p></article><article class="tm" id="temperature" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Temperature</h4><span class="pill g-sea-p">LLM</span></div>
+            <p>A setting that controls how much randomness a model introduces when generating text. A temperature of zero makes the model deterministic, always choosing the next token with the highest probability. Higher temperatures introduce more variability. In finance, low temperature is preferred for tasks like data extraction and numerical analysis where consistency matters.</p></article><article class="tm" id="token" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Token</h4><span class="pill g-sea-p">LLM</span></div>
+            <p>A chunk of text that a language model processes. A token can be a whole word, part of a word, or a single character. English words typically average 1.3 tokens. Tokenization determines how much text fits in a context window and how much it costs to run a query, because model providers charge per token processed.</p></article><article class="tm" id="training-data" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Training Data</h4><span class="pill g-sea-p">ML</span></div>
+            <p>The text, images, or other inputs a model learns from during training. The quality, diversity, and size of training data determine what a model can do. A model trained on financial filings will be better at understanding financial language than one trained on general web text, though foundation models are trained on broad data and then adapted through prompting or fine-tuning.</p></article><article class="tm" id="transformer" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Transformer</h4><span class="pill g-sea-p">ML</span></div>
+            <p>A neural network architecture that uses attention mechanisms to process input. Transformers reshaped AI because they can handle long sequences of text efficiently. GPT, Claude, and Gemini are all transformer-based models. The transformer architecture is what allows a model to read an entire earnings transcript and connect a comment from the opening remarks to a question asked 40 minutes later.</p></article></div>
+      </section><section class="sx" id="core-ai-agents" aria-labelledby="core-ai-agents-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="core-ai-agents-h">Core AI &amp; Agents</h3><p class="sx-s">Systems that reason, plan, act and adapt. 10 terms.</p></div></div>
+        <div class="tms"><article class="tm" id="agentic-ai" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Agentic AI</h4><span class="pill g-cream-p">AI</span></div>
+            <p>AI systems that can set or interpret goals, plan actions, use tools, and adapt based on feedback to complete tasks. In finance, agentic AI refers to agents that can screen a company universe, extract data from filings, and produce a research memo without manual intervention at each step. Pascal's three agents (Generative Matrix, KPI Extractor, Research Memo Generator) are examples of agentic AI built for investment research.</p></article><article class="tm" id="ai-agent" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>AI Agent</h4><span class="pill g-cream-p">AI</span></div>
+            <p>A software system that uses a language model as its reasoning engine to pursue a goal through multiple steps. An agent receives a goal, decides what to do, takes actions like searching filings or extracting data, observes results, and repeats until the goal is met. This differs from a chatbot, which responds to a single question and stops.</p></article><article class="tm" id="extraction-agent" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Extraction Agent</h4><span class="pill g-cream-p">Finance</span></div>
+            <p>An AI agent designed to identify and pull structured data from unstructured documents like filings, presentations, and transcripts. Pascal's KPI Extractor is an example. It reads an annual report or earnings presentation, identifies tables and graphs, and returns the data in a structured format that can be exported to Excel.</p></article><article class="tm" id="generative-ai" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Generative AI</h4><span class="pill g-cream-p">AI</span></div>
+            <p>AI systems that produce new content like text, code, or images based on patterns learned from training data. In finance, generative AI can draft research memos, produce variance commentary, and summarize earnings calls. The output is generated, not retrieved, which is why verification against source data is essential.</p></article><article class="tm" id="hallucination" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Hallucination</h4><span class="pill g-cream-p">AI</span></div>
+            <p>An output where an AI model generates information that sounds plausible but is factually incorrect. In finance, this could mean inventing a revenue figure, fabricating a management quote, or citing a filing that does not contain the claimed data. Hallucinations are the primary reason every AI output requires verification against source data before it reaches a stakeholder.</p></article><article class="tm" id="harness" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Harness</h4><span class="pill g-cream-p">AI</span></div>
+            <p>The infrastructure layer that wraps a language model so it can be deployed as a usable product. A harness includes the APIs, data connectors, guardrails, prompt management, logging, and access controls that sit between the raw model and the end user. In finance, the harness is what turns a general-purpose model into a governed research tool. Pascal's harness includes the MCP Hub for data connectivity, role-based access controls, citation tracking, and the agent orchestration layer that routes tasks to the right agent. The quality of the harness determines whether outputs are auditable, whether data stays inside your governance perimeter, and whether the system can be trusted for production use.</p></article><article class="tm" id="large-language-model-llm" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Large Language Model (LLM)</h4><span class="pill g-cream-p">AI</span></div>
+            <p>An AI system trained on vast amounts of text to predict the next token in a sequence. LLMs break text into tokens, learn patterns from training data, and generate responses by continuing the pattern. They power tools like ChatGPT, Claude, and Pascal AI's research agents. The quality of an LLM's output depends heavily on the context and structure provided in the prompt.</p></article><article class="tm" id="multi-agent-system" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Multi-Agent System</h4><span class="pill g-cream-p">AI</span></div>
+            <p>A system where multiple AI agents collaborate on a task, each handling a specific role. One agent might retrieve documents, another extracts data, and a third synthesizes the findings into a report. Multi-agent systems are useful for complex workflows that require different types of expertise. An earnings workflow might use one agent to extract financials, another to compare guidance, and a third to generate a summary.</p></article><article class="tm" id="reasoning-model" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Reasoning Model</h4><span class="pill g-cream-p">AI</span></div>
+            <p>A type of AI model that breaks down complex problems into steps before producing an answer. Instead of generating a response immediately, it plans an approach, works through intermediate steps, and arrives at a conclusion. This makes it better at tasks requiring multi-step logic, such as evaluating whether a company is expanding margins while maintaining revenue growth across multiple periods.</p></article><article class="tm" id="react-loop" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>ReAct Loop</h4><span class="pill g-cream-p">AI</span></div>
+            <p>The cycle of reasoning, acting, and observing that an AI agent follows. The agent reasons about the current state, takes an action like searching a filing, observes what it found, and reasons again. This loop continues until the goal is met. The ReAct loop is what separates an agent that pursues a goal from a model that answers a single question.</p></article></div>
+      </section><section class="sx" id="retrieval-knowledge" aria-labelledby="retrieval-knowledge-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="retrieval-knowledge-h">Retrieval &amp; Knowledge</h3><p class="sx-s">Grounding answers in real source documents. 6 terms.</p></div></div>
+        <div class="tms"><article class="tm" id="chunking" data-item>
+            <span class="tm-bar g-deep"></span>
+            <div class="tm-h"><h4>Chunking</h4><span class="pill g-deep-p">RAG</span></div>
+            <p>The process of splitting long documents into smaller, searchable pieces so a retrieval system can find the relevant section without processing the entire document. A 200-page annual report might be chunked into paragraphs or sections, allowing a RAG system to retrieve only the passages about revenue segmentation rather than feeding the whole filing into the model.</p></article><article class="tm" id="graphrag" data-item>
+            <span class="tm-bar g-deep"></span>
+            <div class="tm-h"><h4>GraphRAG</h4><span class="pill g-deep-p">RAG</span></div>
+            <p>A technique that combines knowledge graphs with retrieval-augmented generation. Instead of retrieving text chunks from a vector database, GraphRAG retrieves connected entities and relationships from a knowledge graph. This is useful in finance for answering questions about how companies, executives, and sectors connect. Pascal builds a persistent knowledge graph across every document your team touches.</p></article><article class="tm" id="knowledge-graph" data-item>
+            <span class="tm-bar g-deep"></span>
+            <div class="tm-h"><h4>Knowledge Graph</h4><span class="pill g-deep-p">Finance</span></div>
+            <p>A structured representation of information where entities are nodes and relationships are edges. A knowledge graph stores facts as connections, such as Company A competes with Company B, or Executive C previously worked at Company D. In finance, knowledge graphs support competitive analysis, supply chain mapping, and risk detection by revealing connections that are hard to see in text alone.</p></article><article class="tm" id="retrieval-augmented-generation-rag" data-item>
+            <span class="tm-bar g-deep"></span>
+            <div class="tm-h"><h4>Retrieval-Augmented Generation (RAG)</h4><span class="pill g-deep-p">RAG</span></div>
+            <p>A technique where an AI model retrieves relevant documents from a knowledge base before generating a response. Instead of relying only on its training data, the model pulls in external information, grounds its answer in that information, and cites the source. RAG is how Pascal's agents produce outputs that reference actual filings rather than generating from memory.</p></article><article class="tm" id="retrieval" data-item>
+            <span class="tm-bar g-deep"></span>
+            <div class="tm-h"><h4>Retrieval</h4><span class="pill g-deep-p">RAG</span></div>
+            <p>The process of finding and pulling relevant information from a knowledge base before the model generates a response. In a RAG system, retrieval determines which passages from which filings or documents are fed into the model. The quality of retrieval directly affects the quality of the output, because the model can only work with what it retrieves.</p></article><article class="tm" id="vector-database" data-item>
+            <span class="tm-bar g-deep"></span>
+            <div class="tm-h"><h4>Vector Database</h4><span class="pill g-deep-p">RAG</span></div>
+            <p>A system that stores embeddings and retrieves them based on semantic similarity. When you search for “margin expansion,” a vector database finds passages discussing “profitability improvements” because the embeddings for those phrases are close in vector space. Vector databases are a core component of RAG systems, allowing agents to find relevant information based on meaning rather than keyword matching.</p></article></div>
+      </section><section class="sx" id="prompting" aria-labelledby="prompting-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="prompting-h">Prompting</h3><p class="sx-s">Getting useful, reliable output from a model. 2 terms.</p></div></div>
+        <div class="tms"><article class="tm" id="chain-of-thought-prompting" data-item>
+            <span class="tm-bar g-teal"></span>
+            <div class="tm-h"><h4>Chain-of-Thought Prompting</h4><span class="pill g-teal-p">Prompting</span></div>
+            <p>A prompting technique that asks the model to show its reasoning step by step, separating assumptions, logic, and conclusions. In finance, this means asking a model to state which data it used, what calculation it performed, and how it arrived at a conclusion before presenting the final number. This makes errors easier to catch and outputs easier to verify.</p></article><article class="tm" id="prompt-engineering" data-item>
+            <span class="tm-bar g-teal"></span>
+            <div class="tm-h"><h4>Prompt Engineering</h4><span class="pill g-teal-p">Prompting</span></div>
+            <p>The practice of structuring instructions given to an AI model to produce useful outputs. Effective prompts include a role, a specific task, relevant context, the data to work from, the desired output format, and constraints. In finance, company-specific context is what separates a useful output from a generic one.</p></article></div>
+      </section><section class="sx" id="integration-platform" aria-labelledby="integration-platform-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="integration-platform-h">Integration &amp; Platform</h3><p class="sx-s">Connecting models to your data and tools. 2 terms.</p></div></div>
+        <div class="tms"><article class="tm" id="model-context-protocol-mcp" data-item>
+            <span class="tm-bar g-mint"></span>
+            <div class="tm-h"><h4>Model Context Protocol (MCP)</h4><span class="pill g-mint-p">Integration</span></div>
+            <p>An open standard that defines how AI models connect to external data sources and tools. MCP provides a common interface so an AI model can retrieve information from databases, file systems, and APIs without requiring a custom integration for each source. Pascal is MCP-native, connecting to Bloomberg, Capital IQ, Snowflake, SharePoint, and your CRM through one MCP Hub.</p></article><article class="tm" id="mcp-hub" data-item>
+            <span class="tm-bar g-mint"></span>
+            <div class="tm-h"><h4>MCP Hub</h4><span class="pill g-mint-p">Pascal</span></div>
+            <p>Pascal's centralized connector layer that uses the Model Context Protocol to link AI agents to your existing data providers. Instead of building custom pipelines for each data source, the MCP Hub provides a single interface through which Pascal's agents can pull from Bloomberg, Capital IQ, FactSet, Snowflake, SharePoint, and your CRM. Citations trace back to the source line regardless of where the data originated.</p></article></div>
+      </section><section class="sx" id="finance-governance" aria-labelledby="finance-governance-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="finance-governance-h">Finance &amp; Governance</h3><p class="sx-s">Trust, control and auditability in finance. 5 terms.</p></div></div>
+        <div class="tms"><article class="tm" id="citation-trail" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Citation Trail</h4><span class="pill g-sea-p">Finance</span></div>
+            <p>A record linking each claim or number in an AI output back to the specific source document and line it came from. Citation trails are essential in finance because they make outputs auditable. Pascal builds citation trails into every agent output, so you can verify that a revenue figure came from page 47 of the 10-K, not from the model's training data.</p></article><article class="tm" id="data-sovereignty" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Data Sovereignty</h4><span class="pill g-sea-p">Security</span></div>
+            <p>The principle that sensitive financial data remains under your organization's control and within your governance perimeter. For institutional finance teams, data sovereignty means AI tools run inside your VPC or on-premises rather than sending data to external consumer services. Pascal is designed around this principle, running inside your governance perimeter with role-based access controls.</p></article><article class="tm" id="enterprise-ai" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Enterprise AI</h4><span class="pill g-sea-p">Security</span></div>
+            <p>AI systems deployed within an organization's infrastructure with enterprise-grade controls including data governance, role-based access, audit logging, and compliance frameworks. Enterprise AI differs from consumer AI tools in that data is not shared with the model provider for training and access is governed by the organization's own policies.</p></article><article class="tm" id="verification" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Verification</h4><span class="pill g-sea-p">Finance</span></div>
+            <p>The process of checking every AI output against source data before it informs a decision. In finance, verification means confirming that numbers match filings, tracing claims to their origin, and validating the logic behind conclusions. Verification is not optional, even when the output looks correct. Citation trails make verification faster by pointing directly to the source line for each claim.</p></article><article class="tm" id="workflow" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Workflow</h4><span class="pill g-sea-p">Finance</span></div>
+            <p>A sequence of connected tasks used to complete a broader process. In finance, an earnings workflow might use one agent to extract financials, another to compare guidance, and a third to generate a summary. An agent can be a building block inside a larger workflow. A good workflow has a defined task, the right inputs, a structured process, and an output that fits into the work that follows.</p></article></div>
+      </section>
+        <p class="ac-empty" hidden>No term matches that search.</p>
+      </div>
+    </div>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What is the Pascal AI glossary?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The Pascal AI glossary is a finance-focused reference of AI terms designed for investment teams. It covers terms relevant to institutional finance, from agentic AI and retrieval-augmented generation to knowledge graphs, the Model Context Protocol, and the specific agents Pascal offers for company screening, KPI extraction, and research memo generation.</div></details>
+<details class="faq-item"><summary>What is Pascal AI and what does it do?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal AI is an institutional finance platform that provides AI agents for investment research. It runs inside your governance perimeter with role-based access controls and citation trails on every output. Pascal offers the Generative Matrix for company screening, the KPI Extractor for pulling data from filings, and the Research Memo Generator for producing structured reports from templates.</div></details>
+<details class="faq-item"><summary>How does Pascal AI use RAG for financial research?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal AI uses retrieval-augmented generation to ground every output in source documents. When you ask a question about a company, Pascal retrieves relevant passages from filings, transcripts, and your internal research, then synthesizes an answer with citations tracing back to the source line. This reduces hallucinations and makes outputs auditable.</div></details>
+<details class="faq-item"><summary>What is the Model Context Protocol and how does Pascal use it?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The Model Context Protocol is an open standard for connecting AI models to external data sources. Pascal is MCP-native, meaning its agents connect to Bloomberg, Capital IQ, Snowflake, SharePoint, and your CRM through one MCP Hub. This eliminates custom data pipelines and lets agents pull from all your data sources through a consistent interface.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">Ask your first question with your firm's context.<br><span style="color:var(--mint-2)">A walkthrough with your own documents connected.</span></h2>
+  <div class="actions">
+    <a class="btn btn-white" href="https://pascalailabs.com/demo">Book a demo</a>
+  </div>
+</section>
+
+<script src="/assets/pages/academy3.js?v=4f48f13d9f" defer></script>
+</main>
+<footer class="footer">
+  <div class="frame">
+    <div class="footer-grid">
+      <div>
+        <a href="/" aria-label="Pascal AI home"><img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24" loading="lazy"></a>
+        <p class="footer-blurb">The Investment OS for asset and wealth managers, asset servicers, corporate treasury, banks and financial institutions, private equity and private credit firms, and hedge funds.</p>
+      </div>
+      <nav aria-label="Platform">
+        <p class="fh">Platform</p>
+        <ul>
+          <li><a href="/platform">Platform overview</a></li>
+          <li><a href="/platform/context-graph">Context graph &amp; memory</a></li>
+          <li><a href="/platform/mcp-apis">MCP &amp; APIs</a></li>
+          <li><a href="/solutions/ai-transformation">AI transformation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Products">
+        <p class="fh">Products</p>
+        <ul>
+          <li><a href="/ask-pascal">Ask Pascal</a></li>
+          <li><a href="/ask-pascal/cited-research">Cited research</a></li>
+          <li><a href="/ask-pascal/screeners">Screeners</a></li>
+          <li><a href="/pascal-agents">Pascal Agents</a></li>
+          <li><a href="/pascal-agents/workflow-library">Workflow library</a></li>
+          <li><a href="/pascal-agents/data-agent">Pascal Data Agent</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Industries">
+        <p class="fh">Industries</p>
+        <ul>
+          <li><a href="/solutions/hedge-funds">Hedge Funds</a></li>
+          <li><a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a></li>
+          <li><a href="/solutions/banking">Banks &amp; Financial Institutions</a></li>
+          <li><a href="/solutions/asset-servicing">Asset Servicing</a></li>
+          <li><a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a></li>
+          <li><a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="News">
+        <p class="fh">News</p>
+        <ul>
+          <li><a href="/news">Newsroom</a></li>
+          <li><a href="/news/founders-notes">Founder's notes</a></li>
+          <li><a href="https://vibhavviswanathan.substack.com" rel="noopener">Alpha &amp; Agents</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="fh">Company</p>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/security">Security</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/pascal-academy">Pascal Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pascal AI Labs</span>
+      <span><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms-of-use">Terms</a> &middot; <a href="https://www.linkedin.com/company/pascal-ai-labs/" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/pascalailabs" rel="noopener">X</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

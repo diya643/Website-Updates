@@ -1,0 +1,199 @@
+<!--meta
+{
+ "path": "/pascal-academy/guides/ai-hallucinations",
+ "title": "AI Hallucinations Explained | Pascal Academy",
+ "description": "A guide to AI hallucinations for finance teams: why models hallucinate, how to detect it, and the techniques that reduce it in investment research.",
+ "crumbs": [
+  [
+   "Pascal Academy",
+   "/pascal-academy"
+  ],
+  [
+   "AI fundamentals",
+   "/pascal-academy/ai-fundamentals"
+  ],
+  [
+   "Hallucinations",
+   "/pascal-academy/guides/ai-hallucinations"
+  ]
+ ],
+ "schema": "article",
+ "name": "Hallucinations",
+ "og_kicker": "Pascal Academy",
+ "og_title": "Hallucinations",
+ "llms": "A guide to AI hallucinations for finance teams: why models hallucinate, how to detect it, and the techniques that reduce it in investment research.",
+ "css": [
+  "academy3.css"
+ ],
+ "word_limit": 3913,
+ "faq_min": 4,
+ "lead_min": 8,
+ "lead_max": 60,
+ "priority": 0.7,
+ "updated": "2026-08-01"
+}
+-->
+<div class="ac ac-doc">
+<div class="rp" aria-hidden="true"><i></i></div>
+<div class="frame">
+  <header class="ah">
+    <div class="ah-l">
+      {{crumbs}}
+      <p class="ah-k">Last updated August 2026</p>
+      <h1 class="ah-t">Hallucinations</h1>
+      <p class="lead">Why language models make things up, what causes confident but wrong output, and the techniques that reduce it.</p>
+      <p class="ah-m">12 min read · Beginner-friendly with advanced sections</p>
+      <div class="ah-by"><span class="ah-av"><img src="/assets/favicon.svg" alt="" width="40" height="40"></span><span><b>Pascal Academy</b><span>AI fundamentals · Part 7 of 10</span></span></div>
+      <div class="ah-a"><button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button></div>
+    </div>
+    <div class="ah-r"><div class="th th-hero" aria-hidden="true"><div class="th-bz"><div class="th-scr g-sea"><div class="tcs"><span class="tc tc-0">{{icon:alert}}<b>Knowledge gaps</b></span><span class="tc tc-1">{{icon:repeat}}<b>Pattern completion</b></span><span class="tc tc-2">{{icon:database}}<b>Training data errors</b></span></div></div></div></div></div>
+  </header>
+  <div class="ag">
+    <aside class="toc" aria-label="Table of contents">
+      <div class="toc-in">
+        <p class="toc-h">Table of contents</p>
+        <div class="toc-track"><span class="toc-fill"></span><ol data-spy><li><a href="#what-is-hallucination">What Is Hallucination?</a></li><li><a href="#why-hallucination-happens">Why Hallucination Happens</a></li><li><a href="#types-of-hallucination">Types of Hallucination</a></li><li><a href="#what-makes-hallucination-worse">What Makes Hallucination Worse</a></li><li><a href="#reducing-hallucination">Reducing Hallucination</a></li><li><a href="#measuring-hallucination">Measuring Hallucination</a></li><li><a href="#hallucination-in-practice">Hallucination in Practice</a></li><li><a href="#the-future-of-hallucination">The Future of Hallucination</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></div>
+        <div class="toc-cta">
+          <p class="toc-cta-t">Take this guide with you.</p>
+          <p>Get the PDF in your inbox.</p>
+          <button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button>
+        </div>
+      </div>
+    </aside>
+    <article class="ac-prose" id="article">
+      <details class="toc-m"><summary>Table of contents</summary><ol><li><a href="#what-is-hallucination">What Is Hallucination?</a></li><li><a href="#why-hallucination-happens">Why Hallucination Happens</a></li><li><a href="#types-of-hallucination">Types of Hallucination</a></li><li><a href="#what-makes-hallucination-worse">What Makes Hallucination Worse</a></li><li><a href="#reducing-hallucination">Reducing Hallucination</a></li><li><a href="#measuring-hallucination">Measuring Hallucination</a></li><li><a href="#hallucination-in-practice">Hallucination in Practice</a></li><li><a href="#the-future-of-hallucination">The Future of Hallucination</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<section class="ac-sec" id="what-is-hallucination" aria-labelledby="what-is-hallucination-h"><h2 id="what-is-hallucination-h">What Is Hallucination?</h2>
+<p>In the first guide, we established that a language model is a probability engine. It predicts the next token based on patterns learned from training data. The model does not know whether a statement is true. It knows whether the statement looks like text it has seen before. These two things are different, and the gap between them is where hallucination lives.</p>
+<p>A hallucination is a statement produced by a language model that sounds plausible and specific but is factually wrong. The model might cite a research paper that does not exist, attribute a quote to the wrong person, invent a historical event, or describe an API method that was never part of the library. The output reads fluently because the model is good at producing text that looks like real text. The problem is that looking real and being real are not the same thing.</p>
+<p>The term hallucination is borrowed from psychology, where it refers to perceiving something that is not there. In the LLM context, the model generates information that has no grounding in reality or in its training data. The model is not lying. Lying requires intent, and a language model has no intent. It is doing exactly what it was trained to do, which is to produce the most likely next token given the context. Sometimes the most likely token sequence is factually incorrect.</p>
+<aside class="ac-co ac-co-principle"><p class="ac-co-lab"><span class="ac-co-ic">{{icon:target}}</span>Key principle</p><div class="ac-co-body"><p>Hallucination is a feature of how language models work, not a bug. The same mechanism that lets a model write fluent prose also lets it produce fluent fiction. The model cannot tell the difference between generating a correct fact and generating a plausible sentence. Reducing hallucination means giving the model external grounding so it does not have to rely on its own internal probabilities.</p></div></aside>
+</section>
+<section class="ac-sec" id="why-hallucination-happens" aria-labelledby="why-hallucination-happens-h"><h2 id="why-hallucination-happens-h">Why Hallucination Happens</h2>
+<p>To understand why models hallucinate, it helps to revisit how they generate text. A language model is trained to predict the next token in a sequence. During training, the model sees billions of sentences and learns the statistical patterns of language. It learns that the word Paris frequently appears near the word France, that the word CEO appears near company names, and that academic citations follow a specific format.</p>
+<p>When you ask the model a question, it generates a response token by token. Each token is the one the model considers most likely given the context so far. If the model has strong training signal for the question, the likely tokens happen to also be the correct ones. If the training signal is weak or conflicting, the model still generates the most likely token, but that token may not correspond to a real fact.</p>
+<h3 id="knowledge-gaps">Knowledge Gaps</h3>
+<p>The model's training data has gaps. It does not contain every fact about every topic. When you ask about something the model has rarely or never seen during training, it has weak signal to work from. The model still produces output because that is what it does, but the output is based on patterns from adjacent topics rather than on actual knowledge of the subject.</p>
+<h3 id="pattern-completion">Pattern Completion</h3>
+<p>Language models are pattern completers. If the beginning of a sentence looks like a known pattern, the model completes it with the most likely continuation. Consider the pattern of an academic citation. A model that has seen millions of citations knows the format well. If you ask it for a paper on a specific topic, it can produce a citation that looks perfect, with real-sounding author names, a plausible journal name, and a reasonable year. The citation is a pattern completion, not a retrieval of a real paper. The model has no mechanism to check whether the paper actually exists.</p>
+<h3 id="training-data-errors">Training Data Errors</h3>
+<p>The training data itself contains errors. The public internet has misinformation, outdated information, contradictory claims, and plain mistakes. A model trained on this data learns these errors along with correct information. When it generates text, it can reproduce the errors it learned, and it has no way to distinguish between what it learned correctly and what it learned incorrectly.</p>
+<h3 id="over-confidence">Over-Confidence</h3>
+<p>Language models are trained to be helpful and informative. This training can push them toward producing an answer even when they do not have enough information. A model that says I do not know in response to every uncertain question is less useful than one that attempts an answer. The trade-off is that attempting answers to questions the model cannot answer leads to hallucination. Alignment training, like RLHF, encourages models to be helpful, which can inadvertently encourage confident-sounding answers even when the model should express uncertainty.</p>
+</section>
+<section class="ac-sec" id="types-of-hallucination" aria-labelledby="types-of-hallucination-h"><h2 id="types-of-hallucination-h">Types of Hallucination</h2>
+<p>Hallucinations come in several forms. Understanding the type helps in choosing the right mitigation.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic">{{icon:book-open}}</span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's LLM evaluation course covers hallucination detection, factuality benchmarking, and production monitoring. Reach out to learn about cohort programmes for your engineering team.</p><p><a class="ac-co-link" href="/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Type</th><th>Description and Example</th></tr></thead><tbody><tr><td>Factuality hallucination</td><td>The model states a fact that is demonstrably wrong. For example, claiming that Marie Curie won the Nobel Prize in Mathematics, a prize that does not exist. The statement is fluent and specific but has no basis in reality.</td></tr><tr><td>Fabricated source</td><td>The model invents a citation, reference, or link. For example, generating a paper title like Smith, J. (2023). Effects of Temperature on LLM Performance. Journal of AI Research, 45(3), 112-128. The format is correct but the paper does not exist.</td></tr><tr><td>Attribute error</td><td>The model assigns an action or quote to the wrong entity. For example, attributing a quote by Einstein to Newton, or saying a company was founded by the wrong person. Both entities are real, but the relationship between them is fabricated.</td></tr><tr><td>Contextual hallucination</td><td>The model contradicts information it was given in the prompt or in retrieved documents. For example, a RAG system retrieves a document stating the refund window is 30 days, but the model says 60 days. The correct information was available but the model ignored or overrode it.</td></tr><tr><td>Numerical hallucination</td><td>The model produces wrong numbers, dates, or statistics. For example, stating a population of 12 million for a city of 8 million, or giving a product price that does not match the catalogue.</td></tr></tbody></table></div>
+</section>
+<section class="ac-sec" id="what-makes-hallucination-worse" aria-labelledby="what-makes-hallucination-worse-h"><h2 id="what-makes-hallucination-worse-h">What Makes Hallucination Worse</h2>
+<p>Several factors increase the likelihood and severity of hallucination. Being aware of these helps in designing systems that minimise the risk.</p>
+<h3 id="high-temperature">High Temperature</h3>
+<p>Temperature controls how random the model's token selection is. A high temperature means the model picks from a wider range of candidate tokens, including less likely ones. This increases creativity, which is useful for brainstorming or creative writing, but it also increases the chance that the model picks a token that leads away from a factual answer. For factual tasks, a low temperature reduces hallucination by keeping the model close to its highest-probability, and usually most accurate, tokens.</p>
+<h3 id="ambiguous-or-leading-prompts">Ambiguous or Leading Prompts</h3>
+<p>The way a question is phrased affects the model's output. A prompt that assumes a false premise can lead the model to produce elaborate answers built on that false premise. If you ask a model to explain why Abraham Lincoln resigned from the presidency, the model may comply with an explanation even though Lincoln never resigned. The model follows the prompt's framing rather than correcting the assumption.</p>
+<h3 id="niche-or-obscure-topics">Niche or Obscure Topics</h3>
+<p>Hallucination is more common on topics that appear infrequently in training data. A model can answer common questions about world capitals or basic physics with high accuracy because these topics are well-represented in training data. Ask the same model about a specific provision in an obscure regulation, and it may hallucinate because it has very little relevant training signal.</p>
+<h3 id="long-context-with-many-entities">Long Context with Many Entities</h3>
+<p>When the context contains many entities, dates, and relationships, the model can conflate details. As covered in the context windows guide, the lost-in-the-middle effect means the model pays less attention to information in the middle of long inputs. A model processing a 50-page document may correctly recall facts from the first and last pages but fabricate details from page 27.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic">{{icon:layers}}</span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>The confidence-accuracy gap</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev">{{icon:chevron-down}}</span></summary><div class="ac-co-body"><p>A language model's output does not carry a reliable confidence score. When the model says something, it sounds equally confident whether the statement is a well-established fact or a complete fabrication. This is because the model's training optimises for fluent text generation, not for calibrated uncertainty. Some research approaches attempt to extract confidence estimates from the model's token probabilities, asking the model to generate multiple answers and measuring agreement, or training the model to express uncertainty in words. These approaches help but do not fully solve the problem. The model can be confidently wrong, and no amount of probability extraction can tell you whether a specific factual claim is correct without external verification.</p></div></details>
+</section>
+<section class="ac-sec" id="reducing-hallucination" aria-labelledby="reducing-hallucination-h"><h2 id="reducing-hallucination-h">Reducing Hallucination</h2>
+<p>No single technique eliminates hallucination. Production systems use a combination of approaches, each addressing a different cause.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic">{{icon:book-open}}</span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's RAG engineering and prompt engineering courses cover hallucination mitigation in depth, including grounding patterns, output validation, and evaluation frameworks. Reach out to learn about team training options.</p><p><a class="ac-co-link" href="/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Technique</th><th>How It Reduces Hallucination</th></tr></thead><tbody><tr><td>RAG</td><td>Retrieves external documents so the model extracts answers from text rather than relying on training-data memory.</td></tr><tr><td>Prompt engineering</td><td>Instructs the model to ground answers in provided context and to say it does not know when information is missing.</td></tr><tr><td>Knowledge graphs (GraphRAG)</td><td>Provides structured, verified relationships for the model to reason over, with traceable sources.</td></tr><tr><td>Low temperature</td><td>Keeps token selection close to the model's highest-probability predictions, reducing random deviations into fabrication.</td></tr><tr><td>Output validation</td><td>Checks generated output against external sources and blocks or flags responses containing unverified claims.</td></tr><tr><td>Chain-of-thought</td><td>Asks the model to show reasoning steps, making errors visible and sometimes triggering self-correction.</td></tr><tr><td>Multiple sampling</td><td>Generates several answers and compares them. High agreement suggests confidence. Disagreement signals uncertainty.</td></tr></tbody></table></div>
+<h3 id="retrieval-augmented-generation-rag">Retrieval-Augmented Generation (RAG)</h3>
+<p>RAG is the single most effective tool against hallucination. Instead of asking the model to answer from its training data, you retrieve relevant documents and include them in the prompt. The model then extracts and synthesises information from those documents rather than generating from memory. As covered in the RAG guide, this changes the task from recall to extraction, and extraction is something language models do well.</p>
+<p>RAG does not eliminate hallucination entirely. The model can still misread a retrieved document or invent information when the document does not contain the answer. But the risk is lower because the model has concrete text to anchor its response to, and you can instruct it to say it does not know when the retrieved documents lack the answer.</p>
+<h3 id="prompt-engineering">Prompt Engineering</h3>
+<p>The way you phrase instructions affects hallucination. Telling the model to answer only based on the provided documents, and to say it does not know when the documents do not contain the answer, reduces fabricated responses. Adding an instruction like if you are not sure, say you do not know rather than guessing gives the model permission to express uncertainty.</p>
+<p>Asking the model to show its reasoning, through chain-of-thought prompting, can also help. When the model writes out its reasoning steps, errors become visible and the model sometimes corrects itself mid-generation. This is more effective for reasoning tasks than for factual recall.</p>
+<h3 id="knowledge-graphs-and-grounding">Knowledge Graphs and Grounding</h3>
+<p>As covered in the knowledge graphs guide, GraphRAG provides structured relationship data that the model can reason over. When the model has access to a knowledge graph that encodes verified facts and their sources, it can ground its answers in those relationships rather than in its training data. This is particularly useful for questions that require multi-hop reasoning across entities, where the model's internal knowledge is likely to be incomplete or wrong.</p>
+<h3 id="output-validation-and-guardrails">Output Validation and Guardrails</h3>
+<p>Post-generation validation checks the model's output against external sources before presenting it to the user. A validation layer can check whether cited papers exist, whether numbers match a database, and whether claims are consistent with known facts. When the validation layer detects a problem, it can block the response, ask the model to regenerate, or flag the response for human review.</p>
+<p>Guardrails are rules that constrain the model's behaviour. They can prevent the model from generating content on certain topics, from making specific types of claims, or from producing output that violates safety guidelines. Guardrails do not prevent hallucination directly, but they limit the damage by catching problematic output before it reaches the user.</p>
+</section>
+<section class="ac-sec" id="measuring-hallucination" aria-labelledby="measuring-hallucination-h"><h2 id="measuring-hallucination-h">Measuring Hallucination</h2>
+<p>You cannot reduce what you cannot measure. Evaluating hallucination requires a test set of questions with known correct answers, and a method for checking whether the model's responses match those answers.</p>
+<h3 id="human-evaluation">Human Evaluation</h3>
+<p>The gold standard is human review. A domain expert reads the model's responses and checks each factual claim against a trusted source. This is accurate but expensive and slow, making it impractical for continuous evaluation at scale.</p>
+<h3 id="llm-as-a-judge">LLM-as-a-Judge</h3>
+<p>A common approach is to use a separate, stronger language model to evaluate the output of the model being tested. The judge model is given the question, the model's response, and the ground truth answer, and asked to determine whether the response is factually correct. This scales better than human evaluation and correlates reasonably well with human judgments, but it introduces its own biases. The judge model can hallucinate when evaluating hallucination.</p>
+<h3 id="factuality-benchmarks">Factuality Benchmarks</h3>
+<p>Several benchmarks exist for measuring factuality. These include datasets of questions with verified answers, where the model's responses are automatically checked for correctness. Examples include TruthfulQA, which tests whether models resist common misconceptions, and FActScore, which breaks down responses into individual atomic facts and checks each one. These benchmarks give a rough sense of a model's tendency to hallucinate, but they cover a narrow range of topics and may not reflect performance on your specific domain.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic">{{icon:layers}}</span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>Why evaluation is hard</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev">{{icon:chevron-down}}</span></summary><div class="ac-co-body"><p>Hallucination evaluation is hard because correctness is not always binary. A response can be partially correct, correct in spirit but wrong in detail, or correct on the main point but wrong on a supporting claim. Automated evaluators struggle with these nuances. A response that says the refund window is 30 days is wrong if the actual window is 14 days, but an LLM-as-a-judge might rate it as close enough. The granularity of evaluation matters. Checking whether the response answers the question at all is easier than checking every factual claim within it. Production systems often combine automated evaluation for scale with periodic human review for calibration.</p></div></details>
+</section>
+<section class="ac-sec" id="hallucination-in-practice" aria-labelledby="hallucination-in-practice-h"><h2 id="hallucination-in-practice-h">Hallucination in Practice</h2>
+<p>The practical impact of hallucination depends on the application. For a creative writing tool, hallucination is part of the feature. For a medical chatbot, it can be dangerous. For a legal research assistant, it can lead to professional liability.</p>
+<h3 id="high-stakes-applications">High-Stakes Applications</h3>
+<p>In healthcare, finance, and legal applications, hallucination carries real consequences. A model that invents a drug interaction, fabricates a regulatory requirement, or cites a non-existent legal precedent can cause harm that no disclaimer fully addresses. These applications require the strongest mitigations, including RAG with verified sources, output validation against authoritative databases, human-in-the-loop review for critical decisions, and clear disclaimers about the limitations of AI-generated content.</p>
+<h3 id="low-stakes-applications">Low-Stakes Applications</h3>
+<p>For content generation, brainstorming, and casual Q and A, hallucination is less critical. A model that suggests a creative plot twist that does not make historical sense is not going to harm anyone. The appropriate response is to calibrate the level of mitigation to the stakes of the application, rather than applying the same heavy-handed safeguards everywhere.</p>
+<h3 id="user-trust">User Trust</h3>
+<p>Hallucination erodes user trust. When a user catches a model stating something confidently that is wrong, they begin to distrust all of its output, including the parts that are correct. This is particularly damaging for enterprise applications where the model is supposed to be a reliable assistant. Transparency about limitations, citation of sources, and clear marking of uncertainty help maintain trust even when the model occasionally makes mistakes.</p>
+</section>
+<section class="ac-sec" id="the-future-of-hallucination" aria-labelledby="the-future-of-hallucination-h"><h2 id="the-future-of-hallucination-h">The Future of Hallucination</h2>
+<p>Hallucination has been a known problem since the first large language models were deployed, and it remains unsolved in the general case. Progress has been made through RAG, grounding techniques, and better training methods, but no current model can guarantee factual accuracy on arbitrary questions.</p>
+<p>Reasoning models, covered in the next guide, offer a partial path forward. By spending more compute on thinking through a problem step by step, these models can catch some of their own errors before producing output. This helps with reasoning and mathematical errors but does not solve the fundamental problem of factual gaps in training data.</p>
+<p>Research is active on several fronts. Training methods that teach models to express calibrated uncertainty, architectures that separate factual recall from text generation, and retrieval systems that provide real-time fact-checking are all being explored. The most promising direction may be combining language models with external knowledge systems, like knowledge graphs and verified databases, so the model generates text and grounds it in structured, verifiable facts simultaneously.</p>
+<aside class="ac-co ac-co-summary"><p class="ac-co-lab"><span class="ac-co-ic">{{icon:list-checks}}</span>Summary</p><div class="ac-co-body"><p>Hallucination is the production of confident, fluent, and factually wrong statements by a language model. It happens because models generate text based on statistical patterns, not on verified knowledge. The model cannot distinguish between a plausible sentence and a true one. Hallucination is worse on obscure topics, with high temperature, and when prompts contain false premises. The main mitigations are RAG to ground answers in retrieved documents, prompt engineering to encourage uncertainty, knowledge graphs for structured grounding, low temperature for factual tasks, and output validation to catch errors before they reach the user. No single technique eliminates hallucination, and production systems combine multiple approaches. Measuring hallucination requires evaluation sets with known correct answers, and methods range from human review to automated factuality benchmarks. The stakes determine how much mitigation is needed, with healthcare, legal, and financial applications requiring the strongest safeguards.</p></div></aside>
+</section>
+<aside class="ac-about"><p class="ac-about-h">About this guide</p><p>This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, agents, context windows, knowledge graphs, hallucinations, reasoning models, embeddings, and MCP. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.</p><p>See how this works in Pascal: <a href="/ask-pascal/cited-research">cited research in Ask Pascal</a>.</p></aside>
+    </article>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What are AI hallucinations in finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Hallucinations are outputs where an AI model generates information that sounds plausible but is factually incorrect. In finance, this could mean a model inventing a revenue figure, fabricating a quote from an earnings call, or citing a filing that does not contain the claimed data. Hallucinations are the primary reason verification is essential.</div></details>
+<details class="faq-item"><summary>Why do AI models hallucinate?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Models hallucinate because they generate text by predicting the next likely token, not by looking up facts. When they lack specific information, they fill gaps with plausible-sounding content. Hallucinations are more common when prompts are vague, when the model lacks context, or when the question involves specific numbers or dates.</div></details>
+<details class="faq-item"><summary>How does Pascal reduce hallucinations in financial research?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal reduces hallucinations by grounding every output in source documents through retrieval-augmented generation. Instead of generating from training data alone, Pascal's agents pull from actual filings and your internal research. Every claim includes a citation tracing back to the source line, so you can verify accuracy before relying on the output.</div></details>
+<details class="faq-item"><summary>How can you detect and prevent AI hallucinations?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Detect hallucinations by checking every number against the source, tracing every claim to its origin, and verifying the reasoning. Prevent them by providing specific context in your prompts, using RAG to ground outputs in real documents, and building verification checkpoints into your workflow. Never present an AI output to a stakeholder without independent review.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kl" aria-labelledby="kl-h">
+    <h2 class="sx-t" id="kl-h">Keep learning</h2>
+    <div class="kl-g"><a class="gc" href="/pascal-academy/guides/reasoning-models"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-cream"><div class="tcs"><span class="tc tc-0">{{icon:route}}<b>Reasoning traces</b></span><span class="tc tc-1">{{icon:clock}}<b>Extended thinking</b></span><span class="tc tc-2">{{icon:calculator}}<b>Mathematics and logic</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 08</span><h3 class="gc-t">Reasoning models</h3><p class="gc-m">13 min read</p></div></a><a class="gc" href="/pascal-academy/guides/embeddings"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-deep"><div class="tcs"><span class="tc tc-0">{{icon:target}}<b>The geometry of meaning</b></span><span class="tc tc-1">{{icon:scale}}<b>Similarity metrics</b></span><span class="tc tc-2">{{icon:search}}<b>Semantic search</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 09</span><h3 class="gc-t">Embeddings</h3><p class="gc-m">13 min read</p></div></a><a class="gc" href="/guides/ai-for-hedge-funds"><div class="th" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-teal"><img src="/assets/shots/shot-agent-table.webp" alt="Pascal agent output: a street vs management framing table for Sea Limited with citations" width="1600" height="844" loading="lazy" decoding="async"></div></div></div><div class="gc-b"><span class="pill">Desk guide</span><h3 class="gc-t">AI for Hedge Funds</h3><p class="gc-m">24 min read</p></div></a></div>
+  </section>
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<!--#include demo-band title="Ask your first question with your firm's context." sub="A walkthrough with your own documents connected."-->
+<dialog class="ac-gate" id="pdf-gate" aria-labelledby="gate-h">
+  <div class="ac-gate-in">
+    <div class="ac-gate-side">
+      <p class="eyebrow">Pascal Academy · PDF</p>
+      <p class="ac-gate-t">Hallucinations</p>
+      <p class="ac-gate-m">12 min read</p>
+      <div class="ac-gate-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b><i></i><i></i></div>
+    </div>
+    <div class="ac-gate-main">
+      <button class="ac-gate-x" type="button" data-gate-close aria-label="Close">{{icon:close}}</button>
+      <form class="ac-gate-form" data-gate-form data-guide="Hallucinations" data-slug="ai-hallucinations" data-pdf="/assets/academy/pdf/ai-hallucinations.pdf" novalidate>
+        <h2 id="gate-h">Get this guide as a PDF</h2>
+        <p class="ac-gate-sub">Tell us where to send it and we will email you the PDF.</p>
+        <label>Full name<input name="name" autocomplete="name" required></label>
+        <label>Work email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Organization<input name="organization" autocomplete="organization" required></label>
+        <p class="ac-gate-err" role="alert" hidden></p>
+        <button class="btn btn-dark" type="submit">Email me the PDF</button>
+        <p class="ac-gate-fine">By submitting, you agree to be contacted about Pascal Academy.</p>
+      </form>
+      <div class="ac-gate-done" hidden>
+        <span class="ac-gate-ok">{{icon:check}}</span>
+        <h2>Check your inbox.</h2>
+        <p>We have sent <b>Hallucinations</b> to <span data-gate-email></span>.</p>
+        <button class="btn btn-line" type="button" data-gate-close>Back to the guide</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="/assets/pages/academy3.js" defer></script>

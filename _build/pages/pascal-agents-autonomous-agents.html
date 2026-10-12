@@ -1,0 +1,255 @@
+<!--meta
+{
+ "path": "/pascal-agents/autonomous-agents",
+ "title": "Autonomous AI Agents for Investment Work | Pascal AI",
+ "description": "Autonomous AI agents for investment research: Pascal plans the task, searches your memos, email and filings, checks the claims and delivers a cited brief.",
+ "crumbs": [["Pascal Agents", "/pascal-agents"], ["Autonomous execution", "/pascal-agents/autonomous-agents"]],
+ "schema": "software",
+ "name": "Pascal autonomous agents",
+ "og_kicker": "Pascal Agents · Autonomous execution",
+ "og_title": "Hand off the whole task. Get back finished work.",
+ "llms": "Pascal's autonomous agents run an investment research task end to end: they plan the work, search IC memos, email, Teams, expert calls, broker research and public filings, cross-check claims and deliver a cited document, on demand or on a schedule.",
+ "priority": 0.8,
+ "word_limit": 3000,
+ "lead_max": 120,
+ "css": ["autonomous-agents.css"]
+}
+-->
+<div class="frame pg-aa">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Autonomous agents</span></span>Hand off <span class="mute">the whole task.</span></h1>
+      <p class="lead">Give Pascal a task and its agents run it end to end: they plan the work, search your IC memos, email, Teams, expert calls and broker research alongside public sources, check what they find, and deliver a finished, cited document. You review the finished output while the agents do the legwork.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media">
+      <div class="panel fit"><!--mock--><div class="pui pui-wide aa-hero" role="img" aria-label="A Pascal agent running the Event Brief workflow for Sea, research in progress, with a Stop button. A plan panel lists Task, Plan, Search, Review and Deliver, with Search in progress. The step log shows: searched IC memos for the Sea Limited investment thesis, latest catalyst calendar and position review; searched emails for the upcoming earnings date, management impressions and IR catch-ups; reviewed Sea Limited Teams chat pinned messages on the upcoming earnings event; searched the expert call tool on Southeast Asia e-commerce, covering Shopee competition, TikTok Shop, Lazada and take rates; now searching filings and internal sources.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Event Brief · Sea</b></span><span class="pui-bar-r"><span class="pui-tag">Research in progress</span><span class="pui-chip aa-stop"><i aria-hidden="true"></i> Stop</span></span></div>
+    <div class="pui-body">
+      <!--#include pui-rail on_chat="" on_wf="on"-->
+      <div class="pui-split aa-hero-g">
+        <div class="pui-main">
+          <div class="pui-q">Run Event Brief workflow for Sea</div>
+          <div class="pui-tl aa-tl">
+            <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Searching</b> <span class="pui-tag">IC Memos</span></p><span class="pui-tl-m">0:02</span>
+              <div class="pui-tl-b"><p class="pui-sub">Sea Limited investment thesis, latest catalyst calendar, position review</p><div class="pui-schips aa-chips"><span class="pui-schip">{{logo:sharepoint}} Sea thesis.docx</span><span class="pui-schip">{{logo:sharepoint}} Position review</span></div></div></div>
+            <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Searching</b> <span class="pui-tag">Emails</span></p><span class="pui-tl-m">0:06</span>
+              <div class="pui-tl-b"><p class="pui-sub">Upcoming earnings date, management impressions, IR catch-ups</p><div class="pui-schips aa-chips"><span class="pui-schip">{{logo:outlook}} IR catch-up</span></div></div></div>
+            <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Reviewing</b> <span class="pui-schip">{{logo:teams}} Teams</span></p><span class="pui-tl-m">0:09</span>
+              <div class="pui-tl-b"><p class="pui-sub">Covering: Sea Limited Teams chat pinned messages on the upcoming earnings event</p></div></div>
+            <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Searching</b> <span class="pui-tag">Expert Call Tool</span></p><span class="pui-tl-m">0:14</span>
+              <div class="pui-tl-b"><p class="pui-sub">Southeast Asia e-commerce: Shopee competition, TikTok Shop, Lazada, take rates</p></div></div>
+            <div class="pui-tl-i aa-live"><span class="pui-tl-ic run"><span class="aa-spin" aria-hidden="true"></span></span><p class="pui-tl-t">Searching filings and internal sources…</p><span class="pui-tl-m">0:21</span></div>
+          </div>
+        </div>
+        <div class="pui-side">
+          <p class="pui-k">Plan</p>
+          <div class="aa-plan">
+            <div class="aa-pl done">{{icon:check-circle}}<span>Task</span></div>
+            <div class="aa-pl done">{{icon:check-circle}}<span>Plan</span></div>
+            <div class="aa-pl now"><i aria-hidden="true"></i><span>Search</span><span class="pui-tag grey">4 of 5</span></div>
+            <div class="aa-pl"><i aria-hidden="true"></i><span>Review</span></div>
+            <div class="aa-pl"><i aria-hidden="true"></i><span>Deliver</span></div>
+          </div>
+          <p class="pui-k pui-mt">Sources</p>
+          <div class="aa-srcl">
+            <span class="pui-lg w">{{logo:sharepoint}}</span><span class="pui-lg w">{{logo:outlook}}</span><span class="pui-lg w">{{logo:teams}}</span><span class="pui-lg t" style="background:#534AB7">{{icon:users}}</span><span class="pui-lg w">{{logo:pdf}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+</div>
+
+<div class="frame pg-aa">
+  <section class="cells" aria-label="Autonomous agents at a glance">
+    <div class="cell"><span class="stat-num">40<small>%</small></span><span class="stat-lbl">Time saved</span></div>
+    <div class="cell"><span class="stat-num">99.9<small>%+</small></span><span class="stat-lbl">Accuracy</span></div>
+    <div class="cell"><span class="stat-num">50M<small>+</small></span><span class="stat-lbl">Pages indexed</span></div>
+  </section>
+
+  <section class="row" id="how-it-works" aria-labelledby="how-title">
+    <div class="row-pad-sm"><p class="eyebrow">How it works</p><h2 class="h2" id="how-title" style="margin-top:18px">The work an analyst would do, <span class="mute">done for you.</span></h2></div>
+    <div class="cells c5 row">
+      <div class="cell"><span class="n">01</span><b>Task</b><span>Pick a workflow and a company, or describe the job.</span></div>
+      <div class="cell"><span class="n">02</span><b>Plan</b><span>The agent decides what to search and in what order.</span></div>
+      <div class="cell"><span class="n">03</span><b>Search</b><span>Internal research and public sources, together.</span></div>
+      <div class="cell"><span class="n">04</span><b>Review</b><span>It cross-checks claims across sources.</span></div>
+      <div class="cell"><span class="n">05</span><b>Deliver</b><span>A structured, cited document, ready to use.</span></div>
+    </div>
+  </section>
+
+  <section class="row split" id="sources" aria-labelledby="f1">
+    <div class="split-copy">
+      <p class="eyebrow">Searches where your team works</p>
+      <h2 class="h2" id="f1">Your firm's knowledge, <span class="mute">alongside the market's.</span></h2>
+      <p>The most useful context rarely sits in a filing. It is in an IC memo from last quarter, a pinned Teams message, an email after an IR call, an expert call transcript. The agent goes through all of them, the way a diligent analyst would.</p>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui aa-srcs" role="img" aria-label="Run sources for an agent. Five internal sources switched on: IC memos from SharePoint, emails from Outlook, MS Teams, expert calls and broker reports. Public filings and the web are switched on in the same run.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Event Brief · Sea / <b>Sources</b></span><span class="pui-bar-r"><span class="pui-tag">7 on</span></span></div>
+    <div class="pui-main">
+      <p class="pui-k">Your firm</p>
+      <div class="aa-sl">
+        <div class="pui-row"><span class="pui-lg w">{{logo:sharepoint}}</span><span><b>IC memos</b><span class="pui-sub">SharePoint</span></span><span class="pui-row-r"><span class="aa-tog on" aria-hidden="true"></span></span></div>
+        <div class="pui-row"><span class="pui-lg w">{{logo:outlook}}</span><span><b>Emails</b><span class="pui-sub">Outlook</span></span><span class="pui-row-r"><span class="aa-tog on" aria-hidden="true"></span></span></div>
+        <div class="pui-row"><span class="pui-lg w">{{logo:teams}}</span><span><b>MS Teams</b><span class="pui-sub">Chats and pinned messages</span></span><span class="pui-row-r"><span class="aa-tog on" aria-hidden="true"></span></span></div>
+        <div class="pui-row"><span class="pui-lg t" style="background:#534AB7">{{icon:users}}</span><span><b>Expert calls</b><span class="pui-sub">Transcripts</span></span><span class="pui-row-r"><span class="aa-tog on" aria-hidden="true"></span></span></div>
+        <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span><span><b>Broker reports</b><span class="pui-sub">Equity research</span></span><span class="pui-row-r"><span class="aa-tog on" aria-hidden="true"></span></span></div>
+      </div>
+      <p class="pui-k pui-mt">Public</p>
+      <div class="aa-sl">
+        <div class="pui-row"><span class="pui-lg t" style="background:#185FA5">{{icon:landmark}}</span><span><b>Public filings</b></span><span class="pui-row-r"><span class="aa-tog on" aria-hidden="true"></span></span></div>
+        <div class="pui-row"><span class="pui-lg t" style="background:#33464A">{{icon:globe}}</span><span><b>Web</b></span><span class="pui-row-r"><span class="aa-tog on" aria-hidden="true"></span></span></div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">Thinks like an analyst</p>
+      <h2 class="h2" id="f2">It asks the questions <span class="mute">you would.</span></h2>
+      <p>Before an earnings event, an analyst checks ratings, targets, scenarios and what management has said. The agent does the same, and you can open any step to see exactly what it asked.</p>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui aa-q" role="img" aria-label="An agent's step log with one review step opened. Question: Sea Limited broker equity research covering rating, target price, pre-earnings event date, preview, base, bull and bear scenarios, revenue, EBITDA and EPS impact, Shopee GMV and take rate, SeaMoney, Garena bookings, management commentary and guidance.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Event Brief · Sea</b></span><span class="pui-bar-r"><span class="pui-tag grey">Run log</span></span></div>
+    <div class="pui-body">
+      <!--#include pui-rail on_chat="" on_wf="on"-->
+      <div class="pui-main">
+        <div class="aa-step-c"><span class="pui-tl-ic">{{icon:check}}</span><b>Searching</b><span class="pui-tag">IC Memos</span><span class="aa-chev">{{icon:chevron-down}}</span></div>
+        <div class="aa-step-c"><span class="pui-tl-ic">{{icon:check}}</span><b>Searching</b><span class="pui-tag">Emails</span><span class="aa-chev">{{icon:chevron-down}}</span></div>
+        <div class="aa-step-o">
+          <div class="aa-step-c open"><span class="pui-tl-ic">{{icon:check}}</span><b>Reviewing</b><span class="pui-schip">{{logo:pdf}} Broker equity research</span><span class="aa-chev">{{icon:chevron-down}}</span></div>
+          <div class="aa-qbox">
+            <p class="pui-k">Question</p>
+            <p class="aa-qt">Sea Limited broker equity research: rating, target price, pre-earnings event date, preview, base and bull and bear scenarios, revenue, EBITDA and EPS impact, Shopee GMV and take rate, SeaMoney, Garena bookings, management commentary and guidance.</p>
+          </div>
+        </div>
+        <div class="aa-step-c"><span class="pui-tl-ic">{{icon:check}}</span><b>Searching</b><span class="pui-tag">Expert Call Tool</span><span class="aa-chev">{{icon:chevron-down}}</span></div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" aria-labelledby="f3">
+    <div class="split-copy">
+      <p class="eyebrow">Decision-ready output</p>
+      <h2 class="h2" id="f3">Scenarios and triggers, <span class="mute">ready for the IC.</span></h2>
+      <p>The agent doesn't stop at what happened. It frames what it means for the position: scenarios with probabilities, the triggers to add or exit, and a clear takeaway, every figure cited.</p>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui pui-wide has-float float-lg aa-out" role="img" aria-label="Agent output for Sea, an Event Brief open on the Scenarios tab. A scenario tree for the FY26 outlook: base case, moderate to high probability, group adjusted EBITDA 3.1 to 3.3 billion dollars, Shopee EBITDA margin about 3.5%, implied target price 95 to 110 dollars; bull case, low to moderate probability, 3.3 billion plus, 6% plus in FY27, 110 to 140 dollars; bear case, low to moderate probability, 3.0 billion or less, under 2.5%, 95 dollars or less. Entry, scale-up and exit thresholds: position size 2.5% of NAV as of March 2026; add to 3.0% if Shopee EBITDA margin stays above 3.5% for two quarters, VIP payback data for Thailand and Vietnam is concrete and Monee NPLs are below 2.0%. A CEO takeaway on the FY26 guidance reset, with citations.">  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Event Brief · Sea</b></span><span class="pui-bar-r"><span class="pui-tag grey">13 sources</span></span></div>
+    <div class="pui-tabs"><span>Summary</span><span class="on">Scenarios</span><span>Thresholds</span><span>Sources</span></div>
+    <div class="pui-main aa-out-m">
+      <p class="pui-k">Scenario tree · FY26 outlook</p>
+      <table class="pui-tbl pui-mt aa-sc">
+        <thead><tr><th>Scenario</th><th>Probability</th><th>Group adj. EBITDA</th><th>Shopee EBITDA margin</th><th>Implied TP</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pui-tag grey">Base</span></td><td>Mod-high</td><td>$3.1–3.3bn</td><td>~3.5%</td><td><b>$95–110</b></td></tr>
+          <tr><td><span class="pui-tag">Bull</span></td><td>Low-mod</td><td>$3.3bn+</td><td>6%+ (FY27)</td><td><b>$110–140</b></td></tr>
+          <tr><td><span class="pui-tag amber">Bear</span></td><td>Low-mod</td><td>≤$3.0bn</td><td>&lt;2.5%</td><td><b>≤$95</b></td></tr>
+        </tbody>
+      </table>
+      <p class="pui-k aa-mt16">Entry, scale-up and exit thresholds</p>
+      <div class="aa-th"><span>Position size</span><p><b>2.5% of NAV</b>, as of March 2026<span class="pui-cite">6</span><span class="pui-cite">7</span></p></div>
+      <div class="aa-th"><span>Scale-up trigger</span><p><b>Add to 3.0%</b> if all hold: Shopee EBITDA margin above 3.5% for two quarters, concrete VIP payback data for Thailand and Vietnam, Monee NPLs below 2.0%<span class="pui-cite">6</span></p></div>
+    </div>
+  </div>
+  <div class="pui-float left aa-ceo">
+    <div class="aa-ceo-h"><span class="pui-lg w">{{logo:shopee}}</span><p class="pui-k">CEO takeaway</p></div>
+    <p class="aa-body">Sea's FY26 guidance reset was a material event: management is making an explicit, self-funded choice to grow Shopee GMV about 25% while accepting margin compression to about 3.5–4.0%. The next hard catalyst is the Monee digital bank deposit launch in Q3 FY27<span class="pui-cite on">8</span>.</p>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" aria-labelledby="f4">
+    <div class="split-copy">
+      <p class="eyebrow">Always on</p>
+      <h2 class="h2" id="f4">Agents that keep working <span class="mute">when you don't.</span></h2>
+      <p>Set agents to run on a schedule or when something changes, and the work is waiting for you: catalysts for the week, a brief after every result, an alert when your thesis is tested.</p>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui pui-wide has-float float-lg aa-sch" role="img" aria-label="Pascal's scheduled agents, four switched on. Every morning: watchlist alerts on filings and news across your names, next run tomorrow at 07:00. After results: an Event Brief on every name that reports, runs when a name reports. Weekly: a 30-Day Catalyst Calendar for the portfolio, next run Monday at 07:00. On new data: thesis monitors flag what confirms or contradicts your view, watching. A card shows a thesis monitor alert waiting for review.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Scheduled</b></span><span class="pui-bar-r"><span class="pui-tag">4 on</span></span></div>
+    <div class="pui-body">
+      <!--#include pui-rail on_chat="" on_wf="on"-->
+      <div class="pui-main aa-sch-m">
+        <table class="pui-tbl aa-st">
+          <thead><tr><th>Agent</th><th>Runs</th><th>Next</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><div class="aa-ag"><span class="pui-lg t" style="background:#279C7B">{{icon:bell}}</span><span><b>Watchlist alerts</b><span class="pui-sub">Filings and news across your names</span></span></div></td><td><span class="pui-tag grey">Every morning</span></td><td class="aa-nx">Tomorrow 07:00</td><td><span class="aa-tog on" aria-hidden="true"></span></td></tr>
+            <tr><td><div class="aa-ag"><span class="pui-lg t" style="background:#185FA5">{{icon:file-text}}</span><span><b>Event Brief</b><span class="pui-sub">Every name that reports</span></span></div></td><td><span class="pui-tag grey">After results</span></td><td class="aa-nx">On next report</td><td><span class="aa-tog on" aria-hidden="true"></span></td></tr>
+            <tr><td><div class="aa-ag"><span class="pui-lg t" style="background:#534AB7">{{icon:calendar}}</span><span><b>30-Day Catalyst Calendar</b><span class="pui-sub">For the portfolio</span></span></div></td><td><span class="pui-tag grey">Weekly</span></td><td class="aa-nx">Mon 07:00</td><td><span class="aa-tog on" aria-hidden="true"></span></td></tr>
+            <tr><td><div class="aa-ag"><span class="pui-lg t" style="background:#B5651D">{{icon:target}}</span><span><b>Thesis monitors</b><span class="pui-sub">Flag what confirms or contradicts your view</span></span></div></td><td><span class="pui-tag grey">On new data</span></td><td class="aa-nx">Watching</td><td><span class="aa-tog on" aria-hidden="true"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="pui-float aa-alert">
+    <div class="pui-float-h"><p class="pui-k">Thesis monitor</p><span class="pui-tag amber">Alert</span></div>
+    <div class="pui-step">{{icon:alert}} <b>Your thesis is tested</b></div>
+    <p class="pui-sub">New data on one of your names. Brief waiting for review.</p>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row row-pad" aria-labelledby="cmp-title">
+    <div class="head" style="margin-bottom:36px">
+      <div><p class="eyebrow">Why it matters</p><h2 class="h2" id="cmp-title" style="margin-top:18px">An assistant answers. <span class="mute">An agent finishes.</span></h2></div>
+    </div>
+    <div class="table-wrap">
+      <table class="aa-compare">
+        <thead><tr><th scope="col"></th><th scope="col">Chat assistant</th><th scope="col">Pascal autonomous agent</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">What you give it</th><td>One question at a time</td><td>The whole task</td></tr>
+          <tr><th scope="row">Where it looks</th><td>Whatever you paste in</td><td>Your memos, email, Teams, calls and filings</td></tr>
+          <tr><th scope="row">What you get back</th><td>An answer to edit</td><td>A finished, cited document</td></tr>
+          <tr><th scope="row">When it works</th><td>Only when you ask</td><td>On a schedule, or when things change</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>What is a Pascal autonomous agent?<span class="pm" aria-hidden="true"></span></summary><div class="ans">An agent you give a whole task to. It runs the task end to end: it plans the work, searches your IC memos, email, Teams, expert calls and broker research alongside public sources, checks what it finds, and delivers a finished, cited document.</div></details>
+        <details class="faq-item"><summary>Can I see what the agent did?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Every run shows each search and review step, and you can open any step or stop the run.</div></details>
+        <details class="faq-item"><summary>Does the agent respect our access controls?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Agents only search the sources the user running them is cleared to see.</div></details>
+        <details class="faq-item"><summary>Is the output cited?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Every figure in the finished document links to its source.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="rel-title">
+    <div class="row-pad-sm"><h2 class="h2" id="rel-title">Related</h2></div>
+    <div class="cells row">
+      <a class="cell" href="/pascal-agents/workflow-library"><span class="n">Pascal Agents</span><b>Agentic workflow library</b><span>25+ workflows your agents can run.</span><span class="link">View the workflow library {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/ask-pascal/decision-traces"><span class="n">Ask Pascal</span><b>Decision traces</b><span>Agents that remember your team's decisions.</span><span class="link">View decision traces {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/pascal-agents/data-agent"><span class="n">Pascal Data Agent</span><b>Research files for agents</b><span>Broker notes and expert calls, tagged so agents find the right page over MCP.</span><span class="link">View the Data Agent {{icon:arrow-right}}</span></a>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="Hand off your next brief." sub="Watch an agent run on a company you cover."-->

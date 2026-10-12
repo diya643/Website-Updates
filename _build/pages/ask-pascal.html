@@ -1,0 +1,276 @@
+<!--meta
+{
+ "path": "/ask-pascal",
+ "title": "Ask Pascal: AI Research Analyst for Investment Teams",
+ "description": "Ask Pascal is the AI research assistant for investment teams: answers from filings, research and your firm's own memos, with every claim cited to the page.",
+ "crumbs": [["Ask Pascal", "/ask-pascal"]],
+ "schema": "software",
+ "name": "Ask Pascal",
+ "og_kicker": "Ask Pascal",
+ "og_title": "Ask anything your firm knows. Get a sourced answer.",
+ "llms": "Overview of Ask Pascal, Pascal AI's research assistant for investment teams: cited research, screeners, Pascal Intel and decision traces, answering from the context graph and from research files structured by the Pascal Data Agent, used by investment, risk, IC, operations, compliance and IR teams.",
+ "priority": 0.9,
+ "word_limit": 3000,
+ "lead_max": 120,
+ "css": ["ask-pascal.css"]
+}
+-->
+<div class="frame pg-ap">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Ask Pascal</span></span>Ask anything <span class="mute">your firm knows.</span></h1>
+      <p class="lead">Ask Pascal answers with everything your firm has learned: your filings and data, your IC memos and models, your email and Teams threads, and the decisions your team has made. A PM checking a thesis, an ops lead reconciling a counterparty and an IR team answering a client all get the same thing: a sourced answer, grounded in your firm's own context.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel fit"><!--mock--><div class="pui pui-wide has-float ap-hero" role="img" aria-label="Ask Pascal, set to the investment team, with tabs for risk, operations, compliance and IR. The user asks Pascal to summarise their thesis on Honeywell, compare it with management guidance and performance since, and suggest recalibrations. Pascal answers that the thesis values Honeywell at $246–298 a share on a sum-of-the-parts basis, citation 1; Honeywell has since beaten FY25 guidance on adjusted sales and EPS, citation 9; the Advanced Materials spin-off completed ahead of schedule in October 2025, citation 4; and FY26 EPS is guided to $10.35–10.65, citation 7. Sources: honeywell_thesis.pdf from your Vault, the Q4 FY25 earnings presentation, the 10-K and the decision trace for the SOTP base case.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Ask Pascal / <b>Honeywell thesis review</b></span><span class="pui-bar-r"><span class="pui-dot">D</span></span></div>
+    <div class="pui-tabs"><span class="on">Investment team</span><span>Risk</span><span>Operations</span><span>Compliance</span><span>IR</span></div>
+    <div class="pui-body">
+      <!--#include pui-rail on_chat="on" on_wf=""-->
+      <div class="pui-main">
+        <div class="pui-q">Summarise my thesis on Honeywell, compare it with management guidance and performance since, and suggest recalibrations.</div>
+        <div class="ap-steps"><span class="pui-badge">{{icon:check-circle}} Vault</span><span class="pui-badge">{{icon:check-circle}} Filings</span><span class="pui-badge">{{icon:check-circle}} Decision traces</span></div>
+        <p class="pui-ans">Your thesis values Honeywell at $246–298 a share on a sum-of-the-parts <span class="ap-nw">basis<span class="pui-cite">1</span>.</span> Since then, Honeywell beat guidance on adjusted sales and EPS for <span class="ap-nw">FY25<span class="pui-cite">9</span>,</span> and the Advanced Materials spin-off completed ahead of schedule in October <span class="ap-nw">2025<span class="pui-cite">4</span>.</span> FY26 EPS is guided to <span class="ap-nw">$10.35–10.65<span class="pui-cite on">7</span>.</span></p>
+        <p class="pui-k">Sources</p>
+        <div class="pui-schips ap-src">
+          <span class="pui-schip">{{logo:pdf}} honeywell_thesis.pdf <span class="ap-vault">{{icon:lock}} Vault</span></span>
+          <span class="pui-schip">{{logo:pdf}} Q4 FY25 earnings presentation</span>
+          <span class="pui-schip">{{logo:pdf}} 10-K</span>
+          <span class="pui-schip ap-dt"><span class="ap-dt-ic">{{icon:route}}</span> Decision trace: SOTP base case</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pui-float ap-float">
+    <div class="ap-fh"><span class="ap-dt-ic lg">{{icon:route}}</span><span><span class="pui-k">Decision trace</span><b>SOTP base case</b></span></div>
+    <p class="pui-sub">Your team's saved view, applied to this answer.</p>
+  </div>
+</div><!--/mock--></div></div>
+  </section>
+</div>
+
+<div class="frame pg-ap">
+  <section class="row" aria-label="Ask Pascal at a glance">
+    <div class="cells">
+      <div class="cell"><span class="stat-num">27<small>s</small></span><span class="stat-lbl">Median time to a cited answer</span></div>
+    <div class="cell"><span class="stat-num">9.6</span><span class="stat-lbl">Sources cited per answer, on average</span></div>
+    <div class="cell"><span class="stat-num">97<small>%</small></span><span class="stat-lbl">Answers citing at least one internal document</span></div>
+    </div>
+  </section>
+
+  <section class="row" aria-label="Why Ask Pascal answers differently">
+    <div class="cells">
+      <a class="cell" href="/platform/context-graph">{{icon:network:ico}}<b>Knows your firm</b><span>Answers draw on your context graph, where your firm's memory lives, so Pascal starts from what your team already knows.</span><span class="link">Pascal's context graph {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/ask-pascal/cited-research">{{icon:quote:ico}}<b>Shows its work</b><span>Every claim links to its page, and the decisions behind your views are kept and reused.</span><span class="link">Cited research {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/ask-pascal/pascal-intel">{{icon:eye:ico}}<b>Sees what's changing</b><span>Screeners and Pascal Intel bring new signals to you, checked against what you already believe.</span><span class="link">Pascal Intel {{icon:arrow-right}}</span></a>
+    </div>
+  </section>
+
+  <section class="row" id="teams" aria-labelledby="teams-title">
+    <div class="row-pad-sm head">
+      <div><p class="eyebrow">Built for every team</p><h2 class="h2" id="teams-title">One place to ask, <span class="mute">for the whole firm.</span></h2></div>
+      <p>Every team in an institution answers questions from the same body of knowledge. Ask Pascal gives each of them a sourced answer, inside the permissions they already have.</p>
+    </div>
+    <div class="ap-teams row">
+      <div class="ap-team"><h3>{{icon:chart-line}}Investment teams</h3><p class="ap-q">"What did we conclude the last time we looked at this name?"</p><ul><li>Research a company across filings and your own notes</li><li>Track a thesis as new information arrives</li><li>Prepare for calls, meetings and results</li></ul></div>
+      <div class="ap-team"><h3>{{icon:alert}}Portfolio and risk</h3><p class="ap-q">"Which positions are exposed to this tariff announcement?"</p><ul><li>Read the portfolio against a new event</li><li>See the documents behind each exposure</li><li>Spot thesis points that no longer hold</li></ul></div>
+      <div class="ap-team"><h3>{{icon:users}}Investment committee</h3><p class="ap-q">"Give me the pre-read: the case, the risks and what's changed."</p><ul><li>Standardised pre-reads and memos</li><li>Every claim sourced for the discussion</li><li>A record of how the view was formed</li></ul></div>
+      <div class="ap-team"><h3>{{icon:refresh}}Operations</h3><p class="ap-q">"Is Aldermoor Institution Partners the same entity as the one in our CRM?"</p><ul><li>Reconcile records across systems</li><li>Review counterparty documents</li><li>Decisions remembered, so exceptions don't repeat</li></ul></div>
+      <div class="ap-team"><h3>{{icon:shield}}Compliance</h3><p class="ap-q">"How was this recommendation formed, and from which sources?"</p><ul><li>Follow the reasoning behind any answer</li><li>See every source, down to the page</li><li>Access controls respected throughout</li></ul></div>
+      <div class="ap-team"><h3>{{icon:message}}Distribution and IR</h3><p class="ap-q">"How has our view on Sea Limited changed this quarter?"</p><ul><li>Answer client questions from approved firm material</li><li>Draft updates with sources attached</li><li>Keep messaging consistent across the team</li></ul></div>
+    </div>
+  </section>
+
+  <section class="row" id="capabilities" aria-labelledby="cap-title">
+    <div class="row-pad-sm"><p class="eyebrow">Capabilities</p><h2 class="h2" id="cap-title" style="margin-top:18px">Everything <span class="mute">Ask Pascal can do.</span></h2></div>
+  </section>
+
+  <section class="row split" aria-labelledby="f1">
+    <div class="split-copy">
+      <p class="eyebrow">Decision traces</p>
+      <h3 class="h2" id="f1">Keep the reasoning <span class="mute">behind every decision.</span></h3>
+      <p>Pascal preserves the decisions, assumptions, preferences and reasoning that shape your team's work, and reuses them when new information arrives.</p>
+      <a class="link" href="/ask-pascal/decision-traces">Explore decision traces {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui ap-mon" role="img" aria-label="Pascal's thesis monitors for Amazon, ranked, with monitors on: 1, AWS remains the profit engine, validated; 2, free cash flow recovers as capex peaks, no longer true; 3, ads business keeps compounding, watch.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Theses / <b>Amazon</b></span><span class="pui-bar-r"><span class="pui-tag">{{icon:bell}} Monitors on</span></span></div>
+    <div class="pui-tool ap-tt"><span class="pui-lg t lg" style="background:#1F3864">AMZN</span><span class="ap-tn"><b>Amazon · thesis monitors</b><span class="pui-sub">Your view · ranked</span></span><span class="pui-sp"></span><span class="pui-chip">{{icon:clock}} History</span></div>
+    <div class="pui-main">
+      <div class="ap-pt"><span class="ap-rk">1</span><b>AWS remains the profit engine</b><span class="pui-tag">Validated</span></div>
+      <div class="ap-pt"><span class="ap-rk">2</span><b>Free cash flow recovers as capex peaks</b><span class="pui-tag ap-red">No longer true</span></div>
+      <div class="ap-pt"><span class="ap-rk">3</span><b>Ads business keeps compounding</b><span class="pui-tag amber">Watch</span></div>
+      <div class="ap-add">{{icon:plus}} Add a thesis point</div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">Cited research</p>
+      <h3 class="h2" id="f2">Every claim, <span class="mute">traced to the page.</span></h3>
+      <p>Answers combine public filings, broker research and your own documents, with every sentence and table cell linked to the exact page it came from.</p>
+      <a class="link" href="/ask-pascal/cited-research">Explore cited research {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui pui-wide ap-cite" role="img" aria-label="An Ask Pascal answer reads: FY26 adjusted EPS is guided to $10.35–10.65, citation 7, against $9.78 in FY25, citation 9. Citation 7 is open in a pane beside it: the earnings presentation at page 4 of 5, with the passage EPS $10.35 to $10.65 highlighted.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Ask Pascal / <b>Honeywell FY26 outlook</b></span><span class="pui-bar-r"><span class="pui-tag grey">Filings</span></span></div>
+    <div class="pui-split ap-cs">
+      <div class="pui-main">
+        <p class="pui-ans ap-ca">FY26 adjusted EPS is guided to <span class="ap-nw">$10.35–10.65<span class="pui-cite on">7</span>,</span> against $9.78 in <span class="ap-nw">FY25<span class="pui-cite">9</span>.</span></p>
+        <div class="pui-ln m"></div><div class="pui-ln"></div><div class="pui-ln s"></div>
+        <div class="ap-srcs"><span class="ap-lgs"><span class="pui-lg w">{{logo:pdf}}</span><span class="pui-lg w">{{logo:outlook}}</span><span class="pui-lg w">{{logo:sharepoint}}</span></span>Sources</div>
+      </div>
+      <div class="pui-side ap-pane">
+        <div class="ap-pane-h"><span class="pui-k">Citation 7</span><span class="pui-k">p. 4 / 5</span></div>
+        <p class="ap-doc-n"><span class="pui-lg w">{{logo:pdf}}</span>Earnings presentation</p>
+        <div class="pui-pdf">
+          <div class="pui-sheet">
+            <div class="pui-ln m"></div>
+            <p class="ap-pass"><span class="pui-mark-hl">EPS $10.35 to $10.65</span><span class="pui-pin">7</span></p>
+            <div class="pui-ln"></div><div class="pui-ln s"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" aria-labelledby="f3">
+    <div class="split-copy">
+      <p class="eyebrow">Screeners</p>
+      <h3 class="h2" id="f3">Screen by what companies say, <span class="mute">and what they report.</span></h3>
+      <p>Query every transcript for a theme, track it as companies report, filter on the numbers, and keep score on whether management delivered.</p>
+      <a class="link" href="/ask-pascal/screeners">Explore screeners {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui pui-wide ap-screen" role="img" aria-label="A Pascal screener searching transcripts for input cost pressure in industrials over the last 2 quarters: 14 companies mentioned it this quarter, up from 6 the quarter before. Guidance vs actuals: 4 of 5 commitments met. Matching transcript passages are listed by company.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Screeners / <b>Input cost pressure</b></span><span class="pui-bar-r"><span class="pui-tag">{{icon:refresh}} Live</span></span></div>
+    <div class="pui-tool"><span class="pui-search ap-sq">{{icon:search}}<span>Input cost pressure</span></span><span class="pui-chip on">Industrials</span><span class="pui-chip">{{icon:calendar}} Last 2 quarters</span><span class="pui-chip ap-qr">{{logo:quartr}} Transcripts</span></div>
+    <div class="pui-main">
+      <div class="ap-sg">
+        <div class="ap-card">
+          <p class="pui-k">Companies mentioning it</p>
+          <p class="ap-big">14 <small>this quarter</small></p>
+          <p class="ap-up">{{icon:trending-up}} up from 6</p>
+          <div class="ap-bars" aria-hidden="true"><span style="height:43%"><i>6</i></span><span class="on" style="height:100%"><i>14</i></span></div>
+        </div>
+        <div class="ap-card">
+          <p class="pui-k">Guidance vs actuals</p>
+          <p class="ap-big">4 of 5 <small>commitments met</small></p>
+          <div class="ap-seg" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+          <p class="pui-sub ap-segl"><span>Met</span><span>Missed</span></p>
+        </div>
+      </div>
+      <div class="pui-row"><span class="pui-lg t" style="background:#5F6B69">{{icon:file-text}}</span><span class="ap-rn"><b>Company A</b><span class="pui-sub">Q1 call</span></span><span class="ap-rl"><i class="pui-ln m"></i></span></div>
+      <div class="pui-row"><span class="pui-lg t" style="background:#5F6B69">{{icon:file-text}}</span><span class="ap-rn"><b>Company B</b><span class="pui-sub">Q4 call</span></span><span class="ap-rl"><i class="pui-ln"></i></span></div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" aria-labelledby="f4">
+    <div class="split-copy">
+      <p class="eyebrow">Pascal Intel</p>
+      <h3 class="h2" id="f4">What the market is saying, <span class="mute">already read.</span></h3>
+      <p>Trackers follow X, Reddit and podcasts for your names and themes, and turn them into one dated summary per story, with every source linked.</p>
+      <a class="link" href="/ask-pascal/pascal-intel">Explore Pascal Intel {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui pui-wide ap-intel" role="img" aria-label="A Pascal Intel story for $PLTR, Palantir, dated 18 Aug 2026 and drawn from X, Reddit and YouTube: Palantir Q2 blowout, $1.94B revenue, up 93% YoY; guidance raised. The source posts from each channel are linked below the summary.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Intel / <b>Trackers</b></span><span class="pui-bar-r"><span class="pui-tag grey">Daily</span></span></div>
+    <div class="pui-tool ap-tt"><span class="pui-lg t lg" style="background:#101113">PLTR</span><span class="ap-tn"><b>$PLTR · Palantir</b><span class="pui-sub">18 Aug 2026</span></span><span class="pui-sp"></span><span class="ap-ch"><span class="pui-lg w">{{logo:x}}</span><span class="pui-lg w">{{logo:reddit}}</span><span class="pui-lg w">{{logo:youtube-icon}}</span></span></div>
+    <div class="pui-main">
+      <p class="pui-h ap-it">Palantir Q2 blowout: $1.94B revenue, up 93% YoY; guidance raised</p>
+      <div class="pui-ln m"></div><div class="pui-ln s"></div>
+      <p class="pui-k pui-mt">Sources</p>
+      <div class="ap-posts">
+        <div class="pui-post"><div class="pui-post-h"><span class="pui-av" style="background:#33464A">A1</span><b>@analyst_one</b>{{logo:x}}</div><div class="pui-ln m"></div><div class="pui-ln s"></div></div>
+        <div class="pui-post"><div class="pui-post-h"><span class="pui-av" style="background:#FF4500">r/</span><b>Investing thread</b>{{logo:reddit}}</div><div class="pui-ln m"></div><div class="pui-ln s"></div></div>
+        <div class="pui-post"><div class="pui-post-h"><span class="pui-av" style="background:#B42318">{{icon:play}}</span><b>Podcast</b>{{logo:youtube-icon}}</div><div class="pui-ln m"></div><div class="pui-ln s"></div></div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="how-title">
+    <div class="row-pad-sm"><p class="eyebrow">How it works</p><h2 class="h2" id="how-title" style="margin-top:18px">From question <span class="mute">to sourced answer.</span></h2></div>
+    <div class="cells c5 row">
+      <div class="cell"><span class="n">01</span><b>Scope</b><span>Pick the companies with @ and the sources to search.</span></div>
+      <div class="cell"><span class="n">02</span><b>Find</b><span>Pascal searches filings, data and your firm's own material.</span></div>
+      <div class="cell"><span class="n">03</span><b>Review</b><span>It reads what it found and checks claims across sources.</span></div>
+      <div class="cell"><span class="n">04</span><b>Cite</b><span>The answer arrives with every claim linked to its page.</span></div>
+      <div class="cell"><span class="n">05</span><b>Remember</b><span>Your decisions are kept and reused next time.</span></div>
+    </div>
+  </section>
+
+  <section class="row" id="sources" aria-labelledby="src-title">
+    <div class="row-pad-sm head">
+      <div><p class="eyebrow">Sources</p><h2 class="h2" id="src-title">Your firm's knowledge, <span class="mute">and the market's.</span></h2></div>
+      <div><p>Ask Pascal answers from your context graph: what your firm has written and said, what you license, and what the market is saying. The Pascal Data Agent turns broker PDFs, expert calls and notes into entity-tagged data each answer can cite.</p><a class="link ap-src-link" href="/platform/context-graph">See the context graph &amp; memory {{icon:arrow-right}}</a><a class="link ap-src-link" href="/pascal-agents/data-agent">See the Pascal Data Agent {{icon:arrow-right}}</a></div>
+    </div>
+    <div class="cells row">
+      <div class="cell"><b>Internal information</b><div class="ap-chips"><span>IC memos</span><span>Models</span><span>Emails</span><span>MS Teams</span><span>SharePoint</span><span>Expert calls</span><span>CRM</span><span>Meeting notes</span></div></div>
+      <div class="cell"><b>Licensed publications</b><div class="ap-chips"><span>Broker research</span><span>Credit reports</span><span>Consensus estimates</span><span>Private company data</span><span>Market data</span></div></div>
+      <div class="cell"><b>External data</b><div class="ap-chips"><span>Public filings</span><span>Earnings transcripts</span><span>Exchange disclosures</span><span>News</span><span>X</span><span>Reddit</span><span>LinkedIn</span><span>Podcasts</span></div></div>
+    </div>
+  </section>
+
+  <section class="row row-pad" aria-labelledby="cmp-title">
+    <div class="head" style="margin-bottom:36px">
+      <div><p class="eyebrow">Why Ask Pascal</p><h2 class="h2" id="cmp-title" style="margin-top:18px">A general AI assistant knows the internet. <span class="mute">Pascal knows your firm.</span></h2></div>
+    </div>
+    <div class="table-wrap">
+      <table class="ap-compare">
+        <thead><tr><th scope="col"></th><th scope="col">General AI assistant</th><th scope="col">Ask Pascal</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">What it knows</th><td>Public information</td><td>Your firm's memos, models and conversations too</td></tr>
+          <tr><th scope="row">Where answers come from</th><td>Hard to tell</td><td>Exact document and page</td></tr>
+          <tr><th scope="row">Your past decisions</th><td>Forgotten every session</td><td>Kept and reused</td></tr>
+          <tr><th scope="row">Who can see what</th><td>Whatever you paste in</td><td>Your firm's access controls</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="row row-pad-sm ind-row" aria-labelledby="ind-row-title">
+    <h2 class="ind-row-h" id="ind-row-title">Pascal by industry</h2>
+    <div class="ind-row-l">
+      <a href="/solutions/hedge-funds">Hedge Funds</a>
+      <a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+      <a href="/solutions/banking">Banks &amp; Financial Institutions</a>
+      <a href="/solutions/asset-servicing">Asset Servicing</a>
+      <a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+      <a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>What is Ask Pascal?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Ask Pascal answers with everything your firm has learned: your filings and data, your IC memos and models, your email and Teams threads, and the decisions your team has made. Every answer is sourced and grounded in your firm's own context.</div></details>
+        <details class="faq-item"><summary>Is Ask Pascal only for investment research?<span class="pm" aria-hidden="true"></span></summary><div class="ans">No. Investment teams use it most, but risk, operations, compliance, IC and IR teams use the same sourced answers from the same institutional memory.</div></details>
+        <details class="faq-item"><summary>Does everyone see the same information?<span class="pm" aria-hidden="true"></span></summary><div class="ans">No. Pascal respects your firm's access controls, so each person only sees what they are cleared to see.</div></details>
+        <details class="faq-item"><summary>Can it use our own documents?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Connect your systems or upload files, and Pascal cites them exactly as it cites a public filing.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="Ask your first question with your firm's context." sub="A walkthrough with your own documents connected."-->

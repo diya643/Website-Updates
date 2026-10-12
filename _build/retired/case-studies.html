@@ -1,0 +1,163 @@
+<!--meta
+{
+ "path": "/case-studies",
+ "title": "Pascal AI Case Studies: AI in Financial Services",
+ "description": "Five end-to-end Pascal AI case studies from hedge funds, asset management, asset servicing, banking and corporate treasury: the problem, each step, the results.",
+ "crumbs": [["Case studies", "/case-studies"]],
+ "og_kicker": "Case studies",
+ "og_title": "Five firms, five workflows, measured end to end",
+ "llms": "Index of Pascal AI case studies: a global long/short equity fund (research vault), a large Indian asset manager (earnings recaps), a global asset servicer (RFP answer library), an investment bank in India (comps and pitch books) and a large diversified conglomerate (hedge accounting under Ind AS 109).",
+ "priority": 0.8,
+ "word_limit": 900,
+ "css": ["case-studies.css"]
+}
+-->
+<div class="frame pg-cs">
+  <section class="hero-g hero-full cs-hub-hero" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Pascal AI case studies</span></span>Five firms. <span class="mute">Five workflows, measured end to end.</span></h1>
+      <p class="lead">Each case study follows one Pascal deployment from start to finish: what the team struggled with, what Pascal did step by step, and the results. Clients stay anonymous until they approve being named.</p>
+      <div class="actions"><a class="btn btn-dark" href="{{demo_url}}">Book a demo</a></div>
+    </div>
+  </section>
+
+  <section class="row cs-feat" aria-labelledby="feat-title">
+    <div class="cs-feat-copy">
+      <p class="eyebrow">Featured · Hedge funds</p>
+      <h2 class="h2" id="feat-title">A fund that found <span class="mute">its own research.</span></h2>
+      <p>A global long/short equity fund could not search its own broker reports, expert calls and notes. Pascal classified and tagged every document, then served them in a vault viewer for analysts and over MCP for agents.</p>
+      <div class="cs-feat-nums">
+        <div><b>6,711</b><span>documents classified and tagged</span></div>
+        <div><b>98<small>%</small></b><span>typed without manual tagging</span></div>
+        <div><b>3<small>sec</small></b><span>to find a report by ticker and broker</span></div>
+      </div>
+      <div class="cs-links">
+        <a class="link" href="/case-studies/hedge-funds">Read the hedge fund case study {{icon:arrow-right}}</a>
+        <a class="link" href="/pascal-agents/data-agent#vault-viewer">See the vault viewer {{icon:arrow-right}}</a>
+      </div>
+    </div>
+    <div class="cs-feat-media"><div class="panel fit"><!--mock--><div class="pui pui-wide has-float float-lg" role="img" aria-label="Pascal's vault viewer filtered to broker reports on NVIDIA from Goldman Sachs in the last 30 days, with folders for 4,212 broker reports, 1,947 expert calls, 538 internal notes and 14 to review, and a card explaining why a report is tagged NVDA.">
+      <div class="pui-win">
+        <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Vault viewer / <b>NVDA</b></span><span class="pui-bar-r"><span class="pui-tag grey">Illustrative</span></span></div>
+        <div class="pui-tool"><span class="pui-chip on">{{icon:filter}} Broker report</span><span class="pui-chip on">NVIDIA</span><span class="pui-chip on">Goldman Sachs</span><span class="pui-sp"></span><span class="cs-seg"><span>7d</span><span class="on">30d</span><span>90d</span></span></div>
+        <div class="cs-m-xp">
+          <div class="cs-m-xp-side">
+            <p>{{icon:folder}} All · 6,711</p>
+            <p class="on">{{icon:folder}} Broker · 4,212</p>
+            <p>{{icon:folder}} Expert · 1,947</p>
+            <p>{{icon:folder}} Internal · 538</p>
+            <p>{{icon:folder}} Review · 14</p>
+          </div>
+          <div class="cs-m-xp-main">
+            <p class="pui-k">3 documents</p>
+            <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span><span>Blackwell ramp ahead of plan<span class="pui-sub" style="display:block">14 Sep · Buy · PT $235</span></span><span class="pui-row-r"><span class="pui-tag">Opens p. 3</span></span></div>
+            <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span><span>Semis weekly: lead times ease<span class="pui-sub" style="display:block">5 Sep · sector note</span></span><span class="pui-row-r"><span class="pui-tag">Opens p. 7</span></span></div>
+            <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span><span>Q2 FY27 earnings review<span class="pui-sub" style="display:block">28 Aug · Buy · PT $210</span></span><span class="pui-row-r"><span class="pui-tag">Opens p. 1</span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="pui-float">
+        <p class="pui-k">Why this is tagged NVDA</p>
+        <div class="cs-m-why">
+          <p>{{icon:check}} Ticker "NVDA US" on p. 1</p>
+          <p>{{icon:check}} Product line "Blackwell" mapped to NVIDIA</p>
+          <p>{{icon:check}} Section "Data centre demand", pp. 3–5</p>
+        </div>
+      </div>
+    </div><!--/mock--></div></div>
+  </section>
+
+  <section class="row" id="all" aria-labelledby="all-title">
+    <div class="row-pad-sm cs-steps-head">
+      <div><p class="eyebrow">All case studies</p><h2 class="h2" id="all-title" style="margin-top:18px">One detailed story <span class="mute">per industry.</span></h2></div>
+      <p>Every story covers the challenge, each step Pascal took, the results and what the client did next.</p>
+    </div>
+    <div class="cs-filter" data-cs-filter>
+      <span>Industry</span>
+      <a class="cs-chip" href="#all" data-f="all">All</a>
+      <a class="cs-chip" href="#cs-hedge-funds" data-f="hedge-funds">Hedge funds</a>
+      <a class="cs-chip" href="#cs-asset-management" data-f="asset-management">Asset management</a>
+      <a class="cs-chip" href="#cs-asset-servicing" data-f="asset-servicing">Asset servicing</a>
+      <a class="cs-chip" href="#cs-banking" data-f="banking">Banking</a>
+      <a class="cs-chip" href="#cs-treasury" data-f="treasury">Corporate treasury</a>
+    </div>
+    <div class="cs-cards" data-cs-grid>
+      <article class="cs-card" id="cs-hedge-funds" data-ind="hedge-funds">
+        <div class="cs-card-top"><span class="eyebrow">Hedge funds</span><span class="pui-tag grey">Live in 5 weeks</span></div>
+        <p class="cs-card-firm">Global long/short equity fund</p>
+        <h3><a href="/case-studies/hedge-funds">Every broker report, findable by ticker, broker and date.</a></h3>
+        <div class="cs-card-nums"><div><b>6,711</b><span>documents classified and tagged</span></div><div><b>3<small>sec</small></b><span>to find a report by ticker and broker</span></div></div>
+        <div class="cs-card-links"><a class="link" href="/case-studies/hedge-funds">Read the case study {{icon:arrow-right}}</a><a class="link sub" href="/solutions/hedge-funds">Pascal for hedge funds {{icon:arrow-right}}</a></div>
+      </article>
+      <article class="cs-card" id="cs-asset-management" data-ind="asset-management">
+        <div class="cs-card-top"><span class="eyebrow">Asset management</span><span class="pui-tag grey">Live in 6 weeks</span></div>
+        <p class="cs-card-firm">Large Indian asset manager</p>
+        <h3><a href="/case-studies/asset-management">Earnings recaps for 180 companies, four hours after results.</a></h3>
+        <div class="cs-card-nums"><div><b>60<small>%</small></b><span>less analyst time on earnings processing</span></div><div><b>4<small>hrs</small></b><span>from results to recap</span></div></div>
+        <div class="cs-card-links"><a class="link" href="/case-studies/asset-management">Read the case study {{icon:arrow-right}}</a><a class="link sub" href="/solutions/asset-wealth-management">Pascal for asset and wealth management {{icon:arrow-right}}</a></div>
+      </article>
+      <article class="cs-card" id="cs-asset-servicing" data-ind="asset-servicing">
+        <div class="cs-card-top"><span class="eyebrow">Asset servicing</span><span class="pui-tag grey">Live in 8 weeks</span></div>
+        <p class="cs-card-firm">Global asset servicer</p>
+        <h3><a href="/case-studies/asset-servicing">RFPs drafted from an answer library that learns from every review.</a></h3>
+        <div class="cs-card-nums"><div><b>1<small>day</small></b><span>to draft a 312-question RFP</span></div><div><b>78<small>%</small></b><span>of answers reused without edits</span></div></div>
+        <div class="cs-card-links"><a class="link" href="/case-studies/asset-servicing">Read the case study {{icon:arrow-right}}</a><a class="link sub" href="/solutions/asset-servicing">Pascal for asset servicing {{icon:arrow-right}}</a></div>
+      </article>
+      <article class="cs-card" id="cs-banking" data-ind="banking">
+        <div class="cs-card-top"><span class="eyebrow">Banking</span><span class="pui-tag grey">Live in 4 weeks</span></div>
+        <p class="cs-card-firm">Investment bank · India</p>
+        <h3><a href="/case-studies/banking">Comps tables from filings, every cell linked to its page.</a></h3>
+        <div class="cs-card-nums"><div><b>20<small>min</small></b><span>for a 40-company comps table</span></div><div><b>4<small>hrs</small></b><span>to a first-draft pitch book, from 3 days</span></div></div>
+        <div class="cs-card-links"><a class="link" href="/case-studies/banking">Read the case study {{icon:arrow-right}}</a><a class="link sub" href="/solutions/banking">Pascal for banking {{icon:arrow-right}}</a></div>
+      </article>
+      <article class="cs-card" id="cs-treasury" data-ind="treasury">
+        <div class="cs-card-top"><span class="eyebrow">Corporate treasury</span><span class="pui-tag grey">Live in 10 weeks</span></div>
+        <p class="cs-card-firm">Large diversified conglomerate</p>
+        <h3><a href="/case-studies/treasury">Hedge accounting under Ind AS 109, from confirmation to audit pack.</a></h3>
+        <div class="cs-card-nums"><div><b>480</b><span>hedge relationships documented</span></div><div><b>2<small>days</small></b><span>for quarter-end testing, from 3 weeks</span></div></div>
+        <div class="cs-card-links"><a class="link" href="/case-studies/treasury">Read the case study {{icon:arrow-right}}</a><a class="link sub" href="/solutions/treasury-hedge-accounting">Pascal for treasury and hedge accounting {{icon:arrow-right}}</a></div>
+      </article>
+      <div class="cs-card more">
+        <b>More stories are added as clients approve them.</b>
+        <p>Each story is published once the client has reviewed every step and every number.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>How is Pascal deployed at a financial firm?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal runs in your private cloud or on premise, inside your perimeter. It connects to the sources you already use, such as SharePoint, email, research feeds and filings, and applies your existing permissions to every user and agent.</div></details>
+        <details class="faq-item"><summary>How long does a Pascal deployment take?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The five deployments on this page went live in four to ten weeks. Each started with one workflow on the client's own documents and grew from there.</div></details>
+        <details class="faq-item"><summary>How are the results in these case studies measured?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Each result compares the same workflow before and after Pascal, measured with the client's team: time to finish the task, volume processed and the share of output accepted without edits.</div></details>
+        <details class="faq-item"><summary>Why are the clients anonymous?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Financial firms rarely let vendors name them. Each story describes the firm by type and size, and names and logos are added as clients approve them.</div></details>
+        <details class="faq-item"><summary>Where should our firm start?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pick one workflow that costs your team days each month, such as recaps, RFPs, comps or reconciliations, and measure it against today's baseline. See the <a href="/pascal-agents/workflow-library">workflow library</a> for common starting points.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="Start with one workflow." sub="Measure it on your own work."-->
+
+<script>
+(function () {
+  var bar = document.querySelector("[data-cs-filter]");
+  var grid = document.querySelector("[data-cs-grid]");
+  if (!bar || !grid) return;
+  var chips = [].slice.call(bar.querySelectorAll("[data-f]"));
+  var cards = [].slice.call(grid.querySelectorAll("[data-ind]"));
+  function apply(f) {
+    chips.forEach(function (c) { c.setAttribute("aria-pressed", String(c.getAttribute("data-f") === f)); });
+    cards.forEach(function (c) { c.hidden = !(f === "all" || c.getAttribute("data-ind") === f); });
+    grid.classList.toggle("filtered", f !== "all");
+  }
+  chips.forEach(function (c) {
+    c.setAttribute("role", "button");
+    c.addEventListener("click", function (e) { e.preventDefault(); apply(c.getAttribute("data-f")); });
+  });
+  var h = location.hash.replace("#cs-", "");
+  apply(chips.some(function (c) { return c.getAttribute("data-f") === h; }) ? h : "all");
+})();
+</script>

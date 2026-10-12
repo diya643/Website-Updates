@@ -1,0 +1,697 @@
+<body class="__variable_246ccd __variable_c29908 __variable_98e614 __variable_475bff __variable_4559c1 antialiased">
+ <div>
+ </div>
+ <div>
+  <header>
+   <div>
+    <a href="/pascal-academy/ai-fundamentals">
+    </a>
+    <div>
+     <h1>
+      Context Windows
+     </h1>
+     <p>
+      How much text a language model can hold in mind at once, why bigger is not always better, and what happens when you run out of room.
+     </p>
+    </div>
+   </div>
+  </header>
+  <article>
+   <div>
+    <div>
+     <div>
+     </div>
+     <div>
+     </div>
+    </div>
+   </div>
+   <header>
+    <h1>
+     Context Windows
+    </h1>
+    <p>
+     How much text a language model can hold in mind at once, why bigger is not always better, and what happens when you run out of room.
+    </p>
+    <p>
+     Pascal Academy · ~12 min read · Beginner-friendly with advanced sections · Updated August 2026
+    </p>
+   </header>
+   <nav>
+    <h2>
+     Table of Contents
+    </h2>
+    <ol>
+     <li>
+      <a href="#what-is-a-context-window">
+       <span>
+        1
+        .
+       </span>
+       What Is a Context Window?
+      </a>
+     </li>
+     <li>
+      <a href="#what-fills-the-context-window">
+       <span>
+        2
+        .
+       </span>
+       What Fills the Context Window
+      </a>
+     </li>
+     <li>
+      <a href="#why-there-is-a-limit">
+       <span>
+        3
+        .
+       </span>
+       Why There Is a Limit
+      </a>
+     </li>
+     <li>
+      <a href="#the-lost-in-the-middle-problem">
+       <span>
+        4
+        .
+       </span>
+       The Lost-in-the-Middle Problem
+      </a>
+     </li>
+     <li>
+      <a href="#cost-and-latency-trade-offs">
+       <span>
+        5
+        .
+       </span>
+       Cost and Latency Trade-offs
+      </a>
+     </li>
+     <li>
+      <a href="#context-window-sizes-across-models">
+       <span>
+        6
+        .
+       </span>
+       Context Window Sizes Across Models
+      </a>
+     </li>
+     <li>
+      <a href="#managing-context-limits">
+       <span>
+        7
+        .
+       </span>
+       Managing Context Limits
+      </a>
+     </li>
+     <li>
+      <a href="#security-implications-of-long-context">
+       <span>
+        8
+        .
+       </span>
+       Security Implications of Long Context
+      </a>
+     </li>
+     <li>
+      <a href="#practical-guidelines">
+       <span>
+        9
+        .
+       </span>
+       Practical Guidelines
+      </a>
+     </li>
+     <li>
+      <a href="#the-future-of-context-windows">
+       <span>
+        10
+        .
+       </span>
+       The Future of Context Windows
+      </a>
+     </li>
+     <li>
+      <a href="#faq">
+       <span>
+        11
+        .
+       </span>
+       Frequently Asked Questions
+      </a>
+     </li>
+    </ol>
+   </nav>
+   <div>
+    <section id="what-is-a-context-window">
+     <h2>
+      1. What Is a Context Window?
+     </h2>
+     <p>
+      In the first guide, we established that a language model predicts the next token based on the tokens that came before it. But the model cannot look back infinitely. There is a ceiling on how many tokens it can consider at once, and that ceiling is called the context window.
+     </p>
+     <p>
+      The best way to think of it is as the model's working memory. When you paste a long document into a chat, the model reads it into its context window. When you have a multi-turn conversation, each earlier message stays in the window so the model can reference what was said. The context window is the total space available for everything the model needs to hold in mind to produce its next response.
+     </p>
+     <p>
+      A model with a 4,000-token context window can hold roughly 3,000 words of combined input and output. A model with a 128,000-token window can hold about 96,000 words, enough for a short book. The difference in what you can do with those two models is enormous. The 4,000-token model chokes on a research paper. The 128,000-token model can read several papers and compare them in a single response.
+     </p>
+     <aside>
+      <p>
+       KEY PRINCIPLE
+      </p>
+      <p>
+       The context window includes everything the model processes in a single call. That means the system prompt, the user's message, any retrieved documents, the conversation history, and the model's own response all count against the same budget. A 128,000-token window covers 128,000 tokens for everything combined.
+      </p>
+     </aside>
+    </section>
+    <section id="what-fills-the-context-window">
+     <h2>
+      2. What Fills the Context Window
+     </h2>
+     <p>
+      People often assume the context window is the size of their question. In practice, multiple things consume tokens before the model generates a single word of response.
+     </p>
+     <div>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Component
+         </th>
+         <th>
+          What It Is
+         </th>
+         <th>
+          Typical Token Cost
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          System prompt
+         </td>
+         <td>
+          Instructions that define the model's role, behaviour, and constraints for the entire conversation. Often hidden from the user in chat applications.
+         </td>
+         <td>
+          200 to 2,000 tokens depending on complexity.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Conversation history
+         </td>
+         <td>
+          All prior user and assistant messages in the current session. Grows with every turn and is the main reason long conversations eventually hit the ceiling.
+         </td>
+         <td>
+          50 to 500 tokens per turn, accumulating rapidly.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Retrieved documents
+         </td>
+         <td>
+          External content fetched by a RAG system and inserted into the prompt so the model can ground its answer in specific sources.
+         </td>
+         <td>
+          500 to 10,000 tokens depending on how many chunks are retrieved.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          User message
+         </td>
+         <td>
+          The actual question or instruction from the user for this turn.
+         </td>
+         <td>
+          10 to 5,000 tokens depending on whether the user pasted content.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Model output
+         </td>
+         <td>
+          The response the model generates. This also counts against the context window, reducing what is available for input.
+         </td>
+         <td>
+          100 to 4,000 tokens depending on the max output cap.
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      The practical implication is that a model with a 128,000-token context window does not let you paste 128,000 tokens of input. After the system prompt, conversation history, and a safety margin for the model's response, you might have 120,000 tokens of usable input space. In a multi-turn conversation, each turn eats into that budget, and eventually the oldest messages need to be dropped or summarised to make room for new ones.
+     </p>
+    </section>
+    <section id="why-there-is-a-limit">
+     <h2>
+      3. Why There Is a Limit
+     </h2>
+     <p>
+      The context window is finite because of how self-attention works. As we covered in the first guide, self-attention lets every token in the input look at every other token to determine relevance. This is what gives Transformers their power, but it comes with a computational cost that grows quadratically.
+     </p>
+     <p>
+      Quadratic growth means that doubling the number of tokens in the context window does not double the compute. It quadruples it. A model processing 1,000 tokens computes 1 million attention relationships. At 2,000 tokens, that becomes 4 million. At 10,000 tokens, 100 million. This is why early models had small context windows. The hardware could not handle the computation that larger windows demanded.
+     </p>
+     <p>
+      Recent years have seen dramatic improvements. Techniques like rotary position embedding (RoPE), sparse attention, and flash attention have reduced the compute penalty of long contexts. Hardware has gotten faster. These advances are why a model in 2022 had a 4,000-token window and a comparable model in 2025 can handle 128,000 or even a million tokens. The fundamental quadratic scaling has not gone away, but it has been mitigated enough to make large context windows practical.
+     </p>
+     <aside>
+      <p>
+       GO DEEPER: WHY ATTENTION IS QUADRATIC (OPTIONAL)
+      </p>
+      <p>
+       Self-attention computes a relationship between every pair of tokens in the sequence. For N tokens, that means N times N comparisons, stored in a matrix of size N-squared. If you double N, the matrix becomes four times larger. This is the core bottleneck. Modern techniques like flash attention do not change the number of comparisons, but they reduce the memory bandwidth needed to move the data through the GPU, which is often the actual bottleneck in practice. Sparse attention skips some comparisons entirely, trading a small amount of accuracy for a large reduction in compute.
+      </p>
+     </aside>
+    </section>
+    <section id="the-lost-in-the-middle-problem">
+     <h2>
+      4. The Lost-in-the-Middle Problem
+     </h2>
+     <p>
+      A larger context window lets you put more text in, but it does not guarantee the model uses all of that text equally. Research published in 2023 by Liu et al. found that language models pay uneven attention across long inputs. Information at the beginning and end of the context gets more weight than information in the middle. The phenomenon is called the lost-in-the-middle effect, and it has practical consequences for anyone building LLM applications.
+     </p>
+     <p>
+      If you paste a 50-page document into a prompt and ask the model to find a specific detail, the model is more likely to find it if it appears on the first or last page. If the detail is on page 27, the model may miss it entirely, even though the document is well within the context window. The information is there. The model just does not attend to it as strongly.
+     </p>
+     <p>
+      This finding has direct implications for prompt design and RAG systems. If you are retrieving documents and placing them in the context, put the most relevant ones at the beginning and end of the context block, not in the middle. If you are writing instructions, put the most important ones at the top of the prompt and repeat them just before the model starts generating. The lost-in-the-middle effect is also an argument for keeping context lean. Fewer tokens mean the model's attention is more concentrated, and the probability of missing something important goes down.
+     </p>
+     <aside>
+      <p>
+       PASCAL ACADEMY
+      </p>
+      <p>
+       Pascal Academy's prompt engineering workshop covers practical strategies for mitigating the lost-in-the-middle effect, including context ordering, re-ranking, and prompt structure patterns. Reach out to learn about team training options.
+      </p>
+     </aside>
+    </section>
+    <section id="cost-and-latency-trade-offs">
+     <h2>
+      5. Cost and Latency Trade-offs
+     </h2>
+     <p>
+      Larger context windows cost more money and take more time. Both effects are linear in token count for most API pricing models, but the latency effect also has a quadratic component because of the attention computation.
+     </p>
+     <p>
+      On the cost side, API providers charge per token for both input and output. A prompt with 50,000 tokens of retrieved documents costs roughly 50 times more per call than a prompt with 1,000 tokens. For an application making thousands of calls per day, the difference between a 1,000-token prompt and a 50,000-token prompt can be the difference between a manageable bill and an eye-watering one. This is why RAG systems are designed to retrieve only the relevant chunks rather than dumping the entire knowledge base into the context.
+     </p>
+     <p>
+      On the latency side, the model takes longer to produce its first token when the context is large. This is called time-to-first-token, and it matters for user experience. A chatbot that takes 8 seconds to start responding because it is processing a 100,000-token context feels broken. For interactive applications, keeping the context lean is also a user experience decision.
+     </p>
+     <p>
+      The relationship between context size and latency is not strictly linear. The initial processing of the input, called prefill, scales with the number of tokens. But once the model starts generating output, each new token only needs to attend to the already-processed context, which is faster. So the first token is slow and subsequent tokens are faster. The longer the context, the longer the wait for that first token.
+     </p>
+     <div>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Factor
+         </th>
+         <th>
+          How It Scales
+         </th>
+         <th>
+          Practical Impact
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          API cost
+         </td>
+         <td>
+          Linear with token count. More input tokens means a higher per-call charge.
+         </td>
+         <td>
+          A 50,000-token prompt costs 50x more than a 1,000-token prompt at the same price per token.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Time to first token
+         </td>
+         <td>
+          Roughly linear with a quadratic component from attention. More context means a longer wait before the model starts generating.
+         </td>
+         <td>
+          A 100,000-token context might take 5 to 10 seconds to prefill. A 1,000-token context responds in under a second.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Memory usage
+         </td>
+         <td>
+          Linear with token count. The model stores key-value pairs for every token in the context.
+         </td>
+         <td>
+          Large contexts consume GPU memory, which limits how many concurrent requests a single server can handle.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Attention quality
+         </td>
+         <td>
+          Degrades with context length due to the lost-in-the-middle effect.
+         </td>
+         <td>
+          A model with a 128,000-token window may perform worse on retrieval tasks than a model with a 4,000-token window if the answer is buried in the middle.
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </section>
+    <section id="context-window-sizes-across-models">
+     <h2>
+      6. Context Window Sizes Across Models
+     </h2>
+     <p>
+      Context windows have grown dramatically since ChatGPT launched in late 2022 with a 4,000-token limit. The table below shows how far the field has come and where the major models stand as of mid-2026.
+     </p>
+     <div>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Model
+         </th>
+         <th>
+          Context Window
+         </th>
+         <th>
+          Approximate Word Equivalent
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          GPT-3.5 (original ChatGPT, 2022)
+         </td>
+         <td>
+          4,000 tokens
+         </td>
+         <td>
+          ~3,000 words (about 6 pages)
+         </td>
+        </tr>
+        <tr>
+         <td>
+          GPT-4 (launch, 2023)
+         </td>
+         <td>
+          8,000 tokens
+         </td>
+         <td>
+          ~6,000 words (about 12 pages)
+         </td>
+        </tr>
+        <tr>
+         <td>
+          GPT-4o (2024)
+         </td>
+         <td>
+          128,000 tokens
+         </td>
+         <td>
+          ~96,000 words (about a short book)
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Claude 3.5 Sonnet (Anthropic)
+         </td>
+         <td>
+          200,000 tokens
+         </td>
+         <td>
+          ~150,000 words (a full novel)
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Gemini 1.5 Pro (Google)
+         </td>
+         <td>
+          2,000,000 tokens
+         </td>
+         <td>
+          ~1.5 million words (about 15 books)
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Llama 3.1 (Meta)
+         </td>
+         <td>
+          128,000 tokens
+         </td>
+         <td>
+          ~96,000 words (about a short book)
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      The jump from 4,000 to 2 million tokens in under three years represents a 500x increase. Whether this trend continues depends on whether the computational challenges of quadratic attention can be solved at scale, or whether alternative architectures replace the Transformer entirely. For now, the practical question is not whether you have enough context, but whether you are using the context you have wisely.
+     </p>
+     <aside>
+      <p>
+       GO DEEPER: TOKEN EFFICIENCY VARIES BY LANGUAGE (OPTIONAL)
+      </p>
+      <p>
+       The word-to-token ratio is roughly 1.5 tokens per word for English, but this varies significantly across languages. Languages with non-Latin scripts, including Hindi, Tamil, Telugu, and Bengali, often produce more tokens per word because their tokenizers were optimised primarily for English text. A sentence in Telugu can produce 7 times more tokens than the same sentence in English. This means a 128,000-token context window holds far less Telugu text than English text, which has real implications for multilingual applications and for cost when serving non-English users.
+      </p>
+     </aside>
+    </section>
+    <section id="managing-context-limits">
+     <h2>
+      7. Managing Context Limits
+     </h2>
+     <p>
+      Even with large context windows, you need strategies for managing what goes into them. The goal is to maximise the signal the model receives while minimising the cost and latency of processing it.
+     </p>
+     <aside>
+      <p>
+       PASCAL ACADEMY
+      </p>
+      <p>
+       Pascal Academy's RAG engineering course covers context management in depth, including when to use RAG versus long context, conversation summarisation patterns, and cost optimisation. Reach out to learn about cohort programmes for your engineering team.
+      </p>
+     </aside>
+     <div id="conversation-summarisation">
+      <h3>
+       Conversation Summarisation
+      </h3>
+      <p>
+       In a long multi-turn conversation, early messages eventually consume too much context. A common strategy is to summarise older messages once they exceed a certain age. The model or a separate pipeline compresses the first N messages into a summary, and the summary replaces the original messages in the context. The conversation continues with the summary providing a condensed memory of what was discussed, while recent messages remain in full.
+      </p>
+      <p>
+       The trade-off is that summarisation loses detail. A summary of a 20-message exchange will not capture every nuance, and the model may miss references to specific things said earlier. For applications where precision matters, an alternative is selective retention, keeping only the messages that are relevant to the current topic and dropping the rest.
+      </p>
+     </div>
+     <div id="rag-instead-of-stuffing">
+      <h3>
+       RAG Instead of Stuffing
+      </h3>
+      <p>
+       As covered in the RAG guide, retrieving only the relevant chunks from a knowledge base is far more efficient than dumping the entire database into the context. RAG keeps the context lean by filtering at the retrieval stage, so the model sees only the passages likely to contain the answer. This reduces cost, improves latency, and mitigates the lost-in-the-middle effect by keeping the context small enough for the model to attend to everything.
+      </p>
+      <p>
+       The question of when to use RAG versus long context is a practical one. If your knowledge base is under 100,000 tokens and rarely changes, putting the whole thing in the context is simpler and avoids the infrastructure of a vector database. If the knowledge base is large or changes frequently, RAG is the right approach. Many production systems use both, putting a small set of retrieved documents in the context alongside a concise system prompt.
+      </p>
+     </div>
+     <div id="sliding-window">
+      <h3>
+       Sliding Window
+      </h3>
+      <p>
+       A sliding window keeps only the most recent N tokens in context and drops everything older. This is the simplest approach and works for applications where recent context is what matters. Chatbots that only need to remember the last few exchanges can use a sliding window without any summarisation overhead. The limitation is that anything beyond the window is forgotten entirely, which breaks down for tasks that reference earlier context.
+      </p>
+     </div>
+    </section>
+    <section id="security-implications-of-long-context">
+     <h2>
+      8. Security Implications of Long Context
+     </h2>
+     <p>
+      A larger context window gives the model more text to work with, but it also gives an attacker more surface area to exploit. Research from Anthropic demonstrated that models with longer context windows are more vulnerable to jailbreaking attacks, where adversarial text buried deep in the context attempts to override the model's safety instructions.
+     </p>
+     <p>
+      The mechanism is straightforward. In a long context, the model's attention is spread across many tokens. Safety instructions in the system prompt get diluted when thousands of tokens of user-provided content follow them. An attacker can embed instructions in a retrieved document, a pasted article, or a long conversation history that steer the model toward producing harmful output. The larger the context, the more room there is to hide such instructions.
+     </p>
+     <p>
+      Mitigations include keeping contexts as small as possible, using delimiters to separate instructions from data (as covered in the prompt engineering guide), treating all user-provided content as untrusted, and monitoring model output for signs of successful injection. No single mitigation is sufficient. Defense in depth, combining prompt-level controls with output filtering and tool-level permissions, is necessary for any system processing untrusted input.
+     </p>
+    </section>
+    <section id="practical-guidelines">
+     <h2>
+      9. Practical Guidelines
+     </h2>
+     <p>
+      Based on everything covered so far, here are practical recommendations for working with context windows in production.
+     </p>
+     <div>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Situation
+         </th>
+         <th>
+          Recommendation
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          Analysing a single document under 100,000 tokens
+         </td>
+         <td>
+          Put the document directly in the context. Simpler than RAG and avoids retrieval errors. Place instructions after the document to mitigate the lost-in-the-middle effect.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Answering questions from a large, frequently updated knowledge base
+         </td>
+         <td>
+          Use RAG. Retrieve 3 to 5 relevant chunks per query. Keep the total context under 10,000 tokens for cost and latency.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Long multi-turn conversations
+         </td>
+         <td>
+          Implement conversation summarisation once the history exceeds half the context window. Keep the last 5 to 10 turns in full, summarise the rest.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Interactive applications needing fast response
+         </td>
+         <td>
+          Minimise context size. Target under 4,000 tokens of input for sub-second first-token latency. Use RAG with a small top-K rather than dumping large documents.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Handling untrusted user content
+         </td>
+         <td>
+          Use delimiters to separate user content from instructions. Keep context as small as possible. Monitor output for signs of prompt injection. Never put secrets in the system prompt.
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </section>
+    <section id="the-future-of-context-windows">
+     <h2>
+      10. The Future of Context Windows
+     </h2>
+     <p>
+      Context windows have grown 500x in three years, and there is active research on pushing them further. Google's Gemini 1.5 Pro already handles 2 million tokens, and experimental models have demonstrated effective attention over even longer sequences. Whether this growth continues depends on whether the quadratic scaling of attention can be circumvented at scale.
+     </p>
+     <p>
+      Several research directions are promising. Sparse attention mechanisms skip irrelevant token pairs entirely, reducing the compute from quadratic to near-linear for long sequences. Alternative architectures like Mamba and state space models replace the attention mechanism with a fixed-size recurrent state, which does not grow with sequence length at all. If these architectures prove as capable as Transformers for language tasks, the context window constraint may eventually disappear.
+     </p>
+     <p>
+      For now, the context window remains a practical constraint that shapes how LLM applications are built. The strategies in this guide, from RAG to summarisation to careful prompt ordering, exist because the window is finite. Understanding the constraint and designing around it is a core skill for anyone building with language models.
+     </p>
+     <aside>
+      <p>
+       SUMMARY
+      </p>
+      <p>
+       A context window is the maximum number of tokens a model can process in a single call, covering the system prompt, conversation history, retrieved documents, user message, and model output combined. The window is finite because self-attention scales quadratically with sequence length, though modern techniques have pushed windows from 4,000 tokens to over 2 million. Larger windows cost more, run slower, and are vulnerable to the lost-in-the-middle effect where the model ignores information in the middle of long contexts. Managing context well means keeping it lean through RAG, summarisation, and selective retention, and ordering information so the most important content is at the beginning and end. Security risks grow with context size because adversarial instructions have more room to hide.
+      </p>
+     </aside>
+    </section>
+    <section id="faq">
+     <h2>
+      Frequently Asked Questions
+     </h2>
+     <div>
+      <div>
+       <button aria-expanded="true">
+        <span>
+         What is a context window in AI?
+        </span>
+        <span>
+         ×
+        </span>
+       </button>
+       <p>
+        A context window is the amount of text an AI model can process in a single interaction. It includes the prompt, any retrieved documents, and the response. Everything the model sees must fit within this limit. Larger context windows allow longer documents but cost more and can introduce latency.
+       </p>
+      </div>
+      <div>
+       <button aria-expanded="false">
+        <span>
+         Why do context windows have a limit?
+        </span>
+        <span>
+         +
+        </span>
+       </button>
+      </div>
+      <div>
+       <button aria-expanded="false">
+        <span>
+         How does Pascal handle context windows for long financial documents?
+        </span>
+        <span>
+         +
+        </span>
+       </button>
+      </div>
+      <div>
+       <button aria-expanded="false">
+        <span>
+         What is lost-in-the-middle in AI models?
+        </span>
+        <span>
+         +
+        </span>
+       </button>
+      </div>
+     </div>
+    </section>
+    <section>
+     <p>
+      Pascal Academy
+     </p>
+     <p>
+      This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, agents, and context windows. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.
+     </p>
+     <a href="/pascal-academy/ai-fundamentals">
+      Explore AI Fundamentals
+      →
+     </a>
+    </section>
+   </div>
+  </article>
+ </div>
+ <div>
+  <ol>
+  </ol>
+ </div>
+</body>
+

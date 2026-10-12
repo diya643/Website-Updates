@@ -1,0 +1,25 @@
+/* Solutions: private equity & credit, banking — page-only parts */
+
+/* example workflow: numbered steps inside the teaser copy column */
+.wf-steps { list-style: none; margin: 4px 0 0; padding: 0; counter-reset: wf; border-top: 1px solid var(--line); max-width: 58ch; }
+.wf-steps li { counter-increment: wf; display: grid; grid-template-columns: 40px 1fr; gap: 0 4px; padding: 14px 0; border-bottom: 1px solid var(--line); color: var(--ink-2); font-size: 15px; line-height: 1.5; }
+.wf-steps li::before { content: counter(wf, decimal-leading-zero); font: 400 13px/1.75 var(--font-mono); color: var(--brand); }
+.wf-steps b { color: var(--ink); font-weight: 600; }
+.wf-note { font: 400 13px/1.5 var(--font-mono); color: var(--mute) !important; }
+
+/* hero comps slide: a five-row table fits the 16:9 slide */
+.pui-slide-t td .pui-cite { min-width: 14px; height: 14px; font-size: 9px; padding: 0 4px; margin-left: 2px; vertical-align: 0; }
+.pui-slide-t tr.med td { font-weight: 700; color: #9BE15D; border-bottom: 0; }
+
+/* player: policy check rows keep the value and tag aligned */
+.ucp-scene .pol { display: grid; grid-template-columns: 1fr 64px 84px; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 12.5px; color: var(--ink); }
+.ucp-scene .pol:last-child { border-bottom: 0; }
+.ucp-scene .pol > span:nth-child(2) { font-variant-numeric: tabular-nums; color: var(--ink-2); text-align: right; }
+.ucp-scene .pol .pui-tag { justify-self: end; }
+
+/* PE hero: the citation card sits below the clause table */
+.pui.float-lg.pe-hero { padding-bottom: 150px; }
+@media (max-width: 760px) { .pui.float-lg.pe-hero { padding-bottom: 190px; } }
+
+/* banking and investment banking heroes: the source / policy card sits fully below the window, clear of the table */
+.pui.float-lg.bk-hero, .pui.float-lg.ib-hero { padding-bottom: 164px; }

@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>Embeddings Explained | Pascal Academy</title>
+<meta name="description" content="A guide to embeddings for finance teams: what embeddings are, how they power semantic search and retrieval, and how they are used in investment research.">
+<link rel="canonical" href="https://pascalailabs.com/pascal-academy/guides/embeddings">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#052A2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pascal AI">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Embeddings Explained | Pascal Academy">
+<meta property="og:description" content="A guide to embeddings for finance teams: what embeddings are, how they power semantic search and retrieval, and how they are used in investment research.">
+<meta property="og:url" content="https://pascalailabs.com/pascal-academy/guides/embeddings">
+<meta property="og:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-embeddings.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Embeddings">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pascalailabs">
+<meta name="twitter:title" content="Embeddings Explained | Pascal Academy">
+<meta name="twitter:description" content="A guide to embeddings for finance teams: what embeddings are, how they power semantic search and retrieval, and how they are used in investment research.">
+<meta name="twitter:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-embeddings.png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=33a81822df">
+<link rel="stylesheet" href="/assets/pages/academy3.css?v=6b20df6ba8">
+<script src="/assets/site.js?v=cd66888c46" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV9WGBYMQR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SV9WGBYMQR');</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pascalailabs.com/#org",
+   "name": "Pascal AI Labs",
+   "alternateName": "Pascal AI",
+   "url": "https://pascalailabs.com/",
+   "logo": "https://pascalailabs.com/assets/pascal-logo.png",
+   "sameAs": [
+    "https://www.linkedin.com/company/pascal-ai-labs/",
+    "https://twitter.com/pascalailabs"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/embeddings#webpage",
+   "url": "https://pascalailabs.com/pascal-academy/guides/embeddings",
+   "name": "Embeddings Explained | Pascal Academy",
+   "description": "A guide to embeddings for finance teams: what embeddings are, how they power semantic search and retrieval, and how they are used in investment research.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://pascalailabs.com/#website"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "dateModified": "2026-08-01",
+   "breadcrumb": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/embeddings#breadcrumb"
+   },
+   "primaryImageOfPage": "https://pascalailabs.com/assets/og/pascal-academy-guides-embeddings.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pascalailabs.com/#website",
+   "url": "https://pascalailabs.com/",
+   "name": "Pascal AI",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/embeddings#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pascalailabs.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pascal Academy",
+     "item": "https://pascalailabs.com/pascal-academy"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AI fundamentals",
+     "item": "https://pascalailabs.com/pascal-academy/ai-fundamentals"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Embeddings",
+     "item": "https://pascalailabs.com/pascal-academy/guides/embeddings"
+    }
+   ]
+  },
+  {
+   "@type": "TechArticle",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/embeddings#article",
+   "headline": "Embeddings",
+   "description": "A guide to embeddings for finance teams: what embeddings are, how they power semantic search and retrieval, and how they are used in investment research.",
+   "url": "https://pascalailabs.com/pascal-academy/guides/embeddings",
+   "inLanguage": "en",
+   "dateModified": "2026-08-01",
+   "datePublished": "2026-08-01",
+   "author": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "isPartOf": {
+    "@type": "Collection",
+    "name": "Pascal Academy",
+    "url": "https://pascalailabs.com/pascal-academy"
+   },
+   "mainEntityOfPage": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/embeddings#webpage"
+   },
+   "image": "https://pascalailabs.com/assets/og/pascal-academy-guides-embeddings.png",
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Institutional investment teams"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/embeddings#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What are embeddings in AI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Embeddings are numerical representations of text where similar concepts are mapped to nearby points in a high-dimensional space. They allow a model to understand semantic similarity, so 'revenue growth' and 'top-line expansion' are recognized as related even though the words differ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How are embeddings used in finance applications?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Embeddings power semantic search, document retrieval, and clustering. In finance, they enable searching across filings for relevant passages, finding similar companies based on business descriptions, and organizing research by topic. They are the backbone of retrieval systems that find information based on meaning rather than keywords."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does Pascal use embeddings for financial research?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pascal uses embeddings to index filings, transcripts, and your internal documents so that research agents can retrieve relevant information based on semantic meaning. When you ask about margin expansion, the system finds passages discussing profitability improvements even if those exact words are not used. This makes retrieval more accurate than keyword search alone."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between embeddings and a vector database?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Embeddings are the numerical representations themselves. A vector database is the system that stores and searches through embeddings at scale. You generate embeddings from text, store them in a vector database, and query the database to find similar passages. They are two components of the same retrieval pipeline."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/" aria-label="Pascal AI home">
+      <img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/platform" aria-expanded="false" aria-haspopup="true">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-product">
+          <div class="mega-panel">
+            <div class="mp-col">
+              <a class="mp-feature" href="/platform">
+                <span class="mp-art" aria-hidden="true"><i></i><i></i><i></i></span>
+                <b>Platform overview</b>
+                <span>See how the Investment OS works.</span>
+              </a>
+              <p class="mp-label">Platform</p>
+              <a class="mp-link" href="/platform/context-graph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg> Context graph &amp; memory</a>
+              <a class="mp-link" href="/platform/mcp-apis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> MCP &amp; APIs</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/ask-pascal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Ask Pascal</b><span>Your AI research analyst</span></span></a>
+              <a class="mp-link" href="/ask-pascal/decision-traces"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg> Decision traces</a>
+              <a class="mp-link" href="/ask-pascal/cited-research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg> Cited research</a>
+              <a class="mp-link" href="/ask-pascal/screeners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg> Screeners</a>
+              <a class="mp-link" href="/ask-pascal/pascal-intel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg> Pascal Intel</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/pascal-agents"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><span><b>Pascal Agents</b><span>Run investment work end to end</span></span></a>
+              <a class="mp-link" href="/pascal-agents/autonomous-agents"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Autonomous agents</a>
+              <a class="mp-link" href="/pascal-agents/workflow-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg> Agentic workflow library</a>
+              <a class="mp-link" href="/pascal-agents/data-agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg> Pascal Data Agent</a>
+            </div>
+            <a class="mp-foot" href="/solutions/hedge-funds"><span class="chip">Industries</span><span><b>Pascal for your firm</b><span>Hedge funds, asset and wealth managers, banks, asset servicers, private equity and private credit, and corporate treasury</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/solutions/hedge-funds" aria-expanded="false" aria-haspopup="true">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-il">
+          <div class="mega-panel">
+              <a class="il-i" href="/solutions/hedge-funds"><span><b>Hedge Funds</b><small>Event briefs, reconciliations and DDQs</small></span></a>
+              <a class="il-i" href="/solutions/asset-wealth-management"><span><b>Asset &amp; Wealth Management</b><small>Research, mandate checks and client reporting</small></span></a>
+              <a class="il-i" href="/solutions/banking"><span><b>Banks &amp; Financial Institutions</b><small>Underwriting, covenant monitoring and KYC</small></span></a>
+              <a class="il-i" href="/solutions/asset-servicing"><span><b>Asset Servicing</b><small>Corporate actions, NAV checks and client queries</small></span></a>
+              <a class="il-i" href="/solutions/private-equity-credit"><span><b>Private Equity &amp; Private Credit</b><small>CIM screens, diligence and LP reporting</small></span></a>
+              <a class="il-i" href="/solutions/treasury-hedge-accounting"><span><b>Corporate Treasury &amp; Hedge Accounting</b><small>Exposures, effectiveness tests and hedge files</small></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/news" aria-expanded="false" aria-haspopup="true">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-list mega-news mega-news-ac">
+          <div class="mega-panel">
+            <div class="mn-col">
+              <p class="mp-label">News</p>
+              <a class="mp-link" href="/news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg> Newsroom</a>
+              <a class="mp-link" href="/news/founders-notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Founder's notes</a>
+            </div>
+            <div class="mn-col mn-ac">
+              <a class="mn-ac-head" href="/pascal-academy"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><b>Pascal Academy</b><span>Learn AI for institutional finance</span></span></a>
+              <a class="mp-link" href="/guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Desk guides</a>
+              <a class="mp-link" href="/pascal-academy/ai-fundamentals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg> AI fundamentals</a>
+              <a class="mp-link" href="/pascal-academy/ai-glossary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> AI glossary</a>
+              <a class="mp-link" href="/pascal-academy/workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> Workflows</a>
+              <a class="mp-link" href="/pascal-academy/prompt-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Prompt library</a>
+              <a class="mp-link" href="/pascal-academy/agent-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> Agent library</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-dark btn-sm" href="https://pascalailabs.com/demo">Book a demo</a>
+    </div>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <details open>
+    <summary>Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <p class="mm-label">Platform</p>
+    <a href="/platform">Platform overview</a>
+    <a href="/platform/context-graph">Context graph &amp; memory</a>
+    <a href="/platform/mcp-apis">MCP &amp; APIs</a>
+    <p class="mm-label">Ask Pascal</p>
+    <a href="/ask-pascal">Ask Pascal overview</a>
+    <a href="/ask-pascal/decision-traces">Decision traces</a>
+    <a href="/ask-pascal/cited-research">Cited research</a>
+    <a href="/ask-pascal/screeners">Screeners</a>
+    <a href="/ask-pascal/pascal-intel">Pascal Intel</a>
+    <p class="mm-label">Pascal Agents</p>
+    <a href="/pascal-agents">Pascal Agents overview</a>
+    <a href="/pascal-agents/autonomous-agents">Autonomous agents</a>
+    <a href="/pascal-agents/workflow-library">Agentic workflow library</a>
+    <a href="/pascal-agents/data-agent">Pascal Data Agent</a>
+  </details>
+  <details>
+    <summary>Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/solutions/hedge-funds">Hedge Funds</a>
+    <a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+    <a href="/solutions/banking">Banks &amp; Financial Institutions</a>
+    <a href="/solutions/asset-servicing">Asset Servicing</a>
+    <a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+    <a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+  </details>
+  <details>
+    <summary>News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/news">Newsroom</a>
+    <a href="/news/founders-notes">Founder's notes</a>
+    <p class="mm-label">Pascal Academy</p>
+    <a href="/pascal-academy">Academy home</a>
+    <a href="/guides">Desk guides</a>
+    <a href="/pascal-academy/ai-fundamentals">AI fundamentals</a>
+    <a href="/pascal-academy/ai-glossary">AI glossary</a>
+    <a href="/pascal-academy/workflows">Workflows</a>
+    <a href="/pascal-academy/prompt-library">Prompt library</a>
+    <a href="/pascal-academy/agent-library">Agent library</a>
+  </details>
+  <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+</div>
+
+<main id="main">
+<div class="ac ac-doc">
+<div class="rp" aria-hidden="true"><i></i></div>
+<div class="frame">
+  <header class="ah">
+    <div class="ah-l">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/pascal-academy">Pascal Academy</a><span aria-hidden="true">/</span><a href="/pascal-academy/ai-fundamentals">AI fundamentals</a><span aria-hidden="true">/</span><span aria-current="page">Embeddings</span></nav>
+      <p class="ah-k">Last updated August 2026</p>
+      <h1 class="ah-t">Embeddings</h1>
+      <p class="lead">How text becomes numbers, why similarity in vector space mirrors similarity in meaning, and the infrastructure that makes retrieval possible.</p>
+      <p class="ah-m">13 min read · Beginner-friendly with advanced sections</p>
+      <div class="ah-by"><span class="ah-av"><img src="/assets/favicon.svg" alt="" width="40" height="40"></span><span><b>Pascal Academy</b><span>AI fundamentals · Part 9 of 10</span></span></div>
+      <div class="ah-a"><button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button></div>
+    </div>
+    <div class="ah-r"><div class="th th-hero" aria-hidden="true"><div class="th-bz"><div class="th-scr g-deep"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><b>The geometry of meaning</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg><b>Similarity metrics</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><b>Semantic search</b></span></div></div></div></div></div>
+  </header>
+  <div class="ag">
+    <aside class="toc" aria-label="Table of contents">
+      <div class="toc-in">
+        <p class="toc-h">Table of contents</p>
+        <div class="toc-track"><span class="toc-fill"></span><ol data-spy><li><a href="#what-is-an-embedding">What Is an Embedding?</a></li><li><a href="#how-embeddings-work">How Embeddings Work</a></li><li><a href="#what-embeddings-are-used-for">What Embeddings Are Used For</a></li><li><a href="#embedding-models">Embedding Models</a></li><li><a href="#vector-databases">Vector Databases</a></li><li><a href="#embedding-quality-and-evaluation">Embedding Quality and Evaluation</a></li><li><a href="#practical-considerations">Practical Considerations</a></li><li><a href="#embeddings-in-the-ai-stack">Embeddings in the AI Stack</a></li><li><a href="#limitations-of-embeddings">Limitations of Embeddings</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></div>
+        <div class="toc-cta">
+          <p class="toc-cta-t">Take this guide with you.</p>
+          <p>Get the PDF in your inbox.</p>
+          <button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button>
+        </div>
+      </div>
+    </aside>
+    <article class="ac-prose" id="article">
+      <details class="toc-m"><summary>Table of contents</summary><ol><li><a href="#what-is-an-embedding">What Is an Embedding?</a></li><li><a href="#how-embeddings-work">How Embeddings Work</a></li><li><a href="#what-embeddings-are-used-for">What Embeddings Are Used For</a></li><li><a href="#embedding-models">Embedding Models</a></li><li><a href="#vector-databases">Vector Databases</a></li><li><a href="#embedding-quality-and-evaluation">Embedding Quality and Evaluation</a></li><li><a href="#practical-considerations">Practical Considerations</a></li><li><a href="#embeddings-in-the-ai-stack">Embeddings in the AI Stack</a></li><li><a href="#limitations-of-embeddings">Limitations of Embeddings</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<section class="ac-sec" id="what-is-an-embedding" aria-labelledby="what-is-an-embedding-h"><h2 id="what-is-an-embedding-h">What Is an Embedding?</h2>
+<p>Language models cannot read text and they largely process numbers. Before any model can generate, classify, or retrieve text, the text must be converted into a numerical representation that the model can work with. An embedding is that representation.</p>
+<p>An embedding is a list of numbers, called a vector, that represents the meaning of a piece of text. The key property of an embedding is that text with similar meaning produces vectors that are close together in the vector space. Two sentences about the same topic will have vectors that are near each other, even if they use entirely different words. Two sentences about unrelated topics will have vectors that are far apart.</p>
+<p>This is a different kind of representation from token IDs, which we covered in the first guide. A token ID is just an arbitrary number assigned to a token. The ID for the word cat might be 8420, and the ID for dog might be 3117. These numbers carry no information about the relationship between cats and dogs. Embeddings are different. The embedding for cat and the embedding for dog are close together in vector space because they are semantically related. The embedding for cat and the embedding for refrigerator are far apart because they are unrelated.</p>
+<aside class="ac-co ac-co-principle"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>Key principle</p><div class="ac-co-body"><p>Embeddings convert meaning into geometry. The distance between two vectors reflects the semantic distance between the texts they represent. This is what makes embeddings useful for search, clustering, classification, and retrieval. You can find relevant content by measuring distance in vector space rather than matching keywords.</p></div></aside>
+</section>
+<section class="ac-sec" id="how-embeddings-work" aria-labelledby="how-embeddings-work-h"><h2 id="how-embeddings-work-h">How Embeddings Work</h2>
+<p>An embedding model takes text as input and produces a fixed-length vector as output. The vector might have 384, 768, 1536, or 3072 dimensions, depending on the model. Each dimension is a single number, and the full vector is a point in a high-dimensional space.</p>
+<p>The embedding model is trained on large amounts of text using a simple objective. Texts that appear in similar contexts should get similar vectors, and texts that appear in different contexts should get different vectors. The model learns to produce vectors that capture semantic relationships by seeing millions of examples of which texts co-occur and which do not.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>How embedding models are trained</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>Embedding models use a contrastive learning objective. During training, the model sees pairs or groups of texts. Some pairs are positive, meaning they are semantically related, like a question and its answer, or two sentences from the same paragraph. Other pairs are negative, meaning they are unrelated. The model is trained to produce vectors where positive pairs are close together and negative pairs are far apart. This is repeated across millions of examples, and the model gradually learns a vector space that captures semantic relationships. Some modern embedding models, like those based on the contrastive language-image pretraining approach, extend this to multiple modalities, producing shared vector spaces where text and images can be compared directly.</p></div></details>
+<div class="ac-table"><table><thead><tr><th>Metric</th><th>How It Works</th></tr></thead><tbody><tr><td>Cosine similarity</td><td>Measures the angle between two vectors, ignoring their magnitude. Ranges from -1 to 1, where 1 means identical direction. The common choice for text embeddings because the length of the vector matters less than its direction.</td></tr><tr><td>Dot product</td><td>Multiplies corresponding elements of two vectors and sums the results. Faster to compute than cosine similarity but sensitive to vector magnitude. Works well when vectors are normalised to unit length, in which case dot product equals cosine similarity.</td></tr><tr><td>Euclidean distance</td><td>Measures the straight-line distance between two points in vector space. Less commonly used for text embeddings because it is sensitive to vector magnitude and does not align as well with semantic similarity.</td></tr></tbody></table></div>
+<h3 id="the-geometry-of-meaning">The Geometry of Meaning</h3>
+<p>The remarkable thing about embeddings is that the vector space they create has meaningful structure. Directions in the space correspond to semantic concepts. For example, in a well-trained embedding model, the direction from the vector for man to the vector for woman roughly corresponds to gender. Applying that same direction to the vector for king gives a vector close to queen. This is the classic king minus man plus woman equals queen example, and it demonstrates that embeddings capture relationships between words, not just individual word meanings.</p>
+<p>This geometric structure extends to phrases and sentences, not just individual words. The embedding of a question and the embedding of the answer to that question tend to be close in vector space, because they discuss the same topic from different angles. This is what makes embeddings work for retrieval. You embed the user's question and find documents whose embeddings are nearby.</p>
+<h3 id="similarity-metrics">Similarity Metrics</h3>
+<p>To find the closest vectors to a query vector, you need a way to measure distance or similarity between vectors. Three metrics are commonly used.</p>
+<p>In practice, cosine similarity is the standard choice for text embeddings. It is what most vector databases use as their default metric, and it is what embedding models are typically optimised for during training.</p>
+</section>
+<section class="ac-sec" id="what-embeddings-are-used-for" aria-labelledby="what-embeddings-are-used-for-h"><h2 id="what-embeddings-are-used-for-h">What Embeddings Are Used For</h2>
+<p>Embeddings are a foundational building block for many AI applications. Any task that involves finding similar text, grouping related content, or representing text as numbers for a machine learning model relies on embeddings.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's embeddings and vector search course covers embedding model selection, vector database configuration, and production deployment patterns. Reach out to learn about cohort programmes for your engineering team.</p><p><a class="ac-co-link" href="/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<h3 id="semantic-search-and-rag">Semantic Search and RAG</h3>
+<p>As covered in the RAG guide, embeddings power the retrieval step of a RAG system. Documents are chunked, each chunk is embedded, and the vectors are stored in a vector database. When a user asks a question, the question is embedded using the same model, and the system finds chunks whose vectors are closest to the question vector. This is semantic search. It finds relevant content based on meaning rather than keyword matching, so a question about refund policies can retrieve a document titled return and exchange guidelines even though no words overlap.</p>
+<h3 id="clustering-and-classification">Clustering and Classification</h3>
+<p>Embeddings let you group similar documents together without labelled training data. A clustering algorithm like k-means applied to document embeddings will group documents by topic, because documents on the same topic have nearby vectors. Similarly, a classification model can use embeddings as input features. Instead of training a model on raw text, you embed the text and train a classifier on the vectors. This is faster and often more accurate than training from scratch, because the embedding model has already learned useful representations of language.</p>
+<h3 id="recommendation">Recommendation</h3>
+<p>If you embed product descriptions, user reviews, and search queries into the same vector space, you can recommend products by finding items whose embeddings are close to what the user has shown interest in. The same principle applies to content recommendation, where articles or videos are embedded and compared to the user's reading or viewing history.</p>
+<h3 id="deduplication-and-entity-resolution">Deduplication and Entity Resolution</h3>
+<p>When integrating data from multiple sources, the same entity often appears with slightly different text. Two product listings might describe the same item with different wording. Embedding both descriptions and measuring their similarity lets you identify near-duplicates automatically. This is useful for data cleaning, knowledge graph construction, and entity resolution.</p>
+</section>
+<section class="ac-sec" id="embedding-models" aria-labelledby="embedding-models-h"><h2 id="embedding-models-h">Embedding Models</h2>
+<p>Several embedding models are widely used, each with different characteristics in terms of dimensionality, performance, and cost.</p>
+<div class="ac-table"><table><thead><tr><th>Model</th><th>Dimensions</th><th>Notes</th></tr></thead><tbody><tr><td>OpenAI text-embedding-3-large</td><td>3072</td><td>High performance, supports dimensionality reduction for faster search at a small accuracy cost. Proprietary, API-based.</td></tr><tr><td>OpenAI text-embedding-3-small</td><td>1536</td><td>Lower cost than the large variant with good performance for most use cases. Proprietary, API-based.</td></tr><tr><td>Cohere embed-v4</td><td>1536</td><td>Strong multilingual performance. Supports both text and image embeddings in a shared space. Proprietary, API-based.</td></tr><tr><td>Google Gemini embedding-001</td><td>3072</td><td>Multilingual, supports up to 2048 input tokens. Integrated with Google Cloud. Proprietary, API-based.</td></tr><tr><td>BGE (BAAI General Embedding)</td><td>768 or 1024</td><td>Open source, available in multiple sizes. Strong performance on benchmarks. Can be self-hosted for data privacy.</td></tr><tr><td>E5 (Microsoft)</td><td>768 or 1024</td><td>Open source, trained with contrastive learning. Good multilingual support. Can be self-hosted.</td></tr><tr><td>MiniLM (Sentence Transformers)</td><td>384</td><td>Small, fast, and lightweight. Lower accuracy than larger models but suitable for prototyping and low-latency applications. Open source.</td></tr></tbody></table></div>
+<p>The choice of embedding model affects retrieval quality, cost, and latency. Larger models with more dimensions generally produce better embeddings but are slower and more expensive. The right choice depends on the use case, the volume of data, and whether data privacy requirements favour self-hosted open source models over proprietary API-based ones.</p>
+</section>
+<section class="ac-sec" id="vector-databases" aria-labelledby="vector-databases-h"><h2 id="vector-databases-h">Vector Databases</h2>
+<p>Embeddings are only useful if you can search through them efficiently. A vector database stores embedding vectors alongside their original text and metadata, and provides fast similarity search across millions or billions of vectors.</p>
+<div class="ac-table"><table><thead><tr><th>Database</th><th>Characteristics</th></tr></thead><tbody><tr><td>Pinecone</td><td>Managed service, no infrastructure to operate. Supports filtering, hybrid search, and automatic indexing. Proprietary.</td></tr><tr><td>Weaviate</td><td>Open source with managed cloud option. Supports hybrid search combining vector and keyword retrieval. Includes built-in modules for common embedding models.</td></tr><tr><td>Qdrant</td><td>Open source, written in Rust for performance. Supports filtering, payload storage, and quantisation for memory efficiency.</td></tr><tr><td>Milvus</td><td>Open source, designed for scale to billions of vectors. Distributed architecture. Supports multiple index types.</td></tr><tr><td>Chroma</td><td>Open source, lightweight, designed for developer simplicity. Good for prototyping and smaller-scale applications.</td></tr><tr><td>pgvector</td><td>PostgreSQL extension for vector search. Lets you store vectors alongside relational data in the same database. Good for applications that already use PostgreSQL.</td></tr></tbody></table></div>
+<h3 id="brute-force-vs-approximate-search">Brute Force vs Approximate Search</h3>
+<p>The simplest way to find the closest vectors to a query is to compute the similarity between the query and every vector in the database, then return the top results. This is called brute force search, and it is perfectly accurate. For a database of 10,000 vectors, it is fast. For a database of 100 million vectors, it is too slow for real-time queries.</p>
+<p>Vector databases solve this with approximate nearest neighbour search. Instead of checking every vector, they use indexing structures that partition the vector space, allowing the search to skip large portions of the database that are unlikely to contain the closest vectors. The result is a small loss of accuracy, meaning the exact nearest neighbours might not always be found, in exchange for a large speed improvement.</p>
+<h3 id="popular-vector-databases">Popular Vector Databases</h3>
+<p>Several vector databases are commonly used, each with different strengths in terms of scale, features, and ease of deployment.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>Indexing algorithms</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>Several indexing algorithms power approximate nearest neighbour search. HNSW, or hierarchical navigable small world, builds a graph where each vector connects to its nearby neighbours. Search traverses the graph from a starting point, moving toward vectors that are closer to the query. IVF, or inverted file index, clusters vectors into groups and only searches the clusters closest to the query. PQ, or product quantisation, compresses vectors into smaller representations to reduce memory usage. Many vector databases combine these techniques, using IVF to narrow the search space and HNSW for fast traversal within each cluster. The choice of index affects the trade-off between speed, accuracy, and memory usage.</p></div></details>
+</section>
+<section class="ac-sec" id="embedding-quality-and-evaluation" aria-labelledby="embedding-quality-and-evaluation-h"><h2 id="embedding-quality-and-evaluation-h">Embedding Quality and Evaluation</h2>
+<p>Not all embedding models are equally good. Choosing the right model requires understanding what makes an embedding good and how to measure it.</p>
+<h3 id="what-makes-a-good-embedding">What Makes a Good Embedding</h3>
+<p>A good embedding captures semantic similarity accurately. Sentences that mean the same thing should have vectors that are close together. Sentences that mean different things should have vectors that are far apart. The embedding should also generalise across topics, languages, and writing styles. An embedding model trained only on news articles may perform poorly on legal text or code.</p>
+<h3 id="evaluation-benchmarks">Evaluation Benchmarks</h3>
+<p>Embedding models are evaluated on standard benchmarks that test their ability to capture semantic relationships. The MTEB, or Massive Text Embedding Benchmark, evaluates models across several tasks including retrieval, classification, clustering, and semantic textual similarity. MS MARCO evaluates retrieval quality on real web search queries. BEIR provides a collection of datasets for evaluating zero-shot retrieval across domains.</p>
+<p>Benchmark scores give a rough sense of model quality, but they do not always reflect performance on your specific data. The best approach is to build a small evaluation set of queries and relevant documents from your domain, embed them with candidate models, and measure which model retrieves the correct documents with the highest accuracy.</p>
+</section>
+<section class="ac-sec" id="practical-considerations" aria-labelledby="practical-considerations-h"><h2 id="practical-considerations-h">Practical Considerations</h2>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's RAG engineering course covers embedding model selection, evaluation methodologies, and vector database deployment. Reach out to learn about team training options.</p><p><a class="ac-co-link" href="/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<h3 id="input-length">Input Length</h3>
+<p>Embedding models have a maximum input length, typically measured in tokens. A model might accept up to 512 tokens, which is roughly 400 words. If you try to embed a longer document, the model will truncate it, potentially losing important information. This is why RAG systems chunk documents before embedding, as covered in the RAG guide. The chunk size should fit within the embedding model's input limit.</p>
+<h3 id="normalisation">Normalisation</h3>
+<p>Some embedding models produce normalised vectors, meaning each vector has a length of 1. Others produce unnormalised vectors. If you are using cosine similarity, normalisation does not matter because cosine similarity ignores magnitude. If you are using dot product, normalisation is important because dot product is affected by vector length. Check whether your model produces normalised vectors and configure your vector database accordingly.</p>
+<h3 id="cost-and-latency">Cost and Latency</h3>
+<p>Embedding text costs money and takes time. For API-based models, you pay per token for embedding. For a knowledge base of one million chunks averaging 200 tokens each, the embedding cost is 200 million tokens. This is a one-time cost unless the data changes. Query-time embedding is cheap because each query is a single short text. Latency at query time is dominated by the vector database search, not the embedding, unless the query is very long.</p>
+<h3 id="multilingual-support">Multilingual Support</h3>
+<p>If your application handles multiple languages, choose an embedding model with multilingual support. These models are trained on text in many languages and produce a shared vector space where a question in Hindi and a document in English can be compared directly. Models without multilingual training will produce poor results when the query and the documents are in different languages.</p>
+</section>
+<section class="ac-sec" id="embeddings-in-the-ai-stack" aria-labelledby="embeddings-in-the-ai-stack-h"><h2 id="embeddings-in-the-ai-stack-h">Embeddings in the AI Stack</h2>
+<p>Embeddings sit at a specific layer in the AI application stack, and understanding where they fit helps clarify the relationship between the components covered in this series.</p>
+<p>At the bottom is the language model itself, trained on trillions of tokens, which generates text. Above that is the embedding model, which converts text into vectors for search and retrieval. Above that is the vector database, which stores and searches those vectors. Above that is the RAG system, which orchestrates retrieval and generation. And above that are agents, which use all of these components to plan and execute multi-step workflows.</p>
+<p>Embeddings are also used inside language models themselves. The Transformer architecture uses learned vector representations of tokens as its internal representation of text. The embedding models we have been discussing in this guide are specialised models trained specifically to produce good vectors for search and retrieval, but the underlying concept is the same. Converting text into vectors that capture meaning is fundamental to how all modern AI systems process language.</p>
+</section>
+<section class="ac-sec" id="limitations-of-embeddings" aria-labelledby="limitations-of-embeddings-h"><h2 id="limitations-of-embeddings-h">Limitations of Embeddings</h2>
+<p>Embeddings are powerful, but they have limitations that are worth understanding.</p>
+<aside class="ac-co ac-co-summary"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>Summary</p><div class="ac-co-body"><p>An embedding is a numerical vector that represents the meaning of a piece of text. Texts with similar meaning produce vectors that are close together in vector space, and texts with different meanings produce vectors that are far apart. This property lets you find relevant content by measuring vector distance rather than matching keywords. Embedding models are trained using contrastive learning, which teaches them to produce similar vectors for related texts and different vectors for unrelated texts. Cosine similarity is the standard metric for comparing vectors. Embeddings power semantic search and RAG, clustering and classification, recommendation, and deduplication. Vector databases store embeddings and provide fast approximate nearest neighbour search through indexing algorithms like HNSW and IVF. The choice of embedding model affects retrieval quality, cost, and latency, and should be evaluated on domain-specific data rather than relying on benchmark scores alone. Embeddings have limitations. They compress text into fixed-length vectors, losing detail. They struggle with negation and domain-specific vocabulary. They capture similarity but not relationship structure. For structured relationships, knowledge graphs are the appropriate tool.</p></div></aside>
+<h3 id="loss-of-information">Loss of Information</h3>
+<p>An embedding compresses a piece of text into a fixed-length vector. This compression loses information. A 500-word document and a 10-word sentence might both produce a 768-dimensional vector. The vector captures the dominant semantic content but discards details, nuance, and structure. This is why chunking matters. A chunk that is too large produces an embedding that averages over too many topics, diluting the signal.</p>
+<h3 id="no-understanding-of-negation">No Understanding of Negation</h3>
+<p>Embeddings struggle with negation. The sentence I like this product and I do not like this product can produce similar embeddings because the words are nearly identical. The meaning is opposite, but the vector similarity is high. This is a known limitation of embedding-based retrieval and a reason why hybrid search, combining vector search with keyword search, can outperform pure vector search on certain queries.</p>
+<h3 id="domain-sensitivity">Domain Sensitivity</h3>
+<p>Embedding models trained on general text may not capture domain-specific relationships well. Medical text, legal text, and code use specialised vocabulary and sentence structures that differ from general web text. A general-purpose embedding model may produce poor results on these domains. Fine-tuning an embedding model on domain-specific data, or choosing a model pretrained on relevant text, can improve performance.</p>
+<h3 id="no-relationship-structure">No Relationship Structure</h3>
+<p>Embeddings capture similarity, not structure. They can tell you that two texts are related, but they cannot tell you how they are related. For structured relationships, as covered in the knowledge graphs guide, a graph representation is more appropriate. Embeddings and knowledge graphs are complementary. Embeddings handle semantic similarity, and knowledge graphs handle structured relationships.</p>
+</section>
+<aside class="ac-about"><p class="ac-about-h">About this guide</p><p>This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, agents, context windows, knowledge graphs, hallucinations, reasoning models, embeddings, and MCP. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.</p></aside>
+    </article>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What are embeddings in AI?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Embeddings are numerical representations of text where similar concepts are mapped to nearby points in a high-dimensional space. They allow a model to understand semantic similarity, so 'revenue growth' and 'top-line expansion' are recognized as related even though the words differ.</div></details>
+<details class="faq-item"><summary>How are embeddings used in finance applications?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Embeddings power semantic search, document retrieval, and clustering. In finance, they enable searching across filings for relevant passages, finding similar companies based on business descriptions, and organizing research by topic. They are the backbone of retrieval systems that find information based on meaning rather than keywords.</div></details>
+<details class="faq-item"><summary>How does Pascal use embeddings for financial research?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal uses embeddings to index filings, transcripts, and your internal documents so that research agents can retrieve relevant information based on semantic meaning. When you ask about margin expansion, the system finds passages discussing profitability improvements even if those exact words are not used. This makes retrieval more accurate than keyword search alone.</div></details>
+<details class="faq-item"><summary>What is the difference between embeddings and a vector database?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Embeddings are the numerical representations themselves. A vector database is the system that stores and searches through embeddings at scale. You generate embeddings from text, store them in a vector database, and query the database to find similar passages. They are two components of the same retrieval pipeline.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kl" aria-labelledby="kl-h">
+    <h2 class="sx-t" id="kl-h">Keep learning</h2>
+    <div class="kl-g"><a class="gc" href="/pascal-academy/guides/model-context-protocol"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-teal"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg><b>The MCP client</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg><b>The MCP server</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg><b>Communication</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 10</span><h3 class="gc-t">Model Context Protocol (MCP)</h3><p class="gc-m">13 min read</p></div></a><a class="gc" href="/pascal-academy/guides/large-language-models"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-mint"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg><b>Pre-training</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"/></svg><b>Supervised fine-tuning</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><b>Human feedback (RLHF)</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 01</span><h3 class="gc-t">Large language models (LLMs)</h3><p class="gc-m">12 min read</p></div></a><a class="gc" href="/guides/ai-for-hedge-funds"><div class="th" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-teal"><img src="/assets/shots/shot-agent-table.webp" alt="Pascal agent output: a street vs management framing table for Sea Limited with citations" width="1600" height="844" loading="lazy" decoding="async"></div></div></div><div class="gc-b"><span class="pill">Desk guide</span><h3 class="gc-t">AI for Hedge Funds</h3><p class="gc-m">24 min read</p></div></a></div>
+  </section>
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">Ask your first question with your firm's context.<br><span style="color:var(--mint-2)">A walkthrough with your own documents connected.</span></h2>
+  <div class="actions">
+    <a class="btn btn-white" href="https://pascalailabs.com/demo">Book a demo</a>
+  </div>
+</section>
+
+<dialog class="ac-gate" id="pdf-gate" aria-labelledby="gate-h">
+  <div class="ac-gate-in">
+    <div class="ac-gate-side">
+      <p class="eyebrow">Pascal Academy · PDF</p>
+      <p class="ac-gate-t">Embeddings</p>
+      <p class="ac-gate-m">13 min read</p>
+      <div class="ac-gate-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b><i></i><i></i></div>
+    </div>
+    <div class="ac-gate-main">
+      <button class="ac-gate-x" type="button" data-gate-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      <form class="ac-gate-form" data-gate-form data-guide="Embeddings" data-slug="embeddings" data-pdf="/assets/academy/pdf/embeddings.pdf" novalidate>
+        <h2 id="gate-h">Get this guide as a PDF</h2>
+        <p class="ac-gate-sub">Tell us where to send it and we will email you the PDF.</p>
+        <label>Full name<input name="name" autocomplete="name" required></label>
+        <label>Work email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Organization<input name="organization" autocomplete="organization" required></label>
+        <p class="ac-gate-err" role="alert" hidden></p>
+        <button class="btn btn-dark" type="submit">Email me the PDF</button>
+        <p class="ac-gate-fine">By submitting, you agree to be contacted about Pascal Academy.</p>
+      </form>
+      <div class="ac-gate-done" hidden>
+        <span class="ac-gate-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <h2>Check your inbox.</h2>
+        <p>We have sent <b>Embeddings</b> to <span data-gate-email></span>.</p>
+        <button class="btn btn-line" type="button" data-gate-close>Back to the guide</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="/assets/pages/academy3.js?v=4f48f13d9f" defer></script>
+</main>
+<footer class="footer">
+  <div class="frame">
+    <div class="footer-grid">
+      <div>
+        <a href="/" aria-label="Pascal AI home"><img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24" loading="lazy"></a>
+        <p class="footer-blurb">The Investment OS for asset and wealth managers, asset servicers, corporate treasury, banks and financial institutions, private equity and private credit firms, and hedge funds.</p>
+      </div>
+      <nav aria-label="Platform">
+        <p class="fh">Platform</p>
+        <ul>
+          <li><a href="/platform">Platform overview</a></li>
+          <li><a href="/platform/context-graph">Context graph &amp; memory</a></li>
+          <li><a href="/platform/mcp-apis">MCP &amp; APIs</a></li>
+          <li><a href="/solutions/ai-transformation">AI transformation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Products">
+        <p class="fh">Products</p>
+        <ul>
+          <li><a href="/ask-pascal">Ask Pascal</a></li>
+          <li><a href="/ask-pascal/cited-research">Cited research</a></li>
+          <li><a href="/ask-pascal/screeners">Screeners</a></li>
+          <li><a href="/pascal-agents">Pascal Agents</a></li>
+          <li><a href="/pascal-agents/workflow-library">Workflow library</a></li>
+          <li><a href="/pascal-agents/data-agent">Pascal Data Agent</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Industries">
+        <p class="fh">Industries</p>
+        <ul>
+          <li><a href="/solutions/hedge-funds">Hedge Funds</a></li>
+          <li><a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a></li>
+          <li><a href="/solutions/banking">Banks &amp; Financial Institutions</a></li>
+          <li><a href="/solutions/asset-servicing">Asset Servicing</a></li>
+          <li><a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a></li>
+          <li><a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="News">
+        <p class="fh">News</p>
+        <ul>
+          <li><a href="/news">Newsroom</a></li>
+          <li><a href="/news/founders-notes">Founder's notes</a></li>
+          <li><a href="https://vibhavviswanathan.substack.com" rel="noopener">Alpha &amp; Agents</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="fh">Company</p>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/security">Security</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/pascal-academy">Pascal Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pascal AI Labs</span>
+      <span><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms-of-use">Terms</a> &middot; <a href="https://www.linkedin.com/company/pascal-ai-labs/" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/pascalailabs" rel="noopener">X</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+{
+ "items": [
+  {
+   "cat": "Company Research",
+   "n": "01",
+   "title": "Company Primer Builder",
+   "when": "When you need a structured one-page overview of a company you are starting to cover.",
+   "prompt": "You are an equity research analyst. Build a one-page company primer for [COMPANY NAME] covering business model, revenue segments, key geographies, competitive position, and the three financial metrics that matter most for this business. Keep each section to 3-4 sentences. Flag any areas where public disclosure is thin or where the business model is hard to assess from filings alone."
+  },
+  {
+   "cat": "Company Research",
+   "n": "02",
+   "title": "Competitive Positioning Map",
+   "when": "When you need to understand who the real competitors are and where the structural advantages sit.",
+   "prompt": "Map the competitive positioning for [COMPANY NAME]. Identify the top 5 direct competitors, their estimated market share, and the one structural advantage each holds. For [COMPANY NAME], identify the two biggest competitive threats and the one moat that is hardest to replicate. Explain your reasoning for each."
+  },
+  {
+   "cat": "Company Research",
+   "n": "03",
+   "title": "Management & Governance Assessment",
+   "when": "When you are assessing the quality and alignment of leadership before taking a position.",
+   "prompt": "Summarize the leadership team and governance structure at [COMPANY NAME]. Cover CEO tenure and track record, board composition, insider ownership levels, and any recent executive departures or appointments. Flag governance concerns that would matter to an institutional investor, including related-party transactions, dual-class share structures, or compensation plans that seem misaligned with shareholder returns."
+  },
+  {
+   "cat": "Earnings",
+   "n": "04",
+   "title": "Earnings Call Synthesis",
+   "when": "When you need to extract the signal from a 60-minute earnings call in under five minutes.",
+   "prompt": "Analyze the following earnings call transcript for [COMPANY NAME]. Extract the three most important management commentary points, changes in guidance, and any tone differences between the prepared remarks and the Q&amp;A. Note where management was evasive or where the tone was notably different from prior quarters. Flag any question where the answer felt rehearsed or incomplete.\n[INSERT TRANSCRIPT]"
+  },
+  {
+   "cat": "Earnings",
+   "n": "05",
+   "title": "Guidance & Estimate Revision Tracker",
+   "when": "When you need to see where management guidance diverges from what the Street expects.",
+   "prompt": "Using the following consensus estimates and management guidance for [COMPANY NAME], identify where guidance diverges from sell-side expectations. For each divergence, classify it as above, in line, or below consensus. Flag the line items where the gap is widest and suggest what would need to happen for the company to hit the guided range. Note whether guidance was raised, lowered, or maintained.\n\n[INSERT CONSENSUS AND GUIDANCE DATA]"
+  },
+  {
+   "cat": "Earnings",
+   "n": "06",
+   "title": "Post-Earnings KPI Dashboard",
+   "when": "When you need a structured view of how the key operating metrics trended quarter over quarter.",
+   "prompt": "From the following earnings release for [COMPANY NAME], extract the 8 key operating metrics that matter most for this business model. For each, compare to the prior quarter and prior year, calculate the change in absolute and percentage terms, and note whether the trend is accelerating, decelerating, or stable. Flag any metric where the company changed its definition or reporting methodology.\n\n[INSERT EARNINGS RELEASE]"
+  },
+  {
+   "cat": "Modelling",
+   "n": "07",
+   "title": "Model Architecture & Assumption Framework",
+   "when": "When you are starting a new model and need to align on structure and assumptions before writing formulas.",
+   "prompt": "You are a financial modelling specialist. For [COMPANY NAME], propose a DCF model structure including revenue build approach, margin assumptions, working capital drivers, and the three sensitivity variables that would have the largest impact on valuation. Group assumptions by category and note which ones require primary research versus public data. Suggest the output tabs and the key summary metrics to display on a dashboard.\n\n[INSERT COMPANY DESCRIPTION AND FINANCIAL SUMMARY]"
+  },
+  {
+   "cat": "Modelling",
+   "n": "08",
+   "title": "Scenario Design & Sensitivity Testing",
+   "when": "When you need to stress-test a model and identify where valuation risk concentrates.",
+   "prompt": "Design a three-scenario framework for [COMPANY NAME] covering base, bull, and bear cases. For each scenario, specify what changes in revenue growth, margin trajectory, and capital intensity. Identify the two two-way sensitivity tables that would best illustrate where valuation risk concentrates. Explain why each sensitivity is worth running and what decision it would inform.\n\n[INSERT BASE CASE ASSUMPTIONS]"
+  },
+  {
+   "cat": "Modelling",
+   "n": "09",
+   "title": "Valuation Cross-Check",
+   "when": "When you need to triangulate a DCF output against market-based valuation methods.",
+   "prompt": "Using the following trading comparables and precedent transactions for [COMPANY NAME], build a valuation football field. Identify which multiples are most appropriate for this business model, note any outliers in the comp set, and calculate the implied per-share value range. Flag where the current market price sits relative to this range and what that implies about market expectations.\n\n[INSERT COMP DATA AND PRECEDENT TRANSACTIONS]"
+  },
+  {
+   "cat": "Comps",
+   "n": "10",
+   "title": "Comparable Set Builder",
+   "when": "When you need to build a comp set from scratch and decide what belongs and what does not.",
+   "prompt": "Identify 8-10 comparable companies for [COMPANY NAME] in the [SECTOR] sector. For each, note market cap, revenue, EBITDA margin, revenue growth rate, and the primary valuation multiple used in this sub-industry. Rank them by similarity to [COMPANY NAME] based on business model, end markets, and scale. Flag any that should be excluded as outliers and explain why.\n\n[INSERT COMPANY DESCRIPTION]"
+  },
+  {
+   "cat": "Comps",
+   "n": "11",
+   "title": "Trading Multiples Benchmark",
+   "when": "When you need to see where a company trades relative to its peers and understand why.",
+   "prompt": "Using the following comp set, calculate EV/Revenue, EV/EBITDA, and P/E for each company. Identify the median, 25th percentile, and 75th percentile for each multiple. Flag companies trading at a meaningful premium or discount to the median and explain the likely operational reason for the divergence. Note which multiples are most reliable for this sub-industry and which are distorted by one-time factors.\n\n[INSERT COMP SET DATA]"
+  },
+  {
+   "cat": "Comps",
+   "n": "12",
+   "title": "Precedent Transaction Analysis",
+   "when": "When you need to understand what acquirers have actually paid for similar businesses.",
+   "prompt": "From the following M&amp;A transactions in [SECTOR] over the past 3 years, extract deal value, target revenue, target EBITDA, and the implied transaction multiples. Group by deal type (strategic, financial sponsor, take-private). Identify whether takeout premiums are trending up or down. Flag any transactions that are not truly comparable and explain why. Calculate the median and range for each multiple type.\n\n[INSERT TRANSACTION DATA]"
+  },
+  {
+   "cat": "IC Memos",
+   "n": "13",
+   "title": "Investment Thesis Structuring",
+   "when": "When you have a view forming and need to structure it into something an IC can evaluate in 90 seconds.",
+   "prompt": "Structure an investment thesis for [COMPANY NAME] as a [LONG/SHORT] idea. Cover the core argument in three sentences, the three catalysts that will drive the stock toward your target, the two principal risks, and the expected holding period. Write it for an IC audience that has 90 seconds to form a view. Avoid jargon and lead with the single most important point.\n\n[INSERT YOUR RESEARCH NOTES]"
+  },
+  {
+   "cat": "IC Memos",
+   "n": "14",
+   "title": "IC Memo First Draft",
+   "when": "When your research is done and you need to turn it into a structured memo your committee can act on.",
+   "prompt": "Draft an IC memo for a [LONG/SHORT] position in [COMPANY NAME]. Structure it as investment thesis, key drivers, financial summary, valuation approach, risk factors, and position sizing recommendation. Keep it to 800 words. Write in the house style of a fundamentals-driven long/short fund. Lead each section with the conclusion and follow with supporting detail. Do not include any recommendation the data does not support.\n\n[INSERT YOUR RESEARCH AND ANALYSIS]"
+  },
+  {
+   "cat": "IC Memos",
+   "n": "15",
+   "title": "Risk Factor Decomposition",
+   "when": "When you have a thesis and need to pressure-test it before presenting to the committee.",
+   "prompt": "For the following investment thesis on [COMPANY NAME], identify the five things that could go wrong. For each risk, classify it as company-specific, sector-level, or macro. Rate each on probability (high, medium, low) and impact (high, medium, low). Suggest what monitoring signals would tell you the risk is materializing, and what the response would be if it did.\n\n[INSERT INVESTMENT THESIS]"
+  },
+  {
+   "cat": "Portfolio",
+   "n": "16",
+   "title": "Position Monitor & Catalyst Tracker",
+   "when": "When you need to review existing positions and identify where the thesis is under pressure.",
+   "prompt": "Using the following portfolio holdings and current positions, identify the three positions where the investment thesis is most at risk. For each, note what has changed since initiation, whether the catalysts are still intact, and whether the position sizing still makes sense relative to conviction. Flag any position where the downside case has become more likely than at initiation.\n\n[INSERT PORTFOLIO HOLDINGS AND THESIS NOTES]"
+  },
+  {
+   "cat": "Portfolio",
+   "n": "17",
+   "title": "Earnings Season Prep",
+   "when": "When earnings season is approaching and you need to prepare for every portfolio company reporting.",
+   "prompt": "For the following portfolio companies reporting in the next two weeks, identify the three metrics to watch for each, the consensus expectations, and what would constitute a positive versus negative surprise. Flag any companies where the setup into the print looks risky based on recent estimate revisions, price action, or sector-specific headwinds. Suggest one question to investigate for each name before the print.\n\n[INSERT PORTFOLIO COMPANIES AND POSITIONS]"
+  },
+  {
+   "cat": "Communication",
+   "n": "18",
+   "title": "Investor Letter Drafting",
+   "when": "When you need to communicate quarterly performance and positioning to limited partners.",
+   "prompt": "Draft a quarterly investor letter covering portfolio performance, attribution by sector, two wins and two losses from the quarter, and the outlook for the next 90 days. Keep it under 400 words and write in the voice of a fundamentals-driven portfolio manager addressing limited partners. Lead with the most important takeaway, not with performance numbers. Avoid jargon your LPs would not use themselves.\n\n[INSERT PERFORMANCE DATA AND ATTRIBUTION]"
+  }
+ ],
+ "components": [
+  {
+   "k": "Role",
+   "v": "“You are a senior equity analyst”"
+  },
+  {
+   "k": "Task",
+   "v": "“Build a one-page primer”"
+  },
+  {
+   "k": "Context",
+   "v": "Company, sector, time period"
+  },
+  {
+   "k": "Data",
+   "v": "The actual numbers to work from"
+  },
+  {
+   "k": "Format",
+   "v": "Table, bullet points, memo"
+  },
+  {
+   "k": "Constraints",
+   "v": "Word count, tone, audience"
+  }
+ ],
+ "mistakes": [
+  {
+   "k": "Vague task description",
+   "v": "“Analyze this company” gives too little direction. Specify the type of analysis, the audience, and the format you need."
+  },
+  {
+   "k": "Missing assumptions",
+   "v": "If your forecast relies on specific growth rates or margin targets, include them. The model cannot infer your assumptions from context."
+  },
+  {
+   "k": "Unclear output expectations",
+   "v": "Not specifying format, length or tone produces outputs that need significant reformatting before they are usable."
+  },
+  {
+   "k": "Treating AI output as a conclusion",
+   "v": "AI can draft the commentary, but it cannot know what actually drove the variance. Always validate against real operational data."
+  },
+  {
+   "k": "Chain-of-thought prompting",
+   "v": "For complex analytical tasks, structure your prompt to ask the model to reason step by step. Ask it to show assumptions, logic and conclusions separately. This improves output quality and makes errors easier to catch. The model that shows its work is easier to verify than the one that hands you a number."
+  }
+ ],
+ "bounds": [
+  {
+   "k": "Final investment decisions",
+   "v": "The decision to commit capital is a judgment call that weighs asymmetric information, portfolio context and risk tolerance. AI can inform the decision. It cannot make it."
+  },
+  {
+   "k": "Regulated financial judgments",
+   "v": "Accounting policy elections, impairment assessments and revenue recognition determinations require documented professional judgment. These cannot be delegated to a model."
+  },
+  {
+   "k": "Confidential deal analysis",
+   "v": "Transaction-related forecasts carry strict confidentiality obligations. Do not input deal-specific data into any tool without an enterprise agreement that covers the use case."
+  },
+  {
+   "k": "Material non-public information",
+   "v": "Never input MNPI into a consumer AI tool. If your firm has an enterprise deployment with appropriate data controls, confirm what is and is not permitted before using it."
+  }
+ ],
+ "faqs": [
+  [
+   "Can AI help with investment research and modelling?",
+   "Yes. AI can support drafting company primers, structuring earnings analysis, building model frameworks, and generating first drafts of IC memos. The investment judgment and assumption ownership must remain with the analyst, and human review is essential before any AI-assisted output informs a decision."
+  ],
+  [
+   "What is the safest way to use AI in institutional finance?",
+   "Use only AI tools approved by your firm's compliance and IT teams. Avoid inputting material non-public information into any tool without an enterprise data agreement. Treat every AI output as a first draft requiring verification against source data."
+  ],
+  [
+   "How do I write better prompts for finance tasks?",
+   "Include a clear role, a specific task, relevant context such as the company and time period, the data to work from, the desired output format, and any constraints on length or tone. Company-specific context is what separates effective finance prompts from generic ones."
+  ],
+  [
+   "When should I avoid using AI in finance workflows?",
+   "Avoid AI for regulated financial judgments, final investment decisions, confidential deal analysis, and any output that will inform a high-stakes decision without independent verification. AI accelerates the analytical process but does not replace professional judgment."
+  ],
+  [
+   "What makes a prompt effective for investment research?",
+   "Specificity. A prompt that names the company, the audience, the time period, the data source, and the output format will almost always outperform a generic instruction. The more context you provide, the more useful the output."
+  ]
+ ]
+}

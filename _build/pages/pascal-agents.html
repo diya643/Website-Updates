@@ -1,0 +1,356 @@
+<!--meta
+{
+ "path": "/pascal-agents",
+ "title": "Pascal Agents: AI Agents for Investment Workflows",
+ "description": "Pascal Agents are AI agents for finance that plan, search, check and deliver investment work end to end: cited briefs, updated Excel models and decks.",
+ "crumbs": [["Pascal Agents", "/pascal-agents"]],
+ "schema": "software",
+ "name": "Pascal Agents",
+ "og_kicker": "Pascal Agents",
+ "og_title": "AI agents that run institutional investment work end to end",
+ "llms": "Overview of Pascal Agents, AI agents for investment firms: the agentic workflow library, autonomous execution, decision traces, the Pascal Excel agent and the Pascal Data Agent.",
+ "priority": 0.9,
+ "word_limit": 3000,
+ "lead_max": 120,
+ "css": ["pascal-agents.css"]
+}
+-->
+<div class="frame pg-pa">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Pascal Agents</span></span>Run institutional work <span class="mute">end to end.</span></h1>
+      <p class="lead">Pascal Agents don't stop at an answer. Give them a task and they plan it, search your firm's research and the market, check what they find, and deliver the finished work: the brief, the updated model, the reconciled record, the deck. Your team reviews the output while the agents do the legwork.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media">
+      <div class="panel fit"><!--mock--><div class="pui pui-wide has-float float-lg pa-hero" role="img" aria-label="A Pascal agent run for the Event Brief workflow on Sea, in four stages. 01 Task: Event Brief on Sea, run workflow. 02 Search: firm and market, across IC memos, emails, Teams and expert calls. 03 Review: cross-checked ratings, targets, scenarios and guidance. 04 Deliver: brief and deck, 13 sources, cited. A card shows the brief's at-a-glance line: FY2026 guidance reset, Shopee to grow GMV by about 25% while holding absolute EBITDA flat, implying margin compression to roughly 3.5 to 4.0%, citation 12.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Event Brief · Sea</b></span><span class="pui-bar-r"><span class="pui-tag">{{icon:check}} Complete</span></span></div>
+    <div class="pui-body">
+      <!--#include pui-rail on_chat="" on_wf="on"-->
+      <div class="pui-main">
+        <div class="pa-hd"><span class="pui-lg t lg" style="background:#1F3864">SE</span><span><b class="pa-hd-t">Sea Limited</b><span class="pui-sub">Event Brief workflow · 4 stages</span></span><span class="pui-tag grey">13 sources</span></div>
+        <div class="pui-tl pui-mt pa-hero-tl">
+          <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><span class="pa-n">01 · Task</span> <b>Event Brief · Sea</b></p><span class="pui-tl-m">0:00</span>
+            <div class="pui-tl-b"><span class="pui-chip on">{{icon:play}} Run workflow</span></div></div>
+          <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><span class="pa-n">02 · Search</span> <b>Firm and market</b></p><span class="pui-tl-m">0:04</span>
+            <div class="pui-tl-b pui-schips"><span class="pui-schip">{{logo:sharepoint}} IC memos</span><span class="pui-schip">{{logo:outlook}} Emails</span><span class="pui-schip">{{logo:teams}} Teams</span><span class="pui-schip"><span class="pui-lg t pa-xs" style="background:#534AB7">{{icon:users}}</span> Expert calls</span></div></div>
+          <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><span class="pa-n">03 · Review</span> <b>Cross-checked</b></p><span class="pui-tl-m">0:41</span>
+            <div class="pui-tl-b"><p class="pui-sub">Ratings, targets, scenarios, guidance</p></div></div>
+          <div class="pui-tl-i"><span class="pui-tl-ic run">{{icon:file-check}}</span><p class="pui-tl-t"><span class="pa-n">04 · Deliver</span> <b>Brief and deck</b> <span class="pui-tag">13 sources, cited</span></p><span class="pui-tl-m">1:12</span>
+            <div class="pui-tl-b pui-schips"><span class="pui-schip">{{logo:word}} Event Brief · Sea.docx</span><span class="pui-schip">{{logo:powerpoint}} Event Brief · Sea.pptx</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pui-float">
+    <div class="pa-between"><p class="pui-k">At a glance</p><span class="pui-lg w">{{logo:shopee}}</span></div>
+    <p class="pa-fl-p"><b>FY2026 guidance reset:</b> Shopee to grow GMV by about 25% while holding absolute EBITDA flat, implying margin compression to roughly 3.5–4.0%<span class="pui-cite on">12</span>.</p>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+</div>
+
+<div class="frame pg-pa">
+  <section class="cells row" aria-label="Pascal Agents at a glance">
+    <div class="cell"><span class="stat-num">25<small>+</small></span><span class="stat-lbl">Ready-to-run investment workflows</span></div>
+    <div class="cell"><span class="stat-num">1,180</span><span class="stat-lbl">Agent runs a week at one mid-sized fund</span></div>
+    <div class="cell"><span class="stat-num">6.4<small>min</small></span><span class="stat-lbl">Median time from task to finished file</span></div>
+  </section>
+
+  <section class="cells c4 row" aria-label="What Pascal Agents do">
+    <a class="cell" href="/pascal-agents/workflow-library">{{icon:library:ico}}<b>Built for your process</b><span>25+ workflows designed around how institutional teams actually work, from event briefs to red flag analysis.</span><span class="link">Agentic workflow library {{icon:arrow-right}}</span></a>
+    <a class="cell" href="/pascal-agents/autonomous-agents">{{icon:play:ico}}<b>Runs on its own</b><span>Agents plan, search, review and write without hand-holding, and keep working in the background.</span><span class="link">Autonomous execution {{icon:arrow-right}}</span></a>
+    <a class="cell" href="/ask-pascal/decision-traces#models">{{icon:table:ico}}<b>Works inside your models</b><span>The Pascal Excel agent updates your models the way your team builds them, links every number to its source, and remembers your rules for next time.</span><span class="link">Pascal Excel agent {{icon:arrow-right}}</span></a>
+    <a class="cell" href="/pascal-agents/workflow-library">{{icon:presentation:ico}}<b>Delivers the work product</b><span>The output is the deck, the model or the memo, in your house format, ready to circulate.</span><span class="link">Agentic workflow library {{icon:arrow-right}}</span></a>
+  </section>
+
+  <section class="row" id="end-to-end" aria-labelledby="e2e-title">
+    <div class="row-pad-sm"><p class="eyebrow">One task, end to end</p><h2 class="h2" id="e2e-title" style="margin-top:18px">Follow an agent from request <span class="mute">to finished work.</span></h2></div>
+    <div class="pa-steps row">
+      <div class="pa-step">
+        <span class="n">Step 1</span><b>You pick the workflow and the company</b>
+<!--mock--><div class="pui pa-mw" role="img" aria-label="Workflow: Event Brief. Select company: Sea, ticker SE. Run workflow button.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Workflow library / <b>Event Brief</b></span></div>
+    <div class="pa-mw-b">
+      <p class="pui-k">Workflow</p>
+      <div class="pa-field pa-mt6"><span class="pui-lg t" style="background:#279C7B">{{icon:file-text}}</span><b>Event Brief</b></div>
+      <p class="pui-k pui-mt">Select company</p>
+      <div class="pa-field pa-mt6"><span class="pui-lg t" style="background:#1F3864">SE</span><b>Sea</b><span class="pui-sub pa-m0">SE</span><span class="pa-caret">{{icon:chevron-down}}</span></div>
+      <div class="pa-btns"><span class="pui-btn pri">{{icon:play}} Run workflow</span></div>
+    </div>
+  </div>
+</div><!--/mock-->
+      </div>
+      <div class="pa-step">
+        <span class="n">Step 2</span><b>The agent searches your firm and the market</b>
+<!--mock--><div class="pui pa-mw" role="img" aria-label="Agent steps: reviewing Sea Limited Teams chat pinned messages on the upcoming earnings event; searching the expert call tool for Shopee competition, TikTok Shop and take rates.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Event Brief · Sea</b></span><span class="pui-bar-r"><span class="pui-tag">Researching</span></span></div>
+    <div class="pa-mw-b">
+      <div class="pui-tl">
+        <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Reviewing</b> <span class="pui-schip">{{logo:teams}} Teams</span></p><span class="pui-tl-m">0:03</span>
+          <div class="pui-tl-b"><p class="pui-sub">Sea Limited Teams chat pinned messages on the upcoming earnings event</p></div></div>
+        <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Searching</b> <span class="pui-tag">Expert call tool</span></p><span class="pui-tl-m">0:09</span>
+          <div class="pui-tl-b"><p class="pui-sub">Shopee competition, TikTok Shop, take rates</p></div></div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock-->
+      </div>
+      <div class="pa-step">
+        <span class="n">Step 3</span><b>It frames what the event means for the position</b>
+<!--mock--><div class="pui pa-mw" role="img" aria-label="Scenario table for Sea. Base: group adjusted EBITDA 3.1 to 3.3 billion dollars, Shopee margin about 3.5%, implied target price 95 to 110 dollars. Bull: 3.3 billion plus, 6% plus in FY27, 110 to 140 dollars. Bear: 3.0 billion or less, under 2.5%, 95 dollars or less.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Event Brief · Sea / <b>Scenarios</b></span><span class="pui-bar-r"><span class="pui-tag grey">FY26</span></span></div>
+    <table class="pui-tbl pa-sct">
+      <thead><tr><th>Scenario</th><th>Group adj. EBITDA</th><th>Shopee margin</th><th>Implied TP</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pui-tag grey">Base</span></td><td>$3.1–3.3bn</td><td>~3.5%</td><td><b>$95–110</b></td></tr>
+        <tr><td><span class="pui-tag">Bull</span></td><td>$3.3bn+</td><td>6%+ (FY27)</td><td><b>$110–140</b></td></tr>
+        <tr><td><span class="pui-tag amber">Bear</span></td><td>≤$3.0bn</td><td>&lt;2.5%</td><td><b>≤$95</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div><!--/mock-->
+      </div>
+      <div class="pa-step">
+        <span class="n">Step 4</span><b>You get the finished, cited brief</b>
+<!--mock--><div class="pui pa-mw" role="img" aria-label="The finished brief in Word: Sea's FY26 guidance reset is an explicit, self-funded choice to grow Shopee GMV about 25% while accepting margin compression. The next hard catalyst is the Monee deposit launch in Q3 FY27, citation 8.">
+  <div class="pui-win">
+    <div class="pui-bar"><span class="pui-lg">{{logo:word}}</span><span class="pui-crumb"><b>Event Brief · Sea.docx</b></span><span class="pui-bar-r"><span class="pui-tag">13 sources, cited</span></span></div>
+    <div class="pui-doc-page pa-docp">
+      <p class="pui-doc-k">Event Brief</p>
+      <p class="pui-doc-h">Sea Limited · FY26 guidance reset</p>
+      <p class="pui-doc-p">Sea's FY26 guidance reset is an explicit, self-funded choice to grow Shopee GMV about 25% while accepting margin compression. The next hard catalyst is the Monee deposit launch in Q3 FY27<span class="pui-cite on">8</span>.</p>
+    </div>
+  </div>
+</div><!--/mock-->
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="capabilities" aria-labelledby="cap-title">
+    <div class="row-pad-sm"><p class="eyebrow">Capabilities</p><h2 class="h2" id="cap-title" style="margin-top:18px">Everything Pascal Agents <span class="mute">can do.</span></h2></div>
+  </section>
+
+  <section class="row split" aria-labelledby="f1">
+    <div class="split-copy">
+      <p class="eyebrow">Agentic workflow library</p>
+      <h3 class="h2" id="f1">25+ workflows <span class="mute">for the work you do every quarter.</span></h3>
+      <p>Event briefs, primers, initiating coverage, red flag analysis, catalyst calendars and more. Pick a workflow, pick a company, and get the same structure for every name.</p>
+      <a class="link" href="/pascal-agents/workflow-library">Explore the workflow library {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui pa-wl" role="img" aria-label="The Pascal workflow library with six workflows and run buttons: Event Brief, Red Flag Analysis, Company Primer, 30-Day Catalyst Calendar, Bull Bear Analysis and IPO Prospectus Analysis.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Workflow library</b></span><span class="pui-bar-r"><span class="pui-tag grey">25+ workflows</span></span></div>
+    <div class="pui-body">
+      <!--#include pui-rail on_chat="" on_wf="on"-->
+      <div class="pui-main">
+        <div class="pui-search">{{icon:search}} Search workflows</div>
+        <div class="pa-wg">
+          <div class="pa-wc"><span class="pui-lg t" style="background:#279C7B">{{icon:calendar}}</span><b>Event Brief</b><span class="pa-run">{{icon:play}} Run</span></div>
+          <div class="pa-wc"><span class="pui-lg t" style="background:#B5651D">{{icon:flag}}</span><b>Red Flag Analysis</b><span class="pa-run">{{icon:play}} Run</span></div>
+          <div class="pa-wc"><span class="pui-lg t" style="background:#185FA5">{{icon:book-open}}</span><b>Company Primer</b><span class="pa-run">{{icon:play}} Run</span></div>
+          <div class="pa-wc"><span class="pui-lg t" style="background:#534AB7">{{icon:clock}}</span><b>30-Day Catalyst Calendar</b><span class="pa-run">{{icon:play}} Run</span></div>
+          <div class="pa-wc"><span class="pui-lg t" style="background:#1F3864">{{icon:scale}}</span><b>Bull Bear Analysis</b><span class="pa-run">{{icon:play}} Run</span></div>
+          <div class="pa-wc"><span class="pui-lg t" style="background:#993C1D">{{icon:file-text}}</span><b>IPO Prospectus Analysis</b><span class="pa-run">{{icon:play}} Run</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">Autonomous execution</p>
+      <h3 class="h2" id="f2">Hand off <span class="mute">the whole task.</span></h3>
+      <p>Agents run the job end to end across internal and external sources, show every step as they go, and keep working in the background while you focus elsewhere.</p>
+      <a class="link" href="/pascal-agents/autonomous-agents">Explore autonomous execution {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui pa-runw" role="img" aria-label="An agent run in progress: searching IC memos, searching emails and reviewing broker research are done; writing the brief is in progress. A Stop button is available.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Agent run</b></span><span class="pui-bar-r"><span class="pui-tag">Running</span><span class="pui-chip pa-stop"><i aria-hidden="true"></i> Stop</span></span></div>
+    <div class="pui-body">
+      <!--#include pui-rail on_chat="" on_wf="on"-->
+      <div class="pui-main">
+        <p class="pui-k">Steps</p>
+        <div class="pui-tl pui-mt">
+          <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Searching IC memos</b> <span class="pui-schip">{{logo:sharepoint}} SharePoint</span></p><span class="pui-tl-m">0:02</span></div>
+          <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Searching emails</b> <span class="pui-schip">{{logo:outlook}} Outlook</span></p><span class="pui-tl-m">0:07</span></div>
+          <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Reviewing broker research</b> <span class="pui-schip">{{logo:pdf}} Broker notes</span></p><span class="pui-tl-m">0:19</span></div>
+          <div class="pui-tl-i pa-live"><span class="pui-tl-ic run"><span class="pa-spin" aria-hidden="true"></span></span><p class="pui-tl-t">Writing the brief…</p><span class="pui-tl-m">0:34</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" aria-labelledby="f3">
+    <div class="split-copy">
+      <p class="eyebrow">Pascal Excel agent</p>
+      <h3 class="h2" id="f3">Teach your model <span class="mute">once.</span></h3>
+      <p>The Excel agent works inside your workbook. When it needs a decision, it asks, and your answer becomes a rule it follows on every update. Every number it fills in links back to its ground truth.</p>
+      <a class="link" href="/ask-pascal/decision-traces#models">Explore the Excel agent {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui pui-wide pa-xa" role="img" aria-label="Pascal working inside an Excel model. A user asks Pascal to forecast FY28. Pascal asks whether to add it in a new column immediately right of FY27E. The user says yes, every time, and Pascal saves the rule: new forecast years go right of the last forecast year. The new FY28E column is highlighted next to FY27E.">
+  <div class="pui-win">
+    <div class="pui-bar"><span class="pui-lg">{{logo:excel}}</span><span class="pui-crumb"><b>Company model.xlsx</b></span><span class="pui-bar-r"><span class="pui-tag">Pascal add-in</span></span></div>
+    <div class="pui-xl pa-xa-g">
+      <div class="pui-grid">
+        <table class="pui-tbl pui-xl-t">
+          <thead><tr><th>USD m</th><th>FY25A</th><th>FY26E</th><th>FY27E</th><th class="pa-new">FY28E</th></tr></thead>
+          <tbody>
+            <tr><td><b>Revenue</b></td><td>281,724</td><td>312,480</td><td>341,906</td><td class="pa-new"></td></tr>
+            <tr><td>Growth</td><td>14.9%</td><td>10.9%</td><td>9.4%</td><td class="pa-new"></td></tr>
+            <tr><td><b>Gross profit</b></td><td>193,893</td><td>215,611</td><td>236,598</td><td class="pa-new"></td></tr>
+            <tr><td>Gross margin</td><td>68.8%</td><td>69.0%</td><td>69.2%</td><td class="pa-new"></td></tr>
+            <tr><td><b>Operating income</b></td><td>128,528</td><td>142,180</td><td>157,277</td><td class="pa-new"></td></tr>
+            <tr><td>Operating margin</td><td>45.6%</td><td>45.5%</td><td>46.0%</td><td class="pa-new"></td></tr>
+            <tr><td><b>Net income</b></td><td>101,832</td><td>112,644</td><td>124,610</td><td class="pa-new"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pui-xl-side pa-xa-side">
+        <p class="pui-xl-ttl"><!--#include pui-mark--> Pascal</p>
+        <div class="pa-bub me">Forecast FY28</div>
+        <div class="pa-bub">Shall I add it in a new column immediately right of FY27E?</div>
+        <div class="pa-bub me">Yes. Every time.</div>
+        <div class="pui-note pa-saved">{{icon:check-circle}} Saved: new forecast years go right of the last forecast year</div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" aria-labelledby="f4">
+    <div class="split-copy">
+      <p class="eyebrow">Finished files</p>
+      <h3 class="h2" id="f4">A deck. A model. <span class="mute">A memo.</span></h3>
+      <p>Agents generate fully formatted PowerPoint, Excel and Word files in your house template, so the output is ready to send.</p>
+      <a class="link" href="/pascal-agents/workflow-library">Browse the workflow library {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui pa-ppt" role="img" aria-label="A generated investment idea pitch deck open in PowerPoint. The title slide reads NVIDIA (NVDA): AI Infrastructure Cycle Play, with three figures: $215.9B FY26 revenue, $194B data center, 7.5M+ CUDA developers.">
+  <div class="pui-win">
+    <div class="pui-bar"><span class="pui-lg">{{logo:powerpoint}}</span><span class="pui-crumb"><b>NVIDIA idea pitch.pptx</b></span><span class="pui-bar-r"><span class="pui-tag grey">Slide 1 of 5</span></span></div>
+    <div class="pui-ppt">
+      <div class="pui-thumbs" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+      <div class="pui-slide pa-sl">
+        <p class="pa-sl-k"><span class="pa-sl-lg">{{logo:nvidia}}</span>Investment idea pitch</p>
+        <p class="pui-slide-h pa-sl-h">NVIDIA (NVDA): AI Infrastructure Cycle Play</p>
+        <div class="pa-sl-kpis">
+          <div><b>$215.9B</b><span>FY26 revenue</span></div>
+          <div><b>$194B</b><span>Data center</span></div>
+          <div><b>7.5M+</b><span>CUDA developers</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" aria-labelledby="f5">
+    <div class="split-copy">
+      <p class="eyebrow">Pascal Data Agent</p>
+      <h3 class="h2" id="f5">Your research files, <span class="mute">structured for every agent.</span></h3>
+      <p>The Pascal Data Agent turns broker PDFs, expert-call transcripts, internal notes and emails into entity-tagged data, with provenance to the page and your permissions intact. Agents query it over MCP, so a request for every broker note on NVIDIA in the last 30 days returns the right documents, open at the right section.</p>
+      <a class="link" href="/pascal-agents/data-agent">Explore the Pascal Data Agent {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui has-float pa-da" role="img" aria-label="The Pascal Data Agent vault viewer, filtered to NVDA over the last 30 days. Four documents are listed with their type and tags: a Q3 FY27 preview broker note tagged Buy with the price target raised; an expert call on hyperscaler capex tagged bullish, high conviction; an internal semis weekly note tagged NVDA and TSMC; and an email on a supply update. A card shows an agent calling list_documents over MCP for broker notes on NVDA in the last 30 days, returning 4 documents. Figures illustrative.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Data Agent / <b>Vault viewer</b></span><span class="pui-bar-r"><span class="pui-tag grey">Illustrative</span></span></div>
+    <div class="pui-tool pa-da-tool"><span class="pui-chip on">NVDA</span><span class="pui-chip">{{icon:calendar}} 30 days</span><span class="pui-chip">All types</span></div>
+    <div class="pui-main">
+      <table class="pui-tbl pa-da-t">
+        <thead><tr><th>Document</th><th>Type</th><th>Tags</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pa-da-n">{{logo:pdf}}<b>Q3 FY27 preview</b></span></td><td>Broker note</td><td><span class="pui-tag">Buy</span> <span class="pui-tag grey">PT raised</span></td></tr>
+          <tr><td><span class="pa-da-n"><span class="pui-lg t pa-xs" style="background:#534AB7">{{icon:users}}</span><b>Hyperscaler capex</b></span></td><td>Expert call</td><td><span class="pui-tag">Bullish</span> <span class="pui-tag grey">High conviction</span></td></tr>
+          <tr><td><span class="pa-da-n">{{logo:sharepoint}}<b>Semis weekly</b></span></td><td>Internal note</td><td><span class="pui-tag grey">NVDA</span> <span class="pui-tag grey">TSMC</span></td></tr>
+          <tr><td><span class="pa-da-n">{{logo:outlook}}<b>Supply update</b></span></td><td>Email</td><td><span class="pui-tag grey">NVDA</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="pui-float pa-da-f">
+    <p class="pui-k">Agent · MCP call</p>
+    <p class="pa-code">list_documents(type="broker_note", ticker="NVDA", days=30)</p>
+    <p class="pui-badge pui-mt">{{icon:check-circle}} 4 documents, with page refs</p>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="run-title">
+    <div class="row-pad-sm"><p class="eyebrow">How an agent runs</p><h2 class="h2" id="run-title" style="margin-top:18px">The way a diligent analyst works, <span class="mute">automated.</span></h2></div>
+    <div class="cells pa-c5 row">
+      <div class="cell"><span class="n">01</span><b>Task</b><span>A workflow and a company, or the job in plain words.</span></div>
+      <div class="cell"><span class="n">02</span><b>Plan</b><span>It decides what to search and in what order.</span></div>
+      <div class="cell"><span class="n">03</span><b>Search</b><span>Your firm's research and the market, together.</span></div>
+      <div class="cell"><span class="n">04</span><b>Review</b><span>It cross-checks claims across sources.</span></div>
+      <div class="cell"><span class="n">05</span><b>Deliver</b><span>The finished file, cited and in your format.</span></div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="gov-title">
+    <div class="row-pad-sm">
+      <div class="head">
+        <div><p class="eyebrow">Governance</p><h2 class="h2" id="gov-title">Agents your infosec team <span class="mute">can sign off.</span></h2></div>
+        <p>Autonomy only works in an institution if it is controlled. Every Pascal agent runs inside the same guardrails as your people.</p>
+      </div>
+    </div>
+    <div class="cells c4 row">
+      <div class="cell">{{icon:lock:ico}}<b>Access controls respected</b><span>Agents only search what the person running them is cleared to see.</span></div>
+      <div class="cell">{{icon:route:ico}}<b>Every step on the record</b><span>Each run shows what was searched and reviewed, step by step.</span></div>
+      <div class="cell">{{icon:quote:ico}}<b>Every claim cited</b><span>Outputs link each figure to its source document and page.</span></div>
+      <div class="cell">{{icon:users:ico}}<b>Human in the loop</b><span>Stop any run, review uncertain matches, and approve before anything is final.</span></div>
+    </div>
+  </section>
+
+  <section class="row row-pad" aria-labelledby="cmp-title">
+    <div class="head" style="margin-bottom:36px">
+      <div><p class="eyebrow">Why Pascal Agents</p><h2 class="h2" id="cmp-title" style="margin-top:18px">An assistant answers. <span class="mute">An agent finishes.</span></h2></div>
+    </div>
+    <div class="table-wrap">
+      <table class="pa-compare">
+        <thead><tr><th scope="col"></th><th scope="col">Chat assistant</th><th scope="col">Pascal Agents</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">What you hand over</th><td>One question at a time</td><td>The whole task</td></tr>
+          <tr><th scope="row">Where it looks</th><td>Whatever you paste in</td><td>Your memos, email, Teams, calls and filings</td></tr>
+          <tr><th scope="row">What you get back</th><td>Text to copy and format</td><td>The finished brief, model or deck</td></tr>
+          <tr><th scope="row">Next time</th><td>Starts from zero</td><td>Remembers how your team works</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>What are Pascal Agents?<span class="pm" aria-hidden="true"></span></summary><div class="ans">AI agents that run institutional work end to end. Give them a task and they plan it, search your firm's research and the market, check what they find, and deliver the finished brief, model, record or deck.</div></details>
+        <details class="faq-item"><summary>Are agents only for investment research?<span class="pm" aria-hidden="true"></span></summary><div class="ans">No. Research is the most common use, but agents also run middle- and back-office work: trade breaks, reconciliations, NAV exceptions, DDQ answers, KYC packs and investor reporting.</div></details>
+        <details class="faq-item"><summary>Does the Excel agent change how our models are built?<span class="pm" aria-hidden="true"></span></summary><div class="ans">No. It learns how your team builds them, asks when it needs a decision, and follows those rules from then on.</div></details>
+        <details class="faq-item"><summary>Can I see and stop what an agent is doing?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Every run shows its steps live, and you can stop it at any point.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="Hand off your first task." sub="Watch an agent run on your own coverage and your own systems."-->

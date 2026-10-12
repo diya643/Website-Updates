@@ -1,0 +1,69 @@
+<!--meta
+{
+ "path": "/pascal-academy/signup",
+ "title": "Join Pascal Academy: Team AI Workshops",
+ "description": "Sign up for Pascal Academy workshops. Train your investment team on practical AI workflows, planned around your firm by the Pascal team.",
+ "crumbs": [
+  [
+   "Pascal Academy",
+   "/pascal-academy"
+  ],
+  [
+   "Sign up",
+   "/pascal-academy/signup"
+  ]
+ ],
+ "og_kicker": "Pascal Academy",
+ "og_title": "Train your team with Pascal Academy",
+ "llms": "Sign-up form for Pascal Academy team workshops.",
+ "css": [
+  "academy3.css"
+ ],
+ "word_limit": 700,
+ "faq_min": 0,
+ "lead_min": 10,
+ "noindex": true,
+ "priority": 0.5
+}
+-->
+<div class="ac">
+<div class="frame">
+  <header class="hh">
+    <div class="hh-l">
+      {{crumbs}}
+      <h1 class="hh-t">Train your team with <em>Pascal Academy</em></h1>
+    </div>
+    <div class="hh-r"><p class="lead">Learn how to apply AI across your team's day-to-day investment workflows.</p></div>
+  </header>
+<section class="fb fb-form" aria-label="Featured"><div class="fb-in"><div class="su">
+      <div class="su-l">
+        <h2 class="fb-t">Tell us about your team</h2>
+        <p class="fb-s">We'll follow up to plan a workshop tailored to your firm. Sessions draw on the <a href="/guides">desk guides</a>, the <a href="/pascal-academy/ai-fundamentals">AI fundamentals</a> series and the <a href="/pascal-academy/workflows">workflows</a>, <a href="/pascal-academy/prompt-library">prompts</a> and <a href="/pascal-academy/agent-library">agents</a> in the library.</p>
+        <div class="th th-big" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-teal"><img src="/assets/shots/shot-research.webp" alt="Pascal researching across filings and an uploaded thesis" width="1600" height="844" loading="lazy" decoding="async"></div></div></div>
+      </div>
+      <div class="su-r">
+      <form class="ac-form" data-signup-form novalidate>
+        <label>Full name *<input name="name" autocomplete="name" required></label>
+        <label>Work email *<input name="email" type="email" autocomplete="email" required></label>
+        <label>Organization *<input name="organization" autocomplete="organization" required></label>
+        <div class="ac-form-2">
+          <label>Team size *<select name="teamSize" required><option value="">Select…</option><option>1–5</option><option>6–20</option><option>21–50</option><option>51–200</option><option>200+</option></select></label>
+          <label>Focus area<select name="focus"><option value="">Select…</option><option>Hedge Funds</option><option>Asset &amp; Wealth Management</option><option>Banks &amp; Financial Institutions</option><option>Asset Servicing</option><option>Private Equity &amp; Private Credit</option><option>Corporate Treasury &amp; Hedge Accounting</option><option>Other</option></select></label>
+        </div>
+        <label>Phone <span class="ac-opt">(optional)</span><span class="ac-phone"><select name="countryCode" aria-label="Country code"><option value="+1" data-country="United States">United States (+1)</option><option value="+44" data-country="United Kingdom">United Kingdom (+44)</option><option value="+91" data-country="India">India (+91)</option><option value="+65" data-country="Singapore">Singapore (+65)</option><option value="+971" data-country="United Arab Emirates">United Arab Emirates (+971)</option><option value="+852" data-country="Hong Kong">Hong Kong (+852)</option><option value="+61" data-country="Australia">Australia (+61)</option><option value="+49" data-country="Germany">Germany (+49)</option><option value="+33" data-country="France">France (+33)</option><option value="+81" data-country="Japan">Japan (+81)</option></select><input name="phone" type="tel" autocomplete="tel-national" inputmode="tel"></span></label>
+        <p class="ac-gate-err" role="alert" hidden></p>
+        <button class="btn btn-dark" type="submit">Sign up</button>
+        <p class="ac-gate-fine">By submitting, you agree to be contacted about Pascal Academy.</p>
+      </form>
+      <div class="ac-gate-done ac-form-done" hidden>
+        <span class="ac-gate-ok">{{icon:check}}</span>
+        <h2>Thank you.</h2>
+        <p>The Pascal team will reach out to plan a program for your organization.</p>
+        <a class="btn btn-line" href="/pascal-academy">Back to Academy</a>
+      </div>
+      </div>
+    </div></div></section>
+</div>
+</div>
+<!--#include demo-band title="Ask your first question with your firm's context." sub="A walkthrough with your own documents connected."-->
+<script src="/assets/pages/academy3.js" defer></script>

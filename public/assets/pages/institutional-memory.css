@@ -1,0 +1,63 @@
+/* Institutional memory page (scoped under .pg-im) */
+
+/* shared: source cell, wordmarks, logo crops */
+.pg-im .im-src { display: flex; align-items: center; gap: 9px; min-width: 0; }
+.pg-im .im-src b { display: block; font-size: 12.5px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pg-im .im-src small { display: block; font-size: 11px; color: var(--mute); white-space: nowrap; margin-top: 1px; }
+.pg-im .im-src > span:last-child { min-width: 0; }
+.pg-im .pui-lg.im-ico { background: #0E0F11; display: block; position: relative; }
+.pg-im .pui-lg.im-ico img { position: absolute; left: var(--x, -1px); top: 0; width: auto; height: 22px; max-width: none; }
+.pg-im .pui-lg.im-wh { background: #fff; }
+.pg-im .pui-lg.im-wh img { height: var(--h, 20px); top: var(--y, 0); }
+
+/* hero: sources screen */
+.pg-im .im-find { height: 26px; flex: 1; min-width: 140px; margin-right: 4px; font-size: 12px; }
+.pg-im .im-tbl th { padding: 7px 14px; }
+.pg-im .im-tbl td { padding: 6px 14px; vertical-align: middle; white-space: nowrap; }
+.pg-im .im-tbl td:nth-child(2) { color: var(--ink); font-weight: 500; }
+.pg-im .im-tbl tr.im-grp td { padding: 6px 14px 5px; background: #FBFCFB; font: 500 10px/1.2 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--mute); }
+.pg-im .im-st { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--ink-2); }
+.pg-im .im-st::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--brand); }
+.pg-im .im-st.run { color: #8A4B0E; }
+.pg-im .im-st.run::before { background: #E0A040; }
+.pg-im .im-feed { width: 42%; }
+.pg-im .im-feed .pui-kv { margin-top: 4px; font-size: 12px; }
+.pg-im .im-feed .pui-kv > * { padding: 6px 0; }
+
+/* proprietary: library */
+.pg-im .im-lib-main { flex: 1; min-width: 0; }
+.pg-im .im-ltbl th, .pg-im .im-ltbl td { padding: 8px 12px; vertical-align: middle; }
+.pg-im .im-lfoot { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 12px 14px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--mute); }
+.pg-im .im-ltbl td:last-child, .pg-im .im-ltbl th:last-child { white-space: nowrap; text-align: right; }
+.pg-im .im-ltbl tr.sel td { background: #F3FBF7; }
+.pg-im .im-lib .pui-float { width: 50%; padding: 12px 14px 6px; }
+.pg-im .im-lib .pui-float .pui-row { padding: 7px 0; font-size: 12px; }
+.pg-im .im-lib .pui-float .pui-av { width: 22px; height: 22px; font-size: 9px; }
+
+/* market signals: feed + partners */
+.pg-im .im-sig .pui-split { grid-template-columns: minmax(0, 1fr) 176px; }
+.pg-im .im-sig .pui-main { padding: 16px; }
+.pg-im .im-sig .pui-lg.t { font-size: 8.5px; }
+.pg-im .im-sig .pui-lg.t svg { width: 13px; height: 13px; }
+.pg-im .im-inl { display: inline; margin-left: 4px; font-size: 11px; }
+.pg-im .im-r { margin-left: auto; font-size: 11px; }
+.pg-im .im-post-t { margin: 2px 0 2px; font-size: 13.5px; font-weight: 600; line-height: 1.4; color: var(--ink); }
+.pg-im .im-spark { height: 64px; margin-top: 8px; }
+.pg-im .im-axis { display: flex; justify-content: space-between; font: 400 9.5px/1 var(--font-mono); color: var(--mute-2); margin-top: 4px; }
+.pg-im .im-live { width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
+.pg-im .im-sig .pui-side .pui-row { padding: 8px 0; }
+
+/* compounding timeline */
+.pg-im .im-tl { list-style: none; margin: 0; padding: 0; position: relative; }
+.pg-im .im-tl .cell { position: relative; }
+.pg-im .im-tl .cell::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--line-2); }
+.pg-im .im-tl .cell .n { display: inline-flex; align-items: center; gap: 10px; }
+.pg-im .im-tl .cell .n::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--line-2); }
+.pg-im .im-tl .im-tl-on { background: var(--mint-4); }
+.pg-im .im-tl .im-tl-on::before { background: var(--brand); }
+.pg-im .im-tl .im-tl-on .n { color: var(--brand-2); }
+.pg-im .im-tl .im-tl-on .n::before { background: var(--brand); box-shadow: 0 0 0 4px rgba(39,156,123,.2); }
+.pg-im .im-link svg:last-child { width: 13px; height: 13px; margin-left: auto; color: var(--mute-2); }
+.pg-im .im-link:hover b, .pg-im .im-link:hover svg:last-child { color: var(--brand-2); }
+.pg-im .im-hero .pui-float { width: 46%; }
+@media (max-width: 760px) { .pg-im .im-hero .pui-float { width: 46%; } }

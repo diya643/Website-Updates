@@ -1,0 +1,199 @@
+<!--meta
+{
+ "path": "/data-agent/classifier",
+ "title": "Document Classifier for Research Files | Pascal AI",
+ "description": "Pascal's document classifier types every file against your firm's taxonomy, with confidence and a runner-up, a review queue and corrections that teach it.",
+ "crumbs": [["Pascal Data Agent", "/data-agent"], ["Classifier", "/data-agent/classifier"]],
+ "schema": "software",
+ "name": "Pascal Data Agent document classifier",
+ "og_kicker": "Pascal Data Agent",
+ "og_title": "Every file, sorted by type",
+ "llms": "Pascal Data Agent's document classifier: assigns each incoming file (broker reports, expert calls, research notes, NDAs, side letters, DDQs, credit agreements) a document type from the firm's own taxonomy, with a confidence score and a runner-up, sends low-confidence files to a human review queue where an 'assign type' correction teaches the classifier, and routes each type to its own workflow.",
+ "priority": 0.8,
+ "css": ["data-agent.css"]
+}
+-->
+<div class="frame pg-da">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Document classifier</span></span>Every file, <span class="mute">sorted by type.</span></h1>
+      <p class="lead">Pascal's classifier gives every incoming file a document type from your firm's taxonomy, with a confidence score and a runner-up. Files it is unsure about wait in a review queue, and each correction teaches it.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel fit"><!--mock--><div class="pui has-float float-lg" role="img" aria-label="The classifier review queue with 14 files to review. Each row shows the suggested type, a confidence bar and the runner-up: BluMatrix_attach_88213.pdf, broker report 0.55, runner-up public filing 0.31; Mgmt_mtg_notes_0930.pdf, research note 0.48, runner-up expert call 0.37; TB_transcript_0917.pdf, expert call 0.62; Untitled (3).docx, research note 0.41; Side_letter_v4_clean.docx, side letter 0.58. A card shows an analyst assigning the management meeting type to Mgmt_mtg_notes_0930.pdf, after which 3 similar files were re-scored. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Classifier / <b>Review queue</b></span><span class="pui-bar-r"><span class="pui-tag amber">14 to review</span></span></div>
+    <div class="pui-tabs"><span class="on">Queue · 14</span><span>Auto-typed · 6,697</span><span>Taxonomy</span><span>Routing</span></div>
+    <table class="pui-tbl cl-q">
+      <thead><tr><th>File</th><th>Suggested type</th><th>Confidence</th><th>Runner-up</th></tr></thead>
+      <tbody>
+        <tr><td><b class="cl-f">BluMatrix_attach_88213.pdf</b><span class="da-s">BluMatrix · Sep 22</span></td><td>Broker report</td><td><span class="cl-cf"><span class="da-bar amber"><i style="width:55%"></i></span>0.55</span></td><td>Public filing <span class="da-mu">0.31</span></td></tr>
+        <tr class="on"><td><b class="cl-f">Mgmt_mtg_notes_0930.pdf</b><span class="da-s">SharePoint · Sep 30</span></td><td>Research note</td><td><span class="cl-cf"><span class="da-bar amber"><i style="width:48%"></i></span>0.48</span></td><td>Expert call <span class="da-mu">0.37</span></td></tr>
+        <tr><td><b class="cl-f">TB_transcript_0917.pdf</b><span class="da-s">Email · Sep 17</span></td><td>Expert call</td><td><span class="cl-cf"><span class="da-bar amber"><i style="width:62%"></i></span>0.62</span></td><td>Research note <span class="da-mu">0.21</span></td></tr>
+        <tr><td><b class="cl-f">Untitled (3).docx</b><span class="da-s">SharePoint · Sep 26</span></td><td>Research note</td><td><span class="cl-cf"><span class="da-bar amber"><i style="width:41%"></i></span>0.41</span></td><td>Broker report <span class="da-mu">0.33</span></td></tr>
+        <tr><td><b class="cl-f">Side_letter_v4_clean.docx</b><span class="da-s">Outlook · Sep 24</span></td><td>Side letter</td><td><span class="cl-cf"><span class="da-bar amber"><i style="width:58%"></i></span>0.58</span></td><td>Subscription doc <span class="da-mu">0.30</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pui-float cl-assign">
+    <div class="pui-float-h"><span class="pui-k">Assign type · Mgmt_mtg_notes_0930.pdf</span></div>
+    <div class="cl-chips"><span class="pui-chip">Research note</span><span class="pui-chip">Expert call</span><span class="pui-chip on">{{icon:check}} Management meeting</span></div>
+    <div class="pui-step">{{icon:check-circle}} <b>Saved.</b> 3 similar files re-scored</div>
+  </div>
+</div><!--/mock--></div></div>
+  </section>
+
+  <section class="cells row" aria-label="The classifier in numbers">
+    <div class="cell"><span class="stat-num">31<small>types</small></span><span class="stat-lbl">In a typical long/short fund taxonomy, from broker report to side letter</span></div>
+    <div class="cell"><span class="stat-num">0.85</span><span class="stat-lbl">Default confidence a file needs to skip the review queue; each firm sets its own</span></div>
+    <div class="cell"><span class="stat-num">12<small>examples</small></span><span class="stat-lbl">Labelled files it takes to add a new document type to your taxonomy</span></div>
+  </section>
+
+  <section class="row split" id="confidence" aria-labelledby="f1">
+    <div class="split-copy">
+      <p class="eyebrow">Confidence and runner-up</p>
+      <h2 class="h2" id="f1">Every type comes <span class="mute">with a score.</span></h2>
+      <p>For each file Pascal shows its first choice, the confidence, the runner-up and the signals behind them: a disclosures page, a Q&amp;A layout, the sender, the file name.</p>
+      <a class="link" href="/data-agent/vault-viewer">See the Unclassified view {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui" role="img" aria-label="Classification detail for BluMatrix_attach_88213.pdf, a two-page PDF from BluMatrix. Scores: broker report 0.55, public filing 0.31, research note 0.09, other 0.05. Signals: sent through BluMatrix, a monthly revenue table for TSMC, no cover page and no broker disclosures. Below the 0.85 threshold, so it waits for review. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><span class="pui-lg w">{{logo:pdf}}</span><span class="pui-crumb">Classifier / <b>BluMatrix_attach_88213.pdf</b></span><span class="pui-bar-r"><span class="pui-tag grey">2 pages</span></span></div>
+    <div class="pui-split cl-det">
+      <div class="pui-main">
+        <p class="pui-k">Type scores</p>
+        <div class="cl-bars">
+          <div class="cl-bar on"><span>Broker report</span><span class="cl-track"><i style="width:55%"></i><em style="left:85%"></em></span><b>0.55</b></div>
+          <div class="cl-bar"><span>Public filing</span><span class="cl-track"><i style="width:31%"></i><em style="left:85%"></em></span><b>0.31</b></div>
+          <div class="cl-bar"><span>Research note</span><span class="cl-track"><i style="width:9%"></i><em style="left:85%"></em></span><b>0.09</b></div>
+          <div class="cl-bar"><span>Other</span><span class="cl-track"><i style="width:5%"></i><em style="left:85%"></em></span><b>0.05</b></div>
+        </div>
+        <p class="pui-sub cl-thr"><span class="cl-tick"></span>Auto-type threshold 0.85</p>
+      </div>
+      <div class="pui-side">
+        <p class="pui-k">Signals</p>
+        <div class="pui-step">{{icon:check}} Sent through BluMatrix</div>
+        <div class="pui-step">{{icon:check}} Revenue table for TSMC</div>
+        <div class="pui-step cl-neg">{{icon:minus}} No cover page</div>
+        <div class="pui-step cl-neg">{{icon:minus}} No broker disclosures</div>
+        <p class="pui-tag amber pui-mt">Waiting for review</p>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" id="taxonomy" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">Firm-specific taxonomies</p>
+      <h2 class="h2" id="f2">Your types, <span class="mute">your names for them.</span></h2>
+      <p>Start from Pascal's research taxonomy, then rename, split or add types: IC memo, management meeting, side letter, credit agreement. Each type carries its own fields and access rules.</p>
+      <a class="link" href="/data-agent/extraction">See the fields per type {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="The firm's taxonomy. Research: broker report with 4,212 files and 14 fields, split into initiation, update, flash and sector; expert call with 1,947 files and 9 fields; research note with 538 files, split into IC memo and management meeting, a new type with 13 examples. Legal: NDA with 312 files, side letter with 41 files restricted to legal, credit agreement with 27 files. Investor relations: DDQ with 96 files. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Classifier / <b>Taxonomy</b></span><span class="pui-bar-r"><span class="pui-btn">{{icon:plus}} Add type</span></span></div>
+    <table class="pui-tbl cl-tax">
+      <thead><tr><th>Type</th><th class="r">Files</th><th class="r">Fields</th><th>Access</th></tr></thead>
+      <tbody>
+        <tr class="cl-grp"><td colspan="4">Research</td></tr>
+        <tr><td><b>Broker report</b><span class="da-s">Initiation · Update · Flash · Sector</span></td><td class="r">4,212</td><td class="r">14</td><td>Broker licence</td></tr>
+        <tr><td><b>Expert call</b></td><td class="r">1,947</td><td class="r">9</td><td>Research team</td></tr>
+        <tr><td><b>Research note</b><span class="da-s">IC memo · Update · Initiation</span></td><td class="r">538</td><td class="r">7</td><td>Author's desk</td></tr>
+        <tr class="on"><td class="cl-sub"><b>Management meeting</b> <span class="pui-tag">New</span></td><td class="r">13</td><td class="r">6</td><td>Research team</td></tr>
+        <tr class="cl-grp"><td colspan="4">Legal &amp; investor relations</td></tr>
+        <tr><td><b>NDA</b></td><td class="r">312</td><td class="r">8</td><td>Legal · Deal team</td></tr>
+        <tr><td><b>Side letter</b></td><td class="r">41</td><td class="r">11</td><td><span class="pui-lock">{{icon:lock}} Legal only</span></td></tr>
+        <tr><td><b>DDQ</b></td><td class="r">96</td><td class="r">5</td><td>IR · Compliance</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" id="review" aria-labelledby="f3">
+    <div class="split-copy">
+      <p class="eyebrow">Human in the loop</p>
+      <h2 class="h2" id="f3">One click to assign. <span class="mute">It learns from each one.</span></h2>
+      <p>When an analyst assigns a type, Pascal files the document, re-scores similar files and keeps the decision with who made it and when.</p>
+      <a class="link" href="/ask-pascal/decision-traces">See decision traces {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui" role="img" aria-label="Activity after one correction. 10:42, the semis analyst assigned management meeting to Mgmt_mtg_notes_0930.pdf. 10:42, the management meeting type now has 13 labelled examples. 10:43, 3 similar files were re-scored above 0.85 and filed automatically. 10:43, the review queue went from 14 files to 10. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Classifier / <b>Activity</b></span><span class="pui-bar-r"><span class="pui-tag">Learning</span></span></div>
+    <div class="pui-main">
+      <div class="pui-tl">
+        <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:tag}}</span><p class="pui-tl-t"><b>Semis analyst</b> assigned <span class="pui-tag">Management meeting</span></p><span class="pui-tl-m">10:42</span>
+          <div class="pui-tl-b"><span class="pui-schip">{{logo:pdf}} Mgmt_mtg_notes_0930.pdf</span></div></div>
+        <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:brain}}</span><p class="pui-tl-t"><b>Classifier updated</b> · Management meeting now has 13 examples</p><span class="pui-tl-m">10:42</span></div>
+        <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:refresh}}</span><p class="pui-tl-t"><b>3 similar files re-scored</b> above 0.85 and filed</p><span class="pui-tl-m">10:43</span>
+          <div class="pui-tl-b"><div class="pui-schips"><span class="pui-schip">{{logo:pdf}} Mgmt_mtg_TSMC_0912.pdf</span><span class="pui-schip">{{logo:word}} Conf_notes_AMD.docx</span><span class="pui-schip">{{logo:pdf}} NDR_MSFT_0825.pdf</span></div></div></div>
+        <div class="pui-tl-i"><span class="pui-tl-ic run">{{icon:inbox}}</span><p class="pui-tl-t"><b>Review queue</b> · 14 → 10 files</p><span class="pui-tl-m">10:43</span></div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" id="routing" aria-labelledby="f4">
+    <div class="split-copy">
+      <p class="eyebrow">Routing</p>
+      <h2 class="h2" id="f4">Each type starts <span class="mute">its own workflow.</span></h2>
+      <p>Broker reports go to extraction and the desk channel. NDAs go to legal. DDQs go to the answer library. Routing rules sit next to the taxonomy.</p>
+      <a class="link" href="/pascal-agents/workflow-library">See the workflow library {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Routing rules. When the type is broker report and the company is in coverage: extract fields and post to the semis desk channel in Teams. When the type is NDA: extract terms and send to the legal review queue in Outlook. When the type is DDQ: add to the DDQ answer library agent. When the type is expert call: run a compliance check and tag the speaker. All four rules are on. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Classifier / <b>Routing</b></span><span class="pui-bar-r"><span class="pui-tag grey">4 rules</span></span></div>
+    <div class="pui-main cl-rules">
+      <div class="cl-rule"><span class="cl-when">When</span><span class="pui-tag navy">Broker report</span><span class="cl-and">and company in coverage</span><span class="cl-sw"></span>
+        <div class="cl-then">{{icon:arrow-right}}Extract fields<span class="cl-dot"></span><span class="pui-lg w">{{logo:teams}}</span>Post to #semis-desk</div></div>
+      <div class="cl-rule"><span class="cl-when">When</span><span class="pui-tag navy">NDA</span><span class="cl-sw"></span>
+        <div class="cl-then">{{icon:arrow-right}}Extract terms<span class="cl-dot"></span><span class="pui-lg w">{{logo:outlook}}</span>Legal review queue</div></div>
+      <div class="cl-rule"><span class="cl-when">When</span><span class="pui-tag navy">DDQ</span><span class="cl-sw"></span>
+        <div class="cl-then">{{icon:arrow-right}}<span class="pui-lg t" style="background:#279C7B">{{icon:bot}}</span>DDQ answer library agent</div></div>
+      <div class="cl-rule"><span class="cl-when">When</span><span class="pui-tag navy">Expert call</span><span class="cl-sw"></span>
+        <div class="cl-then">{{icon:arrow-right}}Compliance check<span class="cl-dot"></span>Tag speaker and relationship</div></div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="more-title">
+    <div class="row-pad-sm"><h2 class="h2" id="more-title">More from <span class="mute">Pascal Data Agent.</span></h2></div>
+    <div class="cells row">
+      <a class="cell" href="/data-agent"><span class="n">Overview</span><b>Pascal Data Agent</b><span>How your files become structured data for analysts and agents.</span><span class="link">Read the overview {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/data-agent/vault-viewer"><span class="n">Browse</span><b>Vault viewer</b><span>Filter typed files by company, sector and date, and open them at the right section.</span><span class="link">Try the vault viewer {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/data-agent/extraction"><span class="n">Extract</span><b>Extraction &amp; table editor</b><span>The fields each type returns, every one linked to its page.</span><span class="link">See extraction {{icon:arrow-right}}</span></a>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div>
+        <h2 class="h2" id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item"><summary>What does the classifier do?<span class="pm" aria-hidden="true"></span></summary><div class="ans">It gives every synced file a document type from your taxonomy, with a confidence score and a runner-up. The type decides which fields Pascal extracts and which workflow the file goes to.</div></details>
+        <details class="faq-item"><summary>Can we use our own document types?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Rename, split or add types, and give each one its own fields and access rules. A new type needs a small set of labelled examples to start.</div></details>
+        <details class="faq-item"><summary>What happens to files below the confidence threshold?<span class="pm" aria-hidden="true"></span></summary><div class="ans">They wait in the review queue, and in the vault viewer under Unclassified, until someone assigns a type. Each firm sets its own threshold.</div></details>
+        <details class="faq-item"><summary>How does one correction change future results?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The file becomes a labelled example for that type. Pascal re-scores similar files straight away and records who made the call and when.</div></details>
+        <details class="faq-item"><summary>Which file formats can it classify?<span class="pm" aria-hidden="true"></span></summary><div class="ans">PDFs, including scanned ones, Word files, slides, spreadsheets, emails and their attachments.</div></details>
+        <details class="faq-item"><summary>Who can see the review queue?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Each reviewer sees only the files their permissions allow. A side letter restricted to legal, for example, only reaches the legal team's queue.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="Sort your own files" sub="by the types your firm uses."-->

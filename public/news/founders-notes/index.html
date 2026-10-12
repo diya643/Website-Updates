@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>Founder&#x27;s Notes: AI in Institutional Finance | Pascal AI</title>
+<meta name="description" content="Alpha &amp; Agents, essays from the founder of Pascal AI Labs on how investment firms deploy AI, what it costs, and the infrastructure underneath it.">
+<link rel="canonical" href="https://pascalailabs.com/news/founders-notes">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#052A2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pascal AI">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Founder&#x27;s Notes: AI in Institutional Finance | Pascal AI">
+<meta property="og:description" content="Alpha &amp; Agents, essays from the founder of Pascal AI Labs on how investment firms deploy AI, what it costs, and the infrastructure underneath it.">
+<meta property="og:url" content="https://pascalailabs.com/news/founders-notes">
+<meta property="og:image" content="https://pascalailabs.com/assets/og/news-founders-notes.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Founder&#x27;s notes on AI in institutional finance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pascalailabs">
+<meta name="twitter:title" content="Founder&#x27;s Notes: AI in Institutional Finance | Pascal AI">
+<meta name="twitter:description" content="Alpha &amp; Agents, essays from the founder of Pascal AI Labs on how investment firms deploy AI, what it costs, and the infrastructure underneath it.">
+<meta name="twitter:image" content="https://pascalailabs.com/assets/og/news-founders-notes.png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=33a81822df">
+<link rel="stylesheet" href="/assets/pages/research.css?v=dd87321245">
+<script src="/assets/site.js?v=cd66888c46" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV9WGBYMQR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SV9WGBYMQR');</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pascalailabs.com/#org",
+   "name": "Pascal AI Labs",
+   "alternateName": "Pascal AI",
+   "url": "https://pascalailabs.com/",
+   "logo": "https://pascalailabs.com/assets/pascal-logo.png",
+   "sameAs": [
+    "https://www.linkedin.com/company/pascal-ai-labs/",
+    "https://twitter.com/pascalailabs"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pascalailabs.com/news/founders-notes#webpage",
+   "url": "https://pascalailabs.com/news/founders-notes",
+   "name": "Founder's Notes: AI in Institutional Finance | Pascal AI",
+   "description": "Alpha & Agents, essays from the founder of Pascal AI Labs on how investment firms deploy AI, what it costs, and the infrastructure underneath it.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://pascalailabs.com/#website"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "dateModified": "2026-10-07",
+   "breadcrumb": {
+    "@id": "https://pascalailabs.com/news/founders-notes#breadcrumb"
+   },
+   "primaryImageOfPage": "https://pascalailabs.com/assets/og/news-founders-notes.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pascalailabs.com/#website",
+   "url": "https://pascalailabs.com/",
+   "name": "Pascal AI",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pascalailabs.com/news/founders-notes#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pascalailabs.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "News",
+     "item": "https://pascalailabs.com/news"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Founder's notes",
+     "item": "https://pascalailabs.com/news/founders-notes"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pascalailabs.com/news/founders-notes#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is Alpha & Agents?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Alpha & Agents is a newsletter on AI in institutional finance, written by Vibhav Viswanathan, founder of Pascal AI Labs. It covers how asset managers, hedge funds, banks and asset servicers adopt AI, what it costs, and what infrastructure it needs."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How often are new essays published?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A new essay goes out about twice a month. Every essay is listed on this page and published in full on Substack."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I subscribe?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Open any essay on Substack and subscribe there. New essays arrive by email."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Are the essays about Pascal?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Mostly they are about the industry. Where an essay draws on Pascal deployments, client details are anonymised. The industry pages show how those workflows run today."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I share or cite an essay?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Link to the essay on Substack and credit Alpha & Agents by Pascal AI Labs."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/" aria-label="Pascal AI home">
+      <img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/platform" aria-expanded="false" aria-haspopup="true">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-product">
+          <div class="mega-panel">
+            <div class="mp-col">
+              <a class="mp-feature" href="/platform">
+                <span class="mp-art" aria-hidden="true"><i></i><i></i><i></i></span>
+                <b>Platform overview</b>
+                <span>See how the Investment OS works.</span>
+              </a>
+              <p class="mp-label">Platform</p>
+              <a class="mp-link" href="/platform/context-graph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg> Context graph &amp; memory</a>
+              <a class="mp-link" href="/platform/mcp-apis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> MCP &amp; APIs</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/ask-pascal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Ask Pascal</b><span>Your AI research analyst</span></span></a>
+              <a class="mp-link" href="/ask-pascal/decision-traces"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg> Decision traces</a>
+              <a class="mp-link" href="/ask-pascal/cited-research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg> Cited research</a>
+              <a class="mp-link" href="/ask-pascal/screeners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg> Screeners</a>
+              <a class="mp-link" href="/ask-pascal/pascal-intel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg> Pascal Intel</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/pascal-agents"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><span><b>Pascal Agents</b><span>Run investment work end to end</span></span></a>
+              <a class="mp-link" href="/pascal-agents/autonomous-agents"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Autonomous agents</a>
+              <a class="mp-link" href="/pascal-agents/workflow-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg> Agentic workflow library</a>
+              <a class="mp-link" href="/pascal-agents/data-agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg> Pascal Data Agent</a>
+            </div>
+            <a class="mp-foot" href="/solutions/hedge-funds"><span class="chip">Industries</span><span><b>Pascal for your firm</b><span>Hedge funds, asset and wealth managers, banks, asset servicers, private equity and private credit, and corporate treasury</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/solutions/hedge-funds" aria-expanded="false" aria-haspopup="true">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-il">
+          <div class="mega-panel">
+              <a class="il-i" href="/solutions/hedge-funds"><span><b>Hedge Funds</b><small>Event briefs, reconciliations and DDQs</small></span></a>
+              <a class="il-i" href="/solutions/asset-wealth-management"><span><b>Asset &amp; Wealth Management</b><small>Research, mandate checks and client reporting</small></span></a>
+              <a class="il-i" href="/solutions/banking"><span><b>Banks &amp; Financial Institutions</b><small>Underwriting, covenant monitoring and KYC</small></span></a>
+              <a class="il-i" href="/solutions/asset-servicing"><span><b>Asset Servicing</b><small>Corporate actions, NAV checks and client queries</small></span></a>
+              <a class="il-i" href="/solutions/private-equity-credit"><span><b>Private Equity &amp; Private Credit</b><small>CIM screens, diligence and LP reporting</small></span></a>
+              <a class="il-i" href="/solutions/treasury-hedge-accounting"><span><b>Corporate Treasury &amp; Hedge Accounting</b><small>Exposures, effectiveness tests and hedge files</small></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/news" aria-expanded="false" aria-haspopup="true">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-list mega-news mega-news-ac">
+          <div class="mega-panel">
+            <div class="mn-col">
+              <p class="mp-label">News</p>
+              <a class="mp-link" href="/news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg> Newsroom</a>
+              <a class="mp-link" href="/news/founders-notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Founder's notes</a>
+            </div>
+            <div class="mn-col mn-ac">
+              <a class="mn-ac-head" href="/pascal-academy"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><b>Pascal Academy</b><span>Learn AI for institutional finance</span></span></a>
+              <a class="mp-link" href="/guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Desk guides</a>
+              <a class="mp-link" href="/pascal-academy/ai-fundamentals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg> AI fundamentals</a>
+              <a class="mp-link" href="/pascal-academy/ai-glossary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> AI glossary</a>
+              <a class="mp-link" href="/pascal-academy/workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> Workflows</a>
+              <a class="mp-link" href="/pascal-academy/prompt-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Prompt library</a>
+              <a class="mp-link" href="/pascal-academy/agent-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> Agent library</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-dark btn-sm" href="https://pascalailabs.com/demo">Book a demo</a>
+    </div>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <details open>
+    <summary>Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <p class="mm-label">Platform</p>
+    <a href="/platform">Platform overview</a>
+    <a href="/platform/context-graph">Context graph &amp; memory</a>
+    <a href="/platform/mcp-apis">MCP &amp; APIs</a>
+    <p class="mm-label">Ask Pascal</p>
+    <a href="/ask-pascal">Ask Pascal overview</a>
+    <a href="/ask-pascal/decision-traces">Decision traces</a>
+    <a href="/ask-pascal/cited-research">Cited research</a>
+    <a href="/ask-pascal/screeners">Screeners</a>
+    <a href="/ask-pascal/pascal-intel">Pascal Intel</a>
+    <p class="mm-label">Pascal Agents</p>
+    <a href="/pascal-agents">Pascal Agents overview</a>
+    <a href="/pascal-agents/autonomous-agents">Autonomous agents</a>
+    <a href="/pascal-agents/workflow-library">Agentic workflow library</a>
+    <a href="/pascal-agents/data-agent">Pascal Data Agent</a>
+  </details>
+  <details>
+    <summary>Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/solutions/hedge-funds">Hedge Funds</a>
+    <a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+    <a href="/solutions/banking">Banks &amp; Financial Institutions</a>
+    <a href="/solutions/asset-servicing">Asset Servicing</a>
+    <a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+    <a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+  </details>
+  <details>
+    <summary>News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/news">Newsroom</a>
+    <a href="/news/founders-notes">Founder's notes</a>
+    <p class="mm-label">Pascal Academy</p>
+    <a href="/pascal-academy">Academy home</a>
+    <a href="/guides">Desk guides</a>
+    <a href="/pascal-academy/ai-fundamentals">AI fundamentals</a>
+    <a href="/pascal-academy/ai-glossary">AI glossary</a>
+    <a href="/pascal-academy/workflows">Workflows</a>
+    <a href="/pascal-academy/prompt-library">Prompt library</a>
+    <a href="/pascal-academy/agent-library">Agent library</a>
+  </details>
+  <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+</div>
+
+<main id="main">
+<div class="frame">
+  <section class="hero-g rs-hero" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/news">News</a><span aria-hidden="true">/</span><span aria-current="page">Founder&#x27;s notes</span></nav>
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Alpha &amp; Agents</span></span>Founder's notes <span class="mute">on AI in institutional finance.</span></h1>
+      <p class="lead">Field notes from the founder of Pascal AI Labs on how investment firms deploy AI, what it costs, and the infrastructure that makes it work.</p>
+      <p class="rs-by"><span class="pui-av" aria-hidden="true">VV</span><span><b>Vibhav Viswanathan</b> · Founder, Pascal AI Labs</span></p>
+    </div>
+    <div class="hero-g-media rs-hero-media">
+      <p class="eyebrow rs-latest">Latest essay</p>
+      <article class="rs-card rs-feat" data-topic="operations">
+        <a class="rs-cover" href="https://vibhavviswanathan.substack.com/p/ai-for-institutional-finance-the" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://substackcdn.com/image/fetch/$s_!mtT0!,w_800,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff65ecabd-bce3-4f49-89e3-c9f15a009ccb_1646x956.png" alt="" width="800" height="450" loading="lazy" decoding="async"></a>
+        <div class="rs-body">
+          <p class="rs-meta"><span class="rs-topic">Operations</span><time datetime="2026-09-28">28 Sep 2026</time><span>31 min read</span></p>
+          <h2 class="rs-h"><a href="https://vibhavviswanathan.substack.com/p/ai-for-institutional-finance-the" rel="noopener">AI for Institutional Finance: The Mid- and Back-Office Opportunity</a></h2>
+          <p class="rs-sub">On why the least glamorous part of a financial institution is where AI is quietly doing some of its most useful work.</p>
+          <p class="rs-foot"><a class="link" href="https://vibhavviswanathan.substack.com/p/ai-for-institutional-finance-the" rel="noopener">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a><a class="rs-rel" href="/solutions/asset-servicing">Related: Asset servicing</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+
+<div class="frame">
+  <section class="row" id="essays" aria-labelledby="essays-title">
+    <div class="row-pad-sm rs-head">
+      <h2 class="h2" id="essays-title">All essays. <span class="mute">Newest first.</span></h2>
+      <div class="rs-chips" role="group" aria-label="Filter by topic"><button type="button" class="rs-chip" data-f="all" aria-pressed="true">All</button><button type="button" class="rs-chip" data-f="adoption" aria-pressed="false">Adoption</button><button type="button" class="rs-chip" data-f="infrastructure" aria-pressed="false">Infrastructure</button><button type="button" class="rs-chip" data-f="economics" aria-pressed="false">Economics</button><button type="button" class="rs-chip" data-f="operations" aria-pressed="false">Operations</button></div>
+    </div>
+    <div class="rs-grid row">
+      <article class="rs-card" data-topic="infrastructure">
+        <a class="rs-cover" href="https://vibhavviswanathan.substack.com/p/how-investment-firms-should-think" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://substackcdn.com/image/fetch/$s_!u2ZO!,w_800,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6cd90fde-7f02-4cfc-b929-50303bd2ff39_1673x940.png" alt="" width="800" height="450" loading="lazy" decoding="async"></a>
+        <div class="rs-body">
+          <p class="rs-meta"><span class="rs-topic">Infrastructure</span><time datetime="2026-08-25">25 Aug 2026</time><span>15 min read</span></p>
+          <h3><a href="https://vibhavviswanathan.substack.com/p/how-investment-firms-should-think" rel="noopener">How Investment Firms Should Think About Model Selection</a></h3>
+          <p class="rs-sub">A field guide to moving beyond generic benchmarks and building a system that adapts as the AI layer commoditizes.</p>
+          <p class="rs-foot"><a class="link" href="https://vibhavviswanathan.substack.com/p/how-investment-firms-should-think" rel="noopener">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a><a class="rs-rel" href="/platform/mcp-apis">Related: MCP &amp; APIs</a></p>
+        </div>
+      </article>
+      <article class="rs-card" data-topic="adoption">
+        <a class="rs-cover" href="https://vibhavviswanathan.substack.com/p/getting-up-to-speed-with-ai-part" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://substackcdn.com/image/fetch/$s_!00y6!,w_800,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2ca5ab0e-0c60-410f-82a2-1d67d69ef3b8_1672x941.png" alt="" width="800" height="450" loading="lazy" decoding="async"></a>
+        <div class="rs-body">
+          <p class="rs-meta"><span class="rs-topic">Adoption</span><time datetime="2026-08-05">5 Aug 2026</time><span>31 min read</span></p>
+          <h3><a href="https://vibhavviswanathan.substack.com/p/getting-up-to-speed-with-ai-part" rel="noopener">Getting Up to Speed with AI, Part II: How an Investment Firm Actually Becomes AI-Native</a></h3>
+          <p class="rs-sub">A field guide to the maturity curve that separates firms experimenting with AI from firms compounding with it.</p>
+          <p class="rs-foot"><a class="link" href="https://vibhavviswanathan.substack.com/p/getting-up-to-speed-with-ai-part" rel="noopener">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a><a class="rs-rel" href="/solutions/ai-transformation">Related: AI transformation</a></p>
+        </div>
+      </article>
+      <article class="rs-card" data-topic="adoption">
+        <a class="rs-cover" href="https://vibhavviswanathan.substack.com/p/getting-up-to-speed-with-ai-what" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://substackcdn.com/image/fetch/$s_!VoTv!,w_800,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F340d46aa-bff0-471e-9d66-7aba3d491bef_1536x1024.png" alt="" width="800" height="450" loading="lazy" decoding="async"></a>
+        <div class="rs-body">
+          <p class="rs-meta"><span class="rs-topic">Adoption</span><time datetime="2026-07-23">23 Jul 2026</time><span>27 min read</span></p>
+          <h3><a href="https://vibhavviswanathan.substack.com/p/getting-up-to-speed-with-ai-what" rel="noopener">Getting Up to Speed with AI: What Investment Professionals Actually Need to Know</a></h3>
+          <p class="rs-sub">Written by the founder of Pascal AI Labs for investment professionals looking to understand, evaluate, and deploy AI.</p>
+          <p class="rs-foot"><a class="link" href="https://vibhavviswanathan.substack.com/p/getting-up-to-speed-with-ai-what" rel="noopener">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a><a class="rs-rel" href="/ask-pascal">Related: Ask Pascal</a></p>
+        </div>
+      </article>
+      <article class="rs-card" data-topic="adoption">
+        <a class="rs-cover" href="https://vibhavviswanathan.substack.com/p/how-investment-firms-actually-deploy" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://substackcdn.com/image/fetch/$s_!eNBq!,w_800,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3cbff7ea-ecc1-4e4d-b076-a0c3022b6a4f_1536x1024.png" alt="" width="800" height="450" loading="lazy" decoding="async"></a>
+        <div class="rs-body">
+          <p class="rs-meta"><span class="rs-topic">Adoption</span><time datetime="2026-07-08">8 Jul 2026</time><span>19 min read</span></p>
+          <h3><a href="https://vibhavviswanathan.substack.com/p/how-investment-firms-actually-deploy" rel="noopener">How Investment Firms Actually Deploy AI: Case Studies from Pascal AI Labs</a></h3>
+          <p class="rs-sub">A field report from customer deployments across asset managers, hedge funds, and institutional finance.</p>
+          <p class="rs-foot"><a class="link" href="https://vibhavviswanathan.substack.com/p/how-investment-firms-actually-deploy" rel="noopener">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a><a class="rs-rel" href="/solutions/ai-transformation">Related: AI transformation</a></p>
+        </div>
+      </article>
+      <article class="rs-card" data-topic="infrastructure">
+        <a class="rs-cover" href="https://vibhavviswanathan.substack.com/p/the-three-infrastructure-problems" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://substackcdn.com/image/fetch/$s_!Zt75!,w_800,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc71cf21c-0b0c-467f-9e58-a06781df7433_1672x941.png" alt="" width="800" height="450" loading="lazy" decoding="async"></a>
+        <div class="rs-body">
+          <p class="rs-meta"><span class="rs-topic">Infrastructure</span><time datetime="2026-06-23">23 Jun 2026</time><span>19 min read</span></p>
+          <h3><a href="https://vibhavviswanathan.substack.com/p/the-three-infrastructure-problems" rel="noopener">The Three Infrastructure Problems Institutional Finance Needs to Solve in 2026</a></h3>
+          <p class="rs-sub">AI is only as effective as the information it can access. From the founder of Pascal AI Labs, a field guide to the infrastructure connecting signal, synthesis, and memory.</p>
+          <p class="rs-foot"><a class="link" href="https://vibhavviswanathan.substack.com/p/the-three-infrastructure-problems" rel="noopener">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a><a class="rs-rel" href="/platform/context-graph">Related: Context graph</a></p>
+        </div>
+      </article>
+      <article class="rs-card" data-topic="infrastructure">
+        <a class="rs-cover" href="https://vibhavviswanathan.substack.com/p/the-ai-stack-wall-street-actually" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://substackcdn.com/image/fetch/$s_!cTgV!,w_800,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F30043f52-c046-43bd-a43b-6ebc1dc64268_1672x889.png" alt="" width="800" height="450" loading="lazy" decoding="async"></a>
+        <div class="rs-body">
+          <p class="rs-meta"><span class="rs-topic">Infrastructure</span><time datetime="2026-06-12">12 Jun 2026</time><span>21 min read</span></p>
+          <h3><a href="https://vibhavviswanathan.substack.com/p/the-ai-stack-wall-street-actually" rel="noopener">The AI Stack Wall Street Actually Needs: Notes from Building Pascal AI Labs</a></h3>
+          <p class="rs-sub">A field report from the intersection of investment workflows, enterprise AI, and the systems being built to connect them.</p>
+          <p class="rs-foot"><a class="link" href="https://vibhavviswanathan.substack.com/p/the-ai-stack-wall-street-actually" rel="noopener">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a><a class="rs-rel" href="/platform">Related: Platform overview</a></p>
+        </div>
+      </article>
+      <article class="rs-card" data-topic="economics">
+        <a class="rs-cover" href="https://vibhavviswanathan.substack.com/p/rethinking-token-economics-where" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://substackcdn.com/image/fetch/$s_!cO7Q!,w_800,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e067cfa-6b76-4ca0-b57e-d1b824ce5555_3240x5655.png" alt="" width="800" height="450" loading="lazy" decoding="async"></a>
+        <div class="rs-body">
+          <p class="rs-meta"><span class="rs-topic">Economics</span><time datetime="2026-06-05">5 Jun 2026</time><span>18 min read</span></p>
+          <h3><a href="https://vibhavviswanathan.substack.com/p/rethinking-token-economics-where" rel="noopener">Rethinking Token Economics: Where AI ROI Actually Comes From</a></h3>
+          <p class="rs-sub">AI budgets built to last a year are vanishing in months. From the founder of Pascal AI, a field guide to token usage, yield, and the questions the buy side should ask before signing.</p>
+          <p class="rs-foot"><a class="link" href="https://vibhavviswanathan.substack.com/p/rethinking-token-economics-where" rel="noopener">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a><a class="rs-rel" href="/platform">Related: Platform overview</a></p>
+        </div>
+      </article>
+      <article class="rs-card" data-topic="economics">
+        <a class="rs-cover" href="https://vibhavviswanathan.substack.com/p/the-ai-agent-economy-an-investors" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://substackcdn.com/image/fetch/$s_!teE1!,w_800,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F75749527-fa31-495a-af91-0333ef89f7c3_6000x3600.png" alt="" width="800" height="450" loading="lazy" decoding="async"></a>
+        <div class="rs-body">
+          <p class="rs-meta"><span class="rs-topic">Economics</span><time datetime="2026-05-27">27 May 2026</time><span>20 min read</span></p>
+          <h3><a href="https://vibhavviswanathan.substack.com/p/the-ai-agent-economy-an-investors" rel="noopener">The AI Agent Economy: An Investor&#x27;s Guide to the Value Chain</a></h3>
+          <p class="rs-sub">An inside look at the agentic AI value chain, mapping who captures the profit, who gets disrupted, and where the durable margins accumulate.</p>
+          <p class="rs-foot"><a class="link" href="https://vibhavviswanathan.substack.com/p/the-ai-agent-economy-an-investors" rel="noopener">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a><a class="rs-rel" href="/pascal-agents">Related: Pascal Agents</a></p>
+        </div>
+      </article>
+      <article class="rs-card" data-topic="economics">
+        <a class="rs-cover" href="https://vibhavviswanathan.substack.com/p/building-the-memory-moat-the-new" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://substackcdn.com/image/fetch/$s_!gkXR!,w_800,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe5572265-6246-4c0a-b522-52045780c359_2048x1317.png" alt="" width="800" height="450" loading="lazy" decoding="async"></a>
+        <div class="rs-body">
+          <p class="rs-meta"><span class="rs-topic">Economics</span><time datetime="2026-05-19">19 May 2026</time><span>10 min read</span></p>
+          <h3><a href="https://vibhavviswanathan.substack.com/p/building-the-memory-moat-the-new" rel="noopener">Building the Memory Moat: The New Unit Economics of Buy-Side Research</a></h3>
+          <p class="rs-sub">Fund managers spend 60% of their research budgets on undifferentiated, zero-alpha desktop prep. In the AI era, modern finance is finally separating the wrapper from the work.</p>
+          <p class="rs-foot"><a class="link" href="https://vibhavviswanathan.substack.com/p/building-the-memory-moat-the-new" rel="noopener">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a><a class="rs-rel" href="/platform/context-graph">Related: Context graph</a></p>
+        </div>
+      </article>
+    </div>
+    <p class="rs-empty" hidden>No essays on this topic yet.</p>
+  </section>
+
+  <section class="row" aria-labelledby="themes-title">
+    <div class="row-pad-sm"><h2 class="h2" id="themes-title">What the essays cover. <span class="mute">And where it shows up in the product.</span></h2></div>
+    <div class="cells c4 row">
+      <a class="cell" href="/solutions/ai-transformation"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span><b>Adoption</b><span>How firms move from a pilot to AI in every team, with real deployments.</span><span class="link">AI transformation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      <a class="cell" href="/platform/context-graph"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><b>Infrastructure</b><span>Signal, synthesis and memory: the systems underneath useful AI.</span><span class="link">Context graph <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      <a class="cell" href="/platform"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg></span><b>Economics</b><span>Token budgets, research spend and where the return comes from.</span><span class="link">Platform overview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      <a class="cell" href="/solutions/asset-servicing"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span><b>Operations</b><span>Middle and back office work, where AI is already paying off.</span><span class="link">Asset servicing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+    </div>
+  </section>
+
+  <section class="row row-pad" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>What is Alpha &amp; Agents?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Alpha &amp; Agents is a newsletter on AI in institutional finance, written by Vibhav Viswanathan, founder of Pascal AI Labs. It covers how asset managers, hedge funds, banks and asset servicers adopt AI, what it costs, and what infrastructure it needs.</div></details>
+        <details class="faq-item"><summary>How often are new essays published?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A new essay goes out about twice a month. Every essay is listed on this page and published in full on Substack.</div></details>
+        <details class="faq-item"><summary>How do I subscribe?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Open any essay on <a href="https://vibhavviswanathan.substack.com" rel="noopener">Substack</a> and subscribe there. New essays arrive by email.</div></details>
+        <details class="faq-item"><summary>Are the essays about Pascal?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Mostly they are about the industry. Where an essay draws on Pascal deployments, client details are anonymised. The <a href="/solutions/hedge-funds">industry pages</a> show how those workflows run today.</div></details>
+        <details class="faq-item"><summary>Can I share or cite an essay?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Link to the essay on Substack and credit Alpha &amp; Agents by Pascal AI Labs.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  const chips = document.querySelectorAll(".rs-chip"), cards = document.querySelectorAll(".rs-grid .rs-card"), empty = document.querySelector(".rs-empty");
+  chips.forEach((c) => c.addEventListener("click", () => {
+    const f = c.dataset.f; let n = 0;
+    chips.forEach((x) => x.setAttribute("aria-pressed", String(x === c)));
+    cards.forEach((k) => { const on = f === "all" || k.dataset.topic === f; k.hidden = !on; if (on) n++; });
+    empty.hidden = n > 0;
+  }));
+})();
+</script>
+
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">See what the essays describe, on your own documents.<br><span style="color:var(--mint-2)">Pascal runs inside your perimeter.</span></h2>
+  <div class="actions">
+    <a class="btn btn-white" href="https://pascalailabs.com/demo">Book a demo</a>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="frame">
+    <div class="footer-grid">
+      <div>
+        <a href="/" aria-label="Pascal AI home"><img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24" loading="lazy"></a>
+        <p class="footer-blurb">The Investment OS for asset and wealth managers, asset servicers, corporate treasury, banks and financial institutions, private equity and private credit firms, and hedge funds.</p>
+      </div>
+      <nav aria-label="Platform">
+        <p class="fh">Platform</p>
+        <ul>
+          <li><a href="/platform">Platform overview</a></li>
+          <li><a href="/platform/context-graph">Context graph &amp; memory</a></li>
+          <li><a href="/platform/mcp-apis">MCP &amp; APIs</a></li>
+          <li><a href="/solutions/ai-transformation">AI transformation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Products">
+        <p class="fh">Products</p>
+        <ul>
+          <li><a href="/ask-pascal">Ask Pascal</a></li>
+          <li><a href="/ask-pascal/cited-research">Cited research</a></li>
+          <li><a href="/ask-pascal/screeners">Screeners</a></li>
+          <li><a href="/pascal-agents">Pascal Agents</a></li>
+          <li><a href="/pascal-agents/workflow-library">Workflow library</a></li>
+          <li><a href="/pascal-agents/data-agent">Pascal Data Agent</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Industries">
+        <p class="fh">Industries</p>
+        <ul>
+          <li><a href="/solutions/hedge-funds">Hedge Funds</a></li>
+          <li><a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a></li>
+          <li><a href="/solutions/banking">Banks &amp; Financial Institutions</a></li>
+          <li><a href="/solutions/asset-servicing">Asset Servicing</a></li>
+          <li><a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a></li>
+          <li><a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="News">
+        <p class="fh">News</p>
+        <ul>
+          <li><a href="/news">Newsroom</a></li>
+          <li><a href="/news/founders-notes">Founder's notes</a></li>
+          <li><a href="https://vibhavviswanathan.substack.com" rel="noopener">Alpha &amp; Agents</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="fh">Company</p>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/security">Security</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/pascal-academy">Pascal Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pascal AI Labs</span>
+      <span><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms-of-use">Terms</a> &middot; <a href="https://www.linkedin.com/company/pascal-ai-labs/" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/pascalailabs" rel="noopener">X</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!--meta
+{
+ "path": "/ask-pascal/cited-research",
+ "title": "Cited AI Research, Traced to the Page | Pascal AI",
+ "description": "AI financial research with citations: Pascal links every claim, table cell and figure to the exact page of a filing, broker note or your own IC memo.",
+ "crumbs": [["Ask Pascal", "/ask-pascal"], ["Cited research", "/ask-pascal/cited-research"]],
+ "schema": "software",
+ "name": "Pascal cited research",
+ "og_kicker": "Ask Pascal · Cited research",
+ "og_title": "Every claim, traced to the page",
+ "llms": "How Ask Pascal cites every sentence, table cell and figure to the exact page of its source, combines public filings, broker research and a firm's own documents in one answer, and scopes questions by company and filing type.",
+ "priority": 0.8,
+ "word_limit": 3000,
+ "lead_max": 120,
+ "css": ["cited-research.css"]
+}
+-->
+<div class="frame pg-cr">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Cited research</span></span>Every claim, <span class="mute">traced to the page.</span></h1>
+      <p class="lead">Ask about any company and every sentence in the answer links to the exact page of the document it came from, whether that is a 10-K, an earnings deck, a broker note or your own IC memo. Click a citation and the source opens beside the answer, so your team checks the number before trusting it.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel fit"><!--mock--><div class="pui pui-wide cr-hero" role="img" aria-label="An Ask Pascal answer comparing Honeywell with management guidance and actual performance: Honeywell exceeded guidance for adjusted sales and EPS in Q4 FY25 and FY25, citations 14 and 9, and organic growth accelerated as portfolio actions took effect. A table lists adjusted EPS $9.78 FY25 actual against $10.35–10.65 FY26 guidance, free cash flow $5.10B against $5.3–5.6B, and organic growth 7% against 3–6%, each with its citations. Citation 7 is open in a pane beside the answer: the Honeywell Q4 2025 earnings presentation at page 4 of 5, with 2026 guidance highlighted: adjusted EPS $10.35 to $10.65, free cash flow $5.3B to $5.6B.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Ask Pascal / <b>Honeywell guidance vs actuals</b></span><span class="pui-bar-r"><span class="pui-tag grey">Filings · Vault</span></span></div>
+    <div class="pui-split cr-hs">
+      <div class="pui-main">
+        <p class="pui-h cr-h">Comparison with management guidance and actual performance</p>
+        <p class="pui-ans">Honeywell exceeded management's guidance for both adjusted sales and EPS in Q4 FY25 and <span class="cr-nw">FY25<span class="pui-cite">14</span><span class="pui-cite">9</span>.</span> Organic growth accelerated as portfolio actions took effect.</p>
+        <table class="pui-tbl cr-t">
+          <thead><tr><th>Metric</th><th>FY25 actual</th><th>FY26 guidance</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td><b>Adjusted EPS</b></td><td>$9.78</td><td class="on">$10.35–10.65</td><td><span class="pui-cite">9</span><span class="pui-cite on">7</span></td></tr>
+            <tr><td><b>Free cash flow</b></td><td>$5.10B</td><td>$5.3–5.6B</td><td><span class="pui-cite">10</span><span class="pui-cite">7</span></td></tr>
+            <tr><td><b>Organic growth</b></td><td>7%</td><td>3–6%</td><td><span class="pui-cite">8</span><span class="pui-cite">7</span></td></tr>
+          </tbody>
+        </table>
+        <div class="cr-srcs"><span class="cr-lgs"><span class="pui-lg w">{{logo:pdf}}</span><span class="pui-lg w">{{logo:outlook}}</span><span class="pui-lg w">{{logo:sharepoint}}</span></span><b>16 sources</b></div>
+        <div class="pui-input cr-fu">Ask a follow-up</div>
+      </div>
+      <div class="pui-side cr-pane">
+        <div class="cr-pane-h"><span class="pui-k">Citation 7</span><span class="pui-x">{{icon:close}}</span></div>
+        <p class="cr-doc-n"><span class="pui-lg w">{{logo:pdf}}</span><span>Honeywell Q4 2025 earnings presentation</span></p>
+        <div class="pui-pdf">
+          <div class="pui-sheet">
+            <p class="cr-pg">Page 4 of 5</p>
+            <p class="pui-sheet-h">2026 outlook</p>
+            <div class="pui-ln m"></div><div class="pui-ln"></div>
+            <p class="cr-pass"><span class="pui-mark-hl">2026 guidance: adjusted EPS $10.35 to $10.65, free cash flow $5.3B to $5.6B</span><span class="pui-pin">7</span></p>
+            <div class="pui-ln"></div><div class="pui-ln s"></div>
+            <svg class="pui-chart pui-mt" viewBox="0 0 200 60" aria-hidden="true"><line class="ax" x1="0" y1="59" x2="200" y2="59"/><rect class="b2" x="12" y="30" width="26" height="29" rx="2"/><rect class="b2" x="62" y="24" width="26" height="35" rx="2"/><rect class="b2" x="112" y="17" width="26" height="42" rx="2"/><rect class="b1" x="162" y="8" width="26" height="51" rx="2"/></svg>
+          </div>
+        </div>
+        <p class="cr-view">View full document {{icon:arrow-right}}</p>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+  </section>
+</div>
+
+<div class="frame pg-cr">
+  <section class="row" aria-label="Cited research at a glance">
+    <div class="cells">
+      <div class="cell"><span class="stat-num">100<small>%</small></span><span class="stat-lbl">Traceable outputs</span></div>
+      <div class="cell"><span class="stat-num">25<small>+</small></span><span class="stat-lbl">Financial workflows</span></div>
+      <div class="cell"><span class="stat-num">300B<small>+</small></span><span class="stat-lbl">Assets supported</span></div>
+    </div>
+  </section>
+
+  <section class="row" id="check" aria-labelledby="f1">
+    <div class="row-pad-sm head">
+      <div><p class="eyebrow">Check any number</p><h2 class="h2" id="f1">One click <span class="mute">from claim to source.</span></h2></div>
+      <p>Numbers in tables carry citations too. Click one and the source document opens at the right page with the passage in view. Your team can verify a figure in seconds, before it goes into a model or a memo.</p>
+    </div>
+    <div class="cells row">
+      <div class="cell"><span class="n">01</span><b>Cited sentence by sentence</b><span>Every claim in the prose has its own marker.</span></div>
+      <div class="cell"><span class="n">02</span><b>Cited cell by cell</b><span>Summary tables include a source column, so each figure can be checked.</span></div>
+      <div class="cell"><span class="n">03</span><b>Opens at the page</b><span>The source opens beside the answer, at the page the claim came from.</span></div>
+    </div>
+  </section>
+
+  <section class="row split" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">Public and private, together</p>
+      <h2 class="h2" id="f2">Your memos and the market, <span class="mute">in the same answer.</span></h2>
+      <p>The answers that matter combine what is public with what only your firm knows. Pascal cites a filing, a broker note and your own IC memo side by side, so you can see which part of a view comes from where.</p>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui pui-wide cr-mix" role="img" aria-label="A Sea Limited event brief in Ask Pascal, at a glance. Market reaction: share price down about 45% from the August peak; price targets cut across the board, with one broker downgrading to Neutral ($145 to $95) and one keeping Outperform ($105.80), citations 13 and 11. Management framing: margin compression is a strategic choice, funded by monetisation without drawing on the balance sheet, citation 13. The sources pane lists 13 sources, including the Sea Limited Q4 2025 results filing (public filing), a broker report titled Moat intact despite investment push (broker research), the firm's IC memo on its Sea Limited position review and an expert call on Southeast Asia e-commerce (both your firm).">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Ask Pascal / <b>Sea Limited event brief</b></span><span class="pui-bar-r"><span class="pui-tag grey">13 sources</span></span></div>
+    <div class="pui-tool cr-co-tool"><span class="pui-lg w lg">{{logo:shopee}}</span><span class="cr-co-n"><b>Sea Limited</b><span class="pui-sub">Event Brief</span></span><span class="pui-sp"></span><span class="pui-chip on">At a glance</span><span class="pui-chip">Full brief</span></div>
+    <div class="pui-split cr-ms">
+      <div class="pui-main">
+        <p class="pui-k">Market reaction</p>
+        <div class="pui-kpis cr-kpis">
+          <div class="pui-kpi"><small>From Aug peak</small><b>−45%</b></div>
+          <div class="pui-kpi"><small>Downgrade to Neutral</small><b>$95</b><i class="dn">from $145</i></div>
+          <div class="pui-kpi"><small>Kept Outperform</small><b>$105.80</b></div>
+        </div>
+        <p class="pui-ans">Share price down about 45% from the August peak. Price targets cut across the board, with one broker downgrading to Neutral ($145 to $95) and one keeping Outperform ($105.80)<span class="pui-cite">13</span><span class="pui-cite">11</span>.</p>
+        <p class="pui-k">Management framing</p>
+        <p class="pui-ans">Margin compression is a strategic choice, funded by monetisation without drawing on the balance <span class="cr-nw">sheet<span class="pui-cite">13</span>.</span></p>
+        <div class="pui-input cr-fu">Ask a follow-up</div>
+      </div>
+      <div class="pui-side cr-side">
+        <p class="pui-k">Sources</p>
+        <div class="cr-src"><span class="pui-lg w">{{logo:pdf}}</span><span><b>Sea Limited Q4 2025 results filing</b><span class="pui-tag grey">Public filing</span></span></div>
+        <div class="cr-src"><span class="pui-lg t" style="background:#C9822B">B</span><span><b>Broker report: Moat intact despite investment push</b><span class="pui-tag amber">Broker research</span></span></div>
+        <div class="cr-src"><span class="pui-lg w">{{logo:sharepoint}}</span><span><b>IC memo: Sea Limited position review</b><span class="pui-tag">Your firm</span></span></div>
+        <div class="cr-src"><span class="pui-lg t" style="background:#2B8C9A">E</span><span><b>Expert call: Southeast Asia e-commerce</b><span class="pui-tag">Your firm</span></span></div>
+        <p class="cr-more">+ 9 more</p>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" aria-labelledby="f3">
+    <div class="split-copy">
+      <p class="eyebrow">Ask the right documents</p>
+      <h2 class="h2" id="f3">Scope the question <span class="mute">before you ask it.</span></h2>
+      <p>Type @ to choose the companies, then narrow to the filing types you trust for the question. Want capex commentary only from annual reports, without the looser language of a quarterly call? Choose once, and the answer stays inside that set.</p>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui pui-wide cr-scope" role="img" aria-label="The Ask Pascal prompt box with the question: @BSE what was the management guidance in the latest quarter? The scope menu is open. Mode is set to Filings, with Web, Auto and Explore as alternatives; Auto uses public filings and the web for deeper research, and Explore gives a quicker response. Filing types: annual reports and earnings presentations are selected; transcripts and exchange disclosures are not.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Ask Pascal / <b>New chat</b></span><span class="pui-bar-r"><span class="pui-dot">D</span></span></div>
+    <div class="pui-body">
+      <!--#include pui-rail on_chat="on" on_wf=""-->
+      <div class="pui-main">
+        <div class="pui-prompt">
+          <div class="pui-prompt-chips"><span class="pui-tag navy">{{icon:building}} BSE</span><span class="pui-tag grey">{{icon:filter}} 2 filing types</span></div>
+          <p class="pui-prompt-q"><span class="cr-at">@BSE</span> what was the management guidance in the latest quarter?</p>
+          <div class="pui-prompt-row"><span class="pui-chip">{{icon:at-sign}} Company</span><span class="pui-chip">{{icon:plus}} Source</span><span class="pui-sp"></span><span class="pui-chip on">{{icon:file-text}} Filings {{icon:chevron-down}}</span><span class="pui-send">{{icon:send}}</span></div>
+        </div>
+        <div class="cr-menu">
+          <div class="cr-menu-c">
+            <p class="pui-k">Mode</p>
+            <div class="cr-mi on"><span class="cr-mi-ic">{{icon:file-text}}</span><span><b>Filings</b></span><span class="pui-ok">{{icon:check}}</span></div>
+            <div class="cr-mi"><span class="cr-mi-ic">{{icon:globe}}</span><span><b>Web</b></span></div>
+            <div class="cr-mi"><span class="cr-mi-ic">{{icon:compass}}</span><span><b>Auto</b><small>Uses public filings and the web for deeper research</small></span></div>
+            <div class="cr-mi"><span class="cr-mi-ic">{{icon:zap}}</span><span><b>Explore</b><small>Gives a quicker response</small></span></div>
+          </div>
+          <div class="cr-menu-c">
+            <p class="pui-k">Filing types</p>
+            <div class="cr-ft"><span class="pui-chk on">{{icon:check}}</span>Annual reports</div>
+            <div class="cr-ft"><span class="pui-chk on">{{icon:check}}</span>Earnings presentations</div>
+            <div class="cr-ft"><span class="pui-chk"></span>Transcripts</div>
+            <div class="cr-ft"><span class="pui-chk"></span>Exchange disclosures</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" aria-labelledby="f4">
+    <div class="split-copy">
+      <p class="eyebrow">Your own files</p>
+      <h2 class="h2" id="f4">Your research, <span class="mute">cited the same way.</span></h2>
+      <p>Add a thesis, a broker report or a model to your Vault and ask about it next to public filings. Citations point into your own files exactly as they do for a 10-K, so a comparison between your view and management's is checkable line by line.</p>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui pui-wide has-float float-lg cr-vault" role="img" aria-label="Ask Pascal with My Vault open: 169.75 MB of 500 MB used, honeywell_thesis.pdf selected, with Upload and Add to query buttons. The summary of your thesis on Honeywell reads: your thesis values Honeywell at $246 to $298 per share on a sum-of-the-parts basis, 29 to 56% upside from the December 2025 price, citations 1 and 2; the main catalyst is the tax-free Aerospace spin-off in H2 2026, citation 3. Cited from honeywell_thesis.pdf. Citation 1 is open on the thesis PDF with the sum-of-the-parts value highlighted.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Ask Pascal / <b>Honeywell thesis</b></span><span class="pui-bar-r"><span class="pui-tag grey">{{icon:lock}} My Vault</span></span></div>
+    <div class="pui-split cr-vs">
+      <div class="pui-main">
+        <div class="pui-q">Summarise my thesis on Honeywell</div>
+        <p class="pui-k pui-mt">Summary of your thesis on Honeywell</p>
+        <p class="pui-ans cr-va">Your thesis values Honeywell at $246 to $298 per share on a sum-of-the-parts basis, 29 to 56% upside from the December 2025 price<span class="pui-cite on">1</span><span class="pui-cite">2</span>. The main catalyst is the tax-free Aerospace spin-off in H2 2026<span class="pui-cite">3</span>.</p>
+        <div class="pui-schips"><span class="pui-schip">{{logo:pdf}} Cited from honeywell_thesis.pdf</span></div>
+      </div>
+      <div class="pui-side cr-vside">
+        <div class="pui-vault-h"><span class="pui-k">My Vault</span><span class="pui-sub">1 selected</span></div>
+        <div class="cr-use"><i></i></div>
+        <p class="pui-sub">169.75 MB / 500 MB</p>
+        <div class="cr-file on"><span class="pui-chk on">{{icon:check}}</span><span class="pui-lg">{{logo:pdf}}</span><span>honeywell_thesis.pdf</span></div>
+        <div class="cr-file"><span class="pui-chk"></span><span class="pui-lg">{{logo:excel}}</span><span>SOTP valuation.xlsx</span></div>
+        <div class="cr-file"><span class="pui-chk"></span><span class="pui-lg">{{logo:word}}</span><span>Q3 IC notes.docx</span></div>
+        <div class="cr-vbtn"><span class="pui-btn">{{icon:upload}} Upload</span><span class="pui-btn pri">Add to query</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pui-float left cr-vpdf">
+    <div class="pui-float-h"><span class="pui-k">Citation 1</span><span class="pui-k">Page 2</span></div>
+    <p class="pui-doc">{{logo:pdf}} honeywell_thesis.pdf</p>
+    <div class="pui-ln m"></div>
+    <div class="pui-hl">Sum-of-the-parts value: $246 to $298 per share</div>
+    <div class="pui-ln"></div><div class="pui-ln s"></div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" id="anatomy" aria-labelledby="f5">
+    <div class="split-copy">
+      <p class="eyebrow">Anatomy of a cited answer</p>
+      <h2 class="h2" id="f5">Built <span class="mute">to be checked.</span></h2>
+      <ol class="cr-co">
+        <li><span class="cr-pin">1</span>Citation marker on the exact claim</li>
+        <li><span class="cr-pin">2</span>The source document, named</li>
+        <li><span class="cr-pin">3</span>The page it came from</li>
+        <li><span class="cr-pin">4</span>The passage, highlighted</li>
+        <li><span class="cr-pin">5</span>Every source used, listed</li>
+        <li><span class="cr-pin">6</span>Follow-up questions to go deeper</li>
+      </ol>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui pui-wide cr-anat" role="img" aria-label="A cited answer in Ask Pascal with six numbered callouts. 1: FY26 adjusted EPS is guided to $10.35 to $10.65, citation 7, against $9.78 delivered in FY25, citation 9. 2: the earnings presentation is named in the source pane. 3: it is open at page 4 of 5. 4: the passage Adjusted EPS $10.35 to $10.65 is highlighted. 5: the footer lists all 13 sources. 6: related prompts suggest follow-up questions.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Ask Pascal / <b>Honeywell FY26 outlook</b></span><span class="pui-bar-r"><span class="pui-tag grey">Filings</span></span></div>
+    <div class="pui-split cr-as">
+      <div class="pui-main">
+        <p class="pui-ans cr-aa">FY26 adjusted EPS is guided to $10.35 to <span class="cr-nw">$10.65<span class="pui-cite on">7</span><span class="cr-pin">1</span>,</span> against $9.78 delivered in FY25<span class="pui-cite">9</span>.</p>
+        <div class="pui-ln m"></div><div class="pui-ln"></div><div class="pui-ln s"></div>
+        <div class="cr-afoot">
+          <div class="cr-srcs"><span class="cr-lgs"><span class="pui-lg w">{{logo:pdf}}</span><span class="pui-lg w">{{logo:teams}}</span><span class="pui-lg w">{{logo:sharepoint}}</span><span class="pui-lg w">{{logo:outlook}}</span></span><b>13 sources</b><span class="cr-pin">5</span></div>
+          <p class="pui-k cr-rk">Related prompts<span class="cr-pin">6</span></p>
+          <div class="cr-rel">{{icon:arrow-right}} What drove the FY25 EPS beat?</div>
+          <div class="cr-rel">{{icon:arrow-right}} Show FY26 guidance by segment</div>
+        </div>
+      </div>
+      <div class="pui-side cr-pane">
+        <p class="cr-doc-n"><span class="pui-lg w">{{logo:pdf}}</span><span>Earnings presentation</span><span class="cr-pin">2</span></p>
+        <p class="cr-pgl">Page 4 of 5<span class="cr-pin">3</span></p>
+        <div class="pui-pdf">
+          <div class="pui-sheet">
+            <p class="pui-sheet-h">2026 outlook</p>
+            <div class="pui-ln m"></div><div class="pui-ln"></div>
+            <p class="cr-pass"><span class="pui-mark-hl">Adjusted EPS $10.35 to $10.65</span><span class="cr-pin">4</span></p>
+            <div class="pui-ln"></div><div class="pui-ln s"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row row-pad" aria-labelledby="cmp-title">
+    <div class="head" style="margin-bottom:36px">
+      <div><p class="eyebrow">Why it matters</p><h2 class="h2" id="cmp-title" style="margin-top:18px">An answer you can't check <span class="mute">is an answer you can't use.</span></h2></div>
+    </div>
+    <div class="table-wrap">
+      <table class="cr-compare">
+        <thead><tr><th scope="col"></th><th scope="col">Generic AI</th><th scope="col">Pascal</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Where a number came from</th><td>Unclear, or a link to a website</td><td>Exact document and page</td></tr>
+          <tr><th scope="row">Checking a figure</th><td>Search for it yourself</td><td>One click, passage highlighted</td></tr>
+          <tr><th scope="row">Your own research</th><td>Not included</td><td>Cited next to public filings</td></tr>
+          <tr><th scope="row">Scope of the search</th><td>Whatever it finds</td><td>Companies and filing types you choose</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>What is cited research?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Ask about any company and every sentence in the answer links to the exact page of the document it came from, whether that is a 10-K, an earnings deck, a broker note or your own IC memo. Click a citation and the source opens beside the answer.</div></details>
+        <details class="faq-item"><summary>What can Pascal cite?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Public filings, earnings presentations, transcripts and exchange disclosures, plus your connected internal documents and anything you upload to your Vault.</div></details>
+        <details class="faq-item"><summary>Can I ask about more than one company at once?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Add a second @ and Pascal searches both companies and cites each separately.</div></details>
+        <details class="faq-item"><summary>Do citations work on numbers in tables?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Summary tables include a source column, so every figure links back to its page.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="rel-title">
+    <div class="row-pad-sm"><h2 class="h2" id="rel-title">Related</h2></div>
+    <div class="cells row">
+      <a class="cell" href="/ask-pascal/decision-traces"><span class="n">Ask Pascal</span><b>Decision traces</b><span>Keep the reasoning behind every decision.</span><span class="link">View decision traces {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/platform/context-graph"><span class="n">Platform</span><b>Context graph &amp; memory</b><span>The internal and external sources every answer can cite.</span><span class="link">View the context graph {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/pascal-agents/data-agent"><span class="n">Pascal Data Agent</span><b>Research files, structured</b><span>Broker PDFs, expert calls and notes, structured so answers cite the right page.</span><span class="link">View the Data Agent {{icon:arrow-right}}</span></a>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See every claim traced on your own coverage." sub="A walkthrough on the companies you follow, with your documents connected."-->

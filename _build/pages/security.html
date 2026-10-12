@@ -1,0 +1,133 @@
+<!--meta
+{
+ "path": "/security",
+ "title": "Pascal AI Security: Data Protection for Investment Firms",
+ "description": "How Pascal AI protects investment firm data: SOC 2 Type II and ISO 27001, AES-256 encryption, data-level permissions, audit logs and private deployment.",
+ "crumbs": [["Security", "/security"]],
+ "name": "Pascal AI security",
+ "og_kicker": "Security",
+ "og_title": "Security for institutional finance",
+ "llms": "How Pascal AI protects client data: SOC 2 Type II and ISO 27001 certification (GDPR coming soon), AES-256 encryption in transit and at rest, RBAC at the data level, audit logs, source citations, no training on client data, and deployment on a dedicated instance, in the client's VPC (AWS, Azure or GCP) or on-premises.",
+ "priority": 0.7,
+ "word_limit": 900,
+ "css": ["security.css"]
+}
+-->
+<section class="hero-teal hero-ent pg-sec" aria-labelledby="page-title">
+  <div class="hero-teal-in">
+    {{crumbs}}
+    <div class="ht-grid">
+      <div><h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Security</span></span>Security for <span class="mute">institutional finance.</span></h1></div>
+      <div class="ht-side">
+        <p class="lead">Pascal keeps your firm's data encrypted, permissioned and traceable, and runs on the infrastructure you choose.</p>
+        <div class="actions">
+          <a class="btn btn-white" href="{{demo_url}}">Book a demo</a>
+        </div>
+      </div>
+    </div>
+    <dl class="sec-facts">
+      <div><dt>Encryption</dt><dd>AES-256 in transit and at rest</dd></div>
+      <div><dt>Certified</dt><dd>SOC 2 Type II · ISO 27001</dd></div>
+      <div><dt>Deployment</dt><dd>Dedicated, your VPC or on-premises</dd></div>
+      <div><dt>Model training</dt><dd>Never on client data</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec-band bg-mint pg-sec" id="protection" aria-labelledby="prot-title">
+  <div class="frame">
+    <div class="sec-head row-pad-sm">
+      <p class="eyebrow">Data protection</p>
+      <h2 class="h2" id="prot-title">Your data, <span class="mute">protected by default.</span></h2>
+    </div>
+    <div class="sec-tiles">
+      <div class="sec-tile"><span class="sec-ic">{{icon:shield-check}}</span><h3>No training on your data</h3><p>Pascal never uses client prompts or data to train or refine models. Your data serves your team alone.</p></div>
+      <div class="sec-tile"><span class="sec-ic">{{icon:server}}</span><h3>Isolated infrastructure</h3><p>Pascal runs on Azure and AWS with hardened hardware configurations and rigorous network segmentation and isolation.</p></div>
+      <div class="sec-tile"><span class="sec-ic">{{icon:eye}}</span><h3>Full data visibility</h3><p>Transparent oversight of your firm's processes, so you manage data access and usage precisely.</p></div>
+      <div class="sec-tile"><span class="sec-ic">{{icon:users}}</span><h3>Strict access controls</h3><p>Role-based access control is enforced at the data level, per user and per source, before anything reaches an analyst or an agent.</p></div>
+      <div class="sec-tile"><span class="sec-ic">{{icon:lock}}</span><h3>Encrypted everywhere</h3><p>AES-256 in transit and at rest, across storage, file transmission, networks, systems and internal protocols.</p></div>
+      <div class="sec-tile"><span class="sec-ic">{{icon:file-check}}</span><h3>Audited and tested</h3><p>Regular audits and third-party penetration tests keep our controls under independent review.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark sec-band pg-sec" id="compliance" aria-labelledby="comp-title">
+  <div class="frame sec-dframe">
+    <div class="sec-comp row-pad">
+      <div class="sec-comp-copy">
+        <p class="eyebrow">Compliance</p>
+        <h2 class="h2" id="comp-title">Certified to <span class="mute">industry standards.</span></h2>
+        <p>Pascal is SOC 2 Type II and ISO 27001 certified. GDPR is coming soon.</p>
+      </div>
+      <div class="sec-certs">
+        <!--#include cert-badges-->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-band bg-cream pg-sec" id="deployment" aria-labelledby="dep-title">
+  <div class="frame">
+    <div class="sec-head row-pad-sm">
+      <p class="eyebrow">Deployment</p>
+      <h2 class="h2" id="dep-title">Deploy where <span class="mute">your data lives.</span></h2>
+      <p class="sec-sub">Choose the environment that fits your firm's controls. Pascal uses the models your firm approves in each one.</p>
+    </div>
+    <div class="sec-deploy">
+      <article class="sec-dep">
+        <p class="sec-dep-k">Option 01</p>
+        <div class="sec-dia" aria-hidden="true"><div class="sec-dia-o"><span class="sec-dia-l">Hosted by Pascal · Azure / AWS</span><div class="sec-dia-i"><span class="sec-dia-l">Your dedicated instance</span><span class="sec-chip">Pascal</span></div></div></div>
+        <h3>Dedicated Pascal instance</h3>
+        <p>A dedicated instance for your firm, with restricted or full features.</p>
+      </article>
+      <article class="sec-dep">
+        <p class="sec-dep-k">Option 02</p>
+        <div class="sec-dia" aria-hidden="true"><div class="sec-dia-o yours"><span class="sec-dia-l">Your VPC · AWS / Azure / GCP</span><div class="sec-dia-i"><span class="sec-dia-l">Your perimeter</span><span class="sec-chip">Pascal</span></div></div></div>
+        <h3>Your VPC</h3>
+        <p>Pascal deploys inside your own virtual private cloud on AWS, Azure or GCP.</p>
+      </article>
+      <article class="sec-dep">
+        <p class="sec-dep-k">Option 03</p>
+        <div class="sec-dia" aria-hidden="true"><div class="sec-dia-o yours"><span class="sec-dia-l">Your data centre</span><div class="sec-dia-i"><span class="sec-dia-l">Your hardware</span><span class="sec-chip">Pascal</span></div></div></div>
+        <h3>On-premises</h3>
+        <p>Pascal runs on your own infrastructure, inside your firm's perimeter.</p>
+      </article>
+    </div>
+    <div class="sec-foot"><a class="link" href="/platform">See the Pascal platform</a></div>
+  </div>
+</section>
+
+<div class="frame pg-sec">
+  <section class="sec-prin-wrap row-pad" id="principles" aria-labelledby="prin-title">
+    <div class="sec-prin-head">
+      <p class="eyebrow">Principles</p>
+      <h2 class="h2" id="prin-title">How Pascal <span class="mute">handles your data.</span></h2>
+    </div>
+    <ol class="sec-prin">
+      <li><span class="sec-n">01</span><h3>Client data trains nothing</h3><p>Prompts and data stay out of model training and refinement. They serve your team only.</p></li>
+      <li><span class="sec-n">02</span><h3>Permissions travel with the data</h3><p>Every entity inherits the permissions of its source system, checked per user and per source. <a class="link" href="/platform/context-graph">See the context graph</a></p></li>
+      <li><span class="sec-n">03</span><h3>Every action is logged</h3><p>Every query, answer and action is recorded in an audit log and can be traced. <a class="link" href="/pascal-agents">See Pascal Agents</a></p></li>
+      <li><span class="sec-n">04</span><h3>Every claim is cited</h3><p>Each output carries source citations, auditable back to the filing, transcript or document. <a class="link" href="/ask-pascal/cited-research">See cited research</a></p></li>
+      <li><span class="sec-n">05</span><h3>Approved models only</h3><p>Pascal routes each task to the best-suited LLM from the models your firm approves.</p></li>
+      <li><span class="sec-n">06</span><h3>Deployment on your terms</h3><p>Run Pascal on a dedicated instance, in your VPC or on-premises, wherever your controls require.</p></li>
+    </ol>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div>
+        <h2 class="h2" id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item"><summary>Does Pascal train models on our data?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Never. Pascal does not use client prompts or data to train or refine models. Your data only serves your team.</div></details>
+        <details class="faq-item"><summary>Which security certifications does Pascal hold?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal is SOC 2 Type II and ISO 27001 certified. GDPR is coming soon.</div></details>
+        <details class="faq-item"><summary>Can Pascal run inside our own environment?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Pascal can be deployed on-premises or inside your VPC on AWS, Azure or GCP. Dedicated instances are also available, with restricted or full features.</div></details>
+        <details class="faq-item"><summary>How is our data encrypted?<span class="pm" aria-hidden="true"></span></summary><div class="ans">With AES-256 in transit and at rest. Encryption covers storage, file transmission, networks, systems and internal protocols.</div></details>
+        <details class="faq-item"><summary>How does Pascal decide who can see what?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Role-based access control is enforced at the data level. Pascal checks permissions per user and per source before anything reaches an analyst or an agent, and every entity inherits the permissions of its source system.</div></details>
+        <details class="faq-item"><summary>Can we audit what Pascal did and why?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Every query, answer and action is logged and traceable, and every output carries source citations back to the filing, transcript or document.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See Pascal" sub="inside your own perimeter."-->

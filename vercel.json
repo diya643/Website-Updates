@@ -1,0 +1,77 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/product",
+      "destination": "/platform",
+      "permanent": true
+    },
+    {
+      "source": "/platform/institutional-memory",
+      "destination": "/platform/context-graph",
+      "permanent": true
+    },
+    {
+      "source": "/ask-pascal/alternative-data",
+      "destination": "/pascal-agents/data-agent#classifier",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/asset-management",
+      "destination": "/solutions/asset-wealth-management",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/private-markets",
+      "destination": "/solutions/private-equity-credit",
+      "permanent": true
+    },
+    {
+      "source": "/data-agent",
+      "destination": "/pascal-agents/data-agent",
+      "permanent": true
+    },
+    {
+      "source": "/data-agent/vault-viewer",
+      "destination": "/pascal-agents/data-agent#vault-viewer",
+      "permanent": true
+    },
+    {
+      "source": "/data-agent/classifier",
+      "destination": "/pascal-agents/data-agent#classifier",
+      "permanent": true
+    },
+    {
+      "source": "/data-agent/extraction",
+      "destination": "/pascal-agents/data-agent#extraction",
+      "permanent": true
+    },
+    {
+      "source": "/pascal-agents/office-suite",
+      "destination": "/pascal-agents",
+      "permanent": true
+    },
+    {
+      "source": "/research",
+      "destination": "/news/founders-notes",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/investment-banking",
+      "destination": "/solutions/banking",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+/* Asset & wealth management + asset servicing: hero mock run card sits below the table's last row */
+.hero-g-media .pui.has-float.hero-runcard { padding-bottom: 146px; }
+@media (max-width: 760px) { .hero-g-media .pui.has-float.hero-runcard { padding-bottom: 140px; } }

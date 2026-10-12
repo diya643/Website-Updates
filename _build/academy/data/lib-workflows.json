@@ -1,0 +1,460 @@
+{
+ "stages": [
+  {
+   "n": "1",
+   "name": "Task",
+   "q": "What are we trying to accomplish?",
+   "d": "Define the job clearly. What question needs answering, what decision needs to be supported, and what does a useful result look like?"
+  },
+  {
+   "n": "2",
+   "name": "Context",
+   "q": "What do we need to know?",
+   "d": "Bring together the information required to do the work well: filings, transcripts, financials, market data, prior analysis, internal research, and other relevant sources."
+  },
+  {
+   "n": "3",
+   "name": "Process",
+   "q": "How should the work be done?",
+   "d": "Define the sequence of steps required to reach the answer. What needs to be retrieved, compared, calculated, tested, or synthesized?"
+  },
+  {
+   "n": "4",
+   "name": "Output",
+   "q": "What should the work produce?",
+   "d": "Turn the analysis into a usable deliverable: a summary, comparison, timeline, model, assessment, or recommendation. The output should support the next action."
+  },
+  {
+   "n": "5",
+   "name": "Review",
+   "q": "Where does judgment come in?",
+   "d": "A person validates the work, checks the important assumptions, edits where necessary, and makes the final call. Automation handles the process; judgment stays with the analyst."
+  }
+ ],
+ "cats": [
+  {
+   "name": "Earnings",
+   "desc": "Workflows for earnings analysis and earnings season.",
+   "items": [
+    {
+     "id": "earnings-summary",
+     "title": "Earnings Summary",
+     "desc": "Generate a structured, fact-based summary of a company's latest earnings, covering financial performance, key developments, management commentary, and forward-looking signals.",
+     "steps": [
+      "Gather the results",
+      "Extract key metrics",
+      "Analyze management commentary",
+      "Structure the summary"
+     ],
+     "flow": [
+      "Results",
+      "Metrics",
+      "Commentary",
+      "Synthesis",
+      "Output"
+     ],
+     "inputs": "Earnings releases · Filings · Investor presentations · Financial data · Earnings calls",
+     "output": "A structured earnings summary covering financial performance, key developments, management commentary, guidance, and the most important takeaways."
+    },
+    {
+     "id": "key-debates",
+     "title": "Key Debates from Earnings",
+     "desc": "Identify the most important debates emerging from an earnings quarter, combining analyst questions, management responses, sentiment, and actionable takeaways.",
+     "steps": [
+      "Gather the discussion",
+      "Identify recurring themes",
+      "Assess the debate",
+      "Surface the takeaways"
+     ],
+     "flow": [
+      "Call",
+      "Themes",
+      "Debates",
+      "Takeaways",
+      "Output"
+     ],
+     "inputs": "Earnings call transcripts · Analyst questions · Management commentary · Prior earnings calls · Relevant financial data",
+     "output": "A summary of the key debates from the quarter, including analyst concerns, management responses, areas of disagreement, and actionable takeaways."
+    },
+    {
+     "id": "guidance-vs-actuals",
+     "title": "Guidance vs Actuals",
+     "desc": "Compare management guidance with reported performance to assess whether the company beat, met, or missed its commitments.",
+     "steps": [
+      "Find guidance",
+      "Extract actuals",
+      "Compare",
+      "Analyze"
+     ],
+     "flow": [
+      "Guidance",
+      "Extraction",
+      "Comparison",
+      "Analysis",
+      "Output"
+     ],
+     "inputs": "Earnings calls · Filings · Investor presentations · Financial data · Historical guidance",
+     "output": "A side-by-side view of guidance versus actual performance, including key beats, misses, changes, and outstanding commitments."
+    },
+    {
+     "id": "executive-narrative",
+     "title": "Executive Narrative Tracker",
+     "desc": "Track how management's narrative changes over time to identify shifts in strategy, priorities, risks, and expectations.",
+     "steps": [
+      "Gather commentary",
+      "Track recurring themes",
+      "Compare over time",
+      "Flag meaningful shifts"
+     ],
+     "flow": [
+      "Commentary",
+      "Themes",
+      "Comparison",
+      "Shifts",
+      "Output"
+     ],
+     "inputs": "Earnings calls · Investor presentations · Filings · Management commentary · Historical company disclosures",
+     "output": "A longitudinal view of management's narrative, highlighting recurring themes, changes in emphasis, strategic shifts, and emerging signals."
+    },
+    {
+     "id": "sector-pulse",
+     "title": "Sector Pulse",
+     "desc": "Identify the biggest themes, trends, and developments emerging across a sector based on what its leading companies are discussing.",
+     "steps": [
+      "Gather company commentary",
+      "Identify common themes",
+      "Compare companies",
+      "Synthesize the sector view"
+     ],
+     "flow": [
+      "Companies",
+      "Themes",
+      "Comparison",
+      "Sector view",
+      "Output"
+     ],
+     "inputs": "Earnings calls · Filings · Investor presentations · Company commentary · Sector data",
+     "output": "A sector-level pulse highlighting the biggest themes companies are discussing, where sentiment is changing, and what developments matter across the sector."
+    },
+    {
+     "id": "earnings-preview",
+     "title": "Earnings Preview",
+     "desc": "Synthesize expectations, prior performance, and key watchpoints into a focused pre-earnings brief.",
+     "steps": [
+      "Gather expectations",
+      "Review the last quarter",
+      "Identify key watchpoints",
+      "Build the preview"
+     ],
+     "flow": [
+      "Expectations",
+      "History",
+      "Watchpoints",
+      "Synthesis",
+      "Output"
+     ],
+     "inputs": "Consensus estimates · Prior earnings · Management guidance · Analyst commentary · Financial data · Recent company disclosures",
+     "output": "A focused earnings preview covering consensus expectations, what happened last quarter, key metrics to watch, and the issues most likely to drive the upcoming result."
+    }
+   ]
+  },
+  {
+   "name": "Company Research",
+   "desc": "Workflows for company research and fundamental analysis.",
+   "items": [
+    {
+     "id": "ipo-prospectus",
+     "title": "IPO Prospectus Analysis",
+     "desc": "Extract a structured, investor-focused view of a company from its IPO prospectus.",
+     "steps": [
+      "Map the business",
+      "Analyze the financials",
+      "Assess the risks",
+      "Surface investor considerations"
+     ],
+     "flow": [
+      "Business",
+      "Financials",
+      "Risks",
+      "Investor view",
+      "Output"
+     ],
+     "inputs": "IPO prospectus · Financial statements · Risk factors · Management commentary · Market data",
+     "output": "An investor-focused IPO analysis covering the business model, financial performance, growth drivers, risks, and key considerations."
+    },
+    {
+     "id": "annual-report",
+     "title": "Annual Report Summariser",
+     "desc": "Turn a company's annual report into a structured summary of its business, financial performance, strategy, and risks.",
+     "steps": [
+      "Map the report",
+      "Extract key information",
+      "Connect the pieces",
+      "Structure the findings"
+     ],
+     "flow": [
+      "Report",
+      "Extraction",
+      "Analysis",
+      "Synthesis",
+      "Output"
+     ],
+     "inputs": "Annual report · Financial statements · Management discussion · Risk disclosures · Notes to accounts",
+     "output": "A structured annual report summary covering the business, financial performance, strategy, risks, and key developments."
+    },
+    {
+     "id": "company-primer",
+     "title": "Company Primer",
+     "desc": "Build a comprehensive research brief on a company using filings and relevant public information.",
+     "steps": [
+      "Establish the company",
+      "Analyze performance",
+      "Assess the investment case",
+      "Bring it together"
+     ],
+     "flow": [
+      "Business",
+      "Performance",
+      "Position",
+      "Thesis",
+      "Output"
+     ],
+     "inputs": "Company filings · Annual reports · Earnings calls · Investor presentations · Financial data · Relevant news",
+     "output": "A comprehensive company primer covering the business model, financials, competitive position, strategy, risks, and investment considerations."
+    },
+    {
+     "id": "management-compensation",
+     "title": "Management Compensation",
+     "desc": "Analyze executive compensation, ownership, incentives, and governance considerations.",
+     "steps": [
+      "Identify compensation",
+      "Track ownership",
+      "Compare incentives",
+      "Identify governance risks"
+     ],
+     "flow": [
+      "Compensation",
+      "Ownership",
+      "Incentives",
+      "Governance",
+      "Output"
+     ],
+     "inputs": "Proxy statements · Annual reports · Filings · Executive disclosures · Compensation tables",
+     "output": "A structured management compensation analysis covering pay, ownership, incentives, changes over time, and potential governance considerations."
+    },
+    {
+     "id": "insider-intelligence",
+     "title": "Insider Intelligence Briefing",
+     "desc": "Track insider-related developments across company news and public disclosures over a selected period.",
+     "steps": [
+      "Gather disclosures",
+      "Identify insider activity",
+      "Add company context",
+      "Surface the signals"
+     ],
+     "flow": [
+      "Disclosures",
+      "Activity",
+      "Context",
+      "Signals",
+      "Output"
+     ],
+     "inputs": "Company filings · Press releases · Company news · Insider disclosures · Relevant market data",
+     "output": "A time-bounded briefing of material insider developments, with relevant company context and key signals highlighted."
+    },
+    {
+     "id": "meeting-brief",
+     "title": "Meeting Brief",
+     "desc": "Prepare a focused briefing for a management meeting, investor call, conference, or company discussion.",
+     "steps": [
+      "Build the company context",
+      "Identify what changed",
+      "Develop key questions",
+      "Prepare the brief"
+     ],
+     "flow": [
+      "Context",
+      "Developments",
+      "Questions",
+      "Brief",
+      "Output"
+     ],
+     "inputs": "Company filings · Earnings calls · Investor presentations · Prior meeting notes · Recent news · Financial data",
+     "output": "A meeting-ready brief covering recent developments, key company context, open questions, and suggested discussion points."
+    },
+    {
+     "id": "business-model",
+     "title": "Business Model Breakdown",
+     "desc": "Break down how a company makes money, creates value, and allocates resources across its business.",
+     "steps": [
+      "Map the business",
+      "Trace the economics",
+      "Identify dependencies",
+      "Evaluate the model"
+     ],
+     "flow": [
+      "Business",
+      "Economics",
+      "Dependencies",
+      "Assessment",
+      "Output"
+     ],
+     "inputs": "Annual reports · Company filings · Investor presentations · Earnings calls · Financial data",
+     "output": "A structured breakdown of the company's business model, revenue drivers, cost structure, economics, dependencies, and key risks."
+    },
+    {
+     "id": "bull-bear",
+     "title": "Bull Bear Analysis",
+     "desc": "Build a structured two-sided investment thesis by examining the strongest arguments for and against a company.",
+     "steps": [
+      "Establish the base case",
+      "Build the bull case",
+      "Build the bear case",
+      "Identify the debate"
+     ],
+     "flow": [
+      "Base case",
+      "Bull",
+      "Bear",
+      "Debate",
+      "Output"
+     ],
+     "inputs": "Company filings · Financial data · Earnings calls · Consensus estimates · Market data · Relevant research",
+     "output": "A balanced investment thesis outlining the bull and bear cases, key assumptions, risks, catalysts, and factors that could change the view."
+    },
+    {
+     "id": "capital-allocation",
+     "title": "Capital Allocation & Strategy Review",
+     "desc": "Assess how management deploys capital and whether allocation decisions align with the company's strategy.",
+     "steps": [
+      "Track capital deployment",
+      "Understand strategic priorities",
+      "Evaluate outcomes",
+      "Assess the strategy"
+     ],
+     "flow": [
+      "Capital",
+      "Priorities",
+      "Outcomes",
+      "Assessment",
+      "Output"
+     ],
+     "inputs": "Annual reports · Filings · Earnings calls · Investor presentations · Financial statements · Capital allocation history",
+     "output": "A structured review of capital allocation, strategic priorities, investment outcomes, and changes in management's approach over time."
+    },
+    {
+     "id": "catalyst-calendar",
+     "title": "30-Day Catalyst Calendar",
+     "desc": "Identify the company events and developments most likely to matter over the next 30 days.",
+     "steps": [
+      "Map upcoming events",
+      "Track pending developments",
+      "Assess potential impact",
+      "Build the calendar"
+     ],
+     "flow": [
+      "Events",
+      "Developments",
+      "Impact",
+      "Calendar",
+      "Output"
+     ],
+     "inputs": "Company filings · Investor relations materials · Earnings calendar · Regulatory disclosures · Press releases · Market data",
+     "output": "A 30-day catalyst calendar showing upcoming events, expected dates, relevant context, and the potential impact of each catalyst."
+    }
+   ]
+  },
+  {
+   "name": "Competition",
+   "desc": "Workflows for competitive and peer analysis.",
+   "items": [
+    {
+     "id": "peer-analysis",
+     "title": "Peer Analysis",
+     "desc": "Produce a side-by-side, filings-based comparison of multiple companies over a defined period.",
+     "steps": [
+      "Select the peer group",
+      "Gather comparable data",
+      "Normalize the comparison",
+      "Analyze the differences"
+     ],
+     "flow": [
+      "Peers",
+      "Data",
+      "Comparison",
+      "Analysis",
+      "Output"
+     ],
+     "inputs": "Company filings · Annual reports · Earnings releases · Financial data · Operating metrics",
+     "output": "A side-by-side peer comparison highlighting relative financial performance, operating metrics, key differences, and areas of competitive strength or weakness."
+    }
+   ]
+  },
+  {
+   "name": "News & Events",
+   "desc": "Workflows for financial news and market monitoring.",
+   "items": [
+    {
+     "id": "event-driven",
+     "title": "Event-Driven Stock Price Analysis",
+     "desc": "Analyze significant stock price movements and identify the events and developments that may have driven them.",
+     "steps": [
+      "Identify the move",
+      "Gather relevant events",
+      "Connect events to price action",
+      "Assess the catalyst"
+     ],
+     "flow": [
+      "Price move",
+      "Events",
+      "Timing",
+      "Catalyst",
+      "Output"
+     ],
+     "inputs": "Stock price data · Company filings · Press releases · Earnings announcements · Regulatory news · Market news",
+     "output": "An event-driven analysis linking major stock price movements to their most likely catalysts, with relevant company and market context."
+    },
+    {
+     "id": "news-roundup",
+     "title": "Last Week News Roundup",
+     "desc": "Summarize the most important news and developments affecting a company over the previous week.",
+     "steps": [
+      "Gather the week's news",
+      "Filter for material developments",
+      "Organize by theme",
+      "Summarize what matters"
+     ],
+     "flow": [
+      "News",
+      "Filter",
+      "Themes",
+      "Takeaways",
+      "Output"
+     ],
+     "inputs": "Company news · Filings · Press releases · Regulatory disclosures · Market news · Relevant media coverage",
+     "output": "A concise weekly news roundup highlighting the most material company developments, why they matter, and any emerging themes."
+    },
+    {
+     "id": "business-updates",
+     "title": "Business Updates",
+     "desc": "Summarize material business developments disclosed through a company's official filings and announcements.",
+     "steps": [
+      "Gather disclosures",
+      "Identify material changes",
+      "Add context",
+      "Structure the updates"
+     ],
+     "flow": [
+      "Disclosures",
+      "Developments",
+      "Context",
+      "Summary",
+      "Output"
+     ],
+     "inputs": "Company filings · Press releases · Investor presentations · Regulatory disclosures · Official company announcements",
+     "output": "A structured summary of material business updates, including what changed, when it happened, and why it matters."
+    }
+   ]
+  }
+ ]
+}

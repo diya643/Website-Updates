@@ -1,0 +1,292 @@
+<!--meta
+{
+ "path": "/case-studies/hedge-funds",
+ "title": "Hedge Fund Case Study: Searchable Research Vault | Pascal AI",
+ "description": "How a global long/short equity fund classified and tagged 6,711 broker reports, expert calls and notes with Pascal, served in a vault viewer and over MCP.",
+ "crumbs": [["Case studies", "/case-studies"], ["Hedge funds", "/case-studies/hedge-funds"]],
+ "og_kicker": "Case study · Hedge funds",
+ "og_title": "A long/short fund that can find its own research in three seconds",
+ "llms": "Case study: a global long/short equity fund used the Pascal Data Agent to classify 6,711 broker reports, expert-call transcripts and internal notes, extract companies, tickers, brokers, ratings and price targets, apply research entitlements and serve the result in a vault viewer and over MCP.",
+ "priority": 0.7,
+ "word_limit": 900,
+ "css": ["case-studies.css"]
+}
+-->
+<div class="frame pg-cs">
+  <section class="cs-hero" aria-labelledby="page-title">
+    <div class="cs-hero-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Case study · Hedge funds</span></span>6,711 research files, <span class="mute">searchable by ticker, broker and date.</span></h1>
+      <p class="lead">A global long/short equity fund had years of broker reports, expert-call transcripts and internal notes its analysts could not search. Pascal classified and tagged every document, then served them in a vault viewer and over MCP.</p>
+      <div class="actions"><a class="btn btn-dark" href="{{demo_url}}">Book a demo</a></div>
+    </div>
+    <aside class="cs-glance" aria-label="At a glance">
+      <p class="cs-glance-k">At a glance</p>
+      <dl class="cs-gl">
+        <div><dt>Firm</dt><dd>Global long/short equity fund</dd></div>
+        <div><dt>Teams</dt><dd>Equity research and portfolio managers<small>Sector analysts across TMT, industrials and consumer</small></dd></div>
+        <div><dt>Sources connected</dt><dd>Broker research feed, Outlook, SharePoint and expert-network transcripts<span class="cs-logos" aria-hidden="true"><span>{{logo:pdf}}</span><span>{{logo:outlook}}</span><span>{{logo:sharepoint}}</span><span class="t" style="background:#7A4FB5">EX</span></span></dd></div>
+        <div><dt>Deployment</dt><dd>Private cloud, inside the fund's own tenant</dd></div>
+        <div><dt>Live in</dt><dd>5 weeks<small>All 4,212 broker reports tagged in week one</small></dd></div>
+      </dl>
+    </aside>
+  </section>
+  <section class="cells row cs-strip" aria-label="Results in numbers">
+    <div class="cell"><span class="stat-num">6,711</span><span class="stat-lbl">Documents classified and tagged</span></div>
+    <div class="cell"><span class="stat-num">98<small>%</small></span><span class="stat-lbl">Typed without manual tagging</span></div>
+    <div class="cell"><span class="stat-num">3<small>sec</small></span><span class="stat-lbl">To find a report by ticker and broker</span></div>
+  </section>
+</div>
+
+<nav class="subnav" aria-label="On this page">
+  <div class="subnav-inner">
+    <a href="#challenge">The challenge</a>
+    <a href="#what-pascal-did">What Pascal did</a>
+    <a href="#results">Results</a>
+    <a href="#next">What came next</a>
+    <a href="#products">Products used</a>
+    <a href="#faq">Frequently asked questions</a>
+  </div>
+</nav>
+
+<div class="frame pg-cs">
+  <section class="cs-two" id="challenge" aria-labelledby="ch-title">
+    <div class="cs-copy">
+      <p class="eyebrow">The challenge</p>
+      <h2 class="h2" id="ch-title">The research was there. <span class="mute">Nobody could find it.</span></h2>
+      <p>Broker PDFs arrived through the fund's research feed and in analysts' inboxes. Expert-call transcripts sat in a shared folder, and internal notes lived on SharePoint. Drive and File Explorer search matched file names only, and file names rarely named a company.</p>
+      <p>Analysts kept private folders and asked colleagues to forward reports they knew existed. One analyst asked for a single repository: every document the fund owns, findable by company, broker and date.</p>
+    </div>
+    <div class="cs-vis"><div class="panel panel-cream fit"><!--mock--><div class="pui pui-narrow" role="img" aria-label="File Explorer search for NVIDIA in the research share returns no items, because search only matches file names such as GS_EQ_20260914_88213.pdf and Call_0912_transcript_v2.docx.">
+      <div class="pui-win">
+        <div class="pui-bar"><span class="pui-lg t" style="background:#C9A227">{{icon:folder}}</span><span class="pui-crumb">\\fs01 / Research / <b>Broker</b></span><span class="pui-bar-r"><span class="pui-tag grey">1,284 items</span></span></div>
+        <div class="pui-main">
+          <div class="pui-search" style="color:var(--ink)">{{icon:search}} NVIDIA</div>
+          <div class="cs-m-zero"><b>No items match your search.</b>Search looked at file names in 3 locations.</div>
+          <p class="pui-k pui-mt">In this folder</p>
+          <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span><span class="cs-m-fname">GS_EQ_20260914_88213.pdf</span><span class="pui-row-r pui-sub">14 Sep</span></div>
+          <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span><span class="cs-m-fname">MS-Semis-Update-wk37.pdf</span><span class="pui-row-r pui-sub">12 Sep</span></div>
+          <div class="pui-row"><span class="pui-lg w">{{logo:word}}</span><span class="cs-m-fname">Call_0912_transcript_v2.docx</span><span class="pui-row-r pui-sub">12 Sep</span></div>
+          <div class="pui-row"><span class="pui-lg w">{{logo:word}}</span><span class="cs-m-fname">Notes - Thu (1).docx</span><span class="pui-row-r pui-sub">11 Sep</span></div>
+        </div>
+      </div>
+    </div><!--/mock--></div></div>
+  </section>
+
+  <section class="row" id="what-pascal-did" aria-labelledby="did-title">
+    <div class="row-pad-sm cs-steps-head">
+      <div><p class="eyebrow">What Pascal did</p><h2 class="h2" id="did-title" style="margin-top:18px">Five steps. <span class="mute">One research vault.</span></h2></div>
+      <p>The <a class="cs-il" href="/pascal-agents/data-agent">Pascal Data Agent</a> ran on the fund's own files inside its private cloud. Each step shows the screen the team worked in.</p>
+    </div>
+
+    <div class="row split cs-step" id="step-1">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>01</i><span>Classify</span></p>
+        <h3>Type every document.</h3>
+        <p>Pascal read each file and typed it as a broker report, an expert call or an internal research note. Anything it could not place stayed unclassified, with a suggested type and a confidence score for a person to confirm.</p>
+      </div>
+      <div class="split-media"><div class="panel fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="Pascal classifier on the research inbox: five files typed as broker report, expert call or internal note with confidence scores, and one scanned file left unclassified with a suggested type of internal note at 61 percent.">
+        <div class="pui-win">
+          <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Data Agent / Classifier / <b>Research inbox</b></span><span class="pui-bar-r"><span class="pui-tag">6,711 files</span></span></div>
+          <div class="pui-main">
+            <table class="pui-tbl cs-m-tbl">
+              <thead><tr><th>File</th><th>Type</th><th>Confidence</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cs-m-fname">GS_EQ_20260914_88213.pdf</span></td><td><span class="pui-tag">Broker report</span></td><td class="cs-m-conf">99%</td></tr>
+                <tr><td><span class="cs-m-fname">Call_0912_transcript_v2.docx</span></td><td><span class="pui-tag navy">Expert call</span></td><td class="cs-m-conf">97%</td></tr>
+                <tr><td><span class="cs-m-fname">Notes - Thu (1).docx</span></td><td><span class="pui-tag grey">Internal note</span></td><td class="cs-m-conf">94%</td></tr>
+                <tr><td><span class="cs-m-fname">MS-Semis-Update-wk37.pdf</span></td><td><span class="pui-tag">Broker report</span></td><td class="cs-m-conf">99%</td></tr>
+                <tr><td><span class="cs-m-fname">scan_0047.pdf</span></td><td><span class="pui-tag amber">Unclassified</span><span class="pui-sub" style="display:block">Suggested: internal note</span></td><td class="cs-m-conf">61%</td></tr>
+              </tbody>
+            </table>
+            <div class="pui-hl">14 files unclassified. Each shows a suggested type and confidence for review.</div>
+          </div>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+
+    <div class="row split flip cs-step" id="step-2">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>02</i><span>Extract</span></p>
+        <h3>Pull out the fields analysts search by.</h3>
+        <p>From each document Pascal extracted companies and tickers, including name variants and product lines, plus sector, broker, report type, rating, price target and its change. Expert calls also got the expert's relationship to the company, stance and conviction.</p>
+      </div>
+      <div class="split-media"><div class="panel panel-dark fit"><!--mock--><div class="pui pui-wide has-float float-lg" role="img" aria-label="A broker report on NVIDIA open at page 1 with the line raising the price target to 235 dollars from 210 highlighted. The extracted fields panel lists company NVIDIA, ticker NVDA, name variants, sector, broker, report type, rating Buy and price target change plus 11.9 percent. A second card shows fields from an expert call: former procurement director at a hyperscaler, stance positive, conviction high. Illustrative data.">
+        <div class="pui-win">
+          <div class="pui-bar"><span class="pui-lg">{{logo:pdf}}</span><span class="pui-crumb"><b>GS_EQ_20260914_88213.pdf</b></span><span class="pui-bar-r"><span class="pui-tag grey">Illustrative</span></span></div>
+          <div class="pui-split">
+            <div class="pui-pdf">
+              <div class="pui-sheet">
+                <p class="pui-sheet-h">NVIDIA Corp. (NVDA): Blackwell ramp ahead of plan</p>
+                <div class="pui-ln m"></div><div class="pui-ln"></div>
+                <p style="font-size:12px;line-height:1.5;margin:10px 0"><span class="pui-mark-hl">Reiterate Buy; raise PT to $235 from $210</span><span class="pui-pin">1</span></p>
+                <div class="pui-ln"></div><div class="pui-ln s"></div><div class="pui-ln m"></div><div class="pui-ln s"></div>
+              </div>
+            </div>
+            <div class="pui-side">
+              <p class="pui-k">Extracted fields</p>
+              <div class="pui-kv pui-mt">
+                <span>Company</span><b>NVIDIA · NVDA</b>
+                <span>Also matched</span><b>Nvidia Corp, GB200</b>
+                <span>Sector</span><b>Semiconductors</b>
+                <span>Broker</span><b>Goldman Sachs</b>
+                <span>Report type</span><b>Company update</b>
+                <span>Rating</span><b>Buy</b>
+                <span class="sel">Price target</span><b class="sel">$235 · +11.9%</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pui-float">
+          <p class="pui-k">Expert call · same company</p>
+          <div class="pui-kv pui-mt">
+            <span>Relationship</span><b>Ex-procurement director, hyperscaler</b>
+            <span>Stance</span><b>Positive</b>
+            <span>Conviction</span><b>High</b>
+          </div>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+
+    <div class="row split cs-step" id="step-3">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>03</i><span>Permissions</span></p>
+        <h3>Apply the fund's entitlements first.</h3>
+        <p>Reports from brokers the fund does not license stay hidden, and so do notes restricted to one team. Every analyst sees a count of hidden documents, so a gap in the results always has an explanation.</p>
+      </div>
+      <div class="split-media"><div class="panel panel-cream fit"><!--mock--><div class="pui pui-narrow" role="img" aria-label="Access check for a consumer analyst searching NVDA over the last 30 days: three documents visible, one broker report hidden because the broker is not licensed, one internal note hidden because it is restricted to the TMT team, with a count of two hidden documents.">
+        <div class="pui-win">
+          <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Vault / <b>Access check</b></span><span class="pui-bar-r"><span class="pui-badge">{{icon:shield}} User and source level</span></span></div>
+          <div class="pui-main">
+            <div class="pui-row" style="border:0;padding-top:0"><span class="pui-av" style="background:#279C7B">CA</span><span><b style="color:var(--ink)">Consumer analyst</b><span class="pui-sub" style="display:block">NVDA · last 30 days</span></span><span class="pui-row-r"><span class="pui-tag">3 visible</span></span></div>
+            <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span>Broker report · Goldman Sachs<span class="pui-row-r pui-ok">{{icon:check-circle}}</span></div>
+            <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span>Broker report · Morgan Stanley<span class="pui-row-r pui-ok">{{icon:check-circle}}</span></div>
+            <div class="pui-row"><span class="pui-lg t" style="background:#7A4FB5">EX</span>Expert call · data centre supply<span class="pui-row-r pui-ok">{{icon:check-circle}}</span></div>
+            <div class="pui-row off"><span class="pui-lg w">{{logo:pdf}}</span>Broker report · unlicensed broker<span class="pui-row-r pui-lock">{{icon:lock}} Hidden</span></div>
+            <div class="pui-row off"><span class="pui-lg w">{{logo:sharepoint}}</span>Internal note · TMT team only<span class="pui-row-r pui-lock">{{icon:lock}} Hidden</span></div>
+            <div class="pui-note">2 documents hidden by permissions</div>
+          </div>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+
+    <div class="row split flip cs-step" id="step-4">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>04</i><span>Vault viewer</span></p>
+        <h3>Serve it where analysts already look.</h3>
+        <p>The <a class="cs-il" href="/pascal-agents/data-agent#vault-viewer">Vault viewer</a> works like File Explorer with the tags attached. Analysts filter by type, company, sector, broker and date (7, 30 or 90 days), open a document at the section about their company and check why it was tagged.</p>
+      </div>
+      <div class="split-media"><div class="panel fit"><!--mock--><div class="pui pui-wide has-float float-lg" role="img" aria-label="Vault viewer filtered to broker reports on NVIDIA from Goldman Sachs in the last 30 days. The folder list shows 4,212 broker reports, 1,947 expert calls, 538 internal notes and 14 to review. Three results open at the NVIDIA section. A card explains why a report is tagged NVDA: ticker on page 1, product line Blackwell mapped to NVIDIA, and the data centre demand section on pages 3 to 5.">
+        <div class="pui-win">
+          <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Vault viewer / <b>NVDA</b></span><span class="pui-bar-r"><span class="pui-tag grey">Illustrative</span></span></div>
+          <div class="pui-tool"><span class="pui-chip on">{{icon:filter}} Broker report</span><span class="pui-chip on">NVIDIA</span><span class="pui-chip">Semis</span><span class="pui-chip on">Goldman Sachs</span><span class="pui-sp"></span><span class="cs-seg"><span>7d</span><span class="on">30d</span><span>90d</span></span></div>
+          <div class="cs-m-xp">
+            <div class="cs-m-xp-side">
+              <p>{{icon:folder}} All · 6,711</p>
+              <p class="on">{{icon:folder}} Broker · 4,212</p>
+              <p>{{icon:folder}} Expert · 1,947</p>
+              <p>{{icon:folder}} Internal · 538</p>
+              <p>{{icon:folder}} Review · 14</p>
+            </div>
+            <div class="cs-m-xp-main">
+              <p class="pui-k">3 documents</p>
+              <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span><span>Blackwell ramp ahead of plan<span class="pui-sub" style="display:block">14 Sep · Buy · PT $235</span></span><span class="pui-row-r"><span class="pui-tag">Opens p. 3</span></span></div>
+              <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span><span>Semis weekly: lead times ease<span class="pui-sub" style="display:block">5 Sep · sector note</span></span><span class="pui-row-r"><span class="pui-tag">Opens p. 7</span></span></div>
+              <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span><span>Q2 FY27 earnings review<span class="pui-sub" style="display:block">28 Aug · Buy · PT $210</span></span><span class="pui-row-r"><span class="pui-tag">Opens p. 1</span></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="pui-float">
+          <p class="pui-k">Why this is tagged NVDA</p>
+          <div class="cs-m-why">
+            <p>{{icon:check}} Ticker "NVDA US" on p. 1</p>
+            <p>{{icon:check}} Product line "Blackwell" mapped to NVIDIA</p>
+            <p>{{icon:check}} Section "Data centre demand", pp. 3–5</p>
+          </div>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+
+    <div class="row split cs-step" id="step-5">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>05</i><span>MCP</span></p>
+        <h3>Open the same vault to agents.</h3>
+        <p>Agents call two MCP tools: list_documents searches with the same filters, and get_document reads a file at the cited section. The fund's own LLM tools use them too, and the entitlements from step three apply to every call.</p>
+      </div>
+      <div class="split-media"><div class="panel panel-dark fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="An agent asks for every Goldman Sachs note on NVDA in the last 30 days. It calls list_documents with ticker, broker, type and days, receives 3 documents with 1 hidden by permissions, then calls get_document to read pages 3 to 5 of the first report.">
+        <div class="pui-win">
+          <div class="pui-bar"><span class="pui-lg w">{{logo:mcp}}</span><span class="pui-crumb">MCP / <b>pascal-vault</b></span><span class="pui-bar-r"><span class="pui-tag">2 tools</span></span></div>
+          <div class="pui-main" style="padding-bottom:12px"><div class="pui-q">Every Goldman Sachs note on NVDA in the last 30 days</div></div>
+<pre class="cs-code"><span class="c">// tool call</span>
+<span class="k">list_documents</span>({ ticker: <span class="s">"NVDA"</span>, broker: <span class="s">"Goldman Sachs"</span>,
+                 type: <span class="s">"broker_report"</span>, days: 30 })
+<span class="c">// 3 documents · 1 hidden by permissions</span>
+[{ id: <span class="s">"doc_88213"</span>, title: <span class="s">"Blackwell ramp ahead of plan"</span>,
+   date: <span class="s">"2026-09-14"</span>, rating: <span class="s">"Buy"</span>, pt: 235, pt_prev: 210 }, …]
+
+<span class="k">get_document</span>({ id: <span class="s">"doc_88213"</span>, section: <span class="s">"NVDA"</span> })
+<span class="c">// pages 3–5 · 1,240 words · source link attached</span></pre>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+  </section>
+
+  <section class="row cs-two" id="results" aria-labelledby="res-title">
+    <div class="cs-copy">
+      <p class="eyebrow">Results</p>
+      <h2 class="h2" id="res-title">The whole archive, <span class="mute">typed and tagged.</span></h2>
+      <p>Pascal classified and tagged 6,711 documents. 98% were typed without anyone tagging them by hand, and the 14 files it could not place went to a short review queue. Finding a report by ticker and broker takes about three seconds.</p>
+      <p>Adoption came from the simplest thing: analysts open the vault because it finds their files. Research still arrives the way it always did.</p>
+    </div>
+    <div class="cs-vis"><div class="cs-vis-pad bg-cream">
+      <div class="cs-comp-k"><b>6,711</b><span>documents classified<br>and tagged</span></div>
+      <div class="cs-comp-bar" role="img" aria-label="Share of documents by type: broker reports 62.8 percent, expert calls 29.0 percent, internal notes 8.0 percent, unclassified 0.2 percent."><i class="cs-c1" style="width:62.8%"></i><i class="cs-c2" style="width:29%"></i><i class="cs-c3" style="width:8%"></i><i class="cs-c4" style="width:.2%"></i></div>
+      <div class="cs-comp-list">
+        <div><i class="cs-c1"></i>Broker reports<b>4,212</b><span>62.8%</span></div>
+        <div><i class="cs-c2"></i>Expert calls<b>1,947</b><span>29.0%</span></div>
+        <div><i class="cs-c3"></i>Internal research notes<b>538</b><span>8.0%</span></div>
+        <div><i class="cs-c4"></i>Left unclassified for review<b>14</b><span>0.2%</span></div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="row cs-two" id="next" aria-labelledby="next-title">
+    <div class="cs-copy">
+      <p class="eyebrow">What came next</p>
+      <h2 class="h2" id="next-title">The vault now feeds <span class="mute">the fund's agents.</span></h2>
+      <p>With every document tagged, the fund pointed two Pascal agents at the same vault. Both read only what the analyst running them is entitled to see.</p>
+    </div>
+    <div class="cs-vis"><div class="cs-vis-pad">
+      <div class="cs-next-cards">
+        <a class="cs-ncard" href="/pascal-agents/autonomous-agents"><small>Pascal Agents</small><b>Event-brief agent</b><span>When a company reports, it reads the latest broker notes and expert calls on the name from the vault and writes a cited brief.</span></a>
+        <a class="cs-ncard" href="/ask-pascal/decision-traces"><small>Pascal Agents</small><b>Thesis monitor</b><span>Checks each new document against the thesis behind a position and flags anything that moves against it.</span></a>
+        <a class="cs-ncard" href="/solutions/hedge-funds"><small>Industries</small><b>Pascal for hedge funds</b><span>Front, middle and back office workflows on the same context graph.</span></a>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="row" id="products" aria-labelledby="prod-title">
+    <div class="row-pad-sm"><h2 class="h2" id="prod-title">Products used</h2></div>
+    <div class="cells c4 row cs-prods">
+      <a class="cell" href="/pascal-agents/data-agent#classifier"><span class="n">Data Agent</span><b>Classifier</b><span>Typed 6,711 documents and queued 14 for review.</span><span class="link">See the classifier {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/pascal-agents/data-agent#extraction"><span class="n">Data Agent</span><b>Extraction</b><span>Companies, tickers, brokers, ratings, price targets and expert fields.</span><span class="link">See extraction {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/pascal-agents/data-agent#vault-viewer"><span class="n">Data Agent</span><b>Vault viewer</b><span>Filters, section-level opening and "why this is tagged".</span><span class="link">See the vault viewer {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/platform/mcp-apis"><span class="n">Platform</span><b>MCP &amp; APIs</b><span>list_documents and get_document for agents and LLM tools.</span><span class="link">See MCP &amp; APIs {{icon:arrow-right}}</span></a>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>How does Pascal classify broker reports and expert-call transcripts?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal reads the content of each file, including its layout, headers and disclosures, and assigns a document type with a confidence score. File names and folders are ignored, which is why it works on archives with inconsistent naming.</div></details>
+        <details class="faq-item"><summary>What happens to documents Pascal cannot classify?<span class="pm" aria-hidden="true"></span></summary><div class="ans">They stay unclassified and go to a review queue with a suggested type and a confidence score. At this fund, 14 of 6,711 documents needed a person to confirm the type.</div></details>
+        <details class="faq-item"><summary>Does the research vault respect broker entitlements?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Reports from brokers the fund does not license and notes restricted to one team are hidden from everyone else, in the vault viewer and over MCP. Users see a count of hidden documents.</div></details>
+        <details class="faq-item"><summary>Can our own AI tools search the vault?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Any MCP client can call list_documents and get_document, with the same filters and permissions analysts have in the vault viewer.</div></details>
+        <details class="faq-item"><summary>How long did the deployment take?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Five weeks from kickoff to the full archive being searchable. The 4,212 broker reports were tagged in week one. Pascal ran inside the fund's private cloud throughout.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See your own research, tagged." sub="On your files, inside your perimeter."-->

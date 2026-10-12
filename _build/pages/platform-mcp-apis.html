@@ -1,0 +1,184 @@
+<!--meta
+{
+ "path": "/platform/mcp-apis",
+ "title": "Pascal MCP Server and APIs for Investment Firms | Pascal AI",
+ "description": "The Pascal MCP brings your context graph into Claude, ChatGPT and Copilot, orchestrates other MCP servers and runs Pascal workflows over MCP or REST API.",
+ "crumbs": [["Platform", "/platform"], ["MCP & APIs", "/platform/mcp-apis"]],
+ "schema": "software",
+ "name": "Pascal MCP server and APIs",
+ "og_kicker": "Platform · MCP & APIs",
+ "og_title": "Your firm's context, wherever your team uses AI.",
+ "llms": "Pascal MCP and APIs: (1) bring a firm's context graph, documents and permissions into any LLM such as Claude, ChatGPT, Copilot or internal agents; (2) orchestrate one question across the firm's context and other MCP servers such as public filings, Capital IQ and licensed data vendors, returning one cited answer; (3) run Pascal workflows from anywhere over MCP or REST API, for example /pascal guidance-vs-actuals NVDA inside Claude.",
+ "priority": 0.8,
+ "word_limit": 600,
+ "lead_max": 120,
+ "css": ["mcp-apis.css"]
+}
+-->
+<div class="frame pg-mcp">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">MCP &amp; APIs</span></span>Your firm's context, <span class="mute">wherever your team uses AI.</span></h1>
+      <p class="lead">The Pascal MCP and APIs bring your context graph, documents and permissions into Claude, ChatGPT, Copilot and your own agents, and run Pascal workflows from any of them.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel panel-dark fit"><!--mock--><div class="pui pui-wide has-float float-lg mc-hero" role="img" aria-label="Pascal MCP server admin console. Connected clients: Claude, ChatGPT, Microsoft Copilot, Gemini, Cursor and your own agents over the REST API, each enabled, with active users per client. A card lists the tools the Pascal MCP exposes: search_context, get_document, list_documents and run_workflow.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal MCP / <b>Connected clients</b></span><span class="pui-bar-r"><span class="pui-badge">{{icon:check-circle}} Healthy</span></span></div>
+    <div class="pui-tabs"><span class="on">Clients</span><span>Tools</span><span>MCP servers</span><span>Audit log</span></div>
+    <div class="mc-list">
+      <div class="mc-mrow"><span class="pui-lg w lg">{{logo:claude}}</span><span class="mc-mn"><b>Claude</b><small>Anthropic</small></span><span class="pui-tag grey">MCP</span><span class="mc-ep">212 users</span><span class="mc-sw on"></span></div>
+      <div class="mc-mrow"><span class="pui-lg w lg">{{logo:openai}}</span><span class="mc-mn"><b>ChatGPT</b><small>OpenAI</small></span><span class="pui-tag grey">MCP</span><span class="mc-ep">148 users</span><span class="mc-sw on"></span></div>
+      <div class="mc-mrow"><span class="pui-lg w lg">{{logo:copilot}}</span><span class="mc-mn"><b>Copilot</b><small>Microsoft</small></span><span class="pui-tag grey">MCP</span><span class="mc-ep">96 users</span><span class="mc-sw on"></span></div>
+      <div class="mc-mrow"><span class="pui-lg w lg">{{logo:gemini}}</span><span class="mc-mn"><b>Gemini</b><small>Google</small></span><span class="pui-tag grey">MCP</span><span class="mc-ep">41 users</span><span class="mc-sw on"></span></div>
+      <div class="mc-mrow"><span class="pui-lg w lg">{{logo:cursor}}</span><span class="mc-mn"><b>Cursor</b><small>Quant developers</small></span><span class="pui-tag grey">MCP</span><span class="mc-ep">18 users</span><span class="mc-sw on"></span></div>
+      <div class="mc-mrow"><span class="pui-lg t lg" style="background:#33464A">{{icon:code}}</span><span class="mc-mn"><b>Your agents</b><small>Internal apps</small></span><span class="pui-tag">REST API</span><span class="mc-ep">7 apps</span><span class="mc-sw on"></span></div>
+    </div>
+    <div class="mc-hfoot"><span class="pui-sub">6 of 6 clients on · 522 users</span></div>
+  </div>
+  <div class="pui-float left mc-hf">
+    <div class="pui-float-h"><span class="pui-k">Tools exposed</span><span class="pui-k">4</span></div>
+    <div class="mc-lr"><span class="pui-lg t" style="background:#279C7B">{{icon:network}}</span><code>search_context</code></div>
+    <div class="mc-lr"><span class="pui-lg t" style="background:#185FA5">{{icon:file-text}}</span><code>get_document</code></div>
+    <div class="mc-lr"><span class="pui-lg t" style="background:#B5651D">{{icon:folder-search}}</span><code>list_documents</code></div>
+    <div class="mc-lr"><span class="pui-lg t" style="background:#534AB7">{{icon:workflow}}</span><code>run_workflow</code></div>
+  </div>
+</div><!--/mock--></div></div>
+  </section>
+</div>
+
+<div class="frame pg-mcp">
+  <section class="cells" aria-label="Pascal MCP and APIs at a glance">
+    <div class="cell"><span class="stat-num">34<small>+</small></span><span class="stat-lbl">Connectors &amp; MCP servers</span></div>
+    <div class="cell"><span class="stat-num">118<small>+</small></span><span class="stat-lbl">Workflows available via MCP &amp; API</span></div>
+    <div class="cell"><span class="stat-num">9<small>+</small></span><span class="stat-lbl">Models &amp; AI assistants supported</span></div>
+  </section>
+  <div class="mc-works row" aria-label="Works with">
+    <p class="mc-works-k">Works with</p>
+    <ul class="mc-logos">
+      <li>{{logo:claude}}Claude</li><li>{{logo:openai}}ChatGPT</li><li>{{logo:copilot}}Copilot</li><li>{{logo:gemini}}Gemini</li><li>{{logo:cursor}}Cursor</li><li>{{logo:perplexity}}Perplexity</li><li>{{logo:deepseek}}DeepSeek</li><li>{{logo:mistral}}Mistral</li><li>{{logo:llama}}Llama</li>
+    </ul>
+  </div>
+
+  <section class="row split" id="any-llm" aria-labelledby="f1">
+    <div class="split-copy">
+      <p class="eyebrow">01 · Pascal MCP</p>
+      <h2 class="h2" id="f1">Bring your context <span class="mute">into any LLM.</span></h2>
+      <p>The Pascal MCP brings your graph, documents and permissions into Claude, ChatGPT, Copilot and your own agents. Answers come back cited, and each user reaches only what they are cleared to see.</p>
+      <a class="link" href="/platform/context-graph">See what is in the context graph {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui has-float float-lg mc-cli" role="img" aria-label="Claude with the Pascal MCP server connected; Claude, ChatGPT and Copilot are shown as clients. A user asks what Honeywell guided for FY26 adjusted EPS. Claude calls the pascal search_context tool, which returns 2 sources. The answer: $10.35 to $10.65, against $9.78 delivered in FY25, citing sources 7 and 9, answered with Pascal context. A card shows Pascal's MCP tool-call log: requests from Claude, ChatGPT and Copilot, one of them denied for lack of access.">
+  <div class="pui-win">
+    <div class="pui-bar"><span class="pui-lg w">{{logo:claude}}</span><span class="pui-crumb">Claude / <b>Honeywell guidance</b></span><span class="pui-bar-r"><span class="pui-schip">{{logo:mcp}} pascal</span></span></div>
+    <div class="pui-tool"><span class="pui-k mc-tk">Clients</span><span class="pui-chip on">{{logo:claude}} Claude</span><span class="pui-chip">{{logo:openai}} ChatGPT</span><span class="pui-chip">{{logo:copilot}} Copilot</span></div>
+    <div class="pui-main">
+      <div class="pui-q">What did Honeywell guide for FY26 adjusted EPS?</div>
+      <div class="mc-call">
+        <div class="mc-call-h"><span class="pui-lg w">{{logo:mcp}}</span><b>pascal</b><span class="mc-fn">search_context</span><span class="pui-row-r"><span class="pui-tag">2 sources</span><span class="mc-ms">412 ms</span></span></div>
+        <pre class="mc-args">{ "company": "HON", "query": "FY26 adjusted EPS guidance" }</pre>
+      </div>
+      <p class="pui-ans mc-ans"><b>$10.35 to $10.65</b>, against $9.78 delivered in FY25<span class="pui-cite on">7</span><span class="pui-cite">9</span></p>
+      <p class="pui-badge">{{icon:check-circle}} Answered with Pascal context · 2 sources</p>
+    </div>
+  </div>
+  <div class="pui-float mc-log">
+    <div class="pui-float-h"><span class="pui-k">MCP tool-call log</span><span class="pui-k">Today</span></div>
+    <div class="mc-lr"><span class="mc-t">10:42</span><span class="pui-lg w">{{logo:claude}}</span><code>search_context</code><span class="pui-row-r pui-ok">{{icon:check-circle}}</span></div>
+    <div class="mc-lr"><span class="mc-t">10:38</span><span class="pui-lg w">{{logo:openai}}</span><code>get_document</code><span class="pui-row-r pui-ok">{{icon:check-circle}}</span></div>
+    <div class="mc-lr off"><span class="mc-t">10:31</span><span class="pui-lg w">{{logo:copilot}}</span><code>get_ic_memo</code><span class="pui-row-r pui-lock">{{icon:lock}} No access</span></div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" id="orchestrate" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">02 · Orchestration</p>
+      <h2 class="h2" id="f2">Orchestrate <span class="mute">across MCPs.</span></h2>
+      <p>Pascal routes one question across your own context and the other MCP servers you license, such as public filings, Capital IQ or your data vendors, and returns one answer with every source cited.</p>
+      <a class="link" href="/ask-pascal/cited-research">See how answers are cited {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui mc-orc" role="img" aria-label="Pascal MCP orchestrating one question: how NVIDIA's Q3 revenue guidance compares with consensus and the team's model. The Pascal MCP hub calls four servers: your context graph with search_context, an SEC filings MCP with get_filing, an S&amp;P Capital IQ MCP with get_estimates, and a broker research MCP from a licensed data vendor with get_notes. The combined answer, marked illustrative: guidance of $54.0B sits 1.8% above consensus of $53.0B and above the team model at $52.6B, citing one source from each server.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal MCP / <b>Orchestration</b></span><span class="pui-bar-r"><span class="pui-tag">4 servers</span></span></div>
+    <div class="pui-main mc-orc-q"><div class="pui-q">How does NVDA's Q3 revenue guide compare with consensus and our model?</div></div>
+    <div class="pui-canvas mc-orc-cv">
+      <svg class="pui-wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path class="hot" d="M40 50 C34 50 36 20 30 20"/><path class="hot" d="M40 50 C34 50 36 80 30 80"/>
+        <path class="hot" d="M60 50 C66 50 64 20 70 20"/><path class="hot" d="M60 50 C66 50 64 80 70 80"/>
+      </svg>
+      <div class="pui-node mc-s1" style="top:20%"><span class="pui-lg t" style="background:#279C7B">{{icon:network}}</span><span><small>search_context</small><b>Your context graph</b></span></div>
+      <div class="pui-node mc-s1" style="top:80%"><span class="pui-lg t" style="background:#234A86">{{icon:landmark}}</span><span><small>get_filing</small><b>SEC filings</b></span></div>
+      <div class="pui-node hub mc-hub" style="top:50%"><span class="pui-lg w lg">{{logo:mcp}}</span><span><small>Router</small><b>Pascal MCP</b></span></div>
+      <div class="pui-node mc-s2" style="top:20%"><span class="pui-lg t" style="background:#B5651D">CIQ</span><span><small>get_estimates</small><b>Capital IQ</b></span></div>
+      <div class="pui-node mc-s2" style="top:80%"><span class="pui-lg t" style="background:#534AB7">{{icon:briefcase}}</span><span><small>get_notes</small><b>Broker research</b></span></div>
+    </div>
+    <div class="mc-orc-a">
+      <div class="mc-orc-ah"><span class="pui-k">One answer · 4 sources</span><span class="pui-tag grey">Illustrative</span></div>
+      <p class="pui-ans">Q3 guide of <b>$54.0B</b><span class="pui-cite">2</span> sits 1.8% above consensus at $53.0B<span class="pui-cite">3</span> and above our model at $52.6B<span class="pui-cite on">1</span>. Two brokers raised targets after the print<span class="pui-cite">4</span>.</p>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" id="workflows" aria-labelledby="f3">
+    <div class="split-copy">
+      <p class="eyebrow">03 · Workflows over MCP and API</p>
+      <h2 class="h2" id="f3">Run Pascal workflows <span class="mute">from anywhere.</span></h2>
+      <p>Every Pascal workflow is exposed over MCP and the REST API. Type <code class="mc-inl">/pascal guidance-vs-actuals NVDA</code> inside Claude and the workflow runs and returns the table. Your own code calls the same workflow with one request.</p>
+      <a class="link" href="/pascal-agents/workflow-library">Browse the workflow library {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui has-float float-lg mc-wf" role="img" aria-label="Claude with the slash command /pascal guidance-vs-actuals NVDA. Claude runs the Pascal workflow guidance-vs-actuals, completed in 38 seconds from 14 sources, and returns a table for NVIDIA Q2 FY26, marked illustrative: revenue guided $45.0B, actual $46.7B, up 3.8%; non-GAAP gross margin guided 72.0%, actual 72.7%, up 70 basis points; operating expenses guided $4.20B, actual $4.13B, down 1.7%. A card shows the same workflow called over the REST API: a POST request to /v1/workflows/guidance-vs-actuals/runs with ticker NVDA returns 200 OK with a run id and the table.">
+  <div class="pui-win">
+    <div class="pui-bar"><span class="pui-lg w">{{logo:claude}}</span><span class="pui-crumb">Claude / <b>NVDA guidance check</b></span><span class="pui-bar-r"><span class="pui-schip">{{logo:mcp}} pascal</span></span></div>
+    <div class="pui-main">
+      <div class="pui-q mc-slash"><span>/pascal</span> guidance-vs-actuals NVDA</div>
+      <div class="mc-call">
+        <div class="mc-call-h"><span class="pui-lg t" style="background:#534AB7">{{icon:workflow}}</span><b>pascal</b><span class="mc-fn">guidance-vs-actuals</span><span class="pui-row-r"><span class="pui-tag">{{icon:check}} 14 sources</span><span class="mc-ms">38 s</span></span></div>
+        <table class="pui-tbl mc-gva">
+          <thead><tr><th>NVDA · Q2 FY26</th><th>Guided</th><th>Actual</th><th>Δ</th></tr></thead>
+          <tbody>
+            <tr><td><b>Revenue</b></td><td>$45.0B</td><td>$46.7B</td><td class="up">+3.8%</td></tr>
+            <tr><td><b>Gross margin</b></td><td>72.0%</td><td>72.7%</td><td class="up">+70bp</td></tr>
+            <tr><td><b>Opex</b></td><td>$4.20B</td><td>$4.13B</td><td class="up">−1.7%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="pui-badge">{{icon:check-circle}} Pascal workflow · Illustrative figures</p>
+    </div>
+  </div>
+  <div class="pui-float left mc-api">
+    <div class="pui-float-h"><span class="pui-k">REST API</span><span class="pui-tag">200 OK</span></div>
+<pre class="mc-code"><code><span class="k">POST</span> /v1/workflows/guidance-vs-actuals/runs
+{ <span class="p">"ticker"</span>: <span class="s">"NVDA"</span> }
+<span class="c">→</span> { <span class="p">"run_id"</span>: <span class="s">"wf_8f2c"</span>, <span class="p">"table"</span>: [ … ] }</code></pre>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div>
+        <h2 class="h2" id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item"><summary>What is the Pascal MCP?<span class="pm" aria-hidden="true"></span></summary><div class="ans">An MCP server that exposes your firm's context graph, documents and Pascal workflows as tools. MCP, the Model Context Protocol, is the open standard AI assistants use to call outside tools and data.</div></details>
+        <details class="faq-item"><summary>Which LLMs and assistants can connect?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Claude, ChatGPT, Microsoft Copilot, Gemini, Cursor and any agent framework that speaks MCP. Your own apps can use the REST API. Your firm decides which clients are switched on.</div></details>
+        <details class="faq-item"><summary>How are permissions enforced over MCP?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Each MCP call runs as the signed-in user. Pascal checks access per user and per source before returning anything, and every call is written to the audit log.</div></details>
+        <details class="faq-item"><summary>Can Pascal call other MCP servers we license?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Add servers such as filings, Capital IQ or other data vendors with your own credentials. Pascal routes each question to the servers it needs and cites every source in the combined answer.</div></details>
+        <details class="faq-item"><summary>Which workflows can we run over MCP or the API?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Any workflow in your Pascal workspace, from the workflow library or built by your team. Each one is callable as a slash command in an assistant or as a REST endpoint.</div></details>
+        <details class="faq-item"><summary>Can the Pascal MCP run inside our VPC?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Pascal deploys in your VPC on AWS, Azure or GCP, or on premise, and can sit behind open-weight models such as DeepSeek, Mistral or Llama hosted in your own environment.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="Bring Pascal into" sub="the AI your team already uses."-->

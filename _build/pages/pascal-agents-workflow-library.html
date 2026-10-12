@@ -1,0 +1,330 @@
+<!--meta
+{
+ "path": "/pascal-agents/workflow-library",
+ "title": "Agentic Workflow Library for Finance | Pascal AI",
+ "description": "Pascal's library of 25+ agentic workflows for finance: event briefs, primers, red flag analysis and more. Pick a company and get a cited, finished document.",
+ "crumbs": [["Pascal Agents", "/pascal-agents"], ["Workflow library", "/pascal-agents/workflow-library"]],
+ "schema": "software",
+ "name": "Pascal agentic workflow library",
+ "og_kicker": "Pascal Agents",
+ "og_title": "25+ agentic workflows for the work you do every quarter",
+ "llms": "Pascal's agentic workflow library: 25+ pre-built investment workflows (event briefs, company primers, initiating coverage, red flag analysis, catalyst calendars) that return cited documents in a consistent structure.",
+ "priority": 0.8,
+ "word_limit": 3000,
+ "lead_max": 120,
+ "css": ["workflow-library.css"]
+}
+-->
+<div class="frame pg-wl">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Agentic workflow library</span></span>25+ agentic workflows <span class="mute">for the work you do every quarter.</span></h1>
+      <p class="lead">Pick a workflow, pick a company, and Pascal's agents produce a finished piece of work: an event brief, an initiating coverage report, a red team of your thesis. They search your internal research and public sources, and return the same structure for every name you cover.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media">
+      <div class="panel fit"><!--mock--><div class="pui pui-wide has-float float-lg wl-hero" role="img" aria-label="The Pascal Workflows screen, with category tabs from View all to Investor frameworks and six workflow cards: Private Company Primer (newly added), Event Brief, Red Team Thesis Challenger, IPO Prospectus Analysis, Red Flag Analysis and 30-Day Catalyst Calendar. A dialog for the Event Brief workflow has Sea Limited selected, ready to run.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Ask Pascal / <b>Workflows</b></span><span class="pui-bar-r"><span class="wl-find">{{icon:search}} Search workflows</span></span></div>
+    <div class="pui-body"><!--#include pui-rail on_chat="" on_wf="on"-->
+      <div class="pui-main wl-hm">
+        <div class="pui-tabs wl-htabs"><span class="on">View all</span><span>Newly added</span><span>Private company research</span><span>Earnings</span><span>Public company research</span><span>Competition</span><span>News and events</span><span>ESG</span><span>Investor frameworks</span></div>
+        <div class="wl-grid">
+          <div class="wl-card nw"><span class="wl-ch"><span class="pui-lg t" style="background:#279C7B">{{icon:lock}}</span><span class="pui-tag">New</span><span class="wl-play">{{icon:play}}</span></span><b>Private Company Primer</b><span>A research report on a private company from filings and deep web search</span></div>
+          <div class="wl-card sel"><span class="wl-ch"><span class="pui-lg t" style="background:#B5651D">{{icon:megaphone}}</span><span class="wl-play">{{icon:play}}</span></span><b>Event Brief</b><span>An upcoming or recent corporate event, with street vs management framing</span></div>
+          <div class="wl-card"><span class="wl-ch"><span class="pui-lg t" style="background:#534AB7">{{icon:scale}}</span><span class="wl-play">{{icon:play}}</span></span><b>Red Team Thesis Challenger</b><span>Stress-test an investment thesis for a company and period</span></div>
+          <div class="wl-card"><span class="wl-ch"><span class="pui-lg t" style="background:#1F3864">{{icon:landmark}}</span><span class="wl-play">{{icon:play}}</span></span><b>IPO Prospectus Analysis</b><span>An investor-focused summary of an IPO prospectus</span></div>
+          <div class="wl-card"><span class="wl-ch"><span class="pui-lg t" style="background:#993C1D">{{icon:flag}}</span><span class="wl-play">{{icon:play}}</span></span><b>Red Flag Analysis</b><span>Litigation, promoter disputes, regulatory notices and other risk signals</span></div>
+          <div class="wl-card"><span class="wl-ch"><span class="pui-lg t" style="background:#B5651D">{{icon:calendar}}</span><span class="wl-play">{{icon:play}}</span></span><b>30-Day Catalyst Calendar</b><span>Every material catalyst in the next 30 days</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pui-float wl-hf">
+    <div class="pui-float-h"><b class="wl-ft">{{icon:library}} Workflow: Event Brief</b><span class="pui-x">{{icon:close}}</span></div>
+    <p class="pui-sub wl-mt8">Select company</p>
+    <div class="wl-sel"><span class="pui-lg t" style="background:#1F3864">SE</span><b>Sea Limited</b><span class="pui-sub">SE</span>{{icon:chevron-down}}</div>
+    <div class="wl-fb"><span class="pui-btn">Clear all</span><span class="pui-btn pri">{{icon:play}} Run workflow</span></div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+</div>
+
+<div class="frame pg-wl">
+  <section class="cells row" aria-label="Workflow library at a glance">
+    <div class="cell"><span class="stat-num">25<small>+</small></span><span class="stat-lbl">Ready-to-run investment workflows</span></div>
+    <div class="cell"><span class="stat-num">80<small>%</small></span><span class="stat-lbl">Lower cost than generic LLMs</span></div>
+    <div class="cell"><span class="stat-num">99.9<small>%</small></span><span class="stat-lbl">Accuracy</span></div>
+  </section>
+
+  <section class="row" aria-labelledby="run-title">
+    <div class="row-pad-sm"><p class="eyebrow">How a workflow runs</p><h2 class="h2" id="run-title" style="margin-top:18px">From two clicks <span class="mute">to a finished document.</span></h2></div>
+    <div class="cells c4 row">
+      <div class="cell"><span class="n">01</span><b>Pick a workflow</b><span>From 25+ across research, earnings, events, risk and frameworks.</span></div>
+      <div class="cell"><span class="n">02</span><b>Pick a company</b><span>Public or private, and the quarter where it applies.</span></div>
+      <div class="cell"><span class="n">03</span><b>Agents get to work</b><span>They search filings, the web and your firm's own research.</span></div>
+      <div class="cell"><span class="n">04</span><b>The output lands</b><span>A structured, cited document in your chat.</span></div>
+    </div>
+    <div class="row">
+      <div class="panel panel-cream fit wl-modal-panel"><!--mock--><div class="pui pui-wide wf-demo" data-wf-demo data-state="setup" role="group" aria-label="Interactive demo: run the Event Brief workflow on a company and see the finished brief">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Workflows / <b>Event Brief</b></span><span class="pui-bar-r"><span class="pui-tag grey wf-t1">Not started</span><span class="pui-tag amber wf-t2">Running</span><span class="pui-tag wf-t3">{{icon:check}} Complete</span></span></div>
+    <div class="pui-body"><!--#include pui-rail on_chat="" on_wf="on"-->
+      <div class="pui-split wl-dsplit">
+        <div class="pui-main wf-main">
+          <div class="wf-setup">
+            <div class="wl-mh"><span class="pui-lg t lg" style="background:#B5651D">{{icon:megaphone}}</span><span><b class="wl-title">Workflow: Event Brief</b><span class="pui-sub">Events and catalysts</span></span></div>
+            <p class="wl-desc">Explore an upcoming or recent corporate event (earnings, M&amp;A, regulatory, product) with structured context, street vs management framing, and implications for the investment case.</p>
+            <label class="wl-lbl" for="wf-company">Select company</label>
+            <div class="wf-field">
+              <select id="wf-company">
+                <option value="">Search and select a company...</option>
+                <option value="Sea Limited" data-tk="SE" selected>Sea · SE</option>
+                <option value="Honeywell" data-tk="HON">Honeywell · HON</option>
+                <option value="NVIDIA" data-tk="NVDA">NVIDIA · NVDA</option>
+                <option value="Palantir Technologies" data-tk="PLTR">Palantir · PLTR</option>
+                <option value="Amazon" data-tk="AMZN">Amazon · AMZN</option>
+              </select>
+              {{icon:chevron-down}}
+            </div>
+            <div class="wl-btns"><button type="button" class="wf-clear">Clear all</button><button type="button" class="wf-run">{{icon:play}} Run workflow</button></div>
+            <p class="pui-k wl-rk">Recent runs</p>
+            <div class="pui-row"><span class="pui-lg t" style="background:#76B900">NV</span>Event Brief · NVIDIA<span class="pui-row-r"><span class="pui-tag">Ready</span></span></div>
+            <div class="pui-row"><span class="pui-lg t" style="background:#1F3864">HON</span>Event Brief · Honeywell<span class="pui-row-r"><span class="pui-tag">Ready</span></span></div>
+          </div>
+          <div class="wf-running" aria-live="polite">
+            <div class="wl-between"><span class="wl-runh">{{icon:library}}<span>Run Event Brief workflow for <span class="wf-co">Sea Limited</span></span></span><span class="wf-pct">0%</span></div>
+            <div class="wf-bar"><i></i></div>
+            <ol class="wf-steps">
+              <li>Searching filings and earnings transcripts<span class="wl-sc"><span class="pui-schip">{{logo:pdf}} Filings</span><span class="pui-schip">{{logo:pdf}} Transcripts</span></span></li>
+              <li>Searching your IC memos, Teams chats and expert calls<span class="wl-sc"><span class="pui-schip">{{logo:sharepoint}} IC memos</span><span class="pui-schip">{{logo:teams}} Teams chats</span><span class="pui-schip">{{icon:users}} Expert calls</span></span></li>
+              <li>Reviewing broker research and consensus<span class="wl-sc"><span class="pui-schip">{{logo:outlook}} Broker research</span><span class="pui-schip">{{icon:bar-chart}} Consensus</span></span></li>
+              <li>Comparing street and management framing</li>
+              <li>Writing the brief, every claim cited</li>
+            </ol>
+          </div>
+          <div class="wf-done">
+            <div class="wl-between"><span class="wl-runh">{{icon:file-check}}<span>Event Brief · <span class="wf-co">Sea Limited</span></span></span><span class="pui-tag">Ready</span></div>
+            <div class="wf-out">
+              <div class="wf-sec"><b>1 · At a glance<span class="pui-cite">12</span><span class="pui-cite">13</span></b><i></i><i class="m"></i><i class="s"></i></div>
+              <div class="wf-sec"><b>3 · Street vs management framing<span class="pui-cite">10</span></b><span class="wl-mini"><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+              <div class="wf-sec"><b>4 · Scenario tree</b><i></i><i class="m"></i></div>
+              <div class="wf-fade"></div>
+            </div>
+            <p class="wf-cites">{{icon:quote}} Every claim cited to its source page</p>
+            <div class="wl-acts"><button type="button" class="wf-again">{{icon:refresh}} Run again</button><a class="wf-cta wf-cta-full" href="{{demo_url}}">See the output {{icon:arrow-right}}</a></div>
+          </div>
+        </div>
+        <div class="pui-side wl-dside">
+          <p class="pui-k">Output sections</p>
+          <ol class="wl-secs"><li>At a glance</li><li>Structured context</li><li>Street vs management</li><li>Scenario tree</li><li>Management tone</li><li>Entry and exit thresholds</li><li>CEO takeaway</li></ol>
+          <p class="pui-k pui-mt">Searches</p>
+          <div class="wl-lgs"><span class="pui-lg w">{{logo:pdf}}</span><span class="pui-lg w">{{logo:sharepoint}}</span><span class="pui-lg w">{{logo:teams}}</span><span class="pui-lg w">{{logo:outlook}}</span><span class="pui-lg t" style="background:#279C7B">{{icon:globe}}</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row" id="library" aria-labelledby="lib-title">
+    <div class="row-pad-sm"><p class="eyebrow">The library · Front office</p><h2 class="h2" id="lib-title" style="margin-top:18px">A workflow for every part <span class="mute">of the job.</span></h2></div>
+    <div class="wl-cat row">
+      <h3 class="wl-cat-h">{{icon:building}}Public company research</h3>
+      <div class="wl-cards">
+        <div class="wl-card"><span class="wl-ci" style="background:#1F3864">{{icon:book-open}}</span><b>Company Primer</b><span class="wl-pl">{{icon:play}}</span><span>A deep research report from filings</span></div>
+        <div class="wl-card"><span class="wl-ci" style="background:#1F3864">{{icon:pie-chart}}</span><b>Business Model Breakdown</b><span class="wl-pl">{{icon:play}}</span><span>How the company makes money</span></div>
+        <div class="wl-card"><span class="wl-ci" style="background:#1F3864">{{icon:file-text}}</span><b>Initiating Coverage Report</b><span class="wl-pl">{{icon:play}}</span><span>A full ICR on a company</span></div>
+        <div class="wl-card"><span class="wl-ci" style="background:#1F3864">{{icon:file-check}}</span><b>Annual Report Summariser</b><span class="wl-pl">{{icon:play}}</span><span>The annual report, distilled</span></div>
+        <div class="wl-card"><span class="wl-ci" style="background:#1F3864">{{icon:landmark}}</span><b>IPO Prospectus Analysis</b><span class="wl-pl">{{icon:play}}</span><span>The prospectus, for investors</span></div>
+      </div>
+    </div>
+    <div class="wl-cat row">
+      <h3 class="wl-cat-h">{{icon:lock}}Private company research</h3>
+      <div class="wl-cards">
+        <div class="wl-card"><span class="wl-ci" style="background:#279C7B">{{icon:lock}}</span><b>Private Company Primer</b><span class="wl-pl">{{icon:play}}</span><span>Filings plus deep web search</span></div>
+        <div class="wl-card"><span class="wl-ci" style="background:#279C7B">{{icon:handshake}}</span><b>Private Company Management Meeting</b><span class="wl-pl">{{icon:play}}</span><span>Prepare for a management meeting</span></div>
+      </div>
+    </div>
+    <div class="wl-cat row">
+      <h3 class="wl-cat-h">{{icon:calendar}}Earnings</h3>
+      <div class="wl-cards">
+        <div class="wl-card"><span class="wl-ci" style="background:#185FA5">{{icon:bar-chart}}</span><b>Earnings Recap</b><span class="wl-pl">{{icon:play}}</span><span>What happened in the quarter</span></div>
+        <div class="wl-card"><span class="wl-ci" style="background:#185FA5">{{icon:chart-line}}</span><b>Street vs Internal vs Management</b><span class="wl-pl">{{icon:play}}</span><span>Consensus, your forecast and guidance, compared</span></div>
+      </div>
+    </div>
+    <div class="wl-cat row">
+      <h3 class="wl-cat-h">{{icon:file-text}}Events and catalysts</h3>
+      <div class="wl-cards">
+        <div class="wl-card"><span class="wl-ci" style="background:#B5651D">{{icon:megaphone}}</span><b>Event Brief</b><span class="wl-pl">{{icon:play}}</span><span>A corporate event and what it means</span></div>
+        <div class="wl-card"><span class="wl-ci" style="background:#B5651D">{{icon:users}}</span><b>Meeting Brief</b><span class="wl-pl">{{icon:play}}</span><span>Prepare for conferences and meetings</span></div>
+        <div class="wl-card"><span class="wl-ci" style="background:#B5651D">{{icon:calendar}}</span><b>30-Day Catalyst Calendar</b><span class="wl-pl">{{icon:play}}</span><span>Every catalyst ahead</span></div>
+        <div class="wl-card"><span class="wl-ci" style="background:#B5651D">{{icon:eye}}</span><b>Insider Intelligence Briefing</b><span class="wl-pl">{{icon:play}}</span><span>Insider-related developments</span></div>
+      </div>
+    </div>
+    <div class="wl-cat row">
+      <h3 class="wl-cat-h">{{icon:alert}}Risk and governance</h3>
+      <div class="wl-cards">
+        <div class="wl-card"><span class="wl-ci" style="background:#993C1D">{{icon:flag}}</span><b>Red Flag Analysis</b><span class="wl-pl">{{icon:play}}</span><span>Risk signals across filings</span></div>
+        <div class="wl-card"><span class="wl-ci" style="background:#993C1D">{{icon:coins}}</span><b>Management Compensation</b><span class="wl-pl">{{icon:play}}</span><span>Pay, ownership and control</span></div>
+        <div class="wl-card"><span class="wl-ci" style="background:#993C1D">{{icon:wallet}}</span><b>Capital Allocation and Strategy Review</b><span class="wl-pl">{{icon:play}}</span><span>Where the capital goes, and why</span></div>
+      </div>
+    </div>
+    <div class="wl-cat row">
+      <h3 class="wl-cat-h">{{icon:scale}}Thesis and frameworks</h3>
+      <div class="wl-cards">
+        <div class="wl-card"><span class="wl-ci" style="background:#534AB7">{{icon:scale}}</span><b>Red Team Thesis Challenger</b><span class="wl-pl">{{icon:play}}</span><span>Stress-test your thesis</span></div>
+        <div class="wl-card"><span class="wl-ci" style="background:#534AB7">{{icon:trending-up}}</span><b>Bull Bear Analysis</b><span class="wl-pl">{{icon:play}}</span><span>Both sides, structured</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row split" aria-labelledby="f1">
+    <div class="split-copy">
+      <p class="eyebrow">What you get</p>
+      <h2 class="h2" id="f1">A brief you could take <span class="mute">into the morning meeting.</span></h2>
+      <p>Every workflow returns a structured document, cited throughout. Here is the Event Brief Pascal produced on Sea Limited.</p>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui pui-wide wl-brief" role="img" aria-label="The Event Brief Pascal produced on Sea Limited, open in a Pascal chat. Section 1, At a glance: the event is an FY2026 guidance reset, with Shopee to grow GMV by about 25% while holding absolute EBITDA flat, implying margin compression to roughly 3.5 to 4.0 percent, citation 12; shares are down about 45% from the August peak with price targets cut across the board, citations 13 and 11. Section 3, Street vs management framing, compares Shopee EBITDA margin and GMV growth. A contents panel lists At a glance, Structured context, Street vs management, Scenario tree, Management tone, Entry and exit thresholds and CEO takeaway, built from 13 sources.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Chat / <b>Sea Event Brief</b></span><span class="pui-bar-r"><span class="pui-tag">13 sources</span></span></div>
+    <div class="pui-body"><!--#include pui-rail on_chat="on" on_wf=""-->
+      <div class="pui-split wl-bsplit">
+        <div class="pui-main">
+          <p class="pui-k">Workflow output · Events and catalysts</p>
+          <p class="pui-h wl-bh">Sea Limited · Event Brief</p>
+          <p class="wl-sh">1 · At a glance</p>
+          <p class="wl-p"><b>Event:</b> FY2026 guidance reset. Shopee to grow GMV by about 25% while holding absolute EBITDA flat, implying margin compression to roughly 3.5–4.0%<span class="pui-cite on">12</span>.</p>
+          <p class="wl-p"><b>Market reaction:</b> shares down about 45% from the August peak, with price targets cut across the board<span class="pui-cite">13</span><span class="pui-cite">11</span>.</p>
+          <p class="wl-sh">3 · Street vs management (FY26)</p>
+          <table class="pui-tbl wl-bt">
+            <thead><tr><th>Metric</th><th>Street</th><th>Management</th><th>Gap</th></tr></thead>
+            <tbody>
+              <tr><td><b>Shopee EBITDA margin</b></td><td>~2.5%</td><td>~3.5–4.0%</td><td><span class="pui-tag amber">Disagree</span><span class="pui-cite">10</span></td></tr>
+              <tr><td><b>Shopee GMV growth</b></td><td>~25%</td><td>~25%</td><td><span class="pui-tag">Agree</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pui-side">
+          <p class="pui-k">Contents</p>
+          <ol class="wl-toc"><li class="on">At a glance</li><li>Structured context</li><li>Street vs management</li><li>Scenario tree</li><li>Management tone</li><li>Entry and exit thresholds</li><li>CEO takeaway</li></ol>
+          <div class="wl-srcs"><span class="wl-lgs"><span class="pui-lg w">{{logo:pdf}}</span><span class="pui-lg w">{{logo:sharepoint}}</span><span class="pui-lg w">{{logo:teams}}</span></span><span class="pui-sub">13 sources</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">Consistent by design</p>
+      <h2 class="h2" id="f2">Same structure, <span class="mute">every name.</span></h2>
+      <p>When every analyst writes a brief differently, comparing names takes longer than writing them. Workflows return the same sections in the same order, so ten event briefs read like one body of work.</p>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui pui-wide wl-two" role="img" aria-label="Two event briefs compared side by side in Pascal, for Company A and Company B, each with the same sections in the same order: At a glance, Structured context, Street vs management, Scenario tree, CEO takeaway.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Workflows / Event Brief / <b>Compare</b></span><span class="pui-bar-r"><span class="pui-tag">Same 5 sections</span></span></div>
+    <div class="pui-body"><!--#include pui-rail on_chat="" on_wf="on"-->
+      <div class="pui-main wl-cmp">
+        <div class="wl-ch2"><span class="pui-lg t lg" style="background:#1F3864">A</span><span><b>Event Brief · Company A</b><span class="pui-sub">Ready · cited</span></span></div>
+        <div class="wl-ch2"><span class="pui-lg t lg" style="background:#185FA5">B</span><span><b>Event Brief · Company B</b><span class="pui-sub">Ready · cited</span></span></div>
+        <div class="wl-cs"><b><span>1</span>At a glance</b><i></i><i class="s"></i></div>
+        <div class="wl-cs"><b><span>1</span>At a glance</b><i></i><i class="m"></i></div>
+        <div class="wl-cs"><b><span>2</span>Structured context</b><i class="m"></i><i class="s"></i></div>
+        <div class="wl-cs"><b><span>2</span>Structured context</b><i></i><i class="s"></i></div>
+        <div class="wl-cs on"><b><span>3</span>Street vs management</b><span class="wl-mini"><i></i><i></i><i></i><i></i></span></div>
+        <div class="wl-cs on"><b><span>3</span>Street vs management</b><span class="wl-mini"><i></i><i></i><i></i><i></i></span></div>
+        <div class="wl-cs"><b><span>4</span>Scenario tree</b><i></i><i class="s"></i></div>
+        <div class="wl-cs"><b><span>4</span>Scenario tree</b><i class="m"></i><i class="s"></i></div>
+        <div class="wl-cs"><b><span>5</span>CEO takeaway</b><i class="m"></i></div>
+        <div class="wl-cs"><b><span>5</span>CEO takeaway</b><i></i></div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" aria-labelledby="f3">
+    <div class="split-copy">
+      <p class="eyebrow">Built on your firm's research</p>
+      <h2 class="h2" id="f3">Workflows that know <span class="mute">what your team knows.</span></h2>
+      <p>A workflow doesn't stop at public filings. It searches the sources your team actually works in, so the output reflects your firm's view.</p>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui has-float float-lg wl-srcw" role="img" aria-label="The sources an Event Brief workflow searches: filings and the web, plus your firm's IC memos, emails, Microsoft Teams, expert calls, broker reports and your Vault, all switched on. A run card shows the workflow searching your IC memos, Teams chats and expert calls for Sea Limited.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Workflows / Event Brief / <b>Sources</b></span><span class="pui-bar-r"><span class="pui-tag">8 on</span></span></div>
+    <div class="pui-body"><!--#include pui-rail on_chat="" on_wf="on"-->
+      <div class="pui-main">
+        <p class="pui-k">Sources searched · Public</p>
+        <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span><span>Filings<span class="pui-sub">Annual and quarterly reports</span></span><span class="pui-row-r"><span class="wl-tg"></span></span></div>
+        <div class="pui-row"><span class="pui-lg t" style="background:#185FA5">{{icon:globe}}</span><span>Web<span class="pui-sub">News and company sites</span></span><span class="pui-row-r"><span class="wl-tg"></span></span></div>
+        <p class="pui-k pui-mt">Your firm's research</p>
+        <div class="pui-row"><span class="pui-lg w">{{logo:sharepoint}}</span><span>IC memos<span class="pui-sub">SharePoint</span></span><span class="pui-row-r"><span class="pui-lock">{{icon:lock}} Team</span><span class="wl-tg"></span></span></div>
+        <div class="pui-row"><span class="pui-lg w">{{logo:outlook}}</span><span>Emails<span class="pui-sub">Outlook</span></span><span class="pui-row-r"><span class="wl-tg"></span></span></div>
+        <div class="pui-row"><span class="pui-lg w">{{logo:teams}}</span><span>MS Teams<span class="pui-sub">Chats and channels</span></span><span class="pui-row-r"><span class="wl-tg"></span></span></div>
+        <div class="pui-row"><span class="pui-lg t" style="background:#534AB7">{{icon:users}}</span><span>Expert calls<span class="pui-sub">Transcripts</span></span><span class="pui-row-r"><span class="wl-tg"></span></span></div>
+        <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span><span>Broker reports<span class="pui-sub">Sell-side research</span></span><span class="pui-row-r"><span class="wl-tg"></span></span></div>
+        <div class="pui-row"><span class="pui-lg t" style="background:#279C7B">{{icon:database}}</span><span>Your Vault<span class="pui-sub">Uploaded files</span></span><span class="pui-row-r"><span class="pui-lock">{{icon:lock}} Private</span><span class="wl-tg"></span></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="pui-float left wl-sf">
+    <p class="pui-k">Running · Sea Limited</p>
+    <div class="pui-step">{{icon:refresh}} <b>Searching your IC memos, Teams chats and expert calls</b></div>
+    <div class="pui-schips"><span class="pui-schip">{{logo:sharepoint}} IC memos</span><span class="pui-schip">{{logo:teams}} Teams chats</span><span class="pui-schip">{{icon:users}} Expert calls</span></div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row row-pad" aria-labelledby="cmp-title">
+    <div class="head" style="margin-bottom:36px">
+      <div><p class="eyebrow">Why it matters</p><h2 class="h2" id="cmp-title" style="margin-top:18px">Stop rewriting <span class="mute">the same prompt.</span></h2></div>
+    </div>
+    <div class="table-wrap">
+      <table class="wl-compare">
+        <thead><tr><th scope="col"></th><th scope="col">Prompting from scratch</th><th scope="col">Workflow library</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Getting started</th><td>Write the prompt each time</td><td>Two clicks</td></tr>
+          <tr><th scope="row">Output</th><td>Different every time</td><td>Same sections, every name</td></tr>
+          <tr><th scope="row">Sources</th><td>Whatever you remember to ask for</td><td>Filings, web and your research</td></tr>
+          <tr><th scope="row">Quality</th><td>Depends on the prompt</td><td>Built around buy-side process</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>What is the agentic workflow library?<span class="pm" aria-hidden="true"></span></summary><div class="ans">25+ ready-to-run investment workflows. Pick a workflow, pick a company, and Pascal's agents produce a finished piece of work, such as an event brief or an initiating coverage report, in the same structure for every name you cover.</div></details>
+        <details class="faq-item"><summary>Can workflows run on private companies?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Private company workflows use filings plus deep web search.</div></details>
+        <details class="faq-item"><summary>Are workflow outputs cited?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Every output cites its sources, down to the page.</div></details>
+        <details class="faq-item"><summary>Can we build our own?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Use the workflow builder to turn your firm's process into a workflow your team can run.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="rel-title">
+    <div class="row-pad-sm"><h2 class="h2" id="rel-title">Related</h2></div>
+    <div class="cells row">
+      <a class="cell" href="/pascal-agents/autonomous-agents"><span class="n">Pascal Agents</span><b>Autonomous agents</b><span>Workflows that run end to end on their own.</span><span class="link">View autonomous agents {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/platform/mcp-apis"><span class="n">Platform</span><b>MCP &amp; APIs</b><span>Build workflows around how your firm works, on Pascal's APIs.</span><span class="link">View MCP &amp; APIs {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/pascal-agents/data-agent"><span class="n">Pascal Data Agent</span><b>Research files for workflows</b><span>Broker notes and expert calls, tagged by company so every workflow finds them.</span><span class="link">View the Data Agent {{icon:arrow-right}}</span></a>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="Run your first workflow on your own coverage." sub="A walkthrough on the companies you follow."-->

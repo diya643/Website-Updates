@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>Pascal Data Agent: Your Files as Structured Data | Pascal AI</title>
+<meta name="description" content="Pascal Data Agent classifies broker reports, expert calls, notes and email, extracts fields and tables, and serves them to analysts and to agents over MCP.">
+<link rel="canonical" href="https://pascalailabs.com/pascal-agents/data-agent">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#052A2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pascal AI">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Pascal Data Agent: Your Files as Structured Data | Pascal AI">
+<meta property="og:description" content="Pascal Data Agent classifies broker reports, expert calls, notes and email, extracts fields and tables, and serves them to analysts and to agents over MCP.">
+<meta property="og:url" content="https://pascalailabs.com/pascal-agents/data-agent">
+<meta property="og:image" content="https://pascalailabs.com/assets/og/pascal-agents-data-agent.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Your firm&#x27;s files, as data your analysts and agents can use">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pascalailabs">
+<meta name="twitter:title" content="Pascal Data Agent: Your Files as Structured Data | Pascal AI">
+<meta name="twitter:description" content="Pascal Data Agent classifies broker reports, expert calls, notes and email, extracts fields and tables, and serves them to analysts and to agents over MCP.">
+<meta name="twitter:image" content="https://pascalailabs.com/assets/og/pascal-agents-data-agent.png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=33a81822df">
+<link rel="stylesheet" href="/assets/pages/data-agent.css?v=894d03e5d8">
+<script src="/assets/site.js?v=cd66888c46" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV9WGBYMQR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SV9WGBYMQR');</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pascalailabs.com/#org",
+   "name": "Pascal AI Labs",
+   "alternateName": "Pascal AI",
+   "url": "https://pascalailabs.com/",
+   "logo": "https://pascalailabs.com/assets/pascal-logo.png",
+   "sameAs": [
+    "https://www.linkedin.com/company/pascal-ai-labs/",
+    "https://twitter.com/pascalailabs"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pascalailabs.com/pascal-agents/data-agent#webpage",
+   "url": "https://pascalailabs.com/pascal-agents/data-agent",
+   "name": "Pascal Data Agent: Your Files as Structured Data | Pascal AI",
+   "description": "Pascal Data Agent classifies broker reports, expert calls, notes and email, extracts fields and tables, and serves them to analysts and to agents over MCP.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://pascalailabs.com/#website"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "dateModified": "2026-10-07",
+   "breadcrumb": {
+    "@id": "https://pascalailabs.com/pascal-agents/data-agent#breadcrumb"
+   },
+   "primaryImageOfPage": "https://pascalailabs.com/assets/og/pascal-agents-data-agent.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pascalailabs.com/#website",
+   "url": "https://pascalailabs.com/",
+   "name": "Pascal AI",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pascalailabs.com/pascal-agents/data-agent#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pascalailabs.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pascal Agents",
+     "item": "https://pascalailabs.com/pascal-agents"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Pascal Data Agent",
+     "item": "https://pascalailabs.com/pascal-agents/data-agent"
+    }
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://pascalailabs.com/pascal-agents/data-agent#software",
+   "name": "Pascal Data Agent",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Investment research",
+   "operatingSystem": "Web, Microsoft Excel, PowerPoint, Word",
+   "description": "Pascal Data Agent classifies broker reports, expert calls, notes and email, extracts fields and tables, and serves them to analysts and to agents over MCP.",
+   "url": "https://pascalailabs.com/pascal-agents/data-agent",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Institutional investors"
+   },
+   "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "url": "https://pascalailabs.com/demo",
+    "description": "Enterprise licence. Book a demo for pricing."
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pascalailabs.com/pascal-agents/data-agent#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is Pascal Data Agent?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The part of Pascal Agents that turns your firm's files into structured data. It classifies each file, extracts the fields and tables that matter for its type, links them to your context graph and serves them to analysts and agents."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which files and sources does it work with?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Broker research portals such as BluMatrix, expert network transcripts, SharePoint, OneDrive and other drives, and email with attachments. PDFs, including scanned ones, Word files, slides and spreadsheets are all supported."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Pascal a data company?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pascal is a data platform for your own research, the way Snowflake is a data platform for your tables. The data is your firm's; Pascal structures it, keeps it current and serves it."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does Pascal decide which company a file is about?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It counts tickers, name variants and product lines mapped to each company, then marks the companies a file is about and the ones it only mentions. \"Why this is tagged\" in the vault viewer lists every signal."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can we use our own document types and fields?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Rename, split or add types, and give each one its own fields, access rules and threshold. A new type needs about a dozen labelled examples to start, and you mark which fields a person must verify."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What happens when Pascal is unsure or wrong?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Files below your confidence threshold wait in the review queue, and low-confidence cells are flagged in the table editor. When someone assigns a type or corrects a value, Pascal keeps the original, who changed it and when, and every agent reads the corrected value."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do agents use the data?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Through Pascal's MCP server. Agents call list_documents with the same filters as the vault viewer and get_document for the section about a company, including the page and position of every value."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it respect our permissions?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Every list, count, answer and MCP call follows the user's source permissions and licences, including per-broker research entitlements. Pascal runs in your own cloud or on premise, so the data stays within your perimeter."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/" aria-label="Pascal AI home">
+      <img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/platform" aria-expanded="false" aria-haspopup="true">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-product">
+          <div class="mega-panel">
+            <div class="mp-col">
+              <a class="mp-feature" href="/platform">
+                <span class="mp-art" aria-hidden="true"><i></i><i></i><i></i></span>
+                <b>Platform overview</b>
+                <span>See how the Investment OS works.</span>
+              </a>
+              <p class="mp-label">Platform</p>
+              <a class="mp-link" href="/platform/context-graph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg> Context graph &amp; memory</a>
+              <a class="mp-link" href="/platform/mcp-apis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> MCP &amp; APIs</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/ask-pascal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Ask Pascal</b><span>Your AI research analyst</span></span></a>
+              <a class="mp-link" href="/ask-pascal/decision-traces"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg> Decision traces</a>
+              <a class="mp-link" href="/ask-pascal/cited-research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg> Cited research</a>
+              <a class="mp-link" href="/ask-pascal/screeners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg> Screeners</a>
+              <a class="mp-link" href="/ask-pascal/pascal-intel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg> Pascal Intel</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/pascal-agents"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><span><b>Pascal Agents</b><span>Run investment work end to end</span></span></a>
+              <a class="mp-link" href="/pascal-agents/autonomous-agents"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Autonomous agents</a>
+              <a class="mp-link" href="/pascal-agents/workflow-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg> Agentic workflow library</a>
+              <a class="mp-link" href="/pascal-agents/data-agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg> Pascal Data Agent</a>
+            </div>
+            <a class="mp-foot" href="/solutions/hedge-funds"><span class="chip">Industries</span><span><b>Pascal for your firm</b><span>Hedge funds, asset and wealth managers, banks, asset servicers, private equity and private credit, and corporate treasury</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/solutions/hedge-funds" aria-expanded="false" aria-haspopup="true">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-il">
+          <div class="mega-panel">
+              <a class="il-i" href="/solutions/hedge-funds"><span><b>Hedge Funds</b><small>Event briefs, reconciliations and DDQs</small></span></a>
+              <a class="il-i" href="/solutions/asset-wealth-management"><span><b>Asset &amp; Wealth Management</b><small>Research, mandate checks and client reporting</small></span></a>
+              <a class="il-i" href="/solutions/banking"><span><b>Banks &amp; Financial Institutions</b><small>Underwriting, covenant monitoring and KYC</small></span></a>
+              <a class="il-i" href="/solutions/asset-servicing"><span><b>Asset Servicing</b><small>Corporate actions, NAV checks and client queries</small></span></a>
+              <a class="il-i" href="/solutions/private-equity-credit"><span><b>Private Equity &amp; Private Credit</b><small>CIM screens, diligence and LP reporting</small></span></a>
+              <a class="il-i" href="/solutions/treasury-hedge-accounting"><span><b>Corporate Treasury &amp; Hedge Accounting</b><small>Exposures, effectiveness tests and hedge files</small></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/news" aria-expanded="false" aria-haspopup="true">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-list mega-news mega-news-ac">
+          <div class="mega-panel">
+            <div class="mn-col">
+              <p class="mp-label">News</p>
+              <a class="mp-link" href="/news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg> Newsroom</a>
+              <a class="mp-link" href="/news/founders-notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Founder's notes</a>
+            </div>
+            <div class="mn-col mn-ac">
+              <a class="mn-ac-head" href="/pascal-academy"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><b>Pascal Academy</b><span>Learn AI for institutional finance</span></span></a>
+              <a class="mp-link" href="/guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Desk guides</a>
+              <a class="mp-link" href="/pascal-academy/ai-fundamentals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg> AI fundamentals</a>
+              <a class="mp-link" href="/pascal-academy/ai-glossary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> AI glossary</a>
+              <a class="mp-link" href="/pascal-academy/workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> Workflows</a>
+              <a class="mp-link" href="/pascal-academy/prompt-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Prompt library</a>
+              <a class="mp-link" href="/pascal-academy/agent-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> Agent library</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-dark btn-sm" href="https://pascalailabs.com/demo">Book a demo</a>
+    </div>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <details open>
+    <summary>Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <p class="mm-label">Platform</p>
+    <a href="/platform">Platform overview</a>
+    <a href="/platform/context-graph">Context graph &amp; memory</a>
+    <a href="/platform/mcp-apis">MCP &amp; APIs</a>
+    <p class="mm-label">Ask Pascal</p>
+    <a href="/ask-pascal">Ask Pascal overview</a>
+    <a href="/ask-pascal/decision-traces">Decision traces</a>
+    <a href="/ask-pascal/cited-research">Cited research</a>
+    <a href="/ask-pascal/screeners">Screeners</a>
+    <a href="/ask-pascal/pascal-intel">Pascal Intel</a>
+    <p class="mm-label">Pascal Agents</p>
+    <a href="/pascal-agents">Pascal Agents overview</a>
+    <a href="/pascal-agents/autonomous-agents">Autonomous agents</a>
+    <a href="/pascal-agents/workflow-library">Agentic workflow library</a>
+    <a href="/pascal-agents/data-agent">Pascal Data Agent</a>
+  </details>
+  <details>
+    <summary>Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/solutions/hedge-funds">Hedge Funds</a>
+    <a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+    <a href="/solutions/banking">Banks &amp; Financial Institutions</a>
+    <a href="/solutions/asset-servicing">Asset Servicing</a>
+    <a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+    <a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+  </details>
+  <details>
+    <summary>News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/news">Newsroom</a>
+    <a href="/news/founders-notes">Founder's notes</a>
+    <p class="mm-label">Pascal Academy</p>
+    <a href="/pascal-academy">Academy home</a>
+    <a href="/guides">Desk guides</a>
+    <a href="/pascal-academy/ai-fundamentals">AI fundamentals</a>
+    <a href="/pascal-academy/ai-glossary">AI glossary</a>
+    <a href="/pascal-academy/workflows">Workflows</a>
+    <a href="/pascal-academy/prompt-library">Prompt library</a>
+    <a href="/pascal-academy/agent-library">Agent library</a>
+  </details>
+  <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+</div>
+
+<main id="main">
+<div class="frame pg-da">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/pascal-agents">Pascal Agents</a><span aria-hidden="true">/</span><span aria-current="page">Pascal Data Agent</span></nav>
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Pascal Data Agent</span></span>Turn your firm's files into data <span class="mute">your analysts and agents can use.</span></h1>
+      <p class="lead">Pascal Data Agent reads broker reports, expert calls, internal notes and email, gives each file a type, extracts its fields and tags it by company. Analysts browse the result in the vault viewer. Agents query it over MCP.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel fit"><!--mock--><div class="pui da-flow" role="img" aria-label="A Goldman Sachs sector report, US Semis: AI capex tracker, open in the vault viewer at the NVIDIA section on pages 9 to 11 of 44. Extracted fields: NVDA rating Buy, price target $245, up $15. The passage highlights NVDA, Blackwell Ultra and CoWoS-L. A card shows why the report is tagged to NVIDIA: 23 mentions, made up of the ticker 9 times, the Blackwell Ultra product line 8 times and the name variant Nvidia 6 times. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Vault viewer / Broker reports / <b>NVDA</b></span><span class="pui-bar-r"><span class="da-seg"><span class="on">Analyst UI</span><span>Agent (MCP)</span></span></span></div>
+    <div class="pui-main">
+      <div class="da-doc-h"><span class="da-pill">Broker report</span><p class="da-doc-t">US Semis: AI capex tracker, Q3 update</p><p class="pui-sub">Goldman Sachs · Sep 30, 2026 · 44 pages</p></div>
+      <div class="da-facets">
+        <div><span>NVDA rating</span>Buy · $245 <span class="da-up" style="display:inline;font:inherit;text-transform:none;letter-spacing:0;color:var(--brand-2)">+15</span></div>
+        <div><span>Report type</span>Sector</div>
+        <div><span>Primary companies</span>NVDA, AMD, TSM +2</div>
+      </div>
+      <div class="da-span">
+        <div class="da-loc"><span><b>NVDA section</b> · pp. 9–11 of 44</span><span>Opens here</span></div>
+        <p>We raise our <mark>NVDA</mark> PT to $245 (from $230). <mark>Blackwell Ultra</mark> shipments tracked ahead of our model in August, and our supply-chain checks point to <mark>CoWoS-L</mark> as the binding constraint through 1H27.</p>
+      </div>
+      <div class="da-cos"><span class="pui-k">Companies</span><span class="pui-chip on">NVDA</span><span class="pui-chip">AMD</span><span class="pui-chip">TSM</span><span class="pui-chip">AVGO</span><span class="pui-chip">MU</span><span class="pui-sp"></span><span class="pui-sub">Primary in all 5</span></div>
+    </div>
+  </div>
+  <div class="pui-float da-why">
+    <div class="pui-float-h"><span class="pui-k">Why this is tagged to NVIDIA</span><span class="pui-tag">23 mentions</span></div>
+    <div class="pui-kv">
+      <span>Ticker · <code>NVDA</code></span><b>9×</b>
+      <span>Product line · Blackwell Ultra</span><b>8×</b>
+      <span>Name variant · Nvidia</span><b>6×</b>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+  </section>
+
+  <section class="cells row" aria-label="Pascal Data Agent in numbers">
+    <div class="cell"><span class="stat-num">99.8<small>%</small></span><span class="stat-lbl">Automation rate</span></div>
+    <div class="cell"><span class="stat-num">50<small>M+</small></span><span class="stat-lbl">Pages indexed</span></div>
+    <div class="cell"><span class="stat-num">35<small>K+</small></span><span class="stat-lbl">Stocks &amp; entities mapped</span></div>
+  </section>
+</div>
+
+<nav class="subnav" aria-label="On this page">
+  <div class="subnav-inner">
+    <a href="#how-it-works">How it works</a>
+    <a href="#vault-viewer">Vault viewer</a>
+    <a href="#classifier">Classifier</a>
+    <a href="#extraction">Extraction</a>
+    <a href="#entities">Entities</a>
+    <a href="#permissions">Permissions</a>
+    <a href="#use-cases">Use cases</a>
+    <a href="#faq">Frequently asked questions</a>
+  </div>
+</nav>
+
+<div class="frame pg-da">
+  <section class="row" id="how-it-works" aria-labelledby="steps-title">
+    <div class="row-pad-sm"><h2 class="h2" id="steps-title">From file to fact <span class="mute">in four steps.</span></h2></div>
+    <div class="cells c4 row da-steps">
+      <div class="cell"><span class="n">01 Classify</span><b>Give every file a type</b><span>Each file gets a type from your taxonomy, with a confidence score. Unsure files wait for a person.</span>
+        <div class="da-step-ui"><!--mock--><div class="da-mini" role="img" aria-label="Classifier scores for one file: broker report 0.97, expert call 0.02, research note 0.01."><span class="pui-k">Mgmt_mtg_0930.pdf</span>
+          <div class="da-mini-r"><span>Broker report</span><span class="da-bar"><i style="width:97%"></i></span><b class="da-num">0.97</b></div>
+          <div class="da-mini-r"><span>Expert call</span><span class="da-bar grey"><i style="width:4%"></i></span><span class="da-num da-mu">0.02</span></div>
+          <div class="da-mini-r"><span>Research note</span><span class="da-bar grey"><i style="width:3%"></i></span><span class="da-num da-mu">0.01</span></div>
+        </div><!--/mock--></div></div>
+      <div class="cell"><span class="n">02 Extract</span><b>Pull out the fields</b><span>Rating, price target, speaker, relationship, stance. Each value keeps the page it came from.</span>
+        <div class="da-step-ui"><!--mock--><div class="da-mini" role="img" aria-label="Extracted fields from a broker report: rating Buy on page 9, price target $245 on page 9, price target change plus 15 on page 9."><span class="pui-k">Broker report fields</span>
+          <div class="da-mini-r"><span>Rating</span><b>Buy</b><span class="pui-cite">p.9</span></div>
+          <div class="da-mini-r"><span>Price target</span><b>$245</b><span class="pui-cite">p.9</span></div>
+          <div class="da-mini-r"><span>PT change</span><b class="da-up">+15</b><span class="pui-cite">p.9</span></div>
+        </div><!--/mock--></div></div>
+      <div class="cell"><span class="n">03 Link</span><b>Resolve to the context graph</b><span>Tickers, name variants and product lines map to one company in your <a href="/platform/context-graph" class="da-inl">context graph</a>.</span>
+        <div class="da-step-ui"><!--mock--><div class="da-mini" role="img" aria-label="Entity resolution: Blackwell Ultra, Nvidia and GB300 resolve to NVDA; 2330.TW resolves to TSM."><span class="pui-k">Entity resolution</span>
+          <div class="da-mini-r"><code>Blackwell Ultra</code><span class="da-mu">→</span><b class="da-mono">NVDA</b></div>
+          <div class="da-mini-r"><code>Nvidia</code><span class="da-mu">→</span><b class="da-mono">NVDA</b></div>
+          <div class="da-mini-r"><code>2330.TW</code><span class="da-mu">→</span><b class="da-mono">TSM</b></div>
+        </div><!--/mock--></div></div>
+      <div class="cell"><span class="n">04 Serve</span><b>Serve people and agents</b><span>Analysts open the vault viewer. Agents call the same records over MCP, under the same permissions.</span>
+        <div class="da-step-ui"><!--mock--><div class="da-mini" role="img" aria-label="The same records are served in three ways: the vault viewer for analysts, and the list_documents and get_document MCP tools for agents."><span class="pui-k">Served to</span>
+          <div class="da-mini-r"><span>Vault viewer</span><span class="pui-tag">Analyst UI</span></div>
+          <div class="da-mini-r"><code>list_documents</code><span class="pui-tag navy">MCP</span></div>
+          <div class="da-mini-r"><code>get_document</code><span class="pui-tag navy">MCP</span></div>
+        </div><!--/mock--></div></div>
+    </div>
+  </section>
+
+  <section class="row vv-section" id="vault-viewer" aria-labelledby="vv-title">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Vault viewer · Analyst UI and Agent (MCP)</p>
+        <h2 class="h2" id="vv-title">One dataset, two ways in. <span class="mute">Try it on a sample vault.</span></h2>
+      </div>
+      <div>
+        <p>Pick a document type, add a company, change the date range and click a row to open the file at the section about that company. Switch to Agent (MCP) to see the same records as list_documents and get_document return them. Sample data is illustrative.</p>
+        <a class="link" href="/platform/mcp-apis">See MCP &amp; APIs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    <!--mock--><div class="vv" data-vv role="region" aria-label="Interactive vault viewer with sample data">
+<!--vv-static-->
+<div class="pui-win vv-win">
+<div class="pui-bar vv-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path><path d="M25 17h18v28H25z" fill="#55C390"></path></svg><span class="pui-crumb"><span class="vv-cr">Data Agent / </span><b>Vault viewer</b></span><span class="pui-tag amber vv-sample">Illustrative sample data</span>
+<span class="pui-bar-r"><span class="vv-seg vv-view" role="group" aria-label="View as"><button type="button" data-view="ui" aria-pressed="true">Analyst UI</button><button type="button" data-view="mcp" aria-pressed="false">Agent (MCP)</button></span></span></div>
+<div class="vv-app">
+<div class="vv-rail"><p class="pui-k">Document types</p><div class="vv-types" data-types=""><button type="button" class="vv-type" data-type="all" aria-pressed="true">
+<span class="vv-tn">All documents</span><span class="vv-tc">25</span>
+<span class="vv-tm">All sources · 6,711</span></button><button type="button" class="vv-type" data-type="broker" aria-pressed="false">
+<span class="vv-tn">Broker reports</span><span class="vv-tc">10</span>
+<span class="vv-tm">BluMatrix · 4,212</span></button><button type="button" class="vv-type" data-type="expert" aria-pressed="false">
+<span class="vv-tn">Expert calls</span><span class="vv-tc">6</span>
+<span class="vv-tm">Expert network transcripts · 1,947</span></button><button type="button" class="vv-type" data-type="note" aria-pressed="false">
+<span class="vv-tn">Internal research notes</span><span class="vv-tc">6</span>
+<span class="vv-tm">SharePoint · 538</span></button><button type="button" class="vv-type unc" data-type="unc" aria-pressed="false">
+<span class="vv-tn">Unclassified</span><span class="vv-tc">3</span>
+<span class="vv-tm">No type assigned · 14</span></button></div>
+<p class="vv-railnote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Counts respect your permissions</p></div>
+<div class="vv-main">
+<div class="vv-head" data-head=""><p class="vv-h">All documents</p><p class="vv-sub">Newest first · every document type</p></div>
+<div class="vv-filters">
+<div class="vv-fgrid"><div class="vv-ms" data-ms="co">
+<span class="vv-mlab" id="vv-co-l">Company</span><span class="vv-chips" data-chips="co"></span>
+<input type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="vv-co-pop" aria-labelledby="vv-co-l" placeholder="Name or ticker" autocomplete="off" spellcheck="false">
+<ul class="vv-pop" id="vv-co-pop" role="listbox" aria-labelledby="vv-co-l" hidden=""></ul>
+</div><div class="vv-ms" data-ms="sec">
+<span class="vv-mlab" id="vv-sec-l">Primary sector</span><span class="vv-chips" data-chips="sec"></span>
+<input type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="vv-sec-pop" aria-labelledby="vv-sec-l" placeholder="Any sector" autocomplete="off" spellcheck="false">
+<ul class="vv-pop" id="vv-sec-pop" role="listbox" aria-labelledby="vv-sec-l" hidden=""></ul>
+</div></div>
+<div class="vv-frow" data-frow=""><span class="vv-lab">Date</span><span class="vv-seg" role="group" aria-label="Date range"><button type="button" data-r="7" aria-pressed="false">7d</button><button type="button" data-r="30" aria-pressed="false">30d</button><button type="button" data-r="90" aria-pressed="true">90d</button><button type="button" data-r="all" aria-pressed="false">All</button><button type="button" data-r="custom" aria-pressed="false">Custom</button></span>
+<label class="vv-sel"><span>Type</span><select data-facet="" aria-label="Type"><option value="">All</option><option>Broker reports</option><option>Expert calls</option><option>Internal research notes</option><option>Unclassified</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></label></div>
+</div>
+<div class="vv-tw" data-table="" tabindex="-1"><table class="vv-tbl t-all"><thead><tr><th scope="col" class="c-date">Date</th><th scope="col" class="c-type">Type</th><th scope="col" class="c-doc">Document</th><th scope="col" class="c-co">Company</th><th scope="col" class="c-src">Source</th></tr></thead><tbody><tr tabindex="0" data-id="m6" aria-label="Open Semis: Q4 positioning review"><td class="c-date"><span class="vv-dt">Oct 3</span></td><td class="c-type"><span class="vv-pill t-note">Research note</span></td><td class="c-doc"><span class="vv-ttl">Semis: Q4 positioning review</span><span class="vv-ext">Stay long NVDA and TSM, keep AMD short into the MI400 slip. Trim MU on HBM pricing.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation, Advanced Micro Devices, Taiwan Semiconductor Mfg.">Multiple (3)</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Author RK</td></tr><tr tabindex="0" data-id="b10" aria-label="Open Microsoft: Azure capacity constraints ease in 1H27"><td class="c-date"><span class="vv-dt">Oct 1</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">Microsoft: Azure capacity constraints ease in 1H27</span><span class="vv-ext">Azure growth re-accelerates as new data center capacity comes online in 1H27.</span></td><td class="c-co"><span class="vv-tk" title="Microsoft Corporation">MSFT</span><span class="vv-s">Software &amp; cloud</span></td><td class="c-src">Bernstein</td></tr><tr tabindex="0" data-id="m4" aria-label="Open MSFT: capex digestion fears are early"><td class="c-date"><span class="vv-dt">Oct 1</span></td><td class="c-type"><span class="vv-pill t-note">Research note</span></td><td class="c-doc"><span class="vv-ttl">MSFT: capex digestion fears are early</span><span class="vv-ext">Azure capacity comes online in 1H27. Argues the market prices capex digestion two quarters too early.</span></td><td class="c-co"><span class="vv-tk" title="Microsoft Corporation">MSFT</span><span class="vv-s">Software &amp; cloud</span></td><td class="c-src">Author AL</td></tr><tr tabindex="0" data-id="b1" aria-label="Open US Semis: AI capex tracker, Q3 update"><td class="c-date"><span class="vv-dt">Sep 30</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">US Semis: AI capex tracker, Q3 update</span><span class="vv-ext">Sector update across AI compute, foundry and memory. Raises estimates on supply-chain checks.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation, Advanced Micro Devices, Taiwan Semiconductor Mfg., Broadcom Inc., Micron Technology">Multiple (5)</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Goldman Sachs</td></tr><tr tabindex="0" data-id="u1" aria-label="Open Mgmt_mtg_notes_0930.pdf"><td class="c-date"><span class="vv-dt">Sep 30</span></td><td class="c-type"><span class="vv-pill t-unc">Unclassified</span></td><td class="c-doc"><span class="vv-ttl vv-file">Mgmt_mtg_notes_0930.pdf</span><span class="vv-ext">Notes from a management meeting at an investor conference, in question-and-answer format.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation">NVDA</span><span class="vv-s">Semiconductors</span></td><td class="c-src">SharePoint</td></tr><tr tabindex="0" data-id="b2" aria-label="Open NVIDIA: Blackwell Ultra ramp ahead of plan"><td class="c-date"><span class="vv-dt">Sep 29</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">NVIDIA: Blackwell Ultra ramp ahead of plan</span><span class="vv-ext">Raises FQ3 and FQ4 estimates on GB300 rack shipments. Gross margin held at 74% through the product transition.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation">NVDA</span><span class="vv-s">Semiconductors</span></td><td class="c-src">J.P. Morgan</td></tr><tr tabindex="0" data-id="e5" aria-label="Open Azure capacity planning for 2027"><td class="c-date"><span class="vv-dt">Sep 29</span></td><td class="c-type"><span class="vv-pill t-expert">Expert call</span></td><td class="c-doc"><span class="vv-ttl">Azure capacity planning for 2027</span><span class="vv-ext">How a hyperscaler sizes GPU orders against power and site availability.</span></td><td class="c-co"><span class="vv-tk" title="Microsoft Corporation">MSFT</span><span class="vv-s">Software &amp; cloud</span></td><td class="c-src">GLG</td></tr><tr tabindex="0" data-id="m1" aria-label="Open NVDA: Q3 update, raising conviction"><td class="c-date"><span class="vv-dt">Sep 27</span></td><td class="c-type"><span class="vv-pill t-note">Research note</span></td><td class="c-doc"><span class="vv-ttl">NVDA: Q3 update, raising conviction</span><span class="vv-ext">Thesis intact: supply is the constraint. Raises conviction to High and model PT to $240.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation">NVDA</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Author RK</td></tr><tr tabindex="0" data-id="b3" aria-label="Open TSMC: CoWoS capacity raise and 2027 outlook"><td class="c-date"><span class="vv-dt">Sep 26</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">TSMC: CoWoS capacity raise and 2027 outlook</span><span class="vv-ext">Raises 2027 CoWoS capacity estimate. AI accelerator revenue now 28% of 2027 sales.</span></td><td class="c-co"><span class="vv-tk" title="Taiwan Semiconductor Mfg.">TSM</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Morgan Stanley</td></tr><tr tabindex="0" data-id="u2" aria-label="Open Untitled (3).docx"><td class="c-date"><span class="vv-dt">Sep 26</span></td><td class="c-type"><span class="vv-pill t-unc">Unclassified</span></td><td class="c-doc"><span class="vv-ttl vv-file">Untitled (3).docx</span><span class="vv-ext">Short draft comparing MI400 and Blackwell rack pricing. No author or date in the file.</span></td><td class="c-co"><span class="vv-tk" title="Advanced Micro Devices">AMD</span><span class="vv-s">Semiconductors</span></td><td class="c-src">SharePoint</td></tr><tr tabindex="0" data-id="e1" aria-label="Open CoWoS capacity and allocation into 2027"><td class="c-date"><span class="vv-dt">Sep 25</span></td><td class="c-type"><span class="vv-pill t-expert">Expert call</span></td><td class="c-doc"><span class="vv-ttl">CoWoS capacity and allocation into 2027</span><span class="vv-ext">Capacity build, allocation process and customer mix for advanced packaging.</span></td><td class="c-co"><span class="vv-tk" title="Taiwan Semiconductor Mfg., NVIDIA Corporation">Multiple (2)</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Third Bridge</td></tr><tr tabindex="0" data-id="b4" aria-label="Open AMD: MI400 checks mixed, stay on the sidelines"><td class="c-date"><span class="vv-dt">Sep 24</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">AMD: MI400 checks mixed, stay on the sidelines</span><span class="vv-ext">Cuts PT on later MI400 timing. Share gain versus NVIDIA pushed to 2H27.</span></td><td class="c-co"><span class="vv-tk" title="Advanced Micro Devices">AMD</span><span class="vv-s">Semiconductors</span></td><td class="c-src">UBS</td></tr><tr tabindex="0" data-id="b9" aria-label="Open ASML: High-NA orders pull forward"><td class="c-date"><span class="vv-dt">Sep 23</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">ASML: High-NA orders pull forward</span><span class="vv-ext">Two more High-NA orders in Q3. Raises 2027 EUV shipment estimate to 62 tools.</span></td><td class="c-co"><span class="vv-tk" title="ASML Holding">ASML</span><span class="vv-s">Semiconductor equipment</span></td><td class="c-src">Barclays</td></tr><tr tabindex="0" data-id="m2" aria-label="Open AMD: short pitch on MI400 slip"><td class="c-date"><span class="vv-dt">Sep 22</span></td><td class="c-type"><span class="vv-pill t-note">Research note</span></td><td class="c-doc"><span class="vv-ttl">AMD: short pitch on MI400 slip</span><span class="vv-ext">Short idea: MI400 volume slips to 2H27, which consensus does not price in.</span></td><td class="c-co"><span class="vv-tk" title="Advanced Micro Devices">AMD</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Author AL</td></tr><tr tabindex="0" data-id="u3" aria-label="Open BluMatrix_attach_88213.pdf"><td class="c-date"><span class="vv-dt">Sep 22</span></td><td class="c-type"><span class="vv-pill t-unc">Unclassified</span></td><td class="c-doc"><span class="vv-ttl vv-file">BluMatrix_attach_88213.pdf</span><span class="vv-ext">Monthly revenue table for TSMC with no cover page or broker disclosures.</span></td><td class="c-co"><span class="vv-tk" title="Taiwan Semiconductor Mfg.">TSM</span><span class="vv-s">Semiconductors</span></td><td class="c-src">BluMatrix</td></tr><tr tabindex="0" data-id="b5" aria-label="Open Memory: HBM4 pricing reset for 2027"><td class="c-date"><span class="vv-dt">Sep 19</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">Memory: HBM4 pricing reset for 2027</span><span class="vv-ext">HBM4 contract pricing for 2027 settles higher than feared.</span></td><td class="c-co"><span class="vv-tk" title="Micron Technology">MU</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Deutsche Bank</td></tr><tr tabindex="0" data-id="m5" aria-label="Open ASML: initiate on the High-NA cycle"><td class="c-date"><span class="vv-dt">Sep 18</span></td><td class="c-type"><span class="vv-pill t-note">Research note</span></td><td class="c-doc"><span class="vv-ttl">ASML: initiate on the High-NA cycle</span><span class="vv-ext">High-NA EUV orders from leading-edge fabs set up a 2027–28 upgrade cycle.</span></td><td class="c-co"><span class="vv-tk" title="ASML Holding">ASML</span><span class="vv-s">Semiconductor equipment</span></td><td class="c-src">Author SP</td></tr><tr tabindex="0" data-id="e2" aria-label="Open Hyperscaler GPU procurement for 2027"><td class="c-date"><span class="vv-dt">Sep 17</span></td><td class="c-type"><span class="vv-pill t-expert">Expert call</span></td><td class="c-doc"><span class="vv-ttl">Hyperscaler GPU procurement for 2027</span><span class="vv-ext">How a large cloud buyer splits spend between merchant GPUs and custom silicon.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation, Advanced Micro Devices, Broadcom Inc.">Multiple (3)</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Tegus</td></tr><tr tabindex="0" data-id="e6" aria-label="Open EUV tool lead times and High-NA adoption"><td class="c-date"><span class="vv-dt">Sep 15</span></td><td class="c-type"><span class="vv-pill t-expert">Expert call</span></td><td class="c-doc"><span class="vv-ttl">EUV tool lead times and High-NA adoption</span><span class="vv-ext">Order book, lead times and which fabs adopt High-NA first.</span></td><td class="c-co"><span class="vv-tk" title="ASML Holding">ASML</span><span class="vv-s">Semiconductor equipment</span></td><td class="c-src">Third Bridge</td></tr><tr tabindex="0" data-id="m3" aria-label="Open TSMC: IC note, add on CoWoS"><td class="c-date"><span class="vv-dt">Sep 15</span></td><td class="c-type"><span class="vv-pill t-note">Research note</span></td><td class="c-doc"><span class="vv-ttl">TSMC: IC note, add on CoWoS</span><span class="vv-ext">Recommends adding to the position as CoWoS capacity raises 2027 revenue visibility.</span></td><td class="c-co"><span class="vv-tk" title="Taiwan Semiconductor Mfg.">TSM</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Author RK</td></tr><tr tabindex="0" data-id="b6" aria-label="Open Broadcom: custom ASIC pipeline widens"><td class="c-date"><span class="vv-dt">Sep 12</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">Broadcom: custom ASIC pipeline widens</span><span class="vv-ext">Custom accelerator pipeline now spans five hyperscale customers.</span></td><td class="c-co"><span class="vv-tk" title="Broadcom Inc.">AVGO</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Goldman Sachs</td></tr><tr tabindex="0" data-id="e4" aria-label="Open Substrate supply for AI accelerators"><td class="c-date"><span class="vv-dt">Sep 9</span></td><td class="c-type"><span class="vv-pill t-expert">Expert call</span></td><td class="c-doc"><span class="vv-ttl">Substrate supply for AI accelerators</span><span class="vv-ext">ABF substrate lead times and qualification.</span></td><td class="c-co"><span class="vv-tk" title="Taiwan Semiconductor Mfg.">TSM</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Third Bridge</td></tr><tr tabindex="0" data-id="e3" aria-label="Open MI400 customer pipeline"><td class="c-date"><span class="vv-dt">Sep 6</span></td><td class="c-type"><span class="vv-pill t-expert">Expert call</span></td><td class="c-doc"><span class="vv-ttl">MI400 customer pipeline</span><span class="vv-ext">AMD accelerator pipeline and competitive dynamics with NVIDIA.</span></td><td class="c-co"><span class="vv-tk" title="Advanced Micro Devices">AMD</span><span class="vv-s">Semiconductors</span></td><td class="c-src">AlphaSights</td></tr><tr tabindex="0" data-id="b7" aria-label="Open Semis flash: revised export licence rules"><td class="c-date"><span class="vv-dt">Sep 5</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">Semis flash: revised export licence rules</span><span class="vv-ext">First read on the revised export licence framework. Sees a $1–2B annual headwind for NVIDIA.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation, Advanced Micro Devices">Multiple (2)</span><span class="vv-s">Semiconductors</span></td><td class="c-src">J.P. Morgan</td></tr><tr tabindex="0" data-id="b8" aria-label="Open NVIDIA: the gross margin debate"><td class="c-date"><span class="vv-dt">Sep 4</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">NVIDIA: the gross margin debate</span><span class="vv-ext">Argues rack-scale mix caps gross margin near 73%.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation">NVDA</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Morgan Stanley</td></tr></tbody></table></div>
+<div class="vv-foot" data-foot=""><span><b>25</b> of 25 sample documents · 6,711 in the vault</span><span class="vv-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>3 more hidden by your permissions (unlicensed broker, restricted note)</span></div>
+<form class="vv-ask" data-ask="">
+<div class="vv-askrow"><span class="vv-askic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path></svg></span><input type="text" aria-label="Ask Pascal about these documents" placeholder="Ask about these 25 documents"><button type="submit" class="pui-btn pri">Ask Pascal</button></div>
+<div class="vv-hint" data-hint=""><span>Scoped to this list</span><button type="button" class="vv-sugg">Summarise everything new this week</button><button type="button" class="vv-sugg">Which names had the most new documents?</button></div>
+</form>
+</div>
+</div>
+<div class="vv-drawer-host" data-drawer=""></div>
+<div class="vv-toast" role="status" aria-live="polite" hidden=""></div>
+</div>
+<!--/vv-static-->
+    </div><!--/mock-->
+  </section>
+
+  <section class="row split" id="classifier" aria-labelledby="f1">
+    <div class="split-copy">
+      <p class="eyebrow">Document classifier</p>
+      <h2 class="h2" id="f1">Every file, sorted by type. <span class="mute">Each correction teaches it.</span></h2>
+      <p>Each file gets a type from your firm's taxonomy, with a confidence score and a runner-up. Files below your threshold wait in a review queue. One click assigns a type, Pascal re-scores similar files, and each type starts its own workflow.</p>
+      <a class="link" href="/pascal-agents/workflow-library">See the workflow library <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui da-flow" role="img" aria-label="The classifier review queue with 14 files to review. Each row shows the suggested type, a confidence bar and the runner-up: BluMatrix_attach_88213.pdf, broker report 0.55, runner-up public filing 0.31; Mgmt_mtg_notes_0930.pdf, research note 0.48, runner-up expert call 0.37; TB_transcript_0917.pdf, expert call 0.62; Untitled (3).docx, research note 0.41; Side_letter_v4_clean.docx, side letter 0.58. A card shows an analyst assigning the management meeting type to Mgmt_mtg_notes_0930.pdf, after which 3 similar files were re-scored. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Classifier / <b>Review queue</b></span><span class="pui-bar-r"><span class="pui-tag amber">14 to review</span></span></div>
+    <div class="pui-tabs"><span class="on">Queue · 14</span><span>Auto-typed · 6,697</span><span>Taxonomy</span><span>Routing</span></div>
+    <table class="pui-tbl cl-q">
+      <thead><tr><th>File</th><th>Suggested type</th><th>Confidence</th><th>Runner-up</th></tr></thead>
+      <tbody>
+        <tr><td><b class="cl-f">BluMatrix_attach_88213.pdf</b><span class="da-s">BluMatrix · Sep 22</span></td><td>Broker report</td><td><span class="cl-cf"><span class="da-bar amber"><i style="width:55%"></i></span>0.55</span></td><td>Public filing <span class="da-mu">0.31</span></td></tr>
+        <tr class="on"><td><b class="cl-f">Mgmt_mtg_notes_0930.pdf</b><span class="da-s">SharePoint · Sep 30</span></td><td>Research note</td><td><span class="cl-cf"><span class="da-bar amber"><i style="width:48%"></i></span>0.48</span></td><td>Expert call <span class="da-mu">0.37</span></td></tr>
+        <tr><td><b class="cl-f">TB_transcript_0917.pdf</b><span class="da-s">Email · Sep 17</span></td><td>Expert call</td><td><span class="cl-cf"><span class="da-bar amber"><i style="width:62%"></i></span>0.62</span></td><td>Research note <span class="da-mu">0.21</span></td></tr>
+        <tr><td><b class="cl-f">Untitled (3).docx</b><span class="da-s">SharePoint · Sep 26</span></td><td>Research note</td><td><span class="cl-cf"><span class="da-bar amber"><i style="width:41%"></i></span>0.41</span></td><td>Broker report <span class="da-mu">0.33</span></td></tr>
+        <tr><td><b class="cl-f">Side_letter_v4_clean.docx</b><span class="da-s">Outlook · Sep 24</span></td><td>Side letter</td><td><span class="cl-cf"><span class="da-bar amber"><i style="width:58%"></i></span>0.58</span></td><td>Subscription doc <span class="da-mu">0.30</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pui-float cl-assign">
+    <div class="pui-float-h"><span class="pui-k">Assign type · Mgmt_mtg_notes_0930.pdf</span></div>
+    <div class="cl-chips"><span class="pui-chip">Research note</span><span class="pui-chip">Expert call</span><span class="pui-chip on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Management meeting</span></div>
+    <div class="pui-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> <b>Saved.</b> 3 similar files re-scored</div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" id="extraction" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">Extraction &amp; table editor</p>
+      <h2 class="h2" id="f2">Every field and table, <span class="mute">traced to its page.</span></h2>
+      <p>Each document type has a schema: rating and price target for broker reports, covenants for credit agreements, speaker and relationship for expert calls. Tables come out of PDFs as tables. When an analyst corrects a cell, Pascal keeps the original, the editor and the page region.</p>
+      <a class="link" href="/platform/mcp-apis">See how agents read each value <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui da-flow" role="img" aria-label="A broker report PDF open at page 11 of 44, Exhibit 7: NVDA estimate changes, beside the extracted table in Pascal's table editor. The FY27E new EPS cell, 6.84, is linked to the same region on the page, marked A. An edit history shows Pascal extracted the table from page 11 at 10:02 reading 6.34 with 0.71 confidence, and an analyst corrected it to 6.84 at 10:14, with the original value kept. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><span class="pui-lg w"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5z" fill="#E5E7EB"/><path d="M15 2v5h5" fill="#CBD0D6"/><rect x="2" y="11" width="14" height="7" rx="1.4" fill="#D93025"/><text x="9" y="16.4" font-family="Arial" font-weight="700" font-size="5.2" text-anchor="middle" fill="#fff">PDF</text></svg></span><span class="pui-crumb">Extraction / <b>US Semis: AI capex tracker</b></span><span class="pui-bar-r"><span class="pui-tag grey">Page 11 of 44</span></span></div>
+    <div class="ex-split">
+      <div class="pui-pdf ex-pdf">
+        <div class="pui-sheet">
+          <p class="pui-sheet-h">Exhibit 7: NVDA estimate changes</p>
+          <table class="ex-ptab">
+            <thead><tr><th>$M, FY Jan</th><th>FY27E old</th><th>FY27E new</th></tr></thead>
+            <tbody>
+              <tr><td>Revenue</td><td>301,240</td><td>318,600</td></tr>
+              <tr><td>Gross margin</td><td>73.8%</td><td>74.2%</td></tr>
+              <tr><td>EPS (adj.)</td><td>6.52</td><td><span class="ex-region">6.84<span class="ex-pin">A</span></span></td></tr>
+              <tr><td>Data center</td><td>268,100</td><td>284,300</td></tr>
+            </tbody>
+          </table>
+          <div class="pui-ln m"></div><div class="pui-ln s"></div>
+          <p class="ex-src">Source: company data, broker estimates</p>
+        </div>
+      </div>
+      <div class="ex-ed">
+        <div class="ex-ed-h"><span class="pui-k">Table 7 · 4 × 3</span><span class="pui-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> 11 of 12 verified</span></div>
+        <table class="pui-tbl ex-grid">
+          <thead><tr><th></th><th class="r">FY27E old</th><th class="r">FY27E new</th></tr></thead>
+          <tbody>
+            <tr><td>Revenue</td><td class="r">301,240</td><td class="r">318,600</td></tr>
+            <tr><td>Gross margin</td><td class="r">73.8%</td><td class="r">74.2%</td></tr>
+            <tr><td>EPS (adj.)</td><td class="r">6.52</td><td class="r ex-sel"><span class="ex-pin">A</span><s>6.34</s> 6.84</td></tr>
+            <tr><td>Data center</td><td class="r">268,100</td><td class="r">284,300</td></tr>
+          </tbody>
+        </table>
+        <p class="ex-cellref"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> Cell C3 · p. 11, Exhibit 7, row 3</p>
+      </div>
+    </div>
+  </div>
+  <div class="pui-float left ex-hist">
+    <p class="pui-k">Edit history · cell C3</p>
+    <div class="ex-h-r"><span class="pui-av da-av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span><b>Semis analyst</b> changed 6.34 → 6.84<span class="pui-sub">Digit misread · original kept</span></span><span class="pui-tl-m">10:14</span></div>
+    <div class="ex-h-r"><span class="pui-av da-av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg></span><span><b>Pascal</b> extracted from p. 11<span class="pui-sub">Confidence 0.71 · flagged for review</span></span><span class="pui-tl-m">10:02</span></div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" id="entities" aria-labelledby="f3">
+    <div class="split-copy">
+      <p class="eyebrow">Vertical entities</p>
+      <h2 class="h2" id="f3">The entities a general model <span class="mute">walks past.</span></h2>
+      <p>Speaker names on expert calls. Brokers. Ticker variants and product lines that belong to a company. Ratings and price targets. Pascal tags them the way an analyst reads them and resolves each one to a single company in your context graph.</p>
+      <a class="link" href="/platform/context-graph">See the context graph &amp; memory <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Entities Pascal tags in two documents. In a Goldman Sachs broker report: NVDA as a ticker for NVIDIA, a price target of $245 up 15, a Buy rating, Blackwell Ultra as an NVIDIA product line and Nvidia as a name variant. In a Third Bridge expert call: the speaker, a former director of advanced packaging, as an ex-employee of TSMC, NVIDIA as a supplier view, and CoWoS-L as a TSMC product line. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Data Agent / <b>Entity tagging</b></span><span class="pui-bar-r"><span class="pui-tag">9 entities</span></span></div>
+    <div class="pui-main">
+      <div class="da-ner">
+        <div class="da-ner-src"><span class="pui-lg w"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5z" fill="#E5E7EB"/><path d="M15 2v5h5" fill="#CBD0D6"/><rect x="2" y="11" width="14" height="7" rx="1.4" fill="#D93025"/><text x="9" y="16.4" font-family="Arial" font-weight="700" font-size="5.2" text-anchor="middle" fill="#fff">PDF</text></svg></span><span><b>Goldman Sachs</b> · US Semis: AI capex tracker · p. 9</span><span class="pui-sp"></span><span class="da-pill">Broker report</span></div>
+        <p>We raise our <span class="da-ent">NVDA<i>Ticker</i></span> PT to <span class="da-ent r">$245<i>PT +15</i></span> and reiterate <span class="da-ent r">Buy<i>Rating</i></span>. <span class="da-ent p">Blackwell Ultra<i>→ NVDA</i></span> shipments ran ahead of plan, and <span class="da-ent">Nvidia<i>Name variant</i></span> stays our top pick.</p>
+      </div>
+      <div class="da-ner">
+        <div class="da-ner-src"><span class="pui-lg w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Third Bridge</b> · CoWoS capacity and allocation · 14:10</span><span class="pui-sp"></span><span class="da-pill ex">Expert call</span></div>
+        <p><span class="da-ent b">Former Director, Advanced Packaging<i>Speaker</i></span> <span class="da-ent b">TSMC<i>Ex-employee</i></span>: “<span class="da-ent">NVIDIA<i>Supplier view</i></span> books <span class="da-ent p">CoWoS-L<i>→ TSM</i></span> capacity eighteen months out.”</p>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" id="permissions" aria-labelledby="f4">
+    <div class="split-copy">
+      <p class="eyebrow">Permissions</p>
+      <h2 class="h2" id="f4">Two analysts, <span class="mute">two different vaults.</span></h2>
+      <p>Lists, counts, answers and MCP calls follow each user's licences and source permissions, including per-broker research entitlements. The viewer says how many files it held back and why. Pascal runs in your own cloud or on premise.</p>
+      <a class="link" href="/security">See how Pascal handles security <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui" role="img" aria-label="The same filter, broker reports on NVIDIA in the last 30 days, for two analysts. The semiconductor analyst, licensed for all brokers, sees 3 reports from Goldman Sachs, J.P. Morgan and Morgan Stanley. The generalist analyst sees 2 reports; the Morgan Stanley report is hidden by permissions because the broker is unlicensed. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Vault viewer / <b>Access check</b></span><span class="pui-bar-r"><span class="pui-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> User and source level</span></span></div>
+    <div class="pui-main">
+      <div class="da-q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>Broker reports · NVDA · last 30 days</div>
+      <div class="da-acc">
+        <div class="da-acc-c">
+          <div class="da-acc-h"><span class="pui-av da-av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span><b>Semis analyst</b><span class="pui-sub">All broker licences</span></span></div>
+          <div class="pui-row">Goldman Sachs<span class="r">Sep 30</span></div>
+          <div class="pui-row">J.P. Morgan<span class="r">Sep 29</span></div>
+          <div class="pui-row">Morgan Stanley<span class="r">Sep 26</span></div>
+          <p class="pui-badge" style="margin:4px 0 4px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> 3 reports</p>
+        </div>
+        <div class="da-acc-c">
+          <div class="da-acc-h"><span class="pui-av da-av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span><b>Generalist analyst</b><span class="pui-sub">Limited broker licences</span></span></div>
+          <div class="pui-row">Goldman Sachs<span class="r">Sep 30</span></div>
+          <div class="pui-row">J.P. Morgan<span class="r">Sep 29</span></div>
+          <div class="pui-row off"><span class="pui-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Hidden</span><span class="r">–</span></div>
+          <p class="da-acc-f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> 1 more hidden (unlicensed broker)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" id="data-platform" aria-labelledby="f5">
+    <div class="split-copy">
+      <p class="eyebrow">Is Pascal a data company?</p>
+      <h2 class="h2" id="f5">A data platform <span class="mute">for your own research.</span></h2>
+      <p>Pascal is a data platform for your own research, the way Snowflake is a data platform for your tables. Your files stay yours. Pascal gives them a schema, keeps them in sync and serves them to the tools you approve.</p>
+      <a class="link" href="/platform">See the Pascal platform <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui da-schema" role="img" aria-label="The research vault as tables: broker_reports with 4,212 rows, expert_calls 1,947, research_notes 538, companies 1,284 and mentions 96,410. The broker_reports schema lists doc_id, published date, broker, companies, rating, price_target, pt_change and source_page, with example values from the Goldman Sachs semis report. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Data Agent / Schema / <b>research_vault</b></span><span class="pui-bar-r"><span class="pui-tag grey">Synced 12 min ago</span></span></div>
+    <div class="pui-main">
+      <div class="da-sch">
+        <div class="da-sch-l"><span class="pui-k">Tables</span>
+          <div class="da-tbln on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>broker_reports<small>4,212</small></div>
+          <div class="da-tbln"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>expert_calls<small>1,947</small></div>
+          <div class="da-tbln"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>research_notes<small>538</small></div>
+          <div class="da-tbln"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>companies<small>1,284</small></div>
+          <div class="da-tbln"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>mentions<small>96,410</small></div>
+        </div>
+        <div class="da-sch-r">
+          <table class="pui-tbl">
+            <thead><tr><th>Column</th><th>Type</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr><td>doc_id</td><td>string</td><td>b1</td></tr>
+              <tr><td>published</td><td>date</td><td>2026-09-30</td></tr>
+              <tr><td>broker</td><td>entity</td><td>Goldman Sachs</td></tr>
+              <tr><td>companies</td><td>ticker[]</td><td>NVDA, AMD +3</td></tr>
+              <tr><td>rating</td><td>enum</td><td>Buy</td></tr>
+              <tr><td>price_target</td><td>currency</td><td>$245</td></tr>
+              <tr><td>pt_change</td><td>number</td><td><span class="da-up">+15</span></td></tr>
+              <tr><td>source_page</td><td>locator</td><td>p. 9 of 44</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row" id="use-cases" aria-labelledby="uc-title">
+    <div class="row-pad-sm"><h2 class="h2" id="uc-title">Built for the files <span class="mute">your firm already has.</span></h2></div>
+    <div class="om row da-uc">
+      <div class="om-list" role="tablist" aria-label="Use cases" aria-orientation="vertical">
+        <button class="om-tab" role="tab" id="uc-t1" aria-controls="uc-p1" aria-selected="true"><span class="eyebrow">Research</span><b>Broker research vault</b><span>Every broker PDF, tagged by company, broker, rating and price target.</span><small class="om-who"><b>For</b>Analysts · Portfolio managers</small></button>
+        <button class="om-tab" role="tab" id="uc-t2" aria-controls="uc-p2" aria-selected="false" tabindex="-1"><span class="eyebrow">Research</span><b>Expert call library</b><span>Transcripts tagged by speaker, employer and relationship to each company.</span><small class="om-who"><b>For</b>Analysts · Research operations</small></button>
+        <button class="om-tab" role="tab" id="uc-t3" aria-controls="uc-p3" aria-selected="false" tabindex="-1"><span class="eyebrow">Legal</span><b>"Show me every NDA"</b><span>Agreements found across drives and email, with counterparty, term and expiry pulled out.</span><small class="om-who"><b>For</b>General counsel · Deal team · COO</small></button>
+        <button class="om-tab" role="tab" id="uc-t4" aria-controls="uc-p4" aria-selected="false" tabindex="-1"><span class="eyebrow">Investor relations</span><b>DDQ and RFP answer library</b><span>Approved answers from past questionnaires, tagged by topic and approval date.</span><small class="om-who"><b>For</b>Head of IR · CCO</small></button>
+        <button class="om-tab" role="tab" id="uc-t5" aria-controls="uc-p5" aria-selected="false" tabindex="-1"><span class="eyebrow">Deals</span><b>Data rooms</b><span>Every file in a data room sorted by type, with the fields a deal team checks first.</span><small class="om-who"><b>For</b>Deal team · Credit analysts</small></button>
+      </div>
+      <div class="om-media">
+        <div id="uc-p1" role="tabpanel" aria-labelledby="uc-t1"><div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Vault viewer query: price target changes in semiconductors in the last 30 days. Goldman Sachs on NVDA, Buy, $245, up 15. J.P. Morgan on NVDA, Overweight, $250, up 20. Morgan Stanley on TSM, Overweight, $265, up 10. UBS on AMD, Neutral, $180, down 10. Deutsche Bank on MU, Buy, $165, up 5. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Vault viewer / <b>Broker reports</b></span><span class="pui-bar-r"><span class="pui-tag">4,212 in vault</span></span></div>
+    <div class="pui-main">
+      <div class="da-q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>PT changes in semiconductors, last 30 days<span class="pui-tag grey">5 reports</span></div>
+      <table class="pui-tbl">
+        <thead><tr><th>Company</th><th>Broker</th><th>Rating</th><th class="r">PT</th><th class="r">PT Δ</th></tr></thead>
+        <tbody>
+          <tr><td class="da-mono"><b>NVDA</b></td><td>Goldman Sachs</td><td>Buy</td><td class="r">$245</td><td class="r da-up">+15</td></tr>
+          <tr><td class="da-mono"><b>NVDA</b></td><td>J.P. Morgan</td><td>Overweight</td><td class="r">$250</td><td class="r da-up">+20</td></tr>
+          <tr><td class="da-mono"><b>TSM</b></td><td>Morgan Stanley</td><td>Overweight</td><td class="r">$265</td><td class="r da-up">+10</td></tr>
+          <tr><td class="da-mono"><b>AMD</b></td><td>UBS</td><td>Neutral</td><td class="r">$180</td><td class="r da-dn">−10</td></tr>
+          <tr><td class="da-mono"><b>MU</b></td><td>Deutsche Bank</td><td>Buy</td><td class="r">$165</td><td class="r da-up">+5</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+        <div id="uc-p2" role="tabpanel" aria-labelledby="uc-t2" hidden><div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Vault viewer query: expert calls on the AI supply chain in the last 30 days. Former Director, Advanced Packaging, ex-employee of TSMC, Third Bridge, 52 minutes. Former Director, Datacenter Planning, ex-employee of Microsoft, GLG, 47 minutes. Former Procurement Lead, customer of NVIDIA, Tegus, 45 minutes. Engineering Manager at an OSAT supplier, supplier view, Third Bridge, 38 minutes. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Vault viewer / <b>Expert calls</b></span><span class="pui-bar-r"><span class="pui-tag">1,947 in vault</span></span></div>
+    <div class="pui-main">
+      <div class="da-q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Expert calls on the AI supply chain, last 30 days<span class="pui-tag grey">4 calls</span></div>
+      <table class="pui-tbl">
+        <thead><tr><th>Expert</th><th>Relationship</th><th>Network</th><th class="r">Length</th></tr></thead>
+        <tbody>
+          <tr><td><b>Former Director, Advanced Packaging</b><span class="da-s">TSMC</span></td><td><span class="pui-tag navy">Ex-employee</span></td><td>Third Bridge</td><td class="r">52 min</td></tr>
+          <tr><td><b>Former Director, Datacenter Planning</b><span class="da-s">Microsoft</span></td><td><span class="pui-tag navy">Ex-employee</span></td><td>GLG</td><td class="r">47 min</td></tr>
+          <tr><td><b>Former Procurement Lead</b><span class="da-s">US hyperscaler</span></td><td><span class="pui-tag navy">Customer · NVDA</span></td><td>Tegus</td><td class="r">45 min</td></tr>
+          <tr><td><b>Engineering Manager</b><span class="da-s">OSAT supplier, Taiwan</span></td><td><span class="pui-tag navy">Supplier view</span></td><td>Third Bridge</td><td class="r">38 min</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+        <div id="uc-p3" role="tabpanel" aria-labelledby="uc-t3" hidden><div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Vault viewer query: show me every NDA. 312 agreements found across SharePoint, Outlook and OneDrive. Project Atlas mutual NDA with a sell-side adviser, 24 months, expires August 2028. Project Birch one-way NDA with a target company, 18 months, expires December 2027. Project Cedar mutual NDA with a co-investor, 12 months, expires in 41 days. Project Delta NDA, unsigned draft. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Vault viewer / <b>Legal agreements</b></span><span class="pui-bar-r"><span class="pui-tag">3 sources</span></span></div>
+    <div class="pui-main">
+      <div class="da-q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Show me every NDA<span class="pui-tag grey">312 found</span></div>
+      <table class="pui-tbl">
+        <thead><tr><th>Agreement</th><th>Counterparty</th><th>Term</th><th>Expires</th></tr></thead>
+        <tbody>
+          <tr><td><span class="da-fold"><span class="pui-lg w"><img src="/assets/logos/sharepoint.png" alt="" width="18" height="18" loading="lazy"></span><b>Project Atlas · Mutual NDA</b></span></td><td>Sell-side adviser</td><td>24 months</td><td>Aug 2028</td></tr>
+          <tr><td><span class="da-fold"><span class="pui-lg w"><img src="/assets/logos/outlook.png" alt="" width="18" height="18" loading="lazy"></span><b>Project Birch · One-way NDA</b></span></td><td>Target company</td><td>18 months</td><td>Dec 2027</td></tr>
+          <tr><td><span class="da-fold"><span class="pui-lg w"><img src="/assets/logos/onedrive.png" alt="" width="18" height="18" loading="lazy"></span><b>Project Cedar · Mutual NDA</b></span></td><td>Co-investor</td><td>12 months</td><td><span class="pui-tag amber">In 41 days</span></td></tr>
+          <tr><td><span class="da-fold"><span class="pui-lg w"><img src="/assets/logos/outlook.png" alt="" width="18" height="18" loading="lazy"></span><b>Project Delta · NDA draft</b></span></td><td>Lender group</td><td>–</td><td><span class="pui-tag grey">Unsigned</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+        <div id="uc-p4" role="tabpanel" aria-labelledby="uc-t4" hidden><div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Vault viewer query: latest approved answers on cybersecurity. Incident response plan, approved August 2026 by the CCO in the institutional DDQ. Third-party penetration testing, approved June 2026 by the CTO in a pension RFP. MNPI controls in research systems, approved May 2026 by the CCO. Business continuity testing, last approved November 2025, due for review. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Vault viewer / <b>DDQ answers</b></span><span class="pui-bar-r"><span class="pui-tag">1,086 answers</span></span></div>
+    <div class="pui-main">
+      <div class="da-q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>Latest approved answers on cybersecurity<span class="pui-tag grey">4 answers</span></div>
+      <table class="pui-tbl">
+        <thead><tr><th>Question</th><th>From</th><th>Approved</th></tr></thead>
+        <tbody>
+          <tr><td><b>Describe your incident response plan</b></td><td>Institutional DDQ</td><td>Aug 2026 · CCO</td></tr>
+          <tr><td><b>Do you run third-party penetration tests?</b></td><td>Pension RFP</td><td>Jun 2026 · CTO</td></tr>
+          <tr><td><b>How is MNPI controlled in research systems?</b></td><td>Consultant DDQ</td><td>May 2026 · CCO</td></tr>
+          <tr><td><b>How often is business continuity tested?</b></td><td>Institutional DDQ</td><td><span class="pui-tag amber">Nov 2025 · review</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+        <div id="uc-p5" role="tabpanel" aria-labelledby="uc-t5" hidden><div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Vault viewer for the Project Atlas data room, 169 files sorted by type: 42 financial statements covering FY23 to FY26; 118 customer contracts with change of control and term extracted; 1 credit agreement with covenants and maturity; 1 quality of earnings report with adjusted EBITDA; 7 files unclassified, waiting for review. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Data room / <b>Project Atlas</b></span><span class="pui-bar-r"><span class="pui-tag">169 files</span></span></div>
+    <div class="pui-main">
+      <div class="da-q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.7 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v4.1"/><circle cx="17" cy="17" r="3"/><path d="m21 21-1.9-1.9"/></svg>Project Atlas data room, by document type<span class="pui-tag grey">5 types</span></div>
+      <table class="pui-tbl">
+        <thead><tr><th>Type</th><th class="r">Files</th><th>Fields pulled out</th></tr></thead>
+        <tbody>
+          <tr><td><b>Financial statements</b></td><td class="r">42</td><td>FY23–FY26, auditor, restatements</td></tr>
+          <tr><td><b>Customer contracts</b></td><td class="r">118</td><td>Change of control, term, renewal</td></tr>
+          <tr><td><b>Credit agreement</b></td><td class="r">1</td><td>Covenants, maturity, margin grid</td></tr>
+          <tr><td><b>Quality of earnings</b></td><td class="r">1</td><td>Adjusted EBITDA, add-backs</td></tr>
+          <tr><td><b style="color:#8A4B0E">Unclassified</b></td><td class="r">7</td><td><span class="pui-tag amber">Waiting for review</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="more-title">
+    <div class="row-pad-sm"><h2 class="h2" id="more-title">Where the data <span class="mute">goes next.</span></h2></div>
+    <div class="cells row">
+      <a class="cell" href="/pascal-agents"><span class="n">Pascal Agents</span><b>Agents that read it</b><span>Research, DDQ and monitoring agents that find the right file and open it at the right page.</span><span class="link">See Pascal Agents <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      <a class="cell" href="/platform/context-graph"><span class="n">Platform</span><b>Context graph &amp; memory</b><span>Where tagged companies, brokers and experts link to the rest of your firm's knowledge.</span><span class="link">See the context graph <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      <a class="cell" href="/platform/mcp-apis"><span class="n">Platform</span><b>MCP &amp; APIs</b><span>Bring the vault into any MCP client or your own agents with list_documents and get_document.</span><span class="link">See MCP &amp; APIs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+    </div>
+    <div class="row da-cs">
+      <p class="eyebrow">Hedge funds</p>
+      <p class="da-cs-t">How long/short funds put broker research and expert calls to work, from front to back office.</p>
+      <a class="link" href="/solutions/hedge-funds">See Pascal for hedge funds <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div>
+        <h2 class="h2" id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item"><summary>What is Pascal Data Agent?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The part of Pascal Agents that turns your firm's files into structured data. It classifies each file, extracts the fields and tables that matter for its type, links them to your context graph and serves them to analysts and agents.</div></details>
+        <details class="faq-item"><summary>Which files and sources does it work with?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Broker research portals such as BluMatrix, expert network transcripts, SharePoint, OneDrive and other drives, and email with attachments. PDFs, including scanned ones, Word files, slides and spreadsheets are all supported.</div></details>
+        <details class="faq-item"><summary>Is Pascal a data company?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal is a data platform for your own research, the way Snowflake is a data platform for your tables. The data is your firm's; Pascal structures it, keeps it current and serves it.</div></details>
+        <details class="faq-item"><summary>How does Pascal decide which company a file is about?<span class="pm" aria-hidden="true"></span></summary><div class="ans">It counts tickers, name variants and product lines mapped to each company, then marks the companies a file is about and the ones it only mentions. "Why this is tagged" in the vault viewer lists every signal.</div></details>
+        <details class="faq-item"><summary>Can we use our own document types and fields?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Rename, split or add types, and give each one its own fields, access rules and threshold. A new type needs about a dozen labelled examples to start, and you mark which fields a person must verify.</div></details>
+        <details class="faq-item"><summary>What happens when Pascal is unsure or wrong?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Files below your confidence threshold wait in the review queue, and low-confidence cells are flagged in the table editor. When someone assigns a type or corrects a value, Pascal keeps the original, who changed it and when, and every agent reads the corrected value.</div></details>
+        <details class="faq-item"><summary>How do agents use the data?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Through Pascal's MCP server. Agents call list_documents with the same filters as the vault viewer and get_document for the section about a company, including the page and position of every value.</div></details>
+        <details class="faq-item"><summary>Does it respect our permissions?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Every list, count, answer and MCP call follows the user's source permissions and licences, including per-broker research entitlements. Pascal runs in your own cloud or on premise, so the data stays within your perimeter.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">See your own files<br><span style="color:var(--mint-2)">as structured data.</span></h2>
+  <div class="actions">
+    <a class="btn btn-white" href="https://pascalailabs.com/demo">Book a demo</a>
+  </div>
+</section>
+
+<script src="/assets/pages/vault-viewer.js?v=6818f5572d" defer></script>
+</main>
+<footer class="footer">
+  <div class="frame">
+    <div class="footer-grid">
+      <div>
+        <a href="/" aria-label="Pascal AI home"><img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24" loading="lazy"></a>
+        <p class="footer-blurb">The Investment OS for asset and wealth managers, asset servicers, corporate treasury, banks and financial institutions, private equity and private credit firms, and hedge funds.</p>
+      </div>
+      <nav aria-label="Platform">
+        <p class="fh">Platform</p>
+        <ul>
+          <li><a href="/platform">Platform overview</a></li>
+          <li><a href="/platform/context-graph">Context graph &amp; memory</a></li>
+          <li><a href="/platform/mcp-apis">MCP &amp; APIs</a></li>
+          <li><a href="/solutions/ai-transformation">AI transformation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Products">
+        <p class="fh">Products</p>
+        <ul>
+          <li><a href="/ask-pascal">Ask Pascal</a></li>
+          <li><a href="/ask-pascal/cited-research">Cited research</a></li>
+          <li><a href="/ask-pascal/screeners">Screeners</a></li>
+          <li><a href="/pascal-agents">Pascal Agents</a></li>
+          <li><a href="/pascal-agents/workflow-library">Workflow library</a></li>
+          <li><a href="/pascal-agents/data-agent">Pascal Data Agent</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Industries">
+        <p class="fh">Industries</p>
+        <ul>
+          <li><a href="/solutions/hedge-funds">Hedge Funds</a></li>
+          <li><a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a></li>
+          <li><a href="/solutions/banking">Banks &amp; Financial Institutions</a></li>
+          <li><a href="/solutions/asset-servicing">Asset Servicing</a></li>
+          <li><a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a></li>
+          <li><a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="News">
+        <p class="fh">News</p>
+        <ul>
+          <li><a href="/news">Newsroom</a></li>
+          <li><a href="/news/founders-notes">Founder's notes</a></li>
+          <li><a href="https://vibhavviswanathan.substack.com" rel="noopener">Alpha &amp; Agents</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="fh">Company</p>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/security">Security</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/pascal-academy">Pascal Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pascal AI Labs</span>
+      <span><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms-of-use">Terms</a> &middot; <a href="https://www.linkedin.com/company/pascal-ai-labs/" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/pascalailabs" rel="noopener">X</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

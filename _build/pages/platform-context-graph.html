@@ -1,0 +1,247 @@
+<!--meta
+{
+ "path": "/platform/context-graph",
+ "title": "Context Graph & Institutional Memory | Pascal AI",
+ "description": "Pascal's context graph is your firm's institutional memory: connectors, theses and team decisions linked in one graph, every claim cited and permissioned.",
+ "crumbs": [["Platform", "/platform"], ["Context graph & memory", "/platform/context-graph"]],
+ "schema": "software",
+ "name": "Pascal context graph and institutional memory",
+ "og_kicker": "Platform · Context graph & memory",
+ "og_title": "Everyone has the same models. Only you have your context.",
+ "llms": "Pascal's context graph and institutional memory, one product: connectors to a firm's systems and data partners feed a knowledge graph of companies, theses and decisions; decisions enter from meeting notes and reviewer edits; every claim is cited and every source permissioned.",
+ "priority": 0.8,
+ "word_limit": 600,
+ "lead_max": 120,
+ "css": ["context-graph.css"]
+}
+-->
+<div class="frame pg-cg">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Context graph &amp; institutional memory</span></span>Everyone has the same models. <span class="mute">Only you have your context.</span></h1>
+      <p class="lead">Pascal's context graph holds your firm's institutional memory: companies, theses and the decisions your team takes, each linked to its source and permissioned per user.</p>
+      <div class="actions">
+    <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+  </div>
+    </div>
+    <div class="hero-g-media"><div class="panel panel-dark fit cg-twin-hero"><div class="cgt-compact"><!--#include cg-twin--></div></div></div>
+  </section>
+</div>
+
+<div class="frame pg-cg">
+  <section class="cells" aria-label="The context graph at a glance">
+    <div class="cell"><span class="stat-num">20<small>+</small></span><span class="stat-lbl">Connected data sources</span></div>
+    <div class="cell"><span class="stat-num">186<small>K</small></span><span class="stat-lbl">Entities mapped</span></div>
+    <div class="cell"><span class="stat-num">2M<small>+</small></span><span class="stat-lbl">Relationships understood</span></div>
+  </section>
+
+<section class="row" id="connectors" aria-labelledby="f0">
+    <div class="row-pad" style="padding-bottom:48px">
+      <div class="head">
+        <div><p class="eyebrow">Connectors</p><h2 class="h2" id="f0" style="margin-top:18px">Connectors feed the graph <span class="mute">and every thesis.</span></h2></div>
+        <p>SharePoint, inboxes, Teams, CRM and your data partners connect where they already sit. What they hold flows into the context graph, so every thesis, answer and agent run starts from all of it.</p>
+      </div>
+    </div>
+    <div class="cx" id="connector-gallery" data-connectors>
+      <nav class="cx-side" aria-label="Connector categories">
+        <button class="cx-cat" type="button" data-cat="all" aria-pressed="true">All connectors <span>20</span></button>
+        <button class="cx-cat" type="button" data-cat="docs" aria-pressed="false">Documents & knowledge <span>7</span></button>
+        <button class="cx-cat" type="button" data-cat="comms" aria-pressed="false">Email & messaging <span>2</span></button>
+        <button class="cx-cat" type="button" data-cat="data" aria-pressed="false">Data & infrastructure <span>3</span></button>
+        <button class="cx-cat" type="button" data-cat="partners" aria-pressed="false">Market data partners <span>4</span></button>
+        <button class="cx-cat" type="button" data-cat="signals" aria-pressed="false">Social & media signals <span>2</span></button>
+        <button class="cx-cat" type="button" data-cat="office" aria-pressed="false">Office apps <span>2</span></button>
+      </nav>
+      <div class="cx-main">
+        <label class="cx-search">{{icon:search}}<input type="search" placeholder="Search connectors..." aria-label="Search connectors"></label>
+        <p class="cx-count" aria-live="polite"><span>20</span> connectors</p>
+        <div class="cx-grid">
+          <button class="cx-card" type="button" data-cat="docs" data-name="sharepoint" data-desc="Pascal reads SharePoint files where they live, keeps your existing access rules, and cites every claim to the page." data-catname="Documents & knowledge"><span class="cx-logo"><img src="/assets/logos/sharepoint.png" alt="" width="28" height="28" loading="lazy"></span><span class="cx-name">SharePoint</span><span class="cx-catlbl">Documents & knowledge</span></button>
+          <button class="cx-card" type="button" data-cat="docs" data-name="onedrive" data-desc="Pascal reads OneDrive files where they live, keeps your existing access rules, and cites every claim to the page." data-catname="Documents & knowledge"><span class="cx-logo"><img src="/assets/logos/onedrive.png" alt="" width="28" height="28" loading="lazy"></span><span class="cx-name">OneDrive</span><span class="cx-catlbl">Documents & knowledge</span></button>
+          <button class="cx-card" type="button" data-cat="docs" data-name="google drive" data-desc="Pascal reads Google Drive files where they live, keeps your existing access rules, and cites every claim to the page." data-catname="Documents & knowledge"><span class="cx-logo"><img src="/assets/logos/gdrive.png" alt="" width="28" height="28" loading="lazy"></span><span class="cx-name">Google Drive</span><span class="cx-catlbl">Documents & knowledge</span></button>
+          <button class="cx-card" type="button" data-cat="docs" data-name="box" data-desc="Pascal reads Box files where they live, keeps your existing access rules, and cites every claim to the page." data-catname="Documents & knowledge"><span class="cx-logo"><img src="/assets/logos/box.png" alt="" width="28" height="28" loading="lazy"></span><span class="cx-name">Box</span><span class="cx-catlbl">Documents & knowledge</span></button>
+          <button class="cx-card" type="button" data-cat="docs" data-name="dropbox" data-desc="Pascal reads Dropbox files where they live, keeps your existing access rules, and cites every claim to the page." data-catname="Documents & knowledge"><span class="cx-logo"><img src="/assets/logos/dropbox.png" alt="" width="28" height="28" loading="lazy"></span><span class="cx-name">Dropbox</span><span class="cx-catlbl">Documents & knowledge</span></button>
+          <button class="cx-card" type="button" data-cat="docs" data-name="notion" data-desc="Pascal reads Notion files where they live, keeps your existing access rules, and cites every claim to the page." data-catname="Documents & knowledge"><span class="cx-logo"><img src="/assets/logos/notion.png" alt="" width="28" height="28" loading="lazy"></span><span class="cx-name">Notion</span><span class="cx-catlbl">Documents & knowledge</span></button>
+          <button class="cx-card" type="button" data-cat="docs" data-name="onenote" data-desc="Pascal reads OneNote files where they live, keeps your existing access rules, and cites every claim to the page." data-catname="Documents & knowledge"><span class="cx-logo"><img src="/assets/logos/onenote.png" alt="" width="28" height="28" loading="lazy"></span><span class="cx-name">OneNote</span><span class="cx-catlbl">Documents & knowledge</span></button>
+          <button class="cx-card" type="button" data-cat="comms" data-name="outlook" data-desc="Pascal connects to Outlook so the views your team shares in threads and messages reach the right company and thesis." data-catname="Email & messaging"><span class="cx-logo"><img src="/assets/logos/outlook.png" alt="" width="28" height="28" loading="lazy"></span><span class="cx-name">Outlook</span><span class="cx-catlbl">Email & messaging</span></button>
+          <button class="cx-card" type="button" data-cat="comms" data-name="ms teams" data-desc="Pascal connects to MS Teams so the views your team shares in threads and messages reach the right company and thesis." data-catname="Email & messaging"><span class="cx-logo"><span class="cx-tile" style="background:#5B5FC7">T</span></span><span class="cx-name">MS Teams</span><span class="cx-catlbl">Email & messaging</span></button>
+          <button class="cx-card" type="button" data-cat="data" data-name="microsoft azure" data-desc="Pascal connects to Microsoft Azure inside your perimeter, so internal records sit alongside research without being moved." data-catname="Data & infrastructure"><span class="cx-logo"><img src="/assets/logos/azure.png" alt="" width="28" height="28" loading="lazy"></span><span class="cx-name">Microsoft Azure</span><span class="cx-catlbl">Data & infrastructure</span></button>
+          <button class="cx-card" type="button" data-cat="data" data-name="sql databases" data-desc="Pascal connects to SQL databases inside your perimeter, so internal records sit alongside research without being moved." data-catname="Data & infrastructure"><span class="cx-logo"><span class="cx-tile" style="background:#33464A">SQL</span></span><span class="cx-name">SQL databases</span><span class="cx-catlbl">Data & infrastructure</span></button>
+          <button class="cx-card" type="button" data-cat="data" data-name="crm / rms" data-desc="Pascal connects to CRM / RMS inside your perimeter, so internal records sit alongside research without being moved." data-catname="Data & infrastructure"><span class="cx-logo"><span class="cx-tile" style="background:#9A4A2B">CRM</span></span><span class="cx-name">CRM / RMS</span><span class="cx-catlbl">Data & infrastructure</span></button>
+          <button class="cx-card" type="button" data-cat="partners" data-name="accord fintech" data-desc="Accord Fintech data flows into Pascal through its data partnerships, next to your firm's own research." data-catname="Market data partners"><span class="cx-logo wide"><img src="/assets/logos/accord.png" alt="" width="96" height="24" loading="lazy"></span><span class="cx-name">Accord Fintech</span><span class="cx-catlbl">Market data partners</span></button>
+          <button class="cx-card" type="button" data-cat="partners" data-name="crustdata" data-desc="Crustdata data flows into Pascal through its data partnerships, next to your firm's own research." data-catname="Market data partners"><span class="cx-logo wide"><img src="/assets/logos/crustdata.png" alt="" width="96" height="24" loading="lazy"></span><span class="cx-name">Crustdata</span><span class="cx-catlbl">Market data partners</span></button>
+          <button class="cx-card" type="button" data-cat="partners" data-name="quartr" data-desc="Quartr data flows into Pascal through its data partnerships, next to your firm's own research." data-catname="Market data partners"><span class="cx-logo wide"><img src="/assets/logos/quartr.png" alt="" width="96" height="24" loading="lazy"></span><span class="cx-name">Quartr</span><span class="cx-catlbl">Market data partners</span></button>
+          <button class="cx-card" type="button" data-cat="partners" data-name="probe42" data-desc="Probe42 data flows into Pascal through its data partnerships, next to your firm's own research." data-catname="Market data partners"><span class="cx-logo wide"><img src="/assets/logos/probe42.png" alt="" width="96" height="24" loading="lazy"></span><span class="cx-name">Probe42</span><span class="cx-catlbl">Market data partners</span></button>
+          <button class="cx-card" type="button" data-cat="signals" data-name="x" data-desc="Pascal reads X for the names you track and summarises what matters, with every source linked." data-catname="Social & media signals"><span class="cx-logo"><img src="/assets/logos/x.png" alt="" width="28" height="28" loading="lazy"></span><span class="cx-name">X</span><span class="cx-catlbl">Social & media signals</span></button>
+          <button class="cx-card" type="button" data-cat="signals" data-name="youtube" data-desc="Pascal reads YouTube for the names you track and summarises what matters, with every source linked." data-catname="Social & media signals"><span class="cx-logo wide"><img src="/assets/logos/youtube.png" alt="" width="96" height="24" loading="lazy"></span><span class="cx-name">YouTube</span><span class="cx-catlbl">Social & media signals</span></button>
+          <button class="cx-card" type="button" data-cat="office" data-name="excel" data-desc="Pascal works inside Excel, so research lands in the file your team ships, in your house format." data-catname="Office apps"><span class="cx-logo"><img src="/assets/logos/excel.png" alt="" width="28" height="28" loading="lazy"></span><span class="cx-name">Excel</span><span class="cx-catlbl">Office apps</span></button>
+          <button class="cx-card" type="button" data-cat="office" data-name="powerpoint" data-desc="Pascal works inside PowerPoint, so research lands in the file your team ships, in your house format." data-catname="Office apps"><span class="cx-logo"><img src="/assets/logos/powerpoint.png" alt="" width="28" height="28" loading="lazy"></span><span class="cx-name">PowerPoint</span><span class="cx-catlbl">Office apps</span></button>
+        </div>
+        <p class="cx-empty" hidden>No connectors match. Ask us about yours when you <a href="{{demo_url}}">book a demo</a>.</p>
+      </div>
+    </div>
+    <dialog class="cx-sheet" aria-labelledby="cx-sheet-name">
+      <form method="dialog"><button class="cx-close" aria-label="Close">×</button></form>
+      <div class="cx-sheet-head"><span class="cx-sheet-logo"></span><div><p class="cx-sheet-cat"></p><h3 id="cx-sheet-name"></h3></div></div>
+      <p class="cx-sheet-desc"></p>
+      <a class="btn btn-dark btn-sm" href="{{demo_url}}">Book a demo</a>
+    </dialog>
+  </section>
+
+  <section class="row cg-stack" id="ontology" aria-labelledby="f1">
+    <div class="split-copy">
+      <p class="eyebrow">Knowledge graph ontology</p>
+      <h2 class="h2" id="f1">Context with depth <span class="mute">and structure.</span></h2>
+      <p>Company data, financials, research and internal decisions live in one connected layer. Pascal makes it easier to find what matters and understand what changed.</p>
+      <a class="link" href="/pascal-agents/data-agent#extraction">See how entities are extracted {{icon:arrow-right}}</a>
+    </div>
+    <div class="cg-stack-media"><!--#include cg-twin--></div>
+  </section>
+
+  <section class="row split flip" id="meeting-notes" aria-labelledby="d1">
+    <div class="split-copy">
+      <p class="eyebrow">Decisions from meeting notes</p>
+      <h2 class="h2" id="d1">Decided in the meeting. <span class="mute">Known by every agent.</span></h2>
+      <p>Pascal reads the notes from your meeting tool and picks out the decisions. When the team moves the weekly portfolio review from Monday to Tuesday, the change lands in the graph and every agent that runs your operations works to the new day.</p>
+      <a class="link" href="/pascal-agents/autonomous-agents">See the agents that use it {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui has-float float-lg cg-mtg" role="img" aria-label="Meeting notes from the weekly portfolio review on Monday 5 October 2026, captured from Zoom. Pascal found one decision: from 13 October the weekly portfolio review moves from Monday to Tuesday at 08:30, linked to the investment team. A card shows three agents updated: the review pre-read pack now goes out Monday at 17:00, the portfolio monitoring brief now runs Tuesday at 07:30, and the meeting scheduler moved the invites.">
+  <div class="pui-win">
+    <div class="pui-bar"><span class="pui-lg w">{{logo:zoom}}</span><span class="pui-crumb">Meeting notes / <b>Weekly portfolio review</b></span><span class="pui-bar-r"><span class="pui-tag">{{icon:sparkles}} 1 decision</span></span></div>
+    <div class="pui-main">
+      <p class="pui-sub cg-meta">Mon 5 Oct 2026 · 09:00 · 7 attendees</p>
+      <p class="pui-k pui-mt">Notes</p>
+      <div class="pui-ln m"></div><div class="pui-ln s"></div>
+      <div class="cg-dc">
+        <div class="cg-dc-h"><span class="pui-k">Decision</span><span class="pui-badge">{{icon:check-circle}} Added to graph</span></div>
+        <p class="cg-dc-t">From 13 Oct, the weekly portfolio review moves from <s>Monday</s> to <b>Tuesday, 08:30</b>.</p>
+        <div class="pui-schips"><span class="pui-schip">{{icon:calendar}} Weekly portfolio review</span><span class="pui-schip">{{icon:users}} Investment team</span></div>
+      </div>
+      <div class="pui-ln"></div><div class="pui-ln s"></div>
+    </div>
+  </div>
+  <div class="pui-float left cg-agf">
+    <div class="pui-float-h"><span class="pui-k">Agents updated</span><span class="pui-tag">3 agents</span></div>
+    <div class="pui-row"><span class="pui-lg t" style="background:#279C7B">{{icon:bot}}</span>Review pre-read pack<span class="pui-row-r"><span class="pui-tag grey">Mon 17:00</span></span></div>
+    <div class="pui-row"><span class="pui-lg t" style="background:#185FA5">{{icon:bot}}</span>Portfolio monitoring brief<span class="pui-row-r"><span class="pui-tag grey">Tue 07:30</span></span></div>
+    <div class="pui-row"><span class="pui-lg t" style="background:#534AB7">{{icon:bot}}</span>Meeting scheduler<span class="pui-row-r pui-ok">{{icon:check-circle}}</span></div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" id="reviewer-edits" aria-labelledby="d2">
+    <div class="split-copy">
+      <p class="eyebrow">Decisions from reviewer edits</p>
+      <h2 class="h2" id="d2">Approved once. <span class="mute">Reused in the next DDQ.</span></h2>
+      <p>When compliance edits a DDQ answer, Pascal stores the edited version as the approved answer, with who changed it and when. The next DDQ starts from that answer, so reviewers spend their time on the questions that are new.</p>
+      <a class="link" href="/pascal-agents/workflow-library">See the DDQ workflow {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui has-float float-lg cg-ddq" role="img" aria-label="A pension fund DDQ in compliance review. Question 4.3, personal account dealing: the compliance reviewer edited the answer on 2 October so that staff pre-clear personal trades in the compliance pre-clearance system, replacing approval by a line manager, and hold positions for at least 60 days, up from 30. The edit is saved as approved answer version 3. A card shows the next DDQ, a university endowment RFP started 6 October: two questions drafted from approved answer version 3 and one new question that needs review.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">DDQ / <b>Pension fund · Section 4</b></span><span class="pui-bar-r"><span class="pui-tag navy">Compliance review</span></span></div>
+    <div class="pui-main">
+      <p class="pui-k">4.3 · Personal account dealing</p>
+      <p class="cg-qq">Describe your personal account dealing policy.</p>
+      <div class="cg-diff">All staff pre-clear personal trades <del>with their line manager</del> <ins>in the compliance pre-clearance system</ins> and hold positions for at least <del>30</del> <ins>60</ins> days.</div>
+      <div class="cg-rev"><span class="pui-av" style="background:#234A86">CO</span><span class="cg-rev-n"><b>Compliance reviewer</b><span class="pui-sub">Edited 2 Oct</span></span><span class="pui-tag">{{icon:check-circle}} Approved answer v3</span></div>
+    </div>
+  </div>
+  <div class="pui-float cg-nxt">
+    <div class="pui-float-h"><span class="pui-k">Next DDQ · Endowment RFP</span><span class="pui-k">6 Oct</span></div>
+    <div class="pui-row">Q3.7 Personal trading<span class="pui-row-r"><span class="pui-tag">From v3</span></span></div>
+    <div class="pui-row">Q3.8 Pre-clearance<span class="pui-row-r"><span class="pui-tag">From v3</span></span></div>
+    <div class="pui-row">Q5.1 Cyber incidents<span class="pui-row-r"><span class="pui-tag amber">Needs review</span></span></div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" id="documents" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">Document intelligence</p>
+      <h2 class="h2" id="f2">Every claim, <span class="mute">traced to source.</span></h2>
+      <p>Pascal reads filings, transcripts, IC memos and broker notes the way an analyst does, tables and footnotes included. Each figure lands in the context graph with its source attached. Click a citation and the document opens at the exact page.</p>
+      <a class="link" href="/ask-pascal/cited-research">See document intelligence {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui pui-wide cg-docs2" role="img" aria-label="Honeywell FY24 to FY26: adjusted EPS FY25 $9.78, citation 9; FY26 EPS guidance $10.35 to $10.65, citation 7; free cash flow FY25 $5.1B, citation 10. Citation 7 is open at page 4 of 5 of the Q4 FY25 earnings presentation with the line FY26 adjusted EPS guidance $10.35 to $10.65 highlighted.">
+  <div class="pui-win">
+    <div class="pui-bar"><span class="pui-lg">{{logo:pdf}}</span><span class="pui-crumb"><b>Q4 FY25 earnings presentation.pdf</b></span><span class="pui-bar-r"><span class="pui-tag grey">Page 4 of 5</span></span></div>
+    <div class="pui-split cg-docs-g">
+      <div class="pui-pdf">
+        <div class="pui-sheet">
+          <p class="pui-sheet-h">2026 outlook</p>
+          <div class="pui-ln m"></div><div class="pui-ln"></div>
+          <p class="cg-sheet-p"><span class="pui-mark-hl">FY26 adjusted EPS guidance $10.35 to $10.65</span><span class="pui-pin">7</span></p>
+          <div class="pui-ln"></div><div class="pui-ln s"></div>
+          <svg class="pui-chart pui-mt" viewBox="0 0 200 60" aria-hidden="true"><line class="ax" x1="0" y1="59" x2="200" y2="59"/><rect class="b2" x="12" y="30" width="26" height="29" rx="2"/><rect class="b2" x="62" y="24" width="26" height="35" rx="2"/><rect class="b2" x="112" y="17" width="26" height="42" rx="2"/><rect class="b1" x="162" y="8" width="26" height="51" rx="2"/></svg>
+        </div>
+      </div>
+      <div class="pui-side">
+        <p class="pui-k">Extracted to graph</p>
+        <div class="cg-fact"><span>Adjusted EPS FY25</span><b>$9.78<span class="pui-cite">9</span></b></div>
+        <div class="cg-fact on"><span>FY26 EPS guidance</span><b>$10.35–10.65<span class="pui-cite on">7</span></b></div>
+        <div class="cg-fact"><span>Free cash flow FY25</span><b>$5.1B<span class="pui-cite">10</span></b></div>
+        <p class="pui-badge pui-mt">{{icon:check-circle}} Linked to Honeywell</p>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" id="access" aria-labelledby="f3">
+    <div class="split-copy">
+      <p class="eyebrow">Permission-based access</p>
+      <h2 class="h2" id="f3">The right information. <span class="mute">For the right person.</span></h2>
+      <p>Pascal checks permissions at the user and source level before information reaches an analyst or agent. Sensitive research stays restricted to the teams that are meant to see it.</p>
+      <a class="link" href="/security">Visit the trust center {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui pui-wide cg-acc" role="img" aria-label="Two analysts ask the same question. The industrials analyst sees 3 sources: filings, broker note and the team IC memo. The generalist analyst sees 2 sources: filings and broker note; the team IC memo is locked.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Ask Pascal / <b>Access check</b></span><span class="pui-bar-r"><span class="pui-badge">{{icon:shield}} User and source level</span></span></div>
+    <div class="pui-main">
+      <div class="pui-q">What did our IC conclude on the Aerospace separation?</div>
+      <div class="cg-acc-g">
+        <div class="cg-acc-c">
+          <div class="cg-acc-h"><span class="pui-av" style="background:#279C7B">IA</span><span><b>Industrials analyst</b><span class="pui-sub">Industrials team</span></span><span class="pui-tag">3 sources</span></div>
+          <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span>Filings<span class="pui-row-r pui-ok">{{icon:check-circle}}</span></div>
+          <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span>Broker note<span class="pui-row-r pui-ok">{{icon:check-circle}}</span></div>
+          <div class="pui-row"><span class="pui-lg w">{{logo:sharepoint}}</span>Team IC memo<span class="pui-row-r pui-ok">{{icon:check-circle}}</span></div>
+        </div>
+        <div class="cg-acc-c">
+          <div class="cg-acc-h"><span class="pui-av">GA</span><span><b>Generalist analyst</b><span class="pui-sub">Generalist pool</span></span><span class="pui-tag grey">2 sources</span></div>
+          <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span>Filings<span class="pui-row-r pui-ok">{{icon:check-circle}}</span></div>
+          <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span>Broker note<span class="pui-row-r pui-ok">{{icon:check-circle}}</span></div>
+          <div class="pui-row off"><span class="pui-lg w">{{logo:sharepoint}}</span>Team IC memo<span class="pui-row-r pui-lock">{{icon:lock}} Restricted</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div>
+        <h2 class="h2" id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item"><summary>What is a context graph?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A knowledge graph of the companies, segments, KPIs, theses, people and decisions your firm works with, each linked to the document it came from. Ask Pascal, Pascal Agents and the Pascal MCP all read from it.</div></details>
+        <details class="faq-item"><summary>How does institutional memory relate to the context graph?<span class="pm" aria-hidden="true"></span></summary><div class="ans">They are one product. Your firm's memory, from IC memos and models to meeting decisions and approved answers, is stored in the graph, so anything Pascal learns once is available to every user and agent cleared to see it.</div></details>
+        <details class="faq-item"><summary>How do decisions get into the graph?<span class="pm" aria-hidden="true"></span></summary><div class="ans">From meeting notes Pascal reads through your connectors, and from reviewer edits to Pascal's work, such as a compliance change to a DDQ answer. Each decision is stored with its source, date and owner.</div></details>
+        <details class="faq-item"><summary>Can a decision be corrected or retired?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. The owner or an admin can edit or retire any decision. The graph keeps the history, and agents pick up the change on their next run.</div></details>
+        <details class="faq-item"><summary>Do we have to move our data into Pascal?<span class="pm" aria-hidden="true"></span></summary><div class="ans">No. Connectors read SharePoint, email, Teams, CRM and your data partners where they are, and Pascal can be deployed inside your own virtual private cloud.</div></details>
+        <details class="faq-item"><summary>Who can see what is in the graph?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Every entity and decision inherits the permissions of its source. Pascal checks them per user and per source before anything reaches an analyst or an agent.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See your firm's memory" sub="in your context graph."-->

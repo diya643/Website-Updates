@@ -1,0 +1,193 @@
+<!--meta
+{
+ "path": "/pascal-academy/guides/model-context-protocol",
+ "title": "Model Context Protocol (MCP) Explained | Pascal Academy",
+ "description": "A guide to the Model Context Protocol for finance teams: what MCP is, how it connects AI models to data sources like Bloomberg and Capital IQ.",
+ "crumbs": [
+  [
+   "Pascal Academy",
+   "/pascal-academy"
+  ],
+  [
+   "AI fundamentals",
+   "/pascal-academy/ai-fundamentals"
+  ],
+  [
+   "Model Context Protocol (MCP)",
+   "/pascal-academy/guides/model-context-protocol"
+  ]
+ ],
+ "schema": "article",
+ "name": "Model Context Protocol (MCP)",
+ "og_kicker": "Pascal Academy",
+ "og_title": "Model Context Protocol (MCP)",
+ "llms": "A guide to the Model Context Protocol for finance teams: what MCP is, how it connects AI models to data sources like Bloomberg and Capital IQ.",
+ "css": [
+  "academy3.css"
+ ],
+ "word_limit": 3872,
+ "faq_min": 4,
+ "lead_min": 8,
+ "lead_max": 60,
+ "priority": 0.7,
+ "updated": "2026-08-01"
+}
+-->
+<div class="ac ac-doc">
+<div class="rp" aria-hidden="true"><i></i></div>
+<div class="frame">
+  <header class="ah">
+    <div class="ah-l">
+      {{crumbs}}
+      <p class="ah-k">Last updated August 2026</p>
+      <h1 class="ah-t">Model Context Protocol (MCP)</h1>
+      <p class="lead">The open standard for connecting AI models to external tools, data sources, and services through a universal interface.</p>
+      <p class="ah-m">13 min read · Beginner-friendly with advanced sections</p>
+      <div class="ah-by"><span class="ah-av"><img src="/assets/favicon.svg" alt="" width="40" height="40"></span><span><b>Pascal Academy</b><span>AI fundamentals · Part 10 of 10</span></span></div>
+      <div class="ah-a"><button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button></div>
+    </div>
+    <div class="ah-r"><div class="th th-hero" aria-hidden="true"><div class="th-bz"><div class="th-scr g-teal"><div class="tcs"><span class="tc tc-0">{{icon:plug}}<b>The MCP client</b></span><span class="tc tc-1">{{icon:server}}<b>The MCP server</b></span><span class="tc tc-2">{{icon:send}}<b>Communication</b></span></div></div></div></div></div>
+  </header>
+  <div class="ag">
+    <aside class="toc" aria-label="Table of contents">
+      <div class="toc-in">
+        <p class="toc-h">Table of contents</p>
+        <div class="toc-track"><span class="toc-fill"></span><ol data-spy><li><a href="#what-is-mcp">What Is MCP?</a></li><li><a href="#why-mcp-exists">Why MCP Exists</a></li><li><a href="#how-mcp-works">How MCP Works</a></li><li><a href="#mcp-components">MCP Components</a></li><li><a href="#building-an-mcp-server">Building an MCP Server</a></li><li><a href="#mcp-and-agents">MCP and Agents</a></li><li><a href="#mcp-vs-function-calling">MCP vs Function Calling</a></li><li><a href="#security-and-trust">Security and Trust</a></li><li><a href="#the-mcp-ecosystem">The MCP Ecosystem</a></li><li><a href="#the-future-of-mcp">The Future of MCP</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></div>
+        <div class="toc-cta">
+          <p class="toc-cta-t">Take this guide with you.</p>
+          <p>Get the PDF in your inbox.</p>
+          <button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button>
+        </div>
+      </div>
+    </aside>
+    <article class="ac-prose" id="article">
+      <details class="toc-m"><summary>Table of contents</summary><ol><li><a href="#what-is-mcp">What Is MCP?</a></li><li><a href="#why-mcp-exists">Why MCP Exists</a></li><li><a href="#how-mcp-works">How MCP Works</a></li><li><a href="#mcp-components">MCP Components</a></li><li><a href="#building-an-mcp-server">Building an MCP Server</a></li><li><a href="#mcp-and-agents">MCP and Agents</a></li><li><a href="#mcp-vs-function-calling">MCP vs Function Calling</a></li><li><a href="#security-and-trust">Security and Trust</a></li><li><a href="#the-mcp-ecosystem">The MCP Ecosystem</a></li><li><a href="#the-future-of-mcp">The Future of MCP</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<section class="ac-sec" id="what-is-mcp" aria-labelledby="what-is-mcp-h"><h2 id="what-is-mcp-h">What Is MCP?</h2>
+<p>In the AI agents guide, we covered how agents use tools to interact with the world. An agent reads a database, calls an API, searches the web, or executes code. Each of these actions requires a connection between the model and an external system. Building those connections has historically been ad hoc. Every agent framework, model provider, and tool integration used its own format, its own authentication, and its own way of describing what the tool does.</p>
+<p>The Model Context Protocol, or MCP, is an open standard that solves this fragmentation. It defines a common protocol for communication between AI applications and external data sources and tools. An easier way to think of it is as USB-C for AI integrations. Before USB-C, every device had its own connector, however, after USB-C, one cable can now work with everything. MCP aims to do the same for the connection between models and tools.</p>
+<p>MCP was introduced by Anthropic in late 2024 and has since gained adoption across model providers, agent frameworks, and tool developers. The protocol is open source, meaning anyone can implement it without licensing restrictions, and it is designed to be model-agnostic, meaning it works with any LLM.</p>
+<aside class="ac-co ac-co-principle"><p class="ac-co-lab"><span class="ac-co-ic">{{icon:target}}</span>Key principle</p><div class="ac-co-body"><p>MCP standardises the interface between AI models and external systems. A tool that exposes itself through MCP can be used by any MCP-compatible client, whether that client is Claude, ChatGPT, an open source agent framework, or a custom application. This eliminates the need to build a separate integration for every model-tool pair.</p></div></aside>
+</section>
+<section class="ac-sec" id="why-mcp-exists" aria-labelledby="why-mcp-exists-h"><h2 id="why-mcp-exists-h">Why MCP Exists</h2>
+<p>Before MCP, connecting an AI model to an external tool required custom integration work. If you wanted your agent to read from a database, you wrote code that connected the model to the database, defined the tool's schema, and handled the communication format. If you then wanted the same agent to also read from a file system, you wrote another integration. If you switched model providers, you rewrote both integrations because the new provider used a different tool-calling format.</p>
+<p>This N-by-M problem, where N models each need to support M tools, creates a combinatorial explosion of integrations. With 10 models and 100 tools, you need 1,000 separate integrations. MCP reduces this to N plus M. Each model implements the MCP client protocol once. Each tool implements the MCP server protocol once. Any model can then use any tool.</p>
+<div class="ac-table"><table><thead><tr><th>Before MCP</th><th>With MCP</th></tr></thead><tbody><tr><td>Every model-tool pair needs a custom integration.</td><td>Each model implements MCP once. Each tool implements MCP once. Any model can use any tool.</td></tr><tr><td>Switching model providers requires rewriting all tool integrations.</td><td>Switching models requires no changes to tool integrations.</td></tr><tr><td>Tool definitions are specific to each agent framework.</td><td>Tool definitions are standardised and portable across frameworks.</td></tr><tr><td>Security and authentication are handled differently by each integration.</td><td>MCP defines standard security patterns for authentication and authorisation.</td></tr></tbody></table></div>
+<p>The practical benefit is reuse. A developer who builds an MCP server for a database makes that database accessible to every MCP-compatible AI application. A team that builds an MCP client in their agent gets access to every MCP server that exists, without writing additional integrations.</p>
+</section>
+<section class="ac-sec" id="how-mcp-works" aria-labelledby="how-mcp-works-h"><h2 id="how-mcp-works-h">How MCP Works</h2>
+<p>MCP follows a client-server architecture. The MCP client runs inside the AI application, and the MCP server wraps the external tool or data source. The client and server communicate using a standard protocol based on JSON-RPC, a lightweight message format that sends structured requests and responses.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic">{{icon:book-open}}</span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's agent engineering course covers MCP server development, tool integration patterns, and production agent deployment. Reach out to learn about cohort programmes for your engineering team.</p><p><a class="ac-co-link" href="/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<h3 id="the-mcp-client">The MCP Client</h3>
+<p>The client is the component that lives inside the AI application or agent framework. It manages connections to one or more MCP servers, discovers what tools and resources each server offers, and routes requests from the model to the appropriate server. When the model decides it needs to call a tool, the client sends the request to the MCP server that provides that tool, receives the response, and passes it back to the model.</p>
+<h3 id="the-mcp-server">The MCP Server</h3>
+<p>The server wraps an external system and exposes it through the MCP protocol. A server might wrap a database, a file system, an API like Slack or GitHub, a code execution environment, or any other system the model needs to interact with. The server advertises its capabilities, handles requests from the client, and returns results in a standardised format.</p>
+<h3 id="communication">Communication</h3>
+<p>The client and server communicate over a transport layer. Two transports are commonly used. The first is stdio, where the client launches the server as a subprocess and communicates through standard input and output. This is simple and works well for local tools. The second is HTTP with Server-Sent Events, which allows the server to run on a remote machine. This is suitable for tools that need to be shared across multiple clients or that connect to cloud services.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic">{{icon:layers}}</span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>The MCP protocol specification</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev">{{icon:chevron-down}}</span></summary><div class="ac-co-body"><p>MCP defines three types of capabilities that a server can expose. Tools are functions the model can call, like querying a database or sending a message. Each tool has a name, a description, and a schema describing its parameters. Resources are data the model can read, like files or database records. Each resource has a URI and a MIME type. Prompts are predefined prompt templates that the server offers, which can guide the model toward effective interactions. When a client connects to a server, the server advertises its capabilities, and the client makes them available to the model. The model then decides which tools to call and which resources to read based on the user's request.</p></div></details>
+</section>
+<section class="ac-sec" id="mcp-components" aria-labelledby="mcp-components-h"><h2 id="mcp-components-h">MCP Components</h2>
+<p>Understanding MCP means understanding the three types of capabilities a server can expose and how the client uses them.</p>
+<div class="ac-table"><table><thead><tr><th>Component</th><th>What It Does</th><th>Example</th></tr></thead><tbody><tr><td>Tools</td><td>Functions the model can call to perform actions or retrieve data. Each tool has a name, description, and parameter schema. The model decides when to call a tool based on the user's request and the tool's description.</td><td>A database query tool that accepts a SQL string and returns results. A file system tool that lists files in a directory. A Slack tool that sends a message to a channel.</td></tr><tr><td>Resources</td><td>Data the model can read, identified by a URI. Resources are read-only and provide context to the model. Unlike tools, resources are not called by the model. They are presented to the model as available context.</td><td>A file at file:///project/README.md. A database record at db://users/12345. A configuration file at config://app/settings.json.</td></tr><tr><td>Prompts</td><td>Predefined prompt templates that guide the model toward effective interactions with the server's tools and resources. Prompts can include placeholders that are filled in at runtime.</td><td>A code review prompt that instructs the model to read a file, analyse it, and suggest improvements using the server's file system tools.</td></tr></tbody></table></div>
+<p>The distinction between tools and resources matters. Tools are active, meaning the model calls them to perform an action or retrieve data. Resources are passive, meaning they are available context that the model can read. A database query tool lets the model run arbitrary SQL. A database resource presents a specific record to the model without requiring a tool call. The choice between exposing something as a tool or a resource depends on whether the model needs to actively request it or whether it should be available as context.</p>
+</section>
+<section class="ac-sec" id="building-an-mcp-server" aria-labelledby="building-an-mcp-server-h"><h2 id="building-an-mcp-server-h">Building an MCP Server</h2>
+<p>Building an MCP server means wrapping an external system and exposing it through the protocol. The process involves defining the tools and resources the server offers, implementing the logic for each, and running the server on a transport.</p>
+<p>Several SDKs are available for building MCP servers, including Python and TypeScript. The SDKs handle the protocol details, like message formatting and capability advertisement, so you can focus on the tool logic. A typical server defines its tools as functions, each with a name, description, and parameter schema. When a client sends a tool call request, the server executes the corresponding function and returns the result.</p>
+<h3 id="design-considerations">Design Considerations</h3>
+<p>When building an MCP server, several design decisions affect usability and safety. Tool descriptions should be clear and specific, because the model uses them to decide when to call each tool. A vague description like search data is less effective than search the product catalogue by name, category, or SKU, returning matching products with their prices and availability. The model needs enough detail to understand what the tool does and when to use it.</p>
+<p>Parameter schemas should be precise. If a parameter accepts an enum, list the valid values. If a parameter is required, mark it as required. If a parameter has a default, specify it. The more information the schema provides, the less likely the model is to call the tool with incorrect parameters.</p>
+<p>Security is a primary concern. An MCP server that wraps a database should not let the model run arbitrary DROP TABLE statements. Read-only tools should be clearly separated from write tools. Authentication should be required for sensitive operations. The server should validate all inputs and return clear error messages when parameters are invalid or unauthorised.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic">{{icon:layers}}</span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>The lifecycle of an MCP tool call</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev">{{icon:chevron-down}}</span></summary><div class="ac-co-body"><p>When a model decides to call a tool, the flow is as follows. The client sends the user's message to the model along with the list of available tools and their schemas. The model processes the message and decides to call a tool, producing a tool call request with the tool name and parameters. The client receives this request and routes it to the MCP server that provides the tool. The server executes the tool function with the given parameters and returns the result. The client passes the result back to the model as a tool response. The model uses the response to generate its answer or to decide whether another tool call is needed. This cycle can repeat multiple times for complex tasks, similar to the ReAct loop covered in the AI agents guide.</p></div></details>
+</section>
+<section class="ac-sec" id="mcp-and-agents" aria-labelledby="mcp-and-agents-h"><h2 id="mcp-and-agents-h">MCP and Agents</h2>
+<p>MCP and agents are complementary. As covered in the AI agents guide, an agent uses a model to plan and execute multi-step workflows, calling tools along the way. MCP provides the standardised interface through which those tool calls happen.</p>
+<p>Without MCP, an agent framework needs custom integrations for every tool it supports. The framework defines its own tool-calling format, and developers write adapters to connect external systems. With MCP, the framework only needs to implement the MCP client protocol. Every MCP server becomes available as a tool source, and the framework does not need to know the details of how each tool works.</p>
+<p>This separation of concerns is valuable. Agent developers can focus on planning, reasoning, and orchestration without reimplementing tool integrations for each new data source. Tool developers can build MCP servers without knowing which agent frameworks will use them. The protocol acts as a clean boundary between the two layers.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic">{{icon:book-open}}</span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's agent engineering course covers MCP integration, tool design patterns, and production agent architecture. Reach out to learn about team training options.</p><p><a class="ac-co-link" href="/pascal-academy/signup">Ask about team training</a></p></div></aside>
+</section>
+<section class="ac-sec" id="mcp-vs-function-calling" aria-labelledby="mcp-vs-function-calling-h"><h2 id="mcp-vs-function-calling-h">MCP vs Function Calling</h2>
+<p>Function calling is a capability built into modern language models. The model is given a list of functions with their parameter schemas, and it can decide to call a function by producing a structured output with the function name and arguments. The application executes the function and returns the result to the model.</p>
+<p>MCP and function calling serve different layers of the stack. Function calling is a model capability, meaning the model can produce structured tool-call requests. MCP is a protocol, meaning it defines how those requests are routed to external systems and how results are returned. The two work together. The model uses function calling to decide which tool to call and with what parameters. MCP transports that request to the appropriate server, executes it, and returns the result.</p>
+<div class="ac-table"><table><thead><tr><th>Function Calling</th><th>MCP</th></tr></thead><tbody><tr><td>A model capability. The model produces structured tool-call requests.</td><td>A protocol for routing those requests to external systems.</td></tr><tr><td>Specific to each model provider. OpenAI, Anthropic, and Google each have their own format.</td><td>Model-agnostic. Works with any model that supports tool calling.</td></tr><tr><td>Defines how the model expresses a tool call, not how the call is executed.</td><td>Defines how the call is transported, executed, and the result returned.</td></tr><tr><td>The application is responsible for connecting each tool call to the right external system.</td><td>The protocol handles routing to the right server and returning the result.</td></tr></tbody></table></div>
+<p>In practice, an MCP-compatible application uses function calling internally. The model produces a tool-call request using its native function-calling format. The application translates this into an MCP request and sends it to the server. The distinction is that MCP standardises the layer between the model and the tool, so the application does not need custom code for each tool.</p>
+</section>
+<section class="ac-sec" id="security-and-trust" aria-labelledby="security-and-trust-h"><h2 id="security-and-trust-h">Security and Trust</h2>
+<p>MCP servers give AI models access to external systems, which means they also introduce security considerations. A model that can query a database can potentially access sensitive data. A model that can send messages can potentially send unauthorised communications. A model that can execute code can potentially run harmful commands.</p>
+<p>Several security practices are important when deploying MCP. Least privilege means each server should expose only the tools and resources the model needs, with the minimum permissions required. A database server for a read-only Q and A system should not expose write or delete tools. Authentication means the server should verify the identity of the client and enforce access controls. Input validation means the server should validate all parameters before executing a tool, rejecting requests that contain invalid or potentially harmful input.</p>
+<p>User consent is another consideration. For actions that have real-world consequences, like sending an email or modifying a database record, the application should ask the user for confirmation before the server executes the tool. This is human-in-the-loop, as covered in the AI agents guide. MCP itself does not enforce these practices. It is a protocol, not a security framework. The responsibility for secure deployment falls on the developers building and configuring the servers.</p>
+</section>
+<section class="ac-sec" id="the-mcp-ecosystem" aria-labelledby="the-mcp-ecosystem-h"><h2 id="the-mcp-ecosystem-h">The MCP Ecosystem</h2>
+<p>Since its introduction, MCP has grown a substantial ecosystem of servers, clients, and tools. Several categories have emerged.</p>
+<h3 id="reference-servers">Reference Servers</h3>
+<p>Anthropic and the community have built reference MCP servers for common integrations. These include servers for file system access, database querying, web search, Git repositories, Slack, GitHub, and Google Drive. These servers can be used directly or adapted for specific needs. They serve as examples of how to build well-structured MCP servers.</p>
+<h3 id="client-support">Client Support</h3>
+<p>MCP is supported by several AI applications and agent frameworks. Claude Desktop was the first MCP client, allowing users to connect local tools through MCP servers. Other applications, including open source agent frameworks and development tools, have added MCP client support. As adoption grows, the value of the protocol increases, because each new client gains access to every existing server and each new server becomes available to every existing client.</p>
+<h3 id="custom-servers">Custom Servers</h3>
+<p>Organisations build custom MCP servers to expose internal systems to AI applications. A company might build an MCP server for its internal wiki, its CRM, its ticketing system, or its deployment pipeline. Once built, these servers can be used by any MCP-compatible client, whether that is a local assistant, a cloud-based agent, or a custom application.</p>
+</section>
+<section class="ac-sec" id="the-future-of-mcp" aria-labelledby="the-future-of-mcp-h"><h2 id="the-future-of-mcp-h">The Future of MCP</h2>
+<p>MCP is still early in its adoption curve. The protocol defines the basic mechanics of tool discovery, invocation, and result return, but several areas are evolving.</p>
+<p>Remote deployment is one direction. Currently, many MCP servers run locally through stdio transport, which limits them to single-user, single-machine setups. Remote MCP servers running over HTTP would enable shared tool access across teams and organisations. This raises additional security considerations, including authentication, encryption, and access control, which the protocol is beginning to address.</p>
+<p>Standardisation across model providers is another direction. While MCP is model-agnostic, the way models use MCP-exposed tools still depends on their native function-calling format. Further standardisation of the tool-calling layer would reduce the remaining differences between model providers.</p>
+<p>The broader question is whether MCP becomes the universal standard for AI-tool integration, or whether competing protocols fragment the ecosystem. The open source nature of MCP, combined with growing adoption from both model providers and tool developers, gives it a strong position. But standards succeed when they reach critical mass, and MCP is still building toward that point.</p>
+<aside class="ac-co ac-co-summary"><p class="ac-co-lab"><span class="ac-co-ic">{{icon:list-checks}}</span>Summary</p><div class="ac-co-body"><p>The Model Context Protocol is an open standard for connecting AI models to external tools, data sources, and services. It uses a client-server architecture where the client lives inside the AI application and the server wraps an external system. Servers expose three types of capabilities. Tools are functions the model can call. Resources are data the model can read. Prompts are predefined templates that guide the model. MCP solves the N-by-M integration problem by standardising the interface, so any model can use any tool through a single protocol. It complements function calling, which is the model's ability to produce tool-call requests, by handling the transport and execution layer. Security is a primary concern when deploying MCP servers, and practices like least privilege, authentication, input validation, and human-in-the-loop confirmation are essential. The MCP ecosystem is growing, with reference servers for common integrations and custom servers for internal systems. The protocol is still early in its adoption curve, with ongoing development in remote deployment, cross-provider standardisation, and security.</p></div></aside>
+</section>
+<aside class="ac-about"><p class="ac-about-h">About this guide</p><p>This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, agents, context windows, knowledge graphs, hallucinations, reasoning models, embeddings, and MCP. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.</p><p>See how this works in Pascal: <a href="/platform/mcp-apis">Pascal MCP and APIs</a>.</p></aside>
+    </article>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What is the Model Context Protocol (MCP)?<span class="pm" aria-hidden="true"></span></summary><div class="ans">MCP is an open standard that defines how AI models connect to external data sources and tools. It provides a common interface so that an AI model can retrieve information from databases, file systems, and APIs without requiring custom integrations for each source.</div></details>
+<details class="faq-item"><summary>Why is MCP important for AI in finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Finance teams work with data from Bloomberg, Capital IQ, FactSet, internal CRM systems, and filings. Without a standard protocol, connecting an AI model to each source requires a custom integration. MCP simplifies this by providing a common interface, so one connection can reach multiple data sources.</div></details>
+<details class="faq-item"><summary>How does Pascal implement MCP for institutional finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal is MCP-native, meaning its agents connect to your existing data providers through the Model Context Protocol. Bloomberg, SharePoint, Snowflake, and your CRM connect through one MCP Hub. This means Pascal's agents can pull from all your data sources without custom pipelines, and citations trace back to the source line regardless of where the data originated.</div></details>
+<details class="faq-item"><summary>What is the difference between MCP and an API?<span class="pm" aria-hidden="true"></span></summary><div class="ans">An API connects a specific application to another specific application with a custom interface. MCP is a standard protocol that defines how any AI model connects to any data source. APIs are point-to-point connections. MCP provides a common layer so one model can reach many sources through a consistent interface.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kl" aria-labelledby="kl-h">
+    <h2 class="sx-t" id="kl-h">Keep learning</h2>
+    <div class="kl-g"><a class="gc" href="/pascal-academy/guides/large-language-models"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-mint"><div class="tcs"><span class="tc tc-0">{{icon:layers}}<b>Pre-training</b></span><span class="tc tc-1">{{icon:edit}}<b>Supervised fine-tuning</b></span><span class="tc tc-2">{{icon:users}}<b>Human feedback (RLHF)</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 01</span><h3 class="gc-t">Large language models (LLMs)</h3><p class="gc-m">12 min read</p></div></a><a class="gc" href="/pascal-academy/guides/prompt-engineering"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-sea"><div class="tcs"><span class="tc tc-0">{{icon:message}}<b>Zero-shot prompting</b></span><span class="tc tc-1">{{icon:list-checks}}<b>Few-shot prompting</b></span><span class="tc tc-2">{{icon:git-branch}}<b>Chain-of-thought</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 02</span><h3 class="gc-t">Prompt engineering</h3><p class="gc-m">15 min read</p></div></a><a class="gc" href="/guides/ai-for-hedge-funds"><div class="th" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-teal"><img src="/assets/shots/shot-agent-table.webp" alt="Pascal agent output: a street vs management framing table for Sea Limited with citations" width="1600" height="844" loading="lazy" decoding="async"></div></div></div><div class="gc-b"><span class="pill">Desk guide</span><h3 class="gc-t">AI for Hedge Funds</h3><p class="gc-m">24 min read</p></div></a></div>
+  </section>
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<!--#include demo-band title="Ask your first question with your firm's context." sub="A walkthrough with your own documents connected."-->
+<dialog class="ac-gate" id="pdf-gate" aria-labelledby="gate-h">
+  <div class="ac-gate-in">
+    <div class="ac-gate-side">
+      <p class="eyebrow">Pascal Academy · PDF</p>
+      <p class="ac-gate-t">Model Context Protocol (MCP)</p>
+      <p class="ac-gate-m">13 min read</p>
+      <div class="ac-gate-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b><i></i><i></i></div>
+    </div>
+    <div class="ac-gate-main">
+      <button class="ac-gate-x" type="button" data-gate-close aria-label="Close">{{icon:close}}</button>
+      <form class="ac-gate-form" data-gate-form data-guide="Model Context Protocol (MCP)" data-slug="model-context-protocol" data-pdf="/assets/academy/pdf/model-context-protocol.pdf" novalidate>
+        <h2 id="gate-h">Get this guide as a PDF</h2>
+        <p class="ac-gate-sub">Tell us where to send it and we will email you the PDF.</p>
+        <label>Full name<input name="name" autocomplete="name" required></label>
+        <label>Work email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Organization<input name="organization" autocomplete="organization" required></label>
+        <p class="ac-gate-err" role="alert" hidden></p>
+        <button class="btn btn-dark" type="submit">Email me the PDF</button>
+        <p class="ac-gate-fine">By submitting, you agree to be contacted about Pascal Academy.</p>
+      </form>
+      <div class="ac-gate-done" hidden>
+        <span class="ac-gate-ok">{{icon:check}}</span>
+        <h2>Check your inbox.</h2>
+        <p>We have sent <b>Model Context Protocol (MCP)</b> to <span data-gate-email></span>.</p>
+        <button class="btn btn-line" type="button" data-gate-close>Back to the guide</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="/assets/pages/academy3.js" defer></script>

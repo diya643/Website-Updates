@@ -1,0 +1,52 @@
+[h1] Learn AI for Institutional Finance
+[p] Practical AI education for modern investment teams.
+[a] Start Learning
+[span] Learn
+[h2] Guides for every investment desk
+[p] Practical playbooks for hedge funds, asset managers, bankers, and private markets teams.
+[h3] AI for Hedge Funds
+[span] 24 min
+[p] Research workflows, earnings analysis, company primers, modelling and investment idea generation.
+[span] Explore Guide →
+[h3] AI for Asset Management
+[span] 20 min
+[p] Portfolio monitoring, research, earnings workflows, knowledge management and risk analysis.
+[span] Explore Guide →
+[h3] AI for Investment Banking
+[span] 21 min
+[p] Pitch books, comparable companies, CIM analysis, due diligence and valuation support.
+[span] Explore Guide →
+[h3] AI for Private Equity
+[span] 22 min
+[p] Deal sourcing, commercial due diligence, market mapping, portfolio monitoring and investment memos.
+[span] Explore Guide →
+[span] Explore
+[h2] A growing library of AI resources
+[p] Concepts, workflows, and reference material for institutional teams.
+[h3] AI Fundamentals
+[p] The core concepts behind AI, explained simply.
+[span] Learn more →
+[h3] AI Glossary
+[p] An A-to-Z reference of AI terms written for investment teams.
+[span] Learn more →
+[h3] Workflows
+[p] Step-by-step ways to apply AI to real tasks.
+[span] Learn more →
+[h3] Prompt Library
+[p] Tested prompts for research, memos and modelling.
+[span] Learn more →
+[h3] AI Agents
+[p] Multi-step research agents for investment teams.
+[span] Learn more →
+[h3] Case Studies
+[span] Soon
+[p] How institutional teams put AI to work.
+[span] Coming soon
+[h3] AI Benchmarks
+[span] Soon
+[p] How models are evaluated for finance.
+[span] Coming soon
+[h3] Best Practices
+[span] Soon
+[p] The habits that make AI dependable.
+[span] Coming soon

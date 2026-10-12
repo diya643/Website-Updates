@@ -1,0 +1,304 @@
+<!--meta
+{
+ "path": "/case-studies/treasury",
+ "title": "Treasury Case Study: Hedge Accounting in 2 Days | Pascal AI",
+ "description": "How a large diversified conglomerate documented 480 hedge relationships under Ind AS 109 with Pascal and cut quarter-end effectiveness testing to 2 days.",
+ "crumbs": [["Case studies", "/case-studies"], ["Corporate treasury", "/case-studies/treasury"]],
+ "og_kicker": "Case study · Corporate treasury",
+ "og_title": "Quarter-end hedge effectiveness testing in two days, down from three weeks",
+ "llms": "Case study: the group treasury of a large diversified conglomerate used Pascal to read bank confirmations and ISDA/CSA terms, match FX and commodity hedges to exposures, draft Ind AS 109 designation documentation, run effectiveness tests, propose journal entries and build the audit pack. 480 hedge relationships documented; testing cut from three weeks to two days.",
+ "priority": 0.7,
+ "word_limit": 900,
+ "css": ["case-studies.css"]
+}
+-->
+<div class="frame pg-cs">
+  <section class="cs-hero" aria-labelledby="page-title">
+    <div class="cs-hero-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Case study · Corporate treasury</span></span>Quarter-end hedge testing <span class="mute">in two days, down from three weeks.</span></h1>
+      <p class="lead">The group treasury of a large diversified conglomerate ran FX and commodity hedge accounting in spreadsheets. Pascal reads the confirmations, documents each hedge under Ind AS 109, runs the effectiveness tests and builds the audit pack.</p>
+      <div class="actions"><a class="btn btn-dark" href="{{demo_url}}">Book a demo</a></div>
+    </div>
+    <aside class="cs-glance" aria-label="At a glance">
+      <p class="cs-glance-k">At a glance</p>
+      <dl class="cs-gl">
+        <div><dt>Firm</dt><dd>Large diversified conglomerate<small>Group treasury serving several businesses</small></dd></div>
+        <div><dt>Teams</dt><dd>Group treasury and group accounts<small>With finance teams in each business</small></dd></div>
+        <div><dt>Sources connected</dt><dd>Bank confirmations, ISDA and CSA agreements, business exposure forecasts and the general ledger<span class="cs-logos" aria-hidden="true"><span>{{logo:outlook}}</span><span>{{logo:pdf}}</span><span>{{logo:excel}}</span><span class="t" style="background:#1F3864">ERP</span></span></dd></div>
+        <div><dt>Deployment</dt><dd>On premise, in the group's own data centre</dd></div>
+        <div><dt>Live in</dt><dd>10 weeks<small>In time for the September quarter close</small></dd></div>
+      </dl>
+    </aside>
+  </section>
+  <section class="cells row cs-strip" aria-label="Results in numbers">
+    <div class="cell"><span class="stat-num">480</span><span class="stat-lbl">Hedge relationships documented</span></div>
+    <div class="cell"><span class="stat-num">2<small>days</small></span><span class="stat-lbl">For quarter-end effectiveness testing, down from 3 weeks</span></div>
+    <div class="cell"><span class="stat-num">100<small>%</small></span><span class="stat-lbl">Of designations with a full audit trail</span></div>
+  </section>
+</div>
+
+<nav class="subnav" aria-label="On this page">
+  <div class="subnav-inner">
+    <a href="#challenge">The challenge</a>
+    <a href="#what-pascal-did">What Pascal did</a>
+    <a href="#results">Results</a>
+    <a href="#next">What came next</a>
+    <a href="#products">Products used</a>
+    <a href="#faq">Frequently asked questions</a>
+  </div>
+</nav>
+
+<div class="frame pg-cs">
+  <section class="cs-two" id="challenge" aria-labelledby="ch-title">
+    <div class="cs-copy">
+      <p class="eyebrow">The challenge</p>
+      <h2 class="h2" id="ch-title">Hedge accounting ran <span class="mute">on spreadsheets and email.</span></h2>
+      <p>Group treasury hedges FX and commodity exposure for several businesses: dollar and euro imports and exports, and metal and energy purchases. Each hedge needs designation documentation under Ind AS 109 and an effectiveness test every quarter.</p>
+      <p>Deal terms were retyped from bank confirmations, and exposures arrived as spreadsheets from each business. Quarter-end took three weeks of matching, testing and gathering evidence, and the trail from a journal back to its confirmation lived in inboxes.</p>
+    </div>
+    <div class="cs-vis"><div class="panel panel-cream fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="Quarter-end close before Pascal over three weeks: week one collecting confirmations and exposure files, week two rebuilding hedge relationships and running tests, week three journals and audit queries.">
+      <div class="pui-win">
+        <div class="pui-bar"><span class="pui-lg">{{logo:excel}}</span><span class="pui-crumb">Hedge register / <b>Quarter-end close</b></span><span class="pui-bar-r"><span class="pui-tag amber">Before Pascal</span></span></div>
+        <div class="pui-main">
+          <div class="cs-m-cal">
+            <span></span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span>
+            <span>Week 1</span><i class="a w3">Chase confirmations</i><i class="a w">Collect exposure files</i>
+            <span>Week 2</span><i class="a w">Rebuild relationships</i><i class="a w3">Effectiveness tests in Excel</i>
+            <span>Week 3</span><i class="a w">Journals</i><i class="a w3">Audit queries and evidence</i>
+            <span>Close</span><i class="w5" style="background:#FBE1DE;color:#9A2B20">Signed off on day 15</i>
+          </div>
+          <div class="pui-row pui-mt" style="border:0"><span class="cs-m-dot a"></span>Manual work in spreadsheets and email</div>
+        </div>
+      </div>
+    </div><!--/mock--></div></div>
+  </section>
+
+  <section class="row" id="what-pascal-did" aria-labelledby="did-title">
+    <div class="row-pad-sm cs-steps-head">
+      <div><p class="eyebrow">What Pascal did</p><h2 class="h2" id="did-title" style="margin-top:18px">The hedge lifecycle, <span class="mute">end to end.</span></h2></div>
+      <p>Pascal ran each hedge from confirmation to audit pack. Treasury and group accounts approved every designation and every journal.</p>
+    </div>
+    <nav class="cs-chain" aria-label="Steps">
+      <a href="#step-1"><small>01</small><b>Read confirmations</b></a>
+      <a href="#step-2"><small>02</small><b>Match exposures</b></a>
+      <a href="#step-3"><small>03</small><b>Designate</b></a>
+      <a href="#step-4"><small>04</small><b>Test</b></a>
+      <a href="#step-5"><small>05</small><b>Journals and audit pack</b></a>
+    </nav>
+
+    <div class="row split cs-step" id="step-1">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>01</i><span>Read</span></p>
+        <h3>Read confirmations and ISDA/CSA terms.</h3>
+        <p>Pascal read each bank confirmation as it arrived and extracted the deal terms: instrument, notional, rate, dates and counterparty. From the ISDA and CSA agreements it took thresholds, minimum transfer amounts and eligible collateral.</p>
+      </div>
+      <div class="split-media"><div class="panel fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="A bank's FX forward confirmation with the forward rate highlighted. Extracted deal terms: buy USD sell INR forward, notional USD 25 million, rate 89.42, trade date 2 July 2026, maturity 30 December 2026, counterparty Bank A, CSA threshold USD 5 million. Illustrative.">
+        <div class="pui-win">
+          <div class="pui-bar"><span class="pui-lg">{{logo:pdf}}</span><span class="pui-crumb"><b>Confirmation · FWD-0418.pdf</b></span><span class="pui-bar-r"><span class="pui-tag grey">Illustrative</span></span></div>
+          <div class="pui-split">
+            <div class="pui-pdf">
+              <div class="pui-sheet">
+                <p class="pui-sheet-h">FX forward confirmation</p>
+                <div class="pui-ln m"></div><div class="pui-ln s"></div>
+                <p style="font-size:12px;line-height:1.5;margin:10px 0"><span class="pui-mark-hl">Forward rate: 89.4200 INR per USD</span><span class="pui-pin">3</span></p>
+                <div class="pui-ln"></div><div class="pui-ln m"></div><div class="pui-ln s"></div>
+              </div>
+            </div>
+            <div class="pui-side">
+              <p class="pui-k">Deal terms</p>
+              <div class="pui-kv pui-mt">
+                <span>Instrument</span><b>Buy USD / INR fwd</b>
+                <span>Notional</span><b>USD 25.0m</b>
+                <span class="sel">Rate</span><b class="sel">89.42<span class="pui-cite on">3</span></b>
+                <span>Trade</span><b>02 Jul 2026</b>
+                <span>Maturity</span><b>30 Dec 2026</b>
+                <span>Counterparty</span><b>Bank A</b>
+                <span>CSA threshold</span><b>USD 5m</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+
+    <div class="row split flip cs-step" id="step-2">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>02</i><span>Match</span></p>
+        <h3>Match each hedge to its exposure.</h3>
+        <p>Each deal was matched to the forecast exposure it hedges, from the business's own exposure file. Pascal flagged hedges with no exposure behind them and exposures hedged above the policy ratio.</p>
+      </div>
+      <div class="split-media"><div class="panel panel-dark fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="Hedge to exposure matching: a USD forward matched to December copper imports at an 80 percent hedge ratio, a EUR forward matched to a November machinery import at 100 percent, an aluminium swap matched to smelter sales at 83 percent, and a USD forward flagged with no forecast exposure found. Illustrative.">
+        <div class="pui-win">
+          <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Hedge accounting / <b>Exposure matching</b></span><span class="pui-bar-r"><span class="pui-tag">Q2 FY27</span></span></div>
+          <div class="pui-main">
+            <table class="pui-tbl cs-m-tbl">
+              <thead><tr><th>Hedge</th><th>Exposure</th><th>Ratio</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td><b>FWD-0418</b><span class="pui-sub" style="display:block">USD 25.0m fwd</span></td><td>Copper imports, Dec 2026<span class="pui-sub" style="display:block">USD 31.2m forecast</span></td><td>80%</td><td><span class="pui-tag">Matched</span></td></tr>
+                <tr><td><b>FWD-0422</b><span class="pui-sub" style="display:block">EUR 8.0m fwd</span></td><td>Machinery import, Nov 2026<span class="pui-sub" style="display:block">EUR 8.0m firm commitment</span></td><td>100%</td><td><span class="pui-tag">Matched</span></td></tr>
+                <tr><td><b>COM-0117</b><span class="pui-sub" style="display:block">Aluminium swap 2,000 t</span></td><td>Smelter sales, Q3 FY27<span class="pui-sub" style="display:block">2,400 t forecast</span></td><td>83%</td><td><span class="pui-tag">Matched</span></td></tr>
+                <tr><td><b>FWD-0431</b><span class="pui-sub" style="display:block">USD 12.0m fwd</span></td><td>No forecast exposure found</td><td>—</td><td><span class="pui-tag amber">Flagged</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+
+    <div class="row split cs-step" id="step-3">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>03</i><span>Designate</span></p>
+        <h3>Draft designation documentation under Ind AS 109.</h3>
+        <p>For every relationship Pascal drafted the designation memo in the group's format: risk management objective, hedged item, hedging instrument, hedge ratio, economic relationship and sources of ineffectiveness. Treasury reviewed and signed each one.</p>
+      </div>
+      <div class="split-media"><div class="panel panel-cream fit"><!--mock--><div class="pui pui-narrow has-float" role="img" aria-label="Hedge designation memo HR-2026-0418 in Word: a cash flow hedge under Ind AS 109 designating a USD/INR forward against highly probable copper imports, with sections for the risk management objective, hedged item, hedging instrument and hedge ratio, and a card showing it was signed by the treasury manager.">
+        <div class="pui-win">
+          <div class="pui-bar"><span class="pui-lg">{{logo:word}}</span><span class="pui-crumb"><b>Designation · HR-2026-0418.docx</b></span><span class="pui-bar-r"><span class="pui-tag grey">Group format</span></span></div>
+          <div class="pui-doc-page">
+            <p class="pui-doc-k">Ind AS 109 · Cash flow hedge</p>
+            <p class="pui-doc-h">Designation of FWD-0418 against forecast copper imports</p>
+            <p class="pui-doc-sh">1. Risk management objective</p>
+            <p class="pui-doc-p">Fix the INR cost of 80% of highly probable USD copper purchases for December 2026.<span class="pui-cite">1</span></p>
+            <p class="pui-doc-sh">2. Hedged item · 3. Hedging instrument · 4. Hedge ratio</p>
+            <div class="pui-ln m"></div><div class="pui-ln"></div><div class="pui-ln s"></div>
+          </div>
+        </div>
+        <div class="pui-float">
+          <div class="pui-step">{{icon:check-circle}} <b>Signed · treasury manager</b></div>
+          <p class="pui-sub">Linked to confirmation, exposure file and policy</p>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+
+    <div class="row split flip cs-step" id="step-4">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>04</i><span>Test</span></p>
+        <h3>Run the quarter-end effectiveness tests.</h3>
+        <p>At quarter-end Pascal valued each hedge and its hedged item, ran the tests in the group's methodology and measured ineffectiveness. Relationships that needed rebalancing went to treasury with the numbers attached.</p>
+      </div>
+      <div class="split-media"><div class="panel fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="Effectiveness tests for 480 relationships in Q2 FY27: HR-0418 critical terms and dollar offset, effective, ineffectiveness 0.4 million rupees; HR-0422 critical terms, effective, nil; HR-0117 regression, effective with R squared 0.94, 1.1 million; HR-0431 dollar offset, rebalance, 2.8 million. Illustrative.">
+        <div class="pui-win">
+          <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Hedge accounting / <b>Effectiveness · Q2 FY27</b></span><span class="pui-bar-r"><span class="pui-tag">480 relationships</span></span></div>
+          <div class="pui-main">
+            <div class="pui-kpis">
+              <div class="pui-kpi"><small>Effective</small><b>471</b></div>
+              <div class="pui-kpi"><small>Rebalance</small><b>9</b></div>
+              <div class="pui-kpi"><small>Ineffectiveness</small><b>₹14.6m</b></div>
+            </div>
+            <table class="pui-tbl cs-m-tbl pui-mt">
+              <thead><tr><th>Relationship</th><th>Method</th><th>Result</th><th>Ineff. ₹m</th></tr></thead>
+              <tbody>
+                <tr><td><b>HR-0418</b></td><td>Critical terms, dollar offset</td><td><span class="pui-tag">Effective</span></td><td>0.4</td></tr>
+                <tr><td><b>HR-0422</b></td><td>Critical terms</td><td><span class="pui-tag">Effective</span></td><td>nil</td></tr>
+                <tr><td><b>HR-0117</b></td><td>Regression · R² 0.94</td><td><span class="pui-tag">Effective</span></td><td>1.1</td></tr>
+                <tr><td><b>HR-0431</b></td><td>Dollar offset</td><td><span class="pui-tag amber">Rebalance</span></td><td>2.8</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+
+    <div class="row split cs-step" id="step-5">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>05</i><span>Post and evidence</span></p>
+        <h3>Propose journals and build the audit pack.</h3>
+        <p>Pascal proposed the journal entries for each relationship, with the effective portion to the cash flow hedge reserve and ineffectiveness to profit and loss. The audit pack links every entry to its test, its designation memo and the original confirmation.</p>
+      </div>
+      <div class="split-media"><div class="panel panel-dark fit"><!--mock--><div class="pui pui-wide has-float float-lg" role="img" aria-label="Proposed journal for HR-0418 in rupees million: debit derivative asset 18.6, credit cash flow hedge reserve 18.2, credit other gains for ineffectiveness 0.4, waiting for group accounts approval. A card lists the Q2 FY27 audit pack: 480 designation memos, 480 test workpapers, confirmations and the journal listing.">
+        <div class="pui-win">
+          <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Journals / <b>HR-0418 · Q2 FY27</b></span><span class="pui-bar-r"><span class="pui-tag amber">Awaiting approval</span></span></div>
+          <div class="pui-main">
+            <table class="pui-tbl cs-m-je">
+              <thead><tr><th>Account · ₹ million</th><th>Dr</th><th>Cr</th></tr></thead>
+              <tbody>
+                <tr><td><b>Derivative asset · FWD-0418</b></td><td>18.6</td><td></td></tr>
+                <tr><td><b>Cash flow hedge reserve (OCI)</b></td><td></td><td>18.2</td></tr>
+                <tr><td><b>Other gains · ineffectiveness (P&amp;L)</b></td><td></td><td>0.4</td></tr>
+              </tbody>
+            </table>
+            <div class="pui-row pui-mt" style="border:0"><span class="pui-av">GA</span>Group accounts to approve<span class="pui-row-r"><span class="pui-btn pri">Approve</span></span></div>
+          </div>
+        </div>
+        <div class="pui-float">
+          <p class="pui-k">Audit pack · Q2 FY27</p>
+          <div class="pui-step">{{icon:file-check}} 480 designation memos</div>
+          <div class="pui-step">{{icon:file-check}} 480 test workpapers</div>
+          <div class="pui-step">{{icon:link}} Every journal linked to its confirmation</div>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+  </section>
+
+  <section class="row cs-two" id="results" aria-labelledby="res-title">
+    <div class="cs-copy">
+      <p class="eyebrow">Results</p>
+      <h2 class="h2" id="res-title">Two days to close, <span class="mute">every step on record.</span></h2>
+      <p>Pascal documented 480 hedge relationships under Ind AS 109. Quarter-end effectiveness testing takes two days, down from three weeks. Every designation carries a full audit trail, from the journal entry back to the bank confirmation.</p>
+      <p>Audit queries that once meant a search through email now take one click on the relationship.</p>
+    </div>
+    <div class="cs-vis"><div class="cs-vis-pad bg-cream">
+      <div class="cs-ba">
+        <div>
+          <div class="cs-ba-h"><span>Quarter-end effectiveness testing</span></div>
+          <div class="cs-ba-row"><small>Before</small><div class="cs-ba-track"><i style="--w:80%"></i><b>3 weeks</b></div></div>
+          <div class="cs-ba-row"><small>With Pascal</small><div class="cs-ba-track"><i class="on" style="--w:11%"></i><b>2 days</b></div></div>
+        </div>
+      </div>
+      <!--mock--><div class="pui pui-mt" style="margin-top:28px;max-width:none" role="img" aria-label="Audit trail for HR-2026-0418: confirmation received from Bank A on 2 July, matched to copper import exposure, designation memo signed, Q2 test effective, journal approved by group accounts.">
+        <div class="pui-win">
+          <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Audit trail / <b>HR-2026-0418</b></span><span class="pui-bar-r"><span class="pui-badge">{{icon:shield-check}} Complete</span></span></div>
+          <div class="pui-main">
+            <div class="pui-tl">
+              <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:mail}}</span><p class="pui-tl-t"><b>02 Jul</b> · Confirmation received from Bank A</p></div>
+              <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:link}}</span><p class="pui-tl-t"><b>02 Jul</b> · Matched to copper import exposure</p></div>
+              <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:file-check}}</span><p class="pui-tl-t"><b>03 Jul</b> · Designation memo signed by treasury</p></div>
+              <div class="pui-tl-i"><span class="pui-tl-ic run">{{icon:check}}</span><p class="pui-tl-t"><b>30 Sep</b> · Q2 test effective · journal approved</p></div>
+            </div>
+          </div>
+        </div>
+      </div><!--/mock-->
+    </div></div>
+  </section>
+
+  <section class="row cs-two" id="next" aria-labelledby="next-title">
+    <div class="cs-copy">
+      <p class="eyebrow">What came next</p>
+      <h2 class="h2" id="next-title">More businesses, <span class="mute">more hedge types.</span></h2>
+      <p>The group is bringing commodity hedges from two more businesses onto the same process, and adding interest rate swaps on group borrowings. See how Pascal supports <a class="cs-il" href="/solutions/treasury-hedge-accounting">treasury and hedge accounting</a>.</p>
+    </div>
+    <div class="cs-vis"><div class="cs-vis-pad">
+      <div class="cs-next-cards">
+        <a class="cs-ncard" href="/pascal-agents/autonomous-agents"><small>Pascal Agents <span class="pui-tag grey">Rolling out</span></small><b>Commodity hedges in two more businesses</b><span>Same confirmations, matching and tests, with each business's own exposure files.</span></a>
+        <a class="cs-ncard" href="/pascal-agents/workflow-library"><small>Pascal Agents <span class="pui-tag grey">In build</span></small><b>Interest rate swaps on group debt</b><span>Designation and testing for swaps that fix floating-rate borrowings.</span></a>
+        <a class="cs-ncard" href="/solutions/treasury-hedge-accounting"><small>Industries</small><b>Pascal for treasury and hedge accounting</b><span>Front, middle and back office workflows for corporate treasury teams.</span></a>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="row" id="products" aria-labelledby="prod-title">
+    <div class="row-pad-sm"><h2 class="h2" id="prod-title">Products used</h2></div>
+    <div class="cells c4 row cs-prods">
+      <a class="cell" href="/pascal-agents/data-agent#extraction"><span class="n">Data Agent</span><b>Extraction</b><span>Deal terms from confirmations and ISDA/CSA agreements.</span><span class="link">See extraction {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/pascal-agents/autonomous-agents"><span class="n">Pascal Agents</span><b>Autonomous agents</b><span>Matching, testing and journals for 480 relationships each quarter.</span><span class="link">See autonomous agents {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/ask-pascal/decision-traces"><span class="n">Ask Pascal</span><b>Decision traces</b><span>The audit trail behind every designation and entry.</span><span class="link">See decision traces {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/pascal-agents/workflow-library"><span class="n">Pascal Agents</span><b>Agentic workflow library</b><span>Designation memos and test workpapers in the group's formats.</span><span class="link">See the workflow library {{icon:arrow-right}}</span></a>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>Can Pascal prepare hedge documentation under Ind AS 109 and IFRS 9?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Pascal drafts designation documentation in your format with the elements the standard requires: risk management objective, hedged item, hedging instrument, hedge ratio and the economic relationship. Your treasury team reviews and signs each memo.</div></details>
+        <details class="faq-item"><summary>Which effectiveness test methods does Pascal support?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal runs the methods in your hedge accounting policy, such as critical terms match, dollar offset and regression, and measures ineffectiveness for each relationship.</div></details>
+        <details class="faq-item"><summary>How does Pascal read bank confirmations and ISDA/CSA terms?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal extracts deal terms from confirmations as they arrive by email or file, and reads thresholds, minimum transfer amounts and eligible collateral from ISDA and CSA agreements, each linked to its page.</div></details>
+        <details class="faq-item"><summary>Does Pascal post journal entries to our ERP?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal proposes the entries and attaches the evidence. Group accounts approves them before they are posted, so control stays with your team.</div></details>
+        <details class="faq-item"><summary>What do auditors receive at quarter-end?<span class="pm" aria-hidden="true"></span></summary><div class="ans">An audit pack with every designation memo, test workpaper and journal, each linked to the bank confirmation and exposure behind it.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See your next quarter-end close." sub="On your own hedge book."-->

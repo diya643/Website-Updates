@@ -1,0 +1,218 @@
+<!--meta
+{
+ "path": "/data-agent/vault-viewer",
+ "title": "Vault Viewer: Research Files by Company | Pascal AI",
+ "description": "Pascal's vault viewer lists broker reports, expert calls and notes by company, sector, broker and date, and opens each file at the section about your name.",
+ "crumbs": [["Pascal Data Agent", "/data-agent"], ["Vault viewer", "/data-agent/vault-viewer"]],
+ "schema": "software",
+ "name": "Pascal Data Agent vault viewer",
+ "og_kicker": "Pascal Data Agent",
+ "og_title": "A file explorer that knows your coverage",
+ "llms": "Pascal Data Agent's vault viewer: a file explorer for a firm's research that filters broker reports, expert-call transcripts and internal notes by document type, company, sector, broker and date, opens each document at the section about the selected company, explains why it is tagged, respects permissions, and serves the same view to agents over MCP (list_documents, get_document).",
+ "priority": 0.8,
+ "word_limit": 750,
+ "css": ["data-agent.css"]
+}
+-->
+<div class="frame pg-da">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Vault viewer</span></span>A file explorer <span class="mute">that knows your coverage.</span></h1>
+      <p class="lead">The vault viewer lists every broker report, expert call and internal note your firm holds, tagged by company, sector, broker and date. Open a file and it starts at the section about your company.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel fit"><!--mock--><div class="pui has-float float-lg" role="img" aria-label="A Goldman Sachs sector report, US Semis: AI capex tracker, open in the vault viewer at the NVIDIA section on pages 9 to 11 of 44. Extracted fields: NVDA rating Buy, price target $245, up $15. The passage highlights NVDA, Blackwell Ultra and CoWoS-L. A card shows why the report is tagged to NVIDIA: 23 mentions, made up of the ticker 9 times, the Blackwell Ultra product line 8 times and the name variant Nvidia 6 times. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Vault viewer / Broker reports / <b>NVDA</b></span><span class="pui-bar-r"><span class="da-seg"><span class="on">Analyst UI</span><span>Agent (MCP)</span></span></span></div>
+    <div class="pui-main">
+      <div class="da-doc-h"><span class="da-pill">Broker report</span><p class="da-doc-t">US Semis: AI capex tracker, Q3 update</p><p class="pui-sub">Goldman Sachs · Sep 30, 2026 · 44 pages</p></div>
+      <div class="da-facets">
+        <div><span>NVDA rating</span>Buy · $245 <span class="da-up" style="display:inline;font:inherit;text-transform:none;letter-spacing:0;color:var(--brand-2)">+15</span></div>
+        <div><span>Report type</span>Sector</div>
+        <div><span>Primary companies</span>NVDA, AMD, TSM +2</div>
+      </div>
+      <div class="da-span">
+        <div class="da-loc"><span><b>NVDA section</b> · pp. 9–11 of 44</span><span>Opens here</span></div>
+        <p>We raise our <mark>NVDA</mark> PT to $245 (from $230). <mark>Blackwell Ultra</mark> shipments tracked ahead of our model in August, and our supply-chain checks point to <mark>CoWoS-L</mark> as the binding constraint through 1H27.</p>
+      </div>
+      <div class="da-cos"><span class="pui-k">Companies</span><span class="pui-chip on">NVDA</span><span class="pui-chip">AMD</span><span class="pui-chip">TSM</span><span class="pui-chip">AVGO</span><span class="pui-chip">MU</span><span class="pui-sp"></span><span class="pui-sub">Primary in all 5</span></div>
+    </div>
+  </div>
+  <div class="pui-float da-why">
+    <div class="pui-float-h"><span class="pui-k">Why this is tagged to NVIDIA</span><span class="pui-tag">23 mentions</span></div>
+    <div class="pui-kv">
+      <span>Ticker · <code>NVDA</code></span><b>9×</b>
+      <span>Product line · Blackwell Ultra</span><b>8×</b>
+      <span>Name variant · Nvidia</span><b>6×</b>
+    </div>
+  </div>
+</div><!--/mock--></div></div>
+  </section>
+
+  <section class="cells row" aria-label="The vault viewer in numbers">
+    <div class="cell"><span class="stat-num">2<small>clicks</small></span><span class="stat-lbl">From a filtered list to the paragraph about your company</span></div>
+    <div class="cell"><span class="stat-num">23<small>mentions</small></span><span class="stat-lbl">Behind one NVIDIA tag, each listed by ticker, product line or name variant</span></div>
+    <div class="cell"><span class="stat-num">38<small>ms</small></span><span class="stat-lbl">For an agent to get the same list over MCP with list_documents</span></div>
+  </section>
+
+  <section class="row vv-section" id="try" aria-labelledby="try-title">
+    <div class="head">
+      <h2 class="h2" id="try-title">Try it on a sample vault. <span class="mute">Click any row.</span></h2>
+      <p>Pick a document type, add a company, change the date range and open a file. Switch to Agent (MCP) to see the same list as an agent receives it. Sample data is illustrative.</p>
+    </div>
+    <!--mock--><div class="vv" data-vv role="region" aria-label="Interactive vault viewer with sample data">
+<!--vv-static-->
+<div class="pui-win vv-win">
+<div class="pui-bar vv-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path><path d="M25 17h18v28H25z" fill="#55C390"></path></svg><span class="pui-crumb"><span class="vv-cr">Data Agent / </span><b>Vault viewer</b></span><span class="pui-tag amber vv-sample">Illustrative sample data</span>
+<span class="pui-bar-r"><span class="vv-seg vv-view" role="group" aria-label="View as"><button type="button" data-view="ui" aria-pressed="true">Analyst UI</button><button type="button" data-view="mcp" aria-pressed="false">Agent (MCP)</button></span></span></div>
+<div class="vv-app">
+<div class="vv-rail"><p class="pui-k">Document types</p><div class="vv-types" data-types=""><button type="button" class="vv-type" data-type="all" aria-pressed="true">
+<span class="vv-tn">All documents</span><span class="vv-tc">25</span>
+<span class="vv-tm">All sources · 6,711</span></button><button type="button" class="vv-type" data-type="broker" aria-pressed="false">
+<span class="vv-tn">Broker reports</span><span class="vv-tc">10</span>
+<span class="vv-tm">BluMatrix · 4,212</span></button><button type="button" class="vv-type" data-type="expert" aria-pressed="false">
+<span class="vv-tn">Expert calls</span><span class="vv-tc">6</span>
+<span class="vv-tm">Expert network transcripts · 1,947</span></button><button type="button" class="vv-type" data-type="note" aria-pressed="false">
+<span class="vv-tn">Internal research notes</span><span class="vv-tc">6</span>
+<span class="vv-tm">SharePoint · 538</span></button><button type="button" class="vv-type unc" data-type="unc" aria-pressed="false">
+<span class="vv-tn">Unclassified</span><span class="vv-tc">3</span>
+<span class="vv-tm">No type assigned · 14</span></button></div>
+<p class="vv-railnote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Counts respect your permissions</p></div>
+<div class="vv-main">
+<div class="vv-head" data-head=""><p class="vv-h">All documents</p><p class="vv-sub">Newest first · every document type</p></div>
+<div class="vv-filters">
+<div class="vv-fgrid"><div class="vv-ms" data-ms="co">
+<span class="vv-mlab" id="vv-co-l">Company</span><span class="vv-chips" data-chips="co"></span>
+<input type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="vv-co-pop" aria-labelledby="vv-co-l" placeholder="Name or ticker" autocomplete="off" spellcheck="false">
+<ul class="vv-pop" id="vv-co-pop" role="listbox" aria-labelledby="vv-co-l" hidden=""></ul>
+</div><div class="vv-ms" data-ms="sec">
+<span class="vv-mlab" id="vv-sec-l">Primary sector</span><span class="vv-chips" data-chips="sec"></span>
+<input type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="vv-sec-pop" aria-labelledby="vv-sec-l" placeholder="Any sector" autocomplete="off" spellcheck="false">
+<ul class="vv-pop" id="vv-sec-pop" role="listbox" aria-labelledby="vv-sec-l" hidden=""></ul>
+</div></div>
+<div class="vv-frow" data-frow=""><span class="vv-lab">Date</span><span class="vv-seg" role="group" aria-label="Date range"><button type="button" data-r="7" aria-pressed="false">7d</button><button type="button" data-r="30" aria-pressed="false">30d</button><button type="button" data-r="90" aria-pressed="true">90d</button><button type="button" data-r="all" aria-pressed="false">All</button><button type="button" data-r="custom" aria-pressed="false">Custom</button></span>
+<label class="vv-sel"><span>Type</span><select data-facet="" aria-label="Type"><option value="">All</option><option>Broker reports</option><option>Expert calls</option><option>Internal research notes</option><option>Unclassified</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></label></div>
+</div>
+<div class="vv-tw" data-table="" tabindex="-1"><table class="vv-tbl t-all"><thead><tr><th scope="col" class="c-date">Date</th><th scope="col" class="c-type">Type</th><th scope="col" class="c-doc">Document</th><th scope="col" class="c-co">Company</th><th scope="col" class="c-src">Source</th></tr></thead><tbody><tr tabindex="0" data-id="m6" aria-label="Open Semis: Q4 positioning review"><td class="c-date"><span class="vv-dt">Oct 3</span></td><td class="c-type"><span class="vv-pill t-note">Research note</span></td><td class="c-doc"><span class="vv-ttl">Semis: Q4 positioning review</span><span class="vv-ext">Stay long NVDA and TSM, keep AMD short into the MI400 slip. Trim MU on HBM pricing.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation, Advanced Micro Devices, Taiwan Semiconductor Mfg.">Multiple (3)</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Author RK</td></tr><tr tabindex="0" data-id="b10" aria-label="Open Microsoft: Azure capacity constraints ease in 1H27"><td class="c-date"><span class="vv-dt">Oct 1</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">Microsoft: Azure capacity constraints ease in 1H27</span><span class="vv-ext">Azure growth re-accelerates as new data center capacity comes online in 1H27.</span></td><td class="c-co"><span class="vv-tk" title="Microsoft Corporation">MSFT</span><span class="vv-s">Software &amp; cloud</span></td><td class="c-src">Bernstein</td></tr><tr tabindex="0" data-id="m4" aria-label="Open MSFT: capex digestion fears are early"><td class="c-date"><span class="vv-dt">Oct 1</span></td><td class="c-type"><span class="vv-pill t-note">Research note</span></td><td class="c-doc"><span class="vv-ttl">MSFT: capex digestion fears are early</span><span class="vv-ext">Azure capacity comes online in 1H27. Argues the market prices capex digestion two quarters too early.</span></td><td class="c-co"><span class="vv-tk" title="Microsoft Corporation">MSFT</span><span class="vv-s">Software &amp; cloud</span></td><td class="c-src">Author AL</td></tr><tr tabindex="0" data-id="b1" aria-label="Open US Semis: AI capex tracker, Q3 update"><td class="c-date"><span class="vv-dt">Sep 30</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">US Semis: AI capex tracker, Q3 update</span><span class="vv-ext">Sector update across AI compute, foundry and memory. Raises estimates on supply-chain checks.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation, Advanced Micro Devices, Taiwan Semiconductor Mfg., Broadcom Inc., Micron Technology">Multiple (5)</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Goldman Sachs</td></tr><tr tabindex="0" data-id="u1" aria-label="Open Mgmt_mtg_notes_0930.pdf"><td class="c-date"><span class="vv-dt">Sep 30</span></td><td class="c-type"><span class="vv-pill t-unc">Unclassified</span></td><td class="c-doc"><span class="vv-ttl vv-file">Mgmt_mtg_notes_0930.pdf</span><span class="vv-ext">Notes from a management meeting at an investor conference, in question-and-answer format.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation">NVDA</span><span class="vv-s">Semiconductors</span></td><td class="c-src">SharePoint</td></tr><tr tabindex="0" data-id="b2" aria-label="Open NVIDIA: Blackwell Ultra ramp ahead of plan"><td class="c-date"><span class="vv-dt">Sep 29</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">NVIDIA: Blackwell Ultra ramp ahead of plan</span><span class="vv-ext">Raises FQ3 and FQ4 estimates on GB300 rack shipments. Gross margin held at 74% through the product transition.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation">NVDA</span><span class="vv-s">Semiconductors</span></td><td class="c-src">J.P. Morgan</td></tr><tr tabindex="0" data-id="e5" aria-label="Open Azure capacity planning for 2027"><td class="c-date"><span class="vv-dt">Sep 29</span></td><td class="c-type"><span class="vv-pill t-expert">Expert call</span></td><td class="c-doc"><span class="vv-ttl">Azure capacity planning for 2027</span><span class="vv-ext">How a hyperscaler sizes GPU orders against power and site availability.</span></td><td class="c-co"><span class="vv-tk" title="Microsoft Corporation">MSFT</span><span class="vv-s">Software &amp; cloud</span></td><td class="c-src">GLG</td></tr><tr tabindex="0" data-id="m1" aria-label="Open NVDA: Q3 update, raising conviction"><td class="c-date"><span class="vv-dt">Sep 27</span></td><td class="c-type"><span class="vv-pill t-note">Research note</span></td><td class="c-doc"><span class="vv-ttl">NVDA: Q3 update, raising conviction</span><span class="vv-ext">Thesis intact: supply is the constraint. Raises conviction to High and model PT to $240.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation">NVDA</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Author RK</td></tr><tr tabindex="0" data-id="b3" aria-label="Open TSMC: CoWoS capacity raise and 2027 outlook"><td class="c-date"><span class="vv-dt">Sep 26</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">TSMC: CoWoS capacity raise and 2027 outlook</span><span class="vv-ext">Raises 2027 CoWoS capacity estimate. AI accelerator revenue now 28% of 2027 sales.</span></td><td class="c-co"><span class="vv-tk" title="Taiwan Semiconductor Mfg.">TSM</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Morgan Stanley</td></tr><tr tabindex="0" data-id="u2" aria-label="Open Untitled (3).docx"><td class="c-date"><span class="vv-dt">Sep 26</span></td><td class="c-type"><span class="vv-pill t-unc">Unclassified</span></td><td class="c-doc"><span class="vv-ttl vv-file">Untitled (3).docx</span><span class="vv-ext">Short draft comparing MI400 and Blackwell rack pricing. No author or date in the file.</span></td><td class="c-co"><span class="vv-tk" title="Advanced Micro Devices">AMD</span><span class="vv-s">Semiconductors</span></td><td class="c-src">SharePoint</td></tr><tr tabindex="0" data-id="e1" aria-label="Open CoWoS capacity and allocation into 2027"><td class="c-date"><span class="vv-dt">Sep 25</span></td><td class="c-type"><span class="vv-pill t-expert">Expert call</span></td><td class="c-doc"><span class="vv-ttl">CoWoS capacity and allocation into 2027</span><span class="vv-ext">Capacity build, allocation process and customer mix for advanced packaging.</span></td><td class="c-co"><span class="vv-tk" title="Taiwan Semiconductor Mfg., NVIDIA Corporation">Multiple (2)</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Third Bridge</td></tr><tr tabindex="0" data-id="b4" aria-label="Open AMD: MI400 checks mixed, stay on the sidelines"><td class="c-date"><span class="vv-dt">Sep 24</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">AMD: MI400 checks mixed, stay on the sidelines</span><span class="vv-ext">Cuts PT on later MI400 timing. Share gain versus NVIDIA pushed to 2H27.</span></td><td class="c-co"><span class="vv-tk" title="Advanced Micro Devices">AMD</span><span class="vv-s">Semiconductors</span></td><td class="c-src">UBS</td></tr><tr tabindex="0" data-id="b9" aria-label="Open ASML: High-NA orders pull forward"><td class="c-date"><span class="vv-dt">Sep 23</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">ASML: High-NA orders pull forward</span><span class="vv-ext">Two more High-NA orders in Q3. Raises 2027 EUV shipment estimate to 62 tools.</span></td><td class="c-co"><span class="vv-tk" title="ASML Holding">ASML</span><span class="vv-s">Semiconductor equipment</span></td><td class="c-src">Barclays</td></tr><tr tabindex="0" data-id="m2" aria-label="Open AMD: short pitch on MI400 slip"><td class="c-date"><span class="vv-dt">Sep 22</span></td><td class="c-type"><span class="vv-pill t-note">Research note</span></td><td class="c-doc"><span class="vv-ttl">AMD: short pitch on MI400 slip</span><span class="vv-ext">Short idea: MI400 volume slips to 2H27, which consensus does not price in.</span></td><td class="c-co"><span class="vv-tk" title="Advanced Micro Devices">AMD</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Author AL</td></tr><tr tabindex="0" data-id="u3" aria-label="Open BluMatrix_attach_88213.pdf"><td class="c-date"><span class="vv-dt">Sep 22</span></td><td class="c-type"><span class="vv-pill t-unc">Unclassified</span></td><td class="c-doc"><span class="vv-ttl vv-file">BluMatrix_attach_88213.pdf</span><span class="vv-ext">Monthly revenue table for TSMC with no cover page or broker disclosures.</span></td><td class="c-co"><span class="vv-tk" title="Taiwan Semiconductor Mfg.">TSM</span><span class="vv-s">Semiconductors</span></td><td class="c-src">BluMatrix</td></tr><tr tabindex="0" data-id="b5" aria-label="Open Memory: HBM4 pricing reset for 2027"><td class="c-date"><span class="vv-dt">Sep 19</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">Memory: HBM4 pricing reset for 2027</span><span class="vv-ext">HBM4 contract pricing for 2027 settles higher than feared.</span></td><td class="c-co"><span class="vv-tk" title="Micron Technology">MU</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Deutsche Bank</td></tr><tr tabindex="0" data-id="m5" aria-label="Open ASML: initiate on the High-NA cycle"><td class="c-date"><span class="vv-dt">Sep 18</span></td><td class="c-type"><span class="vv-pill t-note">Research note</span></td><td class="c-doc"><span class="vv-ttl">ASML: initiate on the High-NA cycle</span><span class="vv-ext">High-NA EUV orders from leading-edge fabs set up a 2027–28 upgrade cycle.</span></td><td class="c-co"><span class="vv-tk" title="ASML Holding">ASML</span><span class="vv-s">Semiconductor equipment</span></td><td class="c-src">Author SP</td></tr><tr tabindex="0" data-id="e2" aria-label="Open Hyperscaler GPU procurement for 2027"><td class="c-date"><span class="vv-dt">Sep 17</span></td><td class="c-type"><span class="vv-pill t-expert">Expert call</span></td><td class="c-doc"><span class="vv-ttl">Hyperscaler GPU procurement for 2027</span><span class="vv-ext">How a large cloud buyer splits spend between merchant GPUs and custom silicon.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation, Advanced Micro Devices, Broadcom Inc.">Multiple (3)</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Tegus</td></tr><tr tabindex="0" data-id="e6" aria-label="Open EUV tool lead times and High-NA adoption"><td class="c-date"><span class="vv-dt">Sep 15</span></td><td class="c-type"><span class="vv-pill t-expert">Expert call</span></td><td class="c-doc"><span class="vv-ttl">EUV tool lead times and High-NA adoption</span><span class="vv-ext">Order book, lead times and which fabs adopt High-NA first.</span></td><td class="c-co"><span class="vv-tk" title="ASML Holding">ASML</span><span class="vv-s">Semiconductor equipment</span></td><td class="c-src">Third Bridge</td></tr><tr tabindex="0" data-id="m3" aria-label="Open TSMC: IC note, add on CoWoS"><td class="c-date"><span class="vv-dt">Sep 15</span></td><td class="c-type"><span class="vv-pill t-note">Research note</span></td><td class="c-doc"><span class="vv-ttl">TSMC: IC note, add on CoWoS</span><span class="vv-ext">Recommends adding to the position as CoWoS capacity raises 2027 revenue visibility.</span></td><td class="c-co"><span class="vv-tk" title="Taiwan Semiconductor Mfg.">TSM</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Author RK</td></tr><tr tabindex="0" data-id="b6" aria-label="Open Broadcom: custom ASIC pipeline widens"><td class="c-date"><span class="vv-dt">Sep 12</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">Broadcom: custom ASIC pipeline widens</span><span class="vv-ext">Custom accelerator pipeline now spans five hyperscale customers.</span></td><td class="c-co"><span class="vv-tk" title="Broadcom Inc.">AVGO</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Goldman Sachs</td></tr><tr tabindex="0" data-id="e4" aria-label="Open Substrate supply for AI accelerators"><td class="c-date"><span class="vv-dt">Sep 9</span></td><td class="c-type"><span class="vv-pill t-expert">Expert call</span></td><td class="c-doc"><span class="vv-ttl">Substrate supply for AI accelerators</span><span class="vv-ext">ABF substrate lead times and qualification.</span></td><td class="c-co"><span class="vv-tk" title="Taiwan Semiconductor Mfg.">TSM</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Third Bridge</td></tr><tr tabindex="0" data-id="e3" aria-label="Open MI400 customer pipeline"><td class="c-date"><span class="vv-dt">Sep 6</span></td><td class="c-type"><span class="vv-pill t-expert">Expert call</span></td><td class="c-doc"><span class="vv-ttl">MI400 customer pipeline</span><span class="vv-ext">AMD accelerator pipeline and competitive dynamics with NVIDIA.</span></td><td class="c-co"><span class="vv-tk" title="Advanced Micro Devices">AMD</span><span class="vv-s">Semiconductors</span></td><td class="c-src">AlphaSights</td></tr><tr tabindex="0" data-id="b7" aria-label="Open Semis flash: revised export licence rules"><td class="c-date"><span class="vv-dt">Sep 5</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">Semis flash: revised export licence rules</span><span class="vv-ext">First read on the revised export licence framework. Sees a $1–2B annual headwind for NVIDIA.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation, Advanced Micro Devices">Multiple (2)</span><span class="vv-s">Semiconductors</span></td><td class="c-src">J.P. Morgan</td></tr><tr tabindex="0" data-id="b8" aria-label="Open NVIDIA: the gross margin debate"><td class="c-date"><span class="vv-dt">Sep 4</span></td><td class="c-type"><span class="vv-pill t-broker">Broker report</span></td><td class="c-doc"><span class="vv-ttl">NVIDIA: the gross margin debate</span><span class="vv-ext">Argues rack-scale mix caps gross margin near 73%.</span></td><td class="c-co"><span class="vv-tk" title="NVIDIA Corporation">NVDA</span><span class="vv-s">Semiconductors</span></td><td class="c-src">Morgan Stanley</td></tr></tbody></table></div>
+<div class="vv-foot" data-foot=""><span><b>25</b> of 25 sample documents · 6,711 in the vault</span><span class="vv-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>3 more hidden by your permissions (unlicensed broker, restricted note)</span></div>
+<form class="vv-ask" data-ask="">
+<div class="vv-askrow"><span class="vv-askic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path></svg></span><input type="text" aria-label="Ask Pascal about these documents" placeholder="Ask about these 25 documents"><button type="submit" class="pui-btn pri">Ask Pascal</button></div>
+<div class="vv-hint" data-hint=""><span>Scoped to this list</span><button type="button" class="vv-sugg">Summarise everything new this week</button><button type="button" class="vv-sugg">Which names had the most new documents?</button></div>
+</form>
+</div>
+</div>
+<div class="vv-drawer-host" data-drawer=""></div>
+<div class="vv-toast" role="status" aria-live="polite" hidden=""></div>
+</div>
+<!--/vv-static-->
+    </div><!--/mock-->
+  </section>
+
+  <section class="row" id="filters" aria-labelledby="filters-title">
+    <div class="row-pad-sm"><h2 class="h2" id="filters-title">Four filters. <span class="mute">Every one built from the documents.</span></h2></div>
+    <div class="cells c4 row">
+      <div class="cell"><span class="n">01</span><b>Document type</b><span>Broker report, expert call, internal note or anything in your own taxonomy. Files the classifier is unsure about wait under Unclassified.</span></div>
+      <div class="cell"><span class="n">02</span><b>Company and sector</b><span>Type a name, ticker or product line. Pascal separates the companies a file is about from the ones it only mentions.</span></div>
+      <div class="cell"><span class="n">03</span><b>Date</b><span>Last 7, 30 or 90 days, or a custom range, using the date that matters for the type: published, call date or written.</span></div>
+      <div class="cell"><span class="n">04</span><b>Type fields</b><span>Each type brings its own columns and filter: broker and price target, expert relationship, note stance and conviction.</span></div>
+    </div>
+  </section>
+
+  <section class="row split" id="permissions" aria-labelledby="f1">
+    <div class="split-copy">
+      <p class="eyebrow">Permissions</p>
+      <h2 class="h2" id="f1">Two analysts, <span class="mute">two different vaults.</span></h2>
+      <p>Lists, counts and answers follow each user's licences and source permissions. The viewer tells you how many files it held back and why, without showing them.</p>
+      <a class="link" href="/platform/context-graph">See permission-based access {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui" role="img" aria-label="The same filter, broker reports on NVIDIA in the last 30 days, for two analysts. The semiconductor analyst, licensed for all brokers, sees 3 reports from Goldman Sachs, J.P. Morgan and Morgan Stanley. The generalist analyst sees 2 reports; the Morgan Stanley report is hidden by permissions because the broker is unlicensed. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Vault viewer / <b>Access check</b></span><span class="pui-bar-r"><span class="pui-badge">{{icon:shield}} User and source level</span></span></div>
+    <div class="pui-main">
+      <div class="da-q">{{icon:filter}}Broker reports · NVDA · last 30 days</div>
+      <div class="da-acc">
+        <div class="da-acc-c">
+          <div class="da-acc-h"><span class="pui-av" style="background:#279C7B">SA</span><span><b>Semis analyst</b><span class="pui-sub">All broker licences</span></span></div>
+          <div class="pui-row">Goldman Sachs<span class="r">Sep 30</span></div>
+          <div class="pui-row">J.P. Morgan<span class="r">Sep 29</span></div>
+          <div class="pui-row">Morgan Stanley<span class="r">Sep 26</span></div>
+          <p class="pui-badge" style="margin:4px 0 4px">{{icon:check-circle}} 3 reports</p>
+        </div>
+        <div class="da-acc-c">
+          <div class="da-acc-h"><span class="pui-av">GA</span><span><b>Generalist analyst</b><span class="pui-sub">Limited broker licences</span></span></div>
+          <div class="pui-row">Goldman Sachs<span class="r">Sep 30</span></div>
+          <div class="pui-row">J.P. Morgan<span class="r">Sep 29</span></div>
+          <div class="pui-row off"><span class="pui-lock">{{icon:lock}} Hidden</span><span class="r">–</span></div>
+          <p class="da-acc-f">{{icon:lock}} 1 more hidden (unlicensed broker)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" id="mcp" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">Agent (MCP)</p>
+      <h2 class="h2" id="f2">The same view, <span class="mute">for your agents.</span></h2>
+      <p>Agents call list_documents with the same filters an analyst clicks, then get_document for the section about a company. Permissions apply to every call.</p>
+      <a class="link" href="/platform/mcp-apis">See MCP &amp; APIs {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui" role="img" aria-label="An agent calls list_documents with document type broker, company NVDA, broker Goldman Sachs and the last 30 days. The response returns 1 document, US Semis: AI capex tracker, Q3 update, dated 30 September 2026, with the NVDA rating Buy, price target 245 and price target change 15. Illustrative data.">
+  <div class="pui-win da-term">
+    <div class="da-term-h"><span class="da-dot"></span>MCP · <b>list_documents</b><span class="r">200 · 38 ms</span></div>
+<pre class="da-json"><span class="c">// "Every Goldman Sachs note on NVDA in the last 30 days"</span>
+<span class="k">"args"</span>: {
+  <span class="k">"doc_type"</span>: <span class="s">"broker"</span>,
+  <span class="k">"companies"</span>: [<span class="s">"NVDA"</span>],
+  <span class="k">"broker"</span>: <span class="s">"Goldman Sachs"</span>,
+  <span class="k">"since_days"</span>: <span class="n">30</span>
+},
+<span class="k">"response"</span>: {
+  <span class="k">"total"</span>: <span class="n">1</span>,
+  <span class="k">"documents"</span>: [{
+    <span class="k">"doc_id"</span>: <span class="s">"b1"</span>,
+    <span class="k">"name"</span>: <span class="s">"US Semis: AI capex tracker, Q3 update"</span>,
+    <span class="k">"date"</span>: <span class="s">"2026-09-30"</span>,
+    <span class="k">"ratings"</span>: { <span class="k">"NVDA"</span>: { <span class="k">"rating"</span>: <span class="s">"Buy"</span>, <span class="k">"pt"</span>: <span class="n">245</span>, <span class="k">"pt_change"</span>: <span class="n">15</span> } }
+  }]
+}</pre>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="more-title">
+    <div class="row-pad-sm"><h2 class="h2" id="more-title">More from <span class="mute">Pascal Data Agent.</span></h2></div>
+    <div class="cells row">
+      <a class="cell" href="/data-agent"><span class="n">Overview</span><b>Pascal Data Agent</b><span>How your files become structured data for analysts and agents.</span><span class="link">Read the overview {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/data-agent/classifier"><span class="n">Classify</span><b>Document classifier</b><span>The types behind the left rail, with confidence and a review queue.</span><span class="link">See the classifier {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/data-agent/extraction"><span class="n">Extract</span><b>Extraction &amp; table editor</b><span>The fields behind every column, each linked to its page.</span><span class="link">See extraction {{icon:arrow-right}}</span></a>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div>
+        <h2 class="h2" id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item"><summary>Which sources feed the vault viewer?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Broker research portals such as BluMatrix, expert network transcripts, SharePoint and other drives, and email attachments. Each source keeps syncing, and the viewer shows when it last did.</div></details>
+        <details class="faq-item"><summary>How does Pascal decide which company a file is about?<span class="pm" aria-hidden="true"></span></summary><div class="ans">It counts tickers, name variants and product lines mapped to each company, then marks the companies a file is about and the ones it only mentions. "Why this is tagged" lists every signal.</div></details>
+        <details class="faq-item"><summary>Will analysts see files they are not licensed for?<span class="pm" aria-hidden="true"></span></summary><div class="ans">No. Lists, counts, sections and Ask Pascal answers all follow each user's permissions. The footer shows how many files were held back and the reason.</div></details>
+        <details class="faq-item"><summary>Can I ask questions about the files in a list?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Ask Pascal sits under the table and answers from the files in the current list, with citations to the page or timestamp.</div></details>
+        <details class="faq-item"><summary>How do agents get the same view?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Through Pascal's MCP server. list_documents takes the same filters as the viewer and get_document returns the section about a company, under the calling user's permissions.</div></details>
+        <details class="faq-item"><summary>Can we add our own document types and columns?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Types come from your taxonomy in the classifier, and the columns for each type come from the fields you define for extraction.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="Open your own vault" sub="at the page that matters."-->
+<script src="/assets/pages/vault-viewer.js" defer></script>

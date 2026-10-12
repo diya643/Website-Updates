@@ -1,0 +1,220 @@
+<!--meta
+{
+ "path": "/data-agent/extraction",
+ "title": "Field Extraction and PDF Table Editor | Pascal AI",
+ "description": "Pascal extracts the fields you define for each document type and pulls PDF tables into an editor, keeping every correction with provenance to the page.",
+ "crumbs": [["Pascal Data Agent", "/data-agent"], ["Extraction & table editor", "/data-agent/extraction"]],
+ "schema": "software",
+ "name": "Pascal Data Agent extraction and table editor",
+ "og_kicker": "Pascal Data Agent",
+ "og_title": "Every field and table, traced to its page",
+ "llms": "Pascal Data Agent's extraction and table editor: schema-defined field extraction per document type (broker report rating, price target, price target change and estimates; credit agreement covenants; expert call speaker, employer and relationship), table extraction from PDFs including financial statements and rating tables, and an editable table editor where analyst corrections are kept with the original value, the editor and provenance to the page region.",
+ "priority": 0.8,
+ "css": ["data-agent.css"]
+}
+-->
+<div class="frame pg-da">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Extraction &amp; table editor</span></span>Every field and table, <span class="mute">traced to its page.</span></h1>
+      <p class="lead">Pascal extracts the fields your firm defines for each document type and pulls tables out of PDFs into an editor. When an analyst corrects a cell, the fix is kept with a link to the page.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel fit"><!--mock--><div class="pui has-float float-lg" role="img" aria-label="A broker report PDF open at page 11 of 44, Exhibit 7: NVDA estimate changes, beside the extracted table in Pascal's table editor. The FY27E new EPS cell, 6.84, is linked to the same region on the page, marked A. An edit history shows Pascal extracted the table from page 11 at 10:02 reading 6.34 with 0.71 confidence, and an analyst corrected it to 6.84 at 10:14, with the original value kept. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><span class="pui-lg w">{{logo:pdf}}</span><span class="pui-crumb">Extraction / <b>US Semis: AI capex tracker</b></span><span class="pui-bar-r"><span class="pui-tag grey">Page 11 of 44</span></span></div>
+    <div class="ex-split">
+      <div class="pui-pdf ex-pdf">
+        <div class="pui-sheet">
+          <p class="pui-sheet-h">Exhibit 7: NVDA estimate changes</p>
+          <table class="ex-ptab">
+            <thead><tr><th>$M, FY Jan</th><th>FY27E old</th><th>FY27E new</th></tr></thead>
+            <tbody>
+              <tr><td>Revenue</td><td>301,240</td><td>318,600</td></tr>
+              <tr><td>Gross margin</td><td>73.8%</td><td>74.2%</td></tr>
+              <tr><td>EPS (adj.)</td><td>6.52</td><td><span class="ex-region">6.84<span class="ex-pin">A</span></span></td></tr>
+              <tr><td>Data center</td><td>268,100</td><td>284,300</td></tr>
+            </tbody>
+          </table>
+          <div class="pui-ln m"></div><div class="pui-ln s"></div>
+          <p class="ex-src">Source: company data, broker estimates</p>
+        </div>
+      </div>
+      <div class="ex-ed">
+        <div class="ex-ed-h"><span class="pui-k">Table 7 · 4 × 3</span><span class="pui-badge">{{icon:check-circle}} 11 of 12 verified</span></div>
+        <table class="pui-tbl ex-grid">
+          <thead><tr><th></th><th class="r">FY27E old</th><th class="r">FY27E new</th></tr></thead>
+          <tbody>
+            <tr><td>Revenue</td><td class="r">301,240</td><td class="r">318,600</td></tr>
+            <tr><td>Gross margin</td><td class="r">73.8%</td><td class="r">74.2%</td></tr>
+            <tr><td>EPS (adj.)</td><td class="r">6.52</td><td class="r ex-sel"><span class="ex-pin">A</span><s>6.34</s> 6.84</td></tr>
+            <tr><td>Data center</td><td class="r">268,100</td><td class="r">284,300</td></tr>
+          </tbody>
+        </table>
+        <p class="ex-cellref">{{icon:link}} Cell C3 · p. 11, Exhibit 7, row 3</p>
+      </div>
+    </div>
+  </div>
+  <div class="pui-float left ex-hist">
+    <p class="pui-k">Edit history · cell C3</p>
+    <div class="ex-h-r"><span class="pui-av" style="background:#279C7B">SA</span><span><b>Semis analyst</b> changed 6.34 → 6.84<span class="pui-sub">Digit misread · original kept</span></span><span class="pui-tl-m">10:14</span></div>
+    <div class="ex-h-r"><span class="pui-av" style="background:#0B1F21">P</span><span><b>Pascal</b> extracted from p. 11<span class="pui-sub">Confidence 0.71 · flagged for review</span></span><span class="pui-tl-m">10:02</span></div>
+  </div>
+</div><!--/mock--></div></div>
+  </section>
+
+  <section class="cells row" aria-label="Extraction in numbers">
+    <div class="cell"><span class="stat-num">14<small>fields</small></span><span class="stat-lbl">In the default broker report schema, from rating and price target to estimate changes</span></div>
+    <div class="cell"><span class="stat-num">38<small>tables</small></span><span class="stat-lbl">Pulled from a 180-page annual report, each stored with its page and position</span></div>
+    <div class="cell"><span class="stat-num">4<small>min</small></span><span class="stat-lbl">For an analyst to check and correct a 40-row income statement</span></div>
+  </section>
+
+  <section class="row split" id="schemas" aria-labelledby="f1">
+    <div class="split-copy">
+      <p class="eyebrow">Schemas per document type</p>
+      <h2 class="h2" id="f1">Define the fields once. <span class="mute">Get them from every file.</span></h2>
+      <p>Each document type has a schema. Broker reports return rating, price target and estimates. Credit agreements return covenants. Expert calls return speaker, employer and relationship.</p>
+      <a class="link" href="/data-agent/classifier">See how types are set {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui ex-schema">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Extraction / <b>Schemas</b></span><span class="pui-bar-r"><span class="pui-btn">{{icon:plus}} Add field</span></span></div>
+    <div class="ex-tabs" role="tablist" aria-label="Document type">
+      <button type="button" role="tab" id="sch-t1" aria-controls="sch-p1" aria-selected="true">Broker report</button>
+      <button type="button" role="tab" id="sch-t2" aria-controls="sch-p2" aria-selected="false" tabindex="-1">Credit agreement</button>
+      <button type="button" role="tab" id="sch-t3" aria-controls="sch-p3" aria-selected="false" tabindex="-1">Expert call</button>
+    </div>
+    <div id="sch-p1" role="tabpanel" aria-labelledby="sch-t1">
+      <table class="pui-tbl ex-fields" aria-label="Broker report schema, with values from a Goldman Sachs semis report. Illustrative data.">
+        <thead><tr><th>Field</th><th>Type</th><th>Value</th><th class="r">Source</th></tr></thead>
+        <tbody>
+          <tr><td>rating</td><td>enum</td><td><b>Buy</b></td><td class="r"><span class="pui-cite">p.1</span></td></tr>
+          <tr><td>price_target</td><td>currency</td><td><b>$245</b></td><td class="r"><span class="pui-cite">p.1</span></td></tr>
+          <tr><td>pt_change</td><td>number</td><td><b class="da-up">+15</b></td><td class="r"><span class="pui-cite">p.1</span></td></tr>
+          <tr><td>eps_fy27e</td><td>number</td><td><b>6.84</b> <span class="pui-tag amber">Edited</span></td><td class="r"><span class="pui-cite">p.11</span></td></tr>
+          <tr><td>revenue_fy27e</td><td>currency</td><td><b>$318.6B</b></td><td class="r"><span class="pui-cite">p.11</span></td></tr>
+          <tr><td>catalysts</td><td>text</td><td><b>Q3 print, Nov 19</b></td><td class="r"><span class="pui-cite">p.2</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sch-p2" role="tabpanel" aria-labelledby="sch-t2" hidden>
+      <table class="pui-tbl ex-fields" aria-label="Credit agreement schema, with values from a Project Atlas facility agreement. Illustrative data.">
+        <thead><tr><th>Field</th><th>Type</th><th>Value</th><th class="r">Source</th></tr></thead>
+        <tbody>
+          <tr><td>max_net_debt_ebitda</td><td>covenant</td><td><b>4.50x, 4.00x from 2028</b></td><td class="r"><span class="pui-cite">§7.11(a)</span></td></tr>
+          <tr><td>min_interest_cover</td><td>covenant</td><td><b>3.00x</b></td><td class="r"><span class="pui-cite">§7.11(b)</span></td></tr>
+          <tr><td>restricted_payments</td><td>basket</td><td><b>$50M per year</b></td><td class="r"><span class="pui-cite">§7.06</span></td></tr>
+          <tr><td>change_of_control</td><td>clause</td><td><b>Event of default</b></td><td class="r"><span class="pui-cite">§8.01(k)</span></td></tr>
+          <tr><td>maturity</td><td>date</td><td><b>Sep 2031</b></td><td class="r"><span class="pui-cite">§2.05</span></td></tr>
+          <tr><td>margin_grid</td><td>table</td><td><b>SOFR + 275–325 bp</b></td><td class="r"><span class="pui-cite">Sch. 1</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sch-p3" role="tabpanel" aria-labelledby="sch-t3" hidden>
+      <table class="pui-tbl ex-fields" aria-label="Expert call schema, with values from a Third Bridge transcript on CoWoS capacity. Illustrative data.">
+        <thead><tr><th>Field</th><th>Type</th><th>Value</th><th class="r">Source</th></tr></thead>
+        <tbody>
+          <tr><td>speaker_title</td><td>text</td><td><b>Former Director, Advanced Packaging</b></td><td class="r"><span class="pui-cite">00:40</span></td></tr>
+          <tr><td>employer</td><td>entity</td><td><b>TSMC</b></td><td class="r"><span class="pui-cite">00:52</span></td></tr>
+          <tr><td>relationship</td><td>enum</td><td><b>Ex-employee</b></td><td class="r"><span class="pui-cite">00:52</span></td></tr>
+          <tr><td>left_role</td><td>date</td><td><b>Mar 2025</b></td><td class="r"><span class="pui-cite">01:10</span></td></tr>
+          <tr><td>companies</td><td>ticker[]</td><td><b>TSM, NVDA, AVGO</b></td><td class="r"><span class="pui-cite">All</span></td></tr>
+          <tr><td>compliance_check</td><td>enum</td><td><b>Passed</b></td><td class="r"><span class="pui-cite">Header</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" id="tables" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">Tables from PDFs</p>
+      <h2 class="h2" id="f2">Tables come out <span class="mute">as tables.</span></h2>
+      <p>Financial statements, segment tables and broker rating tables are found on the page and rebuilt with merged headers and footnotes intact. Each one keeps its page and position.</p>
+      <a class="link" href="/data-agent/vault-viewer">See where tables land {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui" role="img" aria-label="Table extraction for Atlas Holdings FY25 audited accounts, a 180-page PDF: 38 tables found. Consolidated income statement on page 47, 40 rows by 5 columns, verified. Balance sheet on page 49, 52 by 4, verified. Segment revenue on page 52, 14 by 6, with 2 cells to check. Debt maturity profile on page 88, 9 by 7, verified. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><span class="pui-lg w">{{logo:pdf}}</span><span class="pui-crumb">Extraction / <b>Atlas Holdings FY25 accounts.pdf</b></span><span class="pui-bar-r"><span class="pui-tag">38 tables</span></span></div>
+    <div class="pui-main ex-found">
+      <div class="ex-t"><span class="ex-th"><i style="top:30%;height:46%"></i></span><span><b>Consolidated income statement</b><span class="pui-sub">p. 47 · 40 × 5 · 2 footnotes</span></span><span class="pui-tag">Verified</span></div>
+      <div class="ex-t"><span class="ex-th"><i style="top:16%;height:68%"></i></span><span><b>Balance sheet</b><span class="pui-sub">p. 49 · 52 × 4 · merged headers</span></span><span class="pui-tag">Verified</span></div>
+      <div class="ex-t on"><span class="ex-th"><i style="top:48%;height:30%"></i></span><span><b>Segment revenue</b><span class="pui-sub">p. 52 · 14 × 6 · 1 footnote</span></span><span class="pui-tag amber">2 cells to check</span></div>
+      <div class="ex-t"><span class="ex-th"><i style="top:22%;height:24%"></i></span><span><b>Debt maturity profile</b><span class="pui-sub">p. 88 · 9 × 7</span></span><span class="pui-tag">Verified</span></div>
+      <div class="ex-more"><span class="pui-sub">34 more tables</span><span class="pui-sp"></span><span class="pui-chip">{{logo:excel}} Export all</span></div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" id="editor" aria-labelledby="f3">
+    <div class="split-copy">
+      <p class="eyebrow">Table editor</p>
+      <h2 class="h2" id="f3">Correct a cell. <span class="mute">Keep the trail.</span></h2>
+      <p>Analysts fix a value in the editor. Pascal keeps the original, the correction, who made it and the page region, and every agent reads the corrected number.</p>
+      <a class="link" href="/platform/mcp-apis">See how agents read it {{icon:arrow-right}}</a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui has-float float-lg ex-pad" role="img" aria-label="The table editor showing the Atlas Holdings segment revenue table from page 52, in $M for FY23 to FY25: Engineered components 4,812, 5,206 and 5,630; Flow control 3,940, 4,105 and 4,288; Aftermarket services 2,377, 2,514 and 2,602, corrected by an analyst from 2,062; Total 11,129, 11,825 and 12,520. A get_document response shows the corrected value with the original value, page 52, its position on the page and the editor. Illustrative data.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Table editor / <b>Segment revenue · p. 52</b></span><span class="pui-bar-r"><span class="pui-tag amber">1 edit</span></span></div>
+    <div class="ex-sheet">
+      <table class="ex-xl">
+        <thead><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th></tr><tr><th>1</th><th>$M</th><th class="r">FY23</th><th class="r">FY24</th><th class="r">FY25</th></tr></thead>
+        <tbody>
+          <tr><th>2</th><td>Engineered components</td><td class="r">4,812</td><td class="r">5,206</td><td class="r">5,630</td></tr>
+          <tr><th>3</th><td>Flow control</td><td class="r">3,940</td><td class="r">4,105</td><td class="r">4,288</td></tr>
+          <tr><th>4</th><td>Aftermarket services</td><td class="r">2,377</td><td class="r">2,514</td><td class="r ex-sel"><s>2,062</s> 2,602</td></tr>
+          <tr class="tot"><th>5</th><td>Total</td><td class="r">11,129</td><td class="r">11,825</td><td class="r">12,520</td></tr>
+        </tbody>
+      </table>
+      <div class="ex-fx"><span class="ex-fx-k">D4</span><span>2,602</span><span class="pui-sp"></span><span class="pui-sub">Total now ties to p. 52</span>{{icon:check-circle}}</div>
+    </div>
+  </div>
+  <div class="pui-float ex-prov da-term">
+    <div class="da-term-h"><span class="da-dot"></span>MCP · <b>get_document</b></div>
+<pre class="da-json"><span class="k">"aftermarket_services_fy25"</span>: {
+  <span class="k">"value"</span>: <span class="n">2602</span>, <span class="k">"original"</span>: <span class="n">2062</span>,
+  <span class="k">"page"</span>: <span class="n">52</span>, <span class="k">"bbox"</span>: [<span class="n">412</span>, <span class="n">318</span>, <span class="n">468</span>, <span class="n">331</span>],
+  <span class="k">"edited_by"</span>: <span class="s">"credit analyst"</span>
+}</pre>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="more-title">
+    <div class="row-pad-sm"><h2 class="h2" id="more-title">More from <span class="mute">Pascal Data Agent.</span></h2></div>
+    <div class="cells row">
+      <a class="cell" href="/data-agent"><span class="n">Overview</span><b>Pascal Data Agent</b><span>How your files become structured data for analysts and agents.</span><span class="link">Read the overview {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/data-agent/vault-viewer"><span class="n">Browse</span><b>Vault viewer</b><span>Extracted fields become the columns analysts filter and sort by.</span><span class="link">Try the vault viewer {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/data-agent/classifier"><span class="n">Classify</span><b>Document classifier</b><span>The type that decides which schema a file gets.</span><span class="link">See the classifier {{icon:arrow-right}}</span></a>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div>
+        <h2 class="h2" id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item"><summary>Which fields can Pascal extract?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Any field you can point to in a document. Pascal ships schemas for broker reports, expert calls, research notes, credit agreements, NDAs and DDQs, and your team can add fields or new types.</div></details>
+        <details class="faq-item"><summary>Does it work on scanned PDFs?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Scanned pages are read with OCR and layout detection. Cells read with low confidence are flagged in the editor for a person to check.</div></details>
+        <details class="faq-item"><summary>What happens when an analyst corrects a value?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The corrected value replaces the extracted one everywhere it is used. Pascal keeps the original, the editor, the time and the page region alongside it.</div></details>
+        <details class="faq-item"><summary>Can we define our own schemas?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Add, rename or remove fields for any document type, set each field's type, and mark which fields need a person to verify them.</div></details>
+        <details class="faq-item"><summary>How do extracted tables reach Excel or our agents?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Export any table to Excel from the editor. Agents read fields and tables over MCP with get_document, including the page and position of every value.</div></details>
+        <details class="faq-item"><summary>How do we check a value is right?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Click any cell or field to open the page with the source region highlighted. Totals that do not tie are flagged automatically.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="Pull your own tables" sub="with every page linked."-->

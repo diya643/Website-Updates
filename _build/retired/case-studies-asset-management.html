@@ -1,0 +1,260 @@
+<!--meta
+{
+ "path": "/case-studies/asset-management",
+ "title": "Asset Manager Case Study: Recaps in 4 Hours | Pascal AI",
+ "description": "How a large Indian asset manager cut analyst time on earnings by 60% with Pascal: recaps for 180 companies, written against each analyst's own model and thesis.",
+ "crumbs": [["Case studies", "/case-studies"], ["Asset management", "/case-studies/asset-management"]],
+ "og_kicker": "Case study · Asset management",
+ "og_title": "180 companies, a recap for each within four hours of results",
+ "llms": "Case study: a large Indian asset manager used Pascal agents to read results filings, call transcripts and broker notes, compare each quarter with the analyst's own model and thesis, and write the recap in the house template for 180 companies, cutting analyst time on earnings processing by 60%.",
+ "priority": 0.7,
+ "word_limit": 900,
+ "css": ["case-studies.css"]
+}
+-->
+<div class="frame pg-cs">
+  <section class="cs-hero" aria-labelledby="page-title">
+    <div class="cs-hero-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Case study · Asset management</span></span>Results filed at 15:42. <span class="mute">The recap ready by 19:34.</span></h1>
+      <p class="lead">A large Indian asset manager covers 180 companies, and its analysts lost the first days of every results season to recaps. Pascal now reads each result, checks it against the analyst's model and thesis, and writes the recap.</p>
+      <div class="actions"><a class="btn btn-dark" href="{{demo_url}}">Book a demo</a></div>
+    </div>
+    <aside class="cs-glance" aria-label="At a glance">
+      <p class="cs-glance-k">At a glance</p>
+      <dl class="cs-gl">
+        <div><dt>Firm</dt><dd>Large Indian asset manager</dd></div>
+        <div><dt>Teams</dt><dd>Equity research and fund managers<small>Sector analysts covering 180 listed companies</small></dd></div>
+        <div><dt>Sources connected</dt><dd>Exchange filings, call transcripts, broker notes, analyst models and the house recap template<span class="cs-logos" aria-hidden="true"><span>{{logo:pdf}}</span><span>{{logo:excel}}</span><span>{{logo:word}}</span><span>{{logo:outlook}}</span></span></dd></div>
+        <div><dt>Deployment</dt><dd>Private cloud, India region</dd></div>
+        <div><dt>Live in</dt><dd>6 weeks<small>Running before the next results season opened</small></dd></div>
+      </dl>
+    </aside>
+  </section>
+  <section class="cells row cs-strip" aria-label="Results in numbers">
+    <div class="cell"><span class="stat-num">60<small>%</small></span><span class="stat-lbl">Less analyst time on earnings processing</span></div>
+    <div class="cell"><span class="stat-num">4<small>hrs</small></span><span class="stat-lbl">From results to recap</span></div>
+    <div class="cell"><span class="stat-num">2–3<small>days</small></span><span class="stat-lbl">Saved per analyst every reporting quarter</span></div>
+  </section>
+</div>
+
+<nav class="subnav" aria-label="On this page">
+  <div class="subnav-inner">
+    <a href="#challenge">The challenge</a>
+    <a href="#what-pascal-did">What Pascal did</a>
+    <a href="#results">Results</a>
+    <a href="#next">What came next</a>
+    <a href="#products">Products used</a>
+    <a href="#faq">Frequently asked questions</a>
+  </div>
+</nav>
+
+<div class="frame pg-cs">
+  <section class="cs-two" id="challenge" aria-labelledby="ch-title">
+    <div class="cs-copy">
+      <p class="eyebrow">The challenge</p>
+      <h2 class="h2" id="ch-title">Results season began <span class="mute">with days of recaps.</span></h2>
+      <p>The research team covers 180 listed companies, and most of them report within the same few weeks each quarter. For every result, an analyst read the filing, the call transcript and the broker notes, checked the numbers against their own model and wrote a recap in the house template.</p>
+      <p>That took the first two to three days of every season. Fund managers waited, and the most valuable work, testing each thesis against the new numbers, started last.</p>
+    </div>
+    <div class="cs-vis"><div class="panel panel-cream fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="Research calendar for week one of results season before Pascal: the autos, banks and cement analysts each spend Monday to Wednesday writing recaps, and model and thesis review only starts on Thursday.">
+      <div class="pui-win">
+        <div class="pui-bar"><span class="pui-lg">{{logo:outlook}}</span><span class="pui-crumb">Research calendar / <b>Results season · week 1</b></span><span class="pui-bar-r"><span class="pui-tag amber">Before Pascal</span></span></div>
+        <div class="pui-main">
+          <div class="cs-m-cal">
+            <span></span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span>
+            <span>Autos</span><i class="a w3">Recaps · 7 companies</i><i class="g w">Model and thesis</i>
+            <span>Banks</span><i class="a w3">Recaps · 9 companies</i><i class="a">Recaps</i><i class="g">Thesis</i>
+            <span>Cement</span><i class="a w">Recaps · 5</i><i class="a">Recaps</i><i class="g w">Model and thesis</i>
+            <span>Consumer</span><i class="a w3">Recaps · 8 companies</i><i class="g w">Model and thesis</i>
+          </div>
+          <div class="pui-row pui-mt" style="border:0"><span class="cs-m-dot a"></span>Reading, checking and writing recaps<span class="cs-m-dot" style="margin-left:14px"></span>Analysis</div>
+        </div>
+      </div>
+    </div><!--/mock--></div></div>
+  </section>
+
+  <section class="row" id="what-pascal-did" aria-labelledby="did-title">
+    <div class="row-pad-sm cs-steps-head">
+      <div><p class="eyebrow">What Pascal did</p><h2 class="h2" id="did-title" style="margin-top:18px">One results day, <span class="mute">hour by hour.</span></h2></div>
+      <p>A <a class="cs-il" href="/pascal-agents/autonomous-agents">Pascal agent</a> ran the same four steps for every company under coverage. The clock below follows one result, filed at 15:42.</p>
+    </div>
+
+    <div class="row split cs-step">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>15:42</i><span>Results filed</span></p>
+        <h3>Pick up each result as it is filed.</h3>
+        <p>Pascal watches exchange filings for all 180 companies under coverage. When a company posts results, the agent starts on its own and adds the call transcript and broker notes as they arrive.</p>
+      </div>
+      <div class="split-media"><div class="panel fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="Results tracker for the quarter: 38 of 180 companies reported. HDFC Bank approved, UltraTech Cement ready for review, Maruti Suzuki drafting, Asian Paints queued awaiting its call. Illustrative.">
+        <div class="pui-win">
+          <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Q1 FY27 results tracker</b></span><span class="pui-bar-r"><span class="pui-tag">38 of 180 reported</span></span></div>
+          <div class="pui-main">
+            <table class="pui-tbl cs-m-tbl">
+              <thead><tr><th>Company</th><th>Filed</th><th>Call</th><th>Brokers</th><th>Recap</th></tr></thead>
+              <tbody>
+                <tr><td><b>HDFC Bank</b></td><td>13:05</td><td>{{icon:check}}</td><td>7</td><td><span class="pui-tag">Approved</span></td></tr>
+                <tr><td><b>UltraTech Cement</b></td><td>14:10</td><td>{{icon:check}}</td><td>6</td><td><span class="pui-tag navy">Ready for review</span></td></tr>
+                <tr><td><b>Maruti Suzuki</b></td><td>15:42</td><td>{{icon:check}}</td><td>4</td><td><span class="pui-tag amber">Drafting</span></td></tr>
+                <tr><td><b>Asian Paints</b></td><td>16:20</td><td><span class="pui-sub">18:00</span></td><td>2</td><td><span class="pui-tag grey">Queued</span></td></tr>
+              </tbody>
+            </table>
+            <p class="cs-ill pui-mt">Illustrative</p>
+          </div>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+
+    <div class="row split flip cs-step">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>16:30</i><span>Read</span></p>
+        <h3>Read the filing, the call and the notes.</h3>
+        <p>Pascal read the results filing, the investor presentation, the call transcript and every broker note in the firm's library, and pulled each figure and management comment into one table with its source page.</p>
+      </div>
+      <div class="split-media"><div class="panel panel-dark fit"><!--mock--><div class="pui pui-narrow" role="img" aria-label="Pascal reading five sources for Maruti Suzuki: results filing, investor presentation, call transcript, four broker notes and the analyst's Excel model, each ticked off.">
+        <div class="pui-win">
+          <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Maruti Suzuki / <b>Reading sources</b></span><span class="pui-bar-r"><span class="pui-tag grey">Illustrative</span></span></div>
+          <div class="pui-main">
+            <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span>Results filing · Q1 FY27<span class="pui-row-r pui-sub">18 pp</span><span class="pui-ok">{{icon:check-circle}}</span></div>
+            <div class="pui-row"><span class="pui-lg w">{{logo:pdf}}</span>Investor presentation<span class="pui-row-r pui-sub">32 pp</span><span class="pui-ok">{{icon:check-circle}}</span></div>
+            <div class="pui-row"><span class="pui-lg t" style="background:#185FA5">TR</span>Earnings call transcript<span class="pui-row-r pui-sub">58 min</span><span class="pui-ok">{{icon:check-circle}}</span></div>
+            <div class="pui-row"><span class="pui-lg t" style="background:#13285A">BR</span>4 broker notes<span class="pui-row-r pui-sub">last 48 hrs</span><span class="pui-ok">{{icon:check-circle}}</span></div>
+            <div class="pui-row"><span class="pui-lg w">{{logo:excel}}</span>Analyst model · MSIL.xlsx<span class="pui-row-r pui-sub">internal</span><span class="pui-ok">{{icon:check-circle}}</span></div>
+            <div class="pui-note">62 figures and 14 management comments extracted, each linked to its page</div>
+          </div>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+
+    <div class="row split cs-step">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>17:45</i><span>Compare</span></p>
+        <h3>Check the quarter against the analyst's model and thesis.</h3>
+        <p>Every line was compared with the analyst's Excel model and the thesis on file. Pascal marked where the quarter beat or missed the model, and which thesis points the new numbers support or contradict.</p>
+      </div>
+      <div class="split-media"><div class="panel panel-cream fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="Comparison of Maruti Suzuki's quarter with the analyst's model: revenue 1.4 percent ahead, EBITDA margin 80 basis points below, profit after tax 2.5 percent ahead, volumes in line. Thesis check: margin recovery contradicted, export mix and market share supported. Illustrative.">
+        <div class="pui-win">
+          <div class="pui-bar"><span class="pui-lg">{{logo:excel}}</span><span class="pui-crumb">MSIL.xlsx / <b>Quarter vs model</b></span><span class="pui-bar-r"><span class="pui-tag grey">Illustrative</span></span></div>
+          <div class="pui-split">
+            <div class="pui-grid">
+              <table class="pui-tbl pui-xl-t">
+                <thead><tr><th>₹ crore</th><th>Model</th><th>Reported</th><th>Var</th></tr></thead>
+                <tbody>
+                  <tr><td><b>Revenue</b></td><td>37,900</td><td>38,412<span class="pui-cite">1</span></td><td>+1.4%</td></tr>
+                  <tr><td><b>EBITDA margin</b></td><td>12.0%</td><td>11.2%<span class="pui-cite">1</span></td><td class="f" style="background:#FCEFD9;color:#8A4B0E">−80 bp</td></tr>
+                  <tr><td><b>PAT</b></td><td>3,620</td><td>3,711<span class="pui-cite">1</span></td><td>+2.5%</td></tr>
+                  <tr><td><b>Volumes (k)</b></td><td>528</td><td>528<span class="pui-cite">2</span></td><td>0.0%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pui-side">
+              <p class="pui-k">Thesis check</p>
+              <div class="cs-m-th"><span>Margin back above 12%</span><span class="pui-tag amber">Contradicts</span></div>
+              <div class="cs-m-th"><span>Export mix rising</span><span class="pui-tag">Supports</span></div>
+              <div class="cs-m-th"><span>Market share stable</span><span class="pui-tag">Supports</span></div>
+            </div>
+          </div>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+
+    <div class="row split flip cs-step">
+      <div class="split-copy">
+        <p class="cs-step-n"><i>19:34</i><span>Recap</span></p>
+        <h3>Write the recap in the house template.</h3>
+        <p>The recap followed the firm's own template: numbers against the model, what changed for the thesis and questions for management. The analyst reviewed and edited it, then sent it to the fund managers the same evening.</p>
+      </div>
+      <div class="split-media"><div class="panel fit"><!--mock--><div class="pui pui-narrow has-float" role="img" aria-label="Recap in the house Word template: Maruti Suzuki Q1 FY27, revenue ahead and margin 80 basis points below our model, with a thesis section and questions for management, every figure cited. A card shows the recap was ready 3 hours 52 minutes after filing.">
+        <div class="pui-win">
+          <div class="pui-bar"><span class="pui-lg">{{logo:word}}</span><span class="pui-crumb"><b>MSIL Q1 FY27 recap.docx</b></span><span class="pui-bar-r"><span class="pui-tag grey">House template</span></span></div>
+          <div class="pui-doc-page">
+            <p class="pui-doc-k">Results recap · Autos</p>
+            <p class="pui-doc-h">Maruti Suzuki Q1 FY27: revenue ahead, margin 80 bp below our model</p>
+            <p class="pui-doc-sh">What changed for the thesis</p>
+            <p class="pui-doc-p">Margin recovery slips by a quarter on higher discounts; export mix rose for a fourth quarter.<span class="pui-cite">1</span><span class="pui-cite">3</span></p>
+            <p class="pui-doc-sh">Questions for management</p>
+            <div class="pui-ln m"></div><div class="pui-ln s"></div>
+          </div>
+        </div>
+        <div class="pui-float">
+          <div class="pui-step">{{icon:check-circle}} <b>Recap ready · 19:34</b></div>
+          <p class="pui-sub">3 h 52 min after filing · 9 sources cited</p>
+        </div>
+      </div><!--/mock--></div></div>
+    </div>
+  </section>
+
+  <section class="row cs-two" id="results" aria-labelledby="res-title">
+    <div class="cs-copy">
+      <p class="eyebrow">Results</p>
+      <h2 class="h2" id="res-title">Every company, <span class="mute">recapped on results day.</span></h2>
+      <p>Analysts spend 60% less time on earnings processing. All 180 companies get a recap every quarter, about four hours after results are filed, and each analyst gets two to three days of the season back.</p>
+      <p>The team spends that time on the work recaps used to crowd out: testing theses, calling management and updating models.</p>
+    </div>
+    <div class="cs-vis"><div class="cs-vis-pad bg-cream">
+      <div class="cs-ba">
+        <div>
+          <div class="cs-ba-h"><span>Results to recap</span></div>
+          <div class="cs-ba-row"><small>Before</small><div class="cs-ba-track"><i style="--w:80%"></i><b>2–3 days</b></div></div>
+          <div class="cs-ba-row"><small>With Pascal</small><div class="cs-ba-track"><i class="on" style="--w:6%"></i><b>4 hrs</b></div></div>
+        </div>
+        <div>
+          <div class="cs-ba-h"><span>Analyst time on earnings processing</span></div>
+          <div class="cs-ba-row"><small>Before</small><div class="cs-ba-track"><i style="--w:80%"></i><b>Baseline</b></div></div>
+          <div class="cs-ba-row"><small>With Pascal</small><div class="cs-ba-track"><i class="on" style="--w:32%"></i><b>60% less</b></div></div>
+        </div>
+        <p class="cs-ba-note">Per analyst, per reporting quarter.</p>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="row cs-two" id="next" aria-labelledby="next-title">
+    <div class="cs-copy">
+      <p class="eyebrow">What came next</p>
+      <h2 class="h2" id="next-title">A weekly signals agent, <span class="mute">in prototype.</span></h2>
+      <p>With recaps running every quarter, the team asked for help between seasons. Pascal built a prototype weekly signals agent for coverage names. It reads the week's broker notes, filings and news and flags what touches each analyst's thesis.</p>
+      <p>It is a prototype, running for one sector team while the analysts shape what it should flag. See how Pascal works across <a class="cs-il" href="/solutions/asset-wealth-management">asset and wealth management</a>.</p>
+    </div>
+    <div class="cs-vis"><div class="panel fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="Prototype weekly signals for week 40: UltraTech Cement price increase in the north from a broker note supports the thesis; Maruti Suzuki festive bookings commentary from news to watch; HDFC Bank deposit rate change from a filing supports. Illustrative.">
+      <div class="pui-win">
+        <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Weekly signals · week 40</b></span><span class="pui-bar-r"><span class="cs-proto">Prototype</span></span></div>
+        <div class="pui-main">
+          <table class="pui-tbl cs-m-tbl">
+            <thead><tr><th>Company</th><th>Signal</th><th>Source</th><th>Thesis</th></tr></thead>
+            <tbody>
+              <tr><td><b>UltraTech Cement</b></td><td>Price increase reported in the north</td><td>Broker note</td><td><span class="pui-tag">Supports</span></td></tr>
+              <tr><td><b>Maruti Suzuki</b></td><td>Festive bookings commentary</td><td>News</td><td><span class="pui-tag amber">Watch</span></td></tr>
+              <tr><td><b>HDFC Bank</b></td><td>Deposit rate change</td><td>Filing</td><td><span class="pui-tag">Supports</span></td></tr>
+            </tbody>
+          </table>
+          <p class="cs-ill pui-mt">Illustrative</p>
+        </div>
+      </div>
+    </div><!--/mock--></div></div>
+  </section>
+
+  <section class="row" id="products" aria-labelledby="prod-title">
+    <div class="row-pad-sm"><h2 class="h2" id="prod-title">Products used</h2></div>
+    <div class="cells c4 row cs-prods">
+      <a class="cell" href="/pascal-agents/autonomous-agents"><span class="n">Pascal Agents</span><b>Autonomous agents</b><span>Watched filings for 180 companies and ran each recap end to end.</span><span class="link">See autonomous agents {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/ask-pascal/cited-research"><span class="n">Ask Pascal</span><b>Cited research</b><span>Every figure in a recap links to its page in the source.</span><span class="link">See cited research {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/platform/context-graph"><span class="n">Platform</span><b>Context graph &amp; memory</b><span>Holds each analyst's model, thesis and past recaps.</span><span class="link">See the context graph {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/pascal-agents/workflow-library"><span class="n">Pascal Agents</span><b>Agentic workflow library</b><span>Writes the recap in the house Word template.</span><span class="link">See the workflow library {{icon:arrow-right}}</span></a>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>How does Pascal compare results with an analyst's own model?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal reads the analyst's Excel model, maps its line items to the reported figures and shows the variance for each line. It also checks the thesis on file and marks each point as supported or contradicted.</div></details>
+        <details class="faq-item"><summary>Can Pascal write earnings recaps in our house template?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Pascal fills your Word template section by section, with your headings and order, and cites every figure to its page.</div></details>
+        <details class="faq-item"><summary>Which sources does the recap agent read for Indian companies?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Exchange results filings, investor presentations, earnings call transcripts, the broker notes your firm receives and your analysts' own models and notes.</div></details>
+        <details class="faq-item"><summary>Do analysts still review every recap?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Each recap goes to the covering analyst as a draft. The analyst edits and approves it before it reaches the fund managers.</div></details>
+        <details class="faq-item"><summary>What is the weekly signals agent?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A prototype that reads the week's broker notes, filings and news on coverage names and flags what touches each thesis. It runs with one sector team today.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See a recap of your next result." sub="Against your own model, in your template."-->

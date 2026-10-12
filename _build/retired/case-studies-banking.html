@@ -1,0 +1,261 @@
+<!--meta
+{
+ "path": "/case-studies/banking",
+ "title": "Investment Bank Case Study: Comps in 20 Minutes | Pascal AI",
+ "description": "How an Indian investment bank built 40-company comps tables in 20 minutes with Pascal, every cell linked to its filing page, in its own Excel and PowerPoint.",
+ "crumbs": [["Case studies", "/case-studies"], ["Banking", "/case-studies/banking"]],
+ "og_kicker": "Case study · Banking",
+ "og_title": "A 40-company comps table in 20 minutes, every cell linked to its source",
+ "llms": "Case study: an investment bank in India used Pascal to build comparable companies tables from filings with every cell linked to its source page, in the bank's own Excel and PowerPoint templates. A 40-company comps table takes 20 minutes and a first-draft pitch book four hours, down from three days.",
+ "priority": 0.7,
+ "word_limit": 900,
+ "css": ["case-studies.css"]
+}
+-->
+<div class="frame pg-cs">
+  <section class="cs-hero" aria-labelledby="page-title">
+    <div class="cs-hero-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Case study · Banking</span></span>Comps in 20 minutes. <span class="mute">Every cell sourced.</span></h1>
+      <p class="lead">Analysts at an investment bank in India spread comparable companies by hand from filings. Pascal now builds the comps table and the pitch-book pages in the bank's own templates, with every cell linked to the page it came from.</p>
+      <div class="actions"><a class="btn btn-dark" href="{{demo_url}}">Book a demo</a></div>
+    </div>
+    <aside class="cs-glance" aria-label="At a glance">
+      <p class="cs-glance-k">At a glance</p>
+      <dl class="cs-gl">
+        <div><dt>Firm</dt><dd>Investment bank · India</dd></div>
+        <div><dt>Teams</dt><dd>Coverage and execution analysts<small>ECM and M&amp;A deal teams</small></dd></div>
+        <div><dt>Sources connected</dt><dd>Annual reports, quarterly results and investor presentations, plus the bank's comps template and pitch-book master<span class="cs-logos" aria-hidden="true"><span>{{logo:pdf}}</span><span>{{logo:excel}}</span><span>{{logo:powerpoint}}</span><span>{{logo:sharepoint}}</span></span></dd></div>
+        <div><dt>Deployment</dt><dd>On premise, inside the bank's network</dd></div>
+        <div><dt>Live in</dt><dd>4 weeks<small>First live pitch in week three</small></dd></div>
+      </dl>
+    </aside>
+  </section>
+  <section class="cells row cs-strip" aria-label="Results in numbers">
+    <div class="cell"><span class="stat-num">20<small>min</small></span><span class="stat-lbl">For a 40-company comps table</span></div>
+    <div class="cell"><span class="stat-num">100<small>%</small></span><span class="stat-lbl">Of cells linked to a source page</span></div>
+    <div class="cell"><span class="stat-num">4<small>hrs</small></span><span class="stat-lbl">To a first-draft pitch book, down from 3 days</span></div>
+  </section>
+</div>
+
+<nav class="subnav" aria-label="On this page">
+  <div class="subnav-inner">
+    <a href="#challenge">The challenge</a>
+    <a href="#what-pascal-did">What Pascal did</a>
+    <a href="#results">Results</a>
+    <a href="#next">What came next</a>
+    <a href="#products">Products used</a>
+    <a href="#faq">Frequently asked questions</a>
+  </div>
+</nav>
+
+<div class="frame pg-cs">
+  <section class="cs-two" id="challenge" aria-labelledby="ch-title">
+    <div class="cs-copy">
+      <p class="eyebrow">The challenge</p>
+      <h2 class="h2" id="ch-title">Three days to a first draft, <span class="mute">mostly typing numbers.</span></h2>
+      <p>Every pitch needed a comparable companies table. An analyst picked the peers, downloaded annual reports and quarterly results, typed each figure into the bank's Excel template, calendarised fiscal years and checked everything twice before a VP saw it.</p>
+      <p>A first-draft pitch book took about three days, and most of that went into spreading and checking. When a VP asked where a figure came from, the analyst went back to the PDF to find it.</p>
+    </div>
+    <div class="cs-vis"><div class="panel panel-cream fit"><!--mock--><div class="pui pui-narrow" role="img" aria-label="A pitch timeline before Pascal: day one, pick 40 peers and download their filings; day two, type financials into the comps template and calendarise to a March year-end; day three, check every cell, build the football field and paste into the deck.">
+      <div class="pui-win">
+        <div class="pui-bar"><span class="pui-lg">{{logo:excel}}</span><span class="pui-crumb">Pitch tracker / <b>Specialty chemicals IPO</b></span><span class="pui-bar-r"><span class="pui-tag amber">Before Pascal</span></span></div>
+        <div class="pui-main">
+          <div class="pui-tl">
+            <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:calendar}}</span><p class="pui-tl-t"><b>Day 1</b> · Pick 40 peers, download filings</p><span class="pui-tl-m">9 hrs</span>
+              <div class="pui-tl-b"><div class="pui-schips"><span class="pui-schip">{{logo:pdf}} 40 annual reports</span><span class="pui-schip">{{logo:pdf}} 160 quarterly results</span></div></div></div>
+            <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:table}}</span><p class="pui-tl-t"><b>Day 2</b> · Type financials, calendarise to March</p><span class="pui-tl-m">10 hrs</span>
+              <div class="pui-tl-b"><p class="pui-sub">1,600 cells entered by hand</p></div></div>
+            <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:list-checks}}</span><p class="pui-tl-t"><b>Day 3</b> · Check cells, football field, paste into deck</p><span class="pui-tl-m">9 hrs</span>
+              <div class="pui-tl-b"><p class="pui-sub">Sources noted in a separate tab, when there was time</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div><!--/mock--></div></div>
+  </section>
+
+  <section class="row" id="what-pascal-did" aria-labelledby="did-title">
+    <div class="row-pad-sm cs-steps-head">
+      <div><p class="eyebrow">What Pascal did</p><h2 class="h2" id="did-title" style="margin-top:18px">From mandate to pitch book <span class="mute">in four steps.</span></h2></div>
+      <p>The deal team kept every judgement call: the peer set, the adjustments and the story. Pascal's <a class="cs-il" href="/pascal-agents/data-agent#extraction">extraction</a> did the reading and the typing.</p>
+    </div>
+    <div class="cs-sgrid">
+      <div class="cs-scard">
+        <div class="panel fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="Peer set builder for specialty chemicals listed in India: 40 companies proposed, with SRF, Navin Fluorine, Deepak Nitrite, Aarti Industries and Vinati Organics shown and 35 more. Two removed and two added by the deal team.">
+          <div class="pui-win">
+            <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Comps / <b>Peer set</b></span><span class="pui-bar-r"><span class="pui-tag">40 companies</span></span></div>
+            <div class="pui-tool"><span class="pui-chip on">{{icon:filter}} Specialty chemicals</span><span class="pui-chip on">NSE · BSE</span><span class="pui-chip">Mkt cap ₹5k–60k cr</span></div>
+            <div class="pui-main">
+              <div class="pui-row"><span class="pui-chk on">{{icon:check}}</span>SRF<span class="pui-row-r pui-sub">Fluorochemicals</span></div>
+              <div class="pui-row"><span class="pui-chk on">{{icon:check}}</span>Navin Fluorine International<span class="pui-row-r pui-sub">Fluorochemicals</span></div>
+              <div class="pui-row"><span class="pui-chk on">{{icon:check}}</span>Deepak Nitrite<span class="pui-row-r pui-sub">Intermediates</span></div>
+              <div class="pui-row"><span class="pui-chk on">{{icon:check}}</span>Aarti Industries<span class="pui-row-r pui-sub">Intermediates</span></div>
+              <div class="pui-row"><span class="pui-chk on">{{icon:check}}</span>Vinati Organics<span class="pui-row-r pui-sub">+35 more</span></div>
+              <div class="pui-note">Deal team removed 2 and added 2. Peer set locked.</div>
+            </div>
+          </div>
+        </div><!--/mock--></div>
+        <div class="cs-scard-copy">
+          <p class="cs-step-n"><i>01</i><span>Peer set</span></p>
+          <h3>Propose the peer group.</h3>
+          <p>Starting from the mandate, Pascal proposed 40 listed peers by sector, size and business mix. The deal team removed two, added two and locked the list.</p>
+        </div>
+      </div>
+
+      <div class="cs-scard">
+        <div class="panel panel-dark fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="An annual report open at the consolidated statement of profit and loss, with revenue from operations highlighted. Extracted fields: revenue, EBITDA, net income, net debt and shares outstanding, each with a citation. Illustrative figures.">
+          <div class="pui-win">
+            <div class="pui-bar"><span class="pui-lg">{{logo:pdf}}</span><span class="pui-crumb"><b>Annual report FY26.pdf</b></span><span class="pui-bar-r"><span class="pui-tag grey">p. 142 · illustrative</span></span></div>
+            <div class="pui-split">
+              <div class="pui-pdf">
+                <div class="pui-sheet">
+                  <p class="pui-sheet-h">Consolidated statement of profit and loss</p>
+                  <div class="pui-ln m"></div><div class="pui-ln s"></div>
+                  <p style="font-size:12px;line-height:1.5;margin:10px 0"><span class="pui-mark-hl">Revenue from operations 2,912.4</span><span class="pui-pin">1</span></p>
+                  <div class="pui-ln"></div><div class="pui-ln m"></div><div class="pui-ln s"></div><div class="pui-ln"></div>
+                </div>
+              </div>
+              <div class="pui-side">
+                <p class="pui-k">Extracted · ₹ crore</p>
+                <div class="pui-kv pui-mt">
+                  <span class="sel">Revenue</span><b class="sel">2,912<span class="pui-cite on">1</span></b>
+                  <span>EBITDA</span><b>684<span class="pui-cite">2</span></b>
+                  <span>Net income</span><b>402<span class="pui-cite">3</span></b>
+                  <span>Net debt</span><b>1,138<span class="pui-cite">4</span></b>
+                  <span>Shares (cr)</span><b>4.96<span class="pui-cite">5</span></b>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!--/mock--></div>
+        <div class="cs-scard-copy">
+          <p class="cs-step-n"><i>02</i><span>Read filings</span></p>
+          <h3>Read every filing to the page.</h3>
+          <p>Pascal read each peer's annual report, quarterly results and investor presentation, and extracted revenue, EBITDA, net income, net debt and share count with the page each came from.</p>
+        </div>
+      </div>
+
+      <div class="cs-scard">
+        <div class="panel panel-cream fit"><!--mock--><div class="pui pui-wide has-float float-lg" role="img" aria-label="The bank's Excel comps template with market cap, EV to EBITDA for FY26 and FY27 and P/E for five peers. A selected cell shows its source: annual report FY26, page 142, consolidated statement of profit and loss. Illustrative multiples.">
+          <div class="pui-win">
+            <div class="pui-bar"><span class="pui-lg">{{logo:excel}}</span><span class="pui-crumb"><b>Comps · specialty chemicals.xlsx</b></span><span class="pui-bar-r"><span class="pui-tag grey">Bank template · illustrative</span></span></div>
+            <div class="pui-grid">
+              <table class="pui-tbl pui-xl-t cs-m-xl">
+                <thead><tr><th>Company</th><th>Mkt cap</th><th>EV/EBITDA 26</th><th>EV/EBITDA 27</th><th>P/E 27</th></tr></thead>
+                <tbody>
+                  <tr><td><b>SRF</b></td><td>88,400</td><td>31.2x</td><td>25.8x</td><td>41.0x</td></tr>
+                  <tr><td><b>Navin Fluorine</b></td><td>24,100</td><td>38.6x</td><td>29.4x</td><td>47.2x</td></tr>
+                  <tr><td><b>Deepak Nitrite</b></td><td>27,900</td><td class="src">24.1x</td><td>19.7x</td><td>30.5x</td></tr>
+                  <tr><td><b>Aarti Industries</b></td><td>16,300</td><td>19.8x</td><td>15.2x</td><td>27.9x</td></tr>
+                  <tr><td>Median (40)</td><td class="mono">—</td><td>26.4x</td><td>21.3x</td><td>33.8x</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="pui-float">
+            <p class="pui-k">Cell source</p>
+            <div class="pui-row" style="border:0"><span class="pui-lg w">{{logo:pdf}}</span><span>Annual report FY26 · p. 142<span class="pui-sub" style="display:block">Consolidated P&amp;L, EBITDA line</span></span></div>
+          </div>
+        </div><!--/mock--></div>
+        <div class="cs-scard-copy">
+          <p class="cs-step-n"><i>03</i><span>Comps table</span></p>
+          <h3>Build the comps in the bank's template.</h3>
+          <p>The comps landed in the bank's own Excel template, calendarised to a March year-end, with EV/EBITDA and P/E. Every cell links to its source page, and the full 40-company table took 20 minutes.</p>
+        </div>
+      </div>
+
+      <div class="cs-scard">
+        <div class="panel fit"><!--mock--><div class="pui pui-wide" role="img" aria-label="A pitch-book slide on the bank's PowerPoint master: trading comparables for specialty chemicals with a peer summary table and a valuation football field across FY26 and FY27 EV to EBITDA ranges and P/E. Illustrative.">
+          <div class="pui-win">
+            <div class="pui-bar"><span class="pui-lg">{{logo:powerpoint}}</span><span class="pui-crumb"><b>Pitch book · draft 1.pptx</b></span><span class="pui-bar-r"><span class="pui-tag grey">Bank master · illustrative</span></span></div>
+            <div class="pui-ppt">
+              <div class="pui-thumbs"><i></i><i></i><i class="on"></i><i></i></div>
+              <div class="pui-slide">
+                <p class="pui-slide-h">Trading comparables: specialty chemicals</p>
+                <p class="pui-slide-sh">Sector trades at 21.3x FY27 EV/EBITDA; fluorochemicals at a premium</p>
+                <table class="pui-slide-t">
+                  <thead><tr><th>Peer group</th><th>EV/EBITDA 27</th><th>P/E 27</th></tr></thead>
+                  <tbody><tr><td>Fluorochemicals</td><td>27.6x</td><td>44.1x</td></tr><tr><td>Intermediates</td><td>17.5x</td><td>29.2x</td></tr></tbody>
+                </table>
+                <div class="cs-m-ff">
+                  <div><span>FY26 EV/EBITDA</span><em><i style="--l:30%;--w:38%"></i></em></div>
+                  <div><span>FY27 EV/EBITDA</span><em><i style="--l:22%;--w:34%"></i></em></div>
+                  <div><span>FY27 P/E</span><em><i style="--l:36%;--w:42%"></i></em></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!--/mock--></div>
+        <div class="cs-scard-copy">
+          <p class="cs-step-n"><i>04</i><span>Pitch book</span></p>
+          <h3>Draft the pitch-book pages.</h3>
+          <p>Pascal placed the comps, a valuation football field and the peer summary on the bank's PowerPoint master. The deal team had a first-draft pitch book in four hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row cs-two" id="results" aria-labelledby="res-title">
+    <div class="cs-copy">
+      <p class="eyebrow">Results</p>
+      <h2 class="h2" id="res-title">Pitch books in hours, <span class="mute">every number traceable.</span></h2>
+      <p>A 40-company comps table takes 20 minutes, and 100% of its cells link to a source page. The first-draft pitch book is ready in four hours, down from three days.</p>
+      <p>Reviews got shorter too. A VP who questions a number clicks the cell and reads the page it came from.</p>
+    </div>
+    <div class="cs-vis"><div class="cs-vis-pad bg-cream">
+      <div class="cs-ba">
+        <div>
+          <div class="cs-ba-h"><span>First-draft pitch book</span></div>
+          <div class="cs-ba-row"><small>Before</small><div class="cs-ba-track"><i style="--w:80%"></i><b>3 days</b></div></div>
+          <div class="cs-ba-row"><small>With Pascal</small><div class="cs-ba-track"><i class="on" style="--w:13%"></i><b>4 hrs</b></div></div>
+        </div>
+        <div class="pui-kpis" style="margin-top:4px">
+          <div class="pui-kpi" style="padding:16px"><small>40-company comps table</small><b style="font-size:26px">20 min</b></div>
+          <div class="pui-kpi" style="padding:16px"><small>Cells linked to a source page</small><b style="font-size:26px">100%</b></div>
+          <div class="pui-kpi" style="padding:16px"><small>Peers in each table</small><b style="font-size:26px">40</b></div>
+        </div>
+        <p class="cs-ba-note">Before: three working days from mandate to first draft.</p>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="row cs-two" id="next" aria-labelledby="next-title">
+    <div class="cs-copy">
+      <p class="eyebrow">What came next</p>
+      <h2 class="h2" id="next-title">Precedents next, <span class="mute">then live comps.</span></h2>
+      <p>The deal teams are extending the same workflow to precedent transactions tables, and to refreshing comps automatically before each client meeting so the numbers on the page are current.</p>
+    </div>
+    <div class="cs-vis"><div class="cs-vis-pad">
+      <div class="cs-next-cards">
+        <a class="cs-ncard" href="/pascal-agents/workflow-library"><small>Pascal Agents <span class="pui-tag grey">In build</span></small><b>Precedent transactions</b><span>Deal terms and multiples read from announcements and filings, each linked to its page.</span></a>
+        <a class="cs-ncard" href="/pascal-agents/autonomous-agents"><small>Pascal Agents <span class="pui-tag grey">In build</span></small><b>Comps refresh before meetings</b><span>Re-runs the table on the latest results the evening before a client meeting.</span></a>
+        <a class="cs-ncard" href="/solutions/banking"><small>Solutions</small><b>Pascal for banking</b><span>Deal team, middle and back office workflows for banks.</span></a>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="row" id="products" aria-labelledby="prod-title">
+    <div class="row-pad-sm"><h2 class="h2" id="prod-title">Products used</h2></div>
+    <div class="cells c4 row cs-prods">
+      <a class="cell" href="/pascal-agents/data-agent#extraction"><span class="n">Data Agent</span><b>Extraction</b><span>Financials from 40 sets of filings, each figure tied to its page.</span><span class="link">See extraction {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/ask-pascal/cited-research"><span class="n">Ask Pascal</span><b>Cited research</b><span>Click any cell and the filing opens at the source page.</span><span class="link">See cited research {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/pascal-agents/office-suite"><span class="n">Pascal Agents</span><b>Generative Office Suite</b><span>Comps in the bank's Excel template, pages on its PowerPoint master.</span><span class="link">See the office suite {{icon:arrow-right}}</span></a>
+      <a class="cell" href="/pascal-agents/workflow-library"><span class="n">Pascal Agents</span><b>Workflow library</b><span>The comps and pitch-book workflow, ready for the next mandate.</span><span class="link">See the workflow library {{icon:arrow-right}}</span></a>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>How does Pascal build a comparable companies table from filings?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal reads each peer's annual report, quarterly results and investor presentation, extracts the line items your template needs and computes the multiples. Every cell keeps a link to the page it came from.</div></details>
+        <details class="faq-item"><summary>Can Pascal use our bank's Excel and PowerPoint templates?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Pascal fills your own comps workbook and places pages on your PowerPoint master, so the output matches the rest of the pitch book.</div></details>
+        <details class="faq-item"><summary>How does Pascal handle different fiscal year-ends?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal calendarises each company to the year-end you choose, using quarterly results, and shows the calculation behind every adjusted figure.</div></details>
+        <details class="faq-item"><summary>How do reviewers check a number in the comps?<span class="pm" aria-hidden="true"></span></summary><div class="ans">They click the cell. The filing opens at the source page with the figure highlighted, so a VP or MD can check any number in seconds.</div></details>
+        <details class="faq-item"><summary>Where does Pascal run at a bank?<span class="pm" aria-hidden="true"></span></summary><div class="ans">This bank runs Pascal on premise inside its own network. Pascal also deploys in a private cloud, with access tied to deal-team permissions.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See comps built from your filings." sub="In your template, every cell sourced."-->

@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>AI for Hedge Funds: Complete Guide | Pascal Academy</title>
+<meta name="description" content="A practical guide to AI for hedge funds: use cases, benefits, challenges and implementation, from research automation and portfolio monitoring to production.">
+<link rel="canonical" href="https://pascalailabs.com/guides/ai-for-hedge-funds">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#052A2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pascal AI">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="AI for Hedge Funds: Complete Guide | Pascal Academy">
+<meta property="og:description" content="A practical guide to AI for hedge funds: use cases, benefits, challenges and implementation, from research automation and portfolio monitoring to production.">
+<meta property="og:url" content="https://pascalailabs.com/guides/ai-for-hedge-funds">
+<meta property="og:image" content="https://pascalailabs.com/assets/og/guides-ai-for-hedge-funds.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI for Hedge Funds: The Complete Guide to Use Cases, Benefits &amp; Implementation">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pascalailabs">
+<meta name="twitter:title" content="AI for Hedge Funds: Complete Guide | Pascal Academy">
+<meta name="twitter:description" content="A practical guide to AI for hedge funds: use cases, benefits, challenges and implementation, from research automation and portfolio monitoring to production.">
+<meta name="twitter:image" content="https://pascalailabs.com/assets/og/guides-ai-for-hedge-funds.png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=33a81822df">
+<link rel="stylesheet" href="/assets/pages/academy3.css?v=6b20df6ba8">
+<script src="/assets/site.js?v=cd66888c46" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV9WGBYMQR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SV9WGBYMQR');</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pascalailabs.com/#org",
+   "name": "Pascal AI Labs",
+   "alternateName": "Pascal AI",
+   "url": "https://pascalailabs.com/",
+   "logo": "https://pascalailabs.com/assets/pascal-logo.png",
+   "sameAs": [
+    "https://www.linkedin.com/company/pascal-ai-labs/",
+    "https://twitter.com/pascalailabs"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pascalailabs.com/guides/ai-for-hedge-funds#webpage",
+   "url": "https://pascalailabs.com/guides/ai-for-hedge-funds",
+   "name": "AI for Hedge Funds: Complete Guide | Pascal Academy",
+   "description": "A practical guide to AI for hedge funds: use cases, benefits, challenges and implementation, from research automation and portfolio monitoring to production.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://pascalailabs.com/#website"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "dateModified": "2026-10-12",
+   "breadcrumb": {
+    "@id": "https://pascalailabs.com/guides/ai-for-hedge-funds#breadcrumb"
+   },
+   "primaryImageOfPage": "https://pascalailabs.com/assets/og/guides-ai-for-hedge-funds.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pascalailabs.com/#website",
+   "url": "https://pascalailabs.com/",
+   "name": "Pascal AI",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pascalailabs.com/guides/ai-for-hedge-funds#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pascalailabs.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pascal Academy",
+     "item": "https://pascalailabs.com/pascal-academy"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Desk guides",
+     "item": "https://pascalailabs.com/guides"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "AI for Hedge Funds",
+     "item": "https://pascalailabs.com/guides/ai-for-hedge-funds"
+    }
+   ]
+  },
+  {
+   "@type": "TechArticle",
+   "@id": "https://pascalailabs.com/guides/ai-for-hedge-funds#article",
+   "headline": "AI for Hedge Funds",
+   "description": "A practical guide to AI for hedge funds: use cases, benefits, challenges and implementation, from research automation and portfolio monitoring to production.",
+   "url": "https://pascalailabs.com/guides/ai-for-hedge-funds",
+   "inLanguage": "en",
+   "dateModified": "2026-10-12",
+   "datePublished": "2026-10-12",
+   "author": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "isPartOf": {
+    "@type": "Collection",
+    "name": "Pascal Academy",
+    "url": "https://pascalailabs.com/pascal-academy"
+   },
+   "mainEntityOfPage": {
+    "@id": "https://pascalailabs.com/guides/ai-for-hedge-funds#webpage"
+   },
+   "image": "https://pascalailabs.com/assets/og/guides-ai-for-hedge-funds.png",
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Institutional investment teams"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pascalailabs.com/guides/ai-for-hedge-funds#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is AI for hedge funds?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "AI for hedge funds is the application of large language models, research agents, and retrieval systems to investment research, portfolio monitoring, due diligence, and reporting. The systems read and analyze documents, track portfolios continuously, and draft research output, with human analysts retaining judgment and decision authority."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How are hedge funds using AI in 2026?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The dominant production use cases are research automation (reading filings and transcripts, building sourced company profiles), continuous portfolio monitoring, due diligence on data rooms and disclosure packages, internal knowledge retrieval, and drafting investor letters and DDQ responses. Adoption has moved from pilots into daily workflows at funds of essentially every size."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Will AI replace hedge fund analysts?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The evidence so far points to AI changing the analyst role rather than eliminating it. The reading, extraction, and first-draft work moves to the system, and analyst time concentrates on thesis formation, model judgment, and decision-making. Funds we work with are expanding coverage per analyst rather than reducing analyst count."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can AI pick stocks or generate alpha on its own?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Language-model systems do not produce buy and sell decisions reliably on their own, and funds should be skeptical of claims otherwise. Where they demonstrably help is in the inputs to alpha: broader coverage, faster synthesis, fewer missed signals, and better use of the firm's own accumulated research. Quantitative predictive models are a separate, older discipline with their own track record."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between AI and quant investing?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Quant investing uses statistical models on structured data, prices, fundamentals, factors, to generate systematic trading signals. The current wave of AI centers on language models working with unstructured text, filings, transcripts, news, and research documents. They solve different problems, and many funds now run both."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do hedge funds prevent AI hallucinations?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The standard mitigations are retrieval-grounded architectures that answer only from supplied documents, mandatory citations on every claim so analysts can verify against sources, and human review on any output that feeds a decision. A system that cannot show its sources should not be used for investment work."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is AI-generated research compliant for investment advisers?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It can be, provided the fund treats AI output as research records subject to existing books-and-records obligations, keeps compliance visibility into what systems read and produce, and maintains human accountability for investment decisions. Funds should involve compliance at design time and confirm treatment with counsel for their jurisdiction."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do hedge funds keep their data secure when using AI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Production deployments use private or dedicated environments, contractual guarantees that client data never trains vendor models, role-based access controls mirroring the firm's information barriers, and full audit logging. Security review of an AI vendor should be as rigorous as for any system touching positions or research."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is an AI research agent?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A research agent is a system that takes a task, plans the steps, searches and reads the relevant sources, and returns a finished, cited output, for example a company profile or a summary of covenant terms across a data room. It differs from a chat interface in that the human delegates the task rather than driving each step."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is a multi-agent system in finance?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A multi-agent system assigns specialized AI agents to different parts of a complex task, one reading filings, one monitoring news, one querying internal research, with an orchestrating agent combining their output. The pattern mirrors how a deal team divides work and performs better than single agents on multi-source questions."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much does AI for hedge funds cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Costs vary with deployment model and scale, from tens of thousands per year for platform subscriptions at smaller funds to seven figures for enterprise deployments with private infrastructure. The relevant comparison is fully loaded analyst cost: agent-executed research work typically runs 5x to 10x cheaper than the equivalent human hours."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does it take a hedge fund to implement AI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A focused deployment on one workflow, research summarization or monitoring, typically reaches production in something like 4 to 12 weeks, with security review often the longest single stage. Firm-wide rollouts with internal data integration run two to four quarters, and data preparation is usually the underestimated step."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What data do AI systems need to work well at a fund?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Public market data (filings, transcripts, news) works out of the box. The larger gains come from connecting internal data, past memos, models, call notes, and IC records, which usually requires an upstream effort to make those documents consistently retrievable. Data quality, more than model choice, determines output quality."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do small hedge funds use AI or only large ones?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Both, and the economics arguably favor smaller funds more. A 10-person fund cannot add analysts the way a platform can, so software that expands coverage per analyst changes what a small team can credibly run. Modern platforms have removed the need for in-house AI engineering that made this a large-fund game two or three years ago."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What are AI monitoring agents?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Monitoring agents are AI systems that continuously read news, filings, transcripts, and other sources across a defined coverage list and escalate only changes that cross a materiality threshold the fund sets. They replace manual headline-skimming with complete overnight coverage and a ranked morning brief."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can AI help with hedge fund due diligence?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Diligence is among the highest-value applications. AI systems ingest data rooms and disclosure packages, extract key terms, flag inconsistencies across documents, and produce structured summaries, compressing 30 to 40 hours of first-pass reading into roughly an afternoon while leaving the judgment work to the deal team."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How should a hedge fund evaluate AI vendors?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The evaluation should weigh citation and verification design (can every claim be traced to a source), security architecture (private deployment, no training on your data, audit logs), interoperability with existing systems and preferred models, evidence of production deployments at comparable firms, and the vendor's handling of the internal-data integration problem."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the future of AI in hedge funds?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The visible trajectory runs toward agentic workflows, where teams delegate finished tasks rather than prompting step by step, multi-agent systems for complex diligence, and AI embedded directly inside existing research and operations tools. At Pascal AI Labs, we think the technology becomes infrastructure within a few years, with differentiation coming from how well a fund wires it into proprietary data and processes."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/" aria-label="Pascal AI home">
+      <img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/platform" aria-expanded="false" aria-haspopup="true">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-product">
+          <div class="mega-panel">
+            <div class="mp-col">
+              <a class="mp-feature" href="/platform">
+                <span class="mp-art" aria-hidden="true"><i></i><i></i><i></i></span>
+                <b>Platform overview</b>
+                <span>See how the Investment OS works.</span>
+              </a>
+              <p class="mp-label">Platform</p>
+              <a class="mp-link" href="/platform/context-graph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg> Context graph &amp; memory</a>
+              <a class="mp-link" href="/platform/mcp-apis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> MCP &amp; APIs</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/ask-pascal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Ask Pascal</b><span>Your AI research analyst</span></span></a>
+              <a class="mp-link" href="/ask-pascal/decision-traces"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg> Decision traces</a>
+              <a class="mp-link" href="/ask-pascal/cited-research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg> Cited research</a>
+              <a class="mp-link" href="/ask-pascal/screeners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg> Screeners</a>
+              <a class="mp-link" href="/ask-pascal/pascal-intel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg> Pascal Intel</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/pascal-agents"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><span><b>Pascal Agents</b><span>Run investment work end to end</span></span></a>
+              <a class="mp-link" href="/pascal-agents/autonomous-agents"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Autonomous agents</a>
+              <a class="mp-link" href="/pascal-agents/workflow-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg> Agentic workflow library</a>
+              <a class="mp-link" href="/pascal-agents/data-agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg> Pascal Data Agent</a>
+            </div>
+            <a class="mp-foot" href="/solutions/hedge-funds"><span class="chip">Industries</span><span><b>Pascal for your firm</b><span>Hedge funds, asset and wealth managers, banks, asset servicers, private equity and private credit, and corporate treasury</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/solutions/hedge-funds" aria-expanded="false" aria-haspopup="true">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-il">
+          <div class="mega-panel">
+              <a class="il-i" href="/solutions/hedge-funds"><span><b>Hedge Funds</b><small>Event briefs, reconciliations and DDQs</small></span></a>
+              <a class="il-i" href="/solutions/asset-wealth-management"><span><b>Asset &amp; Wealth Management</b><small>Research, mandate checks and client reporting</small></span></a>
+              <a class="il-i" href="/solutions/banking"><span><b>Banks &amp; Financial Institutions</b><small>Underwriting, covenant monitoring and KYC</small></span></a>
+              <a class="il-i" href="/solutions/asset-servicing"><span><b>Asset Servicing</b><small>Corporate actions, NAV checks and client queries</small></span></a>
+              <a class="il-i" href="/solutions/private-equity-credit"><span><b>Private Equity &amp; Private Credit</b><small>CIM screens, diligence and LP reporting</small></span></a>
+              <a class="il-i" href="/solutions/treasury-hedge-accounting"><span><b>Corporate Treasury &amp; Hedge Accounting</b><small>Exposures, effectiveness tests and hedge files</small></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/news" aria-expanded="false" aria-haspopup="true">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-list mega-news mega-news-ac">
+          <div class="mega-panel">
+            <div class="mn-col">
+              <p class="mp-label">News</p>
+              <a class="mp-link" href="/news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg> Newsroom</a>
+              <a class="mp-link" href="/news/founders-notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Founder's notes</a>
+            </div>
+            <div class="mn-col mn-ac">
+              <a class="mn-ac-head" href="/pascal-academy"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><b>Pascal Academy</b><span>Learn AI for institutional finance</span></span></a>
+              <a class="mp-link" href="/guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Desk guides</a>
+              <a class="mp-link" href="/pascal-academy/ai-fundamentals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg> AI fundamentals</a>
+              <a class="mp-link" href="/pascal-academy/ai-glossary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> AI glossary</a>
+              <a class="mp-link" href="/pascal-academy/workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> Workflows</a>
+              <a class="mp-link" href="/pascal-academy/prompt-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Prompt library</a>
+              <a class="mp-link" href="/pascal-academy/agent-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> Agent library</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-dark btn-sm" href="https://pascalailabs.com/demo">Book a demo</a>
+    </div>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <details open>
+    <summary>Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <p class="mm-label">Platform</p>
+    <a href="/platform">Platform overview</a>
+    <a href="/platform/context-graph">Context graph &amp; memory</a>
+    <a href="/platform/mcp-apis">MCP &amp; APIs</a>
+    <p class="mm-label">Ask Pascal</p>
+    <a href="/ask-pascal">Ask Pascal overview</a>
+    <a href="/ask-pascal/decision-traces">Decision traces</a>
+    <a href="/ask-pascal/cited-research">Cited research</a>
+    <a href="/ask-pascal/screeners">Screeners</a>
+    <a href="/ask-pascal/pascal-intel">Pascal Intel</a>
+    <p class="mm-label">Pascal Agents</p>
+    <a href="/pascal-agents">Pascal Agents overview</a>
+    <a href="/pascal-agents/autonomous-agents">Autonomous agents</a>
+    <a href="/pascal-agents/workflow-library">Agentic workflow library</a>
+    <a href="/pascal-agents/data-agent">Pascal Data Agent</a>
+  </details>
+  <details>
+    <summary>Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/solutions/hedge-funds">Hedge Funds</a>
+    <a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+    <a href="/solutions/banking">Banks &amp; Financial Institutions</a>
+    <a href="/solutions/asset-servicing">Asset Servicing</a>
+    <a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+    <a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+  </details>
+  <details>
+    <summary>News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/news">Newsroom</a>
+    <a href="/news/founders-notes">Founder's notes</a>
+    <p class="mm-label">Pascal Academy</p>
+    <a href="/pascal-academy">Academy home</a>
+    <a href="/guides">Desk guides</a>
+    <a href="/pascal-academy/ai-fundamentals">AI fundamentals</a>
+    <a href="/pascal-academy/ai-glossary">AI glossary</a>
+    <a href="/pascal-academy/workflows">Workflows</a>
+    <a href="/pascal-academy/prompt-library">Prompt library</a>
+    <a href="/pascal-academy/agent-library">Agent library</a>
+  </details>
+  <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+</div>
+
+<main id="main">
+<div class="ac ac-doc">
+<div class="rp" aria-hidden="true"><i></i></div>
+<div class="frame">
+  <header class="ah">
+    <div class="ah-l">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/pascal-academy">Pascal Academy</a><span aria-hidden="true">/</span><a href="/guides">Desk guides</a><span aria-hidden="true">/</span><span aria-current="page">AI for Hedge Funds</span></nav>
+      <p class="ah-k">Desk guide 1 of 4</p>
+      <h1 class="ah-t">AI for Hedge Funds</h1>
+      <p class="lead">The Complete Guide to Use Cases, Benefits & Implementation</p>
+      <p class="ah-m">24 min read</p>
+      <div class="ah-by"><span class="ah-av"><img src="/assets/favicon.svg" alt="" width="40" height="40"></span><span><b>Pascal Academy</b><span>Desk guide 1 of 4</span></span></div>
+      <div class="ah-a"><button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button></div>
+    </div>
+    <div class="ah-r"><div class="th th-hero" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-teal"><img src="/assets/shots/shot-agent-table.webp" alt="Pascal agent output: a street vs management framing table for Sea Limited with citations" width="1600" height="844" decoding="async"></div></div></div></div>
+  </header>
+  <div class="ag">
+    <aside class="toc" aria-label="Table of contents">
+      <div class="toc-in">
+        <p class="toc-h">Table of contents</p>
+        <div class="toc-track"><span class="toc-fill"></span><ol data-spy><li><a href="#what-does-ai-mean">What Does "AI for Hedge Funds" Actually Mean?</a></li><li><a href="#who-this-guide-is-for">Who This Guide Is For</a></li><li><a href="#benefits-in-brief">The Benefits, in Brief</a></li><li><a href="#why-hedge-funds-need-ai">Why Hedge Funds Need AI</a></li><li><a href="#what-sort-of-ai">What Sort of AI Do Hedge Funds Actually Need?</a></li><li><a href="#how-funds-start-using-ai">How Funds Actually Start Using AI (Core Use Cases)</a></li><li><a href="#who-uses-ai">Who Uses AI Inside a Hedge Fund</a></li><li><a href="#traditional-vs-ai-workflow">Traditional vs. AI-Enabled Workflow</a></li><li><a href="#benefits-of-ai">Benefits of AI for Hedge Funds</a></li><li><a href="#challenges-and-limitations">Challenges and Limitations</a></li><li><a href="#types-of-ai">Types of AI Used by Hedge Funds</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></div>
+        <div class="toc-cta">
+          <p class="toc-cta-t">Take this guide with you.</p>
+          <p>Get the PDF in your inbox.</p>
+          <button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button>
+        </div>
+      </div>
+    </aside>
+    <article class="ac-prose" id="article">
+      <details class="toc-m"><summary>Table of contents</summary><ol><li><a href="#what-does-ai-mean">What Does "AI for Hedge Funds" Actually Mean?</a></li><li><a href="#who-this-guide-is-for">Who This Guide Is For</a></li><li><a href="#benefits-in-brief">The Benefits, in Brief</a></li><li><a href="#why-hedge-funds-need-ai">Why Hedge Funds Need AI</a></li><li><a href="#what-sort-of-ai">What Sort of AI Do Hedge Funds Actually Need?</a></li><li><a href="#how-funds-start-using-ai">How Funds Actually Start Using AI (Core Use Cases)</a></li><li><a href="#who-uses-ai">Who Uses AI Inside a Hedge Fund</a></li><li><a href="#traditional-vs-ai-workflow">Traditional vs. AI-Enabled Workflow</a></li><li><a href="#benefits-of-ai">Benefits of AI for Hedge Funds</a></li><li><a href="#challenges-and-limitations">Challenges and Limitations</a></li><li><a href="#types-of-ai">Types of AI Used by Hedge Funds</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<div class="ac-intro"><p>The conversation around AI has become difficult to ignore. Over the last two years, every major model release has been accompanied by a new wave of predictions about which industries are about to be disrupted, transformed, or replaced altogether.</p>
+<p>If you spend any amount of time online, especially on X, you have probably seen the cycle play out in real time. One week it is "Claude just killed Figma." The next week it is "Claude just killed software engineering." A few model updates later, someone confidently declares that "Claude just killed the finance industry." Give it another release and there will probably be a thread explaining why no one needs consultants, lawyers, or doctors anymore either.</p>
+<p>Most of this is obviously clickbait. Ignoring it altogether, however, would mean overlooking the very real shift taking place beneath the noise.</p>
+<p>The part that is worth paying attention to is that AI has reached a point where it is capable of performing work that, until recently, required hours of a human's time. Not all work, and certainly not the parts that depend on judgment, experience, or domain expertise. But enough of the underlying work that the economics of entire workflows are beginning to change.</p>
+<p>For the first time, these systems can reliably handle large portions of the reading, synthesis, monitoring, and drafting work that sits underneath most knowledge-intensive professions. They are not replacing expertise, judgment, or decision-making. What they are doing is removing much of the manual effort required to get from information to insight.</p>
+<p>That distinction matters because once a technology can meaningfully compress the time between a question and a defensible answer, organizations begin to reorganize themselves around it. Investment management is no exception.</p>
+<p>Across hedge funds, asset managers, banks, private equity firms, and family offices, AI has steadily moved from experimentation into production. What began as analysts testing ChatGPT in isolated workflows has evolved into dedicated systems that sit inside research processes, monitor portfolios, draft investment materials, and help teams navigate growing volumes of information.</p>
+<p>The result is that AI is no longer a question of whether firms should pay attention. The discussion has become far more practical: Where does it fit into the investment process? Which workflows benefit most? What kinds of systems actually work in production? And what separates useful deployments from expensive experiments?</p>
+<p>Those are the questions this guide is designed to answer.</p></div>
+<section class="ac-sec" id="what-does-ai-mean" aria-labelledby="what-does-ai-mean-h"><h2 id="what-does-ai-mean-h">What Does "AI for Hedge Funds" Actually Mean?</h2>
+<p>Using AI for hedge funds means applying large language models (LLMs), retrieval systems, and AI agents to automate the manual work that surrounds the investment decision. In practice, that can mean software that reads a 300-page annual report in minutes, tracks every company in a portfolio across earnings calls and news flow, drafts the first version of an investment memorandum, or surfaces what the firm already knows about a business from years of internal research.</p>
+<p>Some funds use AI in a handful of isolated workflows. Others are rebuilding parts of their research infrastructure around it. What is consistent across both groups is that AI is increasingly being used as a layer between the firm and the overwhelming volume of information it needs to process.</p>
+<p>The practical outcomes include:</p>
+<ul><li>Broader asset coverage</li><li>Continuous portfolio monitoring</li><li>Easier access to historical research</li><li>Faster movement from raw information to an investment view</li></ul>
+<p>At Pascal AI Labs, after having conversations with something like 500-600 enterprises across hedge funds, asset managers, banks, and other financial institutions, we can say with some confidence that the category has moved well beyond experimentation. Firms are increasingly putting these systems into daily production use across the front, middle, and back office.</p>
+</section>
+<section class="ac-sec" id="who-this-guide-is-for" aria-labelledby="who-this-guide-is-for-h"><h2 id="who-this-guide-is-for-h">Who This Guide Is For</h2>
+<p>This guide is written for key decision-makers evaluating where AI fits within their investment process:</p>
+<ul><li>Portfolio Managers &amp; Analysts looking to scale their coverage.</li><li>Heads of Research designing the next generation of firm infrastructure.</li><li>CTOs, COOs, and Operations Leaders tasked with secure, compliant implementation.</li><li>Allocators, Consultants, and Investment Committees who want to understand how managers are adopting the technology and where the industry is heading.</li></ul>
+</section>
+<section class="ac-sec" id="benefits-in-brief" aria-labelledby="benefits-in-brief-h"><h2 id="benefits-in-brief-h">The Benefits, in Brief</h2>
+<p>A lot of discussion around AI tends to focus on productivity metrics and measurable efficiency gains. Research can be completed significantly faster, documents can be drafted in a fraction of the time they once required, and monitoring can run continuously in the background rather than depending on periodic manual review.</p>
+<p>Yes, those outcomes matter, but they are not the most important thing. The more useful way to think about AI is that it handles a large portion of the undifferentiated work that surrounds investing.</p>
+<p>This generally includes tasks that fall under reading filings, extracting data points, monitoring earnings calls, tracking news flow, searching archives, formatting reports, producing first drafts, and reconciling information across documents. In other words, the work that every investment firm has to do regardless of strategy or edge. These tasks are necessary, but they are rarely the source of investment edge.</p>
+<p>The differentiated work remains what it has always been: making sense of what matters. Connecting disparate pieces of information into a coherent view, identifying what the market is missing, and exercising judgment under uncertainty. That is where alpha comes from, and it is also the part of the process that cannot be reduced to a checklist.</p>
+<p>AI obviously does not replace those activities, but what it does is reduce the amount of time spent on everything around them.</p>
+</section>
+<section class="ac-sec" id="why-hedge-funds-need-ai" aria-labelledby="why-hedge-funds-need-ai-h"><h2 id="why-hedge-funds-need-ai-h">Why Hedge Funds Need AI</h2>
+<h3 id="information-problem">1. The Information Problem</h3>
+<p>The hedge fund business has always been built around information. The challenge is that the amount of information available today has grown far faster than the industry's ability to process it.</p>
+<p>A single analyst covering a sector may be responsible for monitoring earnings transcripts and company filings while also keeping up with investor presentations, expert network calls, alternative datasets, industry publications, news flow, and the firm's own historical research. Almost all of this information arrives continuously, and almost all of it arrives in unstructured formats that are difficult to search, organize, and analyze at scale.</p>
+<p>The result is that coverage becomes a function of capacity rather than conviction. Analysts focus on the companies they have time to follow, not necessarily the companies most likely to generate alpha.</p>
+<p>AI changes this equation by allowing firms to process substantially more information without expanding headcount at the same rate. Research systems can process large amounts of information continuously. What used to require days of manual review can often be completed in minutes.</p>
+<h3 id="research-complexity">2. Research Has Become More Complex</h3>
+<p>Information volume is only one part of the challenge. Investment research itself has become far more complex, requiring analysts to connect information across industries, geographies, regulatory regimes, and data sources.</p>
+<p>Building that understanding the traditional way often means spending weeks gathering information before the actual analysis begins. While that work is taking place, the underlying situation continues to evolve.</p>
+<p>AI helps compress the information-gathering stage of research. Instead of spending the majority of their time locating, reading, and organizing information, analysts can spend more time evaluating what that information actually means.</p>
+<h3 id="operational-work">3. Operational Work Continues To Grow</h3>
+<p>Investment teams also spend significant amounts of time on investor letters, due diligence questionnaires, internal reports, compliance reviews, and investment documentation. These activities take time away from some of the most experienced and expensive professionals in the organization.</p>
+<p>Management fee compression has added another layer of pressure. Firms are expected to produce more research, support more reporting requirements, and maintain higher operational standards while managing costs carefully. AI is particularly effective at handling these repetitive, document-heavy workflows.</p>
+<h3 id="economics-favor-software">4. The Economics Favor Software</h3>
+<p>For decades, the default response to growing research demands was to hire more analysts. As information volume expands exponentially, adding linear headcount is no longer an effective solution.</p>
+<p>Software operates differently. Once deployed, AI systems can monitor hundreds of companies simultaneously, process thousands of documents, and support multiple teams at the same time. This does not eliminate the need for human analysts; it simply changes how analysts spend their time.</p>
+<h3 id="competitive-advantage">5. Competitive Advantage Is Becoming a Technology Question</h3>
+<p>The final reason hedge funds need AI is that, at some point, it stops being a technology discussion and becomes a competitive one. The firms that can move from question to insight faster will simply have an advantage over those that cannot.</p>
+<p>We believe there is a relatively short window where AI adoption remains a differentiator rather than a baseline expectation. Over the next two to three years, the firms that successfully integrate AI will build a meaningful advantage. After that, it will simply become table stakes.</p>
+</section>
+<section class="ac-sec" id="what-sort-of-ai" aria-labelledby="what-sort-of-ai-h"><h2 id="what-sort-of-ai-h">What Sort of AI Do Hedge Funds Actually Need?</h2>
+<p>Not all AI systems are built for investment management. The requirements of a hedge fund are fundamentally different from those of a consumer chatbot or a general-purpose productivity tool.</p>
+<p>Investment firms operate across three distinct categories of information, and an AI must handle all three to be effective:</p>
+<ul><li>Proprietary Data: Years of accumulated data stored across Notion, email, shared drives, SQL databases, PDFs, and note-taking systems. This is the firm's most valuable intellectual property.</li><li>Public Domain Data: Company filings, earnings transcripts, investor presentations, regulatory disclosures, and news articles.</li><li>Licensed Data Feeds: Market data platforms, broker research, expert network transcripts, and alternative data subscriptions.</li></ul>
+<h3 id="sovereign-ai">1. Sovereign AI</h3>
+<p>The first is sovereignty.</p>
+<p>Sovereign AI, as the name might suggest, does not mean owning a foundation model or building a data center. It means an architecture where intelligence comes to the data rather than the data going out to the intelligence. The firm's research, internal debates, models, investment committee discussions, proprietary datasets, and institutional knowledge remain inside its own environment. The software moves to the data. The data does not move to the software.</p>
+<p>At first glance, this can sound like a security or compliance requirement. While it is certainly that, the more important reason, however, is that a hedge fund's edge sits inside information that nobody else has.</p>
+<p>A general-purpose model is available to everyone. Every fund can subscribe to the same model and ask roughly the same questions. Whatever advantage exists there is temporary by construction because the underlying intelligence is shared.</p>
+<p>The proprietary layer looks very different. It is the research a firm has accumulated over years (it includes the debates that shaped investment decisions, the lessons learned from being right and wrong, and the frameworks analysts use to evaluate businesses).</p>
+<p>One can call this the firm's intellectual capital because this is the institutional knowledge that sits inside the organization and informs how capital gets allocated. It is also the part competitors cannot access and cannot easily replicate.</p>
+<p>The challenge is that a hedge fund's most valuable context rarely exists in the public domain. It sits inside proprietary research, historical work, licensed data, and institutional memory accumulated over years. A model can only reason over what it can see.</p>
+<p>As a result, they perform extremely well on generic work like summarizing a filing, extracting management commentary, and identifying key financial metrics.</p>
+<p>The important observation is that the generic work was never where the value sat. The value sits in connecting new information to proprietary context. Without that context, the model eventually reaches a point where it cannot see any further. And because models are designed to produce answers rather than uncertainty, they often fill the gap with something plausible. In a fiduciary workflow, that is not an inconvenience. It is a liability.</p>
+<p>This is why sovereignty matters. Not because firms need another security layer, but because the information that generates edge must remain under the firm's control if it is going to be useful at all.</p>
+<h3 id="context-driven-ai">2. Context-Driven AI</h3>
+<p>The second property follows directly from the first. If sovereignty is about keeping proprietary context inside the firm's perimeter, context-driven AI is about making that context useful.</p>
+<p>One way to think about it is through a fairly simple equation. Performance equals intelligence multiplied by context. The intelligence term is becoming increasingly abundant and accessible, while the context term remains highly specific to each institution. Two firms can have access to the exact same model and arrive at very different outcomes simply because one system has access to years of accumulated research, internal discussions, proprietary datasets, and institutional memory while the other does not.</p>
+<p>Turning that reality into something an agent can actually reason over is largely an upstream problem. Research organizations were built for human consumption. Information sits across filings, models, presentations, databases, emails, and internal discussions. Analysts are exceptionally good at navigating that environment because they understand the relationships between all those pieces. Agents require those relationships to be made explicit.</p>
+<p>To do that, the information has to be reorganized into a form machines can understand. A company that appears under multiple names across multiple systems needs to become a single object. Relationships between suppliers, customers, subsidiaries, holdings, and competitors need to be mapped. Tables need to retain their structure, and supporting notes need to remain attached to the figures they explain. Over time, what begins as a collection of disconnected information sources becomes a unified layer that agents can query and reason over.</p>
+<p>This matters because a hedge fund's edge has always been constrained by bandwidth. Valuable information often existed inside the documents already. The limitation was that there were only so many pages an analyst could read in a day. Context-driven AI expands the amount of information that can be brought into the investment process while leaving the judgment exactly where it belongs.</p>
+<h3 id="institutional-memory">3. Institutional Memory as Infrastructure</h3>
+<p>The third property is institutional memory.</p>
+<p>Every investment firm accumulates judgment over time. Some of it sits inside investment memos, some inside research notes, and some inside the discussions that take place between analysts and portfolio managers as positions evolve. The challenge is that while the knowledge accumulates naturally, very little of it compounds systematically.</p>
+<p>This becomes important because investing is inherently path dependent. The way a firm evaluates a company today is influenced by years of prior decisions, previous mistakes, historical debates, and lessons learned across multiple market cycles. Much of what appears to be investment judgment from the outside is actually accumulated context built over long periods of time.</p>
+<p>General-purpose AI systems were not designed around that reality. They are extremely capable within the scope of a single interaction, but each interaction largely exists in isolation from the ones that came before it. As a result, the knowledge generated through one workflow rarely becomes part of the next workflow in any meaningful way.</p>
+<p>For a hedge fund, one would ideally want the opposite behaviour. Research that has been reviewed, conclusions that have been validated, and frameworks that have proven useful should become part of the firm's context over time. The system should gradually develop a richer understanding of how the organization thinks, not because the underlying model changes, but because the context available to it continues to expand.</p>
+<p>This is where the earlier properties begin to reinforce one another. Sovereignty ensures that the firm's accumulated knowledge remains inside its own perimeter. Context-driven architecture ensures that knowledge can be structured in a form agents can reason over. The result is an information system that becomes increasingly useful as more work flows through it, allowing institutional knowledge to compound rather than dissipate.</p>
+<p>This is exactly why we built Pascal AI Labs - we designed our entire architecture around these three non-negotiable pillars.</p>
+<p>A hedge fund's edge is nothing more than a differentiated view of the world. Everything else exists to produce that view, refine it, and compound it over time. This is why the chatbot is probably the least interesting thing AI can do for a hedge fund. Chatbots handle discrete queries; agents handle complete operations.</p>
+<p>Agent = LLM + Harness</p>
+<p>In this structure, the LLM acts as the core reasoning engine, while the harness provides the memory, the planning capabilities, and the permission to interact with external software. For hedge funds specifically, enterprise AI infrastructure must possess three distinct properties.</p>
+</section>
+<section class="ac-sec" id="how-funds-start-using-ai" aria-labelledby="how-funds-start-using-ai-h"><h2 id="how-funds-start-using-ai-h">How Funds Actually Start Using AI (Core Use Cases)</h2>
+<p>While the theoretical applications of AI are vast, practical adoption typically follows a specific maturity curve. AI fundamentally makes processing unstructured information faster and cheaper. Funds generally start by applying the technology to their most time-intensive, low-differentiation tasks before moving into complex, multi-step agentic workflows.</p>
+<p>Here are the core areas where the technology is currently deployed:</p>
+<h3 id="research-and-analysis">1. Research and Analysis</h3>
+<p>This is where adoption usually starts. Funds use AI to read and summarize filings, transcripts, and sell-side research, extract specific data points across hundreds of documents, and build first-pass company profiles and comp tables.</p>
+<p>An analyst asks a question in plain language, and the system returns an answer with citations back to the source documents. The way we do it at Pascal AI Labs, every claim links to the exact page it came from, because an answer an analyst cannot verify is an answer they cannot use.</p>
+<h3 id="monitoring-and-intelligence">2. Monitoring and Intelligence</h3>
+<p>Portfolios need watching, and watching is exactly the kind of continuous, repetitive work that agents do well. Monitoring agents track news, filings, transcripts, and price-moving events across every name in the portfolio, then surface only what crosses a materiality threshold the fund defines. Instead of an analyst skimming headlines every morning, the agent reads everything overnight and delivers a briefing on the five things that actually changed.</p>
+<h3 id="due-diligence-and-review">3. Due Diligence and Review</h3>
+<p>Diligence is document-heavy by nature. AI systems ingest data rooms and disclosure packages, flag inconsistencies between documents, pull covenant terms and change-of-control clauses, and produce structured summaries an investment committee can work from. The 30 to 40 hours of associate reading that used to precede any real discussion compresses into an afternoon.</p>
+<h3 id="knowledge-management">4. Knowledge Management</h3>
+<p>A fund's accumulated research is arguably its most undervalued asset. Retrieval systems turn that archive into something the whole team can query. When a name comes back around after three years, the original thesis, what went wrong, and who worked on it surface in seconds.</p>
+<h3 id="reporting-and-documentation">5. Reporting and Documentation</h3>
+<p>Investor letters, DDQ responses, performance commentary, and compliance documentation follow templates and draw on data the firm already has. AI drafts these to first-version quality, pulling positions, performance, and attribution from internal systems. Teams report the drafting stage going from days to under an hour, with the human time moving to review and judgment where it belongs.</p>
+</section>
+<section class="ac-sec" id="who-uses-ai" aria-labelledby="who-uses-ai-h"><h2 id="who-uses-ai-h">Who Uses AI Inside a Hedge Fund</h2>
+<ul><li>Portfolio Managers: Use AI as a pressure-testing layer. Before a position goes on, a PM can ask the system to argue the bear case from the filings or check past research. PMs rarely want another dashboard; they want fast, sourced answers.</li><li>Analysts: The heaviest users. The reading, extraction, and first-draft work that consumed 60-70% of an analyst's week moves to the system. Coverage per analyst expands accordingly.</li><li>Associates/Juniors: Use AI for comp spreading, data-room review, and memo formatting. Juniors at AI-enabled funds spend more time on judgment work earlier in their careers.</li><li>Operations &amp; Risk Teams: Apply the machinery to reconciliation narratives, counterparty document review, service-provider reporting, and scenario exposure mapping.</li></ul>
+</section>
+<section class="ac-sec" id="traditional-vs-ai-workflow" aria-labelledby="traditional-vs-ai-workflow-h"><h2 id="traditional-vs-ai-workflow-h">Traditional vs. AI-Enabled Workflow</h2>
+<p>To make this concrete, take the workflow that exists at every fundamental fund: a new idea lands and needs a first-pass evaluation.</p>
+<div class="ac-table"><table><thead><tr><th>Stage</th><th>Traditional Workflow</th><th>AI-Enabled Workflow</th></tr></thead><tbody><tr><td>Document Gathering</td><td>1–2 days, manual pulls</td><td>Minutes, automated ingestion</td></tr><tr><td>Reading &amp; Extraction</td><td>4–6 days of analyst time</td><td>~1 hour, sourced summary</td></tr><tr><td>Historical Context</td><td>Depends on memory and folders</td><td>Instant retrieval from firm archive</td></tr><tr><td>Model &amp; Analysis</td><td>3–4 days</td><td>2–3 days (human judgment retained)</td></tr><tr><td>Memo Drafting</td><td>2–3 days</td><td>First draft in &lt; 1 hour, 1 day to edit</td></tr><tr><td>Ongoing Monitoring</td><td>Ad hoc, headline skimming</td><td>Continuous agent coverage from day one</td></tr><tr><td>Total to IC-Ready</td><td>~2–3 weeks</td><td>~2–3 days</td></tr></tbody></table></div>
+<p>What does not change here is critical: the analyst still owns the view, the model assumptions, and the recommendation. The system compresses everything around the judgment so the judgment gets more of the analyst's week.</p>
+</section>
+<section class="ac-sec" id="benefits-of-ai" aria-labelledby="benefits-of-ai-h"><h2 id="benefits-of-ai-h">Benefits of AI for Hedge Funds</h2>
+<ul><li>Productivity: Teams running AI-enabled workflows report 50-60% of routine tasks executed by the system to a quality they can ship after light editing. Net of review time, analyst capacity expands by 2x to 3x.</li><li>Research Coverage: An analyst who responsibly followed 30-40 names can follow 150-200 with agents handling monitoring. The watchlist effectively becomes unlimited because watching is nearly free.</li><li>Speed: Time-to-answer drops by an order of magnitude. Finding every mention of pricing pressure across a sector's transcripts returns in minutes with citations.</li><li>Cost Efficiency: Running an agent through a diligence package costs 5x to 10x less than equivalent associate hours.</li><li>Knowledge Retention: When an analyst leaves, their reasoning no longer leaves with them. The institutional memory remains queryable, becoming a compounding asset over time.</li><li>Decision Support: When every claim in a memo links to its document, IC time goes to the thesis rather than fact-checking.</li></ul>
+</section>
+<section class="ac-sec" id="challenges-and-limitations" aria-labelledby="challenges-and-limitations-h"><h2 id="challenges-and-limitations-h">Challenges and Limitations</h2>
+<ul><li>Hallucinations: Language models will state false things with confidence. The mitigation is architectural: retrieval-grounded systems that answer only from provided documents and cite every claim.</li><li>Compliance: AI-generated research interacts with record-keeping obligations and MNPI handling. Compliance teams need visibility into what the systems read and produce.</li><li>Security: Production-grade deployment requires private environments, no training on client data, granular access controls, and audit logs.</li><li>Explainability: A model's raw reasoning is hard to inspect. The practical answer is citation-first design: the system assembles evidence a human can check; the human makes the inference.</li><li>Data Quality: AI on top of a messy data layer produces fast, wrong answers. Making data reliably queryable is an upstream engineering problem that funds consistently underestimate.</li><li>Human Oversight: The technology is an analyst multiplier, not an analyst replacement. Oversight design, who reviews what, at what stage, deserves as much attention as model selection.</li></ul>
+</section>
+<section class="ac-sec" id="types-of-ai" aria-labelledby="types-of-ai-h"><h2 id="types-of-ai-h">Types of AI Used by Hedge Funds</h2>
+<h3 id="llms">1. Large Language Models (LLMs)</h3>
+<p>LLMs are the reasoning layer of the modern AI stack (e.g., GPT, Claude). They read documents, summarize information, and write reports. They are treated as an intelligence engine that sits on top of firm-specific systems to interact with information in natural language.</p>
+<h3 id="rag">2. Retrieval Systems (RAG)</h3>
+<p>Retrieval-Augmented Generation (RAG) connects models to a fund's research corpus so they can search relevant material before responding. Turning a model into something that can answer institution-specific questions is largely a retrieval problem. Retrieval quality often matters more than model choice.</p>
+<h3 id="research-agents">3. Research Agents</h3>
+<p>Research agents interpret a question, build a research plan, search multiple sources, extract information, and produce a structured memo. The system behaves more like a junior analyst than a search box, coordinating reasoning across a sequence of tasks.</p>
+<h3 id="monitoring-agents">4. Monitoring Agents</h3>
+<p>These systems continuously read filings, news, and transcripts. When something material changes, the system surfaces an alert. The trade being made is intelligence for persistence.</p>
+<h3 id="multi-agent-systems">5. Multi-Agent Systems</h3>
+<p>Multiple specialized agents work together (e.g., one on filings, one on news, one on internal research), with an orchestration layer combining outputs. This mirrors how human deal teams divide work.</p>
+<h3 id="knowledge-graphs">6. Knowledge Graphs</h3>
+<p>These map relationships across companies, executives, suppliers, and regulators. They help analysts understand supply-chain dependencies and evaluate the second-order effects of corporate actions.</p>
+<h3 id="predictive-models">7. Predictive Models</h3>
+<p>Optimized for numerical forecasting (returns, earnings, volatility), these are traditional machine learning models. Funds increasingly operate predictive models and language models side-by-side.</p>
+<h3 id="portfolio-intelligence-agents">8. Portfolio Intelligence Agents</h3>
+<p>These combine internal portfolio data with external information to answer questions about exposure, concentration, and risk (e.g., "Which holdings are exposed to AI infrastructure spending?").</p>
+</section>
+<aside class="ac-about"><p class="ac-about-h">About this guide</p><p>This guide is brought to you by Pascal AI Labs. We build sovereign, context-driven AI infrastructure specifically designed for the rigorous demands of hedge funds and investment managers. If you are looking to integrate citation-first AI agents into your research workflow, please get in touch to see how we can help your firm scale its edge.</p><p>See how this works in Pascal: <a href="/solutions/hedge-funds">Pascal for hedge funds</a>.</p></aside>
+    </article>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What is AI for hedge funds?<span class="pm" aria-hidden="true"></span></summary><div class="ans">AI for hedge funds is the application of large language models, research agents, and retrieval systems to investment research, portfolio monitoring, due diligence, and reporting. The systems read and analyze documents, track portfolios continuously, and draft research output, with human analysts retaining judgment and decision authority.</div></details>
+<details class="faq-item"><summary>How are hedge funds using AI in 2026?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The dominant production use cases are research automation (reading filings and transcripts, building sourced company profiles), continuous portfolio monitoring, due diligence on data rooms and disclosure packages, internal knowledge retrieval, and drafting investor letters and DDQ responses. Adoption has moved from pilots into daily workflows at funds of essentially every size.</div></details>
+<details class="faq-item"><summary>Will AI replace hedge fund analysts?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The evidence so far points to AI changing the analyst role rather than eliminating it. The reading, extraction, and first-draft work moves to the system, and analyst time concentrates on thesis formation, model judgment, and decision-making. Funds we work with are expanding coverage per analyst rather than reducing analyst count.</div></details>
+<details class="faq-item"><summary>Can AI pick stocks or generate alpha on its own?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Language-model systems do not produce buy and sell decisions reliably on their own, and funds should be skeptical of claims otherwise. Where they demonstrably help is in the inputs to alpha: broader coverage, faster synthesis, fewer missed signals, and better use of the firm's own accumulated research. Quantitative predictive models are a separate, older discipline with their own track record.</div></details>
+<details class="faq-item"><summary>What is the difference between AI and quant investing?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Quant investing uses statistical models on structured data, prices, fundamentals, factors, to generate systematic trading signals. The current wave of AI centers on language models working with unstructured text, filings, transcripts, news, and research documents. They solve different problems, and many funds now run both.</div></details>
+<details class="faq-item"><summary>How do hedge funds prevent AI hallucinations?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The standard mitigations are retrieval-grounded architectures that answer only from supplied documents, mandatory citations on every claim so analysts can verify against sources, and human review on any output that feeds a decision. A system that cannot show its sources should not be used for investment work.</div></details>
+<details class="faq-item"><summary>Is AI-generated research compliant for investment advisers?<span class="pm" aria-hidden="true"></span></summary><div class="ans">It can be, provided the fund treats AI output as research records subject to existing books-and-records obligations, keeps compliance visibility into what systems read and produce, and maintains human accountability for investment decisions. Funds should involve compliance at design time and confirm treatment with counsel for their jurisdiction.</div></details>
+<details class="faq-item"><summary>How do hedge funds keep their data secure when using AI?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Production deployments use private or dedicated environments, contractual guarantees that client data never trains vendor models, role-based access controls mirroring the firm's information barriers, and full audit logging. Security review of an AI vendor should be as rigorous as for any system touching positions or research.</div></details>
+<details class="faq-item"><summary>What is an AI research agent?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A research agent is a system that takes a task, plans the steps, searches and reads the relevant sources, and returns a finished, cited output, for example a company profile or a summary of covenant terms across a data room. It differs from a chat interface in that the human delegates the task rather than driving each step.</div></details>
+<details class="faq-item"><summary>What is a multi-agent system in finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A multi-agent system assigns specialized AI agents to different parts of a complex task, one reading filings, one monitoring news, one querying internal research, with an orchestrating agent combining their output. The pattern mirrors how a deal team divides work and performs better than single agents on multi-source questions.</div></details>
+<details class="faq-item"><summary>How much does AI for hedge funds cost?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Costs vary with deployment model and scale, from tens of thousands per year for platform subscriptions at smaller funds to seven figures for enterprise deployments with private infrastructure. The relevant comparison is fully loaded analyst cost: agent-executed research work typically runs 5x to 10x cheaper than the equivalent human hours.</div></details>
+<details class="faq-item"><summary>How long does it take a hedge fund to implement AI?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A focused deployment on one workflow, research summarization or monitoring, typically reaches production in something like 4 to 12 weeks, with security review often the longest single stage. Firm-wide rollouts with internal data integration run two to four quarters, and data preparation is usually the underestimated step.</div></details>
+<details class="faq-item"><summary>What data do AI systems need to work well at a fund?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Public market data (filings, transcripts, news) works out of the box. The larger gains come from connecting internal data, past memos, models, call notes, and IC records, which usually requires an upstream effort to make those documents consistently retrievable. Data quality, more than model choice, determines output quality.</div></details>
+<details class="faq-item"><summary>Do small hedge funds use AI or only large ones?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Both, and the economics arguably favor smaller funds more. A 10-person fund cannot add analysts the way a platform can, so software that expands coverage per analyst changes what a small team can credibly run. Modern platforms have removed the need for in-house AI engineering that made this a large-fund game two or three years ago.</div></details>
+<details class="faq-item"><summary>What are AI monitoring agents?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Monitoring agents are AI systems that continuously read news, filings, transcripts, and other sources across a defined coverage list and escalate only changes that cross a materiality threshold the fund sets. They replace manual headline-skimming with complete overnight coverage and a ranked morning brief.</div></details>
+<details class="faq-item"><summary>Can AI help with hedge fund due diligence?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Diligence is among the highest-value applications. AI systems ingest data rooms and disclosure packages, extract key terms, flag inconsistencies across documents, and produce structured summaries, compressing 30 to 40 hours of first-pass reading into roughly an afternoon while leaving the judgment work to the deal team.</div></details>
+<details class="faq-item"><summary>How should a hedge fund evaluate AI vendors?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The evaluation should weigh citation and verification design (can every claim be traced to a source), security architecture (private deployment, no training on your data, audit logs), interoperability with existing systems and preferred models, evidence of production deployments at comparable firms, and the vendor's handling of the internal-data integration problem.</div></details>
+<details class="faq-item"><summary>What is the future of AI in hedge funds?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The visible trajectory runs toward agentic workflows, where teams delegate finished tasks rather than prompting step by step, multi-agent systems for complex diligence, and AI embedded directly inside existing research and operations tools. At Pascal AI Labs, we think the technology becomes infrastructure within a few years, with differentiation coming from how well a fund wires it into proprietary data and processes.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kl" aria-labelledby="kl-h">
+    <h2 class="sx-t" id="kl-h">Keep learning</h2>
+    <div class="kl-g"><a class="gc" href="/guides/ai-for-asset-management"><div class="th" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-mint"><img src="/assets/shots/shot-citations.webp" alt="Pascal answer with numbered citations beside the source presentation" width="1600" height="844" loading="lazy" decoding="async"></div></div></div><div class="gc-b"><span class="pill">Desk guide</span><h3 class="gc-t">AI for Asset Management</h3><p class="gc-m">20 min read</p></div></a><a class="gc" href="/guides/ai-for-investment-banking"><div class="th" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-sea"><img src="/assets/shots/shot-ppt.webp" alt="PowerPoint slide drafted by Pascal: gross margin expansion story" width="1270" height="585" loading="lazy" decoding="async"></div></div></div><div class="gc-b"><span class="pill">Desk guide</span><h3 class="gc-t">AI for Investment Banking</h3><p class="gc-m">21 min read</p></div></a><a class="gc" href="/pascal-academy/ai-fundamentals"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-mint"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg><b>Pre-training</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"/></svg><b>Supervised fine-tuning</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><b>Human feedback (RLHF)</b></span></div></div></div></div><div class="gc-b"><span class="pill">Series</span><h3 class="gc-t">AI fundamentals</h3><p class="gc-m">10 guides</p></div></a></div>
+  </section>
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">Ask your first question with your firm's context.<br><span style="color:var(--mint-2)">A walkthrough with your own documents connected.</span></h2>
+  <div class="actions">
+    <a class="btn btn-white" href="https://pascalailabs.com/demo">Book a demo</a>
+  </div>
+</section>
+
+<dialog class="ac-gate" id="pdf-gate" aria-labelledby="gate-h">
+  <div class="ac-gate-in">
+    <div class="ac-gate-side">
+      <p class="eyebrow">Pascal Academy · PDF</p>
+      <p class="ac-gate-t">AI for Hedge Funds</p>
+      <p class="ac-gate-m">24 min read</p>
+      <div class="ac-gate-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b><i></i><i></i></div>
+    </div>
+    <div class="ac-gate-main">
+      <button class="ac-gate-x" type="button" data-gate-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      <form class="ac-gate-form" data-gate-form data-guide="AI for Hedge Funds" data-slug="ai-for-hedge-funds" data-pdf="/assets/academy/pdf/ai-for-hedge-funds.pdf" novalidate>
+        <h2 id="gate-h">Get this guide as a PDF</h2>
+        <p class="ac-gate-sub">Tell us where to send it and we will email you the PDF.</p>
+        <label>Full name<input name="name" autocomplete="name" required></label>
+        <label>Work email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Organization<input name="organization" autocomplete="organization" required></label>
+        <p class="ac-gate-err" role="alert" hidden></p>
+        <button class="btn btn-dark" type="submit">Email me the PDF</button>
+        <p class="ac-gate-fine">By submitting, you agree to be contacted about Pascal Academy.</p>
+      </form>
+      <div class="ac-gate-done" hidden>
+        <span class="ac-gate-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <h2>Check your inbox.</h2>
+        <p>We have sent <b>AI for Hedge Funds</b> to <span data-gate-email></span>.</p>
+        <button class="btn btn-line" type="button" data-gate-close>Back to the guide</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="/assets/pages/academy3.js?v=4f48f13d9f" defer></script>
+</main>
+<footer class="footer">
+  <div class="frame">
+    <div class="footer-grid">
+      <div>
+        <a href="/" aria-label="Pascal AI home"><img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24" loading="lazy"></a>
+        <p class="footer-blurb">The Investment OS for asset and wealth managers, asset servicers, corporate treasury, banks and financial institutions, private equity and private credit firms, and hedge funds.</p>
+      </div>
+      <nav aria-label="Platform">
+        <p class="fh">Platform</p>
+        <ul>
+          <li><a href="/platform">Platform overview</a></li>
+          <li><a href="/platform/context-graph">Context graph &amp; memory</a></li>
+          <li><a href="/platform/mcp-apis">MCP &amp; APIs</a></li>
+          <li><a href="/solutions/ai-transformation">AI transformation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Products">
+        <p class="fh">Products</p>
+        <ul>
+          <li><a href="/ask-pascal">Ask Pascal</a></li>
+          <li><a href="/ask-pascal/cited-research">Cited research</a></li>
+          <li><a href="/ask-pascal/screeners">Screeners</a></li>
+          <li><a href="/pascal-agents">Pascal Agents</a></li>
+          <li><a href="/pascal-agents/workflow-library">Workflow library</a></li>
+          <li><a href="/pascal-agents/data-agent">Pascal Data Agent</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Industries">
+        <p class="fh">Industries</p>
+        <ul>
+          <li><a href="/solutions/hedge-funds">Hedge Funds</a></li>
+          <li><a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a></li>
+          <li><a href="/solutions/banking">Banks &amp; Financial Institutions</a></li>
+          <li><a href="/solutions/asset-servicing">Asset Servicing</a></li>
+          <li><a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a></li>
+          <li><a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="News">
+        <p class="fh">News</p>
+        <ul>
+          <li><a href="/news">Newsroom</a></li>
+          <li><a href="/news/founders-notes">Founder's notes</a></li>
+          <li><a href="https://vibhavviswanathan.substack.com" rel="noopener">Alpha &amp; Agents</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="fh">Company</p>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/security">Security</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/pascal-academy">Pascal Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pascal AI Labs</span>
+      <span><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms-of-use">Terms</a> &middot; <a href="https://www.linkedin.com/company/pascal-ai-labs/" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/pascalailabs" rel="noopener">X</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

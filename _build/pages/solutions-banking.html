@@ -1,0 +1,306 @@
+<!--meta
+{
+ "path": "/solutions/banking",
+ "title": "AI for Banks and Financial Institutions | Pascal AI",
+ "description": "AI for commercial banks, retail lenders and NBFCs: credit memos tested against your policy, RM briefs, covenant and KYC review, and regulatory returns.",
+ "crumbs": [["Banks & Financial Institutions", "/solutions/banking"]],
+ "schema": "solution",
+ "name": "Pascal AI for banks and financial institutions",
+ "audience": "Corporate and commercial banks, retail and consumer lenders, NBFCs and specialist lenders",
+ "og_kicker": "Industries · Banks & Financial Institutions",
+ "og_title": "AI for lending banks, from the credit memo to the regulatory return",
+ "llms": "How corporate and commercial banks, retail and consumer lenders, NBFCs and specialist lenders use Pascal across front office (credit underwriting memos from borrower financials, bank statements, rating reports and site-visit notes, tested against the bank's credit policy; relationship manager pre-meeting briefs from CRM, filings and news), middle office (credit risk review, covenant monitoring across the loan book, KYC and CDD file review) and back office (regulatory returns reconciled to the ledger, loan operations and documentation checks, legal review of facility agreements).",
+ "css": ["solutions-pe-bank.css"],
+ "priority": 0.9
+}
+-->
+<div class="frame">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">AI for banks &amp; financial institutions</span></span>Every credit memo, <span class="mute">checked against your policy before committee.</span></h1>
+      <p class="lead">Pascal spreads borrower financials, tests them against your credit policy and drafts the memo for committee. Relationship managers, credit risk and regulatory reporting work from the same loan file.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel panel-cream fit"><!--mock--><div class="pui has-float float-lg bk-hero" role="img" aria-label="A credit memo for a ₹85 crore working-capital renewal drafted by Pascal in the bank's Word credit template. The financial analysis section shows revenue, EBITDA margin and working-capital days for three years, each cited. A policy check card shows 13 of 14 credit policy rules passed and one exception: a 118-day working-capital cycle against a 110-day limit. Figures are illustrative.">
+      <div class="pui-win">
+        <div class="pui-bar"><span class="pui-lg">{{logo:word}}</span><span class="pui-crumb"><b>Heron renewal · credit memo.docx</b></span><span class="pui-bar-r"><span class="pui-tag grey">Credit template</span></span></div>
+        <div class="pui-doc-page">
+          <p class="pui-doc-k">Section 3 · Financial analysis</p>
+          <p class="pui-doc-h">Project Heron: ₹85 cr working-capital renewal</p>
+          <p class="pui-doc-p">Revenue grew 14% to ₹642 cr in FY26, in line with GST returns for the same period.<span class="pui-cite">3</span></p>
+          <table class="pui-tbl pui-mt">
+            <thead><tr><th>₹ cr · illustrative</th><th>FY24</th><th>FY25</th><th>FY26</th></tr></thead>
+            <tbody>
+              <tr><td><b>Revenue</b></td><td>498</td><td>563</td><td>642<span class="pui-cite">3</span></td></tr>
+              <tr><td><b>EBITDA margin</b></td><td>8.1%</td><td>8.6%</td><td>9.0%<span class="pui-cite">4</span></td></tr>
+              <tr><td><b>Working-capital days</b></td><td>96</td><td>104</td><td>118<span class="pui-cite on">5</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="pui-float">
+        <div class="pui-float-h"><span class="pui-k">Policy check</span><span class="pui-k">Credit policy v12</span></div>
+        <div class="pui-step">{{icon:check-circle}} <b>13 of 14 rules passed</b></div>
+        <div class="pui-hl">Exception: working-capital cycle of 118 days against the 110-day limit for distributors.<span class="pui-cite on">5</span></div>
+      </div>
+    </div><!--/mock--></div></div>
+  </section>
+</div>
+
+<nav class="subnav" aria-label="On this page">
+  <div class="subnav-inner">
+    <a href="#overview">Overview</a>
+    <a href="#office">Front to back office</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#technology">Technology</a>
+    <a href="#example">Example workflow</a>
+    <a href="#faq">Frequently asked questions</a>
+  </div>
+</nav>
+
+<div class="frame">
+  <section id="overview" aria-labelledby="overview-title">
+    <div class="row-pad">
+      <div class="head">
+        <h2 class="h2" id="overview-title">Built for lenders who answer <span class="mute">to credit committee and the regulator.</span></h2>
+        <p>Each loan file holds the borrower's documents, your policy checks and every decision taken on it. Pascal writes from that file and links each figure to its source page.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="office" aria-labelledby="om-title">
+    <div class="row-pad-sm"><h2 class="h2" id="om-title">Lending, risk and operations. <span class="mute">One loan file.</span></h2></div>
+    <div class="om row">
+      <div class="om-list" role="tablist" aria-label="Office" aria-orientation="vertical">
+        <button class="om-tab" role="tab" id="om-t1" aria-controls="om-p1" aria-selected="true"><span class="eyebrow">Front office</span><b>Underwriting &amp; relationship management</b><span>Credit memos from borrower financials, bank statements, rating reports and site-visit notes. Client briefs before each meeting from your CRM, filings and news.</span><small class="om-who"><b>For</b>Relationship managers · Credit underwriters</small></button>
+        <button class="om-tab" role="tab" id="om-t2" aria-controls="om-p2" aria-selected="false" tabindex="-1"><span class="eyebrow">Middle office</span><b>Credit risk, covenants &amp; KYC</b><span>Credit risk review and covenant monitoring across the loan book. KYC and CDD files checked against your policy before they reach the reviewer.</span><small class="om-who"><b>For</b>CRO · Credit risk review · KYC teams</small></button>
+        <button class="om-tab" role="tab" id="om-t3" aria-controls="om-p3" aria-selected="false" tabindex="-1"><span class="eyebrow">Back office</span><b>Regulatory returns, loan operations &amp; legal</b><span>Regulatory returns reconciled to the ledger, loan documents checked against sanction terms, and facility agreements reviewed for legal.</span><small class="om-who"><b>For</b>COO · CTO · Regulatory reporting</small></button>
+      </div>
+      <div class="om-media">
+        <div id="om-p1" role="tabpanel" aria-labelledby="om-t1" style="height:100%"><div class="panel panel-dark fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="Credit underwriting memo" label="30-second walkthrough: Pascal reads a borrower pack, spreads three years of financials, runs credit policy checks and drafts a sourced credit memo for the credit committee."-->
+            <div class="ucp-scene" data-label="Borrower pack">
+              <p class="pui-k">Project Kestrel · ₹220 cr facilities</p>
+              <div class="pui-row ucp-in pui-mt" style="--d:.1s"><span class="pui-lg w">{{logo:pdf}}</span>Audited financials FY24–FY26<span class="pui-row-r pui-sub">3 years</span><!--#include ucp-tick d="1s"--></div>
+              <div class="pui-row ucp-in" style="--d:.4s"><span class="pui-lg w">{{logo:excel}}</span>Bank statements · 12 months<span class="pui-row-r pui-sub">4 accounts</span><!--#include ucp-tick d="1.8s"--></div>
+              <div class="pui-row ucp-in" style="--d:.7s"><span class="pui-lg w">{{logo:pdf}}</span>External rating report<span class="pui-row-r pui-sub">A− stable</span><!--#include ucp-tick d="2.6s"--></div>
+              <div class="pui-row ucp-in" style="--d:1s"><span class="pui-lg w">{{logo:word}}</span>RM site-visit notes · Pune plant<span class="pui-row-r pui-sub">6 pp</span><!--#include ucp-tick d="3.2s"--></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:3.8s">{{icon:play}} Underwriting agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Spread">
+              <p class="pui-k">Financial spread · ₹ cr</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Line</th><th>FY24</th><th>FY25</th><th>FY26</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Revenue</b></td><td>1,142</td><td>1,268</td><td>1,391<span class="pui-cite">1</span></td></tr>
+                  <tr class="ucp-in" style="--d:.8s"><td><b>EBITDA</b></td><td>148</td><td>171</td><td>196<span class="pui-cite">2</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.3s"><td><b>Net debt</b></td><td>312</td><td>298</td><td>276<span class="pui-cite">3</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.8s"><td><b>DSCR</b></td><td>1.41x</td><td>1.52x</td><td>1.63x<span class="pui-cite">4</span></td></tr>
+                </tbody>
+              </table>
+              <div class="pui-hl ucp-in pui-mt" style="--d:2.6s">Bank-statement credits within 3.1% of reported FY26 revenue.<span class="pui-cite">5</span></div>
+            </div>
+            <div class="ucp-scene" data-label="Policy checks">
+              <p class="pui-k">Credit policy v12 · 14 rules</p>
+              <div class="pui-mt">
+                <div class="pol ucp-in" style="--d:.2s"><span>DSCR at least 1.30x</span><span>1.63x</span><span class="pui-tag">Pass</span></div>
+                <div class="pol ucp-in" style="--d:.7s"><span>Net debt / EBITDA at most 3.0x</span><span>1.41x</span><span class="pui-tag">Pass</span></div>
+                <div class="pol ucp-in" style="--d:1.2s"><span>Top customer at most 35% of revenue</span><span>41%</span><span class="pui-tag amber">Exception</span></div>
+                <div class="pol ucp-in" style="--d:1.7s"><span>Promoter shares pledged at most 20%</span><span>0%</span><span class="pui-tag">Pass</span></div>
+                <div class="pol ucp-in" style="--d:2.2s"><span>External rating A− or better</span><span>A−</span><span class="pui-tag">Pass</span></div>
+              </div>
+              <p class="pui-sub ucp-in pui-mt" style="--d:2.9s">Illustrative figures. 9 more rules passed.</p>
+            </div>
+            <div class="ucp-scene" data-label="Memo draft">
+              <div class="pui-doc ucp-in"><span class="pui-lg w">{{logo:word}}</span>Kestrel credit memo · draft.docx</div>
+              <div class="pui-doc-page" style="padding:14px 4px 0">
+                <p class="pui-doc-k ucp-in" style="--d:.3s">Corporate banking · Credit memo</p>
+                <p class="pui-doc-h ucp-in" style="--d:.5s">Project Kestrel: approve ₹220 cr with one exception</p>
+                <p class="pui-doc-p ucp-in" style="--d:1.1s">DSCR of 1.63x in FY26 clears the 1.30x policy floor.<span class="pui-cite">4</span></p>
+                <p class="pui-doc-p ucp-in" style="--d:1.8s">The largest customer, a vehicle maker, is 41% of revenue against a 35% limit.<span class="pui-cite">6</span></p>
+                <p class="pui-doc-p ucp-in" style="--d:2.5s">Mitigant: a five-year supply contract, seen on the site visit.<span class="pui-cite">7</span></p>
+              </div>
+            </div>
+            <div class="ucp-scene" data-label="Credit committee">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:outlook}}</span><div><b>Sent to credit committee · 16:40</b><span class="pui-sub">Memo, spread, policy log and 7 sources attached</span></div></div>
+              <div class="pui-hl ucp-in" style="--d:.8s">Exception: top customer at 41% of revenue. Mitigant cited from site-visit notes, p. 3.</div>
+              <div class="ucp-cols pui-mt">
+                <div class="ucp-in" style="--d:1.5s"><span class="ucp-big">212<small>figures</small></span><p class="pui-sub">each linked to a source page</p></div>
+                <div class="ucp-in" style="--d:1.9s"><span class="ucp-big">13<small>of 14</small></span><p class="pui-sub">policy rules passed</p></div>
+              </div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+        <div id="om-p2" role="tabpanel" aria-labelledby="om-t2" hidden style="height:100%"><div class="panel fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="KYC file review" label="30-second walkthrough: Pascal reads a corporate KYC file, checks it against the bank's CDD policy, clears a false-positive adverse media hit with reasons and requests one missing document."-->
+            <div class="ucp-scene" data-label="Queue">
+              <p class="pui-k ucp-in">Periodic review queue · October</p>
+              <div class="ucp-trigger ucp-in pui-mt" style="--d:.3s"><span class="pui-lg w">{{logo:excel}}</span><div><b>Corporate KYC refresh · 46 files due</b><span class="pui-sub">High-risk files first · CDD standard v9</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:1s"><span class="pui-tag grey">File</span>Client 0412 · trading company<span class="pui-row-r"><span class="pui-tag amber">High risk</span></span></div>
+              <div class="pui-row ucp-in" style="--d:1.5s"><span class="pui-tag grey">Footprint</span>3 jurisdictions<span class="pui-row-r pui-sub">last review 2025</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2.4s">{{icon:play}} KYC review agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Read">
+              <p class="pui-k">Reading the file · 5 document types</p>
+              <div class="pui-row ucp-in pui-mt" style="--d:.1s"><span class="pui-lg w">{{logo:pdf}}</span>Certificate of incorporation<span class="pui-row-r pui-sub">2 pp</span><!--#include ucp-tick d="1s"--></div>
+              <div class="pui-row ucp-in" style="--d:.4s"><span class="pui-lg w">{{logo:excel}}</span>Shareholding register<span class="pui-row-r pui-sub">Sep 2026</span><!--#include ucp-tick d="1.8s"--></div>
+              <div class="pui-row ucp-in" style="--d:.7s"><span class="pui-lg w">{{logo:pdf}}</span>Beneficial owner declaration<span class="pui-row-r pui-sub">signed</span><!--#include ucp-tick d="2.6s"--></div>
+              <div class="pui-row ucp-in" style="--d:1s"><span class="pui-lg w">{{logo:pdf}}</span>Board resolution · signatories<span class="pui-row-r pui-sub">4 names</span><!--#include ucp-tick d="3.2s"--></div>
+              <div class="pui-row ucp-in" style="--d:1.3s"><span class="pui-lg w">{{icon:shield-check}}</span>Sanctions, PEP and media screening<span class="pui-row-r pui-sub">7 parties</span><!--#include ucp-tick d="3.8s"--></div>
+            </div>
+            <div class="ucp-scene" data-label="Check">
+              <p class="pui-k">Against CDD standard v9</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Requirement</th><th>Found</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Owners above 10% identified</b></td><td>2 of 2<span class="pui-cite">1</span></td><td><span class="pui-tag">Pass</span></td></tr>
+                  <tr class="ucp-in" style="--d:.9s"><td><b>Proof of registered address</b></td><td>Dated Mar 2023<span class="pui-cite">2</span></td><td><span class="pui-tag amber">Expired</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.5s"><td><b>Sanctions and PEP screening</b></td><td>No match<span class="pui-cite">3</span></td><td><span class="pui-tag">Pass</span></td></tr>
+                  <tr class="ucp-in" style="--d:2.1s"><td><b>Adverse media</b></td><td>1 hit<span class="pui-cite">4</span></td><td><span class="pui-tag amber">Review</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="ucp-scene" data-label="Explain">
+              <p class="pui-k ucp-in">Adverse media hit · why Pascal cleared it</p>
+              <div class="pui-tl pui-mt">
+                <div class="pui-tl-i ucp-in" style="--d:.3s"><span class="pui-tl-ic">{{icon:newspaper}}</span><div class="pui-tl-t"><b>2024 article</b> · Fraud probe at a firm with a similar name</div></div>
+                <div class="pui-tl-i ucp-in" style="--d:.9s"><span class="pui-tl-ic">{{icon:file-search}}</span><div class="pui-tl-t">Registry number and directors differ from client 0412<span class="pui-cite">4</span></div></div>
+                <div class="pui-tl-i ucp-in" style="--d:1.5s"><span class="pui-tl-ic">{{icon:check}}</span><div class="pui-tl-t">Same match cleared by compliance in the 2025 review</div></div>
+                <div class="pui-tl-i ucp-in" style="--d:2.1s"><span class="pui-tl-ic run">{{icon:refresh}}</span><div class="pui-tl-t"><b>Today</b> · Marked false positive, waiting for one click</div></div>
+              </div>
+            </div>
+            <div class="ucp-scene" data-label="Resolve">
+              <div class="ucp-cols">
+                <div class="ucp-in"><span class="ucp-big">38<small>of 46</small></span><p class="pui-sub">files ready for reviewer sign-off</p></div>
+                <div class="ucp-in" style="--d:.4s"><span class="ucp-big">8<small>returned</small></span><p class="pui-sub">to the RM with the gap listed</p></div>
+              </div>
+              <div class="ucp-trigger ucp-in pui-mt" style="--d:1.2s"><span class="pui-lg w">{{logo:outlook}}</span><div><b>Request to RM · updated address proof</b><span class="pui-sub">Client 0412 · policy clause 4.3 quoted</span></div></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2s">{{icon:check-circle}} File summary saved with every source</div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+        <div id="om-p3" role="tabpanel" aria-labelledby="om-t3" hidden style="height:100%"><div class="panel panel-cream fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="Regulatory return" label="30-second walkthrough: Pascal builds a quarterly large exposures return from core banking and ledger extracts, maps accounts to borrower groups, explains each quarter-on-quarter variance and prepares the pack for sign-off."-->
+            <div class="ucp-scene" data-label="Quarter-end">
+              <p class="pui-k ucp-in">Quarter-end · 30 Sep 2026</p>
+              <div class="ucp-trigger ucp-in pui-mt" style="--d:.3s"><span class="pui-lg w">{{logo:excel}}</span><div><b>Large exposures return · Q2 FY27</b><span class="pui-sub">Due 15 Oct · 214 validation rules</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:1s"><span class="pui-tag grey">Core banking</span>Loan and limit extract<span class="pui-row-r pui-sub">18,420 accounts</span></div>
+              <div class="pui-row ucp-in" style="--d:1.5s"><span class="pui-tag grey">Ledger</span>General ledger trial balance<span class="pui-row-r pui-sub">closed 2 Oct</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2.4s">{{icon:play}} Regulatory returns agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Build">
+              <p class="pui-k">Mapping, reconciling, validating</p>
+              <div class="pui-mt"><div class="pui-row" style="border:0"><span>Accounts mapped to borrower groups</span><span class="pui-row-r pui-sub">18,388 of 18,420</span></div><div class="ucp-bar" style="--w:99%;--d:.2s"></div></div>
+              <div class="pui-mt"><div class="pui-row" style="border:0"><span>Return lines reconciled to the ledger</span><span class="pui-row-r pui-sub">41 of 42</span></div><div class="ucp-bar" style="--w:98%;--d:.8s"></div></div>
+              <div class="pui-mt"><div class="pui-row" style="border:0"><span>Validation rules passed</span><span class="pui-row-r pui-sub">213 of 214</span></div><div class="ucp-bar" style="--w:99%;--d:1.4s"></div></div>
+              <div class="pui-hl ucp-in pui-mt" style="--d:3.2s">32 accounts matched to groups from the KYC record. One ledger gap to explain.</div>
+            </div>
+            <div class="ucp-scene" data-label="Variances">
+              <p class="pui-k">Quarter on quarter · ₹ cr</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Line</th><th>Jun</th><th>Sep</th><th>Reason</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Largest group exposure</b></td><td>1,940</td><td>2,160<span class="pui-cite">1</span></td><td>New Kestrel term loan</td></tr>
+                  <tr class="ucp-in" style="--d:.9s"><td><b>Groups above 10% of Tier 1</b></td><td>6</td><td>7<span class="pui-cite">2</span></td><td>Limit renewal</td></tr>
+                  <tr class="ucp-in" style="--d:1.5s"><td><b>Unhedged FX exposure</b></td><td>1,140</td><td>1,310<span class="pui-cite">3</span></td><td>Two new importers</td></tr>
+                  <tr class="ucp-in" style="--d:2.1s"><td><b>Advances vs ledger</b></td><td>0.0</td><td>2.4<span class="pui-cite">4</span></td><td><span class="pui-tag amber">Review</span></td></tr>
+                </tbody>
+              </table>
+              <p class="pui-sub ucp-in pui-mt" style="--d:2.8s">Illustrative figures. Each cell links to the extract line it came from.</p>
+            </div>
+            <div class="ucp-scene" data-label="Review">
+              <p class="pui-k ucp-in">Reviewer edit · Regulatory reporting</p>
+              <p class="pui-ans ucp-in pui-mt" style="--d:.4s">Advances in the return are ₹2.4 cr below the ledger <span class="pui-mark-hl">because interest accrued on 30 September posted after the extract ran</span>.</p>
+              <div class="pui-note ucp-in" style="--d:1.2s">Explanation saved. Next quarter's variance note starts from this wording.</div>
+              <div class="pui-row ucp-in pui-mt" style="--d:2s"><span class="pui-av">RR</span>Approved by the head of regulatory reporting<span class="pui-row-r pui-sub">10:20</span></div>
+            </div>
+            <div class="ucp-scene" data-label="Sign-off">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:excel}}</span><div><b>Return pack for sign-off · 4 Oct</b><span class="pui-sub">Validated return, variance note and ledger reconciliation</span></div></div>
+              <div class="ucp-cols pui-mt">
+                <div class="ucp-in" style="--d:.7s"><span class="ucp-big">214<small>/214</small></span><p class="pui-sub">validation rules passed</p></div>
+                <div class="ucp-in" style="--d:1.1s"><span class="ucp-big">11<small>days</small></span><p class="pui-sub">ahead of the deadline</p></div>
+              </div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:1.8s">{{icon:check-circle}} Every cell traced to its source extract</div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="dark" id="capabilities" aria-labelledby="cap-title">
+  <div class="frame" style="border-color:var(--d-line)">
+    <div class="row-pad"><p class="eyebrow">Capabilities</p><h2 class="h2" id="cap-title" style="color:#fff;margin-top:18px">Where lenders <span style="color:var(--d-mute)">start with Pascal.</span></h2></div>
+    <div class="caps" style="border-top:1px solid var(--d-line)">
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:landmark}}</span><h3>Credit underwriting</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Front office</p><p>Borrower financials spread, bank statements tied to reported revenue and policy checks run, then a cited memo for committee.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:users}}</span><h3>Relationship manager briefs</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Front office</p><p>A one-page client brief before each meeting, from CRM notes, the latest filings and news, and limits due for renewal.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:shield}}</span><h3>Credit risk review and covenant monitoring</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Middle office</p><p>Compliance certificates and borrower accounts tested against each facility's covenants, with headroom tracked across the book.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:file-search}}</span><h3>KYC and CDD file review</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Middle office</p><p>Each document in a KYC file classified and checked against your CDD policy, with gaps and screening hits listed for the reviewer.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:file-check}}</span><h3>Regulatory returns</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Back office</p><p>Returns built from core banking and ledger extracts, reconciled line by line, with each variance explained in last quarter's approved wording.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:gavel}}</span><h3>Loan documentation and legal</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Back office</p><p>Facility agreements, security documents and sanction letters checked against the approved terms, each mismatch cited to its clause.</p></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!--#include tech-section-->
+
+<div class="frame">
+  <section class="row" id="example" aria-labelledby="ex-title">
+    <div class="row-pad-sm"><h2 class="h2" id="ex-title">Example workflow. <span class="mute">A working-capital limit renewal.</span></h2></div>
+    <div class="cs-teaser row">
+      <div class="cs-teaser-copy">
+        <p class="eyebrow">Product walk-through · Sample documents</p>
+        <h3>An annual renewal, from the RM's request to the sanctioning authority.</h3>
+        <ol class="wf-steps">
+          <li><span><b>Request in.</b> The RM asks to renew a ₹60 cr cash-credit limit. Pascal pulls the last sanction note, twelve months of statements and the latest stock statements.</span></li>
+          <li><span><b>Conduct checked.</b> Utilisation, cheque returns and overdue days tested against the sanction terms, each cited to the statement line.</span></li>
+          <li><span><b>Covenants retested.</b> The new audited accounts tested against every term in the facility letter.</span></li>
+          <li><span><b>Renewal note drafted.</b> In your credit template, with every change since last year listed.</span></li>
+        </ol>
+      </div>
+      <div class="cs-teaser-nums">
+        <div><b>4,860</b><span>statement lines read and categorised</span></div>
+        <div><b>17</b><span>sanction terms retested on the new accounts</span></div>
+        <div><b>40<small>min</small></b><span>to a renewal note ready for sanction</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row row-pad" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>How do banks and lenders use AI across front, middle and back office?<span class="pm" aria-hidden="true"></span></summary><div class="ans">In the front office, lenders use AI to draft credit memos and prepare relationship managers for client meetings. In the middle office, it reviews credit risk, tests covenants across the loan book and checks KYC files. In the back office, it builds regulatory returns, checks loan documents against sanction terms and supports legal review. Pascal runs all three on one context graph, with every figure linked to its source.</div></details>
+        <details class="faq-item"><summary>How does Pascal support credit underwriting?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal reads the borrower pack: audited financials, bank statements, GST or tax returns, rating reports and the relationship manager's site-visit notes. It spreads the financials into your template, ties bank-statement credits to reported revenue, runs your policy checks and drafts the credit memo with each figure linked to its page. The underwriter reviews the draft and the credit committee makes the decision.</div></details>
+        <details class="faq-item"><summary>Can Pascal check a memo against our own credit policy?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Your credit policy is loaded as a set of rules with its version number, such as coverage floors, debt limits, concentration caps, working-capital cycles and rating thresholds. Every draft memo is tested against the current version, and each exception is listed with the clause it breaks and any mitigant found in the file.</div></details>
+        <details class="faq-item"><summary>Can Pascal prepare relationship managers for client meetings?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Before a meeting, Pascal reads the client's CRM history, recent filings and news, current limits and utilisation, and any open credit or KYC actions. It writes a one-page brief with talking points and the renewals or covenant tests coming up, each line linked to its source.</div></details>
+        <details class="faq-item"><summary>Does Pascal work for retail lenders and NBFCs?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Retail, MSME and specialist lenders use the same workflows on their own files: loan applications, income documents and bank statements read and checked against product-level credit rules, with exceptions routed to the underwriter. Each product keeps its own policy version, so a gold loan and a business loan are tested against different rules.</div></details>
+        <details class="faq-item"><summary>How does Pascal handle borrower data and audit requests?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal deploys in your private cloud or on premise, so borrower and KYC data stays inside the bank. Access follows your existing entitlements. Every memo, check and return keeps a log of the sources read, the rules applied and who approved each edit, ready for internal audit and the regulator.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See Pascal on a live borrower file." sub="With your credit policy and your templates."-->

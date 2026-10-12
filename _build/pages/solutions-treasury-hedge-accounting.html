@@ -1,0 +1,299 @@
+<!--meta
+{
+ "path": "/solutions/treasury-hedge-accounting",
+ "title": "AI for Corporate Treasury & Hedge Accounting | Pascal AI",
+ "description": "AI for corporate treasury: exposures read from contracts, hedge proposals, effectiveness tests and designation memos under IFRS 9, Ind AS 109 and ASC 815.",
+ "crumbs": [["Corporate Treasury & Hedge Accounting", "/solutions/treasury-hedge-accounting"]],
+ "schema": "solution",
+ "name": "Pascal AI for corporate treasury and hedge accounting",
+ "audience": "Corporate treasury departments",
+ "og_kicker": "Industries · Corporate Treasury & Hedge Accounting",
+ "og_title": "AI for corporate treasury, from the supplier contract to the audit pack",
+ "llms": "How group treasury teams at large corporates and conglomerates use Pascal across dealing (FX, rates and commodity exposures from contracts, purchase orders and forecasts; hedge proposals; bank quote comparison), treasury risk (exposure and limit monitoring, hedge effectiveness testing by dollar offset and regression, mark-to-market checks, counterparty limits, ISDA and CSA terms) and treasury operations and accounting (confirmation matching, settlements, hedge designation memos under IFRS 9, Ind AS 109 and ASC 815, cash flow hedge reserve entries, audit evidence packs, board treasury reports).",
+ "css": ["solutions-treasury.css"],
+ "priority": 0.9
+}
+-->
+<div class="frame pg-trs">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      {{crumbs}}
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">AI for corporate treasury &amp; hedge accounting</span></span>Hedge accounting <span class="mute">your auditors can follow.</span></h1>
+      <p class="lead">Pascal reads your contracts, deal tickets and bank confirmations, then proposes hedges, tests effectiveness and drafts designation memos under IFRS 9, Ind AS 109 or ASC 815.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel panel-dark fit"><!--mock--><div class="pui has-float float-lg" role="img" aria-label="Pascal Agents hedge register for the second quarter. Three hedge relationships are listed with their type, effectiveness result and documentation status: an FX forward on EUR purchases, an interest rate swap on a floating-rate term loan, and a copper swap flagged for review. A run card shows the four steps the quarter-end agent completed.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Hedge register · Q2 FY27</b></span><span class="pui-bar-r"><span class="pui-tag">312 relationships</span></span></div>
+    <div class="pui-body">
+      <!--#include pui-rail on_chat="" on_wf="on"-->
+      <div class="pui-main">
+        <p class="pui-k">Quarter-end effectiveness · 30 Sep</p>
+        <table class="pui-tbl pui-mt">
+          <thead><tr><th>Relationship</th><th>Type</th><th>Result</th><th>Memo</th></tr></thead>
+          <tbody>
+            <tr><td><b>EUR purchases · FX forwards</b></td><td>Cash flow</td><td>0.97<span class="pui-cite">1</span></td><td><span class="pui-tag">Signed</span></td></tr>
+            <tr><td><b>Term loan · pay-fixed IRS</b></td><td>Cash flow</td><td>R² 0.96<span class="pui-cite">2</span></td><td><span class="pui-tag">Signed</span></td></tr>
+            <tr><td><b>Copper purchases · swap</b></td><td>Cash flow</td><td>0.78<span class="pui-cite">3</span></td><td><span class="pui-tag amber">Review</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="pui-float left">
+    <p class="pui-k">Agent run</p>
+    <div class="pui-step">{{icon:check-circle}} Pulled valuations from the TMS and 6 banks</div>
+    <div class="pui-step">{{icon:check-circle}} Ran dollar offset and regression tests</div>
+    <div class="pui-step">{{icon:check-circle}} Explained 3 results outside policy</div>
+    <div class="pui-step">{{icon:file-check}} <b>Audit pack ready</b></div>
+  </div>
+</div><!--/mock--></div></div>
+  </section>
+</div>
+
+<nav class="subnav" aria-label="On this page">
+  <div class="subnav-inner">
+    <a href="#overview">Overview</a>
+    <a href="#office">Front to back office</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#technology">Technology</a>
+    <a href="#faq">Frequently asked questions</a>
+  </div>
+</nav>
+
+<div class="frame pg-trs">
+  <section id="overview" aria-labelledby="overview-title">
+    <div class="row-pad">
+      <div class="head">
+        <h2 class="h2" id="overview-title">Built for treasuries that report <span class="mute">to the audit committee.</span></h2>
+        <p>Pascal holds the hedge register, the treasury policy and every bank document in one context graph. Dealers, treasury risk and accounting work from the same record of each hedge.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" id="office" aria-labelledby="om-title">
+    <div class="row-pad-sm"><h2 class="h2" id="om-title">Dealing, risk and accounting. <span class="mute">One record of every hedge.</span></h2></div>
+    <div class="om row">
+      <div class="om-list" role="tablist" aria-label="Office" aria-orientation="vertical">
+        <button class="om-tab" role="tab" id="om-t1" aria-controls="om-p1" aria-selected="true"><span class="eyebrow">Front office</span><b>Dealing &amp; exposure management</b><span>FX, rates and commodity exposures read from contracts, purchase orders and forecasts, sized into hedge proposals and priced across bank quotes.</span><small class="om-who"><b>For</b>Group treasurer · CFO · Dealers</small></button>
+        <button class="om-tab" role="tab" id="om-t2" aria-controls="om-p2" aria-selected="false" tabindex="-1"><span class="eyebrow">Middle office</span><b>Treasury risk</b><span>Exposure and limit monitoring, effectiveness tests, mark-to-market checks and counterparty limits read against ISDA and CSA terms.</span><small class="om-who"><b>For</b>Head of treasury risk · Risk analysts</small></button>
+        <button class="om-tab" role="tab" id="om-t3" aria-controls="om-p3" aria-selected="false" tabindex="-1"><span class="eyebrow">Back office</span><b>Treasury operations &amp; accounting</b><span>Confirmation matching, settlements, designation memos at inception, cash flow hedge reserve entries, audit packs and the board treasury report.</span><small class="om-who"><b>For</b>Financial controller · Head of accounting · External auditors</small></button>
+      </div>
+      <div class="om-media">
+        <div id="om-p1" role="tabpanel" aria-labelledby="om-t1" style="height:100%"><div class="panel panel-dark fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="Exposure from a new contract" label="30-second walkthrough: a signed EUR supplier contract arrives, Pascal extracts the exposure, applies the policy hedge ratio, compares four bank quotes and drafts a hedge proposal."-->
+            <div class="ucp-scene" data-label="Contract">
+              <p class="pui-k ucp-in">New contract · 10:14</p>
+              <div class="ucp-trigger ucp-in pui-mt" style="--d:.3s"><span class="pui-lg w">{{logo:pdf}}</span><div><b>Supply agreement · hydraulic components (DE)</b><span class="pui-sub">32 pages · signed by group procurement · filed to SharePoint</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:1s"><span class="pui-tag grey">Entity</span>Manufacturing subsidiary<span class="pui-row-r pui-sub">Functional currency INR</span></div>
+              <div class="pui-row ucp-in" style="--d:1.4s"><span class="pui-tag grey">Policy</span>FX hedging policy v4<span class="pui-row-r pui-sub">80% committed · 50% forecast</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2.2s">{{icon:play}} Exposure agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Extract">
+              <p class="pui-k">Terms read from the contract</p>
+              <div class="pui-kv pui-mt">
+                <span class="ucp-in" style="--d:.2s">Contract currency</span><b class="ucp-in" style="--d:.2s">EUR<span class="pui-cite">1</span></b>
+                <span class="ucp-in" style="--d:.6s">Contract value</span><b class="ucp-in" style="--d:.6s">€24.6M<span class="pui-cite">2</span></b>
+                <span class="ucp-in" style="--d:1s">Payment schedule</span><b class="ucp-in" style="--d:1s">8 quarterly instalments from Mar 2027<span class="pui-cite">3</span></b>
+                <span class="ucp-in" style="--d:1.4s">Price adjustment</span><b class="ucp-in" style="--d:1.4s">Steel index, ±5% band, cl. 7.2<span class="pui-cite">4</span></b>
+                <span class="ucp-in" style="--d:1.8s">Forecast POs, same supplier</span><b class="ucp-in" style="--d:1.8s">€4.8M next 12 months<span class="pui-cite">5</span></b>
+              </div>
+              <p class="pui-sub ucp-in pui-mt" style="--d:2.6s">Each term links to the clause or purchase order it came from.</p>
+            </div>
+            <div class="ucp-scene" data-label="Policy">
+              <p class="pui-k">Next 12 months · policy hedge ratio applied</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Exposure</th><th>Amount</th><th>Ratio</th><th>Target cover</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Committed · contract</b></td><td>€12.30M</td><td>80%</td><td>€9.84M</td></tr>
+                  <tr class="ucp-in" style="--d:.8s"><td><b>Forecast · purchase orders</b></td><td>€4.80M</td><td>50%</td><td>€2.40M</td></tr>
+                  <tr class="ucp-in" style="--d:1.3s"><td><b>Existing EUR forwards</b></td><td colspan="2">From the hedge register</td><td>(€6.00M)</td></tr>
+                  <tr class="ucp-in" style="--d:1.8s"><td><b>Proposed new cover</b></td><td colspan="2"><span class="pui-tag">Within policy</span></td><td><b>€6.24M</b></td></tr>
+                </tbody>
+              </table>
+              <p class="pui-sub ucp-in pui-mt" style="--d:2.6s">Illustrative figures.</p>
+            </div>
+            <div class="ucp-scene" data-label="Quotes">
+              <p class="pui-k">EUR/INR forward strip · 4 bank quotes</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Bank</th><th>Avg. forward</th><th>Spread to mid</th><th>Limit used</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Bank A</b></td><td>103.42</td><td>+6 paise</td><td>54%</td></tr>
+                  <tr class="ucp-in" style="--d:.8s"><td><b>Bank B</b></td><td>103.37</td><td>+1 paisa</td><td>38% <span class="pui-tag">Best</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.3s"><td><b>Bank C</b></td><td>103.49</td><td>+13 paise</td><td>61%</td></tr>
+                  <tr class="ucp-in" style="--d:1.8s"><td><b>Bank D</b></td><td>103.45</td><td>+9 paise</td><td>91% <span class="pui-tag amber">Near limit</span></td></tr>
+                </tbody>
+              </table>
+              <p class="pui-sub ucp-in pui-mt" style="--d:2.6s">Counterparty limits read from the credit line schedule and ISDA terms.</p>
+            </div>
+            <div class="ucp-scene" data-label="Proposal">
+              <div class="pui-doc ucp-in"><span class="pui-lg w">{{logo:word}}</span>Hedge proposal · EUR supply agreement.docx</div>
+              <div class="pui-doc-page" style="padding:14px 4px 0">
+                <p class="pui-doc-k ucp-in" style="--d:.3s">Group treasury · For approval</p>
+                <p class="pui-doc-h ucp-in" style="--d:.5s">Buy €6.24M forward against INR with Bank B</p>
+                <p class="pui-doc-p ucp-in" style="--d:1.1s">Four quarterly tenors, March to December 2027, at an average 103.37.<span class="pui-cite">4</span></p>
+                <p class="pui-doc-p ucp-in" style="--d:1.8s">Brings 12-month cover to 80% of committed and 50% of forecast exposure, per policy v4 section 3.1.<span class="pui-cite">6</span></p>
+              </div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2.6s">{{icon:send}} Sent to the group treasurer for approval</div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+        <div id="om-p2" role="tabpanel" aria-labelledby="om-t2" hidden style="height:100%"><div class="panel fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="Quarter-end effectiveness test" label="30-second walkthrough: at quarter end Pascal pulls valuations, runs dollar offset and regression tests on every hedge relationship, explains the one outside policy and sends the workbook for sign-off."-->
+            <div class="ucp-scene" data-label="Quarter end">
+              <p class="pui-k ucp-in">Quarter close · 30 Sep</p>
+              <div class="ucp-trigger ucp-in pui-mt" style="--d:.3s"><span class="pui-lg w">{{icon:calendar}}</span><div><b>Q2 effectiveness testing due</b><span class="pui-sub">312 hedge relationships · 14 entities · close calendar day 3</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:1s"><span class="pui-tag grey">Dollar offset</span>Policy band 80–125%<span class="pui-row-r pui-sub">cumulative</span></div>
+              <div class="pui-row ucp-in" style="--d:1.4s"><span class="pui-tag grey">Regression</span>R² ≥ 0.80, slope −0.80 to −1.25<span class="pui-row-r pui-sub">24 months</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2.2s">{{icon:play}} Effectiveness agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Valuations">
+              <p class="pui-k">Pulling valuations · 30 Sep</p>
+              <div class="pui-row ucp-in pui-mt" style="--d:.1s"><span class="pui-lg t" style="background:#33464A">{{icon:server}}</span>Mark-to-market file<span class="pui-row-r pui-sub">1,846 deals</span><!--#include ucp-tick d="1s"--></div>
+              <div class="pui-row ucp-in" style="--d:.4s"><span class="pui-lg t" style="background:#1F3864">{{icon:landmark}}</span>Bank valuation statements<span class="pui-row-r pui-sub">6 counterparties</span><!--#include ucp-tick d="1.8s"--></div>
+              <div class="pui-row ucp-in" style="--d:.7s"><span class="pui-lg t" style="background:#0C595A">{{icon:calculator}}</span>Hypothetical derivatives<span class="pui-row-r pui-sub">hedged items</span><!--#include ucp-tick d="2.6s"--></div>
+              <div class="pui-row ucp-in" style="--d:1s"><span class="pui-lg w">{{logo:sharepoint}}</span>Designation memos<span class="pui-row-r pui-sub">hedge ratio, method</span><!--#include ucp-tick d="3.2s"--></div>
+              <div class="pui-hl ucp-in" style="--d:3.8s">Bank and TMS values agree within tolerance on 1,839 of 1,846 deals. 7 checked line by line.</div>
+            </div>
+            <div class="ucp-scene" data-label="Test">
+              <p class="pui-k">Results by relationship</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Relationship</th><th>Method</th><th>Result</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>EUR purchases · forwards</b></td><td>Dollar offset</td><td>0.97</td><td><span class="pui-tag">Pass</span></td></tr>
+                  <tr class="ucp-in" style="--d:.8s"><td><b>Term loan · IRS</b></td><td>Regression</td><td>R² 0.96 · −0.98</td><td><span class="pui-tag">Pass</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.3s"><td><b>USD bond · CCS</b></td><td>Regression</td><td>R² 0.93 · −1.04</td><td><span class="pui-tag">Pass</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.8s"><td><b>Copper purchases · swap</b></td><td>Dollar offset</td><td>0.78</td><td><span class="pui-tag amber">Outside band</span></td></tr>
+                </tbody>
+              </table>
+              <p class="pui-sub ucp-in pui-mt" style="--d:2.6s">Illustrative figures. 309 of 312 inside policy.</p>
+            </div>
+            <div class="ucp-scene" data-label="Explain">
+              <p class="pui-k ucp-in">Copper swap · why the result moved</p>
+              <div class="pui-tl pui-mt">
+                <div class="pui-tl-i ucp-in" style="--d:.3s"><span class="pui-tl-ic">{{icon:search}}</span><div class="pui-tl-t">Swap settles on the LME cash price. Purchases price on the monthly average.</div></div>
+                <div class="pui-tl-i ucp-in" style="--d:.9s"><span class="pui-tl-ic">{{icon:calculator}}</span><div class="pui-tl-t"><b>INR 18.4M</b> ineffectiveness recognised in profit or loss</div></div>
+                <div class="pui-tl-i ucp-in" style="--d:1.5s"><span class="pui-tl-ic">{{icon:scale}}</span><div class="pui-tl-t">Proposed: rebalance the hedge ratio from 1.00 to 0.92</div></div>
+                <div class="pui-tl-i ucp-in" style="--d:2.1s"><span class="pui-tl-ic run">{{icon:refresh}}</span><div class="pui-tl-t"><b>Waiting</b> · head of treasury risk to approve</div></div>
+              </div>
+            </div>
+            <div class="ucp-scene" data-label="Sign-off">
+              <div class="ucp-cols">
+                <div class="ucp-in"><span class="ucp-big">312<small>/312</small></span><p class="pui-sub">relationships tested</p></div>
+                <div class="ucp-in" style="--d:.4s"><span class="ucp-big">3<small>flagged</small></span><p class="pui-sub">each with the cause written out</p></div>
+              </div>
+              <div class="ucp-trigger ucp-in pui-mt" style="--d:1.2s"><span class="pui-lg w">{{logo:excel}}</span><div><b>Effectiveness workbook · Q2 FY27</b><span class="pui-sub">Tests, ineffectiveness by entity, reserve roll-forward</span></div></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2s">{{icon:check-circle}} Sent to the financial controller for sign-off</div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+        <div id="om-p3" role="tabpanel" aria-labelledby="om-t3" hidden style="height:100%"><div class="panel panel-cream fit">
+          <!--#include ucp-open crumb="Pascal Agents" title="Hedge documentation &amp; audit pack" label="30-second walkthrough: a bank confirmation arrives, Pascal matches it to the deal ticket, drafts the designation memo, posts the cash flow hedge entries and assembles the audit pack."-->
+            <div class="ucp-scene" data-label="Confirmation">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{logo:pdf}}</span><div><b>Bank B · FX forward confirmation</b><span class="pui-sub">Received 11:02 · buy EUR / sell INR · 4 tenors</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:.8s"><span class="pui-tag grey">Deal ticket</span>FX-27-0418 · dealt 10:41<span class="pui-row-r pui-sub">TMS</span></div>
+              <div class="pui-row ucp-in" style="--d:1.2s"><span class="pui-tag grey">Approval</span>Hedge proposal · group treasurer<span class="pui-row-r pui-sub">approved 10:32</span></div>
+              <div class="ucp-cap ucp-in pui-mt" style="--d:2s">{{icon:play}} Documentation agent started</div>
+            </div>
+            <div class="ucp-scene" data-label="Match">
+              <p class="pui-k">Deal ticket vs bank confirmation</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Field</th><th>Deal ticket</th><th>Bank</th><th></th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Notional</b></td><td>€6,240,000</td><td>€6,240,000</td><td><span class="pui-tag">Match</span></td></tr>
+                  <tr class="ucp-in" style="--d:.8s"><td><b>Average rate</b></td><td>103.37</td><td>103.37</td><td><span class="pui-tag">Match</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.3s"><td><b>Value dates</b></td><td>31 Mar – 31 Dec 27</td><td>31 Mar – 31 Dec 27</td><td><span class="pui-tag">Match</span></td></tr>
+                  <tr class="ucp-in" style="--d:1.8s"><td><b>Settlement instructions</b></td><td>SSI on file</td><td>SSI on file</td><td><span class="pui-tag">Match</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="ucp-scene" data-label="Designation">
+              <p class="pui-k ucp-in">Designation memo · HR-2027-031 · Ind AS 109</p>
+              <div class="pui-kv pui-mt">
+                <span class="ucp-in" style="--d:.3s">Hedged item</span><b class="ucp-in" style="--d:.3s">Highly probable EUR purchases, 2027<span class="pui-cite">1</span></b>
+                <span class="ucp-in" style="--d:.7s">Hedging instrument</span><b class="ucp-in" style="--d:.7s">FX forwards, €6.24M, Bank B<span class="pui-cite">2</span></b>
+                <span class="ucp-in" style="--d:1.1s">Risk management objective</span><b class="ucp-in" style="--d:1.1s">Fix the INR cost of EUR inputs<span class="pui-cite">3</span></b>
+                <span class="ucp-in" style="--d:1.5s">Hedge type and ratio</span><b class="ucp-in" style="--d:1.5s">Cash flow hedge · 1:1</b>
+                <span class="ucp-in" style="--d:1.9s">Effectiveness method</span><b class="ucp-in" style="--d:1.9s">Critical terms + dollar offset</b>
+              </div>
+            </div>
+            <div class="ucp-scene" data-label="Entries">
+              <p class="pui-k">Journal entries · 30 Sep · INR</p>
+              <table class="pui-tbl pui-mt">
+                <thead><tr><th>Account</th><th>Debit</th><th>Credit</th></tr></thead>
+                <tbody>
+                  <tr class="ucp-in" style="--d:.3s"><td><b>Derivative asset · FX forwards</b></td><td>2,140,000</td><td></td></tr>
+                  <tr class="ucp-in" style="--d:.8s"><td><b>Cash flow hedge reserve (OCI)</b></td><td></td><td>2,140,000</td></tr>
+                </tbody>
+              </table>
+              <div class="pui-note ucp-in" style="--d:1.6s">On each purchase, the reserve moves into the inventory cost of the components.</div>
+              <div class="pui-row ucp-in pui-mt" style="--d:2.3s"><span class="pui-av">FC</span>Reviewed by the financial controller<span class="pui-row-r pui-sub">14:20</span></div>
+            </div>
+            <div class="ucp-scene" data-label="Audit pack">
+              <div class="ucp-trigger ucp-in"><span class="pui-lg w">{{icon:folder}}</span><div><b>Audit pack · HR-2027-031</b><span class="pui-sub">Shared read-only with the external auditors</span></div></div>
+              <div class="pui-row ucp-in pui-mt" style="--d:.6s"><span class="pui-lg w">{{logo:word}}</span>Designation memo, signed at inception<span class="pui-row-r pui-ok">{{icon:check}}</span></div>
+              <div class="pui-row ucp-in" style="--d:.9s"><span class="pui-lg w">{{logo:pdf}}</span>Bank confirmation and match report<span class="pui-row-r pui-ok">{{icon:check}}</span></div>
+              <div class="pui-row ucp-in" style="--d:1.2s"><span class="pui-lg w">{{logo:excel}}</span>Effectiveness test at inception<span class="pui-row-r pui-ok">{{icon:check}}</span></div>
+              <div class="pui-row ucp-in" style="--d:1.5s"><span class="pui-lg w">{{logo:excel}}</span>Entries and reserve roll-forward<span class="pui-row-r pui-ok">{{icon:check}}</span></div>
+            </div>
+          <!--#include ucp-close-->
+        </div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="dark" id="capabilities" aria-labelledby="cap-title">
+  <div class="frame" style="border-color:var(--d-line)">
+    <div class="row-pad"><p class="eyebrow">Capabilities</p><h2 class="h2" id="cap-title" style="color:#fff;margin-top:18px">Where treasury teams <span style="color:var(--d-mute)">start with Pascal.</span></h2></div>
+    <div class="caps" style="border-top:1px solid var(--d-line)">
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:scan-text}}</span><h3>Exposure identification</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Front office</p><p>FX, rates and commodity exposures read from contracts, purchase orders and forecasts, each linked to its clause.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:arrow-left-right}}</span><h3>Hedge proposals and bank quotes</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Front office</p><p>Proposals sized to your policy hedge ratios, with bank quotes compared on rate, spread to mid and limit headroom.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:chart-line}}</span><h3>Hedge effectiveness testing</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Middle office</p><p>Dollar offset and regression tests on every relationship at quarter end, with each result outside policy explained.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:handshake}}</span><h3>Counterparty limits and ISDA terms</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Middle office</p><p>Limits checked against ISDA and CSA terms: thresholds, minimum transfer amounts and eligible collateral, cited to the page.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:file-check}}</span><h3>Hedge documentation at inception</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Back office</p><p>Designation memos under IFRS 9, Ind AS 109 or ASC 815, drafted in your template the day the hedge is dealt.</p></div>
+      </div></div>
+      <div class="cap flip" tabindex="0"><div class="cap-inner">
+        <div class="cap-face cap-front"><span class="cap-ico">{{icon:shield-check}}</span><h3>Audit packs and board reports</h3></div>
+        <div class="cap-face cap-back"><p class="cap-k">Back office</p><p>Journal entries, reserve roll-forwards, audit evidence and the board treasury report, all from one hedge register.</p></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!--#include tech-section-->
+
+<div class="frame pg-trs">
+
+  <section class="row row-pad" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>How do corporate treasury teams use AI for hedge accounting?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Dealers use it to read exposures from contracts and forecasts and to compare bank quotes. Treasury risk uses it for effectiveness tests and limit checks. Accounting uses it for designation memos, journal entries and audit packs. Pascal runs all three on one hedge register, so each team reads the same record.</div></details>
+        <details class="faq-item"><summary>Which hedge accounting standards does Pascal support?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal drafts documentation and tests under IFRS 9, Ind AS 109 and ASC 815, in your own templates. Effectiveness thresholds, such as an 80–125% dollar offset band, come from your treasury policy and can differ by entity or standard.</div></details>
+        <details class="faq-item"><summary>What goes into a hedge designation memo?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The hedged item, the hedging instrument, the risk management objective and strategy, the hedge ratio, the method for assessing effectiveness and the expected sources of ineffectiveness. Pascal fills each field from the deal ticket, the bank confirmation and your policy, and cites the source.</div></details>
+        <details class="faq-item"><summary>Which treasury systems does Pascal connect to?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal reads your treasury management system and ERP exports, bank confirmations and valuation statements, ISDA and CSA documents, contracts on SharePoint and email. Market data you already license can be added for mark-to-market checks.</div></details>
+        <details class="faq-item"><summary>Can our external auditors review Pascal's work?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Each hedge relationship has an audit pack with the signed memo, the confirmation match, the test results and the entries. Auditors get read-only access, and every figure links back to the document it came from.</div></details>
+        <details class="faq-item"><summary>Where should a corporate treasury start with Pascal?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Most teams start with hedge documentation and confirmation matching on the hedges already on the register, then add quarter-end effectiveness testing and exposure identification. See the <a href="/pascal-agents/workflow-library">workflow library</a> for the full list.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See Pascal on your hedge register." sub="With your policy and your bank confirmations."-->

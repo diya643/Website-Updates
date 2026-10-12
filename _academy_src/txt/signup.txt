@@ -1,0 +1,12 @@
+[span] Pascal Academy
+[h1] Train Your Team with Pascal Academy
+[p] Learn how to apply AI across your team's day-to-day investment workflows.
+[a] Back to Academy
+[h2] Tell us about your team
+[p] We'll follow up to plan a workshop tailored to your firm.
+[span] *
+[span] ( optional )
+[span] 🇺🇸
+[span] +1
+[button] Sign Up
+[p] By submitting, you agree to be contacted about Pascal Academy.

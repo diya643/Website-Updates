@@ -1,0 +1,154 @@
+{
+ "kind": "desk",
+ "slug": "ai-for-private-equity",
+ "path": "/guides/ai-for-private-equity",
+ "title": "AI for Private Equity",
+ "subtitle": "",
+ "dek": "How AI supports the private equity lifecycle, from sourcing and diligence to portfolio monitoring, and where a deal team's judgement must stay in the loop.",
+ "meta": "22 min read · Intermediate",
+ "intro": [],
+ "chapters": [
+  {
+   "id": "introduction",
+   "h": "Introduction",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "Private equity runs on a scarce resource: partner and associate time. Every hour spent reading a data room, mapping a fragmented market, or reconciling a monthly portfolio pack is an hour not spent on the judgement that actually drives returns. This guide walks the PE lifecycle stage by stage and shows precisely where AI compresses the mechanical work, and where it must never replace a human decision."
+    },
+    {
+     "t": "p",
+     "h": "Throughout, the principle is the same: AI is for the language-and-synthesis layer, not the investment decision. Use it to get to a defensible view faster, then verify everything that matters."
+    }
+   ]
+  },
+  {
+   "id": "how-pe-firms-use-ai",
+   "h": "How PE Firms Use AI",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "Adoption in private markets clusters around a handful of high-value workflows: surfacing and pre-qualifying targets, reading diligence materials at speed, mapping competitors, and turning a quarter of noisy portfolio data into a clean signal. What these share is a large volume of unstructured text that a small team must digest under time pressure."
+    },
+    {
+     "t": "ul",
+     "items": [
+      "Sourcing: screening thousands of companies against a thesis to find the few worth a call.",
+      "Diligence: interrogating a data room conversationally instead of reading it linearly.",
+      "Monitoring: normalising portfolio reporting so exceptions surface on their own.",
+      "Drafting: producing structured first drafts of memos, one-pagers and screening notes."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "deal-sourcing",
+   "h": "Deal Sourcing",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "Sourcing is a filtering problem: a wide funnel of companies narrowed to a shortlist that fits the fund's mandate. AI helps by reading company descriptions, news, filings and web presence, then scoring each candidate against your stated criteria, sector, size, growth, business model, ownership."
+    },
+    {
+     "t": "p",
+     "h": "The output is a ranked, annotated longlist with a reason attached to every entry, not a black-box score. That reason is what lets an associate accept or reject quickly, and it is what keeps the process auditable when the investment committee asks how a name reached the list."
+    }
+   ]
+  },
+  {
+   "id": "commercial-due-diligence",
+   "h": "Commercial Due Diligence",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "Diligence is where AI earns its keep. With retrieval over the data room, a deal team can ask questions of hundreds of documents at once, 'summarise customer concentration', 'what are the stated churn drivers', 'flag every mention of a change-of-control clause', and get answers that point back to the exact page they came from."
+    },
+    {
+     "t": "p",
+     "h": "Treat every answer as a lead to verify, not a finding to bank. The citation is the point: it tells you where to look, so a human confirms the number before it reaches the model or the IC memo."
+    }
+   ]
+  },
+  {
+   "id": "market-mapping",
+   "h": "Market Mapping",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "Mapping a fragmented market by hand is slow and quickly stale. AI can assemble a first-pass map, competitors, adjacencies, potential add-ons, from public sources in a fraction of the time, structured into the categories you care about."
+    },
+    {
+     "t": "p",
+     "h": "The map is a starting hypothesis. Its value is coverage and speed; its risk is confident omission. Pressure-test the edges with someone who knows the sector before you rely on it for a buy-and-build thesis."
+    }
+   ]
+  },
+  {
+   "id": "investment-memos",
+   "h": "Investment Memos",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "An investment memo is an argument backed by evidence. AI is a strong first-draft writer and a ruthless editor: feed it your diligence findings and your thesis, and it will structure the case, surface gaps in the logic, and tighten the prose."
+    },
+    {
+     "t": "p",
+     "h": "What it must never do is invent the evidence. The discipline is to supply the sources and require the draft to cite them, so the memo that reaches the committee is defensible line by line."
+    }
+   ]
+  },
+  {
+   "id": "portfolio-monitoring",
+   "h": "Portfolio Monitoring",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "Post-close, the problem inverts from too little information to too much. Every portfolio company reports differently, monthly, forever. AI can normalise those packs into a consistent shape, extract the KPIs that matter, and flag the exceptions worth a partner's attention."
+    },
+    {
+     "t": "p",
+     "h": "Done well, monitoring becomes exception-driven: the team reads the three companies that moved, not the thirty that didn't. Every extracted metric still needs a source and a spot-check before it drives a decision."
+    }
+   ]
+  },
+  {
+   "id": "best-practices",
+   "h": "Best Practices",
+   "blocks": [
+    {
+     "t": "ul",
+     "items": [
+      "Ground everything in sources: an uncited figure in a memo is an unverified figure.",
+      "Keep sourcing scores explainable, so any name on the longlist can be defended.",
+      "Verify diligence findings against the underlying document, not the summary.",
+      "Treat market maps and primers as hypotheses, not conclusions.",
+      "Keep a human decision-maker between any AI output and the investment committee."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "further-reading",
+   "h": "Further Reading",
+   "blocks": [
+    {
+     "t": "p",
+     "h": "Continue with AI for Investment Banking to see the diligence and valuation toolkit from the sell-side, or AI for Asset Management for the monitoring and governance patterns that apply once an asset is held at scale."
+    }
+   ]
+  }
+ ],
+ "faqs": [
+  [
+   "What are the key practices to follow?",
+   "Ground everything in sources: an uncited figure in a memo is an unverified figure. Keep sourcing scores explainable, so any name on the longlist can be defended. Verify diligence findings against the underlying document, not the summary. Treat market maps and primers as hypotheses, not conclusions. Keep a human decision-maker between any AI output and the investment committee."
+  ]
+ ],
+ "outro": [],
+ "about": [
+  {
+   "t": "updated",
+   "h": "July 24, 2026"
+  }
+ ]
+}

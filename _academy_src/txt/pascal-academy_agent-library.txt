@@ -1,0 +1,115 @@
+[a] Back
+[span] /
+[span] AI Agents
+[span] Collection · Agent Library
+[h1] AI Agents for Finance
+[p] Purpose-built agents for institutional finance — research, extract and generate.
+[a] Explore Agents
+[a] Sign Up
+[span] Why Pascal Agents
+[h2] Agents built around how investment teams actually work.
+[p] Each agent is designed around a defined investment workflow, from screening and extraction to memo generation and portfolio monitoring.
+[p] Select the companies, sources, and output format you need. The agent applies the workflow and produces a structured result.
+[p] Every output includes citations to the underlying sources, making facts, figures, and conclusions easy to trace and verify.
+[span] All Agents
+[h2] Agents for investment research.
+[p] Run repeatable finance workflows, from research to memo generation. Each agent handles a specific task and delivers a structured output.
+[span] Analysis
+[span] 01
+[h3] Generative Matrix
+[p] Filter companies, then analyze them using AI to answer your specific questions and get detailed insights across your filtered company set.
+[span] Select companies
+[span] →
+[span] Define question
+[span] →
+[span] Analyze
+[span] →
+[span] Compare
+[span] Public companies
+[span] Smart Search
+[span] My Vault
+[span] →
+[span] Extraction
+[span] 02
+[h3] KPI Extractor
+[p] Automatically extract tables and graphs from company filings and your own documents into Excel. No more manual copy-paste.
+[span] Select company
+[span] →
+[span] Select source
+[span] →
+[span] Select period
+[span] →
+[span] Extract
+[span] Annual Report
+[span] Earnings Presentation
+[span] Quarterly Report
+[span] My Vault
+[span] →
+[span] Generation
+[span] 03
+[h3] Research Memo Generator
+[p] Generate customized company research reports using your fund's template. No more hours of research, just a click.
+[span] Select sources
+[span] →
+[span] Choose template
+[span] →
+[span] Generate
+[span] →
+[span] Review
+[span] Company Primer
+[span] Earnings Analysis
+[span] IPO Prospectus
+[span] Credit Memo
+[span] + Custom
+[span] →
+[span] How It Works
+[h2] Build for the task.
+[p] Every Pascal agent follows the same pattern. You define what you need, the agent gathers and processes the inputs, and you get a structured output with citations back to the source.
+[p] Choose companies, filings, documents, or your own uploaded research. The agent works with public filings and your internal files side by side.
+[p] Pick a template, specify a question, or select which KPIs to extract. The agent's guided setup walks you through the options.
+[p] The agent processes the inputs and returns a structured result. Every number, claim, and data point traces back to the source line it came from.
+[span] Research Templates
+[h2] Pre-built templates for common research outputs.
+[p] The Research Memo Generator comes with templates designed for the outputs investment teams produce regularly. Each defines the structure, sections, and data points the agent should populate. You can also build your own from scratch.
+[span] 01
+[span] →
+[p] A structured one-page overview of any public company. Business model, revenue segments, competitive position, key financials.
+[span] 02
+[span] →
+[p] From earnings release to structured analysis. KPIs, guidance changes, management commentary, and estimate revisions.
+[span] 03
+[span] →
+[p] Summarize and structure an IPO prospectus. Business overview, use of proceeds, risk factors, and financial highlights.
+[span] 04
+[span] →
+[p] Turn a full annual report into a structured summary. MD&A, financial statements, segment performance, and forward-looking commentary.
+[span] 05
+[span] →
+[p] Generate a credit memo from financial data and filings. Credit metrics, covenant analysis, repayment capacity, and risk assessment.
+[span] +
+[span] →
+[p] Start from scratch. Define your own sections, data points, and structure in the template builder.
+[span] Build Your Own
+[h2] Create an agent for your workflow.
+[p] The agents above cover common tasks, but every investment team has workflows specific to how they work. Start with a task you repeat every week and turn it into a reusable agent.
+[p] What needs to get done?
+[p] What companies, filings, or documents does it need?
+[p] What should it do with those inputs?
+[p] What should the finished result look like?
+[p] How will you verify the result is accurate?
+[span] FAQ
+[h2] Frequently asked questions.
+[span] +
+[p] AI agents for finance are purpose-built tools that handle specific investment research tasks. They filter company universes, extract financial data from filings, and generate structured research reports. Unlike general AI chatbots, finance agents are designed around investment workflows and return cited, auditable outputs.
+[span] +
+[p] Pascal AI is an institutional finance platform that provides AI agents for investment research. It runs inside your governance perimeter with role-based access controls and citation trails on every output. Pascal offers agents for company screening, KPI extraction from filings, and research memo generation, along with a library of pre-built templates for company primers, earnings analysis, and credit memos.
+[span] +
+[p] AI agents like Pascal's KPI Extractor read company filings including annual reports, quarterly reports, and earnings presentations, then identify and extract tables, graphs, and key metrics into a structured format. The agent selects the company, source document, and reporting period, then returns the extracted data in a format that can be exported to Excel.
+[span] +
+[p] Yes. AI agents can generate structured research reports using predefined templates. Pascal's Research Memo Generator takes selected sources and a chosen template, then produces a formatted report with sections, data points, and citations. Templates include company primers, earnings analysis, IPO prospectus summaries, annual report summaries, and credit memos.
+[span] +
+[p] Pascal's agents run inside your governance perimeter with role-based access controls. Every output includes citations tracing back to the source line, making results auditable. The platform does not expose sensitive data to consumer AI tools and operates within enterprise data agreements and compliance frameworks.
+[span] Workshops
+[h2] Join Pascal Academy
+[p] Learn directly from the Pascal team through live workshops.
+[a] Sign Up

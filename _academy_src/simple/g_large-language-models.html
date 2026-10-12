@@ -1,0 +1,756 @@
+<body class="__variable_246ccd __variable_c29908 __variable_98e614 __variable_475bff __variable_4559c1 antialiased">
+ <div>
+ </div>
+ <div>
+  <header>
+   <div>
+    <a href="/pascal-academy/ai-fundamentals">
+    </a>
+    <div>
+     <h1>
+      Large Language Models
+     </h1>
+     <p>
+      A beginner-friendly guide to the machinery behind ChatGPT, Claude, Gemini, and Llama.
+     </p>
+    </div>
+   </div>
+  </header>
+  <article>
+   <div>
+    <div>
+     <div>
+     </div>
+     <div>
+     </div>
+    </div>
+   </div>
+   <header>
+    <h1>
+     What Is a Large Language Model?
+    </h1>
+    <p>
+     A beginner-friendly guide to the machinery behind ChatGPT, Claude, Gemini, and Llama.
+    </p>
+    <p>
+     Pascal Academy · ~12 min read · Beginner-friendly · Updated August 2026
+    </p>
+   </header>
+   <nav>
+    <h2>
+     Table of Contents
+    </h2>
+    <ol>
+     <li>
+      <a href="#what-is-a-language-model">
+       <span>
+        1
+        .
+       </span>
+       What Is a Language Model?
+      </a>
+     </li>
+     <li>
+      <a href="#tokens-and-probabilities">
+       <span>
+        2
+        .
+       </span>
+       Tokens and Probabilities
+      </a>
+     </li>
+     <li>
+      <a href="#n-grams-and-the-context-problem">
+       <span>
+        3
+        .
+       </span>
+       N-grams and the Context Problem
+      </a>
+     </li>
+     <li>
+      <a href="#neural-language-models">
+       <span>
+        4
+        .
+       </span>
+       Neural Language Models
+      </a>
+     </li>
+     <li>
+      <a href="#transformers-and-self-attention">
+       <span>
+        5
+        .
+       </span>
+       Transformers and Self-Attention
+      </a>
+     </li>
+     <li>
+      <a href="#training-an-llm">
+       <span>
+        6
+        .
+       </span>
+       Training an LLM
+      </a>
+     </li>
+     <li>
+      <a href="#key-problems">
+       <span>
+        7
+        .
+       </span>
+       Key Problems
+      </a>
+     </li>
+     <li>
+      <a href="#fine-tuning-and-distillation">
+       <span>
+        8
+        .
+       </span>
+       Fine-Tuning and Distillation
+      </a>
+     </li>
+     <li>
+      <a href="#model-families-compared">
+       <span>
+        9
+        .
+       </span>
+       Model Families Compared
+      </a>
+     </li>
+     <li>
+      <a href="#faq">
+       <span>
+        10
+        .
+       </span>
+       Frequently Asked Questions
+      </a>
+     </li>
+    </ol>
+   </nav>
+   <div>
+    <section id="what-is-a-language-model">
+     <h2>
+      1. What Is a Language Model?
+     </h2>
+     <p>
+      A language model is, at its core, a probability engine for text. Given a sequence of words, it estimates how likely each possible next word is to appear.
+     </p>
+     <p>
+      That sounds simple, and the core idea genuinely is. A language model answers one question, over and over: given the text so far, what comes next? Everything you see from ChatGPT or Claude, whether it is writing code, summarising a document, or translating Hindi to English, is built on this single mechanism repeated billions of times.
+     </p>
+     <p>
+      That does not mean an LLM understands language in the way a human does. A model has never "had a thought" or experienced the world it is describing. What it has is a statistical sense of which words, ideas, and patterns tend to follow one another, learned from an enormous amount of text. That statistical sense turns out to be surprisingly powerful, powerful enough that the output can often look remarkably like understanding.
+     </p>
+     <p>
+      To see how this works, consider an incomplete sentence:
+     </p>
+     <aside>
+      <p>
+       Example
+      </p>
+      <p>
+       When I hear rain on my roof, I _____ in my kitchen.
+      </p>
+      <p>
+       A language model assigns a probability to every possible token that could fill that blank. Some candidates are more likely than others, based on the patterns the model absorbed during training.
+      </p>
+      <p>
+       The table below shows what those probabilities might look like. The numbers are illustrative, not from a real model, but they capture the shape of what a language model produces every time it generates text.
+      </p>
+     </aside>
+     <div>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Token(s) that could fill the blank
+         </th>
+         <th>
+          Probability
+         </th>
+         <th>
+          Likelihood
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          cook soup
+         </td>
+         <td>
+          9.4%
+         </td>
+         <td>
+          <div>
+           <div>
+            <div>
+            </div>
+           </div>
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          warm up a kettle
+         </td>
+         <td>
+          5.2%
+         </td>
+         <td>
+          <div>
+           <div>
+            <div>
+            </div>
+           </div>
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          cower
+         </td>
+         <td>
+          3.6%
+         </td>
+         <td>
+          <div>
+           <div>
+            <div>
+            </div>
+           </div>
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          nap
+         </td>
+         <td>
+          2.5%
+         </td>
+         <td>
+          <div>
+           <div>
+            <div>
+            </div>
+           </div>
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          relax
+         </td>
+         <td>
+          2.2%
+         </td>
+         <td>
+          <div>
+           <div>
+            <div>
+            </div>
+           </div>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      An application using this model can pick the highest-probability option (cook soup), or it can sample from the distribution, choosing randomly among the candidates weighted by their probabilities. Sampling is what gives models their variability. Two conversations with the same model rarely produce identical answers because the model is rolling weighted dice at each step.
+     </p>
+     <p>
+      Estimating what fills a blank is the primitive operation. From that single capability you get text generation (keep filling blanks), translation (fill in the foreign-language word), summarisation (fill in the short version), and code completion (fill in the next line of code). The task changes, the core mechanism does not.
+     </p>
+    </section>
+    <section id="tokens-and-probabilities">
+     <h2>
+      2. Tokens and Probabilities
+     </h2>
+     <p>
+      Before a language model can work with text, it needs to break that text into units called tokens. A token can be a whole word, a piece of a word, or sometimes a single character. The word tokenisation refers to the process of slicing text into these pieces.
+     </p>
+     <p>
+      English text tends to produce roughly one token per three-quarters of a word. The sentence 'I love cooking' might become three tokens: I, love, cooking. A longer word like uncharacteristically might be split into several subword tokens: un, character, istic, ally. Languages with non-Latin scripts often use more tokens per word, which is one reason inference costs can be higher for those languages.
+     </p>
+     <aside>
+      <p>
+       Why not just use words?
+      </p>
+      <p>
+       If the model treated every full word as a unit, it would need a separate entry for run, running, runs, ran, and so on. Subword tokens let the model reuse the piece run across all of them, learning shared meaning and keeping the vocabulary manageable. The trade-off is that a single word can cost several tokens, which matters for pricing and context windows.
+      </p>
+     </aside>
+     <p>
+      Once text is tokenised, the model's job is to assign probabilities over the vocabulary for the next token. The vocabulary of a modern model can be 50,000 to 200,000 tokens. At each step, the model computes a score for every token in that vocabulary and converts those scores into a probability distribution. The token with the highest probability is the model's top guess, but as mentioned, applications often sample from the distribution instead.
+     </p>
+     <p>
+      Parameters are the internal numbers the model uses to compute those probabilities. A 7-billion-parameter model has 7 billion learnable weights, each one a small dial that was tuned during training. More parameters generally means the model can represent more nuanced patterns, but it also means more compute, more memory, and more cost. Parameters alone do not determine quality, the training data and architecture matter just as much, but they are a rough proxy for a model's capacity.
+     </p>
+     <aside>
+      <p>
+       How probabilities are computed (optional)
+      </p>
+      <p>
+       At each step, the model takes the entire sequence of tokens so far, passes them through its layers of computation, and produces a vector of raw scores called logits, one per token in the vocabulary. A function called softmax converts these logits into probabilities that sum to 1.0. The shape of the distribution is controlled by a parameter called temperature: at temperature 1.0 the distribution is unchanged, at lower temperatures it sharpens (favouring the top candidates more strongly), and at higher temperatures it flattens (making less likely tokens more probable). Temperature is one of the levers developers use to control how deterministic or creative a model's output feels.
+      </p>
+     </aside>
+    </section>
+    <section id="n-grams-and-the-context-problem">
+     <h2>
+      3. N-grams and the Context Problem
+     </h2>
+     <p>
+      The earliest language models counted word sequences. An n-gram is simply an ordered sequence of N words. When N is 2, you get a bigram, two words in a row. When N is 3, a trigram, three words in a row. The model builds a table of how often each n-gram appeared in its training corpus, then uses that table to guess the next word.
+     </p>
+     <p>
+      Given the phrase "you are very nice", the resulting bigrams are "you are", "are very", and "very nice". The trigrams from the same phrase are "you are very" and "are very nice". A bigram model that sees "orange is" looks up every bigram starting with "orange" and picks the most frequent follower. Similarly, a trigram model that sees "orange is" looks up trigrams starting with "orange is".
+     </p>
+     <p>
+      The problem with n-grams is that they capture very little context. Given "orange is", a trigram model can only look two words back. Is "orange" the fruit or the colour? The two-word window is not enough to tell. The model might predict "ripe" (fruit) or "cheerful" (colour), and it has no way to know which is correct without more surrounding text.
+     </p>
+     <p>
+      You could increase N to capture more context. A 5-gram looks back four words, a 7-gram looks back six. But as N grows, the number of possible sequences explodes. A 7-gram model trained on a large corpus will have seen most specific 7-word sequences only once, if at all. When every sequence is unique, the model has no statistical basis for prediction. The counts become too sparse to be useful.
+     </p>
+     <p>
+      This is the fundamental tension: short n-grams lack context, long n-grams lack data. Language models spent decades stuck in this trade-off.
+     </p>
+     <aside>
+      <p>
+       Key takeaway
+      </p>
+      <p>
+       The n-gram approach teaches us something important: a good language model needs to use context efficiently. It cannot just memorise exact sequences, because most sequences it encounters at inference time will be novel. It needs to generalise from patterns it has seen. That insight is what drove the move to neural networks.
+      </p>
+     </aside>
+    </section>
+    <section id="neural-language-models">
+     <h2>
+      4. Neural Language Models
+     </h2>
+     <p>
+      Recurrent neural networks, or RNNs, were the first serious attempt to break out of the n-gram trap. An RNN processes text token by token, and at each step it carries forward a hidden state, a kind of running summary of everything it has seen so far. The easiest way to understand it is to think of it as a reader who forms an impression as they go, updating their understanding with each new word.
+     </p>
+     <p>
+      This was a real improvement over n-grams. An RNN could, in principle, look back across an entire sentence or even a short paragraph. It could learn that "orange" followed by "is" followed by "ripe" is probably about fruit, and carry that forward to influence later predictions. The context window was no longer fixed at N minus one words.
+     </p>
+     <p>
+      But RNNs had two stubborn problems. First, they processed tokens sequentially. To predict the hundredth token, the model had to compute the first, then the second, then the third, all the way through. There was no way to parallelise this, which meant training on large datasets was slow. Second, and more fundamental, the hidden state tended to degrade over long sequences. Information from the start of a long passage would fade or become garbled by the time the model reached the end. This is the vanishing gradient problem, and it put a hard ceiling on how much context an RNN could usefully retain.
+     </p>
+     <p>
+      RNNs learn more context than n-grams, but the amount of useful context they can hold is still relatively limited.
+     </p>
+     <p>
+      LSTM and GRU architectures, popular in the 2010s, were clever workarounds that helped preserve information over longer distances. They helped, but they did not solve the core issue. Sequential processing was still the bottleneck, and truly long-range context remained out of reach.
+     </p>
+     <p>
+      What was needed was an architecture that could look at the entire input at once, not token by token, and weigh the relevance of each part to every other part. That architecture arrived in 2017.
+     </p>
+    </section>
+    <section id="transformers-and-self-attention">
+     <h2>
+      5. Transformers and Self-Attention
+     </h2>
+     <p>
+      In 2017, a team at Google published a paper called "Attention Is All You Need." The architecture it introduced, the Transformer, discarded the sequential processing of RNNs entirely. Instead of reading token by token, a Transformer looks at the entire sequence at once and decides which parts are relevant to which.
+     </p>
+     <p>
+      The mechanism at the heart of this is called self-attention and the name is apt: the model attends to itself, meaning every token in the input can look at every other token and decide how much weight to give each one. There is no fixed window or a sequential decay. The first word of a document can directly influence the last word, and vice versa.
+     </p>
+     <p>
+      In the sentence "the orange is ripe and sweet," the word "orange" is ambiguous on its own. But self-attention lets the model link "orange" directly to "ripe" and "sweet" without anything in between degrading the signal. The model learns to assign high attention weight between words that are relevant to each other, regardless of how far apart they sit in the sequence.
+     </p>
+     <p>
+      In an n-gram, the only context available is the last N minus one words. In an RNN, context has to survive a chain of hidden states. In a Transformer, every token has a direct line to every other token. That is why Transformers handle long-range dependencies so much better, and why they scale so well: the entire computation can be parallelised across the sequence, which makes training on massive datasets feasible.
+     </p>
+     <aside>
+      <p>
+       How self-attention actually works (optional)
+      </p>
+      <p>
+       Each token is represented as three vectors: a query, a key, and a value. The query asks, what am I looking for? The key says, here is what I contain. The value is the actual information the token contributes. The model computes a dot product between each query and every key to produce attention scores, which are then normalised into weights. The output for each token is a weighted sum of all the values, where the weights come from those query-key matches.
+      </p>
+      <p>
+       Modern LLMs use multi-head attention, meaning they run this process many times in parallel. Each head can learn a different kind of relationship: one might focus on grammatical structure, another on semantic similarity, another on positional patterns. The outputs of all heads are concatenated and fed forward. This is why the architecture is so expressive, but also why it is computationally expensive: attention scales quadratically with sequence length, so doubling the context window quadruples the attention computation.
+      </p>
+     </aside>
+     <p>
+      The "large" in large language model refers to scale: hundreds of millions to hundreds of billions of parameters, trained on trillions of tokens of text. The Transformer architecture is what made that scale possible, because it could be trained efficiently on the parallel hardware, GPUs and TPUs, that became available in the late 2010s. The combination of a better architecture and more compute is what produced the capability jump from early neural language models to the systems we use today.
+     </p>
+    </section>
+    <section id="training-an-llm">
+     <h2>
+      6. Training an LLM
+     </h2>
+     <p>
+      Building a large language model is a multi-stage process and each stage serves a different purpose, and understanding the pipeline helps explain why models behave the way they do.
+     </p>
+     <div>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Stage
+         </th>
+         <th>
+          Name
+         </th>
+         <th>
+          What Happens
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          1
+         </td>
+         <td>
+          Pre-training
+         </td>
+         <td>
+          Learn to predict the next token across trillions of words of internet text. The model absorbs grammar, facts, reasoning patterns, and style.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          2
+         </td>
+         <td>
+          Supervised Fine-tuning
+         </td>
+         <td>
+          Train on curated examples of good question-answer pairs. The model learns the format and tone of helpful responses.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          3
+         </td>
+         <td>
+          RLHF / RLAIF
+         </td>
+         <td>
+          Reinforcement learning from human (or AI) feedback. Humans rank model outputs by quality, and the model learns to prefer the better ones.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          4
+         </td>
+         <td>
+          Alignment and Safety
+         </td>
+         <td>
+          Additional training to refuse harmful requests, reduce bias, and keep outputs within intended use. Often iterative and ongoing.
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div id="pre-training">
+      <h3>
+       Pre-training
+      </h3>
+      <p>
+       Pre-training is where the model learns the fundamentals. The training objective here is to simply predict the next token. Given a chunk of text, the model tries to guess what comes next, and when it gets it wrong, the error signal updates its parameters. Do this trillions of times across a massive corpus of internet text, books, code, articles, and the model develops a deep internal representation of language, facts, and reasoning patterns.
+      </p>
+      <p>
+       The model that comes out of pre-training is called a base model. It is not yet a chatbot. If you prompt a base model with "What is the capital of France?", it might respond with "What is the capital of Germany?" because it has learned to continue text, not to answer questions. It will happily complete a quiz, write an essay, or continue a story, but it does not yet know it is supposed to be helpful.
+      </p>
+     </div>
+     <div id="supervised-fine-tuning">
+      <h3>
+       Supervised Fine-tuning
+      </h3>
+      <p>
+       Supervised fine-tuning, or SFT, teaches the model the format of a helpful assistant. Developers create thousands of example conversations: a user asks a question, an assistant gives a good answer. The model is trained on these pairs, learning to produce responses in that format rather than just continuing the prompt. After SFT, the model knows to answer the question.
+      </p>
+     </div>
+     <div id="rlhf">
+      <h3>
+       Reinforcement Learning from Human Feedback
+      </h3>
+      <p>
+       RLHF, popularised by OpenAI with InstructGPT and later ChatGPT, adds a further layer. Human reviewers are shown multiple model outputs for the same prompt and asked to rank them by quality. A separate model, called a reward model, learns to predict these rankings. The main model is then fine-tuned to maximise the reward, meaning it learns to produce outputs that humans rate highly: helpful, honest, and harmless.
+      </p>
+      <p>
+       RLHF is what makes a model feel polished. It is also where a lot of the subjective behaviour of a model, its tone, its refusals, its tendency to be cautious or verbose, gets shaped. Different labs have different philosophies here, which is why Claude, GPT, and Gemini can feel quite different even though they share the same underlying architecture.
+      </p>
+     </div>
+     <aside>
+      <p>
+       Why RLHF changed everything (optional)
+      </p>
+      <p>
+       Before RLHF, language models were impressive but difficult to use. They would continue text, but not necessarily in the direction you wanted. RLHF gave developers a way to steer models toward useful behaviour without rewriting the base model. The reward model encodes what humans prefer in an abstract sense, and optimising against it produces models that feel like they understand instructions. The catch is that the reward model is only as good as the human annotations it learns from, and annotators disagree, have biases, and can be inconsistent. This is one source of the ongoing challenges with alignment.
+      </p>
+     </aside>
+    </section>
+    <section id="key-problems">
+     <h2>
+      7. Key Problems
+     </h2>
+     <p>
+      Large language models are powerful, but they are not perfect. Three problems in particular are worth understanding, because they shape how these models can and cannot be used.
+     </p>
+     <div id="hallucination">
+      <h3>
+       Problem 1: Hallucination
+      </h3>
+      <p>
+       Models generate text that sounds confident and specific but is factually wrong. A model might cite a paper that does not exist, give a wrong date for a historical event, or fabricate an API method. This happens because the model is optimised for plausible-sounding text, not for truth. It has no built-in fact-checker; it produces what is statistically likely given its training, and sometimes what is likely is also wrong.
+      </p>
+     </div>
+     <div id="bias">
+      <h3>
+       Problem 2: Bias
+      </h3>
+      <p>
+       Models learn from text written by humans, and human text carries biases. If the training corpus underrepresents certain groups or overrepresents certain viewpoints, the model will reflect that. A model might default to male pronouns for doctors, associate certain names with certain professions, or treat Western perspectives as universal. Moreover, this is also not a bug you can patch because ultimately it is the property of the training data that requires deliberate mitigation.
+      </p>
+     </div>
+     <div id="reasoning-limits">
+      <h3>
+       Problem 3: Reasoning Limits
+      </h3>
+      <p>
+       Models can appear to reason but often do so through pattern matching rather than genuine logical deduction. They struggle with multi-step arithmetic, novel logic puzzles, and anything requiring sustained reasoning chains. A model might get a calculation right by recognising a familiar pattern and get a slight variation of it wrong because it is not actually performing the steps. This is why models can ace standardised tests in some domains and fail at simple tasks in others.
+      </p>
+     </div>
+    </section>
+    <section id="fine-tuning-and-distillation">
+     <h2>
+      8. Fine-Tuning and Distillation
+     </h2>
+     <p>
+      Once a base model exists, there are ways to make it better for specific tasks without training from scratch. Two of the most important are fine-tuning and distillation.
+     </p>
+     <p>
+      Fine-tuning means taking a pre-trained model and training it further on a smaller, task-specific dataset. If you want a model that is good at answering customer support tickets, you fine-tune it on thousands of example ticket-and-response pairs. The model already knows language and general knowledge from pre-training; fine-tuning just nudges it toward the patterns, vocabulary, and format your use case needs.
+     </p>
+     <p>
+      This is far cheaper than training from scratch. You are starting from a model that already works and making targeted adjustments. A full pre-training run might cost millions of dollars in compute; a fine-tuning run can cost a few hundred. This is also why open-weight models like Llama are valuable: anyone can fine-tune them for their own domain without needing the resources to build a foundation model.
+     </p>
+     <p>
+      Distillation is about efficiency. A large model, say 70 billion parameters, might be very capable but too expensive to run for every query. Distillation trains a smaller model, say 7 billion parameters, to mimic the larger one's outputs. The smaller model will not match the large one on everything, but for many tasks it can get close enough while being an order of magnitude cheaper and faster to run.
+     </p>
+     <p>
+      The way it works is straightforward in concept: you generate outputs from the large model, then train the small model on those input-output pairs. The small model learns to approximate the large model's behaviour rather than learning from scratch. The result is a model that is cheaper to deploy, faster to serve, and often good enough for production use.
+     </p>
+     <div>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Fine-tuning
+         </th>
+         <th>
+          Distillation
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          <p>
+           Adapts a model to a specific task.
+          </p>
+          <p>
+           Pre-trained model + task-specific data produces a model specialised for your use case. Cheaper than training from scratch. Keeps the base model's general knowledge while learning new patterns.
+          </p>
+         </td>
+         <td>
+          <p>
+           Compresses a model for efficiency.
+          </p>
+          <p>
+           Large model produces a smaller model that approximates it. Trades a small amount of capability for a large reduction in cost and latency. Essential for deploying models at scale on limited hardware.
+          </p>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </section>
+    <section id="model-families-compared">
+     <h2>
+      9. Model Families Compared
+     </h2>
+     <p>
+      The major LLM families share the same Transformer foundation but differ in how they are trained, what data they use, how they are aligned, and whether their weights are openly available. The table below summarises the key distinctions as of mid-2026.
+     </p>
+     <div>
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Model Family
+         </th>
+         <th>
+          Developer
+         </th>
+         <th>
+          Access
+         </th>
+         <th>
+          Key Characteristic
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          GPT (GPT-4o, o-series)
+         </td>
+         <td>
+          OpenAI
+         </td>
+         <td>
+          Closed (API only)
+         </td>
+         <td>
+          Strong general capability, multimodal (text, image, audio). The o-series introduces reasoning-focused models that think before answering.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Claude
+         </td>
+         <td>
+          Anthropic
+         </td>
+         <td>
+          Closed (API only)
+         </td>
+         <td>
+          Known for careful, nuanced responses and strong refusal of harmful outputs. Emphasis on alignment and honesty. Large context windows.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Gemini
+         </td>
+         <td>
+          Google DeepMind
+         </td>
+         <td>
+          Closed (API + consumer products)
+         </td>
+         <td>
+          Natively multimodal, trained on text, images, audio, and video from the start. Integrated across Google products. Very large context windows.
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Llama
+         </td>
+         <td>
+          Meta
+         </td>
+         <td>
+          Open weights
+         </td>
+         <td>
+          Weights released publicly for research and commercial use. Enables fine-tuning and on-device deployment. Spawns many community variants.
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p>
+      The closed versus open distinction matters a lot in practice. With GPT, Claude, and Gemini, you interact with the model through an API and you cannot see or modify the weights. With Llama, you can download the model, fine-tune it on your own data, run it on your own hardware, and audit its behaviour. That freedom comes with the cost of hosting and maintaining the model yourself.
+     </p>
+     <p>
+      The reasoning-focused models, like OpenAI's o-series and Claude's extended-thinking variants, represent a newer development. These models are trained to spend more compute at inference time, producing intermediate reasoning steps before giving an answer. They tend to be stronger on maths, coding, and multi-step problems, but slower and more expensive per query.
+     </p>
+     <p>
+      No single model is best for everything. Claude might be better for careful writing, GPT for general versatility, Gemini for multimodal tasks involving images, and a fine-tuned Llama for cost-sensitive deployments where you need control. The right choice depends on the task, the budget, and the constraints.
+     </p>
+     <aside>
+      <p>
+       The field is moving fast
+      </p>
+      <p>
+       Model capabilities change every few months. A comparison that is accurate today may be outdated by the time you read this. The underlying concepts in this guide, what a language model is, how attention works, why training happens in stages, are more stable than the leaderboard. If you understand the fundamentals, you can evaluate any new model that comes along.
+      </p>
+     </aside>
+    </section>
+    <section id="faq">
+     <h2>
+      10. Frequently Asked Questions
+     </h2>
+     <div>
+      <div>
+       <button aria-expanded="true">
+        <span>
+         What is a large language model and how does it work?
+        </span>
+        <span>
+         ×
+        </span>
+       </button>
+       <p>
+        A large language model is an AI system trained on vast amounts of text to predict the next token in a sequence. It breaks text into tokens, learns patterns from training data, and generates responses by continuing the pattern. LLMs power tools like ChatGPT, Claude, and Pascal AI's research agents.
+       </p>
+      </div>
+      <div>
+       <button aria-expanded="false">
+        <span>
+         What is the difference between a token and a word in LLMs?
+        </span>
+        <span>
+         +
+        </span>
+       </button>
+      </div>
+      <div>
+       <button aria-expanded="false">
+        <span>
+         How does Pascal AI use large language models for finance?
+        </span>
+        <span>
+         +
+        </span>
+       </button>
+      </div>
+      <div>
+       <button aria-expanded="false">
+        <span>
+         What are the main problems with large language models?
+        </span>
+        <span>
+         +
+        </span>
+       </button>
+      </div>
+     </div>
+    </section>
+    <section>
+     <p>
+      Pascal Academy
+     </p>
+     <p>
+      This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, and agents. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.
+     </p>
+     <a href="/pascal-academy/ai-fundamentals">
+      Explore AI Fundamentals
+      →
+     </a>
+    </section>
+   </div>
+  </article>
+ </div>
+ <div>
+  <ol>
+  </ol>
+ </div>
+</body>
+

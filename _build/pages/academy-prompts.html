@@ -1,0 +1,232 @@
+<!--meta
+{
+ "path": "/pascal-academy/prompt-library",
+ "title": "AI Prompts for Finance | Pascal Academy",
+ "description": "18 tested AI prompts for institutional finance: company research, earnings, modelling, comps, IC memos, portfolio and investor communication.",
+ "crumbs": [
+  [
+   "Pascal Academy",
+   "/pascal-academy"
+  ],
+  [
+   "Prompt library",
+   "/pascal-academy/prompt-library"
+  ]
+ ],
+ "og_kicker": "Pascal Academy",
+ "og_title": "Tested AI prompts for finance",
+ "llms": "18 copy-ready AI prompts for investment teams, plus how to structure a finance prompt and when AI should not make the call.",
+ "css": [
+  "academy3.css"
+ ],
+ "word_limit": 3600,
+ "lead_min": 10,
+ "priority": 0.7
+}
+-->
+<div class="ac">
+<div class="frame">
+  <header class="hh">
+    <div class="hh-l">
+      {{crumbs}}
+      <h1 class="hh-t">AI <em>Prompts</em></h1>
+    </div>
+    <div class="hh-r"><p class="lead">Tested prompts for research, memos and modelling. Copy, adapt and run.</p><p class="hh-m"><b>Start with the task.</b> Each card contains a structured prompt you can copy and adapt to your workflow. Replace the bracketed fields with your company, data and specific requirements. Add the context the model needs, then specify the format you want in the output.</p></div>
+  </header>
+<section class="fb fb-stages" aria-label="Featured"><div class="fb-in"><h2 class="fb-t">What makes a finance prompt effective</h2><p class="fb-s">Output quality reflects input quality. A prompt that produces a useful result for an investment task has a recognizable structure.</p><div class="tls" role="list" aria-label="What a finance prompt contains"><div class="tl g-teal on" tabindex="0" data-tile>
+        <span class="pill pill-l">Role</span>
+        <span class="tl-art"></span>
+        <span class="tl-copy"><b class="tl-t">Role</b><span class="tl-d">“You are a senior equity analyst”</span></span>
+      </div><div class="tl g-mint" tabindex="0" data-tile>
+        <span class="pill pill-l">Task</span>
+        <span class="tl-art"></span>
+        <span class="tl-copy"><b class="tl-t">Task</b><span class="tl-d">“Build a one-page primer”</span></span>
+      </div><div class="tl g-sea" tabindex="0" data-tile>
+        <span class="pill pill-l">Context</span>
+        <span class="tl-art"></span>
+        <span class="tl-copy"><b class="tl-t">Context</b><span class="tl-d">Company, sector, time period</span></span>
+      </div><div class="tl g-cream" tabindex="0" data-tile>
+        <span class="pill pill-l">Data</span>
+        <span class="tl-art"></span>
+        <span class="tl-copy"><b class="tl-t">Data</b><span class="tl-d">The actual numbers to work from</span></span>
+      </div><div class="tl g-deep" tabindex="0" data-tile>
+        <span class="pill pill-l">Format</span>
+        <span class="tl-art"></span>
+        <span class="tl-copy"><b class="tl-t">Format</b><span class="tl-d">Table, bullet points, memo</span></span>
+      </div><div class="tl g-teal" tabindex="0" data-tile>
+        <span class="pill pill-l">Constraints</span>
+        <span class="tl-art"></span>
+        <span class="tl-copy"><b class="tl-t">Constraints</b><span class="tl-d">Word count, tone, audience</span></span>
+      </div></div></div></section>
+  <div class="bw" id="pr-results">
+    <div class="bb">
+      <h2 class="bb-t">Browse all 18 prompts.</h2>
+      <label class="sp"><span class="sr-only">Search prompts</span><input type="search" placeholder="Search prompts" data-filter="#pr-results" autocomplete="off">{{icon:search}}</label>
+    </div>
+    <div class="bw-g">
+      <nav class="sd" aria-label="Prompt categories"><ol data-spy><li><a href="#company-research">Company Research</a></li><li><a href="#earnings">Earnings</a></li><li><a href="#modelling">Modelling</a></li><li><a href="#comps">Comps</a></li><li><a href="#ic-memos">IC Memos</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#communication">Communication</a></li></ol></nav>
+      <div class="bw-m">
+        <p class="sx-s sx-lead">Filter by category or search by task. Each card includes a structured prompt you can copy and adapt for your workflow. The <a href="/pascal-academy/guides/prompt-engineering">prompt engineering guide</a> explains why these patterns work.</p>
+        <section class="sx" id="company-research" aria-labelledby="company-research-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="company-research-h">Company Research</h3><p class="sx-s">3 prompts.</p></div></div>
+        <div class="pcs"><article class="pc" id="company-primer-builder" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-teal"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 01</span></span><pre>You are an equity research analyst. Build a one-page company primer for [COMPANY NAME] covering business model, revenue segments, key geographies, competitive position, and the three financial metrics that matter most for this business. Keep each section to 3-4 sentences. Flag any areas where public disclosure is thin or where the business model is hard to assess from filings alone.</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">Company Primer Builder</h4><p class="gc-d">When you need a structured one-page overview of a company you are starting to cover.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article><article class="pc" id="competitive-positioning-map" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-mint"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 02</span></span><pre>Map the competitive positioning for [COMPANY NAME]. Identify the top 5 direct competitors, their estimated market share, and the one structural advantage each holds. For [COMPANY NAME], identify the two biggest competitive threats and the one moat that is hardest to replicate. Explain your reasoning for each.</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">Competitive Positioning Map</h4><p class="gc-d">When you need to understand who the real competitors are and where the structural advantages sit.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article><article class="pc" id="management-governance-assessment" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-sea"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 03</span></span><pre>Summarize the leadership team and governance structure at [COMPANY NAME]. Cover CEO tenure and track record, board composition, insider ownership levels, and any recent executive departures or appointments. Flag governance concerns that would matter to an institutional investor, including related-party transactions, dual-class share structures, or compensation plans that seem misaligned with shareholder returns.</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">Management & Governance Assessment</h4><p class="gc-d">When you are assessing the quality and alignment of leadership before taking a position.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article></div>
+      </section><section class="sx" id="earnings" aria-labelledby="earnings-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="earnings-h">Earnings</h3><p class="sx-s">3 prompts.</p></div></div>
+        <div class="pcs"><article class="pc" id="earnings-call-synthesis" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-cream"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 04</span></span><pre>Analyze the following earnings call transcript for [COMPANY NAME]. Extract the three most important management commentary points, changes in guidance, and any tone differences between the prepared remarks and the Q&amp;A. Note where management was evasive or where the tone was notably different from prior quarters. Flag any question where the answer felt rehearsed or incomplete.
+[INSERT TRANSCRIPT]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Earnings</span><h4 class="gc-t">Earnings Call Synthesis</h4><p class="gc-d">When you need to extract the signal from a 60-minute earnings call in under five minutes.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article><article class="pc" id="guidance-estimate-revision-tracker" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-deep"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 05</span></span><pre>Using the following consensus estimates and management guidance for [COMPANY NAME], identify where guidance diverges from sell-side expectations. For each divergence, classify it as above, in line, or below consensus. Flag the line items where the gap is widest and suggest what would need to happen for the company to hit the guided range. Note whether guidance was raised, lowered, or maintained.
+
+[INSERT CONSENSUS AND GUIDANCE DATA]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Earnings</span><h4 class="gc-t">Guidance & Estimate Revision Tracker</h4><p class="gc-d">When you need to see where management guidance diverges from what the Street expects.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article><article class="pc" id="post-earnings-kpi-dashboard" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-teal"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 06</span></span><pre>From the following earnings release for [COMPANY NAME], extract the 8 key operating metrics that matter most for this business model. For each, compare to the prior quarter and prior year, calculate the change in absolute and percentage terms, and note whether the trend is accelerating, decelerating, or stable. Flag any metric where the company changed its definition or reporting methodology.
+
+[INSERT EARNINGS RELEASE]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Earnings</span><h4 class="gc-t">Post-Earnings KPI Dashboard</h4><p class="gc-d">When you need a structured view of how the key operating metrics trended quarter over quarter.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article></div>
+      </section><section class="sx" id="modelling" aria-labelledby="modelling-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="modelling-h">Modelling</h3><p class="sx-s">3 prompts.</p></div></div>
+        <div class="pcs"><article class="pc" id="model-architecture-assumption-framework" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-mint"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 07</span></span><pre>You are a financial modelling specialist. For [COMPANY NAME], propose a DCF model structure including revenue build approach, margin assumptions, working capital drivers, and the three sensitivity variables that would have the largest impact on valuation. Group assumptions by category and note which ones require primary research versus public data. Suggest the output tabs and the key summary metrics to display on a dashboard.
+
+[INSERT COMPANY DESCRIPTION AND FINANCIAL SUMMARY]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Modelling</span><h4 class="gc-t">Model Architecture & Assumption Framework</h4><p class="gc-d">When you are starting a new model and need to align on structure and assumptions before writing formulas.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article><article class="pc" id="scenario-design-sensitivity-testing" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-sea"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 08</span></span><pre>Design a three-scenario framework for [COMPANY NAME] covering base, bull, and bear cases. For each scenario, specify what changes in revenue growth, margin trajectory, and capital intensity. Identify the two two-way sensitivity tables that would best illustrate where valuation risk concentrates. Explain why each sensitivity is worth running and what decision it would inform.
+
+[INSERT BASE CASE ASSUMPTIONS]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Modelling</span><h4 class="gc-t">Scenario Design & Sensitivity Testing</h4><p class="gc-d">When you need to stress-test a model and identify where valuation risk concentrates.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article><article class="pc" id="valuation-cross-check" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-cream"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 09</span></span><pre>Using the following trading comparables and precedent transactions for [COMPANY NAME], build a valuation football field. Identify which multiples are most appropriate for this business model, note any outliers in the comp set, and calculate the implied per-share value range. Flag where the current market price sits relative to this range and what that implies about market expectations.
+
+[INSERT COMP DATA AND PRECEDENT TRANSACTIONS]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Modelling</span><h4 class="gc-t">Valuation Cross-Check</h4><p class="gc-d">When you need to triangulate a DCF output against market-based valuation methods.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article></div>
+      </section><section class="sx" id="comps" aria-labelledby="comps-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="comps-h">Comps</h3><p class="sx-s">3 prompts.</p></div></div>
+        <div class="pcs"><article class="pc" id="comparable-set-builder" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-deep"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 10</span></span><pre>Identify 8-10 comparable companies for [COMPANY NAME] in the [SECTOR] sector. For each, note market cap, revenue, EBITDA margin, revenue growth rate, and the primary valuation multiple used in this sub-industry. Rank them by similarity to [COMPANY NAME] based on business model, end markets, and scale. Flag any that should be excluded as outliers and explain why.
+
+[INSERT COMPANY DESCRIPTION]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Comps</span><h4 class="gc-t">Comparable Set Builder</h4><p class="gc-d">When you need to build a comp set from scratch and decide what belongs and what does not.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article><article class="pc" id="trading-multiples-benchmark" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-teal"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 11</span></span><pre>Using the following comp set, calculate EV/Revenue, EV/EBITDA, and P/E for each company. Identify the median, 25th percentile, and 75th percentile for each multiple. Flag companies trading at a meaningful premium or discount to the median and explain the likely operational reason for the divergence. Note which multiples are most reliable for this sub-industry and which are distorted by one-time factors.
+
+[INSERT COMP SET DATA]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Comps</span><h4 class="gc-t">Trading Multiples Benchmark</h4><p class="gc-d">When you need to see where a company trades relative to its peers and understand why.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article><article class="pc" id="precedent-transaction-analysis" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-mint"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 12</span></span><pre>From the following M&amp;A transactions in [SECTOR] over the past 3 years, extract deal value, target revenue, target EBITDA, and the implied transaction multiples. Group by deal type (strategic, financial sponsor, take-private). Identify whether takeout premiums are trending up or down. Flag any transactions that are not truly comparable and explain why. Calculate the median and range for each multiple type.
+
+[INSERT TRANSACTION DATA]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Comps</span><h4 class="gc-t">Precedent Transaction Analysis</h4><p class="gc-d">When you need to understand what acquirers have actually paid for similar businesses.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article></div>
+      </section><section class="sx" id="ic-memos" aria-labelledby="ic-memos-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="ic-memos-h">IC Memos</h3><p class="sx-s">3 prompts.</p></div></div>
+        <div class="pcs"><article class="pc" id="investment-thesis-structuring" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-sea"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 13</span></span><pre>Structure an investment thesis for [COMPANY NAME] as a [LONG/SHORT] idea. Cover the core argument in three sentences, the three catalysts that will drive the stock toward your target, the two principal risks, and the expected holding period. Write it for an IC audience that has 90 seconds to form a view. Avoid jargon and lead with the single most important point.
+
+[INSERT YOUR RESEARCH NOTES]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">IC Memos</span><h4 class="gc-t">Investment Thesis Structuring</h4><p class="gc-d">When you have a view forming and need to structure it into something an IC can evaluate in 90 seconds.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article><article class="pc" id="ic-memo-first-draft" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-cream"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 14</span></span><pre>Draft an IC memo for a [LONG/SHORT] position in [COMPANY NAME]. Structure it as investment thesis, key drivers, financial summary, valuation approach, risk factors, and position sizing recommendation. Keep it to 800 words. Write in the house style of a fundamentals-driven long/short fund. Lead each section with the conclusion and follow with supporting detail. Do not include any recommendation the data does not support.
+
+[INSERT YOUR RESEARCH AND ANALYSIS]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">IC Memos</span><h4 class="gc-t">IC Memo First Draft</h4><p class="gc-d">When your research is done and you need to turn it into a structured memo your committee can act on.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article><article class="pc" id="risk-factor-decomposition" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-deep"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 15</span></span><pre>For the following investment thesis on [COMPANY NAME], identify the five things that could go wrong. For each risk, classify it as company-specific, sector-level, or macro. Rate each on probability (high, medium, low) and impact (high, medium, low). Suggest what monitoring signals would tell you the risk is materializing, and what the response would be if it did.
+
+[INSERT INVESTMENT THESIS]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">IC Memos</span><h4 class="gc-t">Risk Factor Decomposition</h4><p class="gc-d">When you have a thesis and need to pressure-test it before presenting to the committee.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article></div>
+      </section><section class="sx" id="portfolio" aria-labelledby="portfolio-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="portfolio-h">Portfolio</h3><p class="sx-s">2 prompts.</p></div></div>
+        <div class="pcs"><article class="pc" id="position-monitor-catalyst-tracker" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-teal"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 16</span></span><pre>Using the following portfolio holdings and current positions, identify the three positions where the investment thesis is most at risk. For each, note what has changed since initiation, whether the catalysts are still intact, and whether the position sizing still makes sense relative to conviction. Flag any position where the downside case has become more likely than at initiation.
+
+[INSERT PORTFOLIO HOLDINGS AND THESIS NOTES]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Portfolio</span><h4 class="gc-t">Position Monitor & Catalyst Tracker</h4><p class="gc-d">When you need to review existing positions and identify where the thesis is under pressure.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article><article class="pc" id="earnings-season-prep" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-mint"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 17</span></span><pre>For the following portfolio companies reporting in the next two weeks, identify the three metrics to watch for each, the consensus expectations, and what would constitute a positive versus negative surprise. Flag any companies where the setup into the print looks risky based on recent estimate revisions, price action, or sector-specific headwinds. Suggest one question to investigate for each name before the print.
+
+[INSERT PORTFOLIO COMPANIES AND POSITIONS]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Portfolio</span><h4 class="gc-t">Earnings Season Prep</h4><p class="gc-d">When earnings season is approaching and you need to prepare for every portfolio company reporting.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article></div>
+      </section><section class="sx" id="communication" aria-labelledby="communication-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="communication-h">Communication</h3><p class="sx-s">1 prompt.</p></div></div>
+        <div class="pcs"><article class="pc" id="investor-letter-drafting" data-item>
+            <div class="th th-code"><div class="th-bz"><div class="th-scr g-sea"><div class="tcode"><span class="tcode-bar"><i></i><i></i><i></i><span>Prompt 18</span></span><pre>Draft a quarterly investor letter covering portfolio performance, attribution by sector, two wins and two losses from the quarter, and the outlook for the next 90 days. Keep it under 400 words and write in the voice of a fundamentals-driven portfolio manager addressing limited partners. Lead with the most important takeaway, not with performance numbers. Avoid jargon your LPs would not use themselves.
+
+[INSERT PERFORMANCE DATA AND ATTRIBUTION]</pre></div></div></div></div>
+            <div class="gc-b"><span class="pill">Communication</span><h4 class="gc-t">Investor Letter Drafting</h4><p class="gc-d">When you need to communicate quarterly performance and positioning to limited partners.</p>
+              <div class="pc-a"><button type="button" class="btn btn-dark btn-sm" data-copy>Copy prompt</button><button type="button" class="btn btn-line btn-sm" data-expand>Show full prompt</button></div></div>
+          </article></div>
+      </section>
+        <p class="ac-empty" hidden>No prompt matches that search.</p>
+      </div>
+    </div>
+  </div>
+  <section class="lx" aria-labelledby="mis-h">
+    <h2 class="sx-t" id="mis-h">Common mistakes to avoid</h2>
+    <div class="mcs"><div class="mc"><span class="tm-bar g-teal"></span><h3>Vague task description</h3><p>“Analyze this company” gives too little direction. Specify the type of analysis, the audience, and the format you need.</p></div><div class="mc"><span class="tm-bar g-mint"></span><h3>Missing assumptions</h3><p>If your forecast relies on specific growth rates or margin targets, include them. The model cannot infer your assumptions from context.</p></div><div class="mc"><span class="tm-bar g-sea"></span><h3>Unclear output expectations</h3><p>Not specifying format, length or tone produces outputs that need significant reformatting before they are usable.</p></div><div class="mc"><span class="tm-bar g-cream"></span><h3>Treating AI output as a conclusion</h3><p>AI can draft the commentary, but it cannot know what actually drove the variance. Always validate against real operational data.</p></div></div>
+    <aside class="ac-co ac-co-principle"><p class="ac-co-lab">Chain-of-thought prompting</p><div class="ac-co-body"><p>For complex analytical tasks, structure your prompt to ask the model to reason step by step. Ask it to show assumptions, logic and conclusions separately. This improves output quality and makes errors easier to catch. The model that shows its work is easier to verify than the one that hands you a number.</p></div></aside>
+  </section>
+  <section class="dk" aria-labelledby="bd-h">
+    <div class="dk-in">
+      <h2 class="dk-t" id="bd-h">When AI should not make the call.</h2>
+      <p class="dk-s">AI accelerates the analytical process, but investment judgment stays with the analyst. There are specific scenarios where AI should not be relied on for final outputs or decisions.</p>
+      <div class="bds"><div class="bd"><h3>Final investment decisions</h3><p>The decision to commit capital is a judgment call that weighs asymmetric information, portfolio context and risk tolerance. AI can inform the decision. It cannot make it.</p></div><div class="bd"><h3>Regulated financial judgments</h3><p>Accounting policy elections, impairment assessments and revenue recognition determinations require documented professional judgment. These cannot be delegated to a model.</p></div><div class="bd"><h3>Confidential deal analysis</h3><p>Transaction-related forecasts carry strict confidentiality obligations. Do not input deal-specific data into any tool without an enterprise agreement that covers the use case.</p></div><div class="bd"><h3>Material non-public information</h3><p>Never input MNPI into a consumer AI tool. If your firm has an enterprise deployment with appropriate data controls, confirm what is and is not permitted before using it.</p></div></div>
+    </div>
+  </section>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>Can AI help with investment research and modelling?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. AI can support drafting company primers, structuring earnings analysis, building model frameworks, and generating first drafts of IC memos. The investment judgment and assumption ownership must remain with the analyst, and human review is essential before any AI-assisted output informs a decision.</div></details>
+<details class="faq-item"><summary>What is the safest way to use AI in institutional finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Use only AI tools approved by your firm's compliance and IT teams. Avoid inputting material non-public information into any tool without an enterprise data agreement. Treat every AI output as a first draft requiring verification against source data.</div></details>
+<details class="faq-item"><summary>How do I write better prompts for finance tasks?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Include a clear role, a specific task, relevant context such as the company and time period, the data to work from, the desired output format, and any constraints on length or tone. Company-specific context is what separates effective finance prompts from generic ones.</div></details>
+<details class="faq-item"><summary>When should I avoid using AI in finance workflows?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Avoid AI for regulated financial judgments, final investment decisions, confidential deal analysis, and any output that will inform a high-stakes decision without independent verification. AI accelerates the analytical process but does not replace professional judgment.</div></details>
+<details class="faq-item"><summary>What makes a prompt effective for investment research?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Specificity. A prompt that names the company, the audience, the time period, the data source, and the output format will almost always outperform a generic instruction. The more context you provide, the more useful the output.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<!--#include demo-band title="Ask your first question with your firm's context." sub="A walkthrough with your own documents connected."-->
+<script src="/assets/pages/academy3.js" defer></script>

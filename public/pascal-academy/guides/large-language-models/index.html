@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>Large Language Models Explained | Pascal Academy</title>
+<meta name="description" content="A beginner-friendly guide to large language models for finance teams: how LLMs work, what tokens are, how transformers process text, and where they fit.">
+<link rel="canonical" href="https://pascalailabs.com/pascal-academy/guides/large-language-models">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#052A2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pascal AI">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Large Language Models Explained | Pascal Academy">
+<meta property="og:description" content="A beginner-friendly guide to large language models for finance teams: how LLMs work, what tokens are, how transformers process text, and where they fit.">
+<meta property="og:url" content="https://pascalailabs.com/pascal-academy/guides/large-language-models">
+<meta property="og:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-large-language-models.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="What Is a Large Language Model?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pascalailabs">
+<meta name="twitter:title" content="Large Language Models Explained | Pascal Academy">
+<meta name="twitter:description" content="A beginner-friendly guide to large language models for finance teams: how LLMs work, what tokens are, how transformers process text, and where they fit.">
+<meta name="twitter:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-large-language-models.png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=33a81822df">
+<link rel="stylesheet" href="/assets/pages/academy3.css?v=6b20df6ba8">
+<script src="/assets/site.js?v=cd66888c46" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV9WGBYMQR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SV9WGBYMQR');</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pascalailabs.com/#org",
+   "name": "Pascal AI Labs",
+   "alternateName": "Pascal AI",
+   "url": "https://pascalailabs.com/",
+   "logo": "https://pascalailabs.com/assets/pascal-logo.png",
+   "sameAs": [
+    "https://www.linkedin.com/company/pascal-ai-labs/",
+    "https://twitter.com/pascalailabs"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/large-language-models#webpage",
+   "url": "https://pascalailabs.com/pascal-academy/guides/large-language-models",
+   "name": "Large Language Models Explained | Pascal Academy",
+   "description": "A beginner-friendly guide to large language models for finance teams: how LLMs work, what tokens are, how transformers process text, and where they fit.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://pascalailabs.com/#website"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "dateModified": "2026-08-01",
+   "breadcrumb": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/large-language-models#breadcrumb"
+   },
+   "primaryImageOfPage": "https://pascalailabs.com/assets/og/pascal-academy-guides-large-language-models.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pascalailabs.com/#website",
+   "url": "https://pascalailabs.com/",
+   "name": "Pascal AI",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/large-language-models#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pascalailabs.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pascal Academy",
+     "item": "https://pascalailabs.com/pascal-academy"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AI fundamentals",
+     "item": "https://pascalailabs.com/pascal-academy/ai-fundamentals"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "What Is a Large Language Model?",
+     "item": "https://pascalailabs.com/pascal-academy/guides/large-language-models"
+    }
+   ]
+  },
+  {
+   "@type": "TechArticle",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/large-language-models#article",
+   "headline": "What Is a Large Language Model?",
+   "description": "A beginner-friendly guide to large language models for finance teams: how LLMs work, what tokens are, how transformers process text, and where they fit.",
+   "url": "https://pascalailabs.com/pascal-academy/guides/large-language-models",
+   "inLanguage": "en",
+   "dateModified": "2026-08-01",
+   "datePublished": "2026-08-01",
+   "author": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "isPartOf": {
+    "@type": "Collection",
+    "name": "Pascal Academy",
+    "url": "https://pascalailabs.com/pascal-academy"
+   },
+   "mainEntityOfPage": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/large-language-models#webpage"
+   },
+   "image": "https://pascalailabs.com/assets/og/pascal-academy-guides-large-language-models.png",
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Institutional investment teams"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/large-language-models#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is a large language model and how does it work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A large language model is an AI system trained on vast amounts of text to predict the next token in a sequence. It breaks text into tokens, learns patterns from training data, and generates responses by continuing the pattern. LLMs power tools like ChatGPT, Claude, and Pascal AI's research agents."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between a token and a word in LLMs?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A token is a chunk of text that the model processes. It can be a whole word, a part of a word, or even a single character. English words typically average 1.3 tokens. Tokenization affects how much text fits in a context window and how much it costs to run a query."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does Pascal AI use large language models for finance?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pascal AI uses large language models as the reasoning engine inside its research agents. The models read filings, extract financial data, and generate research outputs. Pascal wraps the model with finance-specific context, citation trails, and governance controls so outputs are auditable and traceable to source documents."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What are the main problems with large language models?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "LLMs can hallucinate facts, produce inconsistent outputs, struggle with numerical reasoning, and carry biases from training data. They also have context window limits that constrain how much text they can process at once. These limitations are why human verification is essential for any finance output."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/" aria-label="Pascal AI home">
+      <img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/platform" aria-expanded="false" aria-haspopup="true">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-product">
+          <div class="mega-panel">
+            <div class="mp-col">
+              <a class="mp-feature" href="/platform">
+                <span class="mp-art" aria-hidden="true"><i></i><i></i><i></i></span>
+                <b>Platform overview</b>
+                <span>See how the Investment OS works.</span>
+              </a>
+              <p class="mp-label">Platform</p>
+              <a class="mp-link" href="/platform/context-graph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg> Context graph &amp; memory</a>
+              <a class="mp-link" href="/platform/mcp-apis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> MCP &amp; APIs</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/ask-pascal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Ask Pascal</b><span>Your AI research analyst</span></span></a>
+              <a class="mp-link" href="/ask-pascal/decision-traces"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg> Decision traces</a>
+              <a class="mp-link" href="/ask-pascal/cited-research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg> Cited research</a>
+              <a class="mp-link" href="/ask-pascal/screeners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg> Screeners</a>
+              <a class="mp-link" href="/ask-pascal/pascal-intel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg> Pascal Intel</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/pascal-agents"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><span><b>Pascal Agents</b><span>Run investment work end to end</span></span></a>
+              <a class="mp-link" href="/pascal-agents/autonomous-agents"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Autonomous agents</a>
+              <a class="mp-link" href="/pascal-agents/workflow-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg> Agentic workflow library</a>
+              <a class="mp-link" href="/pascal-agents/data-agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg> Pascal Data Agent</a>
+            </div>
+            <a class="mp-foot" href="/solutions/hedge-funds"><span class="chip">Industries</span><span><b>Pascal for your firm</b><span>Hedge funds, asset and wealth managers, banks, asset servicers, private equity and private credit, and corporate treasury</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/solutions/hedge-funds" aria-expanded="false" aria-haspopup="true">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-il">
+          <div class="mega-panel">
+              <a class="il-i" href="/solutions/hedge-funds"><span><b>Hedge Funds</b><small>Event briefs, reconciliations and DDQs</small></span></a>
+              <a class="il-i" href="/solutions/asset-wealth-management"><span><b>Asset &amp; Wealth Management</b><small>Research, mandate checks and client reporting</small></span></a>
+              <a class="il-i" href="/solutions/banking"><span><b>Banks &amp; Financial Institutions</b><small>Underwriting, covenant monitoring and KYC</small></span></a>
+              <a class="il-i" href="/solutions/asset-servicing"><span><b>Asset Servicing</b><small>Corporate actions, NAV checks and client queries</small></span></a>
+              <a class="il-i" href="/solutions/private-equity-credit"><span><b>Private Equity &amp; Private Credit</b><small>CIM screens, diligence and LP reporting</small></span></a>
+              <a class="il-i" href="/solutions/treasury-hedge-accounting"><span><b>Corporate Treasury &amp; Hedge Accounting</b><small>Exposures, effectiveness tests and hedge files</small></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/news" aria-expanded="false" aria-haspopup="true">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-list mega-news mega-news-ac">
+          <div class="mega-panel">
+            <div class="mn-col">
+              <p class="mp-label">News</p>
+              <a class="mp-link" href="/news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg> Newsroom</a>
+              <a class="mp-link" href="/news/founders-notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Founder's notes</a>
+            </div>
+            <div class="mn-col mn-ac">
+              <a class="mn-ac-head" href="/pascal-academy"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><b>Pascal Academy</b><span>Learn AI for institutional finance</span></span></a>
+              <a class="mp-link" href="/guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Desk guides</a>
+              <a class="mp-link" href="/pascal-academy/ai-fundamentals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg> AI fundamentals</a>
+              <a class="mp-link" href="/pascal-academy/ai-glossary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> AI glossary</a>
+              <a class="mp-link" href="/pascal-academy/workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> Workflows</a>
+              <a class="mp-link" href="/pascal-academy/prompt-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Prompt library</a>
+              <a class="mp-link" href="/pascal-academy/agent-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> Agent library</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-dark btn-sm" href="https://pascalailabs.com/demo">Book a demo</a>
+    </div>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <details open>
+    <summary>Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <p class="mm-label">Platform</p>
+    <a href="/platform">Platform overview</a>
+    <a href="/platform/context-graph">Context graph &amp; memory</a>
+    <a href="/platform/mcp-apis">MCP &amp; APIs</a>
+    <p class="mm-label">Ask Pascal</p>
+    <a href="/ask-pascal">Ask Pascal overview</a>
+    <a href="/ask-pascal/decision-traces">Decision traces</a>
+    <a href="/ask-pascal/cited-research">Cited research</a>
+    <a href="/ask-pascal/screeners">Screeners</a>
+    <a href="/ask-pascal/pascal-intel">Pascal Intel</a>
+    <p class="mm-label">Pascal Agents</p>
+    <a href="/pascal-agents">Pascal Agents overview</a>
+    <a href="/pascal-agents/autonomous-agents">Autonomous agents</a>
+    <a href="/pascal-agents/workflow-library">Agentic workflow library</a>
+    <a href="/pascal-agents/data-agent">Pascal Data Agent</a>
+  </details>
+  <details>
+    <summary>Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/solutions/hedge-funds">Hedge Funds</a>
+    <a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+    <a href="/solutions/banking">Banks &amp; Financial Institutions</a>
+    <a href="/solutions/asset-servicing">Asset Servicing</a>
+    <a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+    <a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+  </details>
+  <details>
+    <summary>News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/news">Newsroom</a>
+    <a href="/news/founders-notes">Founder's notes</a>
+    <p class="mm-label">Pascal Academy</p>
+    <a href="/pascal-academy">Academy home</a>
+    <a href="/guides">Desk guides</a>
+    <a href="/pascal-academy/ai-fundamentals">AI fundamentals</a>
+    <a href="/pascal-academy/ai-glossary">AI glossary</a>
+    <a href="/pascal-academy/workflows">Workflows</a>
+    <a href="/pascal-academy/prompt-library">Prompt library</a>
+    <a href="/pascal-academy/agent-library">Agent library</a>
+  </details>
+  <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+</div>
+
+<main id="main">
+<div class="ac ac-doc">
+<div class="rp" aria-hidden="true"><i></i></div>
+<div class="frame">
+  <header class="ah">
+    <div class="ah-l">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/pascal-academy">Pascal Academy</a><span aria-hidden="true">/</span><a href="/pascal-academy/ai-fundamentals">AI fundamentals</a><span aria-hidden="true">/</span><span aria-current="page">What Is a Large Language Model?</span></nav>
+      <p class="ah-k">Last updated August 2026</p>
+      <h1 class="ah-t">What Is a Large Language Model?</h1>
+      <p class="lead">A beginner-friendly guide to the machinery behind ChatGPT, Claude, Gemini, and Llama.</p>
+      <p class="ah-m">12 min read · Beginner-friendly</p>
+      <div class="ah-by"><span class="ah-av"><img src="/assets/favicon.svg" alt="" width="40" height="40"></span><span><b>Pascal Academy</b><span>AI fundamentals · Part 1 of 10</span></span></div>
+      <div class="ah-a"><button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button></div>
+    </div>
+    <div class="ah-r"><div class="th th-hero" aria-hidden="true"><div class="th-bz"><div class="th-scr g-mint"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg><b>Pre-training</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"/></svg><b>Supervised fine-tuning</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><b>Human feedback (RLHF)</b></span></div></div></div></div></div>
+  </header>
+  <div class="ag">
+    <aside class="toc" aria-label="Table of contents">
+      <div class="toc-in">
+        <p class="toc-h">Table of contents</p>
+        <div class="toc-track"><span class="toc-fill"></span><ol data-spy><li><a href="#what-is-a-language-model">What Is a Language Model?</a></li><li><a href="#tokens-and-probabilities">Tokens and Probabilities</a></li><li><a href="#n-grams-and-the-context-problem">N-grams and the Context Problem</a></li><li><a href="#neural-language-models">Neural Language Models</a></li><li><a href="#transformers-and-self-attention">Transformers and Self-Attention</a></li><li><a href="#training-an-llm">Training an LLM</a></li><li><a href="#key-problems">Key Problems</a></li><li><a href="#fine-tuning-and-distillation">Fine-Tuning and Distillation</a></li><li><a href="#model-families-compared">Model Families Compared</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></div>
+        <div class="toc-cta">
+          <p class="toc-cta-t">Take this guide with you.</p>
+          <p>Get the PDF in your inbox.</p>
+          <button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button>
+        </div>
+      </div>
+    </aside>
+    <article class="ac-prose" id="article">
+      <details class="toc-m"><summary>Table of contents</summary><ol><li><a href="#what-is-a-language-model">What Is a Language Model?</a></li><li><a href="#tokens-and-probabilities">Tokens and Probabilities</a></li><li><a href="#n-grams-and-the-context-problem">N-grams and the Context Problem</a></li><li><a href="#neural-language-models">Neural Language Models</a></li><li><a href="#transformers-and-self-attention">Transformers and Self-Attention</a></li><li><a href="#training-an-llm">Training an LLM</a></li><li><a href="#key-problems">Key Problems</a></li><li><a href="#fine-tuning-and-distillation">Fine-Tuning and Distillation</a></li><li><a href="#model-families-compared">Model Families Compared</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<section class="ac-sec" id="what-is-a-language-model" aria-labelledby="what-is-a-language-model-h"><h2 id="what-is-a-language-model-h">What Is a Language Model?</h2>
+<p>A language model is, at its core, a probability engine for text. Given a sequence of words, it estimates how likely each possible next word is to appear.</p>
+<p>That sounds simple, and the core idea genuinely is. A language model answers one question, over and over: given the text so far, what comes next? Everything you see from ChatGPT or Claude, whether it is writing code, summarising a document, or translating Hindi to English, is built on this single mechanism repeated billions of times.</p>
+<p>That does not mean an LLM understands language in the way a human does. A model has never "had a thought" or experienced the world it is describing. What it has is a statistical sense of which words, ideas, and patterns tend to follow one another, learned from an enormous amount of text. That statistical sense turns out to be surprisingly powerful, powerful enough that the output can often look remarkably like understanding.</p>
+<p>To see how this works, consider an incomplete sentence:</p>
+<aside class="ac-co ac-co-example"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span>Example</p><div class="ac-co-body"><p>When I hear rain on my roof, I _____ in my kitchen.</p>
+<p>A language model assigns a probability to every possible token that could fill that blank. Some candidates are more likely than others, based on the patterns the model absorbed during training.</p>
+<p>The table below shows what those probabilities might look like. The numbers are illustrative, not from a real model, but they capture the shape of what a language model produces every time it generates text.</p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Token(s) that could fill the blank</th><th>Probability</th><th>Likelihood</th></tr></thead><tbody><tr><td>cook soup</td><td>9.4%</td><td><span class="ac-meter" style="--w:94%" role="img" aria-label="94% relative likelihood"></span></td></tr><tr><td>warm up a kettle</td><td>5.2%</td><td><span class="ac-meter" style="--w:52%" role="img" aria-label="52% relative likelihood"></span></td></tr><tr><td>cower</td><td>3.6%</td><td><span class="ac-meter" style="--w:36%" role="img" aria-label="36% relative likelihood"></span></td></tr><tr><td>nap</td><td>2.5%</td><td><span class="ac-meter" style="--w:25%" role="img" aria-label="25% relative likelihood"></span></td></tr><tr><td>relax</td><td>2.2%</td><td><span class="ac-meter" style="--w:22%" role="img" aria-label="22% relative likelihood"></span></td></tr></tbody></table></div>
+<p>An application using this model can pick the highest-probability option (cook soup), or it can sample from the distribution, choosing randomly among the candidates weighted by their probabilities. Sampling is what gives models their variability. Two conversations with the same model rarely produce identical answers because the model is rolling weighted dice at each step.</p>
+<p>Estimating what fills a blank is the primitive operation. From that single capability you get text generation (keep filling blanks), translation (fill in the foreign-language word), summarisation (fill in the short version), and code completion (fill in the next line of code). The task changes, the core mechanism does not.</p>
+</section>
+<section class="ac-sec" id="tokens-and-probabilities" aria-labelledby="tokens-and-probabilities-h"><h2 id="tokens-and-probabilities-h">Tokens and Probabilities</h2>
+<p>Before a language model can work with text, it needs to break that text into units called tokens. A token can be a whole word, a piece of a word, or sometimes a single character. The word tokenisation refers to the process of slicing text into these pieces.</p>
+<p>English text tends to produce roughly one token per three-quarters of a word. The sentence 'I love cooking' might become three tokens: I, love, cooking. A longer word like uncharacteristically might be split into several subword tokens: un, character, istic, ally. Languages with non-Latin scripts often use more tokens per word, which is one reason inference costs can be higher for those languages.</p>
+<aside class="ac-co ac-co-note"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>Why not just use words?</p><div class="ac-co-body"><p>If the model treated every full word as a unit, it would need a separate entry for run, running, runs, ran, and so on. Subword tokens let the model reuse the piece run across all of them, learning shared meaning and keeping the vocabulary manageable. The trade-off is that a single word can cost several tokens, which matters for pricing and context windows.</p></div></aside>
+<p>Once text is tokenised, the model's job is to assign probabilities over the vocabulary for the next token. The vocabulary of a modern model can be 50,000 to 200,000 tokens. At each step, the model computes a score for every token in that vocabulary and converts those scores into a probability distribution. The token with the highest probability is the model's top guess, but as mentioned, applications often sample from the distribution instead.</p>
+<p>Parameters are the internal numbers the model uses to compute those probabilities. A 7-billion-parameter model has 7 billion learnable weights, each one a small dial that was tuned during training. More parameters generally means the model can represent more nuanced patterns, but it also means more compute, more memory, and more cost. Parameters alone do not determine quality, the training data and architecture matter just as much, but they are a rough proxy for a model's capacity.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>How probabilities are computed</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>At each step, the model takes the entire sequence of tokens so far, passes them through its layers of computation, and produces a vector of raw scores called logits, one per token in the vocabulary. A function called softmax converts these logits into probabilities that sum to 1.0. The shape of the distribution is controlled by a parameter called temperature: at temperature 1.0 the distribution is unchanged, at lower temperatures it sharpens (favouring the top candidates more strongly), and at higher temperatures it flattens (making less likely tokens more probable). Temperature is one of the levers developers use to control how deterministic or creative a model's output feels.</p></div></details>
+</section>
+<section class="ac-sec" id="n-grams-and-the-context-problem" aria-labelledby="n-grams-and-the-context-problem-h"><h2 id="n-grams-and-the-context-problem-h">N-grams and the Context Problem</h2>
+<p>The earliest language models counted word sequences. An n-gram is simply an ordered sequence of N words. When N is 2, you get a bigram, two words in a row. When N is 3, a trigram, three words in a row. The model builds a table of how often each n-gram appeared in its training corpus, then uses that table to guess the next word.</p>
+<p>Given the phrase "you are very nice", the resulting bigrams are "you are", "are very", and "very nice". The trigrams from the same phrase are "you are very" and "are very nice". A bigram model that sees "orange is" looks up every bigram starting with "orange" and picks the most frequent follower. Similarly, a trigram model that sees "orange is" looks up trigrams starting with "orange is".</p>
+<p>The problem with n-grams is that they capture very little context. Given "orange is", a trigram model can only look two words back. Is "orange" the fruit or the colour? The two-word window is not enough to tell. The model might predict "ripe" (fruit) or "cheerful" (colour), and it has no way to know which is correct without more surrounding text.</p>
+<p>You could increase N to capture more context. A 5-gram looks back four words, a 7-gram looks back six. But as N grows, the number of possible sequences explodes. A 7-gram model trained on a large corpus will have seen most specific 7-word sequences only once, if at all. When every sequence is unique, the model has no statistical basis for prediction. The counts become too sparse to be useful.</p>
+<p>This is the fundamental tension: short n-grams lack context, long n-grams lack data. Language models spent decades stuck in this trade-off.</p>
+<aside class="ac-co ac-co-principle"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>Key takeaway</p><div class="ac-co-body"><p>The n-gram approach teaches us something important: a good language model needs to use context efficiently. It cannot just memorise exact sequences, because most sequences it encounters at inference time will be novel. It needs to generalise from patterns it has seen. That insight is what drove the move to neural networks.</p></div></aside>
+</section>
+<section class="ac-sec" id="neural-language-models" aria-labelledby="neural-language-models-h"><h2 id="neural-language-models-h">Neural Language Models</h2>
+<p>Recurrent neural networks, or RNNs, were the first serious attempt to break out of the n-gram trap. An RNN processes text token by token, and at each step it carries forward a hidden state, a kind of running summary of everything it has seen so far. The easiest way to understand it is to think of it as a reader who forms an impression as they go, updating their understanding with each new word.</p>
+<p>This was a real improvement over n-grams. An RNN could, in principle, look back across an entire sentence or even a short paragraph. It could learn that "orange" followed by "is" followed by "ripe" is probably about fruit, and carry that forward to influence later predictions. The context window was no longer fixed at N minus one words.</p>
+<p>But RNNs had two stubborn problems. First, they processed tokens sequentially. To predict the hundredth token, the model had to compute the first, then the second, then the third, all the way through. There was no way to parallelise this, which meant training on large datasets was slow. Second, and more fundamental, the hidden state tended to degrade over long sequences. Information from the start of a long passage would fade or become garbled by the time the model reached the end. This is the vanishing gradient problem, and it put a hard ceiling on how much context an RNN could usefully retain.</p>
+<p>RNNs learn more context than n-grams, but the amount of useful context they can hold is still relatively limited.</p>
+<p>LSTM and GRU architectures, popular in the 2010s, were clever workarounds that helped preserve information over longer distances. They helped, but they did not solve the core issue. Sequential processing was still the bottleneck, and truly long-range context remained out of reach.</p>
+<p>What was needed was an architecture that could look at the entire input at once, not token by token, and weigh the relevance of each part to every other part. That architecture arrived in 2017.</p>
+</section>
+<section class="ac-sec" id="transformers-and-self-attention" aria-labelledby="transformers-and-self-attention-h"><h2 id="transformers-and-self-attention-h">Transformers and Self-Attention</h2>
+<p>In 2017, a team at Google published a paper called "Attention Is All You Need." The architecture it introduced, the Transformer, discarded the sequential processing of RNNs entirely. Instead of reading token by token, a Transformer looks at the entire sequence at once and decides which parts are relevant to which.</p>
+<p>The mechanism at the heart of this is called self-attention and the name is apt: the model attends to itself, meaning every token in the input can look at every other token and decide how much weight to give each one. There is no fixed window or a sequential decay. The first word of a document can directly influence the last word, and vice versa.</p>
+<p>In the sentence "the orange is ripe and sweet," the word "orange" is ambiguous on its own. But self-attention lets the model link "orange" directly to "ripe" and "sweet" without anything in between degrading the signal. The model learns to assign high attention weight between words that are relevant to each other, regardless of how far apart they sit in the sequence.</p>
+<p>In an n-gram, the only context available is the last N minus one words. In an RNN, context has to survive a chain of hidden states. In a Transformer, every token has a direct line to every other token. That is why Transformers handle long-range dependencies so much better, and why they scale so well: the entire computation can be parallelised across the sequence, which makes training on massive datasets feasible.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>How self-attention actually works</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>Each token is represented as three vectors: a query, a key, and a value. The query asks, what am I looking for? The key says, here is what I contain. The value is the actual information the token contributes. The model computes a dot product between each query and every key to produce attention scores, which are then normalised into weights. The output for each token is a weighted sum of all the values, where the weights come from those query-key matches.</p>
+<p>Modern LLMs use multi-head attention, meaning they run this process many times in parallel. Each head can learn a different kind of relationship: one might focus on grammatical structure, another on semantic similarity, another on positional patterns. The outputs of all heads are concatenated and fed forward. This is why the architecture is so expressive, but also why it is computationally expensive: attention scales quadratically with sequence length, so doubling the context window quadruples the attention computation.</p></div></details>
+<p>The "large" in large language model refers to scale: hundreds of millions to hundreds of billions of parameters, trained on trillions of tokens of text. The Transformer architecture is what made that scale possible, because it could be trained efficiently on the parallel hardware, GPUs and TPUs, that became available in the late 2010s. The combination of a better architecture and more compute is what produced the capability jump from early neural language models to the systems we use today.</p>
+</section>
+<section class="ac-sec" id="training-an-llm" aria-labelledby="training-an-llm-h"><h2 id="training-an-llm-h">Training an LLM</h2>
+<p>Building a large language model is a multi-stage process and each stage serves a different purpose, and understanding the pipeline helps explain why models behave the way they do.</p>
+<div class="ac-table"><table><thead><tr><th>Stage</th><th>Name</th><th>What Happens</th></tr></thead><tbody><tr><td>1</td><td>Pre-training</td><td>Learn to predict the next token across trillions of words of internet text. The model absorbs grammar, facts, reasoning patterns, and style.</td></tr><tr><td>2</td><td>Supervised Fine-tuning</td><td>Train on curated examples of good question-answer pairs. The model learns the format and tone of helpful responses.</td></tr><tr><td>3</td><td>RLHF / RLAIF</td><td>Reinforcement learning from human (or AI) feedback. Humans rank model outputs by quality, and the model learns to prefer the better ones.</td></tr><tr><td>4</td><td>Alignment and Safety</td><td>Additional training to refuse harmful requests, reduce bias, and keep outputs within intended use. Often iterative and ongoing.</td></tr></tbody></table></div>
+<h3 id="pre-training">Pre-training</h3>
+<p>Pre-training is where the model learns the fundamentals. The training objective here is to simply predict the next token. Given a chunk of text, the model tries to guess what comes next, and when it gets it wrong, the error signal updates its parameters. Do this trillions of times across a massive corpus of internet text, books, code, articles, and the model develops a deep internal representation of language, facts, and reasoning patterns.</p>
+<p>The model that comes out of pre-training is called a base model. It is not yet a chatbot. If you prompt a base model with "What is the capital of France?", it might respond with "What is the capital of Germany?" because it has learned to continue text, not to answer questions. It will happily complete a quiz, write an essay, or continue a story, but it does not yet know it is supposed to be helpful.</p>
+<h3 id="supervised-fine-tuning">Supervised Fine-tuning</h3>
+<p>Supervised fine-tuning, or SFT, teaches the model the format of a helpful assistant. Developers create thousands of example conversations: a user asks a question, an assistant gives a good answer. The model is trained on these pairs, learning to produce responses in that format rather than just continuing the prompt. After SFT, the model knows to answer the question.</p>
+<h3 id="rlhf">Reinforcement Learning from Human Feedback</h3>
+<p>RLHF, popularised by OpenAI with InstructGPT and later ChatGPT, adds a further layer. Human reviewers are shown multiple model outputs for the same prompt and asked to rank them by quality. A separate model, called a reward model, learns to predict these rankings. The main model is then fine-tuned to maximise the reward, meaning it learns to produce outputs that humans rate highly: helpful, honest, and harmless.</p>
+<p>RLHF is what makes a model feel polished. It is also where a lot of the subjective behaviour of a model, its tone, its refusals, its tendency to be cautious or verbose, gets shaped. Different labs have different philosophies here, which is why Claude, GPT, and Gemini can feel quite different even though they share the same underlying architecture.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>Why RLHF changed everything</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>Before RLHF, language models were impressive but difficult to use. They would continue text, but not necessarily in the direction you wanted. RLHF gave developers a way to steer models toward useful behaviour without rewriting the base model. The reward model encodes what humans prefer in an abstract sense, and optimising against it produces models that feel like they understand instructions. The catch is that the reward model is only as good as the human annotations it learns from, and annotators disagree, have biases, and can be inconsistent. This is one source of the ongoing challenges with alignment.</p></div></details>
+</section>
+<section class="ac-sec" id="key-problems" aria-labelledby="key-problems-h"><h2 id="key-problems-h">Key Problems</h2>
+<p>Large language models are powerful, but they are not perfect. Three problems in particular are worth understanding, because they shape how these models can and cannot be used.</p>
+<h3 id="hallucination">Problem 1: Hallucination</h3>
+<p>Models generate text that sounds confident and specific but is factually wrong. A model might cite a paper that does not exist, give a wrong date for a historical event, or fabricate an API method. This happens because the model is optimised for plausible-sounding text, not for truth. It has no built-in fact-checker; it produces what is statistically likely given its training, and sometimes what is likely is also wrong.</p>
+<h3 id="bias">Problem 2: Bias</h3>
+<p>Models learn from text written by humans, and human text carries biases. If the training corpus underrepresents certain groups or overrepresents certain viewpoints, the model will reflect that. A model might default to male pronouns for doctors, associate certain names with certain professions, or treat Western perspectives as universal. this is also not a bug you can patch because ultimately it is the property of the training data that requires deliberate mitigation.</p>
+<h3 id="reasoning-limits">Problem 3: Reasoning Limits</h3>
+<p>Models can appear to reason but often do so through pattern matching rather than genuine logical deduction. They struggle with multi-step arithmetic, novel logic puzzles, and anything requiring sustained reasoning chains. A model might get a calculation right by recognising a familiar pattern and get a slight variation of it wrong because it is not actually performing the steps. This is why models can ace standardised tests in some domains and fail at simple tasks in others.</p>
+</section>
+<section class="ac-sec" id="fine-tuning-and-distillation" aria-labelledby="fine-tuning-and-distillation-h"><h2 id="fine-tuning-and-distillation-h">Fine-Tuning and Distillation</h2>
+<p>Once a base model exists, there are ways to make it better for specific tasks without training from scratch. Two of the most important are fine-tuning and distillation.</p>
+<p>Fine-tuning means taking a pre-trained model and training it further on a smaller, task-specific dataset. If you want a model that is good at answering customer support tickets, you fine-tune it on thousands of example ticket-and-response pairs. The model already knows language and general knowledge from pre-training; fine-tuning just nudges it toward the patterns, vocabulary, and format your use case needs.</p>
+<p>This is far cheaper than training from scratch. You are starting from a model that already works and making targeted adjustments. A full pre-training run might cost millions of dollars in compute; a fine-tuning run can cost a few hundred. This is also why open-weight models like Llama are valuable: anyone can fine-tune them for their own domain without needing the resources to build a foundation model.</p>
+<p>Distillation is about efficiency. A large model, say 70 billion parameters, might be very capable but too expensive to run for every query. Distillation trains a smaller model, say 7 billion parameters, to mimic the larger one's outputs. The smaller model will not match the large one on everything, but for many tasks it can get close enough while being an order of magnitude cheaper and faster to run.</p>
+<p>The way it works is straightforward in concept: you generate outputs from the large model, then train the small model on those input-output pairs. The small model learns to approximate the large model's behaviour rather than learning from scratch. The result is a model that is cheaper to deploy, faster to serve, and often good enough for production use.</p>
+<div class="ac-table"><table><thead><tr><th>Fine-tuning</th><th>Distillation</th></tr></thead><tbody><tr><td>Adapts a model to a specific task.Pre-trained model + task-specific data produces a model specialised for your use case. Cheaper than training from scratch. Keeps the base model's general knowledge while learning new patterns.</td><td>Compresses a model for efficiency.Large model produces a smaller model that approximates it. Trades a small amount of capability for a large reduction in cost and latency. Essential for deploying models at scale on limited hardware.</td></tr></tbody></table></div>
+</section>
+<section class="ac-sec" id="model-families-compared" aria-labelledby="model-families-compared-h"><h2 id="model-families-compared-h">Model Families Compared</h2>
+<p>The major LLM families share the same Transformer foundation but differ in how they are trained, what data they use, how they are aligned, and whether their weights are openly available. The table below summarises the key distinctions as of mid-2026.</p>
+<div class="ac-table"><table><thead><tr><th>Model Family</th><th>Developer</th><th>Access</th><th>Key Characteristic</th></tr></thead><tbody><tr><td>GPT (GPT-4o, o-series)</td><td>OpenAI</td><td>Closed (API only)</td><td>Strong general capability, multimodal (text, image, audio). The o-series introduces reasoning-focused models that think before answering.</td></tr><tr><td>Claude</td><td>Anthropic</td><td>Closed (API only)</td><td>Known for careful, nuanced responses and strong refusal of harmful outputs. Emphasis on alignment and honesty. Large context windows.</td></tr><tr><td>Gemini</td><td>Google DeepMind</td><td>Closed (API + consumer products)</td><td>Natively multimodal, trained on text, images, audio, and video from the start. Integrated across Google products. Very large context windows.</td></tr><tr><td>Llama</td><td>Meta</td><td>Open weights</td><td>Weights released publicly for research and commercial use. Enables fine-tuning and on-device deployment. Spawns many community variants.</td></tr></tbody></table></div>
+<p>The closed versus open distinction matters a lot in practice. With GPT, Claude, and Gemini, you interact with the model through an API and you cannot see or modify the weights. With Llama, you can download the model, fine-tune it on your own data, run it on your own hardware, and audit its behaviour. That freedom comes with the cost of hosting and maintaining the model yourself.</p>
+<p>The reasoning-focused models, like OpenAI's o-series and Claude's extended-thinking variants, represent a newer development. These models are trained to spend more compute at inference time, producing intermediate reasoning steps before giving an answer. They tend to be stronger on maths, coding, and multi-step problems, but slower and more expensive per query.</p>
+<p>No single model is best for everything. Claude might be better for careful writing, GPT for general versatility, Gemini for multimodal tasks involving images, and a fine-tuned Llama for cost-sensitive deployments where you need control. The right choice depends on the task, the budget, and the constraints.</p>
+<aside class="ac-co ac-co-note"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>The field is moving fast</p><div class="ac-co-body"><p>Model capabilities change every few months. A comparison that is accurate today may be outdated by the time you read this. The underlying concepts in this guide, what a language model is, how attention works, why training happens in stages, are more stable than the leaderboard. If you understand the fundamentals, you can evaluate any new model that comes along.</p></div></aside>
+</section>
+<aside class="ac-about"><p class="ac-about-h">About this guide</p><p>This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, and agents. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.</p></aside>
+    </article>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What is a large language model and how does it work?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A large language model is an AI system trained on vast amounts of text to predict the next token in a sequence. It breaks text into tokens, learns patterns from training data, and generates responses by continuing the pattern. LLMs power tools like ChatGPT, Claude, and Pascal AI's research agents.</div></details>
+<details class="faq-item"><summary>What is the difference between a token and a word in LLMs?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A token is a chunk of text that the model processes. It can be a whole word, a part of a word, or even a single character. English words typically average 1.3 tokens. Tokenization affects how much text fits in a context window and how much it costs to run a query.</div></details>
+<details class="faq-item"><summary>How does Pascal AI use large language models for finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal AI uses large language models as the reasoning engine inside its research agents. The models read filings, extract financial data, and generate research outputs. Pascal wraps the model with finance-specific context, citation trails, and governance controls so outputs are auditable and traceable to source documents.</div></details>
+<details class="faq-item"><summary>What are the main problems with large language models?<span class="pm" aria-hidden="true"></span></summary><div class="ans">LLMs can hallucinate facts, produce inconsistent outputs, struggle with numerical reasoning, and carry biases from training data. They also have context window limits that constrain how much text they can process at once. These limitations are why human verification is essential for any finance output.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kl" aria-labelledby="kl-h">
+    <h2 class="sx-t" id="kl-h">Keep learning</h2>
+    <div class="kl-g"><a class="gc" href="/pascal-academy/guides/prompt-engineering"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-sea"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><b>Zero-shot prompting</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg><b>Few-shot prompting</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg><b>Chain-of-thought</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 02</span><h3 class="gc-t">Prompt engineering</h3><p class="gc-m">15 min read</p></div></a><a class="gc" href="/pascal-academy/guides/rag-retrieval-augmented-generation"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-cream"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg><b>Document ingestion</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg><b>Vector databases</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><b>Hybrid search</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 03</span><h3 class="gc-t">Retrieval-augmented generation (RAG)</h3><p class="gc-m">15 min read</p></div></a><a class="gc" href="/guides/ai-for-hedge-funds"><div class="th" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-teal"><img src="/assets/shots/shot-agent-table.webp" alt="Pascal agent output: a street vs management framing table for Sea Limited with citations" width="1600" height="844" loading="lazy" decoding="async"></div></div></div><div class="gc-b"><span class="pill">Desk guide</span><h3 class="gc-t">AI for Hedge Funds</h3><p class="gc-m">24 min read</p></div></a></div>
+  </section>
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">Ask your first question with your firm's context.<br><span style="color:var(--mint-2)">A walkthrough with your own documents connected.</span></h2>
+  <div class="actions">
+    <a class="btn btn-white" href="https://pascalailabs.com/demo">Book a demo</a>
+  </div>
+</section>
+
+<dialog class="ac-gate" id="pdf-gate" aria-labelledby="gate-h">
+  <div class="ac-gate-in">
+    <div class="ac-gate-side">
+      <p class="eyebrow">Pascal Academy · PDF</p>
+      <p class="ac-gate-t">What Is a Large Language Model?</p>
+      <p class="ac-gate-m">12 min read</p>
+      <div class="ac-gate-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b><i></i><i></i></div>
+    </div>
+    <div class="ac-gate-main">
+      <button class="ac-gate-x" type="button" data-gate-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      <form class="ac-gate-form" data-gate-form data-guide="What Is a Large Language Model?" data-slug="large-language-models" data-pdf="/assets/academy/pdf/large-language-models.pdf" novalidate>
+        <h2 id="gate-h">Get this guide as a PDF</h2>
+        <p class="ac-gate-sub">Tell us where to send it and we will email you the PDF.</p>
+        <label>Full name<input name="name" autocomplete="name" required></label>
+        <label>Work email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Organization<input name="organization" autocomplete="organization" required></label>
+        <p class="ac-gate-err" role="alert" hidden></p>
+        <button class="btn btn-dark" type="submit">Email me the PDF</button>
+        <p class="ac-gate-fine">By submitting, you agree to be contacted about Pascal Academy.</p>
+      </form>
+      <div class="ac-gate-done" hidden>
+        <span class="ac-gate-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <h2>Check your inbox.</h2>
+        <p>We have sent <b>What Is a Large Language Model?</b> to <span data-gate-email></span>.</p>
+        <button class="btn btn-line" type="button" data-gate-close>Back to the guide</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="/assets/pages/academy3.js?v=4f48f13d9f" defer></script>
+</main>
+<footer class="footer">
+  <div class="frame">
+    <div class="footer-grid">
+      <div>
+        <a href="/" aria-label="Pascal AI home"><img src="/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24" loading="lazy"></a>
+        <p class="footer-blurb">The Investment OS for asset and wealth managers, asset servicers, corporate treasury, banks and financial institutions, private equity and private credit firms, and hedge funds.</p>
+      </div>
+      <nav aria-label="Platform">
+        <p class="fh">Platform</p>
+        <ul>
+          <li><a href="/platform">Platform overview</a></li>
+          <li><a href="/platform/context-graph">Context graph &amp; memory</a></li>
+          <li><a href="/platform/mcp-apis">MCP &amp; APIs</a></li>
+          <li><a href="/solutions/ai-transformation">AI transformation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Products">
+        <p class="fh">Products</p>
+        <ul>
+          <li><a href="/ask-pascal">Ask Pascal</a></li>
+          <li><a href="/ask-pascal/cited-research">Cited research</a></li>
+          <li><a href="/ask-pascal/screeners">Screeners</a></li>
+          <li><a href="/pascal-agents">Pascal Agents</a></li>
+          <li><a href="/pascal-agents/workflow-library">Workflow library</a></li>
+          <li><a href="/pascal-agents/data-agent">Pascal Data Agent</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Industries">
+        <p class="fh">Industries</p>
+        <ul>
+          <li><a href="/solutions/hedge-funds">Hedge Funds</a></li>
+          <li><a href="/solutions/asset-wealth-management">Asset &amp; Wealth Management</a></li>
+          <li><a href="/solutions/banking">Banks &amp; Financial Institutions</a></li>
+          <li><a href="/solutions/asset-servicing">Asset Servicing</a></li>
+          <li><a href="/solutions/private-equity-credit">Private Equity &amp; Private Credit</a></li>
+          <li><a href="/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="News">
+        <p class="fh">News</p>
+        <ul>
+          <li><a href="/news">Newsroom</a></li>
+          <li><a href="/news/founders-notes">Founder's notes</a></li>
+          <li><a href="https://vibhavviswanathan.substack.com" rel="noopener">Alpha &amp; Agents</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="fh">Company</p>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/security">Security</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/pascal-academy">Pascal Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pascal AI Labs</span>
+      <span><a href="/privacy-policy">Privacy</a> &middot; <a href="/terms-of-use">Terms</a> &middot; <a href="https://www.linkedin.com/company/pascal-ai-labs/" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/pascalailabs" rel="noopener">X</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

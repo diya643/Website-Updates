@@ -1,0 +1,215 @@
+[a] Back
+[span] /
+[span] Prompt Library
+[span] Collection · Prompt Library
+[h1] AI Prompts for Finance
+[p] Tested prompts for research, memos and modelling — copy, adapt and run.
+[a] Browse Prompts
+[button] All
+[button] Company Research
+[button] Earnings
+[button] Modelling
+[button] Comps
+[button] IC Memos
+[button] Portfolio
+[button] Communication
+[span] 18 prompts
+[span] Prompt Library
+[h2] Browse tested prompts.
+[p] Filter by category or search by task. Each card includes a structured prompt you can copy and adapt for your workflow.
+[span] Company Research
+[span] 01
+[h3] Company Primer Builder
+[p] When you need a structured one-page overview of a company you are starting to cover.
+[span] ▾
+[pre] You are an equity research analyst. Build a one-page company primer for [COMPANY NAME] covering business model, revenue segments, key geographies, competitive position, and the three financial metrics that matter most for this business. Keep each section to 3-4 sentences. Flag any areas where public disclosure is thin or where the business model is hard to assess from filings alone.
+[button] Copy
+[span] Company Research
+[span] 02
+[h3] Competitive Positioning Map
+[p] When you need to understand who the real competitors are and where the structural advantages sit.
+[span] ▾
+[pre] Map the competitive positioning for [COMPANY NAME]. Identify the top 5 direct competitors, their estimated market share, and the one structural advantage each holds. For [COMPANY NAME], identify the two biggest competitive threats and the one moat that is hardest to replicate. Explain your reasoning for each.
+[button] Copy
+[span] Company Research
+[span] 03
+[h3] Management & Governance Assessment
+[p] When you are assessing the quality and alignment of leadership before taking a position.
+[span] ▾
+[pre] Summarize the leadership team and governance structure at [COMPANY NAME]. Cover CEO tenure and track record, board composition, insider ownership levels, and any recent executive departures or appointments. Flag governance concerns that would matter to an institutional investor, including related-party transactions, dual-class share structures, or compensation plans that seem misaligned with shareholder returns.
+[button] Copy
+[span] Earnings
+[span] 04
+[h3] Earnings Call Synthesis
+[p] When you need to extract the signal from a 60-minute earnings call in under five minutes.
+[span] ▾
+[pre] Analyze the following earnings call transcript for [COMPANY NAME]. Extract the three most important management commentary points, changes in guidance, and any tone differences between the prepared remarks and the Q&A. Note where management was evasive or where the tone was notably different from prior quarters. Flag any question where the answer felt rehearsed or incomplete.
+[INSERT TRANSCRIPT]
+[button] Copy
+[span] Earnings
+[span] 05
+[h3] Guidance & Estimate Revision Tracker
+[p] When you need to see where management guidance diverges from what the Street expects.
+[span] ▾
+[pre] Using the following consensus estimates and management guidance for [COMPANY NAME], identify where guidance diverges from sell-side expectations. For each divergence, classify it as above, in line, or below consensus. Flag the line items where the gap is widest and suggest what would need to happen for the company to hit the guided range. Note whether guidance was raised, lowered, or maintained.
+
+[INSERT CONSENSUS AND GUIDANCE DATA]
+[button] Copy
+[span] Earnings
+[span] 06
+[h3] Post-Earnings KPI Dashboard
+[p] When you need a structured view of how the key operating metrics trended quarter over quarter.
+[span] ▾
+[pre] From the following earnings release for [COMPANY NAME], extract the 8 key operating metrics that matter most for this business model. For each, compare to the prior quarter and prior year, calculate the change in absolute and percentage terms, and note whether the trend is accelerating, decelerating, or stable. Flag any metric where the company changed its definition or reporting methodology.
+
+[INSERT EARNINGS RELEASE]
+[button] Copy
+[span] Modelling
+[span] 07
+[h3] Model Architecture & Assumption Framework
+[p] When you are starting a new model and need to align on structure and assumptions before writing formulas.
+[span] ▾
+[pre] You are a financial modelling specialist. For [COMPANY NAME], propose a DCF model structure including revenue build approach, margin assumptions, working capital drivers, and the three sensitivity variables that would have the largest impact on valuation. Group assumptions by category and note which ones require primary research versus public data. Suggest the output tabs and the key summary metrics to display on a dashboard.
+
+[INSERT COMPANY DESCRIPTION AND FINANCIAL SUMMARY]
+[button] Copy
+[span] Modelling
+[span] 08
+[h3] Scenario Design & Sensitivity Testing
+[p] When you need to stress-test a model and identify where valuation risk concentrates.
+[span] ▾
+[pre] Design a three-scenario framework for [COMPANY NAME] covering base, bull, and bear cases. For each scenario, specify what changes in revenue growth, margin trajectory, and capital intensity. Identify the two two-way sensitivity tables that would best illustrate where valuation risk concentrates. Explain why each sensitivity is worth running and what decision it would inform.
+
+[INSERT BASE CASE ASSUMPTIONS]
+[button] Copy
+[span] Modelling
+[span] 09
+[h3] Valuation Cross-Check
+[p] When you need to triangulate a DCF output against market-based valuation methods.
+[span] ▾
+[pre] Using the following trading comparables and precedent transactions for [COMPANY NAME], build a valuation football field. Identify which multiples are most appropriate for this business model, note any outliers in the comp set, and calculate the implied per-share value range. Flag where the current market price sits relative to this range and what that implies about market expectations.
+
+[INSERT COMP DATA AND PRECEDENT TRANSACTIONS]
+[button] Copy
+[span] Comps
+[span] 10
+[h3] Comparable Set Builder
+[p] When you need to build a comp set from scratch and decide what belongs and what does not.
+[span] ▾
+[pre] Identify 8-10 comparable companies for [COMPANY NAME] in the [SECTOR] sector. For each, note market cap, revenue, EBITDA margin, revenue growth rate, and the primary valuation multiple used in this sub-industry. Rank them by similarity to [COMPANY NAME] based on business model, end markets, and scale. Flag any that should be excluded as outliers and explain why.
+
+[INSERT COMPANY DESCRIPTION]
+[button] Copy
+[span] Comps
+[span] 11
+[h3] Trading Multiples Benchmark
+[p] When you need to see where a company trades relative to its peers and understand why.
+[span] ▾
+[pre] Using the following comp set, calculate EV/Revenue, EV/EBITDA, and P/E for each company. Identify the median, 25th percentile, and 75th percentile for each multiple. Flag companies trading at a meaningful premium or discount to the median and explain the likely operational reason for the divergence. Note which multiples are most reliable for this sub-industry and which are distorted by one-time factors.
+
+[INSERT COMP SET DATA]
+[button] Copy
+[span] Comps
+[span] 12
+[h3] Precedent Transaction Analysis
+[p] When you need to understand what acquirers have actually paid for similar businesses.
+[span] ▾
+[pre] From the following M&A transactions in [SECTOR] over the past 3 years, extract deal value, target revenue, target EBITDA, and the implied transaction multiples. Group by deal type (strategic, financial sponsor, take-private). Identify whether takeout premiums are trending up or down. Flag any transactions that are not truly comparable and explain why. Calculate the median and range for each multiple type.
+
+[INSERT TRANSACTION DATA]
+[button] Copy
+[span] IC Memos
+[span] 13
+[h3] Investment Thesis Structuring
+[p] When you have a view forming and need to structure it into something an IC can evaluate in 90 seconds.
+[span] ▾
+[pre] Structure an investment thesis for [COMPANY NAME] as a [LONG/SHORT] idea. Cover the core argument in three sentences, the three catalysts that will drive the stock toward your target, the two principal risks, and the expected holding period. Write it for an IC audience that has 90 seconds to form a view. Avoid jargon and lead with the single most important point.
+
+[INSERT YOUR RESEARCH NOTES]
+[button] Copy
+[span] IC Memos
+[span] 14
+[h3] IC Memo First Draft
+[p] When your research is done and you need to turn it into a structured memo your committee can act on.
+[span] ▾
+[pre] Draft an IC memo for a [LONG/SHORT] position in [COMPANY NAME]. Structure it as investment thesis, key drivers, financial summary, valuation approach, risk factors, and position sizing recommendation. Keep it to 800 words. Write in the house style of a fundamentals-driven long/short fund. Lead each section with the conclusion and follow with supporting detail. Do not include any recommendation the data does not support.
+
+[INSERT YOUR RESEARCH AND ANALYSIS]
+[button] Copy
+[span] IC Memos
+[span] 15
+[h3] Risk Factor Decomposition
+[p] When you have a thesis and need to pressure-test it before presenting to the committee.
+[span] ▾
+[pre] For the following investment thesis on [COMPANY NAME], identify the five things that could go wrong. For each risk, classify it as company-specific, sector-level, or macro. Rate each on probability (high, medium, low) and impact (high, medium, low). Suggest what monitoring signals would tell you the risk is materializing, and what the response would be if it did.
+
+[INSERT INVESTMENT THESIS]
+[button] Copy
+[span] Portfolio
+[span] 16
+[h3] Position Monitor & Catalyst Tracker
+[p] When you need to review existing positions and identify where the thesis is under pressure.
+[span] ▾
+[pre] Using the following portfolio holdings and current positions, identify the three positions where the investment thesis is most at risk. For each, note what has changed since initiation, whether the catalysts are still intact, and whether the position sizing still makes sense relative to conviction. Flag any position where the downside case has become more likely than at initiation.
+
+[INSERT PORTFOLIO HOLDINGS AND THESIS NOTES]
+[button] Copy
+[span] Portfolio
+[span] 17
+[h3] Earnings Season Prep
+[p] When earnings season is approaching and you need to prepare for every portfolio company reporting.
+[span] ▾
+[pre] For the following portfolio companies reporting in the next two weeks, identify the three metrics to watch for each, the consensus expectations, and what would constitute a positive versus negative surprise. Flag any companies where the setup into the print looks risky based on recent estimate revisions, price action, or sector-specific headwinds. Suggest one question to investigate for each name before the print.
+
+[INSERT PORTFOLIO COMPANIES AND POSITIONS]
+[button] Copy
+[span] Communication
+[span] 18
+[h3] Investor Letter Drafting
+[p] When you need to communicate quarterly performance and positioning to limited partners.
+[span] ▾
+[pre] Draft a quarterly investor letter covering portfolio performance, attribution by sector, two wins and two losses from the quarter, and the outlook for the next 90 days. Keep it under 400 words and write in the voice of a fundamentals-driven portfolio manager addressing limited partners. Lead with the most important takeaway, not with performance numbers. Avoid jargon your LPs would not use themselves.
+
+[INSERT PERFORMANCE DATA AND ATTRIBUTION]
+[button] Copy
+[span] How to Use This Library
+[h2] Start with the task.
+[p] Each card contains a structured prompt you can copy and adapt to your workflow. Replace the bracketed fields with your company, data and specific requirements. Add the context the model needs, then specify the format you want in the output.
+[span] Writing Better Prompts
+[h2] What makes a finance prompt effective.
+[p] Output quality reflects input quality. A prompt that produces a useful result for an investment task has a recognizable structure.
+[span] Role “You are a senior equity analyst”
+[span] Task “Build a one-page primer”
+[span] Context Company, sector, time period
+[span] Data The actual numbers to work from
+[span] Format Table, bullet points, memo
+[span] Constraints Word count, tone, audience
+[h3] Common mistakes to avoid
+[p] “Analyze this company” gives too little direction. Specify the type of analysis, the audience, and the format you need.
+[p] If your forecast relies on specific growth rates or margin targets, include them. The model cannot infer your assumptions from context.
+[p] Not specifying format, length or tone produces outputs that need significant reformatting before they are usable.
+[p] AI can draft the commentary, but it cannot know what actually drove the variance. Always validate against real operational data.
+[p] For complex analytical tasks, structure your prompt to ask the model to reason step by step. Ask it to show assumptions, logic and conclusions separately. This improves output quality and makes errors easier to catch. The model that shows its work is easier to verify than the one that hands you a number.
+[span] Boundaries
+[h2] When AI should not make the call.
+[p] AI accelerates the analytical process, but investment judgment stays with the analyst. There are specific scenarios where AI should not be relied on for final outputs or decisions.
+[p] The decision to commit capital is a judgment call that weighs asymmetric information, portfolio context and risk tolerance. AI can inform the decision. It cannot make it.
+[p] Accounting policy elections, impairment assessments and revenue recognition determinations require documented professional judgment. These cannot be delegated to a model.
+[p] Transaction-related forecasts carry strict confidentiality obligations. Do not input deal-specific data into any tool without an enterprise agreement that covers the use case.
+[p] Never input MNPI into a consumer AI tool. If your firm has an enterprise deployment with appropriate data controls, confirm what is and is not permitted before using it.
+[span] FAQ
+[h2] Frequently asked questions.
+[span] +
+[p] Yes. AI can support drafting company primers, structuring earnings analysis, building model frameworks, and generating first drafts of IC memos. The investment judgment and assumption ownership must remain with the analyst, and human review is essential before any AI-assisted output informs a decision.
+[span] +
+[p] Use only AI tools approved by your firm's compliance and IT teams. Avoid inputting material non-public information into any tool without an enterprise data agreement. Treat every AI output as a first draft requiring verification against source data.
+[span] +
+[p] Include a clear role, a specific task, relevant context such as the company and time period, the data to work from, the desired output format, and any constraints on length or tone. Company-specific context is what separates effective finance prompts from generic ones.
+[span] +
+[p] Avoid AI for regulated financial judgments, final investment decisions, confidential deal analysis, and any output that will inform a high-stakes decision without independent verification. AI accelerates the analytical process but does not replace professional judgment.
+[span] +
+[p] Specificity. A prompt that names the company, the audience, the time period, the data source, and the output format will almost always outperform a generic instruction. The more context you provide, the more useful the output.
+[span] Workshops
+[h2] Join Pascal Academy
+[p] Learn directly from the Pascal team through live workshops.
+[a] Sign Up

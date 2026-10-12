@@ -1,0 +1,264 @@
+<!--meta
+{
+ "path": "/pascal-academy/workflows",
+ "title": "AI Workflows for Finance | Pascal Academy",
+ "description": "20 step-by-step AI workflows for investment teams: earnings analysis, company research, peer comparison, bull and bear theses, news and events.",
+ "crumbs": [
+  [
+   "Pascal Academy",
+   "/pascal-academy"
+  ],
+  [
+   "Workflows",
+   "/pascal-academy/workflows"
+  ]
+ ],
+ "og_kicker": "Pascal Academy",
+ "og_title": "AI workflows for real financial work",
+ "llms": "20 AI workflows for investment teams, each with its stages, inputs and output: earnings, company research, competition, news and events.",
+ "css": [
+  "academy3.css"
+ ],
+ "word_limit": 3400,
+ "priority": 0.7
+}
+-->
+<div class="ac">
+<div class="frame">
+  <header class="hh">
+    <div class="hh-l">
+      {{crumbs}}
+      <h1 class="hh-t">AI <em>Workflows</em></h1>
+    </div>
+    <div class="hh-r"><p class="lead">How AI turns financial work into repeatable processes. See how real financial tasks can be broken down, automated, and run with AI.</p><p class="hh-m">Every workflow breaks a financial task into five stages: define the job, gather context, run the process, produce the deliverable, and review the result.</p></div>
+  </header>
+<section class="fb fb-stages" aria-label="Featured"><div class="fb-in"><h2 class="fb-t">The anatomy of a workflow</h2><div class="tls" role="list" aria-label="The anatomy of a workflow"><div class="tl g-teal on" tabindex="0" data-tile>
+        <span class="pill pill-l">Stage 1</span>
+        <span class="tl-art"></span>
+        <span class="tl-copy"><b class="tl-t">Task. What are we trying to accomplish?</b><span class="tl-d">Define the job clearly. What question needs answering, what decision needs to be supported, and what does a useful result look like?</span></span>
+      </div><div class="tl g-mint" tabindex="0" data-tile>
+        <span class="pill pill-l">Stage 2</span>
+        <span class="tl-art"></span>
+        <span class="tl-copy"><b class="tl-t">Context. What do we need to know?</b><span class="tl-d">Bring together the information required to do the work well: filings, transcripts, financials, market data, prior analysis, internal research, and other relevant sources.</span></span>
+      </div><div class="tl g-sea" tabindex="0" data-tile>
+        <span class="pill pill-l">Stage 3</span>
+        <span class="tl-art"></span>
+        <span class="tl-copy"><b class="tl-t">Process. How should the work be done?</b><span class="tl-d">Define the sequence of steps required to reach the answer. What needs to be retrieved, compared, calculated, tested, or synthesized?</span></span>
+      </div><div class="tl g-cream" tabindex="0" data-tile>
+        <span class="pill pill-l">Stage 4</span>
+        <span class="tl-art"></span>
+        <span class="tl-copy"><b class="tl-t">Output. What should the work produce?</b><span class="tl-d">Turn the analysis into a usable deliverable: a summary, comparison, timeline, model, assessment, or recommendation. The output should support the next action.</span></span>
+      </div><div class="tl g-deep" tabindex="0" data-tile>
+        <span class="pill pill-l">Stage 5</span>
+        <span class="tl-art"></span>
+        <span class="tl-copy"><b class="tl-t">Review. Where does judgment come in?</b><span class="tl-d">A person validates the work, checks the important assumptions, edits where necessary, and makes the final call. Automation handles the process; judgment stays with the analyst.</span></span>
+      </div></div></div></section>
+  <div class="bw" id="wf-results">
+    <div class="bb">
+      <h2 class="bb-t">Browse all 20 workflows.</h2>
+      <label class="sp"><span class="sr-only">Search workflows</span><input type="search" placeholder="Search workflows" data-filter="#wf-results" autocomplete="off">{{icon:search}}</label>
+    </div>
+    <div class="bw-g">
+      <nav class="sd" aria-label="Workflow categories"><ol data-spy><li><a href="#earnings">Earnings</a></li><li><a href="#company-research">Company Research</a></li><li><a href="#competition">Competition</a></li><li><a href="#news-events">News &amp; Events</a></li></ol></nav>
+      <div class="bw-m">
+        <p class="sx-s sx-lead">Step-by-step workflows for the tasks analysts do every day. Each one shows the inputs, process, and deliverable. Use ready-made <a href="/pascal-academy/prompt-library">prompts</a> and <a href="/pascal-academy/agent-library">agents</a> for the same tasks.</p>
+        <section class="sx" id="earnings" aria-labelledby="earnings-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="earnings-h">Earnings</h3><p class="sx-s">Workflows for earnings analysis and earnings season. 6 workflows.</p></div></div>
+        <div class="wfs"><details class="wf" id="earnings-summary" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-teal"><ol class="tflow"><li>Results</li><li>Metrics</li><li>Commentary</li><li>Synthesis</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Earnings</span><h4 class="gc-t">Earnings Summary</h4><span class="gc-d">Generate a structured, fact-based summary of a company's latest earnings, covering financial performance, key developments, management commentary, and forward-looking signals.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Gather the results</li><li>Extract key metrics</li><li>Analyze management commentary</li><li>Structure the summary</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Earnings releases</li><li>Filings</li><li>Investor presentations</li><li>Financial data</li><li>Earnings calls</li></ul>
+                <p class="wf-k">Output</p><p>A structured earnings summary covering financial performance, key developments, management commentary, guidance, and the most important takeaways.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="key-debates" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-mint"><ol class="tflow"><li>Call</li><li>Themes</li><li>Debates</li><li>Takeaways</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Earnings</span><h4 class="gc-t">Key Debates from Earnings</h4><span class="gc-d">Identify the most important debates emerging from an earnings quarter, combining analyst questions, management responses, sentiment, and actionable takeaways.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Gather the discussion</li><li>Identify recurring themes</li><li>Assess the debate</li><li>Surface the takeaways</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Earnings call transcripts</li><li>Analyst questions</li><li>Management commentary</li><li>Prior earnings calls</li><li>Relevant financial data</li></ul>
+                <p class="wf-k">Output</p><p>A summary of the key debates from the quarter, including analyst concerns, management responses, areas of disagreement, and actionable takeaways.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="guidance-vs-actuals" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-sea"><ol class="tflow"><li>Guidance</li><li>Extraction</li><li>Comparison</li><li>Analysis</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Earnings</span><h4 class="gc-t">Guidance vs Actuals</h4><span class="gc-d">Compare management guidance with reported performance to assess whether the company beat, met, or missed its commitments.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Find guidance</li><li>Extract actuals</li><li>Compare</li><li>Analyze</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Earnings calls</li><li>Filings</li><li>Investor presentations</li><li>Financial data</li><li>Historical guidance</li></ul>
+                <p class="wf-k">Output</p><p>A side-by-side view of guidance versus actual performance, including key beats, misses, changes, and outstanding commitments.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="executive-narrative" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-cream"><ol class="tflow"><li>Commentary</li><li>Themes</li><li>Comparison</li><li>Shifts</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Earnings</span><h4 class="gc-t">Executive Narrative Tracker</h4><span class="gc-d">Track how management's narrative changes over time to identify shifts in strategy, priorities, risks, and expectations.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Gather commentary</li><li>Track recurring themes</li><li>Compare over time</li><li>Flag meaningful shifts</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Earnings calls</li><li>Investor presentations</li><li>Filings</li><li>Management commentary</li><li>Historical company disclosures</li></ul>
+                <p class="wf-k">Output</p><p>A longitudinal view of management's narrative, highlighting recurring themes, changes in emphasis, strategic shifts, and emerging signals.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="sector-pulse" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-deep"><ol class="tflow"><li>Companies</li><li>Themes</li><li>Comparison</li><li>Sector view</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Earnings</span><h4 class="gc-t">Sector Pulse</h4><span class="gc-d">Identify the biggest themes, trends, and developments emerging across a sector based on what its leading companies are discussing.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Gather company commentary</li><li>Identify common themes</li><li>Compare companies</li><li>Synthesize the sector view</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Earnings calls</li><li>Filings</li><li>Investor presentations</li><li>Company commentary</li><li>Sector data</li></ul>
+                <p class="wf-k">Output</p><p>A sector-level pulse highlighting the biggest themes companies are discussing, where sentiment is changing, and what developments matter across the sector.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="earnings-preview" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-teal"><ol class="tflow"><li>Expectations</li><li>History</li><li>Watchpoints</li><li>Synthesis</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Earnings</span><h4 class="gc-t">Earnings Preview</h4><span class="gc-d">Synthesize expectations, prior performance, and key watchpoints into a focused pre-earnings brief.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Gather expectations</li><li>Review the last quarter</li><li>Identify key watchpoints</li><li>Build the preview</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Consensus estimates</li><li>Prior earnings</li><li>Management guidance</li><li>Analyst commentary</li><li>Financial data</li><li>Recent company disclosures</li></ul>
+                <p class="wf-k">Output</p><p>A focused earnings preview covering consensus expectations, what happened last quarter, key metrics to watch, and the issues most likely to drive the upcoming result.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details></div>
+      </section><section class="sx" id="company-research" aria-labelledby="company-research-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="company-research-h">Company Research</h3><p class="sx-s">Workflows for company research and fundamental analysis. 10 workflows.</p></div></div>
+        <div class="wfs"><details class="wf" id="ipo-prospectus" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-mint"><ol class="tflow"><li>Business</li><li>Financials</li><li>Risks</li><li>Investor view</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">IPO Prospectus Analysis</h4><span class="gc-d">Extract a structured, investor-focused view of a company from its IPO prospectus.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Map the business</li><li>Analyze the financials</li><li>Assess the risks</li><li>Surface investor considerations</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>IPO prospectus</li><li>Financial statements</li><li>Risk factors</li><li>Management commentary</li><li>Market data</li></ul>
+                <p class="wf-k">Output</p><p>An investor-focused IPO analysis covering the business model, financial performance, growth drivers, risks, and key considerations.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="annual-report" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-sea"><ol class="tflow"><li>Report</li><li>Extraction</li><li>Analysis</li><li>Synthesis</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">Annual Report Summariser</h4><span class="gc-d">Turn a company's annual report into a structured summary of its business, financial performance, strategy, and risks.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Map the report</li><li>Extract key information</li><li>Connect the pieces</li><li>Structure the findings</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Annual report</li><li>Financial statements</li><li>Management discussion</li><li>Risk disclosures</li><li>Notes to accounts</li></ul>
+                <p class="wf-k">Output</p><p>A structured annual report summary covering the business, financial performance, strategy, risks, and key developments.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="company-primer" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-cream"><ol class="tflow"><li>Business</li><li>Performance</li><li>Position</li><li>Thesis</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">Company Primer</h4><span class="gc-d">Build a comprehensive research brief on a company using filings and relevant public information.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Establish the company</li><li>Analyze performance</li><li>Assess the investment case</li><li>Bring it together</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Company filings</li><li>Annual reports</li><li>Earnings calls</li><li>Investor presentations</li><li>Financial data</li><li>Relevant news</li></ul>
+                <p class="wf-k">Output</p><p>A comprehensive company primer covering the business model, financials, competitive position, strategy, risks, and investment considerations.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="management-compensation" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-deep"><ol class="tflow"><li>Compensation</li><li>Ownership</li><li>Incentives</li><li>Governance</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">Management Compensation</h4><span class="gc-d">Analyze executive compensation, ownership, incentives, and governance considerations.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Identify compensation</li><li>Track ownership</li><li>Compare incentives</li><li>Identify governance risks</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Proxy statements</li><li>Annual reports</li><li>Filings</li><li>Executive disclosures</li><li>Compensation tables</li></ul>
+                <p class="wf-k">Output</p><p>A structured management compensation analysis covering pay, ownership, incentives, changes over time, and potential governance considerations.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="insider-intelligence" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-teal"><ol class="tflow"><li>Disclosures</li><li>Activity</li><li>Context</li><li>Signals</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">Insider Intelligence Briefing</h4><span class="gc-d">Track insider-related developments across company news and public disclosures over a selected period.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Gather disclosures</li><li>Identify insider activity</li><li>Add company context</li><li>Surface the signals</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Company filings</li><li>Press releases</li><li>Company news</li><li>Insider disclosures</li><li>Relevant market data</li></ul>
+                <p class="wf-k">Output</p><p>A time-bounded briefing of material insider developments, with relevant company context and key signals highlighted.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="meeting-brief" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-mint"><ol class="tflow"><li>Context</li><li>Developments</li><li>Questions</li><li>Brief</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">Meeting Brief</h4><span class="gc-d">Prepare a focused briefing for a management meeting, investor call, conference, or company discussion.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Build the company context</li><li>Identify what changed</li><li>Develop key questions</li><li>Prepare the brief</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Company filings</li><li>Earnings calls</li><li>Investor presentations</li><li>Prior meeting notes</li><li>Recent news</li><li>Financial data</li></ul>
+                <p class="wf-k">Output</p><p>A meeting-ready brief covering recent developments, key company context, open questions, and suggested discussion points.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="business-model" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-sea"><ol class="tflow"><li>Business</li><li>Economics</li><li>Dependencies</li><li>Assessment</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">Business Model Breakdown</h4><span class="gc-d">Break down how a company makes money, creates value, and allocates resources across its business.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Map the business</li><li>Trace the economics</li><li>Identify dependencies</li><li>Evaluate the model</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Annual reports</li><li>Company filings</li><li>Investor presentations</li><li>Earnings calls</li><li>Financial data</li></ul>
+                <p class="wf-k">Output</p><p>A structured breakdown of the company's business model, revenue drivers, cost structure, economics, dependencies, and key risks.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="bull-bear" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-cream"><ol class="tflow"><li>Base case</li><li>Bull</li><li>Bear</li><li>Debate</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">Bull Bear Analysis</h4><span class="gc-d">Build a structured two-sided investment thesis by examining the strongest arguments for and against a company.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Establish the base case</li><li>Build the bull case</li><li>Build the bear case</li><li>Identify the debate</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Company filings</li><li>Financial data</li><li>Earnings calls</li><li>Consensus estimates</li><li>Market data</li><li>Relevant research</li></ul>
+                <p class="wf-k">Output</p><p>A balanced investment thesis outlining the bull and bear cases, key assumptions, risks, catalysts, and factors that could change the view.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="capital-allocation" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-deep"><ol class="tflow"><li>Capital</li><li>Priorities</li><li>Outcomes</li><li>Assessment</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">Capital Allocation & Strategy Review</h4><span class="gc-d">Assess how management deploys capital and whether allocation decisions align with the company's strategy.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Track capital deployment</li><li>Understand strategic priorities</li><li>Evaluate outcomes</li><li>Assess the strategy</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Annual reports</li><li>Filings</li><li>Earnings calls</li><li>Investor presentations</li><li>Financial statements</li><li>Capital allocation history</li></ul>
+                <p class="wf-k">Output</p><p>A structured review of capital allocation, strategic priorities, investment outcomes, and changes in management's approach over time.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="catalyst-calendar" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-teal"><ol class="tflow"><li>Events</li><li>Developments</li><li>Impact</li><li>Calendar</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Company Research</span><h4 class="gc-t">30-Day Catalyst Calendar</h4><span class="gc-d">Identify the company events and developments most likely to matter over the next 30 days.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Map upcoming events</li><li>Track pending developments</li><li>Assess potential impact</li><li>Build the calendar</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Company filings</li><li>Investor relations materials</li><li>Earnings calendar</li><li>Regulatory disclosures</li><li>Press releases</li><li>Market data</li></ul>
+                <p class="wf-k">Output</p><p>A 30-day catalyst calendar showing upcoming events, expected dates, relevant context, and the potential impact of each catalyst.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details></div>
+      </section><section class="sx" id="competition" aria-labelledby="competition-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="competition-h">Competition</h3><p class="sx-s">Workflows for competitive and peer analysis. 1 workflow.</p></div></div>
+        <div class="wfs"><details class="wf" id="peer-analysis" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-mint"><ol class="tflow"><li>Peers</li><li>Data</li><li>Comparison</li><li>Analysis</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">Competition</span><h4 class="gc-t">Peer Analysis</h4><span class="gc-d">Produce a side-by-side, filings-based comparison of multiple companies over a defined period.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Select the peer group</li><li>Gather comparable data</li><li>Normalize the comparison</li><li>Analyze the differences</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Company filings</li><li>Annual reports</li><li>Earnings releases</li><li>Financial data</li><li>Operating metrics</li></ul>
+                <p class="wf-k">Output</p><p>A side-by-side peer comparison highlighting relative financial performance, operating metrics, key differences, and areas of competitive strength or weakness.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details></div>
+      </section><section class="sx" id="news-events" aria-labelledby="news-events-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="news-events-h">News &amp; Events</h3><p class="sx-s">Workflows for financial news and market monitoring. 3 workflows.</p></div></div>
+        <div class="wfs"><details class="wf" id="event-driven" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-sea"><ol class="tflow"><li>Price move</li><li>Events</li><li>Timing</li><li>Catalyst</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">News &amp; Events</span><h4 class="gc-t">Event-Driven Stock Price Analysis</h4><span class="gc-d">Analyze significant stock price movements and identify the events and developments that may have driven them.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Identify the move</li><li>Gather relevant events</li><li>Connect events to price action</li><li>Assess the catalyst</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Stock price data</li><li>Company filings</li><li>Press releases</li><li>Earnings announcements</li><li>Regulatory news</li><li>Market news</li></ul>
+                <p class="wf-k">Output</p><p>An event-driven analysis linking major stock price movements to their most likely catalysts, with relevant company and market context.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="news-roundup" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-cream"><ol class="tflow"><li>News</li><li>Filter</li><li>Themes</li><li>Takeaways</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">News &amp; Events</span><h4 class="gc-t">Last Week News Roundup</h4><span class="gc-d">Summarize the most important news and developments affecting a company over the previous week.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Gather the week's news</li><li>Filter for material developments</li><li>Organize by theme</li><li>Summarize what matters</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Company news</li><li>Filings</li><li>Press releases</li><li>Regulatory disclosures</li><li>Market news</li><li>Relevant media coverage</li></ul>
+                <p class="wf-k">Output</p><p>A concise weekly news roundup highlighting the most material company developments, why they matter, and any emerging themes.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details><details class="wf" id="business-updates" data-item>
+            <summary><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-deep"><ol class="tflow"><li>Disclosures</li><li>Developments</li><li>Context</li><li>Summary</li><li>Output</li></ol></div></div></div><span class="gc-b"><span class="pill">News &amp; Events</span><h4 class="gc-t">Business Updates</h4><span class="gc-d">Summarize material business developments disclosed through a company's official filings and announcements.</span><span class="wf-o">See how it works</span></span></summary>
+            <div class="wf-b">
+              <div><p class="wf-k">How it works</p><ol class="wf-st"><li>Gather disclosures</li><li>Identify material changes</li><li>Add context</li><li>Structure the updates</li></ol></div>
+              <div><p class="wf-k">Inputs</p><ul class="wf-in"><li>Company filings</li><li>Press releases</li><li>Investor presentations</li><li>Regulatory disclosures</li><li>Official company announcements</li></ul>
+                <p class="wf-k">Output</p><p>A structured summary of material business updates, including what changed, when it happened, and why it matters.</p>
+                <p><a class="btn btn-dark" href="{{demo_url}}">Try this workflow</a></p></div>
+            </div>
+          </details></div>
+      </section>
+        <p class="ac-empty" hidden>No workflow matches that search.</p>
+      </div>
+    </div>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What is an AI workflow in finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A sequence of connected tasks used to complete a broader process. A good workflow has a defined task, the right inputs, a structured process, and an output that fits into the work that follows.</div></details>
+<details class="faq-item"><summary>What are the five stages of a workflow?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Task, context, process, output and review: define the job, gather context, run the process, produce the deliverable, and review the result.</div></details>
+<details class="faq-item"><summary>Which workflows are in the library?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Twenty workflows across earnings, company research, competition, and news and events, each with its stages, inputs and output.</div></details>
+<details class="faq-item"><summary>Can I run these workflows in Pascal?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Open any workflow and choose Try this workflow to see it run in Pascal.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<!--#include demo-band title="Ask your first question with your firm's context." sub="A walkthrough with your own documents connected."-->
+<script src="/assets/pages/academy3.js" defer></script>

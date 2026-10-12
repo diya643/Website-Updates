@@ -1,0 +1,419 @@
+[a] Back
+[span] /
+[span] Workflows
+[span] Collection
+[h1] Workflows
+[p] How AI turns financial work into repeatable processes. See how real financial tasks can be broken down, automated, and run with AI.
+[a] Browse Workflows
+[span] How Workflows Work
+[h2] The Anatomy of a Workflow
+[p] Every workflow breaks a financial task into five stages: define the job, gather context, run the process, produce the deliverable, and review the result. Tap any card to see what happens at each stage.
+[span] 1
+[span] 2
+[span] 3
+[span] 4
+[span] 5
+[button] All
+[button] Earnings
+[button] Company Research
+[button] Competition
+[button] News & Events
+[span] Workflows for Real Financial Work
+[h2] Browse the library.
+[p] Step-by-step workflows for the tasks analysts do every day. Each one shows the inputs, process, and deliverable. Click a card to expand it.
+[h3] Earnings
+[span] 6 workflows
+[p] Workflows for earnings analysis and earnings season.
+[span] Earnings Summary
+[p] Generate a structured, fact-based summary of a company's latest earnings, covering financial performance, key developments, management commentary, and forward-looking signals.
+[span] +
+[li] 1 Gather the results
+[li] 2 Extract key metrics
+[li] 3 Analyze management commentary
+[li] 4 Structure the summary
+[span] Results
+[span] →
+[span] Metrics
+[span] →
+[span] Commentary
+[span] →
+[span] Synthesis
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Key Debates from Earnings
+[p] Identify the most important debates emerging from an earnings quarter, combining analyst questions, management responses, sentiment, and actionable takeaways.
+[span] +
+[li] 1 Gather the discussion
+[li] 2 Identify recurring themes
+[li] 3 Assess the debate
+[li] 4 Surface the takeaways
+[span] Call
+[span] →
+[span] Themes
+[span] →
+[span] Debates
+[span] →
+[span] Takeaways
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Guidance vs Actuals
+[p] Compare management guidance with reported performance to assess whether the company beat, met, or missed its commitments.
+[span] +
+[li] 1 Find guidance
+[li] 2 Extract actuals
+[li] 3 Compare
+[li] 4 Analyze
+[span] Guidance
+[span] →
+[span] Extraction
+[span] →
+[span] Comparison
+[span] →
+[span] Analysis
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Executive Narrative Tracker
+[p] Track how management's narrative changes over time to identify shifts in strategy, priorities, risks, and expectations.
+[span] +
+[li] 1 Gather commentary
+[li] 2 Track recurring themes
+[li] 3 Compare over time
+[li] 4 Flag meaningful shifts
+[span] Commentary
+[span] →
+[span] Themes
+[span] →
+[span] Comparison
+[span] →
+[span] Shifts
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Sector Pulse
+[p] Identify the biggest themes, trends, and developments emerging across a sector based on what its leading companies are discussing.
+[span] +
+[li] 1 Gather company commentary
+[li] 2 Identify common themes
+[li] 3 Compare companies
+[li] 4 Synthesize the sector view
+[span] Companies
+[span] →
+[span] Themes
+[span] →
+[span] Comparison
+[span] →
+[span] Sector view
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Earnings Preview
+[p] Synthesize expectations, prior performance, and key watchpoints into a focused pre-earnings brief.
+[span] +
+[li] 1 Gather expectations
+[li] 2 Review the last quarter
+[li] 3 Identify key watchpoints
+[li] 4 Build the preview
+[span] Expectations
+[span] →
+[span] History
+[span] →
+[span] Watchpoints
+[span] →
+[span] Synthesis
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[h3] Company Research
+[span] 10 workflows
+[p] Workflows for company research and fundamental analysis.
+[span] IPO Prospectus Analysis
+[p] Extract a structured, investor-focused view of a company from its IPO prospectus.
+[span] +
+[li] 1 Map the business
+[li] 2 Analyze the financials
+[li] 3 Assess the risks
+[li] 4 Surface investor considerations
+[span] Business
+[span] →
+[span] Financials
+[span] →
+[span] Risks
+[span] →
+[span] Investor view
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Annual Report Summariser
+[p] Turn a company's annual report into a structured summary of its business, financial performance, strategy, and risks.
+[span] +
+[li] 1 Map the report
+[li] 2 Extract key information
+[li] 3 Connect the pieces
+[li] 4 Structure the findings
+[span] Report
+[span] →
+[span] Extraction
+[span] →
+[span] Analysis
+[span] →
+[span] Synthesis
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Company Primer
+[p] Build a comprehensive research brief on a company using filings and relevant public information.
+[span] +
+[li] 1 Establish the company
+[li] 2 Analyze performance
+[li] 3 Assess the investment case
+[li] 4 Bring it together
+[span] Business
+[span] →
+[span] Performance
+[span] →
+[span] Position
+[span] →
+[span] Thesis
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Management Compensation
+[p] Analyze executive compensation, ownership, incentives, and governance considerations.
+[span] +
+[li] 1 Identify compensation
+[li] 2 Track ownership
+[li] 3 Compare incentives
+[li] 4 Identify governance risks
+[span] Compensation
+[span] →
+[span] Ownership
+[span] →
+[span] Incentives
+[span] →
+[span] Governance
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Insider Intelligence Briefing
+[p] Track insider-related developments across company news and public disclosures over a selected period.
+[span] +
+[li] 1 Gather disclosures
+[li] 2 Identify insider activity
+[li] 3 Add company context
+[li] 4 Surface the signals
+[span] Disclosures
+[span] →
+[span] Activity
+[span] →
+[span] Context
+[span] →
+[span] Signals
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Meeting Brief
+[p] Prepare a focused briefing for a management meeting, investor call, conference, or company discussion.
+[span] +
+[li] 1 Build the company context
+[li] 2 Identify what changed
+[li] 3 Develop key questions
+[li] 4 Prepare the brief
+[span] Context
+[span] →
+[span] Developments
+[span] →
+[span] Questions
+[span] →
+[span] Brief
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Business Model Breakdown
+[p] Break down how a company makes money, creates value, and allocates resources across its business.
+[span] +
+[li] 1 Map the business
+[li] 2 Trace the economics
+[li] 3 Identify dependencies
+[li] 4 Evaluate the model
+[span] Business
+[span] →
+[span] Economics
+[span] →
+[span] Dependencies
+[span] →
+[span] Assessment
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Bull Bear Analysis
+[p] Build a structured two-sided investment thesis by examining the strongest arguments for and against a company.
+[span] +
+[li] 1 Establish the base case
+[li] 2 Build the bull case
+[li] 3 Build the bear case
+[li] 4 Identify the debate
+[span] Base case
+[span] →
+[span] Bull
+[span] →
+[span] Bear
+[span] →
+[span] Debate
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Capital Allocation & Strategy Review
+[p] Assess how management deploys capital and whether allocation decisions align with the company's strategy.
+[span] +
+[li] 1 Track capital deployment
+[li] 2 Understand strategic priorities
+[li] 3 Evaluate outcomes
+[li] 4 Assess the strategy
+[span] Capital
+[span] →
+[span] Priorities
+[span] →
+[span] Outcomes
+[span] →
+[span] Assessment
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] 30-Day Catalyst Calendar
+[p] Identify the company events and developments most likely to matter over the next 30 days.
+[span] +
+[li] 1 Map upcoming events
+[li] 2 Track pending developments
+[li] 3 Assess potential impact
+[li] 4 Build the calendar
+[span] Events
+[span] →
+[span] Developments
+[span] →
+[span] Impact
+[span] →
+[span] Calendar
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[h3] Competition
+[span] 1 workflow
+[p] Workflows for competitive and peer analysis.
+[span] Peer Analysis
+[p] Produce a side-by-side, filings-based comparison of multiple companies over a defined period.
+[span] +
+[li] 1 Select the peer group
+[li] 2 Gather comparable data
+[li] 3 Normalize the comparison
+[li] 4 Analyze the differences
+[span] Peers
+[span] →
+[span] Data
+[span] →
+[span] Comparison
+[span] →
+[span] Analysis
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[h3] News & Events
+[span] 3 workflows
+[p] Workflows for financial news and market monitoring.
+[span] Event-Driven Stock Price Analysis
+[p] Analyze significant stock price movements and identify the events and developments that may have driven them.
+[span] +
+[li] 1 Identify the move
+[li] 2 Gather relevant events
+[li] 3 Connect events to price action
+[li] 4 Assess the catalyst
+[span] Price move
+[span] →
+[span] Events
+[span] →
+[span] Timing
+[span] →
+[span] Catalyst
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Last Week News Roundup
+[p] Summarize the most important news and developments affecting a company over the previous week.
+[span] +
+[li] 1 Gather the week's news
+[li] 2 Filter for material developments
+[li] 3 Organize by theme
+[li] 4 Summarize what matters
+[span] News
+[span] →
+[span] Filter
+[span] →
+[span] Themes
+[span] →
+[span] Takeaways
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Business Updates
+[p] Summarize material business developments disclosed through a company's official filings and announcements.
+[span] +
+[li] 1 Gather disclosures
+[li] 2 Identify material changes
+[li] 3 Add context
+[li] 4 Structure the updates
+[span] Disclosures
+[span] →
+[span] Developments
+[span] →
+[span] Context
+[span] →
+[span] Summary
+[span] →
+[span] Output
+[span] Inputs
+[span] Output
+[a] Try This Workflow →
+[span] Workshops
+[h2] Join Pascal Academy
+[p] Learn directly from the Pascal team through live workshops.
+[a] Sign Up

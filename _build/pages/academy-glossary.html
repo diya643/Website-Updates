@@ -1,0 +1,235 @@
+<!--meta
+{
+ "path": "/pascal-academy/ai-glossary",
+ "title": "AI Glossary for Finance | Pascal Academy",
+ "description": "A finance-focused reference of AI terms for investment teams, covering LLMs, RAG, agents, embeddings, MCP and governance, grouped by theme with search.",
+ "crumbs": [
+  [
+   "Pascal Academy",
+   "/pascal-academy"
+  ],
+  [
+   "AI glossary",
+   "/pascal-academy/ai-glossary"
+  ]
+ ],
+ "og_kicker": "Pascal Academy",
+ "og_title": "AI glossary for finance",
+ "llms": "A finance-focused glossary of 40 AI terms for investment teams, grouped into themes: models and foundations, core AI and agents, retrieval and knowledge, prompting, integration and platform, finance and governance.",
+ "css": [
+  "academy3.css"
+ ],
+ "word_limit": 4400,
+ "lead_min": 8,
+ "priority": 0.7
+}
+-->
+<div class="ac">
+<div class="frame">
+  <header class="hh">
+    <div class="hh-l">
+      {{crumbs}}
+      <h1 class="hh-t">AI <em>Glossary</em></h1>
+    </div>
+    <div class="hh-r"><p class="lead">An A-to-Z reference of AI terms written for investment teams.</p><p class="hh-m">Finance-focused definitions grouped by theme. For the longer explanations, read the <a href="/pascal-academy/ai-fundamentals">AI fundamentals</a> series.</p></div>
+  </header>
+<section class="fb" aria-label="Featured"><div class="fb-in"><div class="tls" role="list" aria-label="Glossary themes"><a class="tl g-sea on" href="#models-foundations" data-tile>
+        <span class="pill pill-l">Models &amp; Foundations</span>
+        <span class="tl-art"><div class="th-scr g-sea"><div class="tterm"><span class="tterm-tag">NLP</span><b>Attention Mechanism</b><span class="tterm-l"></span><span class="tterm-l s"></span></div></div></span>
+        <span class="tl-copy"><b class="tl-t">Models &amp; Foundations</b><span class="tl-d">How AI models are built, trained and run. 15 terms.</span></span>
+      </a><a class="tl g-cream" href="#core-ai-agents" data-tile>
+        <span class="pill pill-l">Core AI &amp; Agents</span>
+        <span class="tl-art"><div class="th-scr g-cream"><div class="tterm"><span class="tterm-tag">AI</span><b>Agentic AI</b><span class="tterm-l"></span><span class="tterm-l s"></span></div></div></span>
+        <span class="tl-copy"><b class="tl-t">Core AI &amp; Agents</b><span class="tl-d">Systems that reason, plan, act and adapt. 10 terms.</span></span>
+      </a><a class="tl g-deep" href="#retrieval-knowledge" data-tile>
+        <span class="pill pill-l">Retrieval &amp; Knowledge</span>
+        <span class="tl-art"><div class="th-scr g-deep"><div class="tterm"><span class="tterm-tag">RAG</span><b>Chunking</b><span class="tterm-l"></span><span class="tterm-l s"></span></div></div></span>
+        <span class="tl-copy"><b class="tl-t">Retrieval &amp; Knowledge</b><span class="tl-d">Grounding answers in real source documents. 6 terms.</span></span>
+      </a><a class="tl g-teal" href="#prompting" data-tile>
+        <span class="pill pill-l">Prompting</span>
+        <span class="tl-art"><div class="th-scr g-teal"><div class="tterm"><span class="tterm-tag">PROMPTING</span><b>Chain-of-Thought Prompting</b><span class="tterm-l"></span><span class="tterm-l s"></span></div></div></span>
+        <span class="tl-copy"><b class="tl-t">Prompting</b><span class="tl-d">Getting useful, reliable output from a model. 2 terms.</span></span>
+      </a><a class="tl g-mint" href="#integration-platform" data-tile>
+        <span class="pill pill-l">Integration &amp; Platform</span>
+        <span class="tl-art"><div class="th-scr g-mint"><div class="tterm"><span class="tterm-tag">INTEGRATION</span><b>Model Context Protocol (MCP)</b><span class="tterm-l"></span><span class="tterm-l s"></span></div></div></span>
+        <span class="tl-copy"><b class="tl-t">Integration &amp; Platform</b><span class="tl-d">Connecting models to your data and tools. 2 terms.</span></span>
+      </a><a class="tl g-sea" href="#finance-governance" data-tile>
+        <span class="pill pill-l">Finance &amp; Governance</span>
+        <span class="tl-art"><div class="th-scr g-sea"><div class="tterm"><span class="tterm-tag">FINANCE</span><b>Citation Trail</b><span class="tterm-l"></span><span class="tterm-l s"></span></div></div></span>
+        <span class="tl-copy"><b class="tl-t">Finance &amp; Governance</b><span class="tl-d">Trust, control and auditability in finance. 5 terms.</span></span>
+      </a></div></div></section>
+  <div class="bw" id="gl-results">
+    <div class="bb">
+      <h2 class="bb-t">Browse all 40 terms.</h2>
+      <label class="sp"><span class="sr-only">Search the glossary</span><input type="search" placeholder="Search the glossary" data-filter="#gl-results" autocomplete="off">{{icon:search}}</label>
+    </div>
+    <div class="bw-g">
+      <nav class="sd" aria-label="Glossary themes"><ol data-spy><li><a href="#models-foundations">Models &amp; Foundations</a></li><li><a href="#core-ai-agents">Core AI &amp; Agents</a></li><li><a href="#retrieval-knowledge">Retrieval &amp; Knowledge</a></li><li><a href="#prompting">Prompting</a></li><li><a href="#integration-platform">Integration &amp; Platform</a></li><li><a href="#finance-governance">Finance &amp; Governance</a></li></ol></nav>
+      <div class="bw-m">
+        <p class="sx-s sx-lead">Search or filter to find the terms that come up in research, modelling, and AI discussions.</p>
+        <section class="sx" id="models-foundations" aria-labelledby="models-foundations-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="models-foundations-h">Models &amp; Foundations</h3><p class="sx-s">How AI models are built, trained and run. 15 terms.</p></div></div>
+        <div class="tms"><article class="tm" id="attention-mechanism" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Attention Mechanism</h4><span class="pill g-sea-p">NLP</span></div>
+            <p>A method in neural networks that helps a model focus on the relevant parts of the input when producing an output. In a transformer model, attention determines which words in a document influence the generation of each subsequent word. This is what allows a model to connect a revenue figure on page 12 of a filing to a question about margin trends.</p></article><article class="tm" id="backpropagation" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Backpropagation</h4><span class="pill g-sea-p">ML</span></div>
+            <p>The process by which a neural network learns from its errors. The model works backward through the network to identify which parts contributed to a mistake and adjusts the weights accordingly. This is repeated across millions of examples during training until the model produces accurate predictions consistently.</p></article><article class="tm" id="context-window" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Context Window</h4><span class="pill g-sea-p">LLM</span></div>
+            <p>The amount of text an AI model can process in a single interaction, including the prompt, retrieved documents, and the response. Everything the model sees must fit within this limit. A larger context window allows longer filings, but the attention mechanism scales quadratically, so doubling the window roughly quadruples compute cost.</p></article><article class="tm" id="embeddings" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Embeddings</h4><span class="pill g-sea-p">ML</span></div>
+            <p>Numerical representations of text where similar concepts are mapped to nearby points in a high-dimensional space. Embeddings allow a model to recognize that “revenue growth” and “top-line expansion” are related even though the words differ. Pascal uses embeddings to index filings and transcripts so agents can retrieve relevant passages based on semantic meaning rather than keyword matching.</p></article><article class="tm" id="fine-tuning" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Fine-Tuning</h4><span class="pill g-sea-p">ML</span></div>
+            <p>The process of further training a pre-trained model on a specific dataset to adapt its behavior for a particular domain or task. In finance, fine-tuning could mean training a model on investment research reports so it produces outputs in a particular house style. Fine-tuning changes the model's internal weights, which differs from RAG, which retrieves external documents at query time without changing the model.</p></article><article class="tm" id="foundation-model" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Foundation Model</h4><span class="pill g-sea-p">ML</span></div>
+            <p>A large-scale AI model trained on vast amounts of broad data that can be adapted to perform a wide variety of downstream tasks. Foundation models serve as the base layer for applications like text generation, summarization, and analysis. GPT-4, Claude, and Gemini are examples of foundation models that Pascal's agents use as their reasoning engine.</p></article><article class="tm" id="inference" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Inference</h4><span class="pill g-sea-p">ML</span></div>
+            <p>The process of a trained model producing an output when given new input. When you ask a model to summarize an earnings call, that is inference. Training builds the model. Inference is using it. The speed and cost of inference matter for finance workflows where teams run many queries across large document sets.</p></article><article class="tm" id="loss-function" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Loss Function</h4><span class="pill g-sea-p">ML</span></div>
+            <p>A mathematical measure of how far a model's prediction is from the correct answer. During training, the model adjusts its parameters to minimize the loss function. A lower loss means the model is producing more accurate predictions. Loss functions are how the model knows it is improving.</p></article><article class="tm" id="machine-learning" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Machine Learning</h4><span class="pill g-sea-p">ML</span></div>
+            <p>A branch of AI that enables computers to learn patterns from data without being explicitly programmed with rules. The model identifies relationships in the training data and applies them to new data. Machine learning powers recommendation engines, fraud detection, and the foundation models that underpin modern AI agents.</p></article><article class="tm" id="natural-language-processing" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Natural Language Processing</h4><span class="pill g-sea-p">NLP</span></div>
+            <p>A field of AI focused on enabling computers to understand, interpret, and generate human language. NLP powers text summarization, sentiment analysis, and entity recognition. In finance, NLP allows a model to read an earnings call transcript, identify the key topics discussed, and extract the relevant financial metrics mentioned by management.</p></article><article class="tm" id="parameters" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Parameters</h4><span class="pill g-sea-p">ML</span></div>
+            <p>The internal weights a model adjusts during training to make accurate predictions. A model with 70 billion parameters has 70 billion adjustable values that determine how it maps inputs to outputs. More parameters generally allow a model to capture more complex patterns, but also require more compute and memory to run.</p></article><article class="tm" id="temperature" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Temperature</h4><span class="pill g-sea-p">LLM</span></div>
+            <p>A setting that controls how much randomness a model introduces when generating text. A temperature of zero makes the model deterministic, always choosing the next token with the highest probability. Higher temperatures introduce more variability. In finance, low temperature is preferred for tasks like data extraction and numerical analysis where consistency matters.</p></article><article class="tm" id="token" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Token</h4><span class="pill g-sea-p">LLM</span></div>
+            <p>A chunk of text that a language model processes. A token can be a whole word, part of a word, or a single character. English words typically average 1.3 tokens. Tokenization determines how much text fits in a context window and how much it costs to run a query, because model providers charge per token processed.</p></article><article class="tm" id="training-data" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Training Data</h4><span class="pill g-sea-p">ML</span></div>
+            <p>The text, images, or other inputs a model learns from during training. The quality, diversity, and size of training data determine what a model can do. A model trained on financial filings will be better at understanding financial language than one trained on general web text, though foundation models are trained on broad data and then adapted through prompting or fine-tuning.</p></article><article class="tm" id="transformer" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Transformer</h4><span class="pill g-sea-p">ML</span></div>
+            <p>A neural network architecture that uses attention mechanisms to process input. Transformers reshaped AI because they can handle long sequences of text efficiently. GPT, Claude, and Gemini are all transformer-based models. The transformer architecture is what allows a model to read an entire earnings transcript and connect a comment from the opening remarks to a question asked 40 minutes later.</p></article></div>
+      </section><section class="sx" id="core-ai-agents" aria-labelledby="core-ai-agents-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="core-ai-agents-h">Core AI &amp; Agents</h3><p class="sx-s">Systems that reason, plan, act and adapt. 10 terms.</p></div></div>
+        <div class="tms"><article class="tm" id="agentic-ai" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Agentic AI</h4><span class="pill g-cream-p">AI</span></div>
+            <p>AI systems that can set or interpret goals, plan actions, use tools, and adapt based on feedback to complete tasks. In finance, agentic AI refers to agents that can screen a company universe, extract data from filings, and produce a research memo without manual intervention at each step. Pascal's three agents (Generative Matrix, KPI Extractor, Research Memo Generator) are examples of agentic AI built for investment research.</p></article><article class="tm" id="ai-agent" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>AI Agent</h4><span class="pill g-cream-p">AI</span></div>
+            <p>A software system that uses a language model as its reasoning engine to pursue a goal through multiple steps. An agent receives a goal, decides what to do, takes actions like searching filings or extracting data, observes results, and repeats until the goal is met. This differs from a chatbot, which responds to a single question and stops.</p></article><article class="tm" id="extraction-agent" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Extraction Agent</h4><span class="pill g-cream-p">Finance</span></div>
+            <p>An AI agent designed to identify and pull structured data from unstructured documents like filings, presentations, and transcripts. Pascal's KPI Extractor is an example. It reads an annual report or earnings presentation, identifies tables and graphs, and returns the data in a structured format that can be exported to Excel.</p></article><article class="tm" id="generative-ai" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Generative AI</h4><span class="pill g-cream-p">AI</span></div>
+            <p>AI systems that produce new content like text, code, or images based on patterns learned from training data. In finance, generative AI can draft research memos, produce variance commentary, and summarize earnings calls. The output is generated, not retrieved, which is why verification against source data is essential.</p></article><article class="tm" id="hallucination" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Hallucination</h4><span class="pill g-cream-p">AI</span></div>
+            <p>An output where an AI model generates information that sounds plausible but is factually incorrect. In finance, this could mean inventing a revenue figure, fabricating a management quote, or citing a filing that does not contain the claimed data. Hallucinations are the primary reason every AI output requires verification against source data before it reaches a stakeholder.</p></article><article class="tm" id="harness" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Harness</h4><span class="pill g-cream-p">AI</span></div>
+            <p>The infrastructure layer that wraps a language model so it can be deployed as a usable product. A harness includes the APIs, data connectors, guardrails, prompt management, logging, and access controls that sit between the raw model and the end user. In finance, the harness is what turns a general-purpose model into a governed research tool. Pascal's harness includes the MCP Hub for data connectivity, role-based access controls, citation tracking, and the agent orchestration layer that routes tasks to the right agent. The quality of the harness determines whether outputs are auditable, whether data stays inside your governance perimeter, and whether the system can be trusted for production use.</p></article><article class="tm" id="large-language-model-llm" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Large Language Model (LLM)</h4><span class="pill g-cream-p">AI</span></div>
+            <p>An AI system trained on vast amounts of text to predict the next token in a sequence. LLMs break text into tokens, learn patterns from training data, and generate responses by continuing the pattern. They power tools like ChatGPT, Claude, and Pascal AI's research agents. The quality of an LLM's output depends heavily on the context and structure provided in the prompt.</p></article><article class="tm" id="multi-agent-system" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Multi-Agent System</h4><span class="pill g-cream-p">AI</span></div>
+            <p>A system where multiple AI agents collaborate on a task, each handling a specific role. One agent might retrieve documents, another extracts data, and a third synthesizes the findings into a report. Multi-agent systems are useful for complex workflows that require different types of expertise. An earnings workflow might use one agent to extract financials, another to compare guidance, and a third to generate a summary.</p></article><article class="tm" id="reasoning-model" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>Reasoning Model</h4><span class="pill g-cream-p">AI</span></div>
+            <p>A type of AI model that breaks down complex problems into steps before producing an answer. Instead of generating a response immediately, it plans an approach, works through intermediate steps, and arrives at a conclusion. This makes it better at tasks requiring multi-step logic, such as evaluating whether a company is expanding margins while maintaining revenue growth across multiple periods.</p></article><article class="tm" id="react-loop" data-item>
+            <span class="tm-bar g-cream"></span>
+            <div class="tm-h"><h4>ReAct Loop</h4><span class="pill g-cream-p">AI</span></div>
+            <p>The cycle of reasoning, acting, and observing that an AI agent follows. The agent reasons about the current state, takes an action like searching a filing, observes what it found, and reasons again. This loop continues until the goal is met. The ReAct loop is what separates an agent that pursues a goal from a model that answers a single question.</p></article></div>
+      </section><section class="sx" id="retrieval-knowledge" aria-labelledby="retrieval-knowledge-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="retrieval-knowledge-h">Retrieval &amp; Knowledge</h3><p class="sx-s">Grounding answers in real source documents. 6 terms.</p></div></div>
+        <div class="tms"><article class="tm" id="chunking" data-item>
+            <span class="tm-bar g-deep"></span>
+            <div class="tm-h"><h4>Chunking</h4><span class="pill g-deep-p">RAG</span></div>
+            <p>The process of splitting long documents into smaller, searchable pieces so a retrieval system can find the relevant section without processing the entire document. A 200-page annual report might be chunked into paragraphs or sections, allowing a RAG system to retrieve only the passages about revenue segmentation rather than feeding the whole filing into the model.</p></article><article class="tm" id="graphrag" data-item>
+            <span class="tm-bar g-deep"></span>
+            <div class="tm-h"><h4>GraphRAG</h4><span class="pill g-deep-p">RAG</span></div>
+            <p>A technique that combines knowledge graphs with retrieval-augmented generation. Instead of retrieving text chunks from a vector database, GraphRAG retrieves connected entities and relationships from a knowledge graph. This is useful in finance for answering questions about how companies, executives, and sectors connect. Pascal builds a persistent knowledge graph across every document your team touches.</p></article><article class="tm" id="knowledge-graph" data-item>
+            <span class="tm-bar g-deep"></span>
+            <div class="tm-h"><h4>Knowledge Graph</h4><span class="pill g-deep-p">Finance</span></div>
+            <p>A structured representation of information where entities are nodes and relationships are edges. A knowledge graph stores facts as connections, such as Company A competes with Company B, or Executive C previously worked at Company D. In finance, knowledge graphs support competitive analysis, supply chain mapping, and risk detection by revealing connections that are hard to see in text alone.</p></article><article class="tm" id="retrieval-augmented-generation-rag" data-item>
+            <span class="tm-bar g-deep"></span>
+            <div class="tm-h"><h4>Retrieval-Augmented Generation (RAG)</h4><span class="pill g-deep-p">RAG</span></div>
+            <p>A technique where an AI model retrieves relevant documents from a knowledge base before generating a response. Instead of relying only on its training data, the model pulls in external information, grounds its answer in that information, and cites the source. RAG is how Pascal's agents produce outputs that reference actual filings rather than generating from memory.</p></article><article class="tm" id="retrieval" data-item>
+            <span class="tm-bar g-deep"></span>
+            <div class="tm-h"><h4>Retrieval</h4><span class="pill g-deep-p">RAG</span></div>
+            <p>The process of finding and pulling relevant information from a knowledge base before the model generates a response. In a RAG system, retrieval determines which passages from which filings or documents are fed into the model. The quality of retrieval directly affects the quality of the output, because the model can only work with what it retrieves.</p></article><article class="tm" id="vector-database" data-item>
+            <span class="tm-bar g-deep"></span>
+            <div class="tm-h"><h4>Vector Database</h4><span class="pill g-deep-p">RAG</span></div>
+            <p>A system that stores embeddings and retrieves them based on semantic similarity. When you search for “margin expansion,” a vector database finds passages discussing “profitability improvements” because the embeddings for those phrases are close in vector space. Vector databases are a core component of RAG systems, allowing agents to find relevant information based on meaning rather than keyword matching.</p></article></div>
+      </section><section class="sx" id="prompting" aria-labelledby="prompting-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="prompting-h">Prompting</h3><p class="sx-s">Getting useful, reliable output from a model. 2 terms.</p></div></div>
+        <div class="tms"><article class="tm" id="chain-of-thought-prompting" data-item>
+            <span class="tm-bar g-teal"></span>
+            <div class="tm-h"><h4>Chain-of-Thought Prompting</h4><span class="pill g-teal-p">Prompting</span></div>
+            <p>A prompting technique that asks the model to show its reasoning step by step, separating assumptions, logic, and conclusions. In finance, this means asking a model to state which data it used, what calculation it performed, and how it arrived at a conclusion before presenting the final number. This makes errors easier to catch and outputs easier to verify.</p></article><article class="tm" id="prompt-engineering" data-item>
+            <span class="tm-bar g-teal"></span>
+            <div class="tm-h"><h4>Prompt Engineering</h4><span class="pill g-teal-p">Prompting</span></div>
+            <p>The practice of structuring instructions given to an AI model to produce useful outputs. Effective prompts include a role, a specific task, relevant context, the data to work from, the desired output format, and constraints. In finance, company-specific context is what separates a useful output from a generic one.</p></article></div>
+      </section><section class="sx" id="integration-platform" aria-labelledby="integration-platform-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="integration-platform-h">Integration &amp; Platform</h3><p class="sx-s">Connecting models to your data and tools. 2 terms.</p></div></div>
+        <div class="tms"><article class="tm" id="model-context-protocol-mcp" data-item>
+            <span class="tm-bar g-mint"></span>
+            <div class="tm-h"><h4>Model Context Protocol (MCP)</h4><span class="pill g-mint-p">Integration</span></div>
+            <p>An open standard that defines how AI models connect to external data sources and tools. MCP provides a common interface so an AI model can retrieve information from databases, file systems, and APIs without requiring a custom integration for each source. Pascal is MCP-native, connecting to Bloomberg, Capital IQ, Snowflake, SharePoint, and your CRM through one MCP Hub.</p></article><article class="tm" id="mcp-hub" data-item>
+            <span class="tm-bar g-mint"></span>
+            <div class="tm-h"><h4>MCP Hub</h4><span class="pill g-mint-p">Pascal</span></div>
+            <p>Pascal's centralized connector layer that uses the Model Context Protocol to link AI agents to your existing data providers. Instead of building custom pipelines for each data source, the MCP Hub provides a single interface through which Pascal's agents can pull from Bloomberg, Capital IQ, FactSet, Snowflake, SharePoint, and your CRM. Citations trace back to the source line regardless of where the data originated.</p></article></div>
+      </section><section class="sx" id="finance-governance" aria-labelledby="finance-governance-h" data-group>
+        <div class="sx-h"><div><h3 class="sx-t" id="finance-governance-h">Finance &amp; Governance</h3><p class="sx-s">Trust, control and auditability in finance. 5 terms.</p></div></div>
+        <div class="tms"><article class="tm" id="citation-trail" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Citation Trail</h4><span class="pill g-sea-p">Finance</span></div>
+            <p>A record linking each claim or number in an AI output back to the specific source document and line it came from. Citation trails are essential in finance because they make outputs auditable. Pascal builds citation trails into every agent output, so you can verify that a revenue figure came from page 47 of the 10-K, not from the model's training data.</p></article><article class="tm" id="data-sovereignty" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Data Sovereignty</h4><span class="pill g-sea-p">Security</span></div>
+            <p>The principle that sensitive financial data remains under your organization's control and within your governance perimeter. For institutional finance teams, data sovereignty means AI tools run inside your VPC or on-premises rather than sending data to external consumer services. Pascal is designed around this principle, running inside your governance perimeter with role-based access controls.</p></article><article class="tm" id="enterprise-ai" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Enterprise AI</h4><span class="pill g-sea-p">Security</span></div>
+            <p>AI systems deployed within an organization's infrastructure with enterprise-grade controls including data governance, role-based access, audit logging, and compliance frameworks. Enterprise AI differs from consumer AI tools in that data is not shared with the model provider for training and access is governed by the organization's own policies.</p></article><article class="tm" id="verification" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Verification</h4><span class="pill g-sea-p">Finance</span></div>
+            <p>The process of checking every AI output against source data before it informs a decision. In finance, verification means confirming that numbers match filings, tracing claims to their origin, and validating the logic behind conclusions. Verification is not optional, even when the output looks correct. Citation trails make verification faster by pointing directly to the source line for each claim.</p></article><article class="tm" id="workflow" data-item>
+            <span class="tm-bar g-sea"></span>
+            <div class="tm-h"><h4>Workflow</h4><span class="pill g-sea-p">Finance</span></div>
+            <p>A sequence of connected tasks used to complete a broader process. In finance, an earnings workflow might use one agent to extract financials, another to compare guidance, and a third to generate a summary. An agent can be a building block inside a larger workflow. A good workflow has a defined task, the right inputs, a structured process, and an output that fits into the work that follows.</p></article></div>
+      </section>
+        <p class="ac-empty" hidden>No term matches that search.</p>
+      </div>
+    </div>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What is the Pascal AI glossary?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The Pascal AI glossary is a finance-focused reference of AI terms designed for investment teams. It covers terms relevant to institutional finance, from agentic AI and retrieval-augmented generation to knowledge graphs, the Model Context Protocol, and the specific agents Pascal offers for company screening, KPI extraction, and research memo generation.</div></details>
+<details class="faq-item"><summary>What is Pascal AI and what does it do?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal AI is an institutional finance platform that provides AI agents for investment research. It runs inside your governance perimeter with role-based access controls and citation trails on every output. Pascal offers the Generative Matrix for company screening, the KPI Extractor for pulling data from filings, and the Research Memo Generator for producing structured reports from templates.</div></details>
+<details class="faq-item"><summary>How does Pascal AI use RAG for financial research?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal AI uses retrieval-augmented generation to ground every output in source documents. When you ask a question about a company, Pascal retrieves relevant passages from filings, transcripts, and your internal research, then synthesizes an answer with citations tracing back to the source line. This reduces hallucinations and makes outputs auditable.</div></details>
+<details class="faq-item"><summary>What is the Model Context Protocol and how does Pascal use it?<span class="pm" aria-hidden="true"></span></summary><div class="ans">The Model Context Protocol is an open standard for connecting AI models to external data sources. Pascal is MCP-native, meaning its agents connect to Bloomberg, Capital IQ, Snowflake, SharePoint, and your CRM through one MCP Hub. This eliminates custom data pipelines and lets agents pull from all your data sources through a consistent interface.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<!--#include demo-band title="Ask your first question with your firm's context." sub="A walkthrough with your own documents connected."-->
+<script src="/assets/pages/academy3.js" defer></script>
