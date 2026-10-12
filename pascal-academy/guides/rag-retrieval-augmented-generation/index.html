@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>RAG (Retrieval-Augmented Generation) | Pascal Academy</title>
+<meta name="description" content="A complete guide to retrieval-augmented generation for finance teams: the RAG pipeline, embeddings, chunking, retrieval, grounding and agentic RAG.">
+<link rel="canonical" href="https://pascalailabs.com/pascal-academy/guides/rag-retrieval-augmented-generation">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#052A2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pascal AI">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="RAG (Retrieval-Augmented Generation) | Pascal Academy">
+<meta property="og:description" content="A complete guide to retrieval-augmented generation for finance teams: the RAG pipeline, embeddings, chunking, retrieval, grounding and agentic RAG.">
+<meta property="og:url" content="https://pascalailabs.com/pascal-academy/guides/rag-retrieval-augmented-generation">
+<meta property="og:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-rag-retrieval-augmented-generation.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Retrieval-Augmented Generation">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pascalailabs">
+<meta name="twitter:title" content="RAG (Retrieval-Augmented Generation) | Pascal Academy">
+<meta name="twitter:description" content="A complete guide to retrieval-augmented generation for finance teams: the RAG pipeline, embeddings, chunking, retrieval, grounding and agentic RAG.">
+<meta name="twitter:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-rag-retrieval-augmented-generation.png">
+<link rel="icon" href="/Website-Updates/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/Website-Updates/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/Website-Updates/assets/site.css?v=a6dc05dfb8">
+<link rel="stylesheet" href="/Website-Updates/assets/pages/academy3.css?v=6b20df6ba8">
+<script src="/Website-Updates/assets/site.js?v=cd66888c46" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV9WGBYMQR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SV9WGBYMQR');</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pascalailabs.com/#org",
+   "name": "Pascal AI Labs",
+   "alternateName": "Pascal AI",
+   "url": "https://pascalailabs.com/",
+   "logo": "https://pascalailabs.com/assets/pascal-logo.png",
+   "sameAs": [
+    "https://www.linkedin.com/company/pascal-ai-labs/",
+    "https://twitter.com/pascalailabs"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/rag-retrieval-augmented-generation#webpage",
+   "url": "https://pascalailabs.com/pascal-academy/guides/rag-retrieval-augmented-generation",
+   "name": "RAG (Retrieval-Augmented Generation) | Pascal Academy",
+   "description": "A complete guide to retrieval-augmented generation for finance teams: the RAG pipeline, embeddings, chunking, retrieval, grounding and agentic RAG.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://pascalailabs.com/#website"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "dateModified": "2026-08-01",
+   "breadcrumb": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/rag-retrieval-augmented-generation#breadcrumb"
+   },
+   "primaryImageOfPage": "https://pascalailabs.com/assets/og/pascal-academy-guides-rag-retrieval-augmented-generation.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pascalailabs.com/#website",
+   "url": "https://pascalailabs.com/",
+   "name": "Pascal AI",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/rag-retrieval-augmented-generation#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pascalailabs.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pascal Academy",
+     "item": "https://pascalailabs.com/pascal-academy"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AI fundamentals",
+     "item": "https://pascalailabs.com/pascal-academy/ai-fundamentals"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Retrieval-Augmented Generation",
+     "item": "https://pascalailabs.com/pascal-academy/guides/rag-retrieval-augmented-generation"
+    }
+   ]
+  },
+  {
+   "@type": "TechArticle",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/rag-retrieval-augmented-generation#article",
+   "headline": "Retrieval-Augmented Generation",
+   "description": "A complete guide to retrieval-augmented generation for finance teams: the RAG pipeline, embeddings, chunking, retrieval, grounding and agentic RAG.",
+   "url": "https://pascalailabs.com/pascal-academy/guides/rag-retrieval-augmented-generation",
+   "inLanguage": "en",
+   "dateModified": "2026-08-01",
+   "datePublished": "2026-08-01",
+   "author": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "isPartOf": {
+    "@type": "Collection",
+    "name": "Pascal Academy",
+    "url": "https://pascalailabs.com/pascal-academy"
+   },
+   "mainEntityOfPage": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/rag-retrieval-augmented-generation#webpage"
+   },
+   "image": "https://pascalailabs.com/assets/og/pascal-academy-guides-rag-retrieval-augmented-generation.png",
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Institutional investment teams"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/rag-retrieval-augmented-generation#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is RAG in AI and how does it work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "RAG stands for Retrieval-Augmented Generation. It is a technique where an AI model retrieves relevant documents from a knowledge base before generating a response. Instead of relying only on its training data, the model pulls in external information, grounds its answer in that information, and cites the source."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does RAG improve AI outputs for finance?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "RAG allows the model to reference actual filings, transcripts, and research documents instead of relying on what it learned during training. This produces more accurate, current, and specific outputs. The retrieval step also creates a citation trail so you can verify where each claim came from."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is Agentic RAG and how does Pascal implement it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Agentic RAG is an advanced form of RAG where the system iteratively retrieves information, evaluates whether it has enough context, and goes back for more if needed. Pascal's research agents use this approach through an orchestrator that plans queries, retrieves from filings and your internal documents, and synthesizes outputs with citations tracing back to the source line."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between RAG and fine-tuning?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "RAG retrieves external documents at query time to ground the model's response. Fine-tuning retrains the model on new data to change its behavior. RAG is better for keeping information current and producing cited outputs. Fine-tuning is better for adapting tone or domain expertise. They are not mutually exclusive."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/Website-Updates/" aria-label="Pascal AI home">
+      <img src="/Website-Updates/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/Website-Updates/platform" aria-expanded="false" aria-haspopup="true">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-product">
+          <div class="mega-panel">
+            <div class="mp-col">
+              <a class="mp-feature" href="/Website-Updates/platform">
+                <span class="mp-art" aria-hidden="true"><i></i><i></i><i></i></span>
+                <b>Platform overview</b>
+                <span>See how the Investment OS works.</span>
+              </a>
+              <p class="mp-label">Platform</p>
+              <a class="mp-link" href="/Website-Updates/platform/context-graph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg> Context graph &amp; memory</a>
+              <a class="mp-link" href="/Website-Updates/platform/mcp-apis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> MCP &amp; APIs</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/Website-Updates/ask-pascal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Ask Pascal</b><span>Your AI research analyst</span></span></a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/decision-traces"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg> Decision traces</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/cited-research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg> Cited research</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/screeners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg> Screeners</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/pascal-intel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg> Pascal Intel</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/Website-Updates/pascal-agents"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><span><b>Pascal Agents</b><span>Run investment work end to end</span></span></a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/autonomous-agents"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Autonomous agents</a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/workflow-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg> Agentic workflow library</a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/data-agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg> Pascal Data Agent</a>
+            </div>
+            <a class="mp-foot" href="/Website-Updates/solutions/hedge-funds"><span class="chip">Industries</span><span><b>Pascal for your firm</b><span>Hedge funds, asset and wealth managers, banks, asset servicers, private equity and private credit, and corporate treasury</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/Website-Updates/solutions/hedge-funds" aria-expanded="false" aria-haspopup="true">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-il">
+          <div class="mega-panel">
+              <a class="il-i" href="/Website-Updates/solutions/hedge-funds"><span><b>Hedge Funds</b><small>Event briefs, reconciliations and DDQs</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/asset-wealth-management"><span><b>Asset &amp; Wealth Management</b><small>Research, mandate checks and client reporting</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/banking"><span><b>Banks &amp; Financial Institutions</b><small>Underwriting, covenant monitoring and KYC</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/asset-servicing"><span><b>Asset Servicing</b><small>Corporate actions, NAV checks and client queries</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/private-equity-credit"><span><b>Private Equity &amp; Private Credit</b><small>CIM screens, diligence and LP reporting</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/treasury-hedge-accounting"><span><b>Corporate Treasury &amp; Hedge Accounting</b><small>Exposures, effectiveness tests and hedge files</small></span></a>
+              <div class="il-cs">
+                <p class="il-cs-h"><span>Customer stories</span><a href="/Website-Updates/customer-stories">View all</a></p>
+                <div class="il-cs-g">
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/us-hedge-fund-idea-generation"><img src="/Website-Updates/assets/photos/cs-us-hedge-fund-sm.jpg?v=1b4b4b4db3" alt="" width="44" height="44" loading="lazy"><span><b>Top 20 US hedge fund</b><small>Evidence-backed ideas</small></span></a>
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/apac-asset-manager-research-coverage"><img src="/Website-Updates/assets/photos/cs-apac-research-sm.jpg?v=c9e1340963" alt="" width="44" height="44" loading="lazy"><span><b>$70B+ asset manager</b><small>Research on 1,000+ names</small></span></a>
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/apac-asset-manager-institutional-knowledge"><img src="/Website-Updates/assets/photos/cs-apac-knowledge-sm.jpg?v=661087cbfd" alt="" width="44" height="44" loading="lazy"><span><b>$100B+ asset manager</b><small>Firm knowledge, one query</small></span></a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="https://pascalailabs.com/news" aria-expanded="false" aria-haspopup="true">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-list mega-news mega-news-ac">
+          <div class="mega-panel">
+            <div class="mn-col">
+              <p class="mp-label">News</p>
+              <a class="mp-link" href="https://pascalailabs.com/news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg> Newsroom</a>
+              <a class="mp-link" href="/Website-Updates/news/founders-notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Founder's notes</a>
+            </div>
+            <div class="mn-col mn-ac">
+              <a class="mn-ac-head" href="/Website-Updates/pascal-academy"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><b>Pascal Academy</b><span>Learn AI for institutional finance</span></span></a>
+              <a class="mp-link" href="/Website-Updates/guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Desk guides</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/ai-fundamentals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg> AI fundamentals</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/ai-glossary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> AI glossary</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> Workflows</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/prompt-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Prompt library</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/agent-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> Agent library</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-dark btn-sm" href="https://pascalailabs.com/demo">Book a demo</a>
+    </div>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <details open>
+    <summary>Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <p class="mm-label">Platform</p>
+    <a href="/Website-Updates/platform">Platform overview</a>
+    <a href="/Website-Updates/platform/context-graph">Context graph &amp; memory</a>
+    <a href="/Website-Updates/platform/mcp-apis">MCP &amp; APIs</a>
+    <p class="mm-label">Ask Pascal</p>
+    <a href="/Website-Updates/ask-pascal">Ask Pascal overview</a>
+    <a href="/Website-Updates/ask-pascal/decision-traces">Decision traces</a>
+    <a href="/Website-Updates/ask-pascal/cited-research">Cited research</a>
+    <a href="/Website-Updates/ask-pascal/screeners">Screeners</a>
+    <a href="/Website-Updates/ask-pascal/pascal-intel">Pascal Intel</a>
+    <p class="mm-label">Pascal Agents</p>
+    <a href="/Website-Updates/pascal-agents">Pascal Agents overview</a>
+    <a href="/Website-Updates/pascal-agents/autonomous-agents">Autonomous agents</a>
+    <a href="/Website-Updates/pascal-agents/workflow-library">Agentic workflow library</a>
+    <a href="/Website-Updates/pascal-agents/data-agent">Pascal Data Agent</a>
+  </details>
+  <details>
+    <summary>Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/Website-Updates/solutions/hedge-funds">Hedge Funds</a>
+    <a href="/Website-Updates/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+    <a href="/Website-Updates/solutions/banking">Banks &amp; Financial Institutions</a>
+    <a href="/Website-Updates/solutions/asset-servicing">Asset Servicing</a>
+    <a href="/Website-Updates/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+    <a href="/Website-Updates/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+    <a href="/Website-Updates/customer-stories">Customer stories</a>
+  </details>
+  <details>
+    <summary>News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="https://pascalailabs.com/news">Newsroom</a>
+    <a href="/Website-Updates/news/founders-notes">Founder's notes</a>
+    <p class="mm-label">Pascal Academy</p>
+    <a href="/Website-Updates/pascal-academy">Academy home</a>
+    <a href="/Website-Updates/guides">Desk guides</a>
+    <a href="/Website-Updates/pascal-academy/ai-fundamentals">AI fundamentals</a>
+    <a href="/Website-Updates/pascal-academy/ai-glossary">AI glossary</a>
+    <a href="/Website-Updates/pascal-academy/workflows">Workflows</a>
+    <a href="/Website-Updates/pascal-academy/prompt-library">Prompt library</a>
+    <a href="/Website-Updates/pascal-academy/agent-library">Agent library</a>
+  </details>
+  <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+</div>
+
+<main id="main">
+<div class="ac ac-doc">
+<div class="rp" aria-hidden="true"><i></i></div>
+<div class="frame">
+  <header class="ah">
+    <div class="ah-l">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/Website-Updates/">Home</a><span aria-hidden="true">/</span><a href="/Website-Updates/pascal-academy">Pascal Academy</a><span aria-hidden="true">/</span><a href="/Website-Updates/pascal-academy/ai-fundamentals">AI fundamentals</a><span aria-hidden="true">/</span><span aria-current="page">Retrieval-Augmented Generation</span></nav>
+      <p class="ah-k">Last updated August 2026</p>
+      <h1 class="ah-t">Retrieval-Augmented Generation</h1>
+      <p class="lead">How grounding language models in external knowledge reduces hallucination, enables domain-specific answers, and keeps responses current.</p>
+      <p class="ah-m">15 min read · Beginner-friendly with advanced sections</p>
+      <div class="ah-by"><span class="ah-av"><img src="/Website-Updates/assets/favicon.svg" alt="" width="40" height="40"></span><span><b>Pascal Academy</b><span>AI fundamentals · Part 3 of 10</span></span></div>
+      <div class="ah-a"><button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button></div>
+    </div>
+    <div class="ah-r"><div class="th th-hero" aria-hidden="true"><div class="th-bz"><div class="th-scr g-cream"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg><b>Document ingestion</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg><b>Vector databases</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><b>Hybrid search</b></span></div></div></div></div></div>
+  </header>
+  <div class="ag">
+    <aside class="toc" aria-label="Table of contents">
+      <div class="toc-in">
+        <p class="toc-h">Table of contents</p>
+        <div class="toc-track"><span class="toc-fill"></span><ol data-spy><li><a href="#what-is-rag">What Is RAG?</a></li><li><a href="#why-rag-exists">Why RAG Exists: The Knowledge Problem</a></li><li><a href="#the-rag-pipeline">The RAG Pipeline</a></li><li><a href="#embeddings-and-vector-databases">Embeddings and Vector Databases</a></li><li><a href="#chunking-strategies">Chunking Strategies</a></li><li><a href="#retrieval-quality">Retrieval Quality: Search and Re-ranking</a></li><li><a href="#generation-grounding">Generation: Grounding the LLM</a></li><li><a href="#evaluating-rag">Evaluating RAG Systems</a></li><li><a href="#rag-vs-fine-tuning">RAG vs Fine-Tuning vs Long Context</a></li><li><a href="#common-failure-modes">Common Failure Modes</a></li><li><a href="#agentic-rag">Agentic RAG</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></div>
+        <div class="toc-cta">
+          <p class="toc-cta-t">Take this guide with you.</p>
+          <p>Get the PDF in your inbox.</p>
+          <button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button>
+        </div>
+      </div>
+    </aside>
+    <article class="ac-prose" id="article">
+      <details class="toc-m"><summary>Table of contents</summary><ol><li><a href="#what-is-rag">What Is RAG?</a></li><li><a href="#why-rag-exists">Why RAG Exists: The Knowledge Problem</a></li><li><a href="#the-rag-pipeline">The RAG Pipeline</a></li><li><a href="#embeddings-and-vector-databases">Embeddings and Vector Databases</a></li><li><a href="#chunking-strategies">Chunking Strategies</a></li><li><a href="#retrieval-quality">Retrieval Quality: Search and Re-ranking</a></li><li><a href="#generation-grounding">Generation: Grounding the LLM</a></li><li><a href="#evaluating-rag">Evaluating RAG Systems</a></li><li><a href="#rag-vs-fine-tuning">RAG vs Fine-Tuning vs Long Context</a></li><li><a href="#common-failure-modes">Common Failure Modes</a></li><li><a href="#agentic-rag">Agentic RAG</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<section class="ac-sec" id="what-is-rag" aria-labelledby="what-is-rag-h"><h2 id="what-is-rag-h">What Is RAG?</h2>
+<p>In the first guide, we saw that a large language model is a probability engine trained on trillions of tokens of text. In the second, we learned how to steer that engine with prompts. Retrieval-augmented generation, or RAG, addresses a remaining limitation. The model only knows what was in its training data, and that data has a cutoff date.</p>
+<p>RAG works by retrieving relevant documents from an external knowledge source at query time, then including those documents in the prompt so the model can ground its response in them. Instead of relying on what the model memorised during training, you give it a fresh set of facts to work from for each question. The model still does the generation, but its answer is anchored to retrieved text rather than to its own internal knowledge.</p>
+<p>A better way to think about it is as an open-book exam. Without RAG, the model answers from memory, and memory can be incomplete, outdated, or wrong. With RAG, the model gets a set of reference materials handed to it at the moment of the question, and it constructs its answer from those materials. The quality of the answer depends on whether you handed it the right pages.</p>
+<aside class="ac-co ac-co-principle"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>Key principle</p><div class="ac-co-body"><p>RAG separates knowledge from reasoning. The LLM provides the reasoning, the retrieval system provides the knowledge. This separation matters because it means you can update what the model knows without retraining it. Add a document to your knowledge base and the model can answer questions about it immediately.</p></div></aside>
+</section>
+<section class="ac-sec" id="why-rag-exists" aria-labelledby="why-rag-exists-h"><h2 id="why-rag-exists-h">Why RAG Exists: The Knowledge Problem</h2>
+<p>A language model's knowledge is frozen at the moment its training ended. If the model finished training in January 2025, it has no knowledge of events after that date. It cannot tell you about a policy change announced in March, a product released in June, or a research paper published last week. The training data is also general. The model has read the public internet, but it has no access to your company's internal documents, your customer database, or your product specifications.</p>
+<p>You could solve this by fine-tuning the model on your data, but fine-tuning is expensive, slow, and has a problematic side effect. The model's updates are again frozen. Every time your data changes, you would need to retrain. For a company whose product catalogue changes weekly, or a support system whose documentation updates daily, fine-tuning on each change is impractical.</p>
+<p>RAG offers a different approach. Rather than baking knowledge into the model's weights, you keep the knowledge in an external database and retrieve the relevant pieces at query time. The model's weights stay fixed. The knowledge base changes independently. Add a new document, delete an old one, update a policy, and the next query will reflect those changes with no retraining required.</p>
+<h3 id="the-hallucination-connection">The Hallucination Connection</h3>
+<p>In the first guide, we discussed hallucination, models producing text that sounds confident and specific but is factually wrong. Hallucination happens because the model is optimised for plausible-sounding text, and sometimes what is plausible is also incorrect. When you ask a model about something it barely encountered in training, it has weak signal to work from, and the output degrades.</p>
+<p>RAG reduces hallucination by giving the model strong signal, the actual text it should base its answer on. If a user asks about your company's refund policy, the model does not need to guess based on what it learned about consumer retail during pre-training. The retrieval system finds the refund policy document, hands it to the model, and the model extracts the answer from it. The model is doing extraction and synthesis rather than recall, and extraction is a task LLMs are genuinely good at.</p>
+<p>RAG does not eliminate hallucination entirely. A model can still misread a retrieved document, conflate details from different sources, or invent information when the retrieved text does not contain the answer. The risk is lower, though, because the model has something concrete to anchor to. You can also instruct the model to say it does not know when the retrieved documents lack the answer, which further reduces fabricated responses.</p>
+</section>
+<section class="ac-sec" id="the-rag-pipeline" aria-labelledby="the-rag-pipeline-h"><h2 id="the-rag-pipeline-h">The RAG Pipeline</h2>
+<p>A RAG system has two phases. An ingestion phase that happens before any questions are asked, and a query phase that happens when a user asks something. Understanding both phases is essential because failures in either one produce bad answers.</p>
+<aside class="ac-co ac-co-note"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>Query and Generation Steps</p><div class="ac-co-body"><p>1. Query Embedding: Convert the user's question into a vector using the same embedding model from ingestion. The question and the documents must live in the same vector space for similarity to be meaningful.</p>
+<p>2. Retrieval: Search the vector database for chunks whose vectors are closest to the query vector. This returns the top-K most similar chunks. The value of K depends on the use case. More chunks give the model more context but increase cost and the chance of including irrelevant material.</p>
+<p>3. Re-ranking (optional): A secondary model scores the retrieved chunks by relevance to the specific question, reordering them so the most useful ones appear first. Re-ranking improves precision when the initial retrieval returns mixed results.</p>
+<p>4. Prompt Construction: Assemble a prompt that includes the retrieved chunks and the user's question. The prompt instructs the model to answer based on the provided context and to cite sources.</p>
+<p>5. Generation: The LLM generates a response grounded in the retrieved chunks. The answer is returned to the user, ideally with citations pointing back to the source documents.</p></div></aside>
+<aside class="ac-co ac-co-tip"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span>Practical tip</p><div class="ac-co-body"><p>The embedding model used for ingestion and the one used for queries must be the same. If you change your embedding model, you need to re-embed every document in your database. This is why choosing an embedding model early and sticking with it matters for production systems.</p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Step</th><th>Name</th><th>What Happens</th></tr></thead><tbody><tr><td>1</td><td>Loading</td><td>Read the source document and extract text. PDFs need OCR or text extraction. HTML needs tag stripping. Tables may need special handling to preserve row-column structure.</td></tr><tr><td>2</td><td>Chunking</td><td>Split the document into smaller pieces (chunks) that fit within the model's context window. Chunk size and overlap determine retrieval granularity. A chunk that is too large dilutes relevance; one that is too small loses context.</td></tr><tr><td>3</td><td>Embedding</td><td>Convert each chunk into a vector (a list of numbers) using an embedding model. The vector captures the semantic meaning of the chunk. Similar content produces similar vectors.</td></tr><tr><td>4</td><td>Indexing</td><td>Store the vectors in a vector database along with the original text and metadata (source, page number, date). The database supports fast similarity search across millions of vectors.</td></tr></tbody></table></div>
+<h3 id="phase-1-document-ingestion">Phase 1: Document Ingestion</h3>
+<p>Before you can retrieve documents, you need to process them into a format the retrieval system can search. The ingestion pipeline takes raw documents, PDFs, web pages, markdown files, spreadsheets, and converts them into searchable chunks stored in a vector database.</p>
+<p>Phase 2: Query and Generation</p>
+<p>When a user asks a question, the system retrieves relevant chunks and passes them to the LLM to generate an answer. This phase happens in real time, so latency matters.</p>
+</section>
+<section class="ac-sec" id="embeddings-and-vector-databases" aria-labelledby="embeddings-and-vector-databases-h"><h2 id="embeddings-and-vector-databases-h">Embeddings and Vector Databases</h2>
+<p>Embeddings are the foundation of RAG. An embedding model takes a piece of text and produces a vector, a sequence of numbers that represents the text's meaning. The key property is that texts with similar meanings produce vectors that are close together in the vector space. A chunk about refund policies and a question about how to get your money back will have similar vectors even though they share few words.</p>
+<p>This is what makes semantic search possible. Traditional keyword search looks for exact word matches. If a document says cancellation policy and the user asks about refund terms, keyword search may miss the connection. Embedding-based search captures the meaning, so semantically related content surfaces regardless of vocabulary.</p>
+<p>Embedding models come in different sizes and dimensions. A smaller model might produce 384-dimensional vectors; a larger one might produce 1,536-dimensional vectors. Higher dimensions can capture more nuance but require more storage and compute for similarity search. The choice depends on the tradeoff between precision and cost for your use case.</p>
+<h3 id="vector-databases">Vector Databases</h3>
+<p>A vector database stores embedding vectors and supports fast similarity search. When you query with a vector, the database finds the closest stored vectors using a distance metric, typically cosine similarity or Euclidean distance. The database returns the top-K results along with their associated text and metadata.</p>
+<p>Several vector databases are commonly used. Pinecone, Weaviate, Qdrant, Milvus, and Chroma are purpose-built options. PostgreSQL with the pgvector extension is a popular choice for teams that already use Postgres and prefer a single database for both structured data and vectors. The choice of database affects scale, latency, and operational complexity, and the retrieval quality is largely determined by the embedding model and the chunking strategy rather than the database itself.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>How similarity search works</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>Cosine similarity measures the angle between two vectors. If two vectors point in the same direction, their cosine similarity is 1.0 (maximum similarity). If they are orthogonal, similarity is 0. If they point in opposite directions, it is -1. In practice, text embeddings almost always produce positive cosine similarity values because embeddings live in a constrained region of the vector space. The database computes similarity between the query vector and every stored vector, then returns the highest-scoring ones. For large databases, approximate nearest neighbour (ANN) algorithms trade a small amount of precision for dramatic speed improvements, so search runs across millions of vectors in milliseconds.</p></div></details>
+</section>
+<section class="ac-sec" id="chunking-strategies" aria-labelledby="chunking-strategies-h"><h2 id="chunking-strategies-h">Chunking Strategies</h2>
+<p>Chunking is the process of splitting documents into pieces that the retrieval system can search independently. It sounds simple, and at a basic level it is, but the chunking strategy has an outsized effect on retrieval quality. A chunk that is too large contains multiple topics, so the embedding averages across them and matches become less precise. A chunk that is too small loses context, so the retrieved text may not contain enough information for the model to answer the question.</p>
+<div class="ac-table"><table><thead><tr><th>Strategy</th><th>How It Works</th><th>Tradeoffs</th></tr></thead><tbody><tr><td>Fixed-size chunks</td><td>Split text into chunks of N tokens (typically 256 to 1,024). Simple to implement. May cut sentences or paragraphs mid-way.</td><td>Easy and predictable. Poor at preserving semantic boundaries. A chunk that splits a sentence in two loses meaning.</td></tr><tr><td>Sentence or paragraph chunks</td><td>Split on natural boundaries, sentences, paragraphs, or sections. Each chunk contains a complete unit of thought.</td><td>Better semantic coherence. Variable chunk sizes complicate token budgeting. Long paragraphs may exceed desired size.</td></tr><tr><td>Overlapping chunks</td><td>Each chunk overlaps with the next by a fixed number of tokens (e.g., 50 to 100). Information at the boundary appears in both chunks.</td><td>Reduces information loss at boundaries. Increases storage and may cause duplicate retrievals. The overlap size needs tuning.</td></tr><tr><td>Document-aware chunking</td><td>Use document structure (headings, sections, tables, page breaks) to define chunk boundaries. Markdown headers, HTML tags, or PDF structure guide the split.</td><td>Best semantic coherence for structured documents. Requires parsing logic per format. Unstructured text falls back to simpler strategies.</td></tr></tbody></table></div>
+<p>There is no universally optimal chunk size. The right choice depends on the document type, the kinds of questions users ask, and the context window of the LLM. A common starting point is 512-token chunks with 50-token overlap, then tuning based on evaluation results. If retrieval is returning chunks that are almost but not quite relevant, try smaller chunks. If retrieved chunks lack enough context for the model to answer, try larger ones or increase the overlap.</p>
+</section>
+<section class="ac-sec" id="retrieval-quality" aria-labelledby="retrieval-quality-h"><h2 id="retrieval-quality-h">Retrieval Quality: Search and Re-ranking</h2>
+<p>Retrieval is the part of RAG that determines whether the model gets useful context. If the retrieval system returns irrelevant chunks, the model will produce a confident answer based on the wrong information, which can be worse than having no context at all. Retrieval quality is where the majority of RAG engineering effort goes.</p>
+<h3 id="hybrid-search">Hybrid Search</h3>
+<p>Pure vector search captures semantic similarity but can miss exact matches. If a user searches for a specific product code or an exact phrase, vector search may return semantically related content that does not contain the exact term. Keyword search (like BM25) excels at exact matches but misses semantic connections.</p>
+<p>Hybrid search combines both. It runs vector search and keyword search in parallel, then merges the results. The merge can use a weighted combination or a reciprocal rank fusion algorithm that balances the two score sets. Hybrid search consistently outperforms either method alone across diverse query types, which is why production RAG systems almost always use it.</p>
+<h3 id="re-ranking">Re-ranking</h3>
+<p>Re-ranking is a second-pass filter. After retrieval returns the top-K candidates (say, 20 chunks), a re-ranker model scores each chunk for relevance to the specific question and reorders them. The re-ranker is typically a cross-encoder model that takes the question and each chunk as a pair and produces a relevance score. Cross-encoders are more accurate than the bi-encoder used for initial retrieval, but they are also more expensive, so you only run them on the top candidates.</p>
+<p>The improvement can be substantial. A common pattern. Retrieve 20 chunks with vector search, re-rank them, and pass the top 5 to the LLM. The re-ranker pulls the genuinely relevant chunks to the front and drops the noise, so the model gets a cleaner, more focused context window.</p>
+<h3 id="query-transformation">Query Transformation</h3>
+<p>Users do not always phrase their questions in ways that retrieve well. A user might ask Can I cancel my order after it ships? when the relevant document uses the term order modification rather than cancellation. The embedding may still catch the semantic connection, but a transformed query can do better.</p>
+<p>Query transformation techniques include rewriting the query using an LLM to expand or rephrase it, generating multiple variations of the query and retrieving for each (multi-query retrieval), and extracting keywords from a conversational query that references earlier context. For example, in a chat where the user first asks about order 12345 and then asks when will it arrive, the retrieval system needs to understand that it refers to order 12345. A query transformation step can rewrite the second query as when will order 12345 arrive before searching.</p>
+</section>
+<section class="ac-sec" id="generation-grounding" aria-labelledby="generation-grounding-h"><h2 id="generation-grounding-h">Generation: Grounding the LLM</h2>
+<p>Once you have retrieved the relevant chunks, you need to construct a prompt that tells the model to use them. The prompt structure matters because the model needs clear instructions about what to do with the retrieved text.</p>
+<aside class="ac-co ac-co-note"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>Typical RAG prompt</p><div class="ac-co-body"><p>You are a helpful assistant. Answer the user's question using only the information provided in the context below. If the context does not contain enough information to answer, say you do not know. Cite the source document for each claim.</p>
+<p>&lt;context&gt; [retrieved chunks here] &lt;/context&gt; Question: [user's question] Answer:</p>
+<p>Several design choices in this prompt deserve attention. The instruction to use only the provided context tells the model to treat the retrieved chunks as its sole source of truth, which reduces the chance of the model falling back on its training data and potentially contradicting the context. The instruction to say you do not know when the context is insufficient gives the model permission to admit ignorance rather than fabricate. And the citation instruction encourages traceability, so the user can verify which document the answer came from.</p></div></aside>
+<h3 id="lost-in-the-middle">The Lost-in-the-Middle Problem</h3>
+<p>As discussed in the prompt engineering guide, models pay uneven attention across long contexts. Information at the beginning and end of the prompt gets more weight than information in the middle. In a RAG system with many retrieved chunks, this means chunks placed in the middle of the context window may be effectively ignored.</p>
+<p>Two approaches help. First, keep the number of retrieved chunks small. Five well-chosen chunks are better than twenty mixed ones, both for attention quality and for cost. Re-ranking helps here by ensuring the most relevant chunks are the ones you include. Second, order the chunks strategically. Place the most relevant chunk first and the second most relevant last, so both the beginning and end of the context carry the strongest signal.</p>
+<h3 id="handling-conflicting-sources">Handling Conflicting Sources</h3>
+<p>In practice, retrieved documents sometimes contradict each other. An older version of a policy says one thing; a newer version says another. Two support articles give different instructions for the same problem. The model needs guidance on how to handle this. Options include instructing the model to prefer the most recent source (which requires including timestamps in the context), telling the model to note the conflict and present both perspectives, or filtering at the retrieval stage to exclude outdated documents using metadata.</p>
+</section>
+<section class="ac-sec" id="evaluating-rag" aria-labelledby="evaluating-rag-h"><h2 id="evaluating-rag-h">Evaluating RAG Systems</h2>
+<p>A RAG system has two components that can fail independently. retrieval (did you find the right documents?) and generation (did the model use them correctly?). Evaluating a RAG system means measuring both, because good retrieval with bad generation produces wrong answers, and bad retrieval with good generation produces answers to the wrong questions.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's RAG engineering course covers evaluation frameworks, retrieval optimisation, and production deployment patterns. Reach out to learn about cohort programmes for your engineering team.</p><p><a class="ac-co-link" href="/Website-Updates/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Metric</th><th>What It Measures</th><th>How to Evaluate</th></tr></thead><tbody><tr><td>Context relevance</td><td>Did the retrieval system return chunks that actually contain the answer? Measures retrieval quality independent of generation.</td><td>Human review of retrieved chunks for a sample of queries, or an LLM-as-judge that scores whether each retrieved chunk is relevant to the question.</td></tr><tr><td>Groundedness</td><td>Is the model's answer supported by the retrieved context? Every claim in the answer should be traceable to a specific chunk.</td><td>Check whether each sentence in the answer can be attributed to a retrieved chunk. An LLM-as-judge can verify this by comparing the answer against the context.</td></tr><tr><td>Answer relevance</td><td>Does the answer actually address the user's question? A grounded answer that does not answer the question is still a failure.</td><td>Human review or LLM-as-judge scoring whether the answer addresses the specific question asked.</td></tr><tr><td>Recall at K</td><td>Measures the percentage of relevant chunks in the database that the retrieval system found in its top-K results.</td><td>Requires a labelled set of questions with known-correct source documents. Measure what percentage of correct sources appear in the top-K retrieved chunks.</td></tr></tbody></table></div>
+<p>Building an evaluation set is the single most valuable investment for a RAG system. Collect 50 to 100 real user questions with known correct answers. For each, note which document and chunk contains the answer. Run your pipeline against this set and measure the metrics above. When you change chunking strategy, embedding model, or prompt structure, re-run the evaluation. This converts RAG development from guesswork into measurable improvement.</p>
+</section>
+<section class="ac-sec" id="rag-vs-fine-tuning" aria-labelledby="rag-vs-fine-tuning-h"><h2 id="rag-vs-fine-tuning-h">RAG vs Fine-Tuning vs Long Context</h2>
+<p>Three approaches exist for giving a model access to information beyond its training data, and they are often confused. Understanding when to use each is a practical decision that depends on the use case.</p>
+<div class="ac-table"><table><thead><tr><th>Approach</th><th>How It Works</th><th>Best For</th></tr></thead><tbody><tr><td>RAG</td><td>Retrieve relevant documents at query time and include them in the prompt. Knowledge lives in an external database and updates without retraining.</td><td>Frequently changing data, large knowledge bases, use cases requiring citations, and when you need to trace answers to sources.</td></tr><tr><td>Fine-tuning</td><td>Train the model further on domain-specific data so the knowledge is baked into the weights. Updates require retraining.</td><td>Teaching the model a consistent style or format, domain vocabulary, or reducing prompt length. Less suited for factual knowledge that changes.</td></tr><tr><td>Long context</td><td>Put the entire document or knowledge base directly in the prompt. No retrieval system needed. Works when the data fits in the context window.</td><td>Small, fixed document sets. Analysis of a single large document. Quick prototyping before building a retrieval pipeline.</td></tr></tbody></table></div>
+<p>These approaches are complementary. A production system might fine-tune a model for tone and format, use RAG for factual knowledge that changes, and use long context for analysing a specific large document the user uploads. The decision is driven by how often the data changes, how much data there is, and whether you need citation traceability.</p>
+<p>A practical heuristic. If your knowledge base is under 100,000 tokens and rarely changes, long context is simpler and avoids the infrastructure cost of a vector database. If the knowledge base is large or changes frequently, RAG is the right choice. Fine-tuning is appropriate when the problem is style or vocabulary rather than knowledge.</p>
+</section>
+<section class="ac-sec" id="common-failure-modes" aria-labelledby="common-failure-modes-h"><h2 id="common-failure-modes-h">Common Failure Modes</h2>
+<h3 id="retrieval-failure">Retrieval Failure</h3>
+<p>The retrieval system returns chunks that do not contain the answer. The model then either hallucinates based on its training data or says it cannot find the answer. Retrieval failure has several causes. Poor chunking that splits the relevant information across chunks, an embedding model that does not capture the domain well, or a query that is phrased differently from the document text. Debugging retrieval requires examining what chunks were returned for a failing query and comparing them to the chunks that should have been returned.</p>
+<h3 id="context-overload">Context Overload</h3>
+<p>The retrieval system returns too many chunks, and the relevant information gets diluted. The model has to process a large context, which increases cost and latency, and the lost-in-the-middle effect means some chunks get ignored. The fix is to reduce the number of retrieved chunks, use re-ranking to surface the most relevant ones, and keep the total context within a reasonable token budget.</p>
+<h3 id="stale-knowledge-base">Stale Knowledge Base</h3>
+<p>The knowledge base contains outdated documents, and the model answers based on old information. A policy document updated last month coexists with the previous version from two years ago, and the retrieval system returns both. The model may pick the older one or present conflicting information. The fix is to implement versioning and cleanup. Remove or archive old documents, include timestamps in metadata, and filter retrieval by date when recency matters.</p>
+<h3 id="over-reliance-on-retrieved-context">Over-Reliance on Retrieved Context</h3>
+<p>When the retrieved chunks are wrong or misleading, the model faithfully produces a wrong answer. RAG reduces hallucination by grounding the model, but grounding to the wrong source is just as harmful. The model trusts the retrieved context because the prompt tells it to, so the quality of the retrieval system directly determines the quality of the output. There is no prompt-level fix for bad retrieval.</p>
+</section>
+<section class="ac-sec" id="agentic-rag" aria-labelledby="agentic-rag-h"><h2 id="agentic-rag-h">Agentic RAG</h2>
+<p>Everything in this guide so far describes what is sometimes called vanilla RAG. The user asks a question, the system retrieves chunks once, and the model generates an answer from whatever came back. That works well for straightforward lookups where the answer lives in a single document. It breaks down when a question requires information from multiple sources or when answering it requires following a chain of references.</p>
+<p>Consider a question like, what server does Project X use, and what are its specifications. A vanilla RAG system finds documents about Project X, which mention a server ID. It retrieves those documents and hands them to the model. The model sees the server ID but has no way to look up what that ID corresponds to in a separate hardware database. The answer is incomplete because the retrieval was a single pass, and the system had no mechanism to take the server ID and run a second search.</p>
+<p>Agentic RAG addresses this by making retrieval iterative and goal-directed. Instead of a single retrieve-then-generate step, the system plans a search strategy, executes queries, evaluates whether it has enough information to answer, and if not, runs additional searches. The word agentic refers to the system having agency over its own retrieval process rather than following a fixed retrieve-and-generate script.</p>
+<p>Agentic RAG systems are typically built as a multi-agent pipeline where different components handle different roles. Think of it as a research department rather than a single search engine. Each agent has a specialised job, and the output of one feeds into the next.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>What the sufficient context agent checks</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>The sufficient context agent evaluates three things before allowing generation to proceed. First, it reads the retrieved snippets to see if they contain the information needed to answer the question. Second, it reviews a draft answer against the original prompt and the snippets to check for completeness. Third, and this is the part that distinguishes it from a simple completeness check, it identifies exactly what is missing and generates specific feedback for the next retrieval round. Rather than just saying the context is insufficient, it produces a targeted instruction like search for adverse events or allergic reactions in clinical notes. This targeted feedback is what makes the iteration efficient rather than random.</p></div></details>
+<aside class="ac-co ac-co-summary"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>Summary</p><div class="ac-co-body"><p>RAG gives language models access to external knowledge at query time by retrieving relevant documents and including them in the prompt. The ingestion pipeline processes documents into chunks, embeds them, and stores them in a vector database. At query time, the user's question is embedded, similar chunks are retrieved, and the model generates an answer grounded in them. Retrieval quality, driven by chunking strategy, embedding model choice, hybrid search, and re-ranking, determines whether the model gets useful context. The generation prompt controls how the model uses that context. Evaluating a RAG system means measuring both retrieval (context relevance, recall) and generation (groundedness, answer relevance) independently. RAG complements fine-tuning and long-context approaches, and the right choice depends on how often the data changes and how much there is. For questions that span multiple sources or require chained lookups, agentic RAG extends the pipeline with iterative retrieval, query planning, and a sufficient-context check that catches gaps before the model generates its answer.</p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Agent</th><th>Role</th></tr></thead><tbody><tr><td>Orchestrator</td><td>Evaluates the user's request and decides whether a single retrieval pass is enough or whether the query needs to be decomposed into multiple sub-queries. Delegates work to specialised agents.</td></tr><tr><td>Planner</td><td>Maps out which information sources to consult and in what order. If the question spans finance and project management, the planner decides to check the finance database first, then the project logs.</td></tr><tr><td>Query Rewriter</td><td>Translates the user's original question into optimised search queries. A question like what is up with Project X becomes targeted queries like Project X Q3 status report and Project X key blockers. This improves retrieval accuracy because the rewritten queries match document language more closely.</td></tr><tr><td>Search Agent</td><td>Executes the refined queries against one or more retrieval sources. In cross-corpus setups, this agent also decides which database to search based on the planner's routing.</td></tr><tr><td>Sufficient Context Agent</td><td>Reviews the retrieved snippets and a draft answer to determine whether the model has everything it needs. If the user asked about medications, diet, and allergies but the retrieved context only covers medications and diet, this agent flags the gap and sends the system back for another round of retrieval.</td></tr><tr><td>Synthesis Agent</td><td>Once the sufficient context agent confirms the retrieved information is complete, this agent generates the final response, grounded in all the collected context.</td></tr></tbody></table></div>
+<h3 id="when-to-use-agentic-rag">When to Use Agentic RAG</h3>
+<p>Agentic RAG adds complexity and latency. The multi-agent pipeline requires more LLM calls, more retrieval rounds, and more orchestration logic than vanilla RAG. For simple lookup questions where the answer lives in a single document, this overhead is wasted. The vanilla pipeline retrieves once and answers, which is faster and cheaper.</p>
+<p>Agentic RAG earns its cost when questions are multi-hop, meaning they require chaining information across sources. A question like what are the specs of the server used in Project X requires finding the project document, extracting the server ID, then searching a hardware database for that ID. A single retrieval pass cannot solve this because the second search depends on information found in the first. Agentic RAG handles this naturally because the planner decomposes the question, the search agent executes each sub-query, and the iteration loop continues until the sufficient context agent confirms all pieces are present.</p>
+<p>Agentic RAG also helps when information is spread across separate databases managed by different teams. A large organisation may have HR records in one system, finance data in another, and project documentation in a third. Cross-corpus retrieval, where the planner routes queries to the right database, is a natural fit for agentic RAG. Google Research reported that their agentic RAG framework achieved 90.1 percent accuracy on multi-hop questions even when the system had to select the correct corpus from four options, with latency within 3 percent of single-corpus retrieval.</p>
+<p>The part that makes agentic RAG different from vanilla RAG is the sufficient context check. In a standard system, retrieval happens once and the model generates regardless of whether the retrieved context actually contains the answer. The model may hallucinate to fill the gap, or it may say it cannot find the information. Both outcomes are bad. The sufficient context agent adds a quality-control step that catches gaps before generation and triggers additional retrieval passes to fill them.</p>
+</section>
+<aside class="ac-about"><p class="ac-about-h">About this guide</p><p>This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, agents, and context windows. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.</p><p>See how this works in Pascal: <a href="/Website-Updates/ask-pascal/cited-research">cited research in Ask Pascal</a>.</p></aside>
+    </article>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What is RAG in AI and how does it work?<span class="pm" aria-hidden="true"></span></summary><div class="ans">RAG stands for Retrieval-Augmented Generation. It is a technique where an AI model retrieves relevant documents from a knowledge base before generating a response. Instead of relying only on its training data, the model pulls in external information, grounds its answer in that information, and cites the source.</div></details>
+<details class="faq-item"><summary>How does RAG improve AI outputs for finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">RAG allows the model to reference actual filings, transcripts, and research documents instead of relying on what it learned during training. This produces more accurate, current, and specific outputs. The retrieval step also creates a citation trail so you can verify where each claim came from.</div></details>
+<details class="faq-item"><summary>What is Agentic RAG and how does Pascal implement it?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Agentic RAG is an advanced form of RAG where the system iteratively retrieves information, evaluates whether it has enough context, and goes back for more if needed. Pascal's research agents use this approach through an orchestrator that plans queries, retrieves from filings and your internal documents, and synthesizes outputs with citations tracing back to the source line.</div></details>
+<details class="faq-item"><summary>What is the difference between RAG and fine-tuning?<span class="pm" aria-hidden="true"></span></summary><div class="ans">RAG retrieves external documents at query time to ground the model's response. Fine-tuning retrains the model on new data to change its behavior. RAG is better for keeping information current and producing cited outputs. Fine-tuning is better for adapting tone or domain expertise. They are not mutually exclusive.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kl" aria-labelledby="kl-h">
+    <h2 class="sx-t" id="kl-h">Keep learning</h2>
+    <div class="kl-g"><a class="gc" href="/Website-Updates/pascal-academy/guides/ai-agents"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-deep"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg><b>The model</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg><b>Tools</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg><b>Memory</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 04</span><h3 class="gc-t">AI agents</h3><p class="gc-m">15 min read</p></div></a><a class="gc" href="/Website-Updates/pascal-academy/guides/context-windows"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-teal"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 8h8"/><path d="M7 12h10"/><path d="M7 16h6"/></svg><b>Conversation summarisation</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M4.268 21a2 2 0 0 0 1.727 1H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"/><path d="m9 18-1.5-1.5"/><circle cx="5" cy="14" r="3"/></svg><b>Retrieve with RAG</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg><b>Sliding window</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 05</span><h3 class="gc-t">Context windows</h3><p class="gc-m">12 min read</p></div></a><a class="gc" href="/Website-Updates/guides/ai-for-hedge-funds"><div class="th" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-teal"><img src="/Website-Updates/assets/shots/shot-agent-table.webp" alt="Pascal agent output: a street vs management framing table for Sea Limited with citations" width="1600" height="844" loading="lazy" decoding="async"></div></div></div><div class="gc-b"><span class="pill">Desk guide</span><h3 class="gc-t">AI for Hedge Funds</h3><p class="gc-m">24 min read</p></div></a></div>
+  </section>
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/Website-Updates/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">Ask your first question with your firm's context.<br><span style="color:var(--mint-2)">A walkthrough with your own documents connected.</span></h2>
+  <div class="actions">
+    <a class="btn btn-white" href="https://pascalailabs.com/demo">Book a demo</a>
+  </div>
+</section>
+
+<dialog class="ac-gate" id="pdf-gate" aria-labelledby="gate-h">
+  <div class="ac-gate-in">
+    <div class="ac-gate-side">
+      <p class="eyebrow">Pascal Academy · PDF</p>
+      <p class="ac-gate-t">Retrieval-Augmented Generation</p>
+      <p class="ac-gate-m">15 min read</p>
+      <div class="ac-gate-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b><i></i><i></i></div>
+    </div>
+    <div class="ac-gate-main">
+      <button class="ac-gate-x" type="button" data-gate-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      <form class="ac-gate-form" data-gate-form data-guide="Retrieval-Augmented Generation" data-slug="rag-retrieval-augmented-generation" data-pdf="/Website-Updates/assets/academy/pdf/rag-retrieval-augmented-generation.pdf" novalidate>
+        <h2 id="gate-h">Get this guide as a PDF</h2>
+        <p class="ac-gate-sub">Tell us where to send it and we will email you the PDF.</p>
+        <label>Full name<input name="name" autocomplete="name" required></label>
+        <label>Work email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Organization<input name="organization" autocomplete="organization" required></label>
+        <p class="ac-gate-err" role="alert" hidden></p>
+        <button class="btn btn-dark" type="submit">Email me the PDF</button>
+        <p class="ac-gate-fine">By submitting, you agree to be contacted about Pascal Academy.</p>
+      </form>
+      <div class="ac-gate-done" hidden>
+        <span class="ac-gate-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <h2>Check your inbox.</h2>
+        <p>We have sent <b>Retrieval-Augmented Generation</b> to <span data-gate-email></span>.</p>
+        <button class="btn btn-line" type="button" data-gate-close>Back to the guide</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="/Website-Updates/assets/pages/academy3.js?v=4f48f13d9f" defer></script>
+</main>
+<footer class="footer">
+  <div class="frame">
+    <div class="footer-grid">
+      <div>
+        <a href="/Website-Updates/" aria-label="Pascal AI home"><img src="/Website-Updates/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24" loading="lazy"></a>
+        <p class="footer-blurb">The Investment OS for asset and wealth managers, asset servicers, corporate treasury, banks and financial institutions, private equity and private credit firms, and hedge funds.</p>
+      </div>
+      <nav aria-label="Platform">
+        <p class="fh">Platform</p>
+        <ul>
+          <li><a href="/Website-Updates/platform">Platform overview</a></li>
+          <li><a href="/Website-Updates/platform/context-graph">Context graph &amp; memory</a></li>
+          <li><a href="/Website-Updates/platform/mcp-apis">MCP &amp; APIs</a></li>
+          <li><a href="/Website-Updates/solutions/ai-transformation">AI transformation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Products">
+        <p class="fh">Products</p>
+        <ul>
+          <li><a href="/Website-Updates/ask-pascal">Ask Pascal</a></li>
+          <li><a href="/Website-Updates/ask-pascal/cited-research">Cited research</a></li>
+          <li><a href="/Website-Updates/ask-pascal/screeners">Screeners</a></li>
+          <li><a href="/Website-Updates/pascal-agents">Pascal Agents</a></li>
+          <li><a href="/Website-Updates/pascal-agents/workflow-library">Workflow library</a></li>
+          <li><a href="/Website-Updates/pascal-agents/data-agent">Pascal Data Agent</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Industries">
+        <p class="fh">Industries</p>
+        <ul>
+          <li><a href="/Website-Updates/solutions/hedge-funds">Hedge Funds</a></li>
+          <li><a href="/Website-Updates/solutions/asset-wealth-management">Asset &amp; Wealth Management</a></li>
+          <li><a href="/Website-Updates/solutions/banking">Banks &amp; Financial Institutions</a></li>
+          <li><a href="/Website-Updates/solutions/asset-servicing">Asset Servicing</a></li>
+          <li><a href="/Website-Updates/solutions/private-equity-credit">Private Equity &amp; Private Credit</a></li>
+          <li><a href="/Website-Updates/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a></li>
+          <li><a href="/Website-Updates/customer-stories">Customer stories</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="News">
+        <p class="fh">News</p>
+        <ul>
+          <li><a href="https://pascalailabs.com/news">Newsroom</a></li>
+          <li><a href="/Website-Updates/news/founders-notes">Founder's notes</a></li>
+          <li><a href="https://vibhavviswanathan.substack.com" rel="noopener">Alpha &amp; Agents</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="fh">Company</p>
+        <ul>
+          <li><a href="https://pascalailabs.com/about">About</a></li>
+          <li><a href="/Website-Updates/security">Security</a></li>
+          <li><a href="https://pascalailabs.com/careers">Careers</a></li>
+          <li><a href="/Website-Updates/pascal-academy">Pascal Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pascal AI Labs</span>
+      <span><a href="https://pascalailabs.com/privacy-policy">Privacy</a> &middot; <a href="https://pascalailabs.com/terms-of-use">Terms</a> &middot; <a href="https://www.linkedin.com/company/pascal-ai-labs/" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/pascalailabs" rel="noopener">X</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>Ask Pascal: AI Research Analyst for Investment Teams</title>
+<meta name="description" content="Ask Pascal is the AI research assistant for investment teams: answers from filings, research and your firm&#x27;s own memos, with every claim cited to the page.">
+<link rel="canonical" href="https://pascalailabs.com/ask-pascal">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#052A2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pascal AI">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Ask Pascal: AI Research Analyst for Investment Teams">
+<meta property="og:description" content="Ask Pascal is the AI research assistant for investment teams: answers from filings, research and your firm&#x27;s own memos, with every claim cited to the page.">
+<meta property="og:url" content="https://pascalailabs.com/ask-pascal">
+<meta property="og:image" content="https://pascalailabs.com/assets/og/ask-pascal.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ask anything your firm knows. Get a sourced answer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pascalailabs">
+<meta name="twitter:title" content="Ask Pascal: AI Research Analyst for Investment Teams">
+<meta name="twitter:description" content="Ask Pascal is the AI research assistant for investment teams: answers from filings, research and your firm&#x27;s own memos, with every claim cited to the page.">
+<meta name="twitter:image" content="https://pascalailabs.com/assets/og/ask-pascal.png">
+<link rel="icon" href="/Website-Updates/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/Website-Updates/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/Website-Updates/assets/site.css?v=a6dc05dfb8">
+<link rel="stylesheet" href="/Website-Updates/assets/pages/ask-pascal.css?v=301e294df5">
+<script src="/Website-Updates/assets/site.js?v=cd66888c46" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV9WGBYMQR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SV9WGBYMQR');</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pascalailabs.com/#org",
+   "name": "Pascal AI Labs",
+   "alternateName": "Pascal AI",
+   "url": "https://pascalailabs.com/",
+   "logo": "https://pascalailabs.com/assets/pascal-logo.png",
+   "sameAs": [
+    "https://www.linkedin.com/company/pascal-ai-labs/",
+    "https://twitter.com/pascalailabs"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pascalailabs.com/ask-pascal#webpage",
+   "url": "https://pascalailabs.com/ask-pascal",
+   "name": "Ask Pascal: AI Research Analyst for Investment Teams",
+   "description": "Ask Pascal is the AI research assistant for investment teams: answers from filings, research and your firm's own memos, with every claim cited to the page.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://pascalailabs.com/#website"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "dateModified": "2026-10-12",
+   "breadcrumb": {
+    "@id": "https://pascalailabs.com/ask-pascal#breadcrumb"
+   },
+   "primaryImageOfPage": "https://pascalailabs.com/assets/og/ask-pascal.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pascalailabs.com/#website",
+   "url": "https://pascalailabs.com/",
+   "name": "Pascal AI",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pascalailabs.com/ask-pascal#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pascalailabs.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Ask Pascal",
+     "item": "https://pascalailabs.com/ask-pascal"
+    }
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://pascalailabs.com/ask-pascal#software",
+   "name": "Ask Pascal",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Investment research",
+   "operatingSystem": "Web, Microsoft Excel, PowerPoint, Word",
+   "description": "Ask Pascal is the AI research assistant for investment teams: answers from filings, research and your firm's own memos, with every claim cited to the page.",
+   "url": "https://pascalailabs.com/ask-pascal",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Institutional investors"
+   },
+   "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "url": "https://pascalailabs.com/demo",
+    "description": "Enterprise licence. Book a demo for pricing."
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pascalailabs.com/ask-pascal#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is Ask Pascal?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ask Pascal answers with everything your firm has learned: your filings and data, your IC memos and models, your email and Teams threads, and the decisions your team has made. Every answer is sourced and grounded in your firm's own context."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Ask Pascal only for investment research?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Investment teams use it most, but risk, operations, compliance, IC and IR teams use the same sourced answers from the same institutional memory."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does everyone see the same information?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Pascal respects your firm's access controls, so each person only sees what they are cleared to see."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can it use our own documents?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Connect your systems or upload files, and Pascal cites them exactly as it cites a public filing."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/Website-Updates/" aria-label="Pascal AI home">
+      <img src="/Website-Updates/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/Website-Updates/platform" aria-expanded="false" aria-haspopup="true">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-product">
+          <div class="mega-panel">
+            <div class="mp-col">
+              <a class="mp-feature" href="/Website-Updates/platform">
+                <span class="mp-art" aria-hidden="true"><i></i><i></i><i></i></span>
+                <b>Platform overview</b>
+                <span>See how the Investment OS works.</span>
+              </a>
+              <p class="mp-label">Platform</p>
+              <a class="mp-link" href="/Website-Updates/platform/context-graph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg> Context graph &amp; memory</a>
+              <a class="mp-link" href="/Website-Updates/platform/mcp-apis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> MCP &amp; APIs</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/Website-Updates/ask-pascal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Ask Pascal</b><span>Your AI research analyst</span></span></a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/decision-traces"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg> Decision traces</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/cited-research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg> Cited research</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/screeners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg> Screeners</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/pascal-intel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg> Pascal Intel</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/Website-Updates/pascal-agents"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><span><b>Pascal Agents</b><span>Run investment work end to end</span></span></a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/autonomous-agents"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Autonomous agents</a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/workflow-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg> Agentic workflow library</a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/data-agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg> Pascal Data Agent</a>
+            </div>
+            <a class="mp-foot" href="/Website-Updates/solutions/hedge-funds"><span class="chip">Industries</span><span><b>Pascal for your firm</b><span>Hedge funds, asset and wealth managers, banks, asset servicers, private equity and private credit, and corporate treasury</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/Website-Updates/solutions/hedge-funds" aria-expanded="false" aria-haspopup="true">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-il">
+          <div class="mega-panel">
+              <a class="il-i" href="/Website-Updates/solutions/hedge-funds"><span><b>Hedge Funds</b><small>Event briefs, reconciliations and DDQs</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/asset-wealth-management"><span><b>Asset &amp; Wealth Management</b><small>Research, mandate checks and client reporting</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/banking"><span><b>Banks &amp; Financial Institutions</b><small>Underwriting, covenant monitoring and KYC</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/asset-servicing"><span><b>Asset Servicing</b><small>Corporate actions, NAV checks and client queries</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/private-equity-credit"><span><b>Private Equity &amp; Private Credit</b><small>CIM screens, diligence and LP reporting</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/treasury-hedge-accounting"><span><b>Corporate Treasury &amp; Hedge Accounting</b><small>Exposures, effectiveness tests and hedge files</small></span></a>
+              <div class="il-cs">
+                <p class="il-cs-h"><span>Customer stories</span><a href="/Website-Updates/customer-stories">View all</a></p>
+                <div class="il-cs-g">
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/us-hedge-fund-idea-generation"><img src="/Website-Updates/assets/photos/cs-us-hedge-fund-sm.jpg?v=1b4b4b4db3" alt="" width="44" height="44" loading="lazy"><span><b>Top 20 US hedge fund</b><small>Evidence-backed ideas</small></span></a>
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/apac-asset-manager-research-coverage"><img src="/Website-Updates/assets/photos/cs-apac-research-sm.jpg?v=c9e1340963" alt="" width="44" height="44" loading="lazy"><span><b>$70B+ asset manager</b><small>Research on 1,000+ names</small></span></a>
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/apac-asset-manager-institutional-knowledge"><img src="/Website-Updates/assets/photos/cs-apac-knowledge-sm.jpg?v=661087cbfd" alt="" width="44" height="44" loading="lazy"><span><b>$100B+ asset manager</b><small>Firm knowledge, one query</small></span></a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="https://pascalailabs.com/news" aria-expanded="false" aria-haspopup="true">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-list mega-news mega-news-ac">
+          <div class="mega-panel">
+            <div class="mn-col">
+              <p class="mp-label">News</p>
+              <a class="mp-link" href="https://pascalailabs.com/news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg> Newsroom</a>
+              <a class="mp-link" href="/Website-Updates/news/founders-notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Founder's notes</a>
+            </div>
+            <div class="mn-col mn-ac">
+              <a class="mn-ac-head" href="/Website-Updates/pascal-academy"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><b>Pascal Academy</b><span>Learn AI for institutional finance</span></span></a>
+              <a class="mp-link" href="/Website-Updates/guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Desk guides</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/ai-fundamentals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg> AI fundamentals</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/ai-glossary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> AI glossary</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> Workflows</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/prompt-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Prompt library</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/agent-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> Agent library</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-dark btn-sm" href="https://pascalailabs.com/demo">Book a demo</a>
+    </div>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <details open>
+    <summary>Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <p class="mm-label">Platform</p>
+    <a href="/Website-Updates/platform">Platform overview</a>
+    <a href="/Website-Updates/platform/context-graph">Context graph &amp; memory</a>
+    <a href="/Website-Updates/platform/mcp-apis">MCP &amp; APIs</a>
+    <p class="mm-label">Ask Pascal</p>
+    <a href="/Website-Updates/ask-pascal">Ask Pascal overview</a>
+    <a href="/Website-Updates/ask-pascal/decision-traces">Decision traces</a>
+    <a href="/Website-Updates/ask-pascal/cited-research">Cited research</a>
+    <a href="/Website-Updates/ask-pascal/screeners">Screeners</a>
+    <a href="/Website-Updates/ask-pascal/pascal-intel">Pascal Intel</a>
+    <p class="mm-label">Pascal Agents</p>
+    <a href="/Website-Updates/pascal-agents">Pascal Agents overview</a>
+    <a href="/Website-Updates/pascal-agents/autonomous-agents">Autonomous agents</a>
+    <a href="/Website-Updates/pascal-agents/workflow-library">Agentic workflow library</a>
+    <a href="/Website-Updates/pascal-agents/data-agent">Pascal Data Agent</a>
+  </details>
+  <details>
+    <summary>Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/Website-Updates/solutions/hedge-funds">Hedge Funds</a>
+    <a href="/Website-Updates/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+    <a href="/Website-Updates/solutions/banking">Banks &amp; Financial Institutions</a>
+    <a href="/Website-Updates/solutions/asset-servicing">Asset Servicing</a>
+    <a href="/Website-Updates/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+    <a href="/Website-Updates/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+    <a href="/Website-Updates/customer-stories">Customer stories</a>
+  </details>
+  <details>
+    <summary>News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="https://pascalailabs.com/news">Newsroom</a>
+    <a href="/Website-Updates/news/founders-notes">Founder's notes</a>
+    <p class="mm-label">Pascal Academy</p>
+    <a href="/Website-Updates/pascal-academy">Academy home</a>
+    <a href="/Website-Updates/guides">Desk guides</a>
+    <a href="/Website-Updates/pascal-academy/ai-fundamentals">AI fundamentals</a>
+    <a href="/Website-Updates/pascal-academy/ai-glossary">AI glossary</a>
+    <a href="/Website-Updates/pascal-academy/workflows">Workflows</a>
+    <a href="/Website-Updates/pascal-academy/prompt-library">Prompt library</a>
+    <a href="/Website-Updates/pascal-academy/agent-library">Agent library</a>
+  </details>
+  <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+</div>
+
+<main id="main">
+<div class="frame pg-ap">
+  <section class="hero-g" aria-labelledby="page-title">
+    <div class="hero-g-copy">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/Website-Updates/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Ask Pascal</span></nav>
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Ask Pascal</span></span>Ask anything <span class="mute">your firm knows.</span></h1>
+      <p class="lead">Ask Pascal answers with everything your firm has learned: your filings and data, your IC memos and models, your email and Teams threads, and the decisions your team has made. A PM checking a thesis, an ops lead reconciling a counterparty and an IR team answering a client all get the same thing: a sourced answer, grounded in your firm's own context.</p>
+      <div class="actions">
+        <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+      </div>
+    </div>
+    <div class="hero-g-media"><div class="panel fit"><!--mock--><div class="pui pui-wide has-float ap-hero" role="img" aria-label="Ask Pascal, set to the investment team, with tabs for risk, operations, compliance and IR. The user asks Pascal to summarise their thesis on Honeywell, compare it with management guidance and performance since, and suggest recalibrations. Pascal answers that the thesis values Honeywell at $246–298 a share on a sum-of-the-parts basis, citation 1; Honeywell has since beaten FY25 guidance on adjusted sales and EPS, citation 9; the Advanced Materials spin-off completed ahead of schedule in October 2025, citation 4; and FY26 EPS is guided to $10.35–10.65, citation 7. Sources: honeywell_thesis.pdf from your Vault, the Q4 FY25 earnings presentation, the 10-K and the decision trace for the SOTP base case.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Ask Pascal / <b>Honeywell thesis review</b></span><span class="pui-bar-r"><span class="pui-dot">D</span></span></div>
+    <div class="pui-tabs"><span class="on">Investment team</span><span>Risk</span><span>Operations</span><span>Compliance</span><span>IR</span></div>
+    <div class="pui-body">
+      <div class="pui-rail" aria-hidden="true"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span><span class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg></span></div>
+
+      <div class="pui-main">
+        <div class="pui-q">Summarise my thesis on Honeywell, compare it with management guidance and performance since, and suggest recalibrations.</div>
+        <div class="ap-steps"><span class="pui-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Vault</span><span class="pui-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Filings</span><span class="pui-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Decision traces</span></div>
+        <p class="pui-ans">Your thesis values Honeywell at $246–298 a share on a sum-of-the-parts <span class="ap-nw">basis<span class="pui-cite">1</span>.</span> Since then, Honeywell beat guidance on adjusted sales and EPS for <span class="ap-nw">FY25<span class="pui-cite">9</span>,</span> and the Advanced Materials spin-off completed ahead of schedule in October <span class="ap-nw">2025<span class="pui-cite">4</span>.</span> FY26 EPS is guided to <span class="ap-nw">$10.35–10.65<span class="pui-cite on">7</span>.</span></p>
+        <p class="pui-k">Sources</p>
+        <div class="pui-schips ap-src">
+          <span class="pui-schip"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5z" fill="#E5E7EB"/><path d="M15 2v5h5" fill="#CBD0D6"/><rect x="2" y="11" width="14" height="7" rx="1.4" fill="#D93025"/><text x="9" y="16.4" font-family="Arial" font-weight="700" font-size="5.2" text-anchor="middle" fill="#fff">PDF</text></svg> honeywell_thesis.pdf <span class="ap-vault"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Vault</span></span>
+          <span class="pui-schip"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5z" fill="#E5E7EB"/><path d="M15 2v5h5" fill="#CBD0D6"/><rect x="2" y="11" width="14" height="7" rx="1.4" fill="#D93025"/><text x="9" y="16.4" font-family="Arial" font-weight="700" font-size="5.2" text-anchor="middle" fill="#fff">PDF</text></svg> Q4 FY25 earnings presentation</span>
+          <span class="pui-schip"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5z" fill="#E5E7EB"/><path d="M15 2v5h5" fill="#CBD0D6"/><rect x="2" y="11" width="14" height="7" rx="1.4" fill="#D93025"/><text x="9" y="16.4" font-family="Arial" font-weight="700" font-size="5.2" text-anchor="middle" fill="#fff">PDF</text></svg> 10-K</span>
+          <span class="pui-schip ap-dt"><span class="ap-dt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></span> Decision trace: SOTP base case</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pui-float ap-float">
+    <div class="ap-fh"><span class="ap-dt-ic lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></span><span><span class="pui-k">Decision trace</span><b>SOTP base case</b></span></div>
+    <p class="pui-sub">Your team's saved view, applied to this answer.</p>
+  </div>
+</div><!--/mock--></div></div>
+  </section>
+</div>
+
+<div class="frame pg-ap">
+  <section class="row" aria-label="Ask Pascal at a glance">
+    <div class="cells">
+      <div class="cell"><span class="stat-num">27<small>s</small></span><span class="stat-lbl">Median time to a cited answer</span></div>
+    <div class="cell"><span class="stat-num">9.6</span><span class="stat-lbl">Sources cited per answer, on average</span></div>
+    <div class="cell"><span class="stat-num">97<small>%</small></span><span class="stat-lbl">Answers citing at least one internal document</span></div>
+    </div>
+  </section>
+
+  <section class="row" aria-label="Why Ask Pascal answers differently">
+    <div class="cells">
+      <a class="cell" href="/Website-Updates/platform/context-graph"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg><b>Knows your firm</b><span>Answers draw on your context graph, where your firm's memory lives, so Pascal starts from what your team already knows.</span><span class="link">Pascal's context graph <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      <a class="cell" href="/Website-Updates/ask-pascal/cited-research"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg><b>Shows its work</b><span>Every claim links to its page, and the decisions behind your views are kept and reused.</span><span class="link">Cited research <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      <a class="cell" href="/Website-Updates/ask-pascal/pascal-intel"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"/><circle cx="12" cy="12" r="3"/></svg><b>Sees what's changing</b><span>Screeners and Pascal Intel bring new signals to you, checked against what you already believe.</span><span class="link">Pascal Intel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+    </div>
+  </section>
+
+  <section class="row" id="teams" aria-labelledby="teams-title">
+    <div class="row-pad-sm head">
+      <div><p class="eyebrow">Built for every team</p><h2 class="h2" id="teams-title">One place to ask, <span class="mute">for the whole firm.</span></h2></div>
+      <p>Every team in an institution answers questions from the same body of knowledge. Ask Pascal gives each of them a sourced answer, inside the permissions they already have.</p>
+    </div>
+    <div class="ap-teams row">
+      <div class="ap-team"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>Investment teams</h3><p class="ap-q">"What did we conclude the last time we looked at this name?"</p><ul><li>Research a company across filings and your own notes</li><li>Track a thesis as new information arrives</li><li>Prepare for calls, meetings and results</li></ul></div>
+      <div class="ap-team"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Portfolio and risk</h3><p class="ap-q">"Which positions are exposed to this tariff announcement?"</p><ul><li>Read the portfolio against a new event</li><li>See the documents behind each exposure</li><li>Spot thesis points that no longer hold</li></ul></div>
+      <div class="ap-team"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Investment committee</h3><p class="ap-q">"Give me the pre-read: the case, the risks and what's changed."</p><ul><li>Standardised pre-reads and memos</li><li>Every claim sourced for the discussion</li><li>A record of how the view was formed</li></ul></div>
+      <div class="ap-team"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>Operations</h3><p class="ap-q">"Is Aldermoor Institution Partners the same entity as the one in our CRM?"</p><ul><li>Reconcile records across systems</li><li>Review counterparty documents</li><li>Decisions remembered, so exceptions don't repeat</li></ul></div>
+      <div class="ap-team"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Compliance</h3><p class="ap-q">"How was this recommendation formed, and from which sources?"</p><ul><li>Follow the reasoning behind any answer</li><li>See every source, down to the page</li><li>Access controls respected throughout</li></ul></div>
+      <div class="ap-team"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Distribution and IR</h3><p class="ap-q">"How has our view on Sea Limited changed this quarter?"</p><ul><li>Answer client questions from approved firm material</li><li>Draft updates with sources attached</li><li>Keep messaging consistent across the team</li></ul></div>
+    </div>
+  </section>
+
+  <section class="row" id="capabilities" aria-labelledby="cap-title">
+    <div class="row-pad-sm"><p class="eyebrow">Capabilities</p><h2 class="h2" id="cap-title" style="margin-top:18px">Everything <span class="mute">Ask Pascal can do.</span></h2></div>
+  </section>
+
+  <section class="row split" aria-labelledby="f1">
+    <div class="split-copy">
+      <p class="eyebrow">Decision traces</p>
+      <h3 class="h2" id="f1">Keep the reasoning <span class="mute">behind every decision.</span></h3>
+      <p>Pascal preserves the decisions, assumptions, preferences and reasoning that shape your team's work, and reuses them when new information arrives.</p>
+      <a class="link" href="/Website-Updates/ask-pascal/decision-traces">Explore decision traces <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui ap-mon" role="img" aria-label="Pascal's thesis monitors for Amazon, ranked, with monitors on: 1, AWS remains the profit engine, validated; 2, free cash flow recovers as capex peaks, no longer true; 3, ads business keeps compounding, watch.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Theses / <b>Amazon</b></span><span class="pui-bar-r"><span class="pui-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg> Monitors on</span></span></div>
+    <div class="pui-tool ap-tt"><span class="pui-lg t lg" style="background:#1F3864">AMZN</span><span class="ap-tn"><b>Amazon · thesis monitors</b><span class="pui-sub">Your view · ranked</span></span><span class="pui-sp"></span><span class="pui-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> History</span></div>
+    <div class="pui-main">
+      <div class="ap-pt"><span class="ap-rk">1</span><b>AWS remains the profit engine</b><span class="pui-tag">Validated</span></div>
+      <div class="ap-pt"><span class="ap-rk">2</span><b>Free cash flow recovers as capex peaks</b><span class="pui-tag ap-red">No longer true</span></div>
+      <div class="ap-pt"><span class="ap-rk">3</span><b>Ads business keeps compounding</b><span class="pui-tag amber">Watch</span></div>
+      <div class="ap-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Add a thesis point</div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" aria-labelledby="f2">
+    <div class="split-copy">
+      <p class="eyebrow">Cited research</p>
+      <h3 class="h2" id="f2">Every claim, <span class="mute">traced to the page.</span></h3>
+      <p>Answers combine public filings, broker research and your own documents, with every sentence and table cell linked to the exact page it came from.</p>
+      <a class="link" href="/Website-Updates/ask-pascal/cited-research">Explore cited research <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-cream fit"><!--mock--><div class="pui pui-wide ap-cite" role="img" aria-label="An Ask Pascal answer reads: FY26 adjusted EPS is guided to $10.35–10.65, citation 7, against $9.78 in FY25, citation 9. Citation 7 is open in a pane beside it: the earnings presentation at page 4 of 5, with the passage EPS $10.35 to $10.65 highlighted.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Ask Pascal / <b>Honeywell FY26 outlook</b></span><span class="pui-bar-r"><span class="pui-tag grey">Filings</span></span></div>
+    <div class="pui-split ap-cs">
+      <div class="pui-main">
+        <p class="pui-ans ap-ca">FY26 adjusted EPS is guided to <span class="ap-nw">$10.35–10.65<span class="pui-cite on">7</span>,</span> against $9.78 in <span class="ap-nw">FY25<span class="pui-cite">9</span>.</span></p>
+        <div class="pui-ln m"></div><div class="pui-ln"></div><div class="pui-ln s"></div>
+        <div class="ap-srcs"><span class="ap-lgs"><span class="pui-lg w"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5z" fill="#E5E7EB"/><path d="M15 2v5h5" fill="#CBD0D6"/><rect x="2" y="11" width="14" height="7" rx="1.4" fill="#D93025"/><text x="9" y="16.4" font-family="Arial" font-weight="700" font-size="5.2" text-anchor="middle" fill="#fff">PDF</text></svg></span><span class="pui-lg w"><img src="/Website-Updates/assets/logos/outlook.png" alt="" width="18" height="18" loading="lazy"></span><span class="pui-lg w"><img src="/Website-Updates/assets/logos/sharepoint.png" alt="" width="18" height="18" loading="lazy"></span></span>Sources</div>
+      </div>
+      <div class="pui-side ap-pane">
+        <div class="ap-pane-h"><span class="pui-k">Citation 7</span><span class="pui-k">p. 4 / 5</span></div>
+        <p class="ap-doc-n"><span class="pui-lg w"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5z" fill="#E5E7EB"/><path d="M15 2v5h5" fill="#CBD0D6"/><rect x="2" y="11" width="14" height="7" rx="1.4" fill="#D93025"/><text x="9" y="16.4" font-family="Arial" font-weight="700" font-size="5.2" text-anchor="middle" fill="#fff">PDF</text></svg></span>Earnings presentation</p>
+        <div class="pui-pdf">
+          <div class="pui-sheet">
+            <div class="pui-ln m"></div>
+            <p class="ap-pass"><span class="pui-mark-hl">EPS $10.35 to $10.65</span><span class="pui-pin">7</span></p>
+            <div class="pui-ln"></div><div class="pui-ln s"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split" aria-labelledby="f3">
+    <div class="split-copy">
+      <p class="eyebrow">Screeners</p>
+      <h3 class="h2" id="f3">Screen by what companies say, <span class="mute">and what they report.</span></h3>
+      <p>Query every transcript for a theme, track it as companies report, filter on the numbers, and keep score on whether management delivered.</p>
+      <a class="link" href="/Website-Updates/ask-pascal/screeners">Explore screeners <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="split-media">
+      <div class="panel fit"><!--mock--><div class="pui pui-wide ap-screen" role="img" aria-label="A Pascal screener searching transcripts for input cost pressure in industrials over the last 2 quarters: 14 companies mentioned it this quarter, up from 6 the quarter before. Guidance vs actuals: 4 of 5 commitments met. Matching transcript passages are listed by company.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Screeners / <b>Input cost pressure</b></span><span class="pui-bar-r"><span class="pui-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg> Live</span></span></div>
+    <div class="pui-tool"><span class="pui-search ap-sq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span>Input cost pressure</span></span><span class="pui-chip on">Industrials</span><span class="pui-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg> Last 2 quarters</span><span class="pui-chip ap-qr"><img src="/Website-Updates/assets/logos/quartr.png" alt="" width="18" height="18" loading="lazy"> Transcripts</span></div>
+    <div class="pui-main">
+      <div class="ap-sg">
+        <div class="ap-card">
+          <p class="pui-k">Companies mentioning it</p>
+          <p class="ap-big">14 <small>this quarter</small></p>
+          <p class="ap-up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> up from 6</p>
+          <div class="ap-bars" aria-hidden="true"><span style="height:43%"><i>6</i></span><span class="on" style="height:100%"><i>14</i></span></div>
+        </div>
+        <div class="ap-card">
+          <p class="pui-k">Guidance vs actuals</p>
+          <p class="ap-big">4 of 5 <small>commitments met</small></p>
+          <div class="ap-seg" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+          <p class="pui-sub ap-segl"><span>Met</span><span>Missed</span></p>
+        </div>
+      </div>
+      <div class="pui-row"><span class="pui-lg t" style="background:#5F6B69"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="ap-rn"><b>Company A</b><span class="pui-sub">Q1 call</span></span><span class="ap-rl"><i class="pui-ln m"></i></span></div>
+      <div class="pui-row"><span class="pui-lg t" style="background:#5F6B69"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="ap-rn"><b>Company B</b><span class="pui-sub">Q4 call</span></span><span class="ap-rl"><i class="pui-ln"></i></span></div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row split flip" aria-labelledby="f4">
+    <div class="split-copy">
+      <p class="eyebrow">Pascal Intel</p>
+      <h3 class="h2" id="f4">What the market is saying, <span class="mute">already read.</span></h3>
+      <p>Trackers follow X, Reddit and podcasts for your names and themes, and turn them into one dated summary per story, with every source linked.</p>
+      <a class="link" href="/Website-Updates/ask-pascal/pascal-intel">Explore Pascal Intel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="split-media">
+      <div class="panel panel-dark fit"><!--mock--><div class="pui pui-wide ap-intel" role="img" aria-label="A Pascal Intel story for $PLTR, Palantir, dated 18 Aug 2026 and drawn from X, Reddit and YouTube: Palantir Q2 blowout, $1.94B revenue, up 93% YoY; guidance raised. The source posts from each channel are linked below the summary.">
+  <div class="pui-win">
+    <div class="pui-bar"><svg class="pui-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M20 12h28v38H20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M20 12l-6 6v38l6-6M14 56h28l6-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M25 17h18v28H25z" fill="#55C390"/></svg>
+<span class="pui-crumb">Pascal Intel / <b>Trackers</b></span><span class="pui-bar-r"><span class="pui-tag grey">Daily</span></span></div>
+    <div class="pui-tool ap-tt"><span class="pui-lg t lg" style="background:#101113">PLTR</span><span class="ap-tn"><b>$PLTR · Palantir</b><span class="pui-sub">18 Aug 2026</span></span><span class="pui-sp"></span><span class="ap-ch"><span class="pui-lg w"><img src="/Website-Updates/assets/logos/x.png" alt="" width="18" height="18" loading="lazy"></span><span class="pui-lg w"><img src="https://cdn.simpleicons.org/reddit/FF4500" alt="" width="18" height="18" loading="lazy"></span><span class="pui-lg w"><img src="https://cdn.simpleicons.org/youtube/FF0000" alt="" width="18" height="18" loading="lazy"></span></span></div>
+    <div class="pui-main">
+      <p class="pui-h ap-it">Palantir Q2 blowout: $1.94B revenue, up 93% YoY; guidance raised</p>
+      <div class="pui-ln m"></div><div class="pui-ln s"></div>
+      <p class="pui-k pui-mt">Sources</p>
+      <div class="ap-posts">
+        <div class="pui-post"><div class="pui-post-h"><span class="pui-av" style="background:#33464A">A1</span><b>@analyst_one</b><img src="/Website-Updates/assets/logos/x.png" alt="" width="18" height="18" loading="lazy"></div><div class="pui-ln m"></div><div class="pui-ln s"></div></div>
+        <div class="pui-post"><div class="pui-post-h"><span class="pui-av" style="background:#FF4500">r/</span><b>Investing thread</b><img src="https://cdn.simpleicons.org/reddit/FF4500" alt="" width="18" height="18" loading="lazy"></div><div class="pui-ln m"></div><div class="pui-ln s"></div></div>
+        <div class="pui-post"><div class="pui-post-h"><span class="pui-av" style="background:#B42318"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg></span><b>Podcast</b><img src="https://cdn.simpleicons.org/youtube/FF0000" alt="" width="18" height="18" loading="lazy"></div><div class="pui-ln m"></div><div class="pui-ln s"></div></div>
+      </div>
+    </div>
+  </div>
+</div><!--/mock--></div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="how-title">
+    <div class="row-pad-sm"><p class="eyebrow">How it works</p><h2 class="h2" id="how-title" style="margin-top:18px">From question <span class="mute">to sourced answer.</span></h2></div>
+    <div class="cells c5 row">
+      <div class="cell"><span class="n">01</span><b>Scope</b><span>Pick the companies with @ and the sources to search.</span></div>
+      <div class="cell"><span class="n">02</span><b>Find</b><span>Pascal searches filings, data and your firm's own material.</span></div>
+      <div class="cell"><span class="n">03</span><b>Review</b><span>It reads what it found and checks claims across sources.</span></div>
+      <div class="cell"><span class="n">04</span><b>Cite</b><span>The answer arrives with every claim linked to its page.</span></div>
+      <div class="cell"><span class="n">05</span><b>Remember</b><span>Your decisions are kept and reused next time.</span></div>
+    </div>
+  </section>
+
+  <section class="row" id="sources" aria-labelledby="src-title">
+    <div class="row-pad-sm head">
+      <div><p class="eyebrow">Sources</p><h2 class="h2" id="src-title">Your firm's knowledge, <span class="mute">and the market's.</span></h2></div>
+      <div><p>Ask Pascal answers from your context graph: what your firm has written and said, what you license, and what the market is saying. The Pascal Data Agent turns broker PDFs, expert calls and notes into entity-tagged data each answer can cite.</p><a class="link ap-src-link" href="/Website-Updates/platform/context-graph">See the context graph &amp; memory <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a class="link ap-src-link" href="/Website-Updates/pascal-agents/data-agent">See the Pascal Data Agent <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
+    </div>
+    <div class="cells row">
+      <div class="cell"><b>Internal information</b><div class="ap-chips"><span>IC memos</span><span>Models</span><span>Emails</span><span>MS Teams</span><span>SharePoint</span><span>Expert calls</span><span>CRM</span><span>Meeting notes</span></div></div>
+      <div class="cell"><b>Licensed publications</b><div class="ap-chips"><span>Broker research</span><span>Credit reports</span><span>Consensus estimates</span><span>Private company data</span><span>Market data</span></div></div>
+      <div class="cell"><b>External data</b><div class="ap-chips"><span>Public filings</span><span>Earnings transcripts</span><span>Exchange disclosures</span><span>News</span><span>X</span><span>Reddit</span><span>LinkedIn</span><span>Podcasts</span></div></div>
+    </div>
+  </section>
+
+  <section class="row row-pad" aria-labelledby="cmp-title">
+    <div class="head" style="margin-bottom:36px">
+      <div><p class="eyebrow">Why Ask Pascal</p><h2 class="h2" id="cmp-title" style="margin-top:18px">A general AI assistant knows the internet. <span class="mute">Pascal knows your firm.</span></h2></div>
+    </div>
+    <div class="table-wrap">
+      <table class="ap-compare">
+        <thead><tr><th scope="col"></th><th scope="col">General AI assistant</th><th scope="col">Ask Pascal</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">What it knows</th><td>Public information</td><td>Your firm's memos, models and conversations too</td></tr>
+          <tr><th scope="row">Where answers come from</th><td>Hard to tell</td><td>Exact document and page</td></tr>
+          <tr><th scope="row">Your past decisions</th><td>Forgotten every session</td><td>Kept and reused</td></tr>
+          <tr><th scope="row">Who can see what</th><td>Whatever you paste in</td><td>Your firm's access controls</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="row row-pad-sm ind-row" aria-labelledby="ind-row-title">
+    <h2 class="ind-row-h" id="ind-row-title">Pascal by industry</h2>
+    <div class="ind-row-l">
+      <a href="/Website-Updates/solutions/hedge-funds">Hedge Funds</a>
+      <a href="/Website-Updates/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+      <a href="/Website-Updates/solutions/banking">Banks &amp; Financial Institutions</a>
+      <a href="/Website-Updates/solutions/asset-servicing">Asset Servicing</a>
+      <a href="/Website-Updates/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+      <a href="/Website-Updates/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+    </div>
+  </section>
+
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+        <details class="faq-item"><summary>What is Ask Pascal?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Ask Pascal answers with everything your firm has learned: your filings and data, your IC memos and models, your email and Teams threads, and the decisions your team has made. Every answer is sourced and grounded in your firm's own context.</div></details>
+        <details class="faq-item"><summary>Is Ask Pascal only for investment research?<span class="pm" aria-hidden="true"></span></summary><div class="ans">No. Investment teams use it most, but risk, operations, compliance, IC and IR teams use the same sourced answers from the same institutional memory.</div></details>
+        <details class="faq-item"><summary>Does everyone see the same information?<span class="pm" aria-hidden="true"></span></summary><div class="ans">No. Pascal respects your firm's access controls, so each person only sees what they are cleared to see.</div></details>
+        <details class="faq-item"><summary>Can it use our own documents?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Yes. Connect your systems or upload files, and Pascal cites them exactly as it cites a public filing.</div></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">Ask your first question with your firm's context.<br><span style="color:var(--mint-2)">A walkthrough with your own documents connected.</span></h2>
+  <div class="actions">
+    <a class="btn btn-white" href="https://pascalailabs.com/demo">Book a demo</a>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="frame">
+    <div class="footer-grid">
+      <div>
+        <a href="/Website-Updates/" aria-label="Pascal AI home"><img src="/Website-Updates/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24" loading="lazy"></a>
+        <p class="footer-blurb">The Investment OS for asset and wealth managers, asset servicers, corporate treasury, banks and financial institutions, private equity and private credit firms, and hedge funds.</p>
+      </div>
+      <nav aria-label="Platform">
+        <p class="fh">Platform</p>
+        <ul>
+          <li><a href="/Website-Updates/platform">Platform overview</a></li>
+          <li><a href="/Website-Updates/platform/context-graph">Context graph &amp; memory</a></li>
+          <li><a href="/Website-Updates/platform/mcp-apis">MCP &amp; APIs</a></li>
+          <li><a href="/Website-Updates/solutions/ai-transformation">AI transformation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Products">
+        <p class="fh">Products</p>
+        <ul>
+          <li><a href="/Website-Updates/ask-pascal">Ask Pascal</a></li>
+          <li><a href="/Website-Updates/ask-pascal/cited-research">Cited research</a></li>
+          <li><a href="/Website-Updates/ask-pascal/screeners">Screeners</a></li>
+          <li><a href="/Website-Updates/pascal-agents">Pascal Agents</a></li>
+          <li><a href="/Website-Updates/pascal-agents/workflow-library">Workflow library</a></li>
+          <li><a href="/Website-Updates/pascal-agents/data-agent">Pascal Data Agent</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Industries">
+        <p class="fh">Industries</p>
+        <ul>
+          <li><a href="/Website-Updates/solutions/hedge-funds">Hedge Funds</a></li>
+          <li><a href="/Website-Updates/solutions/asset-wealth-management">Asset &amp; Wealth Management</a></li>
+          <li><a href="/Website-Updates/solutions/banking">Banks &amp; Financial Institutions</a></li>
+          <li><a href="/Website-Updates/solutions/asset-servicing">Asset Servicing</a></li>
+          <li><a href="/Website-Updates/solutions/private-equity-credit">Private Equity &amp; Private Credit</a></li>
+          <li><a href="/Website-Updates/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a></li>
+          <li><a href="/Website-Updates/customer-stories">Customer stories</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="News">
+        <p class="fh">News</p>
+        <ul>
+          <li><a href="https://pascalailabs.com/news">Newsroom</a></li>
+          <li><a href="/Website-Updates/news/founders-notes">Founder's notes</a></li>
+          <li><a href="https://vibhavviswanathan.substack.com" rel="noopener">Alpha &amp; Agents</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="fh">Company</p>
+        <ul>
+          <li><a href="https://pascalailabs.com/about">About</a></li>
+          <li><a href="/Website-Updates/security">Security</a></li>
+          <li><a href="https://pascalailabs.com/careers">Careers</a></li>
+          <li><a href="/Website-Updates/pascal-academy">Pascal Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pascal AI Labs</span>
+      <span><a href="https://pascalailabs.com/privacy-policy">Privacy</a> &middot; <a href="https://pascalailabs.com/terms-of-use">Terms</a> &middot; <a href="https://www.linkedin.com/company/pascal-ai-labs/" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/pascalailabs" rel="noopener">X</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

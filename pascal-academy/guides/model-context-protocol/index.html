@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>Model Context Protocol (MCP) Explained | Pascal Academy</title>
+<meta name="description" content="A guide to the Model Context Protocol for finance teams: what MCP is, how it connects AI models to data sources like Bloomberg and Capital IQ.">
+<link rel="canonical" href="https://pascalailabs.com/pascal-academy/guides/model-context-protocol">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#052A2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pascal AI">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Model Context Protocol (MCP) Explained | Pascal Academy">
+<meta property="og:description" content="A guide to the Model Context Protocol for finance teams: what MCP is, how it connects AI models to data sources like Bloomberg and Capital IQ.">
+<meta property="og:url" content="https://pascalailabs.com/pascal-academy/guides/model-context-protocol">
+<meta property="og:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-model-context-protocol.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Model Context Protocol (MCP)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pascalailabs">
+<meta name="twitter:title" content="Model Context Protocol (MCP) Explained | Pascal Academy">
+<meta name="twitter:description" content="A guide to the Model Context Protocol for finance teams: what MCP is, how it connects AI models to data sources like Bloomberg and Capital IQ.">
+<meta name="twitter:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-model-context-protocol.png">
+<link rel="icon" href="/Website-Updates/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/Website-Updates/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/Website-Updates/assets/site.css?v=a6dc05dfb8">
+<link rel="stylesheet" href="/Website-Updates/assets/pages/academy3.css?v=6b20df6ba8">
+<script src="/Website-Updates/assets/site.js?v=cd66888c46" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV9WGBYMQR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SV9WGBYMQR');</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pascalailabs.com/#org",
+   "name": "Pascal AI Labs",
+   "alternateName": "Pascal AI",
+   "url": "https://pascalailabs.com/",
+   "logo": "https://pascalailabs.com/assets/pascal-logo.png",
+   "sameAs": [
+    "https://www.linkedin.com/company/pascal-ai-labs/",
+    "https://twitter.com/pascalailabs"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/model-context-protocol#webpage",
+   "url": "https://pascalailabs.com/pascal-academy/guides/model-context-protocol",
+   "name": "Model Context Protocol (MCP) Explained | Pascal Academy",
+   "description": "A guide to the Model Context Protocol for finance teams: what MCP is, how it connects AI models to data sources like Bloomberg and Capital IQ.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://pascalailabs.com/#website"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "dateModified": "2026-08-01",
+   "breadcrumb": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/model-context-protocol#breadcrumb"
+   },
+   "primaryImageOfPage": "https://pascalailabs.com/assets/og/pascal-academy-guides-model-context-protocol.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pascalailabs.com/#website",
+   "url": "https://pascalailabs.com/",
+   "name": "Pascal AI",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/model-context-protocol#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pascalailabs.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pascal Academy",
+     "item": "https://pascalailabs.com/pascal-academy"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AI fundamentals",
+     "item": "https://pascalailabs.com/pascal-academy/ai-fundamentals"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Model Context Protocol (MCP)",
+     "item": "https://pascalailabs.com/pascal-academy/guides/model-context-protocol"
+    }
+   ]
+  },
+  {
+   "@type": "TechArticle",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/model-context-protocol#article",
+   "headline": "Model Context Protocol (MCP)",
+   "description": "A guide to the Model Context Protocol for finance teams: what MCP is, how it connects AI models to data sources like Bloomberg and Capital IQ.",
+   "url": "https://pascalailabs.com/pascal-academy/guides/model-context-protocol",
+   "inLanguage": "en",
+   "dateModified": "2026-08-01",
+   "datePublished": "2026-08-01",
+   "author": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "isPartOf": {
+    "@type": "Collection",
+    "name": "Pascal Academy",
+    "url": "https://pascalailabs.com/pascal-academy"
+   },
+   "mainEntityOfPage": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/model-context-protocol#webpage"
+   },
+   "image": "https://pascalailabs.com/assets/og/pascal-academy-guides-model-context-protocol.png",
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Institutional investment teams"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/model-context-protocol#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is the Model Context Protocol (MCP)?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MCP is an open standard that defines how AI models connect to external data sources and tools. It provides a common interface so that an AI model can retrieve information from databases, file systems, and APIs without requiring custom integrations for each source."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why is MCP important for AI in finance?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Finance teams work with data from Bloomberg, Capital IQ, FactSet, internal CRM systems, and filings. Without a standard protocol, connecting an AI model to each source requires a custom integration. MCP simplifies this by providing a common interface, so one connection can reach multiple data sources."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does Pascal implement MCP for institutional finance?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pascal is MCP-native, meaning its agents connect to your existing data providers through the Model Context Protocol. Bloomberg, SharePoint, Snowflake, and your CRM connect through one MCP Hub. This means Pascal's agents can pull from all your data sources without custom pipelines, and citations trace back to the source line regardless of where the data originated."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between MCP and an API?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "An API connects a specific application to another specific application with a custom interface. MCP is a standard protocol that defines how any AI model connects to any data source. APIs are point-to-point connections. MCP provides a common layer so one model can reach many sources through a consistent interface."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/Website-Updates/" aria-label="Pascal AI home">
+      <img src="/Website-Updates/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/Website-Updates/platform" aria-expanded="false" aria-haspopup="true">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-product">
+          <div class="mega-panel">
+            <div class="mp-col">
+              <a class="mp-feature" href="/Website-Updates/platform">
+                <span class="mp-art" aria-hidden="true"><i></i><i></i><i></i></span>
+                <b>Platform overview</b>
+                <span>See how the Investment OS works.</span>
+              </a>
+              <p class="mp-label">Platform</p>
+              <a class="mp-link" href="/Website-Updates/platform/context-graph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg> Context graph &amp; memory</a>
+              <a class="mp-link" href="/Website-Updates/platform/mcp-apis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> MCP &amp; APIs</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/Website-Updates/ask-pascal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Ask Pascal</b><span>Your AI research analyst</span></span></a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/decision-traces"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg> Decision traces</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/cited-research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg> Cited research</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/screeners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg> Screeners</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/pascal-intel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg> Pascal Intel</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/Website-Updates/pascal-agents"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><span><b>Pascal Agents</b><span>Run investment work end to end</span></span></a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/autonomous-agents"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Autonomous agents</a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/workflow-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg> Agentic workflow library</a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/data-agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg> Pascal Data Agent</a>
+            </div>
+            <a class="mp-foot" href="/Website-Updates/solutions/hedge-funds"><span class="chip">Industries</span><span><b>Pascal for your firm</b><span>Hedge funds, asset and wealth managers, banks, asset servicers, private equity and private credit, and corporate treasury</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/Website-Updates/solutions/hedge-funds" aria-expanded="false" aria-haspopup="true">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-il">
+          <div class="mega-panel">
+              <a class="il-i" href="/Website-Updates/solutions/hedge-funds"><span><b>Hedge Funds</b><small>Event briefs, reconciliations and DDQs</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/asset-wealth-management"><span><b>Asset &amp; Wealth Management</b><small>Research, mandate checks and client reporting</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/banking"><span><b>Banks &amp; Financial Institutions</b><small>Underwriting, covenant monitoring and KYC</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/asset-servicing"><span><b>Asset Servicing</b><small>Corporate actions, NAV checks and client queries</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/private-equity-credit"><span><b>Private Equity &amp; Private Credit</b><small>CIM screens, diligence and LP reporting</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/treasury-hedge-accounting"><span><b>Corporate Treasury &amp; Hedge Accounting</b><small>Exposures, effectiveness tests and hedge files</small></span></a>
+              <div class="il-cs">
+                <p class="il-cs-h"><span>Customer stories</span><a href="/Website-Updates/customer-stories">View all</a></p>
+                <div class="il-cs-g">
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/us-hedge-fund-idea-generation"><img src="/Website-Updates/assets/photos/cs-us-hedge-fund-sm.jpg?v=1b4b4b4db3" alt="" width="44" height="44" loading="lazy"><span><b>Top 20 US hedge fund</b><small>Evidence-backed ideas</small></span></a>
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/apac-asset-manager-research-coverage"><img src="/Website-Updates/assets/photos/cs-apac-research-sm.jpg?v=c9e1340963" alt="" width="44" height="44" loading="lazy"><span><b>$70B+ asset manager</b><small>Research on 1,000+ names</small></span></a>
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/apac-asset-manager-institutional-knowledge"><img src="/Website-Updates/assets/photos/cs-apac-knowledge-sm.jpg?v=661087cbfd" alt="" width="44" height="44" loading="lazy"><span><b>$100B+ asset manager</b><small>Firm knowledge, one query</small></span></a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="https://pascalailabs.com/news" aria-expanded="false" aria-haspopup="true">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-list mega-news mega-news-ac">
+          <div class="mega-panel">
+            <div class="mn-col">
+              <p class="mp-label">News</p>
+              <a class="mp-link" href="https://pascalailabs.com/news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg> Newsroom</a>
+              <a class="mp-link" href="/Website-Updates/news/founders-notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Founder's notes</a>
+            </div>
+            <div class="mn-col mn-ac">
+              <a class="mn-ac-head" href="/Website-Updates/pascal-academy"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><b>Pascal Academy</b><span>Learn AI for institutional finance</span></span></a>
+              <a class="mp-link" href="/Website-Updates/guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Desk guides</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/ai-fundamentals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg> AI fundamentals</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/ai-glossary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> AI glossary</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> Workflows</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/prompt-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Prompt library</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/agent-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> Agent library</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-dark btn-sm" href="https://pascalailabs.com/demo">Book a demo</a>
+    </div>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <details open>
+    <summary>Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <p class="mm-label">Platform</p>
+    <a href="/Website-Updates/platform">Platform overview</a>
+    <a href="/Website-Updates/platform/context-graph">Context graph &amp; memory</a>
+    <a href="/Website-Updates/platform/mcp-apis">MCP &amp; APIs</a>
+    <p class="mm-label">Ask Pascal</p>
+    <a href="/Website-Updates/ask-pascal">Ask Pascal overview</a>
+    <a href="/Website-Updates/ask-pascal/decision-traces">Decision traces</a>
+    <a href="/Website-Updates/ask-pascal/cited-research">Cited research</a>
+    <a href="/Website-Updates/ask-pascal/screeners">Screeners</a>
+    <a href="/Website-Updates/ask-pascal/pascal-intel">Pascal Intel</a>
+    <p class="mm-label">Pascal Agents</p>
+    <a href="/Website-Updates/pascal-agents">Pascal Agents overview</a>
+    <a href="/Website-Updates/pascal-agents/autonomous-agents">Autonomous agents</a>
+    <a href="/Website-Updates/pascal-agents/workflow-library">Agentic workflow library</a>
+    <a href="/Website-Updates/pascal-agents/data-agent">Pascal Data Agent</a>
+  </details>
+  <details>
+    <summary>Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/Website-Updates/solutions/hedge-funds">Hedge Funds</a>
+    <a href="/Website-Updates/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+    <a href="/Website-Updates/solutions/banking">Banks &amp; Financial Institutions</a>
+    <a href="/Website-Updates/solutions/asset-servicing">Asset Servicing</a>
+    <a href="/Website-Updates/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+    <a href="/Website-Updates/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+    <a href="/Website-Updates/customer-stories">Customer stories</a>
+  </details>
+  <details>
+    <summary>News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="https://pascalailabs.com/news">Newsroom</a>
+    <a href="/Website-Updates/news/founders-notes">Founder's notes</a>
+    <p class="mm-label">Pascal Academy</p>
+    <a href="/Website-Updates/pascal-academy">Academy home</a>
+    <a href="/Website-Updates/guides">Desk guides</a>
+    <a href="/Website-Updates/pascal-academy/ai-fundamentals">AI fundamentals</a>
+    <a href="/Website-Updates/pascal-academy/ai-glossary">AI glossary</a>
+    <a href="/Website-Updates/pascal-academy/workflows">Workflows</a>
+    <a href="/Website-Updates/pascal-academy/prompt-library">Prompt library</a>
+    <a href="/Website-Updates/pascal-academy/agent-library">Agent library</a>
+  </details>
+  <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+</div>
+
+<main id="main">
+<div class="ac ac-doc">
+<div class="rp" aria-hidden="true"><i></i></div>
+<div class="frame">
+  <header class="ah">
+    <div class="ah-l">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/Website-Updates/">Home</a><span aria-hidden="true">/</span><a href="/Website-Updates/pascal-academy">Pascal Academy</a><span aria-hidden="true">/</span><a href="/Website-Updates/pascal-academy/ai-fundamentals">AI fundamentals</a><span aria-hidden="true">/</span><span aria-current="page">Model Context Protocol (MCP)</span></nav>
+      <p class="ah-k">Last updated August 2026</p>
+      <h1 class="ah-t">Model Context Protocol (MCP)</h1>
+      <p class="lead">The open standard for connecting AI models to external tools, data sources, and services through a universal interface.</p>
+      <p class="ah-m">13 min read · Beginner-friendly with advanced sections</p>
+      <div class="ah-by"><span class="ah-av"><img src="/Website-Updates/assets/favicon.svg" alt="" width="40" height="40"></span><span><b>Pascal Academy</b><span>AI fundamentals · Part 10 of 10</span></span></div>
+      <div class="ah-a"><button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button></div>
+    </div>
+    <div class="ah-r"><div class="th th-hero" aria-hidden="true"><div class="th-bz"><div class="th-scr g-teal"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg><b>The MCP client</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg><b>The MCP server</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg><b>Communication</b></span></div></div></div></div></div>
+  </header>
+  <div class="ag">
+    <aside class="toc" aria-label="Table of contents">
+      <div class="toc-in">
+        <p class="toc-h">Table of contents</p>
+        <div class="toc-track"><span class="toc-fill"></span><ol data-spy><li><a href="#what-is-mcp">What Is MCP?</a></li><li><a href="#why-mcp-exists">Why MCP Exists</a></li><li><a href="#how-mcp-works">How MCP Works</a></li><li><a href="#mcp-components">MCP Components</a></li><li><a href="#building-an-mcp-server">Building an MCP Server</a></li><li><a href="#mcp-and-agents">MCP and Agents</a></li><li><a href="#mcp-vs-function-calling">MCP vs Function Calling</a></li><li><a href="#security-and-trust">Security and Trust</a></li><li><a href="#the-mcp-ecosystem">The MCP Ecosystem</a></li><li><a href="#the-future-of-mcp">The Future of MCP</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></div>
+        <div class="toc-cta">
+          <p class="toc-cta-t">Take this guide with you.</p>
+          <p>Get the PDF in your inbox.</p>
+          <button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button>
+        </div>
+      </div>
+    </aside>
+    <article class="ac-prose" id="article">
+      <details class="toc-m"><summary>Table of contents</summary><ol><li><a href="#what-is-mcp">What Is MCP?</a></li><li><a href="#why-mcp-exists">Why MCP Exists</a></li><li><a href="#how-mcp-works">How MCP Works</a></li><li><a href="#mcp-components">MCP Components</a></li><li><a href="#building-an-mcp-server">Building an MCP Server</a></li><li><a href="#mcp-and-agents">MCP and Agents</a></li><li><a href="#mcp-vs-function-calling">MCP vs Function Calling</a></li><li><a href="#security-and-trust">Security and Trust</a></li><li><a href="#the-mcp-ecosystem">The MCP Ecosystem</a></li><li><a href="#the-future-of-mcp">The Future of MCP</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<section class="ac-sec" id="what-is-mcp" aria-labelledby="what-is-mcp-h"><h2 id="what-is-mcp-h">What Is MCP?</h2>
+<p>In the AI agents guide, we covered how agents use tools to interact with the world. An agent reads a database, calls an API, searches the web, or executes code. Each of these actions requires a connection between the model and an external system. Building those connections has historically been ad hoc. Every agent framework, model provider, and tool integration used its own format, its own authentication, and its own way of describing what the tool does.</p>
+<p>The Model Context Protocol, or MCP, is an open standard that solves this fragmentation. It defines a common protocol for communication between AI applications and external data sources and tools. An easier way to think of it is as USB-C for AI integrations. Before USB-C, every device had its own connector, however, after USB-C, one cable can now work with everything. MCP aims to do the same for the connection between models and tools.</p>
+<p>MCP was introduced by Anthropic in late 2024 and has since gained adoption across model providers, agent frameworks, and tool developers. The protocol is open source, meaning anyone can implement it without licensing restrictions, and it is designed to be model-agnostic, meaning it works with any LLM.</p>
+<aside class="ac-co ac-co-principle"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>Key principle</p><div class="ac-co-body"><p>MCP standardises the interface between AI models and external systems. A tool that exposes itself through MCP can be used by any MCP-compatible client, whether that client is Claude, ChatGPT, an open source agent framework, or a custom application. This eliminates the need to build a separate integration for every model-tool pair.</p></div></aside>
+</section>
+<section class="ac-sec" id="why-mcp-exists" aria-labelledby="why-mcp-exists-h"><h2 id="why-mcp-exists-h">Why MCP Exists</h2>
+<p>Before MCP, connecting an AI model to an external tool required custom integration work. If you wanted your agent to read from a database, you wrote code that connected the model to the database, defined the tool's schema, and handled the communication format. If you then wanted the same agent to also read from a file system, you wrote another integration. If you switched model providers, you rewrote both integrations because the new provider used a different tool-calling format.</p>
+<p>This N-by-M problem, where N models each need to support M tools, creates a combinatorial explosion of integrations. With 10 models and 100 tools, you need 1,000 separate integrations. MCP reduces this to N plus M. Each model implements the MCP client protocol once. Each tool implements the MCP server protocol once. Any model can then use any tool.</p>
+<div class="ac-table"><table><thead><tr><th>Before MCP</th><th>With MCP</th></tr></thead><tbody><tr><td>Every model-tool pair needs a custom integration.</td><td>Each model implements MCP once. Each tool implements MCP once. Any model can use any tool.</td></tr><tr><td>Switching model providers requires rewriting all tool integrations.</td><td>Switching models requires no changes to tool integrations.</td></tr><tr><td>Tool definitions are specific to each agent framework.</td><td>Tool definitions are standardised and portable across frameworks.</td></tr><tr><td>Security and authentication are handled differently by each integration.</td><td>MCP defines standard security patterns for authentication and authorisation.</td></tr></tbody></table></div>
+<p>The practical benefit is reuse. A developer who builds an MCP server for a database makes that database accessible to every MCP-compatible AI application. A team that builds an MCP client in their agent gets access to every MCP server that exists, without writing additional integrations.</p>
+</section>
+<section class="ac-sec" id="how-mcp-works" aria-labelledby="how-mcp-works-h"><h2 id="how-mcp-works-h">How MCP Works</h2>
+<p>MCP follows a client-server architecture. The MCP client runs inside the AI application, and the MCP server wraps the external tool or data source. The client and server communicate using a standard protocol based on JSON-RPC, a lightweight message format that sends structured requests and responses.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's agent engineering course covers MCP server development, tool integration patterns, and production agent deployment. Reach out to learn about cohort programmes for your engineering team.</p><p><a class="ac-co-link" href="/Website-Updates/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<h3 id="the-mcp-client">The MCP Client</h3>
+<p>The client is the component that lives inside the AI application or agent framework. It manages connections to one or more MCP servers, discovers what tools and resources each server offers, and routes requests from the model to the appropriate server. When the model decides it needs to call a tool, the client sends the request to the MCP server that provides that tool, receives the response, and passes it back to the model.</p>
+<h3 id="the-mcp-server">The MCP Server</h3>
+<p>The server wraps an external system and exposes it through the MCP protocol. A server might wrap a database, a file system, an API like Slack or GitHub, a code execution environment, or any other system the model needs to interact with. The server advertises its capabilities, handles requests from the client, and returns results in a standardised format.</p>
+<h3 id="communication">Communication</h3>
+<p>The client and server communicate over a transport layer. Two transports are commonly used. The first is stdio, where the client launches the server as a subprocess and communicates through standard input and output. This is simple and works well for local tools. The second is HTTP with Server-Sent Events, which allows the server to run on a remote machine. This is suitable for tools that need to be shared across multiple clients or that connect to cloud services.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>The MCP protocol specification</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>MCP defines three types of capabilities that a server can expose. Tools are functions the model can call, like querying a database or sending a message. Each tool has a name, a description, and a schema describing its parameters. Resources are data the model can read, like files or database records. Each resource has a URI and a MIME type. Prompts are predefined prompt templates that the server offers, which can guide the model toward effective interactions. When a client connects to a server, the server advertises its capabilities, and the client makes them available to the model. The model then decides which tools to call and which resources to read based on the user's request.</p></div></details>
+</section>
+<section class="ac-sec" id="mcp-components" aria-labelledby="mcp-components-h"><h2 id="mcp-components-h">MCP Components</h2>
+<p>Understanding MCP means understanding the three types of capabilities a server can expose and how the client uses them.</p>
+<div class="ac-table"><table><thead><tr><th>Component</th><th>What It Does</th><th>Example</th></tr></thead><tbody><tr><td>Tools</td><td>Functions the model can call to perform actions or retrieve data. Each tool has a name, description, and parameter schema. The model decides when to call a tool based on the user's request and the tool's description.</td><td>A database query tool that accepts a SQL string and returns results. A file system tool that lists files in a directory. A Slack tool that sends a message to a channel.</td></tr><tr><td>Resources</td><td>Data the model can read, identified by a URI. Resources are read-only and provide context to the model. Unlike tools, resources are not called by the model. They are presented to the model as available context.</td><td>A file at file:///project/README.md. A database record at db://users/12345. A configuration file at config://app/settings.json.</td></tr><tr><td>Prompts</td><td>Predefined prompt templates that guide the model toward effective interactions with the server's tools and resources. Prompts can include placeholders that are filled in at runtime.</td><td>A code review prompt that instructs the model to read a file, analyse it, and suggest improvements using the server's file system tools.</td></tr></tbody></table></div>
+<p>The distinction between tools and resources matters. Tools are active, meaning the model calls them to perform an action or retrieve data. Resources are passive, meaning they are available context that the model can read. A database query tool lets the model run arbitrary SQL. A database resource presents a specific record to the model without requiring a tool call. The choice between exposing something as a tool or a resource depends on whether the model needs to actively request it or whether it should be available as context.</p>
+</section>
+<section class="ac-sec" id="building-an-mcp-server" aria-labelledby="building-an-mcp-server-h"><h2 id="building-an-mcp-server-h">Building an MCP Server</h2>
+<p>Building an MCP server means wrapping an external system and exposing it through the protocol. The process involves defining the tools and resources the server offers, implementing the logic for each, and running the server on a transport.</p>
+<p>Several SDKs are available for building MCP servers, including Python and TypeScript. The SDKs handle the protocol details, like message formatting and capability advertisement, so you can focus on the tool logic. A typical server defines its tools as functions, each with a name, description, and parameter schema. When a client sends a tool call request, the server executes the corresponding function and returns the result.</p>
+<h3 id="design-considerations">Design Considerations</h3>
+<p>When building an MCP server, several design decisions affect usability and safety. Tool descriptions should be clear and specific, because the model uses them to decide when to call each tool. A vague description like search data is less effective than search the product catalogue by name, category, or SKU, returning matching products with their prices and availability. The model needs enough detail to understand what the tool does and when to use it.</p>
+<p>Parameter schemas should be precise. If a parameter accepts an enum, list the valid values. If a parameter is required, mark it as required. If a parameter has a default, specify it. The more information the schema provides, the less likely the model is to call the tool with incorrect parameters.</p>
+<p>Security is a primary concern. An MCP server that wraps a database should not let the model run arbitrary DROP TABLE statements. Read-only tools should be clearly separated from write tools. Authentication should be required for sensitive operations. The server should validate all inputs and return clear error messages when parameters are invalid or unauthorised.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>The lifecycle of an MCP tool call</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>When a model decides to call a tool, the flow is as follows. The client sends the user's message to the model along with the list of available tools and their schemas. The model processes the message and decides to call a tool, producing a tool call request with the tool name and parameters. The client receives this request and routes it to the MCP server that provides the tool. The server executes the tool function with the given parameters and returns the result. The client passes the result back to the model as a tool response. The model uses the response to generate its answer or to decide whether another tool call is needed. This cycle can repeat multiple times for complex tasks, similar to the ReAct loop covered in the AI agents guide.</p></div></details>
+</section>
+<section class="ac-sec" id="mcp-and-agents" aria-labelledby="mcp-and-agents-h"><h2 id="mcp-and-agents-h">MCP and Agents</h2>
+<p>MCP and agents are complementary. As covered in the AI agents guide, an agent uses a model to plan and execute multi-step workflows, calling tools along the way. MCP provides the standardised interface through which those tool calls happen.</p>
+<p>Without MCP, an agent framework needs custom integrations for every tool it supports. The framework defines its own tool-calling format, and developers write adapters to connect external systems. With MCP, the framework only needs to implement the MCP client protocol. Every MCP server becomes available as a tool source, and the framework does not need to know the details of how each tool works.</p>
+<p>This separation of concerns is valuable. Agent developers can focus on planning, reasoning, and orchestration without reimplementing tool integrations for each new data source. Tool developers can build MCP servers without knowing which agent frameworks will use them. The protocol acts as a clean boundary between the two layers.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's agent engineering course covers MCP integration, tool design patterns, and production agent architecture. Reach out to learn about team training options.</p><p><a class="ac-co-link" href="/Website-Updates/pascal-academy/signup">Ask about team training</a></p></div></aside>
+</section>
+<section class="ac-sec" id="mcp-vs-function-calling" aria-labelledby="mcp-vs-function-calling-h"><h2 id="mcp-vs-function-calling-h">MCP vs Function Calling</h2>
+<p>Function calling is a capability built into modern language models. The model is given a list of functions with their parameter schemas, and it can decide to call a function by producing a structured output with the function name and arguments. The application executes the function and returns the result to the model.</p>
+<p>MCP and function calling serve different layers of the stack. Function calling is a model capability, meaning the model can produce structured tool-call requests. MCP is a protocol, meaning it defines how those requests are routed to external systems and how results are returned. The two work together. The model uses function calling to decide which tool to call and with what parameters. MCP transports that request to the appropriate server, executes it, and returns the result.</p>
+<div class="ac-table"><table><thead><tr><th>Function Calling</th><th>MCP</th></tr></thead><tbody><tr><td>A model capability. The model produces structured tool-call requests.</td><td>A protocol for routing those requests to external systems.</td></tr><tr><td>Specific to each model provider. OpenAI, Anthropic, and Google each have their own format.</td><td>Model-agnostic. Works with any model that supports tool calling.</td></tr><tr><td>Defines how the model expresses a tool call, not how the call is executed.</td><td>Defines how the call is transported, executed, and the result returned.</td></tr><tr><td>The application is responsible for connecting each tool call to the right external system.</td><td>The protocol handles routing to the right server and returning the result.</td></tr></tbody></table></div>
+<p>In practice, an MCP-compatible application uses function calling internally. The model produces a tool-call request using its native function-calling format. The application translates this into an MCP request and sends it to the server. The distinction is that MCP standardises the layer between the model and the tool, so the application does not need custom code for each tool.</p>
+</section>
+<section class="ac-sec" id="security-and-trust" aria-labelledby="security-and-trust-h"><h2 id="security-and-trust-h">Security and Trust</h2>
+<p>MCP servers give AI models access to external systems, which means they also introduce security considerations. A model that can query a database can potentially access sensitive data. A model that can send messages can potentially send unauthorised communications. A model that can execute code can potentially run harmful commands.</p>
+<p>Several security practices are important when deploying MCP. Least privilege means each server should expose only the tools and resources the model needs, with the minimum permissions required. A database server for a read-only Q and A system should not expose write or delete tools. Authentication means the server should verify the identity of the client and enforce access controls. Input validation means the server should validate all parameters before executing a tool, rejecting requests that contain invalid or potentially harmful input.</p>
+<p>User consent is another consideration. For actions that have real-world consequences, like sending an email or modifying a database record, the application should ask the user for confirmation before the server executes the tool. This is human-in-the-loop, as covered in the AI agents guide. MCP itself does not enforce these practices. It is a protocol, not a security framework. The responsibility for secure deployment falls on the developers building and configuring the servers.</p>
+</section>
+<section class="ac-sec" id="the-mcp-ecosystem" aria-labelledby="the-mcp-ecosystem-h"><h2 id="the-mcp-ecosystem-h">The MCP Ecosystem</h2>
+<p>Since its introduction, MCP has grown a substantial ecosystem of servers, clients, and tools. Several categories have emerged.</p>
+<h3 id="reference-servers">Reference Servers</h3>
+<p>Anthropic and the community have built reference MCP servers for common integrations. These include servers for file system access, database querying, web search, Git repositories, Slack, GitHub, and Google Drive. These servers can be used directly or adapted for specific needs. They serve as examples of how to build well-structured MCP servers.</p>
+<h3 id="client-support">Client Support</h3>
+<p>MCP is supported by several AI applications and agent frameworks. Claude Desktop was the first MCP client, allowing users to connect local tools through MCP servers. Other applications, including open source agent frameworks and development tools, have added MCP client support. As adoption grows, the value of the protocol increases, because each new client gains access to every existing server and each new server becomes available to every existing client.</p>
+<h3 id="custom-servers">Custom Servers</h3>
+<p>Organisations build custom MCP servers to expose internal systems to AI applications. A company might build an MCP server for its internal wiki, its CRM, its ticketing system, or its deployment pipeline. Once built, these servers can be used by any MCP-compatible client, whether that is a local assistant, a cloud-based agent, or a custom application.</p>
+</section>
+<section class="ac-sec" id="the-future-of-mcp" aria-labelledby="the-future-of-mcp-h"><h2 id="the-future-of-mcp-h">The Future of MCP</h2>
+<p>MCP is still early in its adoption curve. The protocol defines the basic mechanics of tool discovery, invocation, and result return, but several areas are evolving.</p>
+<p>Remote deployment is one direction. Currently, many MCP servers run locally through stdio transport, which limits them to single-user, single-machine setups. Remote MCP servers running over HTTP would enable shared tool access across teams and organisations. This raises additional security considerations, including authentication, encryption, and access control, which the protocol is beginning to address.</p>
+<p>Standardisation across model providers is another direction. While MCP is model-agnostic, the way models use MCP-exposed tools still depends on their native function-calling format. Further standardisation of the tool-calling layer would reduce the remaining differences between model providers.</p>
+<p>The broader question is whether MCP becomes the universal standard for AI-tool integration, or whether competing protocols fragment the ecosystem. The open source nature of MCP, combined with growing adoption from both model providers and tool developers, gives it a strong position. But standards succeed when they reach critical mass, and MCP is still building toward that point.</p>
+<aside class="ac-co ac-co-summary"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>Summary</p><div class="ac-co-body"><p>The Model Context Protocol is an open standard for connecting AI models to external tools, data sources, and services. It uses a client-server architecture where the client lives inside the AI application and the server wraps an external system. Servers expose three types of capabilities. Tools are functions the model can call. Resources are data the model can read. Prompts are predefined templates that guide the model. MCP solves the N-by-M integration problem by standardising the interface, so any model can use any tool through a single protocol. It complements function calling, which is the model's ability to produce tool-call requests, by handling the transport and execution layer. Security is a primary concern when deploying MCP servers, and practices like least privilege, authentication, input validation, and human-in-the-loop confirmation are essential. The MCP ecosystem is growing, with reference servers for common integrations and custom servers for internal systems. The protocol is still early in its adoption curve, with ongoing development in remote deployment, cross-provider standardisation, and security.</p></div></aside>
+</section>
+<aside class="ac-about"><p class="ac-about-h">About this guide</p><p>This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, agents, context windows, knowledge graphs, hallucinations, reasoning models, embeddings, and MCP. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.</p><p>See how this works in Pascal: <a href="/Website-Updates/platform/mcp-apis">Pascal MCP and APIs</a>.</p></aside>
+    </article>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What is the Model Context Protocol (MCP)?<span class="pm" aria-hidden="true"></span></summary><div class="ans">MCP is an open standard that defines how AI models connect to external data sources and tools. It provides a common interface so that an AI model can retrieve information from databases, file systems, and APIs without requiring custom integrations for each source.</div></details>
+<details class="faq-item"><summary>Why is MCP important for AI in finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Finance teams work with data from Bloomberg, Capital IQ, FactSet, internal CRM systems, and filings. Without a standard protocol, connecting an AI model to each source requires a custom integration. MCP simplifies this by providing a common interface, so one connection can reach multiple data sources.</div></details>
+<details class="faq-item"><summary>How does Pascal implement MCP for institutional finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal is MCP-native, meaning its agents connect to your existing data providers through the Model Context Protocol. Bloomberg, SharePoint, Snowflake, and your CRM connect through one MCP Hub. This means Pascal's agents can pull from all your data sources without custom pipelines, and citations trace back to the source line regardless of where the data originated.</div></details>
+<details class="faq-item"><summary>What is the difference between MCP and an API?<span class="pm" aria-hidden="true"></span></summary><div class="ans">An API connects a specific application to another specific application with a custom interface. MCP is a standard protocol that defines how any AI model connects to any data source. APIs are point-to-point connections. MCP provides a common layer so one model can reach many sources through a consistent interface.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kl" aria-labelledby="kl-h">
+    <h2 class="sx-t" id="kl-h">Keep learning</h2>
+    <div class="kl-g"><a class="gc" href="/Website-Updates/pascal-academy/guides/large-language-models"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-mint"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg><b>Pre-training</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"/></svg><b>Supervised fine-tuning</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><b>Human feedback (RLHF)</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 01</span><h3 class="gc-t">Large language models (LLMs)</h3><p class="gc-m">12 min read</p></div></a><a class="gc" href="/Website-Updates/pascal-academy/guides/prompt-engineering"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-sea"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><b>Zero-shot prompting</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg><b>Few-shot prompting</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg><b>Chain-of-thought</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 02</span><h3 class="gc-t">Prompt engineering</h3><p class="gc-m">15 min read</p></div></a><a class="gc" href="/Website-Updates/guides/ai-for-hedge-funds"><div class="th" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-teal"><img src="/Website-Updates/assets/shots/shot-agent-table.webp" alt="Pascal agent output: a street vs management framing table for Sea Limited with citations" width="1600" height="844" loading="lazy" decoding="async"></div></div></div><div class="gc-b"><span class="pill">Desk guide</span><h3 class="gc-t">AI for Hedge Funds</h3><p class="gc-m">24 min read</p></div></a></div>
+  </section>
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/Website-Updates/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">Ask your first question with your firm's context.<br><span style="color:var(--mint-2)">A walkthrough with your own documents connected.</span></h2>
+  <div class="actions">
+    <a class="btn btn-white" href="https://pascalailabs.com/demo">Book a demo</a>
+  </div>
+</section>
+
+<dialog class="ac-gate" id="pdf-gate" aria-labelledby="gate-h">
+  <div class="ac-gate-in">
+    <div class="ac-gate-side">
+      <p class="eyebrow">Pascal Academy · PDF</p>
+      <p class="ac-gate-t">Model Context Protocol (MCP)</p>
+      <p class="ac-gate-m">13 min read</p>
+      <div class="ac-gate-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b><i></i><i></i></div>
+    </div>
+    <div class="ac-gate-main">
+      <button class="ac-gate-x" type="button" data-gate-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      <form class="ac-gate-form" data-gate-form data-guide="Model Context Protocol (MCP)" data-slug="model-context-protocol" data-pdf="/Website-Updates/assets/academy/pdf/model-context-protocol.pdf" novalidate>
+        <h2 id="gate-h">Get this guide as a PDF</h2>
+        <p class="ac-gate-sub">Tell us where to send it and we will email you the PDF.</p>
+        <label>Full name<input name="name" autocomplete="name" required></label>
+        <label>Work email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Organization<input name="organization" autocomplete="organization" required></label>
+        <p class="ac-gate-err" role="alert" hidden></p>
+        <button class="btn btn-dark" type="submit">Email me the PDF</button>
+        <p class="ac-gate-fine">By submitting, you agree to be contacted about Pascal Academy.</p>
+      </form>
+      <div class="ac-gate-done" hidden>
+        <span class="ac-gate-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <h2>Check your inbox.</h2>
+        <p>We have sent <b>Model Context Protocol (MCP)</b> to <span data-gate-email></span>.</p>
+        <button class="btn btn-line" type="button" data-gate-close>Back to the guide</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="/Website-Updates/assets/pages/academy3.js?v=4f48f13d9f" defer></script>
+</main>
+<footer class="footer">
+  <div class="frame">
+    <div class="footer-grid">
+      <div>
+        <a href="/Website-Updates/" aria-label="Pascal AI home"><img src="/Website-Updates/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24" loading="lazy"></a>
+        <p class="footer-blurb">The Investment OS for asset and wealth managers, asset servicers, corporate treasury, banks and financial institutions, private equity and private credit firms, and hedge funds.</p>
+      </div>
+      <nav aria-label="Platform">
+        <p class="fh">Platform</p>
+        <ul>
+          <li><a href="/Website-Updates/platform">Platform overview</a></li>
+          <li><a href="/Website-Updates/platform/context-graph">Context graph &amp; memory</a></li>
+          <li><a href="/Website-Updates/platform/mcp-apis">MCP &amp; APIs</a></li>
+          <li><a href="/Website-Updates/solutions/ai-transformation">AI transformation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Products">
+        <p class="fh">Products</p>
+        <ul>
+          <li><a href="/Website-Updates/ask-pascal">Ask Pascal</a></li>
+          <li><a href="/Website-Updates/ask-pascal/cited-research">Cited research</a></li>
+          <li><a href="/Website-Updates/ask-pascal/screeners">Screeners</a></li>
+          <li><a href="/Website-Updates/pascal-agents">Pascal Agents</a></li>
+          <li><a href="/Website-Updates/pascal-agents/workflow-library">Workflow library</a></li>
+          <li><a href="/Website-Updates/pascal-agents/data-agent">Pascal Data Agent</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Industries">
+        <p class="fh">Industries</p>
+        <ul>
+          <li><a href="/Website-Updates/solutions/hedge-funds">Hedge Funds</a></li>
+          <li><a href="/Website-Updates/solutions/asset-wealth-management">Asset &amp; Wealth Management</a></li>
+          <li><a href="/Website-Updates/solutions/banking">Banks &amp; Financial Institutions</a></li>
+          <li><a href="/Website-Updates/solutions/asset-servicing">Asset Servicing</a></li>
+          <li><a href="/Website-Updates/solutions/private-equity-credit">Private Equity &amp; Private Credit</a></li>
+          <li><a href="/Website-Updates/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a></li>
+          <li><a href="/Website-Updates/customer-stories">Customer stories</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="News">
+        <p class="fh">News</p>
+        <ul>
+          <li><a href="https://pascalailabs.com/news">Newsroom</a></li>
+          <li><a href="/Website-Updates/news/founders-notes">Founder's notes</a></li>
+          <li><a href="https://vibhavviswanathan.substack.com" rel="noopener">Alpha &amp; Agents</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="fh">Company</p>
+        <ul>
+          <li><a href="https://pascalailabs.com/about">About</a></li>
+          <li><a href="/Website-Updates/security">Security</a></li>
+          <li><a href="https://pascalailabs.com/careers">Careers</a></li>
+          <li><a href="/Website-Updates/pascal-academy">Pascal Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pascal AI Labs</span>
+      <span><a href="https://pascalailabs.com/privacy-policy">Privacy</a> &middot; <a href="https://pascalailabs.com/terms-of-use">Terms</a> &middot; <a href="https://www.linkedin.com/company/pascal-ai-labs/" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/pascalailabs" rel="noopener">X</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

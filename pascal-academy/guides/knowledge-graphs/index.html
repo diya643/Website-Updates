@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>Knowledge Graphs Explained | Pascal Academy</title>
+<meta name="description" content="A guide to knowledge graphs for finance teams: nodes, edges and properties, how graphs work, GraphRAG, and how they compare to vector databases for research.">
+<link rel="canonical" href="https://pascalailabs.com/pascal-academy/guides/knowledge-graphs">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#052A2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pascal AI">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Knowledge Graphs Explained | Pascal Academy">
+<meta property="og:description" content="A guide to knowledge graphs for finance teams: nodes, edges and properties, how graphs work, GraphRAG, and how they compare to vector databases for research.">
+<meta property="og:url" content="https://pascalailabs.com/pascal-academy/guides/knowledge-graphs">
+<meta property="og:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-knowledge-graphs.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Knowledge Graphs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pascalailabs">
+<meta name="twitter:title" content="Knowledge Graphs Explained | Pascal Academy">
+<meta name="twitter:description" content="A guide to knowledge graphs for finance teams: nodes, edges and properties, how graphs work, GraphRAG, and how they compare to vector databases for research.">
+<meta name="twitter:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-knowledge-graphs.png">
+<link rel="icon" href="/Website-Updates/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/Website-Updates/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/Website-Updates/assets/site.css?v=a6dc05dfb8">
+<link rel="stylesheet" href="/Website-Updates/assets/pages/academy3.css?v=6b20df6ba8">
+<script src="/Website-Updates/assets/site.js?v=cd66888c46" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV9WGBYMQR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SV9WGBYMQR');</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pascalailabs.com/#org",
+   "name": "Pascal AI Labs",
+   "alternateName": "Pascal AI",
+   "url": "https://pascalailabs.com/",
+   "logo": "https://pascalailabs.com/assets/pascal-logo.png",
+   "sameAs": [
+    "https://www.linkedin.com/company/pascal-ai-labs/",
+    "https://twitter.com/pascalailabs"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/knowledge-graphs#webpage",
+   "url": "https://pascalailabs.com/pascal-academy/guides/knowledge-graphs",
+   "name": "Knowledge Graphs Explained | Pascal Academy",
+   "description": "A guide to knowledge graphs for finance teams: nodes, edges and properties, how graphs work, GraphRAG, and how they compare to vector databases for research.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://pascalailabs.com/#website"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "dateModified": "2026-08-01",
+   "breadcrumb": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/knowledge-graphs#breadcrumb"
+   },
+   "primaryImageOfPage": "https://pascalailabs.com/assets/og/pascal-academy-guides-knowledge-graphs.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pascalailabs.com/#website",
+   "url": "https://pascalailabs.com/",
+   "name": "Pascal AI",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/knowledge-graphs#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pascalailabs.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pascal Academy",
+     "item": "https://pascalailabs.com/pascal-academy"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AI fundamentals",
+     "item": "https://pascalailabs.com/pascal-academy/ai-fundamentals"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Knowledge Graphs",
+     "item": "https://pascalailabs.com/pascal-academy/guides/knowledge-graphs"
+    }
+   ]
+  },
+  {
+   "@type": "TechArticle",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/knowledge-graphs#article",
+   "headline": "Knowledge Graphs",
+   "description": "A guide to knowledge graphs for finance teams: nodes, edges and properties, how graphs work, GraphRAG, and how they compare to vector databases for research.",
+   "url": "https://pascalailabs.com/pascal-academy/guides/knowledge-graphs",
+   "inLanguage": "en",
+   "dateModified": "2026-08-01",
+   "datePublished": "2026-08-01",
+   "author": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "isPartOf": {
+    "@type": "Collection",
+    "name": "Pascal Academy",
+    "url": "https://pascalailabs.com/pascal-academy"
+   },
+   "mainEntityOfPage": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/knowledge-graphs#webpage"
+   },
+   "image": "https://pascalailabs.com/assets/og/pascal-academy-guides-knowledge-graphs.png",
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Institutional investment teams"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/knowledge-graphs#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is a knowledge graph in AI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A knowledge graph is a structured representation of information where entities are nodes and relationships are edges. It stores facts as connections between things, e.g. Company A competes with Company B, or Executive C works at Company D. This structure makes it possible to query relationships that would be hard to extract from text alone."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How are knowledge graphs used in finance?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Knowledge graphs help finance teams map relationships between companies, executives, suppliers, customers, and sectors. They support competitive analysis, supply chain mapping, risk detection, and finding hidden connections that might affect an investment thesis."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is GraphRAG and how does Pascal use knowledge graphs?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "GraphRAG combines knowledge graphs with retrieval-augmented generation. Instead of retrieving text chunks, the system retrieves connected entities and relationships from a graph, then uses a language model to synthesize the results. Pascal builds a persistent knowledge graph across every document and filing your team touches, so research compounds over time and every query gets smarter."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between a knowledge graph and a vector database?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A vector database stores text chunks as embeddings and retrieves semantically similar passages. A knowledge graph stores structured relationships between entities. Vector databases are good for finding relevant text. Knowledge graphs are good for answering questions about how things connect. They serve different purposes and can complement each other."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/Website-Updates/" aria-label="Pascal AI home">
+      <img src="/Website-Updates/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/Website-Updates/platform" aria-expanded="false" aria-haspopup="true">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-product">
+          <div class="mega-panel">
+            <div class="mp-col">
+              <a class="mp-feature" href="/Website-Updates/platform">
+                <span class="mp-art" aria-hidden="true"><i></i><i></i><i></i></span>
+                <b>Platform overview</b>
+                <span>See how the Investment OS works.</span>
+              </a>
+              <p class="mp-label">Platform</p>
+              <a class="mp-link" href="/Website-Updates/platform/context-graph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg> Context graph &amp; memory</a>
+              <a class="mp-link" href="/Website-Updates/platform/mcp-apis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> MCP &amp; APIs</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/Website-Updates/ask-pascal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Ask Pascal</b><span>Your AI research analyst</span></span></a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/decision-traces"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg> Decision traces</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/cited-research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg> Cited research</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/screeners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg> Screeners</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/pascal-intel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg> Pascal Intel</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/Website-Updates/pascal-agents"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><span><b>Pascal Agents</b><span>Run investment work end to end</span></span></a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/autonomous-agents"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Autonomous agents</a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/workflow-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg> Agentic workflow library</a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/data-agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg> Pascal Data Agent</a>
+            </div>
+            <a class="mp-foot" href="/Website-Updates/solutions/hedge-funds"><span class="chip">Industries</span><span><b>Pascal for your firm</b><span>Hedge funds, asset and wealth managers, banks, asset servicers, private equity and private credit, and corporate treasury</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/Website-Updates/solutions/hedge-funds" aria-expanded="false" aria-haspopup="true">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-il">
+          <div class="mega-panel">
+              <a class="il-i" href="/Website-Updates/solutions/hedge-funds"><span><b>Hedge Funds</b><small>Event briefs, reconciliations and DDQs</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/asset-wealth-management"><span><b>Asset &amp; Wealth Management</b><small>Research, mandate checks and client reporting</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/banking"><span><b>Banks &amp; Financial Institutions</b><small>Underwriting, covenant monitoring and KYC</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/asset-servicing"><span><b>Asset Servicing</b><small>Corporate actions, NAV checks and client queries</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/private-equity-credit"><span><b>Private Equity &amp; Private Credit</b><small>CIM screens, diligence and LP reporting</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/treasury-hedge-accounting"><span><b>Corporate Treasury &amp; Hedge Accounting</b><small>Exposures, effectiveness tests and hedge files</small></span></a>
+              <div class="il-cs">
+                <p class="il-cs-h"><span>Customer stories</span><a href="/Website-Updates/customer-stories">View all</a></p>
+                <div class="il-cs-g">
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/us-hedge-fund-idea-generation"><img src="/Website-Updates/assets/photos/cs-us-hedge-fund-sm.jpg?v=1b4b4b4db3" alt="" width="44" height="44" loading="lazy"><span><b>Top 20 US hedge fund</b><small>Evidence-backed ideas</small></span></a>
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/apac-asset-manager-research-coverage"><img src="/Website-Updates/assets/photos/cs-apac-research-sm.jpg?v=c9e1340963" alt="" width="44" height="44" loading="lazy"><span><b>$70B+ asset manager</b><small>Research on 1,000+ names</small></span></a>
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/apac-asset-manager-institutional-knowledge"><img src="/Website-Updates/assets/photos/cs-apac-knowledge-sm.jpg?v=661087cbfd" alt="" width="44" height="44" loading="lazy"><span><b>$100B+ asset manager</b><small>Firm knowledge, one query</small></span></a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="https://pascalailabs.com/news" aria-expanded="false" aria-haspopup="true">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-list mega-news mega-news-ac">
+          <div class="mega-panel">
+            <div class="mn-col">
+              <p class="mp-label">News</p>
+              <a class="mp-link" href="https://pascalailabs.com/news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg> Newsroom</a>
+              <a class="mp-link" href="/Website-Updates/news/founders-notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Founder's notes</a>
+            </div>
+            <div class="mn-col mn-ac">
+              <a class="mn-ac-head" href="/Website-Updates/pascal-academy"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><b>Pascal Academy</b><span>Learn AI for institutional finance</span></span></a>
+              <a class="mp-link" href="/Website-Updates/guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Desk guides</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/ai-fundamentals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg> AI fundamentals</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/ai-glossary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> AI glossary</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> Workflows</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/prompt-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Prompt library</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/agent-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> Agent library</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-dark btn-sm" href="https://pascalailabs.com/demo">Book a demo</a>
+    </div>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <details open>
+    <summary>Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <p class="mm-label">Platform</p>
+    <a href="/Website-Updates/platform">Platform overview</a>
+    <a href="/Website-Updates/platform/context-graph">Context graph &amp; memory</a>
+    <a href="/Website-Updates/platform/mcp-apis">MCP &amp; APIs</a>
+    <p class="mm-label">Ask Pascal</p>
+    <a href="/Website-Updates/ask-pascal">Ask Pascal overview</a>
+    <a href="/Website-Updates/ask-pascal/decision-traces">Decision traces</a>
+    <a href="/Website-Updates/ask-pascal/cited-research">Cited research</a>
+    <a href="/Website-Updates/ask-pascal/screeners">Screeners</a>
+    <a href="/Website-Updates/ask-pascal/pascal-intel">Pascal Intel</a>
+    <p class="mm-label">Pascal Agents</p>
+    <a href="/Website-Updates/pascal-agents">Pascal Agents overview</a>
+    <a href="/Website-Updates/pascal-agents/autonomous-agents">Autonomous agents</a>
+    <a href="/Website-Updates/pascal-agents/workflow-library">Agentic workflow library</a>
+    <a href="/Website-Updates/pascal-agents/data-agent">Pascal Data Agent</a>
+  </details>
+  <details>
+    <summary>Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/Website-Updates/solutions/hedge-funds">Hedge Funds</a>
+    <a href="/Website-Updates/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+    <a href="/Website-Updates/solutions/banking">Banks &amp; Financial Institutions</a>
+    <a href="/Website-Updates/solutions/asset-servicing">Asset Servicing</a>
+    <a href="/Website-Updates/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+    <a href="/Website-Updates/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+    <a href="/Website-Updates/customer-stories">Customer stories</a>
+  </details>
+  <details>
+    <summary>News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="https://pascalailabs.com/news">Newsroom</a>
+    <a href="/Website-Updates/news/founders-notes">Founder's notes</a>
+    <p class="mm-label">Pascal Academy</p>
+    <a href="/Website-Updates/pascal-academy">Academy home</a>
+    <a href="/Website-Updates/guides">Desk guides</a>
+    <a href="/Website-Updates/pascal-academy/ai-fundamentals">AI fundamentals</a>
+    <a href="/Website-Updates/pascal-academy/ai-glossary">AI glossary</a>
+    <a href="/Website-Updates/pascal-academy/workflows">Workflows</a>
+    <a href="/Website-Updates/pascal-academy/prompt-library">Prompt library</a>
+    <a href="/Website-Updates/pascal-academy/agent-library">Agent library</a>
+  </details>
+  <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+</div>
+
+<main id="main">
+<div class="ac ac-doc">
+<div class="rp" aria-hidden="true"><i></i></div>
+<div class="frame">
+  <header class="ah">
+    <div class="ah-l">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/Website-Updates/">Home</a><span aria-hidden="true">/</span><a href="/Website-Updates/pascal-academy">Pascal Academy</a><span aria-hidden="true">/</span><a href="/Website-Updates/pascal-academy/ai-fundamentals">AI fundamentals</a><span aria-hidden="true">/</span><span aria-current="page">Knowledge Graphs</span></nav>
+      <p class="ah-k">Last updated August 2026</p>
+      <h1 class="ah-t">Knowledge Graphs</h1>
+      <p class="lead">How structured relationships between entities give AI systems grounded, queryable knowledge that goes beyond text retrieval.</p>
+      <p class="ah-m">14 min read · Beginner-friendly with advanced sections</p>
+      <div class="ah-by"><span class="ah-av"><img src="/Website-Updates/assets/favicon.svg" alt="" width="40" height="40"></span><span><b>Pascal Academy</b><span>AI fundamentals · Part 6 of 10</span></span></div>
+      <div class="ah-a"><button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button></div>
+    </div>
+    <div class="ah-r"><div class="th th-hero" aria-hidden="true"><div class="th-bz"><div class="th-scr g-mint"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg><b>Nodes</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><b>Edges</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg><b>Organising principles</b></span></div></div></div></div></div>
+  </header>
+  <div class="ag">
+    <aside class="toc" aria-label="Table of contents">
+      <div class="toc-in">
+        <p class="toc-h">Table of contents</p>
+        <div class="toc-track"><span class="toc-fill"></span><ol data-spy><li><a href="#what-is-a-knowledge-graph">What Is a Knowledge Graph?</a></li><li><a href="#why-knowledge-graphs-exist">Why Knowledge Graphs Exist</a></li><li><a href="#how-knowledge-graphs-work">How Knowledge Graphs Work</a></li><li><a href="#building-a-knowledge-graph">Building a Knowledge Graph</a></li><li><a href="#knowledge-graphs-and-ai">Knowledge Graphs and AI</a></li><li><a href="#knowledge-graphs-vs-vector-databases">Knowledge Graphs vs Vector Databases</a></li><li><a href="#use-cases">Use Cases</a></li><li><a href="#challenges-and-limitations">Challenges and Limitations</a></li><li><a href="#when-to-use-a-knowledge-graph">When to Use a Knowledge Graph</a></li><li><a href="#the-future-of-knowledge-graphs-in-ai">The Future of Knowledge Graphs in AI</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></div>
+        <div class="toc-cta">
+          <p class="toc-cta-t">Take this guide with you.</p>
+          <p>Get the PDF in your inbox.</p>
+          <button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button>
+        </div>
+      </div>
+    </aside>
+    <article class="ac-prose" id="article">
+      <details class="toc-m"><summary>Table of contents</summary><ol><li><a href="#what-is-a-knowledge-graph">What Is a Knowledge Graph?</a></li><li><a href="#why-knowledge-graphs-exist">Why Knowledge Graphs Exist</a></li><li><a href="#how-knowledge-graphs-work">How Knowledge Graphs Work</a></li><li><a href="#building-a-knowledge-graph">Building a Knowledge Graph</a></li><li><a href="#knowledge-graphs-and-ai">Knowledge Graphs and AI</a></li><li><a href="#knowledge-graphs-vs-vector-databases">Knowledge Graphs vs Vector Databases</a></li><li><a href="#use-cases">Use Cases</a></li><li><a href="#challenges-and-limitations">Challenges and Limitations</a></li><li><a href="#when-to-use-a-knowledge-graph">When to Use a Knowledge Graph</a></li><li><a href="#the-future-of-knowledge-graphs-in-ai">The Future of Knowledge Graphs in AI</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<section class="ac-sec" id="what-is-a-knowledge-graph" aria-labelledby="what-is-a-knowledge-graph-h"><h2 id="what-is-a-knowledge-graph-h">What Is a Knowledge Graph?</h2>
+<p>In the previous guides, we covered how language models generate text, how prompts steer them, and how RAG retrieves documents to ground their answers. All of these approaches treat knowledge as text. A document is a bag of words, a chunk is a fragment of text, and retrieval is a search for text that looks similar to the query. This works well for many tasks, but it has a blind spot. Text captures what something says, but not how things relate.</p>
+<p>Consider a simple question. Who is the CEO of the company that acquired the startup founded by the person who wrote this paper? A human can answer this by following a chain of relationships. They look up the paper, find the author, find the startup they founded, find the acquiring company, and find its CEO. Each step involves a specific relationship between two entities, and the answer comes from traversing that chain.</p>
+<p>A knowledge graph stores exactly this kind of structured relationship. It is a data structure where entities are nodes and the connections between them are edges. Each edge carries a label that describes the relationship type. A node for a person connects to a node for a company through an edge labelled "founded." That company connects to another company through an edge labelled "acquired by." The CEO connects to the company through an edge labelled "leads." The graph captures not just what things are, but how they connect to each other.</p>
+<p>The term knowledge graph was popularised by Google in 2012 as part of their search product, which used a graph of entities and their relationships to provide direct answers rather than just links to web pages. Since then, the concept has spread far beyond search. Enterprises use knowledge graphs to organise internal data, researchers use them to map relationships in biology and drug discovery, and AI systems use them to ground language model outputs in verified facts.</p>
+<aside class="ac-co ac-co-principle"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>Key principle</p><div class="ac-co-body"><p>A knowledge graph separates knowledge from text. Text says things about the world. A knowledge graph encodes how the world is structured. This separation matters because structured relationships can be queried precisely, traced to their source, and updated without reprocessing unstructured documents.</p></div></aside>
+</section>
+<section class="ac-sec" id="why-knowledge-graphs-exist" aria-labelledby="why-knowledge-graphs-exist-h"><h2 id="why-knowledge-graphs-exist-h">Why Knowledge Graphs Exist</h2>
+<p>Relational databases store data in tables. A table of customers has columns for name, email, and address. A table of orders has columns for order ID, customer ID, and product ID. To answer a question like which products did this customer buy, you join the two tables on the customer ID column. This works, and it has powered business software for decades.</p>
+<p>The problem appears when relationships become the focus of the question rather than a side effect of a join. Consider a fraud detection system. You want to know whether two accounts share a phone number, whether they transferred money to the same third account, whether that third account is linked to a known fraud ring, and whether any of these accounts share a device fingerprint. In a relational database, each of these connections is a join across a different table, and the query grows exponentially as you follow the chain. The database engine computes the joins at query time, which means deep relationship questions are slow and expensive.</p>
+<p>A knowledge graph stores relationships directly. Rather than reconstructing connections through joins, the graph stores an explicit edge between each pair of related entities. Traversing the graph means following edges, which is a local operation. Finding all accounts connected to a given account within two hops is a graph traversal, and it is fast because the edges already exist in the data structure.</p>
+<div class="ac-table"><table><thead><tr><th>Relational Database</th><th>Knowledge Graph</th></tr></thead><tbody><tr><td>Stores data in tables with rows and columns.</td><td>Stores data as nodes and edges in a network.</td></tr><tr><td>Relationships are reconstructed at query time using JOINs.</td><td>Relationships are stored explicitly as edges in the data.</td></tr><tr><td>Schema is rigid. Adding a new relationship type requires schema changes.</td><td>Schema is flexible. New relationship types can be added without restructuring existing data.</td></tr><tr><td>Deep multi-hop queries become slow as the number of joins grows.</td><td>Graph traversal handles multi-hop queries efficiently because edges are pre-stored.</td></tr><tr><td>Well suited for transactional workloads with fixed schemas.</td><td>Well suited for exploratory analysis, recommendation, and entity resolution.</td></tr></tbody></table></div>
+<p>None of this means knowledge graphs replace relational databases. For well-structured transactional data with a fixed schema, a relational database is usually the right choice. Knowledge graphs earn their place when relationships are the core of the question, when the schema evolves frequently, or when you need to integrate data from multiple sources with different structures.</p>
+</section>
+<section class="ac-sec" id="how-knowledge-graphs-work" aria-labelledby="how-knowledge-graphs-work-h"><h2 id="how-knowledge-graphs-work-h">How Knowledge Graphs Work</h2>
+<p>A knowledge graph has three structural components. Nodes represent entities. Edges represent relationships between entities. Properties store additional information about either a node or an edge.</p>
+<h3 id="nodes">Nodes</h3>
+<p>A node is a point in the graph that represents a discrete entity. A person, a company, a product, a document, a disease, or a gene can all be nodes. Each node has one or more labels that describe what kind of entity it is. A node might have the label Person, another might have the label Company, and a third might have the label Product.</p>
+<p>Nodes can also carry properties. A Person node might have properties for name, date of birth, and nationality. A Company node might have properties for name, industry, and founding date. Properties are key-value pairs that store data attributes directly on the node.</p>
+<h3 id="edges">Edges</h3>
+<p>An edge connects two nodes and describes the relationship between them. Every edge has a direction, meaning it goes from one node to another, and a type that describes the relationship. Common edge types include works at, founded, acquired, owns, located in, and reports to.</p>
+<p>Edges can also carry properties. An edge of type acquired, connecting a company node to another company node, might have properties for the acquisition date and the deal value. This lets the graph store not just that a relationship exists, but the details of that relationship.</p>
+<h3 id="organising-principles">Organising Principles</h3>
+<p>A knowledge graph is more than a collection of nodes and edges. It needs an organising principle, meaning a conceptual framework that gives the graph structure and meaning. This could be a taxonomy that groups products into categories and subcategories, an ontology that defines what types of entities exist and what relationships are valid between them, or a set of business rules that govern how entities connect.</p>
+<p>For example, an e-commerce knowledge graph might use a product taxonomy as its organising principle. Products are grouped into categories like Electronics, which contains subcategories like Phones and Laptops. Each product connects to its category through a belongs to edge. This structure lets the graph answer questions like what products are related to this one without scanning every product in the database.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>Property graphs vs RDF triple stores</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>Two main data models exist for knowledge graphs. The property graph model, used by databases like Neo4j, stores nodes and edges that can both carry arbitrary properties. This makes it intuitive to model complex relationships because you can attach metadata directly to an edge. The RDF triple store model, rooted in the Semantic Web, stores everything as subject-predicate-object triples. Adding a property to a relationship requires creating additional triples, a process called reification, which can make the model verbose for highly connected data. Property graphs are more common in enterprise applications because they are easier to query and visualise, while triple stores remain relevant for interoperability with Semantic Web standards and linked open data.</p></div></details>
+</section>
+<section class="ac-sec" id="building-a-knowledge-graph" aria-labelledby="building-a-knowledge-graph-h"><h2 id="building-a-knowledge-graph-h">Building a Knowledge Graph</h2>
+<p>Building a knowledge graph is a process that goes from defining the use case to ingesting data, querying it, and evolving the graph over time. The steps below describe the general pipeline.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's knowledge graph workshop covers graph data modelling, entity resolution, and production deployment on graph databases. Reach out to learn about cohort programmes for your engineering team.</p><p><a class="ac-co-link" href="/Website-Updates/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Step</th><th>What Happens</th></tr></thead><tbody><tr><td>1. Define use case</td><td>Choose a focused problem the graph will solve. Determine what entities and relationships are needed to answer the target questions.</td></tr><tr><td>2. Model the graph</td><td>Design the node types, edge types, and properties. Start with a rough model and plan to iterate after testing.</td></tr><tr><td>3. Gather and clean data</td><td>Collect data from multiple sources. Normalise formats. Resolve entities to eliminate duplicates and link the same entity across sources.</td></tr><tr><td>4. Ingest data</td><td>Load nodes and edges into the graph database. Apply the organising principle. Use schema mapping files to connect source data to the graph model.</td></tr><tr><td>5. Query and refine</td><td>Test with real queries. Identify missing relationships or data quality issues. Adjust the model and re-ingest as needed.</td></tr><tr><td>6. Evolve</td><td>Add new data sources, new entity types, and new relationship types over time. The graph grows as the use case expands.</td></tr></tbody></table></div>
+<h3 id="step-1-define-the-use-case">Step 1. Define the Use Case</h3>
+<p>Start with a focused question. What problem will the knowledge graph solve? Common use cases include recommendation engines, fraud detection, supply chain tracking, entity resolution, and enterprise search. The use case determines what entities and relationships you need to model. A fraud detection graph needs accounts, transactions, devices, and phone numbers as nodes, with edges for transferred money to, shares device with, and shares phone number with. A recommendation graph needs users, products, and categories as nodes, with edges for purchased, viewed, and belongs to.</p>
+<p>Choose a narrow starting point rather than modelling the entire domain. A focused scope lets you validate the approach with manageable effort. You can expand the graph later as the use case grows.</p>
+<h3 id="step-2-model-the-graph">Step 2. Model the Graph</h3>
+<p>Graph modelling means deciding what nodes, edges, and properties your graph will contain. The goal is to represent the domain in a way that makes the important questions easy to answer. If the use case is recommendation, the model needs to support queries like which products did users similar to this one buy. That means the graph needs User nodes connected to Product nodes through purchased edges, and Product nodes connected to each other through shared category or co-purchase edges.</p>
+<p>Unlike relational database design, graph modelling is iterative. You start with a rough model, load some data, query it, and refine the model based on what you find. The flexibility of the graph structure makes this iteration cheap. Adding a new relationship type does not require restructuring existing data.</p>
+<h3 id="step-3-gather-and-clean-data">Step 3. Gather and Clean Data</h3>
+<p>Knowledge graphs are only as good as the data they contain. Data comes from multiple sources, including relational databases, CSV files, APIs, unstructured documents, and third-party data providers. Each source needs to be cleaned and normalised before it can be loaded into the graph.</p>
+<p>Entity resolution is the critical step at this stage. The same entity often appears in different sources with different names, formats, or identifiers. A company might be listed as IBM in one database, International Business Machines in another, and IBM Corp in a third. Entity resolution identifies these as the same entity and links them in the graph. Without this step, the graph contains duplicate nodes that fragment the relationship network.</p>
+<h3 id="step-4-ingest-data">Step 4. Ingest Data</h3>
+<p>Once data is cleaned and entities are resolved, the next step is to load it into the graph database. This involves creating nodes with their properties, then creating edges with their types and properties, and applying the organising principle. Graph databases typically provide bulk loading tools for large datasets and API-based loading for incremental updates.</p>
+<p>Ingestion also involves mapping source data to the graph model. A schema mapping file defines how columns in a source table correspond to node properties and edge types in the graph. For example, a column called company_name in a source table maps to the name property on a Company node, and a column called parent_company_id maps to an edge of type subsidiary_of connecting two Company nodes.</p>
+<h3 id="step-5-query-and-refine">Step 5. Query and Refine</h3>
+<p>After loading data, test the graph with real queries. Start with the questions defined in the use case. Do the queries return correct results? Are there missing relationships or duplicate nodes? Are the property values accurate? This testing phase often reveals data quality issues that were not visible during cleaning, and the graph model may need adjustment based on what the queries reveal.</p>
+</section>
+<section class="ac-sec" id="knowledge-graphs-and-ai" aria-labelledby="knowledge-graphs-and-ai-h"><h2 id="knowledge-graphs-and-ai-h">Knowledge Graphs and AI</h2>
+<p>The connection between knowledge graphs and AI is where things get interesting for this series. Language models are good at generating text, but they have no inherent understanding of how entities relate to each other. They learn patterns from training data, and those patterns are statistical, not structural. A language model might know that Apple is a company and that Tim Cook is a person, but it has no reliable mechanism for knowing that Tim Cook is the CEO of Apple, that Apple acquired Beats Electronics, or that Beats was founded by Dr. Dre.</p>
+<p>RAG addresses this by retrieving text documents that contain relevant information. But text retrieval has limitations. It finds documents that mention the query terms, not documents that are structurally related to the entities in the question. A retriever might find a document mentioning Apple and a document mentioning Beats Electronics, but it does not know that the relationship between them is an acquisition unless that exact fact appears in the retrieved text.</p>
+<h3 id="graphrag">GraphRAG</h3>
+<p>GraphRAG combines knowledge graphs with retrieval-augmented generation. Instead of retrieving text chunks from a vector database, the system retrieves subgraphs from a knowledge graph. A subgraph is a set of nodes and edges that are relevant to the query. The retrieved subgraph is then converted to text and included in the prompt, giving the language model structured relationship data to reason over.</p>
+<p>The advantage is precision. When a user asks about the supply chain for a specific product, a GraphRAG system traverses the graph from the product node, following edges to supplier nodes, then to sub-supplier nodes, and returns the full chain as a structured subgraph. The language model receives not just text about suppliers, but the actual relationships between products and suppliers, with edge properties like contract dates and order volumes.</p>
+<p>Research from Neo4j and independent studies have shown that GraphRAG can reduce hallucination rates significantly compared to standard text-based RAG. One study reported that GraphRAG made AI agents up to 80 percent more truthful on factual questions, because the structured relationships in the graph provide verifiable grounding that text alone cannot match.</p>
+<h3 id="entity-linking">Entity Linking</h3>
+<p>Entity linking is the bridge between unstructured text and a knowledge graph. Given a piece of text, entity linking identifies mentions of entities and connects them to the corresponding nodes in the graph. When a user asks about Tim Cook, the entity linking system finds the Person node for Tim Cook in the graph and returns its identifier. This identifier lets the system traverse the graph to find related entities, like the company Tim Cook leads and the products that company sells.</p>
+<p>Entity linking is what makes GraphRAG practical. Without it, the system has no way to connect a user's natural language question to the structured data in the graph. Entity linking can be done using named entity recognition models, which identify entity mentions in text, followed by a disambiguation step that matches each mention to the correct node in the graph.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>How GraphRAG retrieval works</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>In a standard RAG system, retrieval is a similarity search. The query is embedded into a vector, and the system finds text chunks whose vectors are closest to the query vector. In GraphRAG, retrieval is a graph traversal. The query is parsed to identify entities, those entities are matched to nodes in the graph, and the system traverses outward from those nodes following edges to find related entities. The resulting subgraph is then serialised into text, meaning the nodes and edges are converted into sentences like Company A acquired Company B in 2014 for 3 billion dollars. This text goes into the prompt alongside the user's question, and the language model generates its answer grounded in the structured relationships.</p></div></details>
+</section>
+<section class="ac-sec" id="knowledge-graphs-vs-vector-databases" aria-labelledby="knowledge-graphs-vs-vector-databases-h"><h2 id="knowledge-graphs-vs-vector-databases-h">Knowledge Graphs vs Vector Databases</h2>
+<p>Vector databases and knowledge graphs are often discussed as alternatives, but they solve different problems. A vector database stores text chunks as vectors and finds similar chunks using distance metrics. It excels at semantic similarity, finding text that talks about the same topic even when the wording differs. A knowledge graph stores entities and their relationships and finds connected entities by traversing edges. It excels at structural queries, finding entities that are related through specific relationship types.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's GraphRAG engineering course covers knowledge graph integration with RAG pipelines, entity linking, and hybrid retrieval architectures. Reach out to learn about team training options.</p><p><a class="ac-co-link" href="/Website-Updates/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Vector Database (Standard RAG)</th><th>Knowledge Graph (GraphRAG)</th></tr></thead><tbody><tr><td>Stores text chunks as high-dimensional vectors.</td><td>Stores entities as nodes and relationships as edges.</td></tr><tr><td>Retrieval is similarity search. Finds text that is semantically close to the query.</td><td>Retrieval is graph traversal. Finds entities that are structurally connected.</td></tr><tr><td>Good for finding documents about a topic.</td><td>Good for finding entities related through specific relationships.</td></tr><tr><td>Cannot answer multi-hop questions without multiple retrieval passes.</td><td>Natively handles multi-hop questions by following edges.</td></tr><tr><td>No built-in notion of entity identity or relationship types.</td><td>Entity identity and relationship types are first-class citizens.</td></tr><tr><td>Easy to build. Chunk text, embed, store.</td><td>Requires more upfront modelling and entity resolution.</td></tr></tbody></table></div>
+<p>The two approaches are complementary. Many production systems use both. A vector database handles semantic retrieval, finding relevant text chunks for a given query. A knowledge graph handles structural retrieval, finding related entities and their connections. The results from both are combined in the prompt, giving the language model both textual context and structured relationship data to reason over.</p>
+</section>
+<section class="ac-sec" id="use-cases" aria-labelledby="use-cases-h"><h2 id="use-cases-h">Use Cases</h2>
+<p>Knowledge graphs have been deployed across industries. The examples below illustrate the range of problems they solve.</p>
+<h3 id="fraud-detection">Fraud Detection</h3>
+<p>Financial institutions use knowledge graphs to detect fraud rings. Accounts, transactions, devices, phone numbers, and addresses are nodes. Edges connect accounts that share a device, transferred money to each other, or used the same phone number. A fraud ring appears as a cluster of tightly connected nodes in the graph. Graph algorithms can detect these clusters automatically, flagging accounts that are part of a suspicious network even when no individual transaction looks fraudulent.</p>
+<h3 id="supply-chain">Supply Chain</h3>
+<p>Manufacturing companies use knowledge graphs to map their supply chains. Products, components, suppliers, and facilities are nodes. Edges represent supplies, manufactures, and ships to relationships. When a supplier experiences a disruption, the graph shows which products are affected and which alternative suppliers can fill the gap. This kind of analysis is difficult in a relational database because it requires traversing multiple levels of the supply chain, each involving joins across different tables.</p>
+<h3 id="recommendation-engines">Recommendation Engines</h3>
+<p>E-commerce platforms use knowledge graphs to power product recommendations. Users, products, and categories are nodes. Edges represent purchased, viewed, rated, and belongs to relationships. To recommend products to a user, the graph finds products that similar users purchased, products in the same category as previously purchased items, and products frequently co-purchased with items in the user's history. The graph structure makes these multi-hop queries efficient.</p>
+<h3 id="enterprise-search-and-graphrag">Enterprise Search and GraphRAG</h3>
+<p>Organisations use knowledge graphs to make internal documents searchable and to ground AI assistants in company data. Documents, people, projects, and departments are nodes. Edges connect documents to their authors, projects to their team members, and departments to their projects. When an employee asks an AI assistant about a project, the system traverses the graph to find related documents, team members, and dependencies, giving the language model structured context that text retrieval alone cannot provide.</p>
+</section>
+<section class="ac-sec" id="challenges-and-limitations" aria-labelledby="challenges-and-limitations-h"><h2 id="challenges-and-limitations-h">Challenges and Limitations</h2>
+<p>Knowledge graphs are powerful, but they come with costs and limitations that are worth understanding before investing in one.</p>
+<h3 id="data-quality-and-maintenance">Data Quality and Maintenance</h3>
+<p>A knowledge graph is only as accurate as the data it contains. Entities change over time. People change jobs, companies merge, products are discontinued. If the graph is not updated, it becomes stale and its answers degrade. Maintaining a knowledge graph requires ongoing data quality processes, including entity resolution for new data, deduplication, and validation of relationships. This is a continuous operational cost, not a one-time setup task.</p>
+<h3 id="building-effort">Building Effort</h3>
+<p>Building a knowledge graph requires more upfront effort than setting up a vector database. You need to design a graph data model, choose an organising principle, build entity resolution pipelines, and implement ingestion logic. For a team that just needs to answer questions from a set of documents, standard RAG with a vector database is faster to build and simpler to maintain. A knowledge graph earns its investment when the use case involves complex relationships, multi-hop queries, or the need to integrate structured data from multiple sources.</p>
+<h3 id="query-complexity">Query Complexity</h3>
+<p>Querying a knowledge graph requires a different skill set than querying a vector database. Graph query languages like Cypher and SPARQL have their own syntax and semantics. Writing efficient graph queries requires understanding traversal patterns, index usage, and query optimisation. Teams without graph database experience will need training or external expertise to get productive.</p>
+<h3 id="scalability">Scalability</h3>
+<p>Graph databases scale differently from relational databases. As the graph grows, query performance depends on how well the traversal patterns align with the graph structure and indexes. Some queries that perform well on a small graph become slow on a large one because the traversal touches too many nodes. Sharding a graph across multiple servers is harder than sharding a relational table because relationships can cross server boundaries. Distributed graph databases exist, but they add complexity and have trade-offs in query performance.</p>
+</section>
+<section class="ac-sec" id="when-to-use-a-knowledge-graph" aria-labelledby="when-to-use-a-knowledge-graph-h"><h2 id="when-to-use-a-knowledge-graph-h">When to Use a Knowledge Graph</h2>
+<p>The decision to build a knowledge graph depends on the nature of the questions you need to answer and the structure of your data. The table below maps common situations to recommendations.</p>
+<div class="ac-table"><table><thead><tr><th>Situation</th><th>Recommendation</th></tr></thead><tbody><tr><td>Answering questions from a set of documents</td><td>Use standard RAG with a vector database. Faster to build and sufficient for text-based questions.</td></tr><tr><td>Answering questions that require multi-hop reasoning across entities</td><td>Use a knowledge graph or GraphRAG. The graph stores relationships explicitly, making multi-hop queries efficient and accurate.</td></tr><tr><td>Detecting fraud rings or suspicious networks</td><td>Use a knowledge graph. Graph algorithms excel at finding clusters of connected entities that indicate coordinated activity.</td></tr><tr><td>Product recommendations based on user behaviour</td><td>Use a knowledge graph. User-product interactions, category hierarchies, and co-purchase patterns are naturally graph structures.</td></tr><tr><td>Integrating structured data from multiple sources with different schemas</td><td>Use a knowledge graph. Entity resolution links the same entity across sources, and the flexible schema accommodates new data types without restructuring.</td></tr><tr><td>Simple keyword search over a document corpus</td><td>Use a vector database or traditional search index. A knowledge graph is overkill when the question is just finding documents about a topic.</td></tr></tbody></table></div>
+</section>
+<section class="ac-sec" id="the-future-of-knowledge-graphs-in-ai" aria-labelledby="the-future-of-knowledge-graphs-in-ai-h"><h2 id="the-future-of-knowledge-graphs-in-ai-h">The Future of Knowledge Graphs in AI</h2>
+<p>Knowledge graphs are becoming increasingly relevant as AI systems move beyond simple text generation toward reasoning and decision-making. Language models can generate plausible text, but they lack the structured knowledge needed to verify facts, trace relationships, and avoid hallucination. Knowledge graphs provide that structure.</p>
+<p>The integration of knowledge graphs with LLMs is still early. Many production systems use graphs as a retrieval source, converting subgraphs to text and including them in prompts. Research is active on tighter integration, where language models can directly query a graph during generation, traversing edges and reading properties as part of their reasoning process. This would give models real-time access to structured knowledge without the overhead of converting everything to text.</p>
+<p>Another direction is automated graph construction. Building a knowledge graph currently requires significant manual effort for entity resolution, relationship extraction, and data cleaning. Language models can assist with these tasks by extracting entities and relationships from unstructured text, disambiguating entity mentions, and suggesting relationship types. This could lower the cost of building and maintaining knowledge graphs, making them accessible to a wider range of applications.</p>
+<aside class="ac-co ac-co-summary"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>Summary</p><div class="ac-co-body"><p>A knowledge graph is a data structure that stores entities as nodes and their relationships as edges. Unlike relational databases, which reconstruct relationships through joins at query time, knowledge graphs store relationships explicitly, making multi-hop queries efficient. Building a knowledge graph involves defining a use case, modelling the graph, gathering and cleaning data, resolving entities across sources, and ingesting data into a graph database. In AI applications, knowledge graphs complement text-based RAG by providing structured relationship data through GraphRAG, where subgraphs are retrieved and included in the prompt alongside text. Knowledge graphs excel at fraud detection, recommendation, supply chain analysis, and enterprise search, where the core question involves relationships between entities rather than just text similarity. They require more upfront effort than vector databases but provide precision and verifiability that text retrieval cannot match.</p></div></aside>
+</section>
+<aside class="ac-about"><p class="ac-about-h">About this guide</p><p>This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, agents, context windows, and knowledge graphs. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.</p><p>See how this works in Pascal: <a href="/Website-Updates/platform/context-graph">the Pascal context graph</a>.</p></aside>
+    </article>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What is a knowledge graph in AI?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A knowledge graph is a structured representation of information where entities are nodes and relationships are edges. It stores facts as connections between things, e.g. Company A competes with Company B, or Executive C works at Company D. This structure makes it possible to query relationships that would be hard to extract from text alone.</div></details>
+<details class="faq-item"><summary>How are knowledge graphs used in finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Knowledge graphs help finance teams map relationships between companies, executives, suppliers, customers, and sectors. They support competitive analysis, supply chain mapping, risk detection, and finding hidden connections that might affect an investment thesis.</div></details>
+<details class="faq-item"><summary>What is GraphRAG and how does Pascal use knowledge graphs?<span class="pm" aria-hidden="true"></span></summary><div class="ans">GraphRAG combines knowledge graphs with retrieval-augmented generation. Instead of retrieving text chunks, the system retrieves connected entities and relationships from a graph, then uses a language model to synthesize the results. Pascal builds a persistent knowledge graph across every document and filing your team touches, so research compounds over time and every query gets smarter.</div></details>
+<details class="faq-item"><summary>What is the difference between a knowledge graph and a vector database?<span class="pm" aria-hidden="true"></span></summary><div class="ans">A vector database stores text chunks as embeddings and retrieves semantically similar passages. A knowledge graph stores structured relationships between entities. Vector databases are good for finding relevant text. Knowledge graphs are good for answering questions about how things connect. They serve different purposes and can complement each other.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kl" aria-labelledby="kl-h">
+    <h2 class="sx-t" id="kl-h">Keep learning</h2>
+    <div class="kl-g"><a class="gc" href="/Website-Updates/pascal-academy/guides/ai-hallucinations"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-sea"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><b>Knowledge gaps</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg><b>Pattern completion</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg><b>Training data errors</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 07</span><h3 class="gc-t">Hallucinations</h3><p class="gc-m">12 min read</p></div></a><a class="gc" href="/Website-Updates/pascal-academy/guides/reasoning-models"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-cream"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg><b>Reasoning traces</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><b>Extended thinking</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg><b>Mathematics and logic</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 08</span><h3 class="gc-t">Reasoning models</h3><p class="gc-m">13 min read</p></div></a><a class="gc" href="/Website-Updates/guides/ai-for-hedge-funds"><div class="th" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-teal"><img src="/Website-Updates/assets/shots/shot-agent-table.webp" alt="Pascal agent output: a street vs management framing table for Sea Limited with citations" width="1600" height="844" loading="lazy" decoding="async"></div></div></div><div class="gc-b"><span class="pill">Desk guide</span><h3 class="gc-t">AI for Hedge Funds</h3><p class="gc-m">24 min read</p></div></a></div>
+  </section>
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/Website-Updates/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">Ask your first question with your firm's context.<br><span style="color:var(--mint-2)">A walkthrough with your own documents connected.</span></h2>
+  <div class="actions">
+    <a class="btn btn-white" href="https://pascalailabs.com/demo">Book a demo</a>
+  </div>
+</section>
+
+<dialog class="ac-gate" id="pdf-gate" aria-labelledby="gate-h">
+  <div class="ac-gate-in">
+    <div class="ac-gate-side">
+      <p class="eyebrow">Pascal Academy · PDF</p>
+      <p class="ac-gate-t">Knowledge Graphs</p>
+      <p class="ac-gate-m">14 min read</p>
+      <div class="ac-gate-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b><i></i><i></i></div>
+    </div>
+    <div class="ac-gate-main">
+      <button class="ac-gate-x" type="button" data-gate-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      <form class="ac-gate-form" data-gate-form data-guide="Knowledge Graphs" data-slug="knowledge-graphs" data-pdf="/Website-Updates/assets/academy/pdf/knowledge-graphs.pdf" novalidate>
+        <h2 id="gate-h">Get this guide as a PDF</h2>
+        <p class="ac-gate-sub">Tell us where to send it and we will email you the PDF.</p>
+        <label>Full name<input name="name" autocomplete="name" required></label>
+        <label>Work email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Organization<input name="organization" autocomplete="organization" required></label>
+        <p class="ac-gate-err" role="alert" hidden></p>
+        <button class="btn btn-dark" type="submit">Email me the PDF</button>
+        <p class="ac-gate-fine">By submitting, you agree to be contacted about Pascal Academy.</p>
+      </form>
+      <div class="ac-gate-done" hidden>
+        <span class="ac-gate-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <h2>Check your inbox.</h2>
+        <p>We have sent <b>Knowledge Graphs</b> to <span data-gate-email></span>.</p>
+        <button class="btn btn-line" type="button" data-gate-close>Back to the guide</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="/Website-Updates/assets/pages/academy3.js?v=4f48f13d9f" defer></script>
+</main>
+<footer class="footer">
+  <div class="frame">
+    <div class="footer-grid">
+      <div>
+        <a href="/Website-Updates/" aria-label="Pascal AI home"><img src="/Website-Updates/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24" loading="lazy"></a>
+        <p class="footer-blurb">The Investment OS for asset and wealth managers, asset servicers, corporate treasury, banks and financial institutions, private equity and private credit firms, and hedge funds.</p>
+      </div>
+      <nav aria-label="Platform">
+        <p class="fh">Platform</p>
+        <ul>
+          <li><a href="/Website-Updates/platform">Platform overview</a></li>
+          <li><a href="/Website-Updates/platform/context-graph">Context graph &amp; memory</a></li>
+          <li><a href="/Website-Updates/platform/mcp-apis">MCP &amp; APIs</a></li>
+          <li><a href="/Website-Updates/solutions/ai-transformation">AI transformation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Products">
+        <p class="fh">Products</p>
+        <ul>
+          <li><a href="/Website-Updates/ask-pascal">Ask Pascal</a></li>
+          <li><a href="/Website-Updates/ask-pascal/cited-research">Cited research</a></li>
+          <li><a href="/Website-Updates/ask-pascal/screeners">Screeners</a></li>
+          <li><a href="/Website-Updates/pascal-agents">Pascal Agents</a></li>
+          <li><a href="/Website-Updates/pascal-agents/workflow-library">Workflow library</a></li>
+          <li><a href="/Website-Updates/pascal-agents/data-agent">Pascal Data Agent</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Industries">
+        <p class="fh">Industries</p>
+        <ul>
+          <li><a href="/Website-Updates/solutions/hedge-funds">Hedge Funds</a></li>
+          <li><a href="/Website-Updates/solutions/asset-wealth-management">Asset &amp; Wealth Management</a></li>
+          <li><a href="/Website-Updates/solutions/banking">Banks &amp; Financial Institutions</a></li>
+          <li><a href="/Website-Updates/solutions/asset-servicing">Asset Servicing</a></li>
+          <li><a href="/Website-Updates/solutions/private-equity-credit">Private Equity &amp; Private Credit</a></li>
+          <li><a href="/Website-Updates/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a></li>
+          <li><a href="/Website-Updates/customer-stories">Customer stories</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="News">
+        <p class="fh">News</p>
+        <ul>
+          <li><a href="https://pascalailabs.com/news">Newsroom</a></li>
+          <li><a href="/Website-Updates/news/founders-notes">Founder's notes</a></li>
+          <li><a href="https://vibhavviswanathan.substack.com" rel="noopener">Alpha &amp; Agents</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="fh">Company</p>
+        <ul>
+          <li><a href="https://pascalailabs.com/about">About</a></li>
+          <li><a href="/Website-Updates/security">Security</a></li>
+          <li><a href="https://pascalailabs.com/careers">Careers</a></li>
+          <li><a href="/Website-Updates/pascal-academy">Pascal Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pascal AI Labs</span>
+      <span><a href="https://pascalailabs.com/privacy-policy">Privacy</a> &middot; <a href="https://pascalailabs.com/terms-of-use">Terms</a> &middot; <a href="https://www.linkedin.com/company/pascal-ai-labs/" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/pascalailabs" rel="noopener">X</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

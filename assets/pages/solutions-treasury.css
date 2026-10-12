@@ -1,0 +1,4 @@
+/* Treasury & hedge accounting page (scoped under .pg-trs) */
+
+/* keep the right-hand detail of a list row right-aligned (.pui-row .pui-sub resets its auto margin) */
+.pg-trs .pui-row > .pui-row-r { margin-left: auto; }

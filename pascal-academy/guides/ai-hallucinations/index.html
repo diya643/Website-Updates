@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>AI Hallucinations Explained | Pascal Academy</title>
+<meta name="description" content="A guide to AI hallucinations for finance teams: why models hallucinate, how to detect it, and the techniques that reduce it in investment research.">
+<link rel="canonical" href="https://pascalailabs.com/pascal-academy/guides/ai-hallucinations">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#052A2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pascal AI">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="AI Hallucinations Explained | Pascal Academy">
+<meta property="og:description" content="A guide to AI hallucinations for finance teams: why models hallucinate, how to detect it, and the techniques that reduce it in investment research.">
+<meta property="og:url" content="https://pascalailabs.com/pascal-academy/guides/ai-hallucinations">
+<meta property="og:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-ai-hallucinations.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hallucinations">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pascalailabs">
+<meta name="twitter:title" content="AI Hallucinations Explained | Pascal Academy">
+<meta name="twitter:description" content="A guide to AI hallucinations for finance teams: why models hallucinate, how to detect it, and the techniques that reduce it in investment research.">
+<meta name="twitter:image" content="https://pascalailabs.com/assets/og/pascal-academy-guides-ai-hallucinations.png">
+<link rel="icon" href="/Website-Updates/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/Website-Updates/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600&amp;family=Funnel+Sans:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/Website-Updates/assets/site.css?v=a6dc05dfb8">
+<link rel="stylesheet" href="/Website-Updates/assets/pages/academy3.css?v=6b20df6ba8">
+<script src="/Website-Updates/assets/site.js?v=cd66888c46" defer></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SV9WGBYMQR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SV9WGBYMQR');</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://pascalailabs.com/#org",
+   "name": "Pascal AI Labs",
+   "alternateName": "Pascal AI",
+   "url": "https://pascalailabs.com/",
+   "logo": "https://pascalailabs.com/assets/pascal-logo.png",
+   "sameAs": [
+    "https://www.linkedin.com/company/pascal-ai-labs/",
+    "https://twitter.com/pascalailabs"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/ai-hallucinations#webpage",
+   "url": "https://pascalailabs.com/pascal-academy/guides/ai-hallucinations",
+   "name": "AI Hallucinations Explained | Pascal Academy",
+   "description": "A guide to AI hallucinations for finance teams: why models hallucinate, how to detect it, and the techniques that reduce it in investment research.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://pascalailabs.com/#website"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "dateModified": "2026-08-01",
+   "breadcrumb": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/ai-hallucinations#breadcrumb"
+   },
+   "primaryImageOfPage": "https://pascalailabs.com/assets/og/pascal-academy-guides-ai-hallucinations.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pascalailabs.com/#website",
+   "url": "https://pascalailabs.com/",
+   "name": "Pascal AI",
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/ai-hallucinations#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://pascalailabs.com"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pascal Academy",
+     "item": "https://pascalailabs.com/pascal-academy"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "AI fundamentals",
+     "item": "https://pascalailabs.com/pascal-academy/ai-fundamentals"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Hallucinations",
+     "item": "https://pascalailabs.com/pascal-academy/guides/ai-hallucinations"
+    }
+   ]
+  },
+  {
+   "@type": "TechArticle",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/ai-hallucinations#article",
+   "headline": "Hallucinations",
+   "description": "A guide to AI hallucinations for finance teams: why models hallucinate, how to detect it, and the techniques that reduce it in investment research.",
+   "url": "https://pascalailabs.com/pascal-academy/guides/ai-hallucinations",
+   "inLanguage": "en",
+   "dateModified": "2026-08-01",
+   "datePublished": "2026-08-01",
+   "author": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "publisher": {
+    "@id": "https://pascalailabs.com/#org"
+   },
+   "isPartOf": {
+    "@type": "Collection",
+    "name": "Pascal Academy",
+    "url": "https://pascalailabs.com/pascal-academy"
+   },
+   "mainEntityOfPage": {
+    "@id": "https://pascalailabs.com/pascal-academy/guides/ai-hallucinations#webpage"
+   },
+   "image": "https://pascalailabs.com/assets/og/pascal-academy-guides-ai-hallucinations.png",
+   "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Institutional investment teams"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://pascalailabs.com/pascal-academy/guides/ai-hallucinations#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What are AI hallucinations in finance?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hallucinations are outputs where an AI model generates information that sounds plausible but is factually incorrect. In finance, this could mean a model inventing a revenue figure, fabricating a quote from an earnings call, or citing a filing that does not contain the claimed data. Hallucinations are the primary reason verification is essential."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why do AI models hallucinate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Models hallucinate because they generate text by predicting the next likely token, not by looking up facts. When they lack specific information, they fill gaps with plausible-sounding content. Hallucinations are more common when prompts are vague, when the model lacks context, or when the question involves specific numbers or dates."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does Pascal reduce hallucinations in financial research?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pascal reduces hallucinations by grounding every output in source documents through retrieval-augmented generation. Instead of generating from training data alone, Pascal's agents pull from actual filings and your internal research. Every claim includes a citation tracing back to the source line, so you can verify accuracy before relying on the output."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How can you detect and prevent AI hallucinations?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Detect hallucinations by checking every number against the source, tracing every claim to its origin, and verifying the reasoning. Prevent them by providing specific context in your prompts, using RAG to ground outputs in real documents, and building verification checkpoints into your workflow. Never present an AI output to a stakeholder without independent review."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/Website-Updates/" aria-label="Pascal AI home">
+      <img src="/Website-Updates/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/Website-Updates/platform" aria-expanded="false" aria-haspopup="true">Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-product">
+          <div class="mega-panel">
+            <div class="mp-col">
+              <a class="mp-feature" href="/Website-Updates/platform">
+                <span class="mp-art" aria-hidden="true"><i></i><i></i><i></i></span>
+                <b>Platform overview</b>
+                <span>See how the Investment OS works.</span>
+              </a>
+              <p class="mp-label">Platform</p>
+              <a class="mp-link" href="/Website-Updates/platform/context-graph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4"/><path d="m6.6 17.2 4.2-4.7"/><path d="m17.4 17.2-4.2-4.7"/><circle cx="12" cy="12.5" r="1.5"/></svg> Context graph &amp; memory</a>
+              <a class="mp-link" href="/Website-Updates/platform/mcp-apis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> MCP &amp; APIs</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/Website-Updates/ask-pascal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span><b>Ask Pascal</b><span>Your AI research analyst</span></span></a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/decision-traces"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg> Decision traces</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/cited-research"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg> Cited research</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/screeners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg> Screeners</a>
+              <a class="mp-link" href="/Website-Updates/ask-pascal/pascal-intel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733-16z"/><path d="M4 20l6.768-6.768m2.46-2.46L20 4"/></svg> Pascal Intel</a>
+            </div>
+            <div class="mp-col">
+              <a class="mp-head" href="/Website-Updates/pascal-agents"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><span><b>Pascal Agents</b><span>Run investment work end to end</span></span></a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/autonomous-agents"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg> Autonomous agents</a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/workflow-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg> Agentic workflow library</a>
+              <a class="mp-link" href="/Website-Updates/pascal-agents/data-agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg> Pascal Data Agent</a>
+            </div>
+            <a class="mp-foot" href="/Website-Updates/solutions/hedge-funds"><span class="chip">Industries</span><span><b>Pascal for your firm</b><span>Hedge funds, asset and wealth managers, banks, asset servicers, private equity and private credit, and corporate treasury</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/Website-Updates/solutions/hedge-funds" aria-expanded="false" aria-haspopup="true">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-il">
+          <div class="mega-panel">
+              <a class="il-i" href="/Website-Updates/solutions/hedge-funds"><span><b>Hedge Funds</b><small>Event briefs, reconciliations and DDQs</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/asset-wealth-management"><span><b>Asset &amp; Wealth Management</b><small>Research, mandate checks and client reporting</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/banking"><span><b>Banks &amp; Financial Institutions</b><small>Underwriting, covenant monitoring and KYC</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/asset-servicing"><span><b>Asset Servicing</b><small>Corporate actions, NAV checks and client queries</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/private-equity-credit"><span><b>Private Equity &amp; Private Credit</b><small>CIM screens, diligence and LP reporting</small></span></a>
+              <a class="il-i" href="/Website-Updates/solutions/treasury-hedge-accounting"><span><b>Corporate Treasury &amp; Hedge Accounting</b><small>Exposures, effectiveness tests and hedge files</small></span></a>
+              <div class="il-cs">
+                <p class="il-cs-h"><span>Customer stories</span><a href="/Website-Updates/customer-stories">View all</a></p>
+                <div class="il-cs-g">
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/us-hedge-fund-idea-generation"><img src="/Website-Updates/assets/photos/cs-us-hedge-fund-sm.jpg?v=1b4b4b4db3" alt="" width="44" height="44" loading="lazy"><span><b>Top 20 US hedge fund</b><small>Evidence-backed ideas</small></span></a>
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/apac-asset-manager-research-coverage"><img src="/Website-Updates/assets/photos/cs-apac-research-sm.jpg?v=c9e1340963" alt="" width="44" height="44" loading="lazy"><span><b>$70B+ asset manager</b><small>Research on 1,000+ names</small></span></a>
+                  <a class="il-cs-i" href="/Website-Updates/customer-stories/apac-asset-manager-institutional-knowledge"><img src="/Website-Updates/assets/photos/cs-apac-knowledge-sm.jpg?v=661087cbfd" alt="" width="44" height="44" loading="lazy"><span><b>$100B+ asset manager</b><small>Firm knowledge, one query</small></span></a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="https://pascalailabs.com/news" aria-expanded="false" aria-haspopup="true">News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="mega mega-list mega-news mega-news-ac">
+          <div class="mega-panel">
+            <div class="mn-col">
+              <p class="mp-label">News</p>
+              <a class="mp-link" href="https://pascalailabs.com/news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></svg> Newsroom</a>
+              <a class="mp-link" href="/Website-Updates/news/founders-notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Founder's notes</a>
+            </div>
+            <div class="mn-col mn-ac">
+              <a class="mn-ac-head" href="/Website-Updates/pascal-academy"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg></span><span><b>Pascal Academy</b><span>Learn AI for institutional finance</span></span></a>
+              <a class="mp-link" href="/Website-Updates/guides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg> Desk guides</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/ai-fundamentals"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg> AI fundamentals</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/ai-glossary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> AI glossary</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/workflows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg> Workflows</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/prompt-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> Prompt library</a>
+              <a class="mp-link" href="/Website-Updates/pascal-academy/agent-library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> Agent library</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-dark btn-sm" href="https://pascalailabs.com/demo">Book a demo</a>
+    </div>
+    <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <details open>
+    <summary>Product <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <p class="mm-label">Platform</p>
+    <a href="/Website-Updates/platform">Platform overview</a>
+    <a href="/Website-Updates/platform/context-graph">Context graph &amp; memory</a>
+    <a href="/Website-Updates/platform/mcp-apis">MCP &amp; APIs</a>
+    <p class="mm-label">Ask Pascal</p>
+    <a href="/Website-Updates/ask-pascal">Ask Pascal overview</a>
+    <a href="/Website-Updates/ask-pascal/decision-traces">Decision traces</a>
+    <a href="/Website-Updates/ask-pascal/cited-research">Cited research</a>
+    <a href="/Website-Updates/ask-pascal/screeners">Screeners</a>
+    <a href="/Website-Updates/ask-pascal/pascal-intel">Pascal Intel</a>
+    <p class="mm-label">Pascal Agents</p>
+    <a href="/Website-Updates/pascal-agents">Pascal Agents overview</a>
+    <a href="/Website-Updates/pascal-agents/autonomous-agents">Autonomous agents</a>
+    <a href="/Website-Updates/pascal-agents/workflow-library">Agentic workflow library</a>
+    <a href="/Website-Updates/pascal-agents/data-agent">Pascal Data Agent</a>
+  </details>
+  <details>
+    <summary>Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="/Website-Updates/solutions/hedge-funds">Hedge Funds</a>
+    <a href="/Website-Updates/solutions/asset-wealth-management">Asset &amp; Wealth Management</a>
+    <a href="/Website-Updates/solutions/banking">Banks &amp; Financial Institutions</a>
+    <a href="/Website-Updates/solutions/asset-servicing">Asset Servicing</a>
+    <a href="/Website-Updates/solutions/private-equity-credit">Private Equity &amp; Private Credit</a>
+    <a href="/Website-Updates/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a>
+    <a href="/Website-Updates/customer-stories">Customer stories</a>
+  </details>
+  <details>
+    <summary>News <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <a href="https://pascalailabs.com/news">Newsroom</a>
+    <a href="/Website-Updates/news/founders-notes">Founder's notes</a>
+    <p class="mm-label">Pascal Academy</p>
+    <a href="/Website-Updates/pascal-academy">Academy home</a>
+    <a href="/Website-Updates/guides">Desk guides</a>
+    <a href="/Website-Updates/pascal-academy/ai-fundamentals">AI fundamentals</a>
+    <a href="/Website-Updates/pascal-academy/ai-glossary">AI glossary</a>
+    <a href="/Website-Updates/pascal-academy/workflows">Workflows</a>
+    <a href="/Website-Updates/pascal-academy/prompt-library">Prompt library</a>
+    <a href="/Website-Updates/pascal-academy/agent-library">Agent library</a>
+  </details>
+  <a class="btn btn-dark" href="https://pascalailabs.com/demo">Book a demo</a>
+</div>
+
+<main id="main">
+<div class="ac ac-doc">
+<div class="rp" aria-hidden="true"><i></i></div>
+<div class="frame">
+  <header class="ah">
+    <div class="ah-l">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/Website-Updates/">Home</a><span aria-hidden="true">/</span><a href="/Website-Updates/pascal-academy">Pascal Academy</a><span aria-hidden="true">/</span><a href="/Website-Updates/pascal-academy/ai-fundamentals">AI fundamentals</a><span aria-hidden="true">/</span><span aria-current="page">Hallucinations</span></nav>
+      <p class="ah-k">Last updated August 2026</p>
+      <h1 class="ah-t">Hallucinations</h1>
+      <p class="lead">Why language models make things up, what causes confident but wrong output, and the techniques that reduce it.</p>
+      <p class="ah-m">12 min read · Beginner-friendly with advanced sections</p>
+      <div class="ah-by"><span class="ah-av"><img src="/Website-Updates/assets/favicon.svg" alt="" width="40" height="40"></span><span><b>Pascal Academy</b><span>AI fundamentals · Part 7 of 10</span></span></div>
+      <div class="ah-a"><button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button></div>
+    </div>
+    <div class="ah-r"><div class="th th-hero" aria-hidden="true"><div class="th-bz"><div class="th-scr g-sea"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><b>Knowledge gaps</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg><b>Pattern completion</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg><b>Training data errors</b></span></div></div></div></div></div>
+  </header>
+  <div class="ag">
+    <aside class="toc" aria-label="Table of contents">
+      <div class="toc-in">
+        <p class="toc-h">Table of contents</p>
+        <div class="toc-track"><span class="toc-fill"></span><ol data-spy><li><a href="#what-is-hallucination">What Is Hallucination?</a></li><li><a href="#why-hallucination-happens">Why Hallucination Happens</a></li><li><a href="#types-of-hallucination">Types of Hallucination</a></li><li><a href="#what-makes-hallucination-worse">What Makes Hallucination Worse</a></li><li><a href="#reducing-hallucination">Reducing Hallucination</a></li><li><a href="#measuring-hallucination">Measuring Hallucination</a></li><li><a href="#hallucination-in-practice">Hallucination in Practice</a></li><li><a href="#the-future-of-hallucination">The Future of Hallucination</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></div>
+        <div class="toc-cta">
+          <p class="toc-cta-t">Take this guide with you.</p>
+          <p>Get the PDF in your inbox.</p>
+          <button class="btn btn-dark" type="button" data-gate-open>Download the PDF</button>
+        </div>
+      </div>
+    </aside>
+    <article class="ac-prose" id="article">
+      <details class="toc-m"><summary>Table of contents</summary><ol><li><a href="#what-is-hallucination">What Is Hallucination?</a></li><li><a href="#why-hallucination-happens">Why Hallucination Happens</a></li><li><a href="#types-of-hallucination">Types of Hallucination</a></li><li><a href="#what-makes-hallucination-worse">What Makes Hallucination Worse</a></li><li><a href="#reducing-hallucination">Reducing Hallucination</a></li><li><a href="#measuring-hallucination">Measuring Hallucination</a></li><li><a href="#hallucination-in-practice">Hallucination in Practice</a></li><li><a href="#the-future-of-hallucination">The Future of Hallucination</a></li><li><a href="#faq">Frequently asked questions</a></li></ol></details>
+<section class="ac-sec" id="what-is-hallucination" aria-labelledby="what-is-hallucination-h"><h2 id="what-is-hallucination-h">What Is Hallucination?</h2>
+<p>In the first guide, we established that a language model is a probability engine. It predicts the next token based on patterns learned from training data. The model does not know whether a statement is true. It knows whether the statement looks like text it has seen before. These two things are different, and the gap between them is where hallucination lives.</p>
+<p>A hallucination is a statement produced by a language model that sounds plausible and specific but is factually wrong. The model might cite a research paper that does not exist, attribute a quote to the wrong person, invent a historical event, or describe an API method that was never part of the library. The output reads fluently because the model is good at producing text that looks like real text. The problem is that looking real and being real are not the same thing.</p>
+<p>The term hallucination is borrowed from psychology, where it refers to perceiving something that is not there. In the LLM context, the model generates information that has no grounding in reality or in its training data. The model is not lying. Lying requires intent, and a language model has no intent. It is doing exactly what it was trained to do, which is to produce the most likely next token given the context. Sometimes the most likely token sequence is factually incorrect.</p>
+<aside class="ac-co ac-co-principle"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>Key principle</p><div class="ac-co-body"><p>Hallucination is a feature of how language models work, not a bug. The same mechanism that lets a model write fluent prose also lets it produce fluent fiction. The model cannot tell the difference between generating a correct fact and generating a plausible sentence. Reducing hallucination means giving the model external grounding so it does not have to rely on its own internal probabilities.</p></div></aside>
+</section>
+<section class="ac-sec" id="why-hallucination-happens" aria-labelledby="why-hallucination-happens-h"><h2 id="why-hallucination-happens-h">Why Hallucination Happens</h2>
+<p>To understand why models hallucinate, it helps to revisit how they generate text. A language model is trained to predict the next token in a sequence. During training, the model sees billions of sentences and learns the statistical patterns of language. It learns that the word Paris frequently appears near the word France, that the word CEO appears near company names, and that academic citations follow a specific format.</p>
+<p>When you ask the model a question, it generates a response token by token. Each token is the one the model considers most likely given the context so far. If the model has strong training signal for the question, the likely tokens happen to also be the correct ones. If the training signal is weak or conflicting, the model still generates the most likely token, but that token may not correspond to a real fact.</p>
+<h3 id="knowledge-gaps">Knowledge Gaps</h3>
+<p>The model's training data has gaps. It does not contain every fact about every topic. When you ask about something the model has rarely or never seen during training, it has weak signal to work from. The model still produces output because that is what it does, but the output is based on patterns from adjacent topics rather than on actual knowledge of the subject.</p>
+<h3 id="pattern-completion">Pattern Completion</h3>
+<p>Language models are pattern completers. If the beginning of a sentence looks like a known pattern, the model completes it with the most likely continuation. Consider the pattern of an academic citation. A model that has seen millions of citations knows the format well. If you ask it for a paper on a specific topic, it can produce a citation that looks perfect, with real-sounding author names, a plausible journal name, and a reasonable year. The citation is a pattern completion, not a retrieval of a real paper. The model has no mechanism to check whether the paper actually exists.</p>
+<h3 id="training-data-errors">Training Data Errors</h3>
+<p>The training data itself contains errors. The public internet has misinformation, outdated information, contradictory claims, and plain mistakes. A model trained on this data learns these errors along with correct information. When it generates text, it can reproduce the errors it learned, and it has no way to distinguish between what it learned correctly and what it learned incorrectly.</p>
+<h3 id="over-confidence">Over-Confidence</h3>
+<p>Language models are trained to be helpful and informative. This training can push them toward producing an answer even when they do not have enough information. A model that says I do not know in response to every uncertain question is less useful than one that attempts an answer. The trade-off is that attempting answers to questions the model cannot answer leads to hallucination. Alignment training, like RLHF, encourages models to be helpful, which can inadvertently encourage confident-sounding answers even when the model should express uncertainty.</p>
+</section>
+<section class="ac-sec" id="types-of-hallucination" aria-labelledby="types-of-hallucination-h"><h2 id="types-of-hallucination-h">Types of Hallucination</h2>
+<p>Hallucinations come in several forms. Understanding the type helps in choosing the right mitigation.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's LLM evaluation course covers hallucination detection, factuality benchmarking, and production monitoring. Reach out to learn about cohort programmes for your engineering team.</p><p><a class="ac-co-link" href="/Website-Updates/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Type</th><th>Description and Example</th></tr></thead><tbody><tr><td>Factuality hallucination</td><td>The model states a fact that is demonstrably wrong. For example, claiming that Marie Curie won the Nobel Prize in Mathematics, a prize that does not exist. The statement is fluent and specific but has no basis in reality.</td></tr><tr><td>Fabricated source</td><td>The model invents a citation, reference, or link. For example, generating a paper title like Smith, J. (2023). Effects of Temperature on LLM Performance. Journal of AI Research, 45(3), 112-128. The format is correct but the paper does not exist.</td></tr><tr><td>Attribute error</td><td>The model assigns an action or quote to the wrong entity. For example, attributing a quote by Einstein to Newton, or saying a company was founded by the wrong person. Both entities are real, but the relationship between them is fabricated.</td></tr><tr><td>Contextual hallucination</td><td>The model contradicts information it was given in the prompt or in retrieved documents. For example, a RAG system retrieves a document stating the refund window is 30 days, but the model says 60 days. The correct information was available but the model ignored or overrode it.</td></tr><tr><td>Numerical hallucination</td><td>The model produces wrong numbers, dates, or statistics. For example, stating a population of 12 million for a city of 8 million, or giving a product price that does not match the catalogue.</td></tr></tbody></table></div>
+</section>
+<section class="ac-sec" id="what-makes-hallucination-worse" aria-labelledby="what-makes-hallucination-worse-h"><h2 id="what-makes-hallucination-worse-h">What Makes Hallucination Worse</h2>
+<p>Several factors increase the likelihood and severity of hallucination. Being aware of these helps in designing systems that minimise the risk.</p>
+<h3 id="high-temperature">High Temperature</h3>
+<p>Temperature controls how random the model's token selection is. A high temperature means the model picks from a wider range of candidate tokens, including less likely ones. This increases creativity, which is useful for brainstorming or creative writing, but it also increases the chance that the model picks a token that leads away from a factual answer. For factual tasks, a low temperature reduces hallucination by keeping the model close to its highest-probability, and usually most accurate, tokens.</p>
+<h3 id="ambiguous-or-leading-prompts">Ambiguous or Leading Prompts</h3>
+<p>The way a question is phrased affects the model's output. A prompt that assumes a false premise can lead the model to produce elaborate answers built on that false premise. If you ask a model to explain why Abraham Lincoln resigned from the presidency, the model may comply with an explanation even though Lincoln never resigned. The model follows the prompt's framing rather than correcting the assumption.</p>
+<h3 id="niche-or-obscure-topics">Niche or Obscure Topics</h3>
+<p>Hallucination is more common on topics that appear infrequently in training data. A model can answer common questions about world capitals or basic physics with high accuracy because these topics are well-represented in training data. Ask the same model about a specific provision in an obscure regulation, and it may hallucinate because it has very little relevant training signal.</p>
+<h3 id="long-context-with-many-entities">Long Context with Many Entities</h3>
+<p>When the context contains many entities, dates, and relationships, the model can conflate details. As covered in the context windows guide, the lost-in-the-middle effect means the model pays less attention to information in the middle of long inputs. A model processing a 50-page document may correctly recall facts from the first and last pages but fabricate details from page 27.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>The confidence-accuracy gap</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>A language model's output does not carry a reliable confidence score. When the model says something, it sounds equally confident whether the statement is a well-established fact or a complete fabrication. This is because the model's training optimises for fluent text generation, not for calibrated uncertainty. Some research approaches attempt to extract confidence estimates from the model's token probabilities, asking the model to generate multiple answers and measuring agreement, or training the model to express uncertainty in words. These approaches help but do not fully solve the problem. The model can be confidently wrong, and no amount of probability extraction can tell you whether a specific factual claim is correct without external verification.</p></div></details>
+</section>
+<section class="ac-sec" id="reducing-hallucination" aria-labelledby="reducing-hallucination-h"><h2 id="reducing-hallucination-h">Reducing Hallucination</h2>
+<p>No single technique eliminates hallucination. Production systems use a combination of approaches, each addressing a different cause.</p>
+<aside class="ac-co ac-co-academy"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Pascal Academy</p><div class="ac-co-body"><p>Pascal Academy's RAG engineering and prompt engineering courses cover hallucination mitigation in depth, including grounding patterns, output validation, and evaluation frameworks. Reach out to learn about team training options.</p><p><a class="ac-co-link" href="/Website-Updates/pascal-academy/signup">Ask about team training</a></p></div></aside>
+<div class="ac-table"><table><thead><tr><th>Technique</th><th>How It Reduces Hallucination</th></tr></thead><tbody><tr><td>RAG</td><td>Retrieves external documents so the model extracts answers from text rather than relying on training-data memory.</td></tr><tr><td>Prompt engineering</td><td>Instructs the model to ground answers in provided context and to say it does not know when information is missing.</td></tr><tr><td>Knowledge graphs (GraphRAG)</td><td>Provides structured, verified relationships for the model to reason over, with traceable sources.</td></tr><tr><td>Low temperature</td><td>Keeps token selection close to the model's highest-probability predictions, reducing random deviations into fabrication.</td></tr><tr><td>Output validation</td><td>Checks generated output against external sources and blocks or flags responses containing unverified claims.</td></tr><tr><td>Chain-of-thought</td><td>Asks the model to show reasoning steps, making errors visible and sometimes triggering self-correction.</td></tr><tr><td>Multiple sampling</td><td>Generates several answers and compares them. High agreement suggests confidence. Disagreement signals uncertainty.</td></tr></tbody></table></div>
+<h3 id="retrieval-augmented-generation-rag">Retrieval-Augmented Generation (RAG)</h3>
+<p>RAG is the single most effective tool against hallucination. Instead of asking the model to answer from its training data, you retrieve relevant documents and include them in the prompt. The model then extracts and synthesises information from those documents rather than generating from memory. As covered in the RAG guide, this changes the task from recall to extraction, and extraction is something language models do well.</p>
+<p>RAG does not eliminate hallucination entirely. The model can still misread a retrieved document or invent information when the document does not contain the answer. But the risk is lower because the model has concrete text to anchor its response to, and you can instruct it to say it does not know when the retrieved documents lack the answer.</p>
+<h3 id="prompt-engineering">Prompt Engineering</h3>
+<p>The way you phrase instructions affects hallucination. Telling the model to answer only based on the provided documents, and to say it does not know when the documents do not contain the answer, reduces fabricated responses. Adding an instruction like if you are not sure, say you do not know rather than guessing gives the model permission to express uncertainty.</p>
+<p>Asking the model to show its reasoning, through chain-of-thought prompting, can also help. When the model writes out its reasoning steps, errors become visible and the model sometimes corrects itself mid-generation. This is more effective for reasoning tasks than for factual recall.</p>
+<h3 id="knowledge-graphs-and-grounding">Knowledge Graphs and Grounding</h3>
+<p>As covered in the knowledge graphs guide, GraphRAG provides structured relationship data that the model can reason over. When the model has access to a knowledge graph that encodes verified facts and their sources, it can ground its answers in those relationships rather than in its training data. This is particularly useful for questions that require multi-hop reasoning across entities, where the model's internal knowledge is likely to be incomplete or wrong.</p>
+<h3 id="output-validation-and-guardrails">Output Validation and Guardrails</h3>
+<p>Post-generation validation checks the model's output against external sources before presenting it to the user. A validation layer can check whether cited papers exist, whether numbers match a database, and whether claims are consistent with known facts. When the validation layer detects a problem, it can block the response, ask the model to regenerate, or flag the response for human review.</p>
+<p>Guardrails are rules that constrain the model's behaviour. They can prevent the model from generating content on certain topics, from making specific types of claims, or from producing output that violates safety guidelines. Guardrails do not prevent hallucination directly, but they limit the damage by catching problematic output before it reaches the user.</p>
+</section>
+<section class="ac-sec" id="measuring-hallucination" aria-labelledby="measuring-hallucination-h"><h2 id="measuring-hallucination-h">Measuring Hallucination</h2>
+<p>You cannot reduce what you cannot measure. Evaluating hallucination requires a test set of questions with known correct answers, and a method for checking whether the model's responses match those answers.</p>
+<h3 id="human-evaluation">Human Evaluation</h3>
+<p>The gold standard is human review. A domain expert reads the model's responses and checks each factual claim against a trusted source. This is accurate but expensive and slow, making it impractical for continuous evaluation at scale.</p>
+<h3 id="llm-as-a-judge">LLM-as-a-Judge</h3>
+<p>A common approach is to use a separate, stronger language model to evaluate the output of the model being tested. The judge model is given the question, the model's response, and the ground truth answer, and asked to determine whether the response is factually correct. This scales better than human evaluation and correlates reasonably well with human judgments, but it introduces its own biases. The judge model can hallucinate when evaluating hallucination.</p>
+<h3 id="factuality-benchmarks">Factuality Benchmarks</h3>
+<p>Several benchmarks exist for measuring factuality. These include datasets of questions with verified answers, where the model's responses are automatically checked for correctness. Examples include TruthfulQA, which tests whether models resist common misconceptions, and FActScore, which breaks down responses into individual atomic facts and checks each one. These benchmarks give a rough sense of a model's tendency to hallucinate, but they cover a narrow range of topics and may not reflect performance on your specific domain.</p>
+<details class="ac-co ac-co-deeper"><summary><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><span class="ac-co-lab"><span class="ac-co-k">Go deeper</span>Why evaluation is hard</span><span class="ac-co-opt">Optional</span><span class="ac-co-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ac-co-body"><p>Hallucination evaluation is hard because correctness is not always binary. A response can be partially correct, correct in spirit but wrong in detail, or correct on the main point but wrong on a supporting claim. Automated evaluators struggle with these nuances. A response that says the refund window is 30 days is wrong if the actual window is 14 days, but an LLM-as-a-judge might rate it as close enough. The granularity of evaluation matters. Checking whether the response answers the question at all is easier than checking every factual claim within it. Production systems often combine automated evaluation for scale with periodic human review for calibration.</p></div></details>
+</section>
+<section class="ac-sec" id="hallucination-in-practice" aria-labelledby="hallucination-in-practice-h"><h2 id="hallucination-in-practice-h">Hallucination in Practice</h2>
+<p>The practical impact of hallucination depends on the application. For a creative writing tool, hallucination is part of the feature. For a medical chatbot, it can be dangerous. For a legal research assistant, it can lead to professional liability.</p>
+<h3 id="high-stakes-applications">High-Stakes Applications</h3>
+<p>In healthcare, finance, and legal applications, hallucination carries real consequences. A model that invents a drug interaction, fabricates a regulatory requirement, or cites a non-existent legal precedent can cause harm that no disclaimer fully addresses. These applications require the strongest mitigations, including RAG with verified sources, output validation against authoritative databases, human-in-the-loop review for critical decisions, and clear disclaimers about the limitations of AI-generated content.</p>
+<h3 id="low-stakes-applications">Low-Stakes Applications</h3>
+<p>For content generation, brainstorming, and casual Q and A, hallucination is less critical. A model that suggests a creative plot twist that does not make historical sense is not going to harm anyone. The appropriate response is to calibrate the level of mitigation to the stakes of the application, rather than applying the same heavy-handed safeguards everywhere.</p>
+<h3 id="user-trust">User Trust</h3>
+<p>Hallucination erodes user trust. When a user catches a model stating something confidently that is wrong, they begin to distrust all of its output, including the parts that are correct. This is particularly damaging for enterprise applications where the model is supposed to be a reliable assistant. Transparency about limitations, citation of sources, and clear marking of uncertainty help maintain trust even when the model occasionally makes mistakes.</p>
+</section>
+<section class="ac-sec" id="the-future-of-hallucination" aria-labelledby="the-future-of-hallucination-h"><h2 id="the-future-of-hallucination-h">The Future of Hallucination</h2>
+<p>Hallucination has been a known problem since the first large language models were deployed, and it remains unsolved in the general case. Progress has been made through RAG, grounding techniques, and better training methods, but no current model can guarantee factual accuracy on arbitrary questions.</p>
+<p>Reasoning models, covered in the next guide, offer a partial path forward. By spending more compute on thinking through a problem step by step, these models can catch some of their own errors before producing output. This helps with reasoning and mathematical errors but does not solve the fundamental problem of factual gaps in training data.</p>
+<p>Research is active on several fronts. Training methods that teach models to express calibrated uncertainty, architectures that separate factual recall from text generation, and retrieval systems that provide real-time fact-checking are all being explored. The most promising direction may be combining language models with external knowledge systems, like knowledge graphs and verified databases, so the model generates text and grounds it in structured, verifiable facts simultaneously.</p>
+<aside class="ac-co ac-co-summary"><p class="ac-co-lab"><span class="ac-co-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>Summary</p><div class="ac-co-body"><p>Hallucination is the production of confident, fluent, and factually wrong statements by a language model. It happens because models generate text based on statistical patterns, not on verified knowledge. The model cannot distinguish between a plausible sentence and a true one. Hallucination is worse on obscure topics, with high temperature, and when prompts contain false premises. The main mitigations are RAG to ground answers in retrieved documents, prompt engineering to encourage uncertainty, knowledge graphs for structured grounding, low temperature for factual tasks, and output validation to catch errors before they reach the user. No single technique eliminates hallucination, and production systems combine multiple approaches. Measuring hallucination requires evaluation sets with known correct answers, and methods range from human review to automated factuality benchmarks. The stakes determine how much mitigation is needed, with healthcare, legal, and financial applications requiring the strongest safeguards.</p></div></aside>
+</section>
+<aside class="ac-about"><p class="ac-about-h">About this guide</p><p>This guide is part of Pascal Academy's AI Fundamentals series, covering LLMs, prompt engineering, RAG, agents, context windows, knowledge graphs, hallucinations, reasoning models, embeddings, and MCP. The full series and hands-on courses are available at Pascal Academy. For teams looking to upskill, we offer custom cohort programmes tailored to your stack and use cases.</p><p>See how this works in Pascal: <a href="/Website-Updates/ask-pascal/cited-research">cited research in Ask Pascal</a>.</p></aside>
+    </article>
+  </div>
+  <section class="row row-pad bg-cream" id="faq" aria-labelledby="faq-title">
+    <div class="faq-wrap">
+      <div><h2 class="h2" id="faq-title">Frequently asked questions</h2></div>
+      <div class="faq">
+<details class="faq-item"><summary>What are AI hallucinations in finance?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Hallucinations are outputs where an AI model generates information that sounds plausible but is factually incorrect. In finance, this could mean a model inventing a revenue figure, fabricating a quote from an earnings call, or citing a filing that does not contain the claimed data. Hallucinations are the primary reason verification is essential.</div></details>
+<details class="faq-item"><summary>Why do AI models hallucinate?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Models hallucinate because they generate text by predicting the next likely token, not by looking up facts. When they lack specific information, they fill gaps with plausible-sounding content. Hallucinations are more common when prompts are vague, when the model lacks context, or when the question involves specific numbers or dates.</div></details>
+<details class="faq-item"><summary>How does Pascal reduce hallucinations in financial research?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Pascal reduces hallucinations by grounding every output in source documents through retrieval-augmented generation. Instead of generating from training data alone, Pascal's agents pull from actual filings and your internal research. Every claim includes a citation tracing back to the source line, so you can verify accuracy before relying on the output.</div></details>
+<details class="faq-item"><summary>How can you detect and prevent AI hallucinations?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Detect hallucinations by checking every number against the source, tracing every claim to its origin, and verifying the reasoning. Prevent them by providing specific context in your prompts, using RAG to ground outputs in real documents, and building verification checkpoints into your workflow. Never present an AI output to a stakeholder without independent review.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="kl" aria-labelledby="kl-h">
+    <h2 class="sx-t" id="kl-h">Keep learning</h2>
+    <div class="kl-g"><a class="gc" href="/Website-Updates/pascal-academy/guides/reasoning-models"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-cream"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg><b>Reasoning traces</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><b>Extended thinking</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg><b>Mathematics and logic</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 08</span><h3 class="gc-t">Reasoning models</h3><p class="gc-m">13 min read</p></div></a><a class="gc" href="/Website-Updates/pascal-academy/guides/embeddings"><div class="th" aria-hidden="true"><div class="th-bz"><div class="th-scr g-deep"><div class="tcs"><span class="tc tc-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><b>The geometry of meaning</b></span><span class="tc tc-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg><b>Similarity metrics</b></span><span class="tc tc-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><b>Semantic search</b></span></div></div></div></div><div class="gc-b"><span class="pill">Part 09</span><h3 class="gc-t">Embeddings</h3><p class="gc-m">13 min read</p></div></a><a class="gc" href="/Website-Updates/guides/ai-for-hedge-funds"><div class="th" aria-hidden="false"><div class="th-bz"><div class="th-scr th-shot g-teal"><img src="/Website-Updates/assets/shots/shot-agent-table.webp" alt="Pascal agent output: a street vs management framing table for Sea Limited with citations" width="1600" height="844" loading="lazy" decoding="async"></div></div></div><div class="gc-b"><span class="pill">Desk guide</span><h3 class="gc-t">AI for Hedge Funds</h3><p class="gc-m">24 min read</p></div></a></div>
+  </section>
+  <section class="ws" aria-labelledby="ws-t">
+    <div class="ws-in">
+      <div><h2 class="ws-t" id="ws-t">Join Pascal Academy</h2><p>Learn directly from the Pascal team through live workshops.</p></div>
+      <a class="btn btn-dark" href="/Website-Updates/pascal-academy/signup">Sign up</a>
+    </div>
+  </section>
+
+</div>
+</div>
+<section class="cta" aria-labelledby="cta-title">
+  <h2 id="cta-title">Ask your first question with your firm's context.<br><span style="color:var(--mint-2)">A walkthrough with your own documents connected.</span></h2>
+  <div class="actions">
+    <a class="btn btn-white" href="https://pascalailabs.com/demo">Book a demo</a>
+  </div>
+</section>
+
+<dialog class="ac-gate" id="pdf-gate" aria-labelledby="gate-h">
+  <div class="ac-gate-in">
+    <div class="ac-gate-side">
+      <p class="eyebrow">Pascal Academy · PDF</p>
+      <p class="ac-gate-t">Hallucinations</p>
+      <p class="ac-gate-m">12 min read</p>
+      <div class="ac-gate-doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b><i></i><i></i></div>
+    </div>
+    <div class="ac-gate-main">
+      <button class="ac-gate-x" type="button" data-gate-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      <form class="ac-gate-form" data-gate-form data-guide="Hallucinations" data-slug="ai-hallucinations" data-pdf="/Website-Updates/assets/academy/pdf/ai-hallucinations.pdf" novalidate>
+        <h2 id="gate-h">Get this guide as a PDF</h2>
+        <p class="ac-gate-sub">Tell us where to send it and we will email you the PDF.</p>
+        <label>Full name<input name="name" autocomplete="name" required></label>
+        <label>Work email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Organization<input name="organization" autocomplete="organization" required></label>
+        <p class="ac-gate-err" role="alert" hidden></p>
+        <button class="btn btn-dark" type="submit">Email me the PDF</button>
+        <p class="ac-gate-fine">By submitting, you agree to be contacted about Pascal Academy.</p>
+      </form>
+      <div class="ac-gate-done" hidden>
+        <span class="ac-gate-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <h2>Check your inbox.</h2>
+        <p>We have sent <b>Hallucinations</b> to <span data-gate-email></span>.</p>
+        <button class="btn btn-line" type="button" data-gate-close>Back to the guide</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="/Website-Updates/assets/pages/academy3.js?v=4f48f13d9f" defer></script>
+</main>
+<footer class="footer">
+  <div class="frame">
+    <div class="footer-grid">
+      <div>
+        <a href="/Website-Updates/" aria-label="Pascal AI home"><img src="/Website-Updates/assets/pascal-logo.png" alt="Pascal AI" width="82" height="24" loading="lazy"></a>
+        <p class="footer-blurb">The Investment OS for asset and wealth managers, asset servicers, corporate treasury, banks and financial institutions, private equity and private credit firms, and hedge funds.</p>
+      </div>
+      <nav aria-label="Platform">
+        <p class="fh">Platform</p>
+        <ul>
+          <li><a href="/Website-Updates/platform">Platform overview</a></li>
+          <li><a href="/Website-Updates/platform/context-graph">Context graph &amp; memory</a></li>
+          <li><a href="/Website-Updates/platform/mcp-apis">MCP &amp; APIs</a></li>
+          <li><a href="/Website-Updates/solutions/ai-transformation">AI transformation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Products">
+        <p class="fh">Products</p>
+        <ul>
+          <li><a href="/Website-Updates/ask-pascal">Ask Pascal</a></li>
+          <li><a href="/Website-Updates/ask-pascal/cited-research">Cited research</a></li>
+          <li><a href="/Website-Updates/ask-pascal/screeners">Screeners</a></li>
+          <li><a href="/Website-Updates/pascal-agents">Pascal Agents</a></li>
+          <li><a href="/Website-Updates/pascal-agents/workflow-library">Workflow library</a></li>
+          <li><a href="/Website-Updates/pascal-agents/data-agent">Pascal Data Agent</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Industries">
+        <p class="fh">Industries</p>
+        <ul>
+          <li><a href="/Website-Updates/solutions/hedge-funds">Hedge Funds</a></li>
+          <li><a href="/Website-Updates/solutions/asset-wealth-management">Asset &amp; Wealth Management</a></li>
+          <li><a href="/Website-Updates/solutions/banking">Banks &amp; Financial Institutions</a></li>
+          <li><a href="/Website-Updates/solutions/asset-servicing">Asset Servicing</a></li>
+          <li><a href="/Website-Updates/solutions/private-equity-credit">Private Equity &amp; Private Credit</a></li>
+          <li><a href="/Website-Updates/solutions/treasury-hedge-accounting">Corporate Treasury &amp; Hedge Accounting</a></li>
+          <li><a href="/Website-Updates/customer-stories">Customer stories</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="News">
+        <p class="fh">News</p>
+        <ul>
+          <li><a href="https://pascalailabs.com/news">Newsroom</a></li>
+          <li><a href="/Website-Updates/news/founders-notes">Founder's notes</a></li>
+          <li><a href="https://vibhavviswanathan.substack.com" rel="noopener">Alpha &amp; Agents</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="fh">Company</p>
+        <ul>
+          <li><a href="https://pascalailabs.com/about">About</a></li>
+          <li><a href="/Website-Updates/security">Security</a></li>
+          <li><a href="https://pascalailabs.com/careers">Careers</a></li>
+          <li><a href="/Website-Updates/pascal-academy">Pascal Academy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Pascal AI Labs</span>
+      <span><a href="https://pascalailabs.com/privacy-policy">Privacy</a> &middot; <a href="https://pascalailabs.com/terms-of-use">Terms</a> &middot; <a href="https://www.linkedin.com/company/pascal-ai-labs/" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/pascalailabs" rel="noopener">X</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

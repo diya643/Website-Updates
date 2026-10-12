@@ -1,0 +1,139 @@
+/* Customer stories: hub (/customer-stories) and the story pages. Built from the site's own pieces: the
+   enterprise dark hero (as on /security), the sub-nav, hairline rows and cells. Every selector is scoped under .pg-cs */
+
+/* darker hairlines on these pages (frame edges, row rules, cells, tables) */
+.pg-cs { --line: #CDD4D0; --line-2: #B9C2BD; }
+
+/* ---------- hero facts (same rhythm as the security page) ---------- */
+.pg-cs .cs-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); margin: 64px 0 0; border-top: 1px solid var(--d-line); }
+.pg-cs .cs-facts > div { padding: 22px 24px 0 0; }
+.pg-cs .cs-facts > div + div { padding-left: 24px; border-left: 1px solid var(--d-line); }
+.pg-cs .cs-facts dt { font: 500 11.5px/1.3 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--mint); }
+.pg-cs .cs-facts dd { margin: 10px 0 0; font: 400 17px/1.35 var(--font-display); letter-spacing: -.01em; color: #fff; }
+
+/* ---------- stat strip ---------- */
+.pg-cs .cs-stats .cell { padding: 44px 40px 48px; gap: 0; }
+.pg-cs .cs-stats .stat-num { font-size: clamp(40px, 4.2vw, 56px); }
+.pg-cs .cs-stats .stat-num small { color: var(--mute); font-size: .42em; margin-left: 6px; letter-spacing: -.01em; }
+.pg-cs .cs-stats .stat-lbl { max-width: 260px; }
+
+/* ---------- long-form sections: heading left, copy right ---------- */
+.pg-cs .cs-sec { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.9fr); gap: 64px; padding: 88px var(--pad); }
+
+.pg-cs .cs-sec > * { min-width: 0; }
+.pg-cs .cs-sec-h { align-self: start; position: sticky; top: 136px; }
+.pg-cs .cs-sec-h .h2 { font-size: clamp(28px, 2.8vw, 38px); }
+.pg-cs .cs-sec-b { max-width: 780px; }
+.pg-cs .cs-sec-b > p, .pg-cs .cs-sec-b > h3 + p { font-size: 19.5px; line-height: 1.65; color: var(--ink-2); margin: 0 0 22px; text-wrap: pretty; }
+.pg-cs .cs-sec-b > p:last-child { margin-bottom: 0; }
+.pg-cs .cs-sec-b h3 { font-size: 24px; letter-spacing: -.02em; line-height: 1.25; margin: 44px 0 14px; color: var(--ink); }
+.pg-cs .cs-sec-b > h3:first-child { margin-top: 0; }
+.pg-cs .cs-sec-b a:not(.link):not(.btn) { color: var(--ink); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 3px; }
+.pg-cs .cs-sec-b a:not(.link):not(.btn):hover { text-decoration-color: var(--brand); }
+.pg-cs .cs-wide { grid-template-columns: 1fr; gap: 36px; }
+.pg-cs .cs-wide .cs-sec-h { position: static; }
+.pg-cs .cs-wide .cs-sec-b { max-width: none; }
+
+/* labelled steps: hairline spec list */
+.pg-cs .cs2-steps { margin: 24px 0 32px; border-top: 1px solid var(--line); }
+.pg-cs .cs2-step { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 28px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.pg-cs .cs2-step h4 { margin: 0; font: 500 17.5px/1.45 var(--font-sans); letter-spacing: 0; color: var(--ink); }
+.pg-cs .cs2-step p { margin: 0; font-size: 18px; line-height: 1.65; color: var(--ink-2); }
+
+/* question list (story 2) */
+.pg-cs .cs2-qs { list-style: none; margin: 24px 0 32px; padding: 0; border-top: 1px solid var(--line); }
+.pg-cs .cs2-qs li { display: flex; gap: 14px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--line); font: 400 20px/1.4 var(--font-display); letter-spacing: -.01em; color: var(--ink); }
+.pg-cs .cs2-qs li svg { width: 16px; height: 16px; flex: none; color: var(--brand); position: relative; top: 2px; }
+
+/* product clip, framed like the product pages */
+.pg-cs .cs2-fig { margin: 36px 0 40px; }
+.pg-cs .cs2-fig .panel { min-height: 0; padding: 40px 36px; }
+.pg-cs .cs2-fig figcaption { margin-top: 14px; font: 400 14px/1.45 var(--font-mono); color: var(--mute); }
+.pg-cs .cs2-fig figcaption a { color: var(--ink-2); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 3px; }
+
+/* results table */
+.pg-cs .cs-res { border-top: 1px solid var(--line); }
+.pg-cs .cs-res { font-size: 16.5px; }
+.pg-cs .cs-res tbody th { width: 24%; font-weight: 500; }
+.pg-cs .cs-res td { color: var(--ink-2); }
+.pg-cs .cs-res td:last-child { color: var(--ink); }
+.pg-cs .cs-res thead th:last-child { color: var(--brand-2); }
+
+/* about + share */
+.pg-cs .cs-about { padding-top: 64px; padding-bottom: 64px; }
+.pg-cs .cs-about .h2 { font: 500 12.5px/1 var(--font-mono); letter-spacing: .02em; text-transform: uppercase; color: var(--brand); }
+.pg-cs .cs-about .cs-sec-b > p { font-size: 17px; color: var(--mute); }
+.pg-cs .cs-share { display: flex; align-items: center; gap: 10px; margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--line); }
+.pg-cs .cs-share > span { font: 400 13px/1 var(--font-mono); color: var(--mute); margin-right: auto; }
+.pg-cs .cs-share a, .pg-cs .cs-share button { width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid var(--line-2); border-radius: 8px; background: #fff; color: var(--ink); cursor: pointer; transition: border-color .15s, color .15s; }
+.pg-cs .cs-share a:hover, .pg-cs .cs-share button:hover { border-color: var(--ink); }
+.pg-cs .cs-share .done { border-color: var(--brand); color: var(--brand); }
+.pg-cs .cs-share svg { width: 15px; height: 15px; }
+
+/* ---------- story cards (more stories + hub grid) ---------- */
+.pg-cs .cs-more-h, .pg-cs .csh-all-h { display: flex; align-items: end; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: 64px var(--pad) 40px; }
+.pg-cs .cs-more-h .h2, .pg-cs .csh-all-h .h2 { font-size: clamp(28px, 2.8vw, 38px); }
+.pg-cs .csc-g { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.pg-cs .cs-more .csc-g { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pg-cs .csc { display: flex; flex-direction: column; border-left: 1px solid var(--line); background: #fff; transition: background .2s; }
+.pg-cs .csc:first-child { border-left: 0; }
+.pg-cs .csc:hover { background: var(--bg-3); }
+.pg-cs .csc-img { aspect-ratio: 16 / 9; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--bg-3); }
+.pg-cs .cs-more .csc-img { aspect-ratio: 21 / 9; }
+.pg-cs .csc-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pg-cs .csc-b { padding: 28px 32px 32px; display: flex; flex-direction: column; flex: 1; }
+.pg-cs .csc-b h3 { font: 500 20px/1.3 var(--font-display); letter-spacing: -.015em; color: var(--ink); margin-top: 16px; }
+.pg-cs .csc-meta { margin: 10px 0 0; font: 400 13px/1.4 var(--font-mono); color: var(--mute); }
+.pg-cs .csc-b .link { margin-top: auto; padding-top: 28px; }
+.pg-cs .csc:hover .link { color: var(--brand); }
+.pg-cs .csc[hidden] { display: none; }
+
+/* ---------- hub ---------- */
+.pg-cs .csh-feat-img { position: relative; min-height: 520px; overflow: hidden; }
+.pg-cs .csh-feat-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pg-cs .csh-feat .split-copy p { max-width: 520px; font-size: 18.5px; }
+.pg-cs .csh-feat-st { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 32px 0 0; max-width: 460px; border-top: 1px solid var(--line); }
+.pg-cs .csh-feat-st > div { padding: 18px 20px 0 0; }
+.pg-cs .csh-feat-st > div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+.pg-cs .csh-feat-st dt { font: 400 32px/1 var(--font-display); letter-spacing: -.035em; color: var(--ink); }
+.pg-cs .csh-feat-st dd { margin: 8px 0 0; font: 400 13px/1.4 var(--font-mono); color: var(--mute); }
+.pg-cs .csh-filter { display: flex; flex-wrap: wrap; gap: 4px; }
+.pg-cs .csh-filter button { padding: 10px 12px; border: 0; border-bottom: 2px solid transparent; background: none; font: 400 13px/1 var(--font-mono); text-transform: uppercase; letter-spacing: .02em; color: var(--mute); cursor: pointer; }
+.pg-cs .csh-filter button:hover { color: var(--ink); }
+.pg-cs .csh-filter button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--brand); }
+.pg-cs .csh-q .cells { border-top: 1px solid var(--line); }
+.pg-cs .csh-qc { margin: 0; padding: 44px 48px 44px; gap: 0; }
+.pg-cs .csh-qc img { height: 34px; width: auto; align-self: flex-start; }
+.pg-cs .csh-qc blockquote { margin: 28px 0 0; font-size: 18.5px; line-height: 1.65; color: var(--ink); flex: 1; }
+.pg-cs .csh-qc figcaption { margin-top: 28px; font-size: 14px; color: var(--mute); }
+.pg-cs .csh-qc figcaption b { display: block; color: var(--ink); font-weight: 500; margin-bottom: 2px; }
+.pg-cs .csh-note p { margin: 0; max-width: 760px; font-size: 17px; line-height: 1.6; color: var(--mute); }
+.pg-cs .csh-note a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 3px; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1100px) {
+  .pg-cs .cs-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pg-cs .cs-facts > div, .pg-cs .cs-facts > div + div { padding: 18px 20px 18px 0; border-left: 0; border-bottom: 1px solid var(--d-line); }
+}
+@media (max-width: 1000px) {
+  .pg-cs .cs-sec { grid-template-columns: 1fr; gap: 28px; padding: 64px var(--pad); }
+  .pg-cs .cs-sec-h { position: static; }
+  .pg-cs .csc-g, .pg-cs .cs-more .csc-g { grid-template-columns: 1fr; }
+  .pg-cs .csc { border-left: 0; border-top: 1px solid var(--line); }
+  .pg-cs .csc:first-child { border-top: 0; }
+  .pg-cs .csh-feat-img { min-height: 0; aspect-ratio: 16 / 10; }
+}
+@media (max-width: 760px) {
+  .pg-cs .cs-facts { grid-template-columns: 1fr 1fr; margin-top: 44px; }
+  .pg-cs .cs-facts > div { padding: 18px 16px 18px 0; }
+  .pg-cs .cs-facts > div + div { padding-left: 0; border-left: 0; }
+  .pg-cs .cs-stats { grid-template-columns: 1fr; }
+  .pg-cs .cs-stats .cell { border-left: 0; border-top: 1px solid var(--line); padding: 32px var(--pad); }
+  .pg-cs .cs-stats .cell:first-child { border-top: 0; }
+  .pg-cs .cs2-step { grid-template-columns: 1fr; gap: 8px; }
+  .pg-cs .cs-sec-b > p, .pg-cs .cs-sec-b > h3 + p { font-size: 18px; }
+  .pg-cs .csh-q .cells { grid-template-columns: 1fr; }
+  .pg-cs .csh-qc { padding: 32px var(--pad); border-left: 0; border-top: 1px solid var(--line); }
+  .pg-cs .csh-qc:first-child { border-top: 0; }
+  .pg-cs .csc-b { padding: 24px var(--pad) 28px; }
+}
