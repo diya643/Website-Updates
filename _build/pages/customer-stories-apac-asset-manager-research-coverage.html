@@ -1,0 +1,170 @@
+<!--meta
+{
+ "path": "/customer-stories/apac-asset-manager-research-coverage",
+ "title": "APAC Asset Manager Scales Research Coverage | Pascal AI",
+ "description": "How a $70B+ APAC asset manager used Pascal to cover 1,000+ listed companies with thirty analysts, cutting manual research work from 6-8 hours a day to under 2.",
+ "crumbs": [["Customer stories", "/customer-stories"], ["APAC asset manager, $70B+", "/customer-stories/apac-asset-manager-research-coverage"]],
+ "schema": "case_study",
+ "name": "How a leading APAC asset manager ($70B+ AUM) scaled research across 1,000+ companies with Pascal AI Labs",
+ "published": "2026-10-12",
+ "og_kicker": "Customer story · Asset management",
+ "og_title": "How a $70B+ APAC asset manager scaled research across 1,000+ companies",
+ "llms": "Customer story: a leading APAC asset manager ($70B+ AUM, about 30 analysts, 1,000+ listed companies) runs Pascal agentic workflows through earnings season (pre-results briefings, filing reads against the analyst's model, post-call synthesis) and the off season (pre-trip primary research, company primers), plus proxy voting and inbound email. Manual work fell from 6-8 hours to under 2 hours per analyst per day; every output is cited to the source line.",
+ "css": ["customer-stories.css"],
+ "word_limit": 2400,
+ "faq_min": 0,
+ "lead_max": 60,
+ "priority": 0.7
+}
+-->
+<section class="hero-teal hero-ent pg-cs" aria-labelledby="page-title">
+  <div class="hero-teal-in">
+    {{crumbs}}
+    <div class="ht-grid">
+      <div><h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Customer story · Asset &amp; Wealth Management</span></span>How a leading APAC asset manager <span class="mute">scaled research across 1,000+ companies with Pascal.</span></h1></div>
+      <div class="ht-side">
+        <p class="lead">A $70B+ asset manager with about thirty analysts covering more than a thousand listed companies used Pascal to take the mechanical work out of research, from earnings season to proxy votes.</p>
+        <div class="actions"><a class="btn btn-white" href="{{demo_url}}">Book a demo</a></div>
+      </div>
+    </div>
+    <dl class="cs-facts">
+        <div><dt>Customer</dt><dd>Leading APAC asset manager</dd></div>
+        <div><dt>AUM</dt><dd>$70B+</dd></div>
+        <div><dt>Team size</dt><dd>~30 investment analysts</dd></div>
+        <div><dt>Coverage</dt><dd>1,000+ listed companies</dd></div>
+        <div><dt>Region</dt><dd>Asia-Pacific</dd></div>
+      </dl>
+  </div>
+</section>
+
+<nav class="subnav" aria-label="On this page">
+  <div class="subnav-inner">
+    <a href="#overview">Overview</a>
+    <a href="#before">Before Pascal</a>
+    <a href="#with">With Pascal</a>
+    <a href="#additional">Additional workflows</a>
+    <a href="#results">Results</a>
+    <a href="#why">What made it work</a>
+  </div>
+</nav>
+
+<div class="frame pg-cs">
+  <div class="cells cs-stats" role="list" aria-label="Results at a glance">
+    <div class="cell" role="listitem"><span class="stat-num">&lt;2<small>hrs</small></span><span class="stat-lbl">Manual work per analyst per day, down from 6-8 hours</span></div>
+    <div class="cell" role="listitem"><span class="stat-num">1,000+</span><span class="stat-lbl">Listed companies covered by the investment team</span></div>
+    <div class="cell" role="listitem"><span class="stat-num">~30</span><span class="stat-lbl">Investment analysts on the team</span></div>
+  </div>
+
+
+  <section class="row cs-sec" id="overview" aria-labelledby="overview-h">
+    <div class="cs-sec-h"><h2 class="h2" id="overview-h">Overview</h2></div>
+    <div class="cs-sec-b">
+      <p>A leading APAC asset manager overseeing more than $70 billion in assets came to Pascal with a problem that was surprisingly straightforward to describe but difficult to solve. Their investment team of roughly thirty analysts was responsible for covering well over a thousand listed companies between them. That leaves every analyst maintaining a live view on something like thirty to fifty businesses at any point in time.</p>
+      <p>Maintaining a live view is far more demanding than it sounds. In practice, the analyst in charge needs to constantly update their understanding of the business, its industry, competitors, what management is saying, and whether every new piece of information changes the original investment thesis. Every listed company leaves behind a growing paper trail, and every quarter adds another layer to it through reports, results, investor presentations, conference call transcripts, and exchange disclosures. Before AI, the only way to keep up was to read, extract, condense, and document everything by hand. That was the problem they came to Pascal with.</p>
+    </div>
+  </section>
+
+
+  <section class="row cs-sec" id="before" aria-labelledby="before-h">
+    <div class="cs-sec-h"><h2 class="h2" id="before-h">Before Pascal</h2></div>
+    <div class="cs-sec-b">
+      <p>The firm's research process relied entirely on manual workflows. Analysts spent a disproportionate amount of their time on undifferentiated work: reading filings, pulling numbers, updating models, and documenting changes by hand. The team was experienced and well-resourced. The actual problem was one of coverage density. With each analyst responsible for so many names, the volume of information that needed to be processed to keep every view current was simply too large for any person to keep up with in real time.</p>
+      <p>The firm had experimented with consumer AI tools, but without a structured approach to data, citations, or workflow design, the outputs were inconsistent and difficult to trust. They needed a system that could handle the mechanical work of research without compromising on the rigour their investment process demanded.</p>
+    </div>
+  </section>
+
+
+  <section class="row cs-sec" id="with" aria-labelledby="with-h">
+    <div class="cs-sec-h"><h2 class="h2" id="with-h">With Pascal</h2></div>
+    <div class="cs-sec-b">
+      <p>Pascal centred the solution around the natural rhythm of research inside a public market fund, which falls into two distinct seasons: earnings season and the off season.</p>
+
+      <h3>Earnings season</h3>
+      <p>If you work in finance, you know that earnings season is one of the most intense periods of the year. On a heavy day, an analyst might have five or six portfolio companies reporting simultaneously. The day can quickly turn into a race between updating financial models in real time, sitting through back-to-back earnings calls, reconciling reported numbers against expectations, and juggling a hundred other things that suddenly need attention.</p>
+      <p>Pascal built an end-to-end agentic workflow that runs alongside the analyst throughout the earnings cycle.</p>
+      <div class="cs2-steps">
+        <div class="cs2-step"><h4>Before results</h4><p>The evening before earnings, every analyst receives a briefing on the reporting companies they cover and the specific variables worth paying attention to.</p></div>
+        <div class="cs2-step"><h4>As results are released</h4><p>Once the numbers land, the agent reads every filing against the firm's existing research, the analyst's financial model, and prior expectations. Within minutes, the analyst has a clear view of what actually changed and whether any of it is material to the investment thesis.</p></div>
+        <div class="cs2-step"><h4>After the conference call</h4><p>Once management finishes speaking, the agent synthesises the discussion against the existing investment view in a way that captures the key takeaways automatically and lays out the obvious follow-up work.</p></div>
+      </div>
+      <p>The undifferentiated work disappears, and analysts can now spend their time on investment judgement.</p>
+
+      <figure class="cs2-fig">
+        <div class="panel fit"><video class="shot" muted loop playsinline preload="none" poster="/assets/clips/agents.jpg" aria-label="An Event Brief on Sea Limited listing Shopee margin and GMV figures by quarter, each with a source number."><source src="/assets/clips/agents.mp4" type="video/mp4"></video></div>
+        <figcaption>An event brief from <a href="/pascal-agents">Pascal Agents</a>, with a source on every figure. Illustrative company.</figcaption>
+      </figure>
+
+      <h3>The off season</h3>
+      <p>The off season is when most of the primary and secondary research happens.</p>
+      <div class="cs2-steps">
+        <div class="cs2-step"><h4>Primary research</h4><p>This is when analysts spend time understanding businesses in far greater depth. Most of the travelling happens during this period: management meetings, plant visits, ground checks. Before an analyst travels, an agentic workflow synthesises everything available in the public domain alongside the firm's own internal context on that company. It then produces a short list of the things that are actually worth travelling to find out, and more importantly, it surfaces the questions that management has not already answered somewhere in print.</p></div>
+        <div class="cs2-step"><h4>Secondary research</h4><p>Secondary research is largely desk-based work, so it includes things like studying in depth how a business works, understanding its industry, and studying its comparables. Pre-AI, this meant working through a large pile of documents manually. Today, that same work can be turned into an agentic workflow. The analyst runs a company primer workflow that maps the business and surfaces the key information needed for deeper analysis.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="row cs-sec" id="additional" aria-labelledby="additional-h">
+    <div class="cs-sec-h"><h2 class="h2" id="additional-h">Additional workflows</h2></div>
+    <div class="cs-sec-b">
+      <p>Beyond the core research workflows, Pascal also automated several other manual processes across the firm that were creating a disproportionate amount of operational overhead.</p>
+      <h3>Proxy voting</h3>
+      <p>Large mutual funds own meaningful stakes across hundreds of listed companies, and once those holdings cross certain thresholds, board resolutions requiring shareholder votes start arriving on a near-daily basis.</p>
+      <p>Every request arrives with a substantial amount of supporting material, including long explanatory documents and independent proxy advisory opinions. For this customer, that often meant reviewing five to ten resolutions a day, with the analyst spending two to four hours simply reading through the material before making a decision. With Pascal, an agentic workflow does the reading: summarising each resolution, laying the proxy advisors' views side by side, and flagging anything contentious. The analyst spends their time on the decision.</p>
+      <h3>Inbound email workflow</h3>
+      <p>The firm also had an inbound email workflow that was consuming a significant amount of time. It was largely mechanical work that required little judgement, so Pascal replaced it with an end-to-end agentic workflow that handles the entire process automatically.</p>
+    </div>
+  </section>
+
+
+  <section class="row cs-sec cs-wide" id="results" aria-labelledby="results-h">
+    <div class="cs-sec-h"><h2 class="h2" id="results-h">Results</h2></div>
+    <div class="cs-sec-b">
+      <div class="table-wrap">
+        <table class="cmp-table cs-res">
+          <thead><tr><th scope="col">Metric</th><th scope="col">Before</th><th scope="col">After</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Analyst time on manual work per day</th><td>6-8 hours spent reading, extracting, and updating</td><td>Under 2 hours, with the rest reallocated to judgement</td></tr>
+            <tr><th scope="row">Earnings day prep</th><td>Manual reading of filings</td><td>Automated briefing delivered evening before</td></tr>
+            <tr><th scope="row">Post-earnings analysis</th><td>Hours of manual comparison</td><td>Minutes via agentic workflow</td></tr>
+            <tr><th scope="row">Proxy voting review</th><td>2-4 hours per resolution reading material</td><td>Decision-ready summary with advisors' views side by side</td></tr>
+            <tr><th scope="row">Pre-meeting prep</th><td>Manual document review</td><td>Automated synthesis of public + internal context</td></tr>
+            <tr><th scope="row">Citation trail</th><td>None</td><td>Every output traces to source line</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="row cs-sec bg-mint" id="why" aria-labelledby="why-h">
+    <div class="cs-sec-h"><h2 class="h2" id="why-h">What made it work</h2></div>
+    <div class="cs-sec-b">
+      <p>The most important part of all of these workflows is that every output is fully cited. At any point, an analyst can see exactly where a piece of information came from, whether it was an internal document, a regulatory filing, a web search, a management transcript, or any other source. This is what made the system trustworthy enough to sit inside a real investment process.</p>
+      <p>The architecture was built so that models can be swapped without rebuilding the workflows above them. The firm's data fabric, knowledge graph, and permissioning layer sit underneath the model layer, meaning the investment workflows are not tied to any single model provider.</p>
+    </div>
+  </section>
+
+
+  <section class="row cs-sec cs-about" id="about" aria-labelledby="about-h">
+    <div class="cs-sec-h"><h2 class="h2" id="about-h">About Pascal AI Labs</h2></div>
+    <div class="cs-sec-b">
+      <p>Pascal AI Labs is the context-driven AI infrastructure for institutional finance. It connects an investment firm's data, research, and institutional knowledge in one <a href="/platform/context-graph">context layer</a>, so investment teams can ask questions across everything the firm knows and get <a href="/ask-pascal/cited-research">answers they can trace back to the source</a>. Pascal works with institutions managing over $300B in assets. See how it works for <a href="/solutions/asset-wealth-management">asset and wealth managers</a>.</p>
+      <div class="cs-share"><span>Share this customer story</span><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fpascalailabs.com%2Fcustomer-stories%2Fapac-asset-manager-research-coverage" rel="noopener" target="_blank" aria-label="Share on LinkedIn">{{icon:linkedin}}</a>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpascalailabs.com%2Fcustomer-stories%2Fapac-asset-manager-research-coverage" rel="noopener" target="_blank" aria-label="Share on X">{{icon:x-logo}}</a>
+        <button type="button" data-copy aria-label="Copy link">{{icon:link}}</button></div>
+    </div>
+  </section>
+
+
+  <section class="row cs-more" aria-labelledby="more-h">
+    <div class="cs-more-h"><h2 class="h2" id="more-h">More customer stories</h2><a class="link" href="/customer-stories">View all customer stories</a></div>
+    <div class="csc-g">
+      <!--#include cs-card-knowledge-->
+      <!--#include cs-card-hedge-->
+    </div>
+  </section>
+</div>
+
+<!--#include demo-band title="See Pascal" sub="on your own coverage universe."-->
+<script src="/assets/pages/customer-stories.js" defer></script>

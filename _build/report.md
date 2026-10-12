@@ -1,5 +1,5 @@
 # Build report — 2026-10-12
-44 pages built to `public/`.
+48 pages built to `public/`.
 
 ## PASS · `/pascal-academy/agent-library` (academy-agents.html)
 - title (38): AI Agents for Finance | Pascal Academy
@@ -284,6 +284,26 @@
 - description (155): Ask Pascal is the AI research assistant for investment teams: answers from filings, research and your firm's own memos, with every claim cited to the page.
 - FAQs in schema: 4 · robots: index
 
+## PASS · `/customer-stories/apac-asset-manager-institutional-knowledge` (customer-stories-apac-asset-manager-institutional-knowledge.html)
+- title (51): Proprietary Knowledge as a Living Asset | Pascal AI
+- description (160): How a $100B+ APAC asset manager made its broker reports, research and email searchable as connected context with Pascal, deployed inside its own infrastructure.
+- FAQs in schema: 0 · robots: index
+
+## PASS · `/customer-stories/apac-asset-manager-research-coverage` (customer-stories-apac-asset-manager-research-coverage.html)
+- title (55): APAC Asset Manager Scales Research Coverage | Pascal AI
+- description (159): How a $70B+ APAC asset manager used Pascal to cover 1,000+ listed companies with thirty analysts, cutting manual research work from 6-8 hours a day to under 2.
+- FAQs in schema: 0 · robots: index
+
+## PASS · `/customer-stories/us-hedge-fund-idea-generation` (customer-stories-us-hedge-fund-idea-generation.html)
+- title (59): Hedge Fund Turns Screening Into Idea Generation | Pascal AI
+- description (159): How a top 20 US hedge fund uses Pascal to screen its universe on quantitative and qualitative conditions together, with every idea tied to its source evidence.
+- FAQs in schema: 0 · robots: index
+
+## PASS · `/customer-stories` (customer-stories.html)
+- title (57): Customer Stories: AI in Institutional Finance | Pascal AI
+- description (153): How hedge funds and asset managers run Pascal in production: earnings season workflows, proprietary knowledge search and evidence-backed idea generation.
+- FAQs in schema: 0 · robots: index
+
 ## PASS · `/` (home.html)
 - title (54): Pascal AI: Context-Driven AI for Institutional Finance
 - description (155): Pascal builds context-driven AI agents for institutional finance, with your firm's memory, data and permissions behind every answer, inside your perimeter.
@@ -353,7 +373,7 @@
 - title (51): AI for Banks and Financial Institutions | Pascal AI
 - description (151): AI for commercial banks, retail lenders and NBFCs: credit memos tested against your policy, RM briefs, covenant and KYC review, and regulatory returns.
 - FAQs in schema: 6 · robots: index
-- ⚠️ 548 words outside the FAQ (budget 600)
+- ⚠️ 599 words outside the FAQ (budget 600)
 
 ## PASS · `/solutions/hedge-funds` (solutions-hedge-funds.html)
 - title (52): AI for Hedge Funds: Front to Back Office | Pascal AI
@@ -364,7 +384,7 @@
 - title (52): AI for Private Equity and Private Credit | Pascal AI
 - description (151): AI for private equity and private credit: CIM screening, data-room diligence, IC and credit memos, covenant checks and LP reporting, cited to the page.
 - FAQs in schema: 6 · robots: index
-- ⚠️ 531 words outside the FAQ (budget 600)
+- ⚠️ 586 words outside the FAQ (budget 600)
 
 ## PASS · `/solutions/treasury-hedge-accounting` (solutions-treasury-hedge-accounting.html)
 - title (56): AI for Corporate Treasury & Hedge Accounting | Pascal AI

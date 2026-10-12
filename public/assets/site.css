@@ -1222,3 +1222,28 @@ html:not(.js) .ucp-tick .c { opacity: 1; }
 .ind-row-l a { display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 14.5px; color: var(--ink-2); transition: border-color .2s, color .2s; }
 .ind-row-l a:hover { border-color: var(--ink); color: var(--ink); }
 @media (max-width: 720px) { .ind-row { grid-template-columns: 1fr; gap: 16px; } }
+
+/* ---------- rev 12: customer stories inside the Industries menu ---------- */
+.mega-il .il-cs { grid-column: 1 / -1; margin: 10px -14px -14px; padding: 16px 20px 18px; background: var(--bg-3); border-top: 1px solid var(--line); }
+.il-cs-h { display: flex; align-items: center; justify-content: space-between; margin: 0 0 10px; padding: 0 8px; }
+.il-cs-h span { font: 500 11.5px/1 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--brand-2); }
+.il-cs-h a { font-size: 13px; font-weight: 500; color: var(--ink-2); }
+.il-cs-h a:hover { color: var(--brand-2); }
+.il-cs-g { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+.il-cs-i { display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 10px; transition: background .15s; }
+.il-cs-i:hover { background: #fff; }
+.il-cs-i img { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; flex: none; }
+.il-cs-i b { display: block; font: 500 13.5px/1.25 var(--font-sans); color: var(--ink); }
+.il-cs-i small { display: block; margin-top: 3px; font-size: 12px; line-height: 1.35; color: var(--mute); }
+.mega-il .mega-panel:has(.il-cs) { width: 760px; }
+
+/* customer story plug on industry pages */
+.cs-plug { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+.cs-plug-img { position: relative; display: block; min-height: 360px; overflow: hidden; border-right: 1px solid var(--line); background: var(--bg-3); }
+.cs-plug-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cs-plug-b { padding: 72px var(--pad); display: flex; flex-direction: column; justify-content: center; }
+.cs-plug-b h2 { font-size: clamp(26px, 2.6vw, 34px); line-height: 1.12; margin-top: 18px; }
+.cs-plug-b p { margin: 18px 0 0; font-size: 17px; line-height: 1.55; color: var(--ink-2); max-width: 520px; }
+.cs-plug-b .cs-plug-m { margin-top: 14px; font: 400 13px/1.4 var(--font-mono); color: var(--mute); }
+.cs-plug-a { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-top: 30px; }
+@media (max-width: 860px) { .cs-plug { grid-template-columns: 1fr; } .cs-plug-img { min-height: 0; aspect-ratio: 16 / 9; border-right: 0; border-bottom: 1px solid var(--line); } .cs-plug-b { padding: 48px var(--pad); } }

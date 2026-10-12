@@ -8,7 +8,7 @@ Preview of exactly what ships: https://pascal-product-preview.vercel.app (the pr
 production must not, and `vercel.json` in this repo does not).
 
 ## 1. What is in `public/` (already built, ready to copy)
-44 pages, one `index.html` each:
+48 pages, one `index.html` each:
 
 | Path | Pages |
 |---|---|
@@ -19,6 +19,7 @@ production must not, and `vercel.json` in this repo does not).
 | `/solutions/` `hedge-funds`, `asset-wealth-management`, `banking`, `asset-servicing`, `private-equity-credit`, `treasury-hedge-accounting`, `ai-transformation` | Industries |
 | `/security` | **New security page.** Replaces the current Next.js one |
 | `/pascal-academy` (+ `/pascal-academy/*`, `/pascal-academy/signup`) and `/guides` (+ 4 desk guides) | **New Pascal Academy.** Replaces the current Academy routes; the signup form posts to the existing `/api/mail` endpoint with the same payload |
+| `/customer-stories` + 3 stories | **New customer stories.** Linked from the Industries menu, every industry page and the homepage |
 | `/news/founders-notes` | Founder's notes (Alpha & Agents essays) |
 | `assets/` | CSS, JS, logos, photos, product clips, OG images, Academy PDFs, favicon. Everything is under `/assets/`; check the repo has nothing else in that folder |
 | `sitemap.xml`, `robots.txt`, `llms.txt` | **Replace** the repo's versions (delete `app/sitemap.ts` / `app/robots.ts` if they exist) |
