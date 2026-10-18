@@ -4,8 +4,10 @@ LOB = "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/"
 SI = "https://cdn.simpleicons.org/"
 SRC = {
     # local
-    **{n: f"/assets/logos/{n}.png" for n in ["accord", "azure", "box", "crustdata", "dropbox", "excel", "gdrive", "notion",
-                                             "onedrive", "onenote", "outlook", "powerpoint", "probe42", "quartr", "sharepoint", "x", "youtube"]},
+    **{n: f"/assets/logos/{n}.png" for n in ["accord", "crustdata", "dropbox", "onenote", "probe42", "quartr", "youtube"]},
+    # crisp vector marks (theSVG, MIT)
+    **{n: f"/assets/logos/{n}.svg" for n in ["azure", "box", "excel", "gdrive", "notion", "onedrive", "outlook", "powerpoint",
+                                             "sharepoint", "teams", "word", "x"]},
     # models and clouds
     "openai": LOB + "openai.svg", "claude": LOB + "claude-color.svg", "gemini": LOB + "gemini-color.svg",
     "mistral": LOB + "mistral-color.svg", "deepseek": LOB + "deepseek-color.svg", "llama": LOB + "meta-color.svg",
@@ -20,10 +22,8 @@ SRC = {
     # companies used in examples
     "nvidia": SI + "nvidia/76B900", "meta": SI + "meta/0467DF", "shopee": SI + "shopee/EE4D2D",
 }
-# Microsoft Teams and Word have no hosted icon; simplified marks drawn here
+# marks with no hosted file, drawn here
 INLINE = {
-    "teams": '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18.5" cy="6.5" r="2.3" fill="#7B83EB"/><rect x="14" y="9.6" width="9" height="8.4" rx="2.4" fill="#7B83EB"/><circle cx="12.3" cy="5.4" r="3" fill="#5059C9"/><rect x="6.5" y="9" width="11.5" height="11" rx="3" fill="#5059C9"/><rect x="1" y="6.5" width="11" height="11" rx="1.6" fill="#4B53BC"/><path d="M3.6 9.3h5.8v1.4H7.2v5H5.8v-5H3.6z" fill="#fff"/></svg>',
-    "word": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="15" height="20" rx="2" fill="#41A5EE"/><rect x="7" y="7" width="15" height="5" fill="#2B7CD3"/><rect x="7" y="12" width="15" height="5" fill="#185ABD"/><rect x="7" y="17" width="15" height="5" rx="0" fill="#103F91"/><rect x="2" y="6" width="11" height="12" rx="1.6" fill="#185ABD"/><path d="M3.9 9h1.4l.9 4 1-4h1.2l1 4 .9-4h1.3l-1.6 6H8.7L7.8 11.3 6.9 15H5.5z" fill="#fff"/></svg>',
     "pdf": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h10l5 5v15H5z" fill="#E5E7EB"/><path d="M15 2v5h5" fill="#CBD0D6"/><rect x="2" y="11" width="14" height="7" rx="1.4" fill="#D93025"/><text x="9" y="16.4" font-family="Arial" font-weight="700" font-size="5.2" text-anchor="middle" fill="#fff">PDF</text></svg>',
 }
 

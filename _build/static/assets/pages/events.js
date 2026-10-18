@@ -41,9 +41,9 @@
   const rules = [
     ["name", (v) => /^[A-Za-z][A-Za-z .'-]+$/.test(v), "Full name is required (letters only)."],
     ["email", (v) => EMAIL.test(v), "Please enter a valid work email."],
-    ["organization", (v) => v.length > 1, "Firm is required."],
+    ["organization", (v) => v.length > 1, "Company name is required."],
     ["jobTitle", (v) => v.length > 1, "Job title is required."],
-    ["phone", (v) => !v || /^\d{7,15}$/.test(v.replace(/[\s-]/g, "")), "Phone number must be between 7-15 digits."],
+    ["phone", (v) => /^\d{7,15}$/.test(v.replace(/[\s-]/g, "")), "Phone number is required (7-15 digits)."],
   ];
   const err = form.querySelector(".ev-err");
   const validate = () => {

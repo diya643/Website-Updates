@@ -2,13 +2,13 @@
 {
  "path": "/pascal-agents/autonomous-agents",
  "title": "Autonomous AI Agents for Investment Work | Pascal AI",
- "description": "Autonomous AI agents for investment research: Pascal plans the task, searches your memos, email and filings, checks the claims and delivers a cited brief.",
+ "description": "Headless AI agents for financial firms: started by a schedule, a new file or an API call, Pascal plans the task, checks its work and delivers to your systems.",
  "crumbs": [["Pascal Agents", "/pascal-agents"], ["Autonomous execution", "/pascal-agents/autonomous-agents"]],
  "schema": "software",
  "name": "Pascal autonomous agents",
  "og_kicker": "Pascal Agents · Autonomous execution",
- "og_title": "Hand off the whole task. Get back finished work.",
- "llms": "Pascal's autonomous agents run an investment research task end to end: they plan the work, search IC memos, email, Teams, expert calls, broker research and public filings, cross-check claims and deliver a cited document, on demand or on a schedule.",
+ "og_title": "Set the task once. Agents run it on their own.",
+ "llms": "Pascal's autonomous agents are headless: a schedule, a new file, an email or an API call starts them, with no chat or user present. They run front, middle and back office tasks end to end (NAV break checks, covenant monitoring, pre-trade mandate checks, DDQs, event briefs), plan the work, search internal systems and public sources, cross-check claims and deliver the output to Outlook, Teams, Excel or the firm's own systems.",
  "priority": 0.8,
  "word_limit": 3000,
  "lead_max": 120,
@@ -19,46 +19,42 @@
   <section class="hero-g" aria-labelledby="page-title">
     <div class="hero-g-copy">
       {{crumbs}}
-      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Autonomous agents</span></span>Hand off <span class="mute">the whole task.</span></h1>
-      <p class="lead">Give Pascal a task and its agents run it end to end: they plan the work, search your IC memos, email, Teams, expert calls and broker research alongside public sources, check what they find, and deliver a finished, cited document. You review the finished output while the agents do the legwork.</p>
+      <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Autonomous agents</span></span>Set the task once. <span class="mute">Agents run it on their own.</span></h1>
+      <p class="lead">Pascal's agents are headless: nobody opens a chat or presses run. A schedule, a new file or an API call from your own systems starts them. They plan the work, check what they find and deliver the result to Outlook, Teams, Excel or your own systems.</p>
       <div class="actions">
         <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
       </div>
     </div>
     <div class="hero-g-media">
-      <div class="panel fit"><!--mock--><div class="pui pui-wide aa-hero" role="img" aria-label="A Pascal agent running the Event Brief workflow for Sea, research in progress, with a Stop button. A plan panel lists Task, Plan, Search, Review and Deliver, with Search in progress. The step log shows: searched IC memos for the Sea Limited investment thesis, latest catalyst calendar and position review; searched emails for the upcoming earnings date, management impressions and IR catch-ups; reviewed Sea Limited Teams chat pinned messages on the upcoming earnings event; searched the expert call tool on Southeast Asia e-commerce, covering Shopee competition, TikTok Shop, Lazada and take rates; now searching filings and internal sources.">
+      <div class="panel fit"><!--mock--><div class="pui pui-wide aa-hero aa-runs" role="img" aria-label="Pascal's agent runs console. Five agents run in the background with no chat open: a daily NAV break check started by a 6:00 schedule and delivered to Teams, a covenant monitor started by a new file in SharePoint that flagged two breaches by email, a pre-trade mandate check started by an API call from the order management system and still running, a DDQ refresh started by an email and waiting for review, and an event brief started by an earnings release and delivered. The NAV break check is open, showing its trigger, steps and delivery.">
   <div class="pui-win">
-    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Event Brief · Sea</b></span><span class="pui-bar-r"><span class="pui-tag">Research in progress</span><span class="pui-chip aa-stop"><i aria-hidden="true"></i> Stop</span></span></div>
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Pascal Agents / <b>Runs</b></span><span class="pui-bar-r"><span class="pui-tag">{{icon:zap}} 5 running in the background</span></span></div>
     <div class="pui-body">
       <!--#include pui-rail on_chat="" on_wf="on"-->
       <div class="pui-split aa-hero-g">
-        <div class="pui-main">
-          <div class="pui-q">Run Event Brief workflow for Sea</div>
-          <div class="pui-tl aa-tl">
-            <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Searching</b> <span class="pui-tag">IC Memos</span></p><span class="pui-tl-m">0:02</span>
-              <div class="pui-tl-b"><p class="pui-sub">Sea Limited investment thesis, latest catalyst calendar, position review</p><div class="pui-schips aa-chips"><span class="pui-schip">{{logo:sharepoint}} Sea thesis.docx</span><span class="pui-schip">{{logo:sharepoint}} Position review</span></div></div></div>
-            <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Searching</b> <span class="pui-tag">Emails</span></p><span class="pui-tl-m">0:06</span>
-              <div class="pui-tl-b"><p class="pui-sub">Upcoming earnings date, management impressions, IR catch-ups</p><div class="pui-schips aa-chips"><span class="pui-schip">{{logo:outlook}} IR catch-up</span></div></div></div>
-            <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Reviewing</b> <span class="pui-schip">{{logo:teams}} Teams</span></p><span class="pui-tl-m">0:09</span>
-              <div class="pui-tl-b"><p class="pui-sub">Covering: Sea Limited Teams chat pinned messages on the upcoming earnings event</p></div></div>
-            <div class="pui-tl-i"><span class="pui-tl-ic">{{icon:check}}</span><p class="pui-tl-t"><b>Searching</b> <span class="pui-tag">Expert Call Tool</span></p><span class="pui-tl-m">0:14</span>
-              <div class="pui-tl-b"><p class="pui-sub">Southeast Asia e-commerce: Shopee competition, TikTok Shop, Lazada, take rates</p></div></div>
-            <div class="pui-tl-i aa-live"><span class="pui-tl-ic run"><span class="aa-spin" aria-hidden="true"></span></span><p class="pui-tl-t">Searching filings and internal sources…</p><span class="pui-tl-m">0:21</span></div>
+        <div class="pui-main aa-rm">
+          <div class="aa-trg"><span class="pui-chip">{{icon:clock}} Schedule</span><span class="pui-chip">{{icon:file-text}} New file</span><span class="pui-chip">{{icon:code}} API</span></div>
+          <div class="aa-rl">
+            <div class="aa-r sel"><span class="aa-ri">{{icon:clock}}</span><span class="aa-rt"><b>Daily NAV break check</b><span class="pui-sub">06:00 schedule · Fund ops</span></span><span class="pui-tag">Delivered</span></div>
+            <div class="aa-r"><span class="aa-ri">{{icon:file-text}}</span><span class="aa-rt"><b>Covenant monitor</b><span class="pui-sub">New compliance certificate · Credit</span></span><span class="pui-tag amber">2 flags</span></div>
+            <div class="aa-r"><span class="aa-ri">{{icon:code}}</span><span class="aa-rt"><b>Pre-trade mandate check</b><span class="pui-sub">API call · Compliance</span></span><span class="pui-tag grey"><span class="aa-spin" aria-hidden="true"></span> Running</span></div>
+            <div class="aa-r"><span class="aa-ri">{{icon:mail}}</span><span class="aa-rt"><b>DDQ refresh</b><span class="pui-sub">DDQ received · Investor relations</span></span><span class="pui-tag navy">In review</span></div>
+            <div class="aa-r"><span class="aa-ri">{{icon:megaphone}}</span><span class="aa-rt"><b>Event brief · Sea</b><span class="pui-sub">Earnings release · Research</span></span><span class="pui-tag">Delivered</span></div>
           </div>
         </div>
         <div class="pui-side">
-          <p class="pui-k">Plan</p>
+          <p class="pui-k">Run · NAV break check</p>
           <div class="aa-plan">
-            <div class="aa-pl done">{{icon:check-circle}}<span>Task</span></div>
-            <div class="aa-pl done">{{icon:check-circle}}<span>Plan</span></div>
-            <div class="aa-pl now"><i aria-hidden="true"></i><span>Search</span><span class="pui-tag grey">4 of 5</span></div>
-            <div class="aa-pl"><i aria-hidden="true"></i><span>Review</span></div>
-            <div class="aa-pl"><i aria-hidden="true"></i><span>Deliver</span></div>
+            <div class="aa-pl done">{{icon:check-circle}}<span>Started at 06:00</span></div>
+            <div class="aa-pl done">{{icon:check-circle}}<span>Read admin NAV file</span></div>
+            <div class="aa-pl done">{{icon:check-circle}}<span>Matched to internal book</span></div>
+            <div class="aa-pl done">{{icon:check-circle}}<span>3 breaks explained</span></div>
+            <div class="aa-pl done">{{icon:check-circle}}<span>Posted to Teams</span></div>
           </div>
-          <p class="pui-k pui-mt">Sources</p>
-          <div class="aa-srcl">
-            <span class="pui-lg w">{{logo:sharepoint}}</span><span class="pui-lg w">{{logo:outlook}}</span><span class="pui-lg w">{{logo:teams}}</span><span class="pui-lg t" style="background:#534AB7">{{icon:users}}</span><span class="pui-lg w">{{logo:pdf}}</span>
-          </div>
+          <p class="pui-k pui-mt">Delivered to</p>
+          <div class="aa-srcl"><span class="pui-lg w">{{logo:teams}}</span><span class="pui-lg w">{{logo:excel}}</span><span class="pui-lg w">{{logo:outlook}}</span></div>
+          <p class="pui-k pui-mt">Or call it</p>
+          <code class="aa-api">POST /agents/nav-check/run</code>
         </div>
       </div>
     </div>
@@ -71,8 +67,8 @@
 <div class="frame pg-aa">
   <section class="cells" aria-label="Autonomous agents at a glance">
     <div class="cell"><span class="stat-num">40<small>%</small></span><span class="stat-lbl">Time saved</span></div>
-    <div class="cell"><span class="stat-num">99.9<small>%+</small></span><span class="stat-lbl">Accuracy</span></div>
     <div class="cell"><span class="stat-num">50M<small>+</small></span><span class="stat-lbl">Pages indexed</span></div>
+    <div class="cell"><span class="stat-num">95<small>%</small></span><span class="stat-lbl">Task completeness rate</span></div>
   </section>
 
   <section class="row" id="how-it-works" aria-labelledby="how-title">

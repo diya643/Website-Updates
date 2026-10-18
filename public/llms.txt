@@ -8,8 +8,10 @@
 
 ## Platform
 
-- [Pascal Platform: AI Infrastructure for Investment Firms](https://pascalailabs.com/platform): Overview of the Pascal Investment OS: products (Ask Pascal, Pascal Agents with the Pascal Data Agent, MCP & APIs) on the Cognitive Engine (context graph and document intelligence), Sovereign Data Fabric (connectors) and permission-based access.
-- [Context Graph & Institutional Memory](https://pascalailabs.com/platform/context-graph): Pascal's context graph and institutional memory, one product: connectors to a firm's systems and data partners feed a knowledge graph of companies, theses and decisions; decisions enter from meeting notes and reviewer edits; every claim is cited and every source permissioned.
+- [Events](https://pascalailabs.com/events): Upcoming Pascal AI Labs events: hosted roundtables for hedge fund and asset manager leaders, and industry forums Pascal attends or speaks at.
+- [Pascal Platform: AI Infrastructure for Investment Firms](https://pascalailabs.com/platform): Overview of the Pascal Investment OS: products (Ask Pascal, Pascal Agents including the data agent, MCP & APIs) on the Cognitive Engine (context graph and document intelligence), Sovereign Data Fabric (connectors) and permission-based access.
+- [From Front to Back Office: AI Roundtable, Hong Kong](https://pascalailabs.com/events/hong-kong-2026): From Front to Back Office: Where AI Is Actually Working in Asset Management. Invite-only roundtable breakfast in Hong Kong, 27 October 2026 (Tue), 7:00–9:30 PM, hosted by Pascal AI Labs, with a form to request an invitation.
+- [Context Graph & Institutional Memory](https://pascalailabs.com/platform/context-graph): Pascal's context graph and institutional memory, one product: connectors to a firm's systems and market data providers feed a knowledge graph of companies, theses and decisions; decisions enter from meeting notes and reviewer edits; every claim is cited and every source permissioned.
 - [Pascal MCP Server and APIs for Investment Firms](https://pascalailabs.com/platform/mcp-apis): Pascal MCP and APIs: (1) bring a firm's context graph, documents and permissions into any LLM such as Claude, ChatGPT, Copilot or internal agents; (2) orchestrate one question across the firm's context and other MCP servers such as public filings, Capital IQ and licensed data vendors, returning one…
 
 ## Ask Pascal
@@ -23,9 +25,9 @@
 ## Pascal Agents
 
 - [Pascal Agents: AI Agents for Investment Workflows](https://pascalailabs.com/pascal-agents): Overview of Pascal Agents, AI agents for investment firms: the agentic workflow library, autonomous execution, decision traces, the Pascal Excel agent and the Pascal Data Agent.
-- [Autonomous AI Agents for Investment Work](https://pascalailabs.com/pascal-agents/autonomous-agents): Pascal's autonomous agents run an investment research task end to end: they plan the work, search IC memos, email, Teams, expert calls, broker research and public filings, cross-check claims and deliver a cited document, on demand or on a schedule.
+- [Autonomous AI Agents for Investment Work](https://pascalailabs.com/pascal-agents/autonomous-agents): Pascal's autonomous agents are headless: a schedule, a new file, an email or an API call starts them, with no chat or user present. They run front, middle and back office tasks end to end (NAV break checks, covenant monitoring, pre-trade mandate checks, DDQs, event briefs), plan the work, search…
 - [Pascal Data Agent: Your Files as Structured Data](https://pascalailabs.com/pascal-agents/data-agent): Pascal Data Agent, part of Pascal Agents, turns a firm's internal files (broker PDFs, expert-call transcripts, internal research notes, email, contracts, DDQs, data rooms) into structured, entity-tagged data. A document classifier types each file against the firm's own taxonomy with a confidence…
-- [Agentic Workflow Library for Finance](https://pascalailabs.com/pascal-agents/workflow-library): Pascal's agentic workflow library: 25+ pre-built investment workflows (event briefs, company primers, initiating coverage, red flag analysis, catalyst calendars) that return cited documents in a consistent structure.
+- [Agentic Workflow Library for Finance](https://pascalailabs.com/pascal-agents/workflow-library): Pascal's agentic workflow library: 25+ pre-built workflows across front, middle and back office (event briefs, company primers, NAV break checks, covenant monitoring, DDQs) that return cited documents in a consistent structure, plus a workflow builder where teams edit each step: trigger, sources…
 
 ## Industries
 

@@ -4,90 +4,119 @@
     python3 _build/gen/events.py && python3 _build/build.py --only events,events-hong-kong-2026,events-new-york-2026
 
 Layout follows LinqAlpha's summit pages: city photo hero with a date / time / location strip, About,
-Agenda, Speakers, a request-an-invitation form and the rest of the series. Copy is the user's event brief.
+Agenda (with speakers), Hosted by, a request-an-invitation form and the rest of the series. Copy is the user's event brief.
 Set "start"/"end" (ISO with offset) once a date is confirmed; that also switches on Event schema.
-To add a hero photo, drop it in _build/static/assets/photos/ and set "photo".
+Hero photos and headshots live in _build/static/assets/photos/.
 """
 import json
 from pathlib import Path
 
 PAGES = Path(__file__).resolve().parents[1] / "pages"
 
-SERIES = "Front Office to Back Office"
+SERIES = "From Front to Back Office"
 TOPIC = "Where AI Is Actually Working in Asset Management"
 INVITE = ("An invite-only roundtable breakfast for about 20–25 senior guests from hedge funds and asset managers: "
           "CTOs, COOs, CIOs, and heads of data, research and operations.")
-NOTE = ("Please note: this is an invite-only roundtable breakfast for about 20–25 senior guests from hedge funds "
-        "and asset managers. Admission is by invitation.")
+ROUNDTABLE_SUMMARY = ("Invite-only roundtables where senior leaders from hedge funds and asset managers compare notes on "
+                      "where AI is working across the front, middle and back office.")
+NOTE = ("Please note: seats are limited to about 20–25 senior guests from hedge funds and asset managers. "
+        "Admission is by invitation.")
 
 EVENTS = [
     {
-        "slug": "hong-kong-2026", "city": "Hong Kong", "country": "HK", "cc": "+852",
+        "slug": "hong-kong-2026", "city": "Hong Kong", "country": "HK", "cc": "+852", "live": True,
+        "format": "Invite-only roundtable dinner", "format_kv": "Roundtable dinner, about 20–25 guests",
         "date": "27 October 2026 (Tue)", "date_short": "27 Oct 2026", "date_sub": "",
-        "time": "8:00–10:30 AM", "time_sub": "Hong Kong time",
-        "venue": "Hong Kong", "venue_sub": "Venue to be confirmed",
-        "start": "2026-10-27T08:00:00+08:00", "end": "2026-10-27T10:30:00+08:00",
-        "photo": None,  # e.g. "/assets/photos/event-hong-kong.jpg"
-        "title": "Front Office to Back Office: AI Roundtable, Hong Kong",
-        "description": "Invite-only roundtable breakfast in Hong Kong on 27 October 2026 for hedge fund and asset manager leaders on where AI is working, front to back office.",
+        "time": "7:00–9:30 PM", "time_sub": "Hong Kong time",
+        "venue": "JW Marriott Hotel Hong Kong", "venue_sub": "Admiralty",
+        "start": "2026-10-27T19:00:00+08:00", "end": "2026-10-27T21:30:00+08:00",
+        "photo": ("/assets/photos/event-hong-kong.jpg", "/assets/photos/event-hong-kong-sm.jpg"),  # CC0, see photos/CREDITS.txt
+        "title": "From Front to Back Office: AI Roundtable, Hong Kong",
+        "description": "Invite-only roundtable dinner in Hong Kong on 27 October 2026 for hedge fund and asset manager leaders on where AI is working, front to back office.",
         "about": [
-            INVITE,
-            "After breakfast and a short welcome, we open with what has changed in the past 12 months: AI moving from "
-            "analyst tools into core fund workflows, and what that asks of data and controls.",
-            "This leads into a moderated discussion with <b>Rowel Balot</b> (CTO, Bare Cove Technology) and "
-            "<b>Vibhav Viswanathan</b> (CEO &amp; Co-Founder, Pascal AI Labs), in three segments of about 15–20 minutes "
-            "each. Guests then share their experience and questions, followed by optional networking.",
+            "Pascal AI Labs and Bare Cove Technology are bringing together 20–25 senior leaders from hedge funds and asset managers for an "
+            "invite-only dinner and discussion on AI in institutional finance.",
+            "Over the past year, AI has moved from experimentation towards day-to-day use across investment firms. As firms "
+            "look to bring AI into core fund workflows, the questions around implementation, data infrastructure, governance "
+            "and controls are becoming harder to solve in isolation.",
+            "This session is an opportunity for leaders working through these challenges to compare notes and learn from how "
+            "their peers are approaching them.",
+            "The evening will begin with dinner and a brief welcome before moving into a moderated discussion on the "
+            "realities of deploying AI across investment workflows. <b>Rowel Balot</b> (CTO, Bare Cove Technology) and "
+            "<b>Vibhav Viswanathan</b> (CEO &amp; Co-Founder, Pascal AI Labs) will lead the conversation across three "
+            "segments of 15–20 minutes each. Together, they will explore the infrastructure and controls needed to make AI "
+            "work reliably at scale.",
+            "We’ll then open the floor for guests to share their experiences, raise questions and exchange perspectives, "
+            "followed by optional networking.",
         ],
-        "opening": "What has changed in the past 12 months: AI moving from analyst tools into core fund workflows, "
-                   "and what that asks of data and controls.",
-        "opening_t": "After breakfast",
-        "welcome": "Breakfast and a short welcome",
-        "speakers": [("Rowel Balot", "CTO", "Bare Cove Technology", "Speaker"),
-                     ("Vibhav Viswanathan", "CEO &amp; Co-Founder", "Pascal AI Labs", "Speaker")],
+        # (name, title, firm, headshot path or None). Headshots show only once every speaker has one.
+        "speakers": [("Rowel Balot", "CTO", "Bare Cove Technology", "/assets/photos/speaker-rowel-balot.jpg", "https://www.linkedin.com/in/rowelbalot/"),
+                     ("Vibhav Viswanathan", "CEO &amp; Co-Founder", "Pascal AI Labs", "/assets/photos/speaker-vibhav-viswanathan.jpg", "https://www.linkedin.com/in/vibhav-viswanathan-13550015")],
         "moderator": None,
-        "segments": [
-            ("Where AI is earning its place", "Which workflows have moved beyond pilots, and which haven't."),
-            ("Build, buy, or rely on your servicer", "What funds build in-house, buy, or expect from administrators and service providers."),
-            ("Trust and control", "Security, auditability and governance before AI touches client-facing or NAV work."),
+        # (left label, title, description, is the moderated discussion)
+        "agenda": [
+            ("7:00 PM", "Drinks and arrivals", "", False),
+            ("7:30 PM", "Welcome and opening", "", False),
+            ("Moderated discussion", "Deploying AI across investment workflows",
+             "Three segments of 15–20 minutes each on the infrastructure and controls needed to make AI work reliably at scale.", True),
+            ("8:30 PM", "Open forum and networking over dinner",
+             "Guests share their experiences, raise questions and exchange perspectives.", False),
         ],
-        "floor": "Guests share their experience and questions.",
-        "close_t": "Until 10:30 AM", "close": "Optional networking.",
+        "segments": [
+            ("Past the pilot: Where AI is delivering value", "Which workflows made it to production in Hong Kong, and what model access and scale really cost."),
+            ("Build, Buy or Outsource: Who Keeps Your Edge?", "What to build, buy or hand to service providers, and how to stop vendors learning from your research."),
+            ("Trust and Control: Ready When the Regulator Asks", "What the SFC and HKMA expect, and how to run AI across Hong Kong and mainland teams without breaching data rules."),
+        ],
     },
     {
-        "slug": "new-york-2026", "city": "New York", "country": "US", "cc": "+1",
+        # Not live yet (user, 14 Oct 2026): set "live" to True to publish.
+        "slug": "new-york-2026", "city": "New York", "country": "US", "cc": "+1", "live": False,
+        "format": "Invite-only roundtable breakfast", "format_kv": "Roundtable breakfast, about 20–25 guests",
         "date": "First week of November 2026", "date_short": "Early Nov 2026", "date_sub": "Exact date to be confirmed",
         "time": "8:00–10:30 AM", "time_sub": "Eastern time",
         "venue": "New York", "venue_sub": "Venue to be confirmed",
         "start": None, "end": None,
         "photo": ("/assets/photos/hero-manhattan.jpg", "/assets/photos/hero-manhattan-sm.jpg"),
-        "title": "Front Office to Back Office: AI Roundtable, New York",
+        "title": "From Front to Back Office: AI Roundtable, New York",
         "description": "Invite-only roundtable breakfast in New York, first week of November 2026, for hedge fund and asset manager leaders on where AI is working in funds.",
         "about": [
-            INVITE,
-            "We'll start the session with a short welcome, breakfast, why this group is in the room, and the opening "
-            "perspective. A brief view on what has changed in the past 12 months: AI moving from analyst tools into the "
-            "fund's core workflows across research, risk, compliance and operations, and what that asks of data and controls.",
-            "Then, we'll move to a moderated discussion with <b>Sean Lee</b> (D1 Capital Partners) and <b>Jay Rooney</b> "
-            "(MUFG Investor Services), with us as the moderators, in three segments of roughly 15–20 minutes each.",
-            "After this, the guests share their own experience and questions for the speakers to respond. At the end, "
-            "we'll close with optional networking for about 20–30 minutes.",
+            "Pascal AI Labs is hosting an invite-only breakfast in New York for 20–25 senior leaders from hedge funds and "
+            "asset managers, including CTOs, COOs, CIOs and heads of data, research and operations.",
+            "In the past 12 months, AI has moved beyond analyst tools and into the core workflows of the fund, across research, "
+            "risk, compliance and operations. That shift places new demands on data and controls, for managers and for the "
+            "administrators and service providers that support them.",
+            "This roundtable brings both sides of that relationship into one room, so leaders can compare notes on what is "
+            "working, what is still unresolved, and how their peers are approaching it.",
+            "After breakfast and a short welcome, the morning opens with a brief perspective on the past year before moving into "
+            "a moderated discussion with <b>Sean Lee</b> (D1 Capital Partners) and <b>Jay Rooney</b> (MUFG Investor Services), "
+            "led by Pascal AI Labs. The conversation runs across three segments of 15–20 minutes each, from where AI is "
+            "delivering value to the security and governance required before it is applied to client-facing or NAV-related work.",
+            "Guests will then share their own experience and questions with the speakers, followed by optional networking of "
+            "about 20–30 minutes.",
         ],
-        "opening": "A brief view on what has changed in the past 12 months: AI moving from analyst tools into the fund's "
-                   "core workflows across research, risk, compliance and operations, and what that asks of data and controls.",
-        "opening_t": "Opening perspective",
-        "welcome": "Short welcome, breakfast and why this group is in the room",
-        "speakers": [("Sean Lee", "", "D1 Capital Partners", "Speaker"),
-                     ("Jay Rooney", "", "MUFG Investor Services", "Speaker")],
-        "moderator": ("Pascal AI Labs", "", "Host", "Moderator"),
+        "speakers": [("Sean Lee", "", "D1 Capital Partners", None),
+                     ("Jay Rooney", "", "MUFG Investor Services", None)],
+        "moderator": "Moderated by Pascal AI Labs",
+        "agenda": [
+            ("8:00 AM", "Breakfast and welcome", "", False),
+            ("Opening remarks", "AI across the fund: the past twelve months",
+             "How AI has moved from analyst tools into research, risk, compliance and operations, and what that requires of "
+             "data and controls.", False),
+            ("Moderated discussion", "Deploying AI across the manager and the servicer",
+             "Three segments of 15–20 minutes each on how managers and their service providers are putting AI to work.", True),
+            ("Open forum", "Guest perspectives and questions",
+             "Guests share their experiences and questions, with responses from the speakers.", False),
+            ("Until 10:30 AM", "Networking (optional)", "", False),
+        ],
         "segments": [
-            ("Where AI is earning its place", "Which workflows have moved beyond pilots, at the manager and at the servicer, and which have not."),
-            ("Build, buy, or rely on your servicer", "How funds decide what to build in-house, what to buy, and what to expect from administrators and service providers; how the manager–administrator relationship changes when both sides run AI."),
-            ("Trust and control", "Data security, auditability and governance: what investors, boards and regulators will ask, and what has to be in place before AI touches anything client-facing or NAV-related."),
+            ("Where AI is delivering value", "Which workflows have moved from pilot into production, at the manager and at the servicer, and which have not."),
+            ("Build, buy or rely on your servicer", "How firms decide what to develop in-house, what to buy and what to expect from administrators and service providers, and how the manager–administrator relationship changes when both sides run AI."),
+            ("Trust and control", "What investors, boards and regulators will ask about data security, auditability and governance, and what must be in place before AI is applied to client-facing or NAV-related work."),
         ],
-        "floor": "The guests share their own experience and questions for the speakers to respond.",
-        "close_t": "About 20–30 min", "close": "Close, with optional networking.",
     },
 ]
+
+LIVE = [e for e in EVENTS if e["live"]]
 
 COUNTRIES = [("+852", "Hong Kong"), ("+1", "United States"), ("+44", "United Kingdom"), ("+65", "Singapore"),
              ("+91", "India"), ("+971", "United Arab Emirates"), ("+61", "Australia"), ("+81", "Japan"),
@@ -98,48 +127,81 @@ def meta_block(m):
     return "<!--meta\n" + json.dumps(m, indent=1, ensure_ascii=False) + "\n-->\n"
 
 
-def hero_media(ev, cls="ev-hero-img", lazy=False):
-    if not ev["photo"]:
-        return '<div class="ev-hero-plain" aria-hidden="true"></div>'
+def hero_img(ev):
     big, small = ev["photo"]
-    load = ' loading="lazy" decoding="async"' if lazy else ' fetchpriority="high"'
-    return (f'<img class="{cls}" src="{big}" srcset="{small} 1000w, {big} 2000w" sizes="100vw" alt="" '
-            f'width="2000" height="1333"{load}>')
+    return (f'<img class="ev-hero-img" src="{big}" srcset="{small} 1000w, {big} 2000w" sizes="100vw" alt="" '
+            f'width="2000" height="1333" fetchpriority="high">')
 
 
-def tile(ev):
-    if ev["photo"]:
-        big, small = ev["photo"]
-        img = f'<img src="{small}" alt="" width="1000" height="667" loading="lazy" decoding="async">'
-    else:
-        img = ""
-    return f"""<a class="ev-tile" href="/events/{ev['slug']}">
-      {img}
-      <span class="ev-tile-k">Invite-only roundtable breakfast</span>
-      <span class="ev-tile-city">{ev['city']}</span>
-      <span class="ev-tile-t">{SERIES}: {TOPIC}</span>
-      <span class="ev-tile-row"><span>{ev['date_short']} · {ev['time']}</span><b>View event</b></span>
-    </a>"""
+def people(ev, show_photos=True):
+    photos = show_photos and all(sp[3] for sp in ev["speakers"])  # 2:3 portraits, 600x900
+    out = []
+    for name, title, firm, photo, *rest in ev["speakers"]:
+        li = f'<a class="ev-li" href="{rest[0]}" rel="noopener" target="_blank">LinkedIn profile</a>' if rest and show_photos else ""
+        img = f'<img src="{photo}" alt="{name}" width="600" height="900" loading="lazy" decoding="async">' if photos else ""
+        t = f"<span>{title}</span>" if title else ""
+        out.append(f'<div class="ev-person">{img}<b>{name}</b>{t}<em>{firm}</em>{li}</div>')
+    return "".join(out)
 
 
-def card(name, title, firm, role):
-    t = f'<p class="ev-card-p">{title}</p>' if title else ""
-    return f"""<div class="ev-card"><p class="ev-card-role">{role}</p><p class="ev-card-n">{name}</p>{t}<p class="ev-card-f">{firm}</p></div>"""
+def facts(ev):
+    sub = f"<small>{ev['date_sub']}</small>" if ev["date_sub"] else ""
+    return f"""<dl class="ev-facts-in">
+      <div class="ev-fact"><dt>Date</dt><dd>{ev['date']}{sub}</dd></div>
+      <div class="ev-fact"><dt>Time</dt><dd>{ev['time']}<small>{ev['time_sub']}</small></dd></div>
+      <div class="ev-fact"><dt>Location</dt><dd>{ev['venue']}<small>{ev['venue_sub']}</small></dd></div>
+    </dl>"""
+
+
+def row(ev):
+    return f"""<li class="ev-row"><span class="ev-row-city">{ev['city']}</span><span class="ev-row-t">{SERIES}: {TOPIC}</span><span class="ev-row-d">{ev['date_short']}<br>{ev['time']}, {ev['time_sub']}</span><a href="/events/{ev['slug']}">View event</a></li>"""
+
+
+HOST = f"""<div class="ev-host">
+      <div class="ev-host-logo"><img src="/assets/pascal-logo.png" alt="Pascal AI Labs" width="360" height="106" loading="lazy"></div>
+      <div class="ev-host-copy">
+        <h3>Pascal AI Labs</h3>
+        <p>Pascal builds context-driven AI agents for institutional finance, working across the front, middle and back office for <a href="/solutions/hedge-funds">hedge funds</a>, <a href="/solutions/asset-wealth-management">asset managers</a> and <a href="/solutions/asset-servicing">fund servicers</a>.</p>
+      </div>
+    </div>"""
+
+
+HOSTS = """<div class="ev-hosts">
+      <div class="ev-hostc"><div class="ev-host-logo"><img src="/assets/pascal-logo.png" alt="Pascal AI Labs" width="360" height="106" loading="lazy"></div>
+        <div class="ev-host-copy"><h3>Pascal AI Labs</h3><p>Context-driven AI agents for institutional finance, across the front, middle and back office for <a href="/solutions/hedge-funds">hedge funds</a>, <a href="/solutions/asset-wealth-management">asset managers</a> and <a href="/solutions/asset-servicing">fund servicers</a>.</p></div></div>
+      <div class="ev-hostc"><div class="ev-host-logo"><img src="/assets/logos/bare-cove-technology.svg" alt="Bare Cove Technology" width="1953" height="415" loading="lazy"></div>
+        <div class="ev-host-copy"><h3>Bare Cove Technology</h3><p>An Asia-based technology company providing IT and cybersecurity solutions to the financial industry. <a href="https://barecovetech.com/" rel="noopener" target="_blank">barecovetech.com</a></p></div></div>
+    </div>"""
+
+
+def agenda(ev):
+    segs = "".join(f"<li><div><b>{h}</b><span>{d}</span></div></li>" for h, d in ev["segments"])
+    mod = f'<p class="ev-ag-d">{ev["moderator"]}.</p>' if ev["moderator"] else ""
+    rows = []
+    for label, title, desc, disc in ev["agenda"]:
+        d = f'<p class="ev-ag-d">{desc}</p>' if desc else ""
+        extra = f'<div class="ev-people">{people(ev, False)}</div>{mod}<ol class="ev-segs">{segs}</ol>' if disc else ""
+        rows.append(f'<li><p class="ev-ag-t">{label}</p><div><h3 class="ev-ag-h">{title}</h3>{d}{extra}</div></li>')
+    return "\n      ".join(rows)
+
+
+def more(others):
+    if not others:
+        return ""
+    return f"""<section class="ev-sec ev-mint" aria-labelledby="more-title">
+  <div class="ev-in">
+    <h2 class="ev-h2" id="more-title">More events</h2>
+    <ul class="ev-rows">{"".join(row(o) for o in others)}</ul>
+    <p class="ev-all"><a href="/events">See all events</a></p>
+  </div>
+</section>
+"""
 
 
 def page(ev):
-    others = [o for o in EVENTS if o is not ev]
-    who = "".join(f"<span><b>{n}</b> · {(t + ', ') if t else ''}{f}</span>" for n, t, f, _ in ev["speakers"])
-    if ev["moderator"]:
-        who += f"<span>Moderated by <b>{ev['moderator'][0]}</b></span>"
-    segs = "".join(f"<li><b>{h}.</b><span>{d}</span></li>" for h, d in ev["segments"])
-    cards = "".join(card(*s) for s in ev["speakers"])
-    if ev["moderator"]:
-        n, t, f, r = ev["moderator"]
-        cards += card(n, t, "Pascal AI Labs hosts and moderates the discussion.", r)
+    others = [o for o in LIVE if o is not ev]
     opts = "".join(f'<option value="{c}" data-country="{n}"{" selected" if c == ev["cc"] else ""}>{n} ({c})</option>'
                    for c, n in COUNTRIES)
-    date_sub = f"<small>{ev['date_sub']}</small>" if ev["date_sub"] else ""
     about = "".join(f"<p>{p}</p>" for p in ev["about"])
     meta = {
         "path": f"/events/{ev['slug']}",
@@ -150,161 +212,157 @@ def page(ev):
         "og_title": f"{SERIES}: {TOPIC}",
         "llms": f"{SERIES}: {TOPIC}. Invite-only roundtable breakfast in {ev['city']}, {ev['date']}, {ev['time']}, hosted by Pascal AI Labs, with a form to request an invitation.",
         "css": ["events.css"],
-        "word_limit": 900, "faq_min": 0, "lead_min": 6, "priority": 0.6,
+        "word_limit": 900, "faq_min": 0, "lead_min": 5, "priority": 0.6,
         "event": {"name": f"{SERIES}: {TOPIC} ({ev['city']})", "start": ev["start"], "end": ev["end"],
                   "place": ev["venue"], "city": ev["city"], "country": ev["country"],
-                  "speakers": [(n, f"{t}, {f}" if t else f) for n, t, f, _ in ev["speakers"]]},
+                  "speakers": [(n, f"{t}, {f}" if t else f) for n, t, f, *_ in ev["speakers"]]},
     }
     return meta_block(meta) + f"""<section class="ev-hero dark" aria-labelledby="page-title">
-  {hero_media(ev)}
+  {hero_img(ev)}
   <div class="ev-hero-in">
-    <p class="ev-kicker">Invite-only roundtable breakfast · Hosted by Pascal AI Labs</p>
-    <h1 class="ev-h1" id="page-title"><span class="ev-series">{SERIES}</span> <span class="ev-city">{ev['city']}</span></h1>
-    <p class="lead">{TOPIC}</p>
+    <p class="ev-kicker"><b>{ev['city']}</b>{ev['format']}</p>
+    <p class="lead ev-series">{SERIES}</p>
+    <h1 class="ev-h1" id="page-title">{TOPIC}<span class="sr-only"> ({ev['city']})</span></h1>
     <div class="actions"><a class="btn btn-white" href="#request">Request an invitation</a></div>
   </div>
   <div class="ev-facts">
-    <dl class="ev-facts-in">
-      <div class="ev-fact"><dt>Date</dt><dd>{ev['date']}{date_sub}</dd></div>
-      <div class="ev-fact"><dt>Time</dt><dd>{ev['time']}<small>{ev['time_sub']}</small></dd></div>
-      <div class="ev-fact"><dt>Location</dt><dd>{ev['venue']}<small>{ev['venue_sub']}</small></dd></div>
-    </dl>
+    {facts(ev)}
   </div>
   <p class="ev-note">{NOTE}</p>
 </section>
 
 <section class="ev-sec" aria-labelledby="about-title">
-  <div class="ev-in ev-about">
-    <h2 class="ev-h2" id="about-title">About the roundtable</h2>
-    <div class="ev-about-copy">
-      {about}
-      <dl class="ev-meta">
-        <div><dt>Format</dt><dd>Roundtable breakfast, about 20–25 guests</dd></div>
-        <div><dt>For</dt><dd>CTOs, COOs, CIOs, heads of data, research and operations</dd></div>
-        <div><dt>Hosted by</dt><dd>Pascal AI Labs, with AI for <a href="/solutions/hedge-funds">hedge funds</a>, <a href="/solutions/asset-wealth-management">asset managers</a> and <a href="/solutions/asset-servicing">fund servicers</a></dd></div>
-      </dl>
+  <div class="ev-in">
+    <div class="ev-about2">
+      <h2 class="ev-h2" id="about-title">About the roundtable</h2>
+      <div class="ev-copy">{about}</div>
     </div>
+    <dl class="ev-kv">
+      <div><dt>Format</dt><dd>{ev['format_kv']}</dd></div>
+      <div><dt>For</dt><dd>CTOs, COOs, CIOs, heads of data, research and operations</dd></div>
+      <div><dt>Admission</dt><dd>By invitation</dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="ev-sec ev-agenda ev-mint" aria-labelledby="agenda-title">
+<section class="ev-sec ev-sec-line" aria-labelledby="speakers-title">
+  <div class="ev-in ev-about2">
+    <h2 class="ev-h2" id="speakers-title">Speakers</h2>
+    <div class="ev-spk">{people(ev)}</div>
+  </div>
+</section>
+
+<section class="ev-sec ev-cream" aria-labelledby="agenda-title">
   <div class="ev-in">
     <h2 class="ev-h2" id="agenda-title">Agenda</h2>
     <ol class="ev-ag">
-      <li><p class="ev-ag-t">8:00 AM</p><div><h3 class="ev-ag-h">{ev['welcome']}</h3></div></li>
-      <li><p class="ev-ag-t">{ev['opening_t']}</p><div><h3 class="ev-ag-h">What has changed in the past 12 months</h3><p class="ev-ag-d">{ev['opening']}</p></div></li>
-      <li><p class="ev-ag-t">Three segments, about 15–20 min each</p><div><span class="ev-ag-tag">Moderated discussion</span><h3 class="ev-ag-h">{SERIES}: {TOPIC}</h3><p class="ev-ag-who">{who}</p><ol class="ev-segs">{segs}</ol></div></li>
-      <li><p class="ev-ag-t">Open floor</p><div><h3 class="ev-ag-h">Guest experience and questions</h3><p class="ev-ag-d">{ev['floor']}</p></div></li>
-      <li><p class="ev-ag-t">{ev['close_t']}</p><div><h3 class="ev-ag-h">{ev['close']}</h3></div></li>
+      {agenda(ev)}
     </ol>
   </div>
 </section>
 
-<section class="ev-sec ev-speakers ev-cream" aria-labelledby="speakers-title">
-  <div class="ev-in">
-    <h2 class="ev-h2" id="speakers-title">Speakers</h2>
-    <div class="ev-spk">{cards}</div>
-  </div>
-</section>
-
 <section class="ev-sec ev-req" id="request" aria-labelledby="request-title">
-  <div class="ev-in ev-req-grid">
-    <div class="ev-req-copy">
+  <div class="ev-in">
+    <div class="ev-req-grid">
+    <div>
       <h2 class="ev-h2" id="request-title">Request an invitation</h2>
-      <p>Seats are limited to about 20–25 senior guests. Tell us a little about you and the Pascal team will confirm your place by email.</p>
-      <dl class="ev-req-sum">
-        <div><dt>Event</dt><dd>{SERIES}: {TOPIC}</dd></div>
-        <div><dt>Date</dt><dd>{ev['date']}</dd></div>
-        <div><dt>Time</dt><dd>{ev['time']} ({ev['time_sub']})</dd></div>
-        <div><dt>Location</dt><dd>{ev['venue']} · {ev['venue_sub'].lower()}</dd></div>
-      </dl>
+      <p class="ev-req-sub">Seats are limited to about 20–25 senior guests. Share a few details and the Pascal team will confirm your place by email.</p>
     </div>
-    <div class="ev-form-card">
+    <div class="ev-form-wrap">
       <form class="ev-form" data-event-form data-event="{ev['slug']}" data-event-name="{SERIES}: {TOPIC}" data-city="{ev['city']}" data-date="{ev['date']}" novalidate>
-        <label>Full name *<input name="name" autocomplete="name" required></label>
-        <label>Work email *<input name="email" type="email" autocomplete="email" required></label>
         <div class="ev-form-2">
-          <label>Firm *<input name="organization" autocomplete="organization" required></label>
-          <label>Job title *<input name="jobTitle" autocomplete="organization-title" required></label>
+          <label>Full name<input name="name" autocomplete="name" required></label>
+          <label>Work email<input name="email" type="email" autocomplete="email" required></label>
         </div>
-        <label>Phone <span class="ev-opt">(optional)</span><span class="ev-phone"><select name="countryCode" aria-label="Country code">{opts}</select><input name="phone" type="tel" autocomplete="tel-national" inputmode="tel"></span></label>
-        <label>What would you like the speakers to cover? <span class="ev-opt">(optional)</span><textarea name="topics" rows="3"></textarea></label>
+        <div class="ev-form-2">
+          <label>Company name<input name="organization" autocomplete="organization" required></label>
+          <label>Job title<input name="jobTitle" autocomplete="organization-title" required></label>
+        </div>
+        <label><span>Phone</span><span class="ev-phone"><select name="countryCode" aria-label="Country code">{opts}</select><input name="phone" type="tel" autocomplete="tel-national" inputmode="tel" required></span></label>
+        <label><span>What would you like the speakers to cover? <span class="ev-opt">(optional)</span></span><textarea name="topics" rows="3"></textarea></label>
         <p class="ev-err" role="alert" hidden></p>
-        <button class="btn btn-dark" type="submit">Request an invitation</button>
-        <p class="ev-fine">By submitting, you agree to be contacted by Pascal AI Labs about this event.</p>
+        <div class="ev-form-foot">
+          <p class="ev-fine">By submitting, you agree to be contacted by us about this event.</p>
+          <button class="btn btn-white" type="submit">Request an invitation</button>
+        </div>
       </form>
       <div class="ev-done" hidden>
-        <span class="ev-done-ok">{{{{icon:check}}}}</span>
         <h3>Thank you.</h3>
         <p>We've received your request for {ev['city']}. The Pascal team will confirm your place at <b data-done-email></b>.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="ev-sec ev-more ev-mint" aria-labelledby="more-title">
-  <div class="ev-in">
-    <h2 class="ev-h2" id="more-title">Also in the series</h2>
-    <div class="ev-more-grid">
-      {"".join(tile(o) for o in others)}
-      <div class="ev-more-links">
-        <p>Pascal AI Labs builds AI agents for institutional finance, from research in the front office to operations and reporting in the back office.</p>
-        <a href="/events">All events<span>Upcoming roundtables hosted by Pascal AI Labs</span></a>
-        <a href="/platform">The Pascal platform<span>Context graph, agents and governance in one workspace</span></a>
-        <a href="/security">Security<span>How Pascal keeps your data inside your perimeter</span></a>
-      </div>
     </div>
   </div>
 </section>
-<script src="/assets/pages/events.js" defer></script>
+
+<section class="ev-sec" aria-labelledby="host-title">
+  <div class="ev-in">
+    <h2 class="ev-h2" id="host-title">Hosted by</h2>
+    {HOSTS}
+  </div>
+</section>
+
+{more(others)}<script src="/assets/pages/events.js" defer></script>
 """
 
 
 def hub():
     meta = {
         "path": "/events",
-        "title": "Events: AI Roundtables for Asset Managers | Pascal AI",
-        "description": "Upcoming invite-only roundtables hosted by Pascal AI Labs for hedge fund and asset manager leaders, in Hong Kong and New York.",
+        "title": "Events | Pascal AI",
+        "description": "Upcoming events with Pascal AI Labs: roundtables we host for hedge fund and asset manager leaders, and the industry forums where we speak.",
         "crumbs": [["Events", "/events"]],
         "og_kicker": "Pascal AI",
-        "og_title": "Events and roundtables",
-        "llms": "Upcoming Pascal AI Labs events: invite-only roundtable breakfasts in Hong Kong and New York on where AI is working in asset management.",
+        "og_title": "Events",
+        "llms": "Upcoming Pascal AI Labs events: hosted roundtables for hedge fund and asset manager leaders, and industry forums Pascal attends or speaks at.",
         "css": ["events.css"],
         "word_limit": 500, "faq_min": 0, "priority": 0.6,
     }
-    tiles = "".join(tile(e) for e in EVENTS)
-    return meta_block(meta) + f"""<section class="ev-top" aria-labelledby="page-title">
-  <div class="ev-in">
-    <h1 class="ev-h1" id="page-title">Events</h1>
-    <p class="lead">Invite-only roundtables where senior leaders from hedge funds and asset managers compare notes on where AI is working across the front, middle and back office.</p>
-  </div>
-</section>
-
-<section class="ev-sec ev-mint" aria-labelledby="upcoming-title">
-  <div class="ev-in">
-    <h2 class="ev-h2" id="upcoming-title" style="margin-bottom:36px">Upcoming</h2>
-    <div class="ev-list">{tiles}</div>
-  </div>
-</section>
-
-<section class="ev-sec" aria-labelledby="series-title">
-  <div class="ev-in ev-about">
-    <h2 class="ev-h2" id="series-title">{SERIES}</h2>
-    <div class="ev-about-copy">
-      <p>{TOPIC}. Each breakfast brings together about 20–25 CTOs, COOs, CIOs and heads of data, research and operations for a moderated discussion in three segments: where AI is earning its place, build, buy, or rely on your servicer, and trust and control.</p>
-      <dl class="ev-meta">
-        <div><dt>Format</dt><dd>Roundtable breakfast, 8:00–10:30 AM</dd></div>
-        <div><dt>Admission</dt><dd>By invitation</dd></div>
-        <div><dt>Hosted by</dt><dd>Pascal AI Labs, with AI for <a href="/solutions/hedge-funds">hedge funds</a>, <a href="/solutions/asset-wealth-management">asset managers</a> and <a href="/solutions/asset-servicing">fund servicers</a></dd></div>
+    items = []
+    for n, ev in enumerate(LIVE):
+        big, small = ev["photo"]
+        flip = " flip" if n % 2 else ""
+        items.append(f"""<section class="row split{flip}" aria-labelledby="ev-{ev['slug']}">
+    <div class="split-copy">
+      <p class="eyebrow">{ev['format']} · {ev['city']}</p>
+      <h2 class="ev-hub-h" id="ev-{ev['slug']}">{SERIES}: {TOPIC}</h2>
+      <p>{ROUNDTABLE_SUMMARY}</p>
+      <dl class="ev-feat-dl">
+        <div><dt>Date</dt><dd>{ev['date']}</dd></div>
+        <div><dt>Time</dt><dd>{ev['time']}, {ev['time_sub']}</dd></div>
+        <div><dt>Location</dt><dd>{ev['venue']}, {ev['venue_sub']}</dd></div>
       </dl>
+      <a class="btn btn-dark ev-hub-btn" href="/events/{ev['slug']}">View event</a>
+    </div>
+    <div class="split-media"><a class="panel ev-hub-photo" href="/events/{ev['slug']}" aria-label="{ev['city']} event"><img src="{small}" srcset="{small} 1000w, {big} 2000w" sizes="(max-width: 1000px) 100vw, 640px" alt="{ev['city']} skyline" width="1000" height="667" loading="lazy" decoding="async"></a></div>
+  </section>""")
+    return meta_block(meta) + f"""<section class="hero-teal hero-ent" aria-labelledby="page-title">
+  <div class="hero-teal-in">
+    {{{{crumbs}}}}
+    <div class="ht-grid">
+      <div><h1 class="h1" id="page-title">Events</h1></div>
+      <div class="ht-side">
+        <p class="lead">Find us at industry conferences, join our private roundtables, and hear our team share perspectives on AI and institutional finance.</p>
+      </div>
     </div>
   </div>
 </section>
+<div class="frame">
+  {"".join(items)}
+  <section class="row row-pad bg-cream" aria-labelledby="host-title">
+    <h2 class="h2" id="host-title" style="margin-bottom:40px">About Pascal AI Labs</h2>
+    {HOST}
+  </section>
+</div>
 """
 
 
 if __name__ == "__main__":
     for ev in EVENTS:
-        (PAGES / f"events-{ev['slug']}.html").write_text(page(ev), encoding="utf-8")
+        fp = PAGES / f"events-{ev['slug']}.html"
+        if ev["live"]:
+            fp.write_text(page(ev), encoding="utf-8")
+        elif fp.exists():
+            fp.unlink()  # unpublished: drop the page source so the build removes it
     (PAGES / "events.html").write_text(hub(), encoding="utf-8")
-    print("wrote", ", ".join(f"events-{e['slug']}.html" for e in EVENTS), "+ events.html")
+    print("wrote", ", ".join(f"events-{e['slug']}.html" for e in LIVE), "+ events.html")

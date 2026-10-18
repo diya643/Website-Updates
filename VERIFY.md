@@ -28,7 +28,7 @@ Investment banking is retired to `_build/retired/` and its URL redirects to `/so
 - Smart Alpha mock: Honeywell thesis weights, statuses and digest headlines.
 - Digital Twin mock and context graph: copied from the Digital Twin demo video. The firm, people and deals are fictional (Michael Turner, Sarah Mitchell, Project Frost and so on).
 
-**Stats grid** uses the doc-approved numbers: 50M+ pages, 99.9%+ accuracy, 34+ connectors and MCP servers, 118+ workflows via MCP and API, 9+ models, <4 weeks to deployment.
+**Stats grid** uses the doc-approved numbers: 50M+ pages, 85% lower cost vs. generic LLMs, 34+ connectors and MCP servers, 118+ workflows via MCP and API, 9+ models, 95% task completeness rate (changed 18 Oct 2026 per Diya).
 
 **FAQ vs stats conflict:** the FAQ (copied from the live site) says live in 24–48 hours and 1–2 weeks for enterprise. The stats say <4 weeks to full deployment. Make these agree.
 
@@ -58,10 +58,10 @@ Changes since the first restructure: case studies removed until real content arr
 - Context graph: 20+ connected data sources · 186K entities mapped · 2M+ relationships understood
 - MCP & APIs: 34+ connectors & MCP servers · 118+ workflows available via MCP & API · 9+ models & AI assistants supported
 - Ask Pascal: 27s median time to a cited answer · 9.6 sources cited per answer · 97% of answers citing at least one internal document
-- Decision traces: <4 weeks to full deployment · 50M+ pages indexed · 99.9%+ accuracy
+- Decision traces: 85% lower cost vs. generic LLMs · 50M+ pages indexed · 95% task completeness rate
 - Pascal Intel: 15K+ investment signals surfaced · 85% signals matched to active coverage · 7 min median time from signal to insight
-- Autonomous agents: 40% time saved · 99.9%+ accuracy · 50M+ pages indexed
-- Workflow library: 25+ ready-to-run investment workflows · 80% lower cost than generic LLMs · 99.9% accuracy
+- Autonomous agents: 40% time saved · 50M+ pages indexed · 95% task completeness rate
+- Workflow library: 25+ ready-to-run investment workflows · 85% lower cost vs. generic LLMs · 50M+ pages indexed
 - Pascal Data Agent: 99.8% automation rate · 50M+ pages indexed · 35K+ stocks & entities mapped
 - Pascal Agents overview (not in the doc, still illustrative): 25+ workflows (from the workflow library doc numbers) · 1,180 runs a week at one mid-sized fund · 6.4 min median task to file
 - Cited research / screeners: check whatever their strips say; not covered by the doc.

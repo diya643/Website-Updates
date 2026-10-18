@@ -106,3 +106,20 @@
   .pg-aa .pui.aa-sch.float-lg { padding-bottom: 96px; }
 }
 @media (prefers-reduced-motion: reduce) { .pg-aa .aa-spin { animation: none; } }
+
+/* hero: headless runs console (18 Oct 2026) */
+.pg-aa .aa-runs .aa-hero-g { grid-template-columns: minmax(0, 1fr) 196px; }
+.pg-aa .aa-runs .pui-bar .pui-tag svg { width: 11px; height: 11px; }
+.pg-aa .aa-trg { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.pg-aa .aa-trg .pui-k { margin-right: 2px; }
+.pg-aa .aa-rl { display: grid; gap: 8px; margin-top: 12px; }
+.pg-aa .aa-r { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 9px 10px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.pg-aa .aa-r.sel { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(39,156,123,.12); }
+.pg-aa .aa-ri { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; background: var(--mint-4); color: var(--brand-2); }
+.pg-aa .aa-ri svg { width: 14px; height: 14px; }
+.pg-aa .aa-rt { display: grid; min-width: 0; }
+.pg-aa .aa-rt b { color: var(--ink); font-weight: 600; font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pg-aa .aa-rt .pui-sub { margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pg-aa .aa-r .pui-tag .aa-spin { width: 10px; height: 10px; }
+.pg-aa .aa-api { display: block; margin-top: 8px; padding: 7px 8px; border-radius: 6px; background: #0F2A2C; color: #9FE3C6; font: 500 10px/1.4 var(--font-mono); white-space: nowrap; }
+.pg-aa .aa-r .pui-tag .aa-spin { border-color: rgba(107,122,120,.3); border-top-color: var(--mute); }

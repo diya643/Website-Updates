@@ -2,13 +2,13 @@
 {
  "path": "/pascal-agents/workflow-library",
  "title": "Agentic Workflow Library for Finance | Pascal AI",
- "description": "Pascal's library of 25+ agentic workflows for finance: event briefs, primers, red flag analysis and more. Pick a company and get a cited, finished document.",
+ "description": "Pascal's library of 25+ agentic workflows for finance, from event briefs to NAV checks and DDQs, plus a builder to edit every step. Every output cited.",
  "crumbs": [["Pascal Agents", "/pascal-agents"], ["Workflow library", "/pascal-agents/workflow-library"]],
  "schema": "software",
  "name": "Pascal agentic workflow library",
  "og_kicker": "Pascal Agents",
  "og_title": "25+ agentic workflows for the work you do every quarter",
- "llms": "Pascal's agentic workflow library: 25+ pre-built investment workflows (event briefs, company primers, initiating coverage, red flag analysis, catalyst calendars) that return cited documents in a consistent structure.",
+ "llms": "Pascal's agentic workflow library: 25+ pre-built workflows across front, middle and back office (event briefs, company primers, NAV break checks, covenant monitoring, DDQs) that return cited documents in a consistent structure, plus a workflow builder where teams edit each step: trigger, sources, checks, reviewer and output.",
  "priority": 0.8,
  "word_limit": 3000,
  "lead_max": 120,
@@ -20,7 +20,7 @@
     <div class="hero-g-copy">
       {{crumbs}}
       <h1 class="h1" id="page-title"><span class="h1-k"><span class="eyebrow">Agentic workflow library</span></span>25+ agentic workflows <span class="mute">for the work you do every quarter.</span></h1>
-      <p class="lead">Pick a workflow, pick a company, and Pascal's agents produce a finished piece of work: an event brief, an initiating coverage report, a red team of your thesis. They search your internal research and public sources, and return the same structure for every name you cover.</p>
+      <p class="lead">Pick a workflow and Pascal's agents produce a finished piece of work: an event brief, a NAV break check, a DDQ draft. They search your internal files and public sources, return the same structure every time, and you can edit any step.</p>
       <div class="actions">
         <a class="btn btn-dark" href="{{demo_url}}">Book a demo</a>
       </div>
@@ -57,8 +57,8 @@
 <div class="frame pg-wl">
   <section class="cells row" aria-label="Workflow library at a glance">
     <div class="cell"><span class="stat-num">25<small>+</small></span><span class="stat-lbl">Ready-to-run investment workflows</span></div>
-    <div class="cell"><span class="stat-num">80<small>%</small></span><span class="stat-lbl">Lower cost than generic LLMs</span></div>
-    <div class="cell"><span class="stat-num">99.9<small>%</small></span><span class="stat-lbl">Accuracy</span></div>
+    <div class="cell"><span class="stat-num">85<small>%</small></span><span class="stat-lbl">Lower cost vs. generic LLMs</span></div>
+    <div class="cell"><span class="stat-num">50M<small>+</small></span><span class="stat-lbl">Pages indexed</span></div>
   </section>
 
   <section class="row" aria-labelledby="run-title">
@@ -132,55 +132,43 @@
     </div>
   </section>
 
-  <section class="row" id="library" aria-labelledby="lib-title">
-    <div class="row-pad-sm"><p class="eyebrow">The library · Front office</p><h2 class="h2" id="lib-title" style="margin-top:18px">A workflow for every part <span class="mute">of the job.</span></h2></div>
-    <div class="wl-cat row">
-      <h3 class="wl-cat-h">{{icon:building}}Public company research</h3>
-      <div class="wl-cards">
-        <div class="wl-card"><span class="wl-ci" style="background:#1F3864">{{icon:book-open}}</span><b>Company Primer</b><span class="wl-pl">{{icon:play}}</span><span>A deep research report from filings</span></div>
-        <div class="wl-card"><span class="wl-ci" style="background:#1F3864">{{icon:pie-chart}}</span><b>Business Model Breakdown</b><span class="wl-pl">{{icon:play}}</span><span>How the company makes money</span></div>
-        <div class="wl-card"><span class="wl-ci" style="background:#1F3864">{{icon:file-text}}</span><b>Initiating Coverage Report</b><span class="wl-pl">{{icon:play}}</span><span>A full ICR on a company</span></div>
-        <div class="wl-card"><span class="wl-ci" style="background:#1F3864">{{icon:file-check}}</span><b>Annual Report Summariser</b><span class="wl-pl">{{icon:play}}</span><span>The annual report, distilled</span></div>
-        <div class="wl-card"><span class="wl-ci" style="background:#1F3864">{{icon:landmark}}</span><b>IPO Prospectus Analysis</b><span class="wl-pl">{{icon:play}}</span><span>The prospectus, for investors</span></div>
+  <section class="row" id="builder" aria-labelledby="lib-title">
+    <div class="row-pad-sm wl-bh"><div><p class="eyebrow">Workflow builder</p><h2 class="h2" id="lib-title" style="margin-top:18px">Start from a template. <span class="mute">Shape it to your desk.</span></h2></div><p>Every workflow is a set of steps you can edit in plain English: what starts it, where it looks, what it checks, who reviews it and where the output lands.</p></div>
+    <div class="row">
+      <div class="panel fit wl-bpanel"><!--mock--><div class="pui wl-b" role="img" aria-label="The Pascal workflow builder editing a Quarterly DDQ refresh workflow. Five steps: a trigger when a DDQ arrives in Outlook, a search of past DDQs and policies in SharePoint, drafting answers from approved language, a check that flags answers that changed since last quarter for compliance review, and delivery as a Word file to a Teams channel. The check step is open in an editor with its instructions, reviewer and output settings.">
+  <div class="pui-win">
+    <div class="pui-bar"><!--#include pui-mark--><span class="pui-crumb">Workflows / Builder / <b>Quarterly DDQ refresh</b></span><span class="pui-bar-r"><span class="pui-tag grey">Draft</span><span class="pui-btn">{{icon:play}} Test run</span><span class="pui-btn pri">Publish</span></span></div>
+    <div class="pui-body"><!--#include pui-rail on_chat="" on_wf="on"-->
+      <div class="pui-main wl-bm">
+        <div class="wl-btpl"><span class="pui-k">Templates</span><span class="pui-chip">Event brief</span><span class="pui-chip">NAV break check</span><span class="pui-chip on">DDQ refresh</span><span class="pui-chip">Covenant monitor</span></div>
+        <ol class="wl-flow">
+          <li><span class="wl-fi">{{icon:zap}}</span><span><span class="pui-k">Trigger</span><b>A DDQ arrives in the investor relations inbox</b><span class="wl-fs"><span class="pui-schip">{{logo:outlook}} IR inbox</span></span></span></li>
+          <li><span class="wl-fi">{{icon:folder-search}}</span><span><span class="pui-k">Gather</span><b>Find past DDQs, policies and fund documents</b><span class="wl-fs"><span class="pui-schip">{{logo:sharepoint}} Past DDQs</span><span class="pui-schip">{{logo:sharepoint}} Policies</span><span class="pui-schip">{{logo:pdf}} Fund docs</span></span></span></li>
+          <li><span class="wl-fi">{{icon:edit}}</span><span><span class="pui-k">Draft</span><b>Answer each question from approved language</b></span></li>
+          <li class="sel"><span class="wl-fi">{{icon:shield-check}}</span><span><span class="pui-k">Check</span><b>Flag answers that changed since last quarter</b><span class="wl-fs"><span class="pui-tag amber">Human review</span></span></span></li>
+          <li><span class="wl-fi">{{icon:send}}</span><span><span class="pui-k">Deliver</span><b>Word file to the IR channel</b><span class="wl-fs"><span class="pui-schip">{{logo:word}} DDQ.docx</span><span class="pui-schip">{{logo:teams}} #investor-relations</span></span></span></li>
+        </ol>
+        <span class="wl-add">{{icon:plus}} Add step</span>
+      </div>
+      <div class="pui-side wl-bs">
+        <p class="pui-k">Edit step · Check</p>
+        <p class="wl-bl">Instructions</p>
+        <div class="wl-bta">Compare every answer with last quarter's approved DDQ. Flag any change to AUM, team, strategy or policy wording<span class="wl-cur"></span></div>
+        <p class="wl-bl">Reviewer</p>
+        <div class="wl-bsel"><span class="pui-dot">CO</span>Compliance team{{icon:chevron-down}}</div>
+        <p class="wl-bl">Output</p>
+        <div class="wl-btg"><span class="on">Word</span><span>Excel</span><span>PDF</span></div>
+        <p class="wl-bl">Runs</p>
+        <div class="wl-bsel">{{icon:repeat}}On each new DDQ{{icon:chevron-down}}</div>
       </div>
     </div>
-    <div class="wl-cat row">
-      <h3 class="wl-cat-h">{{icon:lock}}Private company research</h3>
-      <div class="wl-cards">
-        <div class="wl-card"><span class="wl-ci" style="background:#279C7B">{{icon:lock}}</span><b>Private Company Primer</b><span class="wl-pl">{{icon:play}}</span><span>Filings plus deep web search</span></div>
-        <div class="wl-card"><span class="wl-ci" style="background:#279C7B">{{icon:handshake}}</span><b>Private Company Management Meeting</b><span class="wl-pl">{{icon:play}}</span><span>Prepare for a management meeting</span></div>
-      </div>
+  </div>
+</div><!--/mock--></div>
     </div>
-    <div class="wl-cat row">
-      <h3 class="wl-cat-h">{{icon:calendar}}Earnings</h3>
-      <div class="wl-cards">
-        <div class="wl-card"><span class="wl-ci" style="background:#185FA5">{{icon:bar-chart}}</span><b>Earnings Recap</b><span class="wl-pl">{{icon:play}}</span><span>What happened in the quarter</span></div>
-        <div class="wl-card"><span class="wl-ci" style="background:#185FA5">{{icon:chart-line}}</span><b>Street vs Internal vs Management</b><span class="wl-pl">{{icon:play}}</span><span>Consensus, your forecast and guidance, compared</span></div>
-      </div>
-    </div>
-    <div class="wl-cat row">
-      <h3 class="wl-cat-h">{{icon:file-text}}Events and catalysts</h3>
-      <div class="wl-cards">
-        <div class="wl-card"><span class="wl-ci" style="background:#B5651D">{{icon:megaphone}}</span><b>Event Brief</b><span class="wl-pl">{{icon:play}}</span><span>A corporate event and what it means</span></div>
-        <div class="wl-card"><span class="wl-ci" style="background:#B5651D">{{icon:users}}</span><b>Meeting Brief</b><span class="wl-pl">{{icon:play}}</span><span>Prepare for conferences and meetings</span></div>
-        <div class="wl-card"><span class="wl-ci" style="background:#B5651D">{{icon:calendar}}</span><b>30-Day Catalyst Calendar</b><span class="wl-pl">{{icon:play}}</span><span>Every catalyst ahead</span></div>
-        <div class="wl-card"><span class="wl-ci" style="background:#B5651D">{{icon:eye}}</span><b>Insider Intelligence Briefing</b><span class="wl-pl">{{icon:play}}</span><span>Insider-related developments</span></div>
-      </div>
-    </div>
-    <div class="wl-cat row">
-      <h3 class="wl-cat-h">{{icon:alert}}Risk and governance</h3>
-      <div class="wl-cards">
-        <div class="wl-card"><span class="wl-ci" style="background:#993C1D">{{icon:flag}}</span><b>Red Flag Analysis</b><span class="wl-pl">{{icon:play}}</span><span>Risk signals across filings</span></div>
-        <div class="wl-card"><span class="wl-ci" style="background:#993C1D">{{icon:coins}}</span><b>Management Compensation</b><span class="wl-pl">{{icon:play}}</span><span>Pay, ownership and control</span></div>
-        <div class="wl-card"><span class="wl-ci" style="background:#993C1D">{{icon:wallet}}</span><b>Capital Allocation and Strategy Review</b><span class="wl-pl">{{icon:play}}</span><span>Where the capital goes, and why</span></div>
-      </div>
-    </div>
-    <div class="wl-cat row">
-      <h3 class="wl-cat-h">{{icon:scale}}Thesis and frameworks</h3>
-      <div class="wl-cards">
-        <div class="wl-card"><span class="wl-ci" style="background:#534AB7">{{icon:scale}}</span><b>Red Team Thesis Challenger</b><span class="wl-pl">{{icon:play}}</span><span>Stress-test your thesis</span></div>
-        <div class="wl-card"><span class="wl-ci" style="background:#534AB7">{{icon:trending-up}}</span><b>Bull Bear Analysis</b><span class="wl-pl">{{icon:play}}</span><span>Both sides, structured</span></div>
-      </div>
+    <div class="cells row">
+      <div class="cell"><span class="n">Front office</span><b>Research and deals</b><span>Event briefs, company primers, red flag checks and IC memos.</span></div>
+      <div class="cell"><span class="n">Middle office</span><b>Risk and operations</b><span>NAV break checks, mandate compliance and covenant monitoring.</span></div>
+      <div class="cell"><span class="n">Back office</span><b>Reporting and investors</b><span>DDQs, client reports, KYC files and reconciliations.</span></div>
     </div>
   </section>
 

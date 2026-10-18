@@ -1,5 +1,5 @@
-# Build report — 2026-10-12
-48 pages built to `public/`.
+# Build report — 2026-10-18
+50 pages built to `public/`.
 
 ## PASS · `/pascal-academy/agent-library` (academy-agents.html)
 - title (38): AI Agents for Finance | Pascal Academy
@@ -304,6 +304,16 @@
 - description (153): How hedge funds and asset managers run Pascal in production: earnings season workflows, proprietary knowledge search and evidence-backed idea generation.
 - FAQs in schema: 0 · robots: index
 
+## PASS · `/events/hong-kong-2026` (events-hong-kong-2026.html)
+- title (51): From Front to Back Office: AI Roundtable, Hong Kong
+- description (148): Invite-only roundtable dinner in Hong Kong on 27 October 2026 for hedge fund and asset manager leaders on where AI is working, front to back office.
+- FAQs in schema: 0 · robots: index
+
+## PASS · `/events` (events.html)
+- title (18): Events | Pascal AI
+- description (138): Upcoming events with Pascal AI Labs: roundtables we host for hedge fund and asset manager leaders, and the industry forums where we speak.
+- FAQs in schema: 0 · robots: index
+
 ## PASS · `/` (home.html)
 - title (54): Pascal AI: Context-Driven AI for Institutional Finance
 - description (155): Pascal builds context-driven AI agents for institutional finance, with your firm's memory, data and permissions behind every answer, inside your perimeter.
@@ -316,7 +326,7 @@
 
 ## PASS · `/pascal-agents/autonomous-agents` (pascal-agents-autonomous-agents.html)
 - title (52): Autonomous AI Agents for Investment Work | Pascal AI
-- description (154): Autonomous AI agents for investment research: Pascal plans the task, searches your memos, email and filings, checks the claims and delivers a cited brief.
+- description (158): Headless AI agents for financial firms: started by a schedule, a new file or an API call, Pascal plans the task, checks its work and delivers to your systems.
 - FAQs in schema: 4 · robots: index
 
 ## PASS · `/pascal-agents/data-agent` (pascal-agents-data-agent.html)
@@ -326,7 +336,7 @@
 
 ## PASS · `/pascal-agents/workflow-library` (pascal-agents-workflow-library.html)
 - title (48): Agentic Workflow Library for Finance | Pascal AI
-- description (156): Pascal's library of 25+ agentic workflows for finance: event briefs, primers, red flag analysis and more. Pick a company and get a cited, finished document.
+- description (151): Pascal's library of 25+ agentic workflows for finance, from event briefs to NAV checks and DDQs, plus a builder to edit every step. Every output cited.
 - FAQs in schema: 4 · robots: index
 
 ## PASS · `/pascal-agents` (pascal-agents.html)

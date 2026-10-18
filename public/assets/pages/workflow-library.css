@@ -199,3 +199,36 @@
 
 /* eyebrows inside .split-copy / .head keep the eyebrow style */
 .pg-wl .split-copy p.eyebrow, .pg-wl .head p.eyebrow { margin-top: 0; font-size: 12.5px; line-height: 1; color: var(--brand); max-width: none; }
+
+/* workflow builder (replaces the full library list, 18 Oct 2026) */
+.pg-wl .wl-bh { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: end; }
+.pg-wl .wl-bh > p { color: var(--ink-2); font-size: 17px; line-height: 1.55; max-width: 460px; margin: 0; }
+.pg-wl .wl-bpanel { padding: 56px 48px; }
+.pg-wl .wl-b { max-width: 900px; }
+.pg-wl .wl-bm { padding: 16px 20px 18px; }
+.pg-wl .wl-btpl { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.pg-wl .wl-btpl .pui-k { margin-right: 4px; }
+.pg-wl .wl-flow { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; position: relative; }
+.pg-wl .wl-flow::before { content: ""; position: absolute; left: 15px; top: 18px; bottom: 18px; width: 1.5px; background: var(--mint-3); }
+.pg-wl .wl-flow li { position: relative; display: flex; gap: 12px; align-items: flex-start; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; margin-left: 0; }
+.pg-wl .wl-flow li > span:last-child { display: grid; gap: 4px; min-width: 0; }
+.pg-wl .wl-flow li b { color: var(--ink); font-weight: 600; font-size: 13px; }
+.pg-wl .wl-flow li.sel { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(39,156,123,.12); }
+.pg-wl .wl-fi { width: 32px; height: 32px; margin-left: -4px; flex: none; border-radius: 8px; display: grid; place-items: center; background: var(--mint-4); color: var(--brand-2); position: relative; z-index: 1; }
+.pg-wl .wl-fi svg { width: 15px; height: 15px; }
+.pg-wl .wl-fs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+.pg-wl .wl-add { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; padding: 7px 12px; border: 1px dashed var(--line-2); border-radius: 8px; font-size: 12px; font-weight: 600; color: var(--mute); }
+.pg-wl .wl-add svg { width: 12px; height: 12px; }
+.pg-wl .wl-bs { width: 250px; flex: none; padding: 16px 16px 18px; border-left: 1px solid var(--line); background: #FBFCFB; }
+.pg-wl .wl-bl { margin: 14px 0 6px !important; font-size: 11.5px; font-weight: 600; color: var(--ink); }
+.pg-wl .wl-bta { padding: 9px 10px; border: 1px solid var(--brand); border-radius: 8px; background: #fff; font-size: 12px; line-height: 1.5; color: var(--ink-2); box-shadow: 0 0 0 3px rgba(39,156,123,.1); }
+.pg-wl .wl-cur { display: inline-block; width: 1.5px; height: 13px; margin-left: 1px; vertical-align: -2px; background: var(--brand); animation: wlBlink 1s steps(1) infinite; }
+@keyframes wlBlink { 50% { opacity: 0; } }
+.pg-wl .wl-bsel { display: flex; align-items: center; gap: 8px; height: 32px; padding: 0 10px; border: 1px solid var(--line-2); border-radius: 8px; background: #fff; font-size: 12px; color: var(--ink); }
+.pg-wl .wl-bsel svg { width: 13px; height: 13px; color: var(--mute); }
+.pg-wl .wl-bsel svg:last-child { margin-left: auto; }
+.pg-wl .wl-bsel .pui-dot { width: 20px; height: 20px; font-size: 8.5px; }
+.pg-wl .wl-btg { display: flex; padding: 3px; gap: 2px; border-radius: 8px; background: #EFF1F0; }
+.pg-wl .wl-btg span { flex: 1; text-align: center; padding: 5px 0; border-radius: 6px; font-size: 11.5px; color: var(--mute); }
+.pg-wl .wl-btg span.on { background: #fff; color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(11,31,33,.1); }
+@media (max-width: 860px) { .pg-wl .wl-bh { grid-template-columns: 1fr; gap: 16px; } .pg-wl .wl-bpanel { padding: 32px 16px; } .pg-wl .wl-bs { display: none; } }
