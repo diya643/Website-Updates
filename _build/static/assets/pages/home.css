@@ -24,13 +24,17 @@ body:has(.hm-hero) .nav:not(.scrolled):not(:has(.nav-item.open)):not(:has(.nav-b
 .hm-h1 { font-size: clamp(44px, 6.4vw, 92px); line-height: .98; letter-spacing: -.045em; font-weight: 400; color: #fff; text-wrap: initial; }
 .hm-lead { margin-top: 24px; font-size: clamp(17px, 1.5vw, 20px); color: rgba(255,255,255,.84); max-width: 560px; }
 .hm-hero .actions { margin-top: 32px; display: flex; }
-.hm-logos { position: relative; margin-top: 88px; padding: 30px 0 34px; border-top: 1px solid rgba(255,255,255,.1); overflow: hidden;
-  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.hm-logos { --fw: var(--frame); position: relative; margin-top: 88px; padding: 30px 0 34px; border-top: 1px solid rgba(255,255,255,.1); overflow: hidden; display: flex; align-items: center; }
+.hm-logos-k { flex: none; margin: 0; padding: 0 36px 0 max(var(--pad), calc((100% - var(--fw)) / 2 + var(--pad))); font-size: 15px; color: rgba(255,255,255,.66); white-space: nowrap; }
+.hm-logos-view { flex: 1; min-width: 0; overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 90%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 90%, transparent); }
 .hm-logos-track { display: flex; width: max-content; animation: hmMarquee 52s linear infinite; }
 .hm-logos:hover .hm-logos-track { animation-play-state: paused; }
 .hm-logos-set { display: flex; align-items: center; gap: 64px; padding-right: 64px; }
 .hm-logos-set img { height: 30px; width: auto; max-width: 150px; object-fit: contain; filter: brightness(0) invert(1); opacity: .8; }
 .hm-logos-set img.keep { filter: none; opacity: .92; height: 34px; border-radius: 4px; }
+.hm-logos-set img.tall { height: 36px; }
+.hm-logos-set img.short { height: 21px; }
 @keyframes hmMarquee { to { transform: translateX(-50%); } }
 
 /* ---------- Product film: front, middle and back office ---------- */
@@ -338,9 +342,12 @@ body:has(.hm-hero) .nav:not(.scrolled):not(:has(.nav-item.open)):not(:has(.nav-b
 @media (max-width: 720px) {
   .hm-h1 br { display: none; }
   .hm-hero-in { padding-top: 140px; }
-  .hm-logos { margin-top: 56px; padding: 24px 0 26px; }
+  .hm-logos { margin-top: 56px; padding: 24px 0 26px; flex-direction: column; align-items: stretch; gap: 18px; }
+  .hm-logos-k { padding: 0 var(--pad); font-size: 14px; }
   .hm-logos-set { gap: 44px; padding-right: 44px; }
   .hm-logos-set img { height: 24px; }
+  .hm-logos-set img.tall { height: 29px; }
+  .hm-logos-set img.short { height: 17px; }
   .hm-film { padding: 80px 16px 88px; }
   .hm-film-desks span { padding: 6px 10px; font-size: 12px; }
   .hm-stage { padding: 20px 12px; margin-top: 32px; border-radius: 14px; }
@@ -383,7 +390,7 @@ body:has(.hm-hero) .nav:not(.scrolled):not(:has(.nav-item.open)):not(:has(.nav-b
 .hm-ic:hover .hm-ic-b em { color: var(--ink); }
 @media (max-width: 720px) { .hm-ic { aspect-ratio: auto; } }
 /* a little more presence on wide screens */
-@media (min-width: 1500px) { .hm-in, .hm-hero-in { max-width: 1400px; } }
+@media (min-width: 1500px) { .hm-in, .hm-hero-in { max-width: 1400px; } .hm-logos { --fw: 1400px; } }
 .hm-ic > .hm-ic-b { margin-top: 0; max-width: none; color: inherit; font-size: inherit; }
 
 /* ---------- What sets Pascal apart: product screen left, list right (auto-advancing) ---------- */
